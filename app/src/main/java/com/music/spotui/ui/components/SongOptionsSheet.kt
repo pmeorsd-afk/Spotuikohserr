@@ -1,4 +1,4 @@
-package com.music.spotui.ui.components
+﻿package com.music.spotui.ui.components
 
 import android.content.Context
 import android.content.Intent
@@ -52,7 +52,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
-import com.bumptech.glide.integration.compose.GlideImage
+import com.music.spotui.ui.components.GlideImage
 import com.music.spotui.data.entity.SongsModel
 import com.music.spotui.data.preferences.addLikedSongId
 import com.music.spotui.data.preferences.isSongLiked

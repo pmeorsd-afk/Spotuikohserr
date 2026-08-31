@@ -302,7 +302,6 @@ class PlaybackService : MediaLibraryService() {
                     .setTitle(title)
                     .setIsBrowsable(true)
                     .setIsPlayable(false)
-                    .apply { if (coverUri.isNotBlank()) setArtworkUri(android.net.Uri.parse(coverUri)) }
                     .build(),
             )
             .build()
@@ -317,7 +316,6 @@ class PlaybackService : MediaLibraryService() {
                     .setAlbumTitle(song.album)
                     .setIsBrowsable(false)
                     .setIsPlayable(true)
-                    .apply { if (song.coverUri.isNotBlank()) setArtworkUri(android.net.Uri.parse(song.coverUri)) }
                     .build(),
             )
             .build()

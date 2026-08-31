@@ -1,4 +1,4 @@
-package com.music.spotui.ui.components
+﻿package com.music.spotui.ui.components
 
 import android.content.Context
 import androidx.compose.foundation.background
@@ -50,7 +50,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
-import com.bumptech.glide.integration.compose.GlideImage
+import com.music.spotui.ui.components.GlideImage
 import com.bumptech.glide.integration.compose.placeholder
 import com.metrolist.spotify.Spotify
 import com.metrolist.spotify.models.SpotifyPlaylist

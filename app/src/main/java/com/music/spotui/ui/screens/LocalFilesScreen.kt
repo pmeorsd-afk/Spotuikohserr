@@ -1,4 +1,4 @@
-package com.music.spotui.ui.screens
+﻿package com.music.spotui.ui.screens
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -49,7 +49,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
-import com.bumptech.glide.integration.compose.GlideImage
+import com.music.spotui.ui.components.GlideImage
 import com.bumptech.glide.integration.compose.placeholder
 import com.music.spotui.R
 import com.music.spotui.data.local.LocalImport

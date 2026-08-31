@@ -180,13 +180,6 @@ class PlayerViewModel @Inject constructor(private val currentSongState: CurrentS
 
     fun loadCanvas(trackId: String) {
         _canvasUrl.value = null
-        canvasRequestId = trackId
-        if (trackId.isBlank()) return
-        viewModelScope.launch {
-            val url = withContext(Dispatchers.IO) { repository.provideCanvasUrl(trackId) }
-            // Ignore a slow fetch for a track the user already skipped past.
-            if (canvasRequestId == trackId) _canvasUrl.value = url
-        }
     }
 
     fun goToArtist(trackId: String, fallbackName: String, navigate: (route: String) -> Unit) {

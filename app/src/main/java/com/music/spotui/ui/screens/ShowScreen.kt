@@ -1,4 +1,4 @@
-package com.music.spotui.ui.screens
+﻿package com.music.spotui.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -44,7 +44,7 @@ import androidx.navigation.NavController
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.music.spotui.data.entity.SongsModel
 import com.music.spotui.ui.components.SongOptionsSheet
-import com.bumptech.glide.integration.compose.GlideImage
+import com.music.spotui.ui.components.GlideImage
 import com.bumptech.glide.integration.compose.placeholder
 import com.music.spotui.R
 import com.music.spotui.data.api.Response
