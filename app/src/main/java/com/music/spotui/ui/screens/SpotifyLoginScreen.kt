@@ -3,7 +3,11 @@ package com.music.spotui.ui.screens
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.graphics.Bitmap
+import android.net.http.SslError
 import android.webkit.CookieManager
+import android.webkit.SslErrorHandler
+import android.webkit.WebChromeClient
+import android.webkit.WebResourceRequest
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -11,6 +15,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -24,6 +29,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -44,14 +50,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.input.PasswordVisualTransformation
-import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -66,36 +69,22 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.json.JSONObject
 import timber.log.Timber
 import java.util.concurrent.atomic.AtomicBoolean
 
-private const val USER_AGENT_DESKTOP =
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-
 private const val SPOTIFY_GREEN = 0xFF1ED760
 
-/**
- * Spotify-style native login. The user types their email + password into a
- * custom form; under the hood a hidden WebView loads Spotify's real login page
- * and we inject the credentials via JavaScript, then capture the `sp_dc` cookie
- * exactly as before. If Spotify throws a captcha / challenge that we can't drive
- * headlessly, the WebView is revealed so the user can finish in-page.
- */
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
 fun SpotifyLoginScreen(navController: NavController) {
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
 
-    var email by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
-    var showPassword by remember { mutableStateOf(false) }
-
     var isProcessing by remember { mutableStateOf(false) }
     var statusMessage by remember { mutableStateOf("") }
     var hasError by remember { mutableStateOf(false) }
-    var showWebFallback by remember { mutableStateOf(false) }
+    var showTokenDialog by remember { mutableStateOf(false) }
+    var manualTokenInput by remember { mutableStateOf("") }
 
     val pageReady = remember { AtomicBoolean(false) }
     val tokenFetchStarted = remember { AtomicBoolean(false) }
@@ -120,16 +109,19 @@ fun SpotifyLoginScreen(navController: NavController) {
         }
     }
 
-    // Poll for the sp_dc cookie — it's set on .spotify.com the moment login
-    // succeeds, regardless of which page the (hidden) WebView ends up on.
+    // Poll for the sp_dc cookie across Spotify domains
     LaunchedEffect(Unit) {
         while (true) {
             delay(1000)
             if (tokenFetchStarted.get()) continue
             val spDc = extractCookie("sp_dc")
             if (!spDc.isNullOrBlank() && tokenFetchStarted.compareAndSet(false, true)) {
-                finishLogin(
-                    webViewRef, context as Activity, scope,
+                finishLoginWithToken(
+                    spDc = spDc,
+                    spKey = extractCookie("sp_key") ?: "",
+                    view = webViewRef,
+                    activity = context as Activity,
+                    scope = scope,
                     setProcessing = { isProcessing = it },
                     setStatus = { statusMessage = it },
                     setError = { hasError = it },
@@ -141,11 +133,9 @@ fun SpotifyLoginScreen(navController: NavController) {
     }
 
     Box(modifier = Modifier.fillMaxSize().background(Color.Black)) {
-        // Login is 100% Spotify's own web page in a full-screen WebView — no custom
-        // form or credential injection. We just watch for the sp_dc cookie (polled
-        // above) to know when the user has signed in, then exchange it for a token.
+        // Full-screen WebView configured to work through filtered devices and custom CAs
         AndroidView(
-            modifier = Modifier.fillMaxSize().statusBarsPadding().padding(top = 40.dp),
+            modifier = Modifier.fillMaxSize().statusBarsPadding().padding(top = 44.dp, bottom = 48.dp),
             factory = { ctx ->
                 val cookieManager = CookieManager.getInstance()
                 cookieManager.setAcceptCookie(true)
@@ -160,11 +150,13 @@ fun SpotifyLoginScreen(navController: NavController) {
                     settings.databaseEnabled = true
                     settings.loadWithOverviewMode = true
                     settings.useWideViewPort = true
-                    settings.mixedContentMode = WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE
+                    settings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
                     settings.javaScriptCanOpenWindowsAutomatically = true
-                    // Keep the WebView's REAL (mobile Chrome) User-Agent for login —
-                    // a spoofed desktop UA on a phone trips Spotify's reCAPTCHA bot
-                    // check and it wrongly returns "Incorrect email or password".
+                    settings.setSupportMultipleWindows(false)
+                    settings.allowContentAccess = true
+                    settings.allowFileAccess = true
+
+                    webChromeClient = object : WebChromeClient() {}
 
                     webViewClient = object : WebViewClient() {
                         override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
@@ -174,15 +166,33 @@ fun SpotifyLoginScreen(navController: NavController) {
                             pageReady.set(true)
                             view?.let(::fixSpotifyLoginLayout)
                         }
+                        override fun onReceivedSslError(
+                            view: WebView?,
+                            handler: SslErrorHandler?,
+                            error: SslError?
+                        ) {
+                            // Allows protected devices / kosher filter proxy certificates to connect
+                            handler?.proceed()
+                        }
+                        override fun shouldOverrideUrlLoading(
+                            view: WebView?,
+                            request: WebResourceRequest?
+                        ): Boolean {
+                            return false
+                        }
                     }
                     loadUrl(SpotifyAuth.LOGIN_URL)
                 }
             },
         )
 
-        // Slim top bar: title, or the "Signing in…" status once the cookie lands.
+        // Slim top bar: title, status message
         Box(
-            modifier = Modifier.fillMaxWidth().statusBarsPadding().height(40.dp).background(Color.Black),
+            modifier = Modifier
+                .fillMaxWidth()
+                .statusBarsPadding()
+                .height(44.dp)
+                .background(Color.Black),
             contentAlignment = Alignment.Center,
         ) {
             Text(
@@ -192,6 +202,98 @@ fun SpotifyLoginScreen(navController: NavController) {
                 fontSize = 15.sp,
             )
         }
+
+        // Bottom manual token login button for filtered devices
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.BottomCenter)
+                .background(Color(0xFF121212))
+                .padding(vertical = 4.dp, horizontal = 16.dp),
+            contentAlignment = Alignment.Center,
+        ) {
+            TextButton(
+                onClick = { showTokenDialog = true },
+                enabled = !isProcessing,
+            ) {
+                Text(
+                    text = "מתקשה להתחבר? לחץ להתחברות עם טוקן (sp_dc)",
+                    color = Color(SPOTIFY_GREEN),
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.SemiBold,
+                )
+            }
+        }
+    }
+
+    if (showTokenDialog) {
+        AlertDialog(
+            onDismissRequest = { if (!isProcessing) showTokenDialog = false },
+            containerColor = Color(0xFF1E1E1E),
+            title = {
+                Text("התחברות ידנית (sp_dc Cookie)", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 18.sp)
+            },
+            text = {
+                Column {
+                    Text(
+                        "אם הסינון במכשיר חוסם את טופס האימות, ניתן להעתיק את ה-Cookie שנקרא sp_dc מהדפדפן במחשב (מ-open.spotify.com) ולהדביק אותו כאן:",
+                        color = Color(0xFFCCCCCC),
+                        fontSize = 13.sp,
+                    )
+                    Spacer(Modifier.height(12.dp))
+                    OutlinedTextField(
+                        value = manualTokenInput,
+                        onValueChange = { manualTokenInput = it },
+                        singleLine = false,
+                        maxLines = 4,
+                        placeholder = { Text("הדבק כאן את ערך ה-sp_dc...", color = Color.Gray, fontSize = 12.sp) },
+                        colors = OutlinedTextFieldDefaults.colors(
+                            focusedTextColor = Color.White,
+                            unfocusedTextColor = Color.White,
+                            focusedBorderColor = Color(SPOTIFY_GREEN),
+                            unfocusedBorderColor = Color.Gray,
+                            focusedContainerColor = Color(0xFF121212),
+                            unfocusedContainerColor = Color(0xFF121212),
+                        ),
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                }
+            },
+            confirmButton = {
+                Button(
+                    onClick = {
+                        val token = manualTokenInput.trim()
+                        if (token.isNotBlank() && tokenFetchStarted.compareAndSet(false, true)) {
+                            showTokenDialog = false
+                            finishLoginWithToken(
+                                spDc = token,
+                                spKey = "",
+                                view = webViewRef,
+                                activity = context as Activity,
+                                scope = scope,
+                                setProcessing = { isProcessing = it },
+                                setStatus = { statusMessage = it },
+                                setError = { hasError = it },
+                                tokenFetchStarted = tokenFetchStarted,
+                                onSuccess = navigateToHome,
+                            )
+                        }
+                    },
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(SPOTIFY_GREEN), contentColor = Color.Black),
+                    enabled = manualTokenInput.isNotBlank() && !isProcessing,
+                ) {
+                    Text("התחבר", fontWeight = FontWeight.Bold)
+                }
+            },
+            dismissButton = {
+                TextButton(
+                    onClick = { showTokenDialog = false },
+                    enabled = !isProcessing,
+                ) {
+                    Text("ביטול", color = Color.White)
+                }
+            }
+        )
     }
 }
 
@@ -217,223 +319,32 @@ private fun fixSpotifyLoginLayout(webView: WebView) {
     }
 }
 
-@Composable
-private fun LoginForm(
-    email: String,
-    onEmail: (String) -> Unit,
-    password: String,
-    onPassword: (String) -> Unit,
-    showPassword: Boolean,
-    onTogglePassword: () -> Unit,
-    isProcessing: Boolean,
-    statusMessage: String,
-    hasError: Boolean,
-    onSubmit: () -> Unit,
-    onUseWeb: () -> Unit,
-) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .safeDrawingPadding()
-            .imePadding()
-            .verticalScroll(rememberScrollState())
-            .padding(horizontal = 28.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        Spacer(Modifier.height(72.dp))
-        Icon(
-            painter = painterResource(id = R.drawable.logo),
-            contentDescription = "Spotify",
-            tint = Color(SPOTIFY_GREEN),
-            modifier = Modifier.size(56.dp),
-        )
-        Spacer(Modifier.height(28.dp))
-        Text(
-            "Log in to Spotify",
-            color = Color.White,
-            fontWeight = FontWeight.Bold,
-            fontSize = 26.sp,
-        )
-        Spacer(Modifier.height(32.dp))
-
-        Text(
-            "Email or username",
-            color = Color.White,
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 13.sp,
-            modifier = Modifier.fillMaxWidth(),
-        )
-        Spacer(Modifier.height(6.dp))
-        OutlinedTextField(
-            value = email,
-            onValueChange = onEmail,
-            singleLine = true,
-            placeholder = { Text("Email or username", color = Color(0xFF8A8A8A)) },
-            keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Email,
-                imeAction = ImeAction.Next,
-            ),
-            colors = spotifyFieldColors(),
-            shape = RoundedCornerShape(6.dp),
-            modifier = Modifier.fillMaxWidth(),
-        )
-
-        Spacer(Modifier.height(16.dp))
-        Text(
-            "Password",
-            color = Color.White,
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 13.sp,
-            modifier = Modifier.fillMaxWidth(),
-        )
-        Spacer(Modifier.height(6.dp))
-        OutlinedTextField(
-            value = password,
-            onValueChange = onPassword,
-            singleLine = true,
-            placeholder = { Text("Password", color = Color(0xFF8A8A8A)) },
-            visualTransformation = if (showPassword) VisualTransformation.None else PasswordVisualTransformation(),
-            keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Password,
-                imeAction = ImeAction.Done,
-            ),
-            trailingIcon = {
-                IconButton(onClick = onTogglePassword) {
-                    Icon(
-                        painter = painterResource(
-                            id = if (showPassword) R.drawable.visibility else R.drawable.visibility_off
-                        ),
-                        contentDescription = "Toggle password",
-                        tint = Color(0xFFB3B3B3),
-                    )
-                }
-            },
-            colors = spotifyFieldColors(),
-            shape = RoundedCornerShape(6.dp),
-            modifier = Modifier.fillMaxWidth(),
-        )
-
-        if (statusMessage.isNotBlank()) {
-            Spacer(Modifier.height(14.dp))
-            Text(
-                statusMessage,
-                color = if (hasError) Color(0xFFFF5252) else Color(0xFFB3B3B3),
-                fontSize = 13.sp,
-                textAlign = TextAlign.Center,
-            )
-        }
-
-        Spacer(Modifier.height(24.dp))
-        Button(
-            onClick = onSubmit,
-            enabled = !isProcessing,
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color(SPOTIFY_GREEN),
-                contentColor = Color.Black,
-                disabledContainerColor = Color(0xFF12863B),
-            ),
-            shape = RoundedCornerShape(50),
-            modifier = Modifier.fillMaxWidth().height(52.dp),
-        ) {
-            if (isProcessing) {
-                CircularProgressIndicator(
-                    color = Color.Black,
-                    strokeWidth = 2.dp,
-                    modifier = Modifier.size(22.dp),
-                )
-            } else {
-                Text("Log In", fontWeight = FontWeight.Bold, fontSize = 16.sp)
-            }
-        }
-
-        Spacer(Modifier.height(16.dp))
-        TextButton(onClick = onUseWeb, enabled = !isProcessing) {
-            Text(
-                "Trouble logging in? Use the Spotify web page",
-                color = Color(0xFFB3B3B3),
-                fontSize = 13.sp,
-                textAlign = TextAlign.Center,
-            )
-        }
-        // Full web signup: reveals the real Spotify page (its "Sign up" link works
-        // there since the WebView navigation is unrestricted).
-        TextButton(onClick = onUseWeb, enabled = !isProcessing) {
-            Text(
-                "Don't have an account? Sign up",
-                color = Color.White,
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center,
-            )
-        }
-        Spacer(Modifier.height(40.dp))
-    }
-}
-
-@Composable
-private fun spotifyFieldColors() = OutlinedTextFieldDefaults.colors(
-    focusedTextColor = Color.White,
-    unfocusedTextColor = Color.White,
-    cursorColor = Color.White,
-    focusedBorderColor = Color.White,
-    unfocusedBorderColor = Color(0xFF727272),
-    focusedContainerColor = Color(0xFF121212),
-    unfocusedContainerColor = Color(0xFF121212),
-)
-
-/**
- * Fill Spotify's login form with [email] / [password] and submit it. React tracks
- * the input value internally, so we set it through the native value setter and
- * dispatch input/change events for it to register. Returns the script's verdict:
- * "SUBMIT" (clicked login), "NOFORM" (page not ready), or "NOBTN".
- */
-private suspend fun injectCredentials(webView: WebView?, email: String, password: String): String {
-    webView ?: return "NOFORM"
-    val u = JSONObject.quote(email)
-    val p = JSONObject.quote(password)
-    val js = """
-        (function(){
-          function setVal(el, val){
-            try {
-              var proto = window.HTMLInputElement.prototype;
-              var setter = Object.getOwnPropertyDescriptor(proto, 'value').set;
-              setter.call(el, val);
-            } catch(e) { el.value = val; }
-            el.dispatchEvent(new Event('input', {bubbles:true}));
-            el.dispatchEvent(new Event('change', {bubbles:true}));
-          }
-          var u = document.querySelector('#login-username, input[data-testid=login-username], input[autocomplete=username], input[name=username], input[type=email]');
-          var p = document.querySelector('#login-password, input[data-testid=login-password], input[type=password]');
-          if(!u || !p){ return 'NOFORM'; }
-          setVal(u, $u);
-          setVal(p, $p);
-          var b = document.querySelector('#login-button, button[data-testid=login-button], button[type=submit]');
-          if(b){ b.click(); return 'SUBMIT'; }
-          if(p.form){ p.form.submit(); return 'SUBMIT'; }
-          return 'NOBTN';
-        })();
-    """.trimIndent()
-    return withContext(Dispatchers.Main) {
-        val done = kotlinx.coroutines.CompletableDeferred<String>()
-        webView.evaluateJavascript(js) { raw ->
-            done.complete(raw?.trim('"') ?: "NOFORM")
-        }
-        done.await()
-    }
-}
-
 private fun extractCookie(name: String): String? {
-    val allCookies = CookieManager.getInstance().getCookie("https://open.spotify.com") ?: return null
-    return allCookies.split(";")
-        .mapNotNull {
-            val parts = it.trim().split("=", limit = 2)
-            if (parts.size == 2) parts[0].trim() to parts[1].trim() else null
-        }
-        .firstOrNull { it.first == name && it.second.isNotBlank() }
-        ?.second
+    val cookieManager = CookieManager.getInstance()
+    val domains = listOf(
+        "https://open.spotify.com",
+        "https://accounts.spotify.com",
+        "https://spotify.com",
+        "https://www.spotify.com",
+        "https://.spotify.com",
+    )
+    for (url in domains) {
+        val allCookies = cookieManager.getCookie(url) ?: continue
+        val match = allCookies.split(";")
+            .mapNotNull {
+                val parts = it.trim().split("=", limit = 2)
+                if (parts.size == 2) parts[0].trim() to parts[1].trim() else null
+            }
+            .firstOrNull { it.first == name && it.second.isNotBlank() }
+            ?.second
+        if (!match.isNullOrBlank()) return match
+    }
+    return null
 }
 
-private fun finishLogin(
+private fun finishLoginWithToken(
+    spDc: String,
+    spKey: String = "",
     view: WebView?,
     activity: Activity,
     scope: kotlinx.coroutines.CoroutineScope,
@@ -443,12 +354,10 @@ private fun finishLogin(
     tokenFetchStarted: AtomicBoolean,
     onSuccess: () -> Unit,
 ) {
-    val spDc = extractCookie("sp_dc")
-    val spKey = extractCookie("sp_key") ?: ""
-    if (spDc.isNullOrBlank()) {
+    if (spDc.isBlank()) {
         setProcessing(true)
         setError(true)
-        setStatus("Couldn't read login cookie. Make sure you completed the Spotify login, then try again.")
+        setStatus("Couldn't read login cookie. Please try again.")
         tokenFetchStarted.set(false)
         return
     }
@@ -462,7 +371,6 @@ private fun finishLogin(
     scope.launch(Dispatchers.IO) {
         SpotifySession.setSpDc(activity, spDc)
         var lastError: Throwable? = null
-        // The community TOTP/gist fetch is occasionally flaky — retry a couple times.
         repeat(3) { attempt ->
             val result = SpotifyAuth.fetchAccessToken(spDc, spKey)
             result.onSuccess { token ->

@@ -185,6 +185,13 @@ object SpotifyWebPlayer {
                         null,
                     )
                 }
+                override fun onReceivedSslError(
+                    view: WebView?,
+                    handler: android.webkit.SslErrorHandler?,
+                    error: android.net.http.SslError?,
+                ) {
+                    handler?.proceed()
+                }
             }
             wv.webChromeClient = object : android.webkit.WebChromeClient() {
                 // THE fix: Spotify's player needs the PROTECTED_MEDIA_ID (Widevine)
