@@ -15,6 +15,8 @@ import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowRight
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -42,17 +44,26 @@ fun MusicSourceScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
         ) {
-            Text("Choose your music source", color = Color.White, fontSize = 26.sp, fontWeight = FontWeight.Bold)
+            Text(
+                "בחר מקור לניגון מוזיקה",
+                color = Color.White,
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+            )
             Spacer(Modifier.height(10.dp))
             Text(
-                "Spotify keeps your library and recommendations. Choose where Spotui streams the audio.",
-                color = Color(0xFFB3B3B3), fontSize = 14.sp, textAlign = TextAlign.Center,
+                "ספוטיפיי מספקת את הקטלוג, החיפוש והפלייליסטים. בחר מהיכן האפליקציה תזרים את האודיו של השירים בפועל:",
+                color = Color(0xFFB3B3B3),
+                fontSize = 14.sp,
+                textAlign = TextAlign.Center,
+                lineHeight = 20.sp,
             )
-            Spacer(Modifier.height(32.dp))
+            Spacer(Modifier.height(28.dp))
 
             SourceCard(
-                title = "YouTube Music",
-                subtitle = "Best coverage. Sign in for explicit and age-restricted songs.",
+                title = "YouTube Music (מומלץ)",
+                subtitle = "הכיסוי הרחב ביותר. מנגן כמעט כל שיר וביצוע ללא צורך במנוי בתשלום.",
                 color = Color(0xFFFF0033),
             ) {
                 if (isYoutubeLoggedIn(context)) {
@@ -65,10 +76,33 @@ fun MusicSourceScreen(navController: NavController) {
             Spacer(Modifier.height(14.dp))
             SourceCard(
                 title = "Deezer",
-                subtitle = "Fast exact-track matching. Quality depends on your Deezer plan.",
+                subtitle = "איכות שמע גבוהה והתאמת שירים מדויקת. דורש חיבור חשבון Deezer.",
                 color = Color(0xFFA238FF),
             ) {
                 navController.navigate("${Routes.DeezerLogin.route}?next=spotiflac")
+            }
+
+            Spacer(Modifier.height(28.dp))
+
+            Button(
+                onClick = {
+                    setPrimaryMusicSource(context, MusicSource.YOUTUBE_MUSIC)
+                    navController.navigate(Routes.Home.route) {
+                        popUpTo(Routes.MusicSource.route) { inclusive = true }
+                    }
+                },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF282828),
+                    contentColor = Color.White,
+                ),
+                shape = RoundedCornerShape(50),
+                modifier = Modifier.fillMaxWidth().height(50.dp),
+            ) {
+                Text(
+                    "המשך ללא יבוא",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                )
             }
         }
     }
@@ -87,9 +121,10 @@ private fun SourceCard(title: String, subtitle: String, color: Color, onClick: (
             Modifier.background(color, RoundedCornerShape(10.dp)).padding(horizontal = 12.dp, vertical = 9.dp),
             contentAlignment = Alignment.Center,
         ) { Text("♫", color = Color.White, fontSize = 22.sp, fontWeight = FontWeight.Bold) }
-        Column(Modifier.weight(1f).padding(start = 14.dp)) {
-            Text(title, color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold)
-            Text(subtitle, color = Color(0xFFB3B3B3), fontSize = 12.sp, lineHeight = 17.sp)
+        Column(Modifier.weight(1f).padding(horizontal = 14.dp)) {
+            Text(title, color = Color.White, fontSize = 17.sp, fontWeight = FontWeight.Bold)
+            Spacer(Modifier.height(3.dp))
+            Text(subtitle, color = Color(0xFFB3B3B3), fontSize = 12.sp, lineHeight = 16.sp)
         }
         Icon(Icons.Filled.KeyboardArrowRight, contentDescription = null, tint = color)
     }

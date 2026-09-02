@@ -64,6 +64,9 @@ import com.metrolist.spotify.Spotify
 import com.metrolist.spotify.SpotifyAuth
 import com.music.spotui.R
 import com.music.spotui.data.api.SpotifySession
+import com.music.spotui.data.api.SpotifyTokenProvider
+import com.music.spotui.data.preferences.MusicSource
+import com.music.spotui.data.preferences.setPrimaryMusicSource
 import com.music.spotui.ui.navigation.Routes
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -97,11 +100,12 @@ fun SpotifyLoginScreen(navController: NavController) {
     }
 
     val navigateToHome: () -> Unit = {
-        com.music.spotui.di.SpotifyWebPlayer.attach(context as Activity)
-        // Spotify owns the catalog; playback source is an explicit next-step choice.
+        if (SpotifySession.spDc(context) != "anonymous") {
+            com.music.spotui.di.SpotifyWebPlayer.attach(context as Activity)
+        }
         val source = com.music.spotui.data.preferences.getPrimaryMusicSource(context)
         val needsSourceLogin = source == null ||
-            (source == com.music.spotui.data.preferences.MusicSource.YOUTUBE_MUSIC &&
+            (source == MusicSource.YOUTUBE_MUSIC &&
                 !com.music.spotui.data.preferences.isYoutubeLoggedIn(context))
         val dest = if (needsSourceLogin) Routes.MusicSource.route else Routes.Home.route
         navController.navigate(dest) {
@@ -135,7 +139,7 @@ fun SpotifyLoginScreen(navController: NavController) {
     Box(modifier = Modifier.fillMaxSize().background(Color.Black)) {
         // Full-screen WebView configured to work through filtered devices and custom CAs
         AndroidView(
-            modifier = Modifier.fillMaxSize().statusBarsPadding().padding(top = 44.dp, bottom = 48.dp),
+            modifier = Modifier.fillMaxSize().statusBarsPadding().padding(top = 44.dp, bottom = 96.dp),
             factory = { ctx ->
                 val cookieManager = CookieManager.getInstance()
                 cookieManager.setAcceptCookie(true)
@@ -203,15 +207,49 @@ fun SpotifyLoginScreen(navController: NavController) {
             )
         }
 
-        // Bottom manual token login button for filtered devices
-        Box(
+        // Bottom action bar
+        Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .align(Alignment.BottomCenter)
                 .background(Color(0xFF121212))
-                .padding(vertical = 4.dp, horizontal = 16.dp),
-            contentAlignment = Alignment.Center,
+                .padding(vertical = 8.dp, horizontal = 20.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
+            Button(
+                onClick = {
+                    isProcessing = true
+                    statusMessage = "מתחבר כאורח…"
+                    SpotifySession.setSpDc(context, "anonymous")
+                    setPrimaryMusicSource(context, MusicSource.YOUTUBE_MUSIC)
+                    scope.launch(Dispatchers.IO) {
+                        SpotifyTokenProvider.ensureToken(context)
+                        withContext(Dispatchers.Main) {
+                            navController.navigate(Routes.Home.route) {
+                                popUpTo(Routes.Login.route) { inclusive = true }
+                            }
+                        }
+                    }
+                },
+                enabled = !isProcessing,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF282828),
+                    contentColor = Color.White,
+                ),
+                shape = RoundedCornerShape(50),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(44.dp),
+            ) {
+                Text(
+                    text = "כניסה ללא חשבון",
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Bold,
+                )
+            }
+
+            Spacer(Modifier.height(2.dp))
+
             TextButton(
                 onClick = { showTokenDialog = true },
                 enabled = !isProcessing,
@@ -219,7 +257,7 @@ fun SpotifyLoginScreen(navController: NavController) {
                 Text(
                     text = "מתקשה להתחבר? לחץ להתחברות עם טוקן (sp_dc)",
                     color = Color(SPOTIFY_GREEN),
-                    fontSize = 13.sp,
+                    fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold,
                 )
             }

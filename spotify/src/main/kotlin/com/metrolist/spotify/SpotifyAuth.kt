@@ -64,6 +64,7 @@ object SpotifyAuth {
     suspend fun fetchAccessToken(
         spDc: String,
         spKey: String = "",
+        allowAnonymous: Boolean = false,
     ): Result<SpotifyInternalToken> = runCatching {
         val nuance = fetchNuance()
         val serverTimeSec = fetchServerTime()
@@ -78,20 +79,25 @@ object SpotifyAuth {
             append("&totpVer=${nuance.v}")
         }
 
-        val cookieHeader = buildString {
-            append("sp_dc=$spDc")
-            if (spKey.isNotEmpty()) {
-                append("; sp_key=$spKey")
+        val cookieHeader = if (spDc.isNotBlank() && spDc != "anonymous") {
+            buildString {
+                append("sp_dc=$spDc")
+                if (spKey.isNotEmpty()) {
+                    append("; sp_key=$spKey")
+                }
             }
-        }
+        } else ""
+
+        val headers = if (cookieHeader.isNotEmpty()) mapOf("Cookie" to cookieHeader) else emptyMap()
 
         val body = withContext(Dispatchers.IO) {
-            httpGet(tokenUrl, mapOf("Cookie" to cookieHeader))
+            httpGet(tokenUrl, headers)
         }
 
         val token = json.decodeFromString<SpotifyInternalToken>(body)
 
-        if (token.isAnonymous || token.accessToken.isBlank()) {
+        val isGuest = allowAnonymous || spDc == "anonymous"
+        if (token.accessToken.isBlank() || (token.isAnonymous && !isGuest)) {
             throw Spotify.SpotifyException(
                 401,
                 "Received anonymous token — sp_dc cookie is invalid or expired",

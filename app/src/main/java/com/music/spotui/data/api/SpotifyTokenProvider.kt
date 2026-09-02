@@ -31,11 +31,11 @@ object SpotifyTokenProvider {
             Log.w(TAG, "No sp_dc cookie set — Spotify data unavailable")
             return@withLock false
         }
-        SpotifyAuth.fetchAccessToken(spDc).fold(
+        SpotifyAuth.fetchAccessToken(spDc = spDc, allowAnonymous = (spDc == "anonymous")).fold(
             onSuccess = { token ->
                 Spotify.accessToken = token.accessToken
                 expiresAtMs = token.accessTokenExpirationTimestampMs
-                Log.d(TAG, "Spotify token refreshed")
+                Log.d(TAG, "Spotify token refreshed (guest=${token.isAnonymous})")
                 true
             },
             onFailure = {
