@@ -45,7 +45,7 @@ fun setWazeButtonPosition(c: Context, x: Int, y: Int) {
     prefs(c).edit().putInt(KEY_WAZE_BTN_X, x).putInt(KEY_WAZE_BTN_Y, y).apply()
 }
 
-fun getWazeButtonSize(c: Context, defaultSize: Int = 44): Int = prefs(c).getInt(KEY_WAZE_BTN_SIZE, defaultSize)
+fun getWazeButtonSize(c: Context, defaultSize: Int = 54): Int = prefs(c).getInt(KEY_WAZE_BTN_SIZE, defaultSize)
 fun setWazeButtonSize(c: Context, size: Int) {
     prefs(c).edit().putInt(KEY_WAZE_BTN_SIZE, size).apply()
 }

@@ -8,13 +8,17 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.graphics.PixelFormat
+import android.graphics.drawable.GradientDrawable
 import android.os.Build
 import android.os.IBinder
 import android.util.Log
 import android.view.Gravity
 import android.view.MotionEvent
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.FrameLayout
+import android.widget.ImageView
 import androidx.compose.ui.platform.ComposeView
 import androidx.core.app.NotificationCompat
 import androidx.lifecycle.Lifecycle
@@ -48,7 +52,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
     override val savedStateRegistry: SavedStateRegistry get() = savedStateRegistryController.savedStateRegistry
 
     private var windowManager: WindowManager? = null
-    private var buttonView: ComposeView? = null
+    private var buttonView: View? = null
     private var playerView: ComposeView? = null
 
     private var isButtonAdded = false
@@ -145,17 +149,14 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
     }
 
     private fun getStatusBarHeightPx(): Int {
-        // שיטה 1: WindowInsets (API 30+) — הכי מדויק
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             val wm = getSystemService(Context.WINDOW_SERVICE) as? WindowManager
             val insets = wm?.currentWindowMetrics?.windowInsets
             val statusInsets = insets?.getInsets(WindowInsets.Type.statusBars())
             if (statusInsets != null && statusInsets.top > 0) return statusInsets.top
         }
-        // שיטה 2: getIdentifier (API 23+) — fallback אמין
         val resId = resources.getIdentifier("status_bar_height", "dimen", "android")
         if (resId > 0) return resources.getDimensionPixelSize(resId)
-        // שיטה 3: ברירת מחדל — 24dp
         val density = resources.displayMetrics.density
         return (24 * density).toInt()
     }
@@ -167,7 +168,8 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         if (isButtonAdded || windowManager == null) return
 
         val density = resources.displayMetrics.density
-        val buttonSize = (44 * density).toInt()
+        val buttonSize = (54 * density).toInt()
+        val iconSize = (34 * density).toInt()
         val statusBarH = getStatusBarHeightPx()
 
         val savedX = getWazeButtonX(this, -1)
@@ -194,25 +196,34 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
             y = posY
         }
 
-        val bView = ComposeView(this).apply {
-            setViewTreeLifecycleOwner(this@WazeOverlayService)
-            setViewTreeSavedStateRegistryOwner(this@WazeOverlayService)
-            setContent {
-                WazeOverlayView(
-                    currentSongState = currentSongState,
-                    isExpanded = false
-                )
+        // Native 54dp Circular Spotify Button View (zero touch conflict, instant response)
+        val buttonFrame = FrameLayout(this).apply {
+            layoutParams = FrameLayout.LayoutParams(buttonSize, buttonSize)
+            background = GradientDrawable().apply {
+                shape = GradientDrawable.OVAL
+                setColor(android.graphics.Color.WHITE)
             }
+            elevation = dpToPx(6f)
         }
 
-        // Setup Drag & Tap exactly as specified in the technical guide
+        val iconView = ImageView(this).apply {
+            setImageResource(R.drawable.ic_spotify_waze)
+            scaleType = ImageView.ScaleType.FIT_CENTER
+            val lp = FrameLayout.LayoutParams(iconSize, iconSize).apply {
+                gravity = Gravity.CENTER
+            }
+            layoutParams = lp
+        }
+        buttonFrame.addView(iconView)
+
+        // Setup Drag & Tap from Technical Guide
         var startX = 0f
         var startY = 0f
         var startParamX = 0
         var startParamY = 0
         var isDragging = false
 
-        bView.setOnTouchListener { _, event ->
+        buttonFrame.setOnTouchListener { _, event ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
                     startX = event.rawX
@@ -233,7 +244,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                         buttonParams.x = (startParamX - dx).toInt()
                         buttonParams.y = (startParamY + dy).toInt()
                         try {
-                            windowManager?.updateViewLayout(bView, buttonParams)
+                            windowManager?.updateViewLayout(buttonFrame, buttonParams)
                         } catch (_: Exception) {}
                     }
                     true
@@ -252,10 +263,10 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         }
 
         try {
-            windowManager?.addView(bView, buttonParams)
-            buttonView = bView
+            windowManager?.addView(buttonFrame, buttonParams)
+            buttonView = buttonFrame
             isButtonAdded = true
-            Log.d(TAG, "Waze floating button added.")
+            Log.d(TAG, "Waze 54dp floating button added.")
         } catch (e: Exception) {
             Log.e(TAG, "Failed to add button view", e)
         }
