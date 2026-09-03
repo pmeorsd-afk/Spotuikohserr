@@ -16,8 +16,6 @@ object WazeDetector {
 
     @Volatile
     private var lastKnownForegroundPackage: String? = null
-    @Volatile
-    private var lastEventTimestamp: Long = 0L
 
     fun hasOverlayPermission(context: Context): Boolean {
         return Settings.canDrawOverlays(context)
@@ -60,7 +58,7 @@ object WazeDetector {
     }
 
     /**
-     * Checks if Waze is currently in the foreground with state persistence.
+     * Checks if Waze is currently in the foreground.
      */
     fun isWazeInForeground(context: Context): Boolean {
         if (!hasUsageStatsPermission(context)) {
@@ -69,24 +67,27 @@ object WazeDetector {
 
         val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as? UsageStatsManager ?: return false
         val now = System.currentTimeMillis()
-        val queryStart = if (lastEventTimestamp > 0 && now - lastEventTimestamp < 120_000) {
-            lastEventTimestamp
-        } else {
-            now - 60_000
-        }
+        val events = runCatching { usm.queryEvents(now - 30_000, now) }.getOrNull()
 
-        val events = runCatching { usm.queryEvents(queryStart, now) }.getOrNull()
         if (events != null) {
             val event = UsageEvents.Event()
+            var latestTimestamp = 0L
+            var latestPkg: String? = null
+
             while (events.hasNextEvent()) {
                 events.getNextEvent(event)
                 val type = event.eventType
                 if (type == UsageEvents.Event.ACTIVITY_RESUMED || type == 1) {
-                    if (event.timeStamp >= lastEventTimestamp) {
-                        lastEventTimestamp = event.timeStamp
-                        lastKnownForegroundPackage = event.packageName
+                    if (event.timeStamp >= latestTimestamp) {
+                        latestTimestamp = event.timeStamp
+                        latestPkg = event.packageName
                     }
                 }
+            }
+
+            if (latestPkg != null) {
+                lastKnownForegroundPackage = latestPkg
+                return latestPkg == WAZE_PACKAGE
             }
         }
 
@@ -94,14 +95,9 @@ object WazeDetector {
             return lastKnownForegroundPackage == WAZE_PACKAGE
         }
 
-        // Fallback: Check highest lastTimeUsed in recent usage stats
+        // Fallback: check highest lastTimeUsed
         val stats = usm.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, now - 60000, now)
         val mostRecent = stats?.maxByOrNull { it.lastTimeUsed }
-        if (mostRecent != null) {
-            lastKnownForegroundPackage = mostRecent.packageName
-            return mostRecent.packageName == WAZE_PACKAGE
-        }
-
-        return false
+        return mostRecent?.packageName == WAZE_PACKAGE
     }
 }
