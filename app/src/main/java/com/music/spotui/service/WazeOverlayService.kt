@@ -151,9 +151,9 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 gravity = Gravity.TOP or Gravity.START
             }
         } else {
-            val sizePx = (56 * density).toInt()
-            val marginEndPx = (14 * density).toInt()
-            val marginTopPx = (30 * density).toInt()
+            val sizePx = (50 * density).toInt()
+            val marginEndPx = (12 * density).toInt()
+            val marginTopPx = (135 * density).toInt()
             WindowManager.LayoutParams(
                 sizePx,
                 sizePx,
@@ -168,7 +168,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                     WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
                 PixelFormat.TRANSLUCENT
             ).apply {
-                gravity = Gravity.TOP or Gravity.END
+                gravity = Gravity.TOP or Gravity.RIGHT
                 x = marginEndPx
                 y = marginTopPx
             }
