@@ -24,9 +24,10 @@ object UpdateChecker {
 
     private const val TAG = "UpdateChecker"
     private val ENDPOINTS = listOf(
-        "https://cdn.jsdelivr.net/gh/pmeorsd-afk/Spotuikohserr@main/version.json",
+        "https://api.github.com/repos/pmeorsd-afk/Spotuikohserr/contents/version.json",
         "https://raw.githubusercontent.com/pmeorsd-afk/Spotuikohserr/main/version.json",
         "https://raw.githubusercontent.com/pmeorsd-afk/Spotuikohserr/refs/heads/main/version.json",
+        "https://cdn.jsdelivr.net/gh/pmeorsd-afk/Spotuikohserr@main/version.json",
     )
     private const val PREFS = "update_prefs"
     private const val KEY_SKIP = "skip_fingerprint"
@@ -87,6 +88,7 @@ object UpdateChecker {
                 val request = Request.Builder()
                     .url(urlWithCacheBuster)
                     .header("User-Agent", "Mozilla/5.0 (Spotui; Android)")
+                    .header("Accept", "application/vnd.github.v3.raw, application/json, text/plain, */*")
                     .header("Cache-Control", "no-cache, no-store, must-revalidate")
                     .header("Pragma", "no-cache")
                     .build()
