@@ -19,6 +19,7 @@ import com.metrolist.innertube.models.YouTubeClient.Companion.IOS
 import com.metrolist.innertube.models.YouTubeClient.Companion.IOS_RECENT
 import com.metrolist.innertube.models.YouTubeClient.Companion.MOBILE
 import com.metrolist.innertube.models.YouTubeClient.Companion.TVHTML5
+import com.metrolist.innertube.models.YouTubeClient.Companion.TVHTML5_SIMPLY_EMBEDDED_PLAYER
 import com.metrolist.innertube.models.YouTubeClient.Companion.WEB_REMIX
 import com.metrolist.innertube.models.response.PlayerResponse
 import com.metrolist.music.constants.AudioQuality
@@ -47,16 +48,18 @@ object YTPlayerUtils {
 
     private val poTokenGenerator = PoTokenGenerator()
 
-    // BitChord's fast path: current native YouTube Music returns direct URLs
-    // without cookies, PoTokens, player JavaScript, or signature deciphering.
-    private val MAIN_CLIENT: YouTubeClient = ANDROID_MUSIC
+    // Fast anonymous streaming path like SimpMusic / ViMusic:
+    // ANDROID_VR and IOS return direct, unthrottled audio streams without requiring login or PoTokens.
+    private val MAIN_CLIENT: YouTubeClient = ANDROID_VR_1_65_10
 
     private val STREAM_FALLBACK_CLIENTS: Array<YouTubeClient> = arrayOf(
-        TVHTML5,
-        ANDROID_VR_1_65_10,
-        ANDROID_VR_1_43_32,
         IOS,
         IOS_RECENT,
+        ANDROID_VR_1_65_10,
+        ANDROID_VR_1_43_32,
+        TVHTML5_SIMPLY_EMBEDDED_PLAYER,
+        TVHTML5,
+        ANDROID_MUSIC,
         MOBILE,
     )
     data class PlaybackData(
@@ -564,10 +567,10 @@ object YTPlayerUtils {
 
             httpClient.newCall(requestBuilder.build()).execute().use { response ->
                 val code = response.code
-                val mediaType = response.header("Content-Type").orEmpty()
-                val accepted = (response.isSuccessful || code == 416) &&
-                    (mediaType.startsWith("audio/") || mediaType.startsWith("video/")) &&
-                    (contentLength != null || response.body?.source()?.request(16 * 1024L) == true)
+                val mediaType = response.header("Content-Type").orEmpty().lowercase()
+                val isSuccess = response.isSuccessful || code == 416 || code == 405
+                val isHtmlError = mediaType.contains("text/html") || mediaType.contains("application/json")
+                val accepted = isSuccess && !isHtmlError
                 Timber.tag(logTag).d("Stream URL validation: code=$code type=$mediaType range=$range accepted=$accepted")
                 return accepted
             }
