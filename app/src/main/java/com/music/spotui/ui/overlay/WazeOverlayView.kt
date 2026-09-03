@@ -7,12 +7,10 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -30,7 +28,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
@@ -38,7 +35,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -47,23 +43,18 @@ import com.music.spotui.R
 import com.music.spotui.data.entity.SongsModel
 import com.music.spotui.data.preferences.getListeningHistory
 import com.music.spotui.data.preferences.getWazeButtonSize
-import com.music.spotui.data.preferences.getWazeButtonX
-import com.music.spotui.data.preferences.getWazeButtonY
 import com.music.spotui.di.CurrentSongState
 import com.music.spotui.di.SongPlayer
 import com.music.spotui.ui.components.GlideImage
 import kotlinx.coroutines.delay
-import kotlin.math.roundToInt
 
 @Composable
 fun WazeOverlayView(
     currentSongState: CurrentSongState,
-    isCalibrationMode: Boolean = false,
-    onCalibrationSaved: (x: Int, y: Int, sizeDp: Int) -> Unit = { _, _, _ -> },
+    isExpanded: Boolean = false,
     onExpandChanged: (Boolean) -> Unit = {}
 ) {
     val context = LocalContext.current
-    var isExpanded by remember { mutableStateOf(false) }
     var isShowList by remember { mutableStateOf(false) }
 
     val isPlayingState by rememberUpdatedState(currentSongState.playingState.value)
@@ -90,187 +81,14 @@ fun WazeOverlayView(
         }
     }
 
-    if (isCalibrationMode) {
-        // ── 0. Calibration / Wizard Setup Mode ──
-        val dm = context.resources.displayMetrics
-        val density = dm.density
-        val screenWidthPx = dm.widthPixels
-        val screenHeightPx = dm.heightPixels
-
-        val initialDefaultX = (screenWidthPx - (14 * density) - (44 * density)).toInt()
-        val initialDefaultY = ((24 + 112) * density).toInt()
-
-        val savedX = remember { getWazeButtonX(context, initialDefaultX) }
-        val savedY = remember { getWazeButtonY(context, initialDefaultY) }
-        val savedSize = remember { getWazeButtonSize(context, 44) }
-
-        var currentX by remember { mutableFloatStateOf(savedX.toFloat()) }
-        var currentY by remember { mutableFloatStateOf(savedY.toFloat()) }
-        var currentSizeDp by remember { mutableIntStateOf(savedSize) }
-
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color.Black.copy(alpha = 0.40f))
-        ) {
-            // Draggable Floating Button
-            Box(
-                modifier = Modifier
-                    .offset { IntOffset(currentX.roundToInt(), currentY.roundToInt()) }
-                    .size(currentSizeDp.dp)
-                    .pointerInput(Unit) {
-                        detectDragGestures { change, dragAmount ->
-                            change.consume()
-                            currentX = (currentX + dragAmount.x).coerceIn(0f, screenWidthPx.toFloat() - (currentSizeDp * density))
-                            currentY = (currentY + dragAmount.y).coerceIn(0f, screenHeightPx.toFloat() - (currentSizeDp * density))
-                        }
-                    }
-            ) {
-                Surface(
-                    shape = CircleShape,
-                    color = Color.White,
-                    shadowElevation = 8.dp,
-                    border = BorderStroke(2.dp, Color(0xFF1ED760)),
-                    modifier = Modifier.fillMaxSize()
-                ) {
-                    Box(
-                        contentAlignment = Alignment.Center,
-                        modifier = Modifier.fillMaxSize()
-                    ) {
-                        Image(
-                            painter = painterResource(id = R.drawable.ic_spotify_waze),
-                            contentDescription = "Spotify",
-                            modifier = Modifier.size((currentSizeDp * 0.65f).dp)
-                        )
-                    }
-                }
-            }
-
-            // Bottom Calibration Guide Card
-            Surface(
-                shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp),
-                color = Color(0xFF181B1D).copy(alpha = 0.96f),
-                shadowElevation = 16.dp,
-                border = BorderStroke(1.dp, Color(0xFF383B3E)),
-                modifier = Modifier
-                    .align(Alignment.BottomCenter)
-                    .fillMaxWidth()
-            ) {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 20.dp, vertical = 18.dp)
-                ) {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
-                    ) {
-                        Image(
-                            painter = painterResource(id = R.drawable.ic_spotify_waze),
-                            contentDescription = null,
-                            modifier = Modifier.size(24.dp)
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(
-                            text = "התאמת כפתור ספוטיפיי ב-Waze",
-                            color = Color.White,
-                            fontSize = 17.sp,
-                            fontWeight = FontWeight.Bold
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Text(
-                        text = "1. גרור את הכפתור הירוק עם האצבע למקום הרצוי (מתחת לרמקול).\n2. התאם את גודל הכפתור כך שיתאים בדיוק לכפתורי Waze:",
-                        color = Color(0xFFCCCCCC),
-                        fontSize = 13.sp,
-                        textAlign = TextAlign.Center,
-                        lineHeight = 18.sp
-                    )
-
-                    Spacer(modifier = Modifier.height(14.dp))
-
-                    // Size controls row
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center,
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        IconButton(
-                            onClick = {
-                                if (currentSizeDp > 34) currentSizeDp -= 2
-                            },
-                            modifier = Modifier
-                                .size(40.dp)
-                                .background(Color(0xFF282B2E), CircleShape)
-                        ) {
-                            Text("-", color = Color.White, fontSize = 22.sp, fontWeight = FontWeight.Bold)
-                        }
-
-                        Spacer(modifier = Modifier.width(16.dp))
-
-                        Text(
-                            text = "גודל: $currentSizeDp dp",
-                            color = Color(0xFF1ED760),
-                            fontSize = 16.sp,
-                            fontWeight = FontWeight.Bold
-                        )
-
-                        Spacer(modifier = Modifier.width(16.dp))
-
-                        IconButton(
-                            onClick = {
-                                if (currentSizeDp < 60) currentSizeDp += 2
-                            },
-                            modifier = Modifier
-                                .size(40.dp)
-                                .background(Color(0xFF282B2E), CircleShape)
-                        ) {
-                            Text("+", color = Color.White, fontSize = 20.sp, fontWeight = FontWeight.Bold)
-                        }
-                    }
-
-                    Spacer(modifier = Modifier.height(16.dp))
-
-                    // Save button
-                    Button(
-                        onClick = {
-                            onCalibrationSaved(
-                                currentX.roundToInt(),
-                                currentY.roundToInt(),
-                                currentSizeDp
-                            )
-                        },
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1ED760)),
-                        shape = RoundedCornerShape(24.dp),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(48.dp)
-                    ) {
-                        Text(
-                            text = "✓ שמור מיקום וסיים",
-                            color = Color.Black,
-                            fontSize = 16.sp,
-                            fontWeight = FontWeight.Bold
-                        )
-                    }
-                }
-            }
-        }
-    } else if (!isExpanded) {
+    if (!isExpanded) {
         // ── 1. Collapsed Floating Spotify Button ──
         val savedSize = remember { getWazeButtonSize(context, 44) }
         Surface(
             shape = CircleShape,
             color = Color.White,
             shadowElevation = 4.dp,
-            modifier = Modifier
-                .fillMaxSize()
-                .clickable {
-                    isExpanded = true
-                    onExpandChanged(true)
-                }
+            modifier = Modifier.fillMaxSize()
         ) {
             Box(
                 contentAlignment = Alignment.Center,
@@ -296,7 +114,6 @@ fun WazeOverlayView(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = null
                     ) {
-                        isExpanded = false
                         isShowList = false
                         onExpandChanged(false)
                     }
@@ -575,7 +392,6 @@ fun WazeOverlayView(
                                     // Right: Collapse Chevron (Blue arrow pointing up)
                                     IconButton(
                                         onClick = {
-                                            isExpanded = false
                                             isShowList = false
                                             onExpandChanged(false)
                                         },
