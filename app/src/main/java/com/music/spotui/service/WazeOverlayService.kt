@@ -208,7 +208,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 },
                 PixelFormat.TRANSLUCENT
             ).apply {
-                gravity = Gravity.TOP or Gravity.START
+                gravity = Gravity.TOP or Gravity.LEFT
                 x = 0
                 y = 0
             }
@@ -237,7 +237,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                     WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
                 PixelFormat.TRANSLUCENT
             ).apply {
-                gravity = Gravity.TOP or Gravity.START
+                gravity = Gravity.TOP or Gravity.LEFT
                 x = posX
                 y = posY
             }
