@@ -19,9 +19,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -39,7 +37,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.music.spotui.MainActivity
 import com.music.spotui.R
-import com.music.spotui.data.entity.SongsModel
 import com.music.spotui.di.CurrentSongState
 import com.music.spotui.di.SongPlayer
 import com.music.spotui.ui.components.GlideImage
@@ -48,7 +45,7 @@ import kotlinx.coroutines.delay
 @Composable
 fun WazeOverlayView(
     currentSongState: CurrentSongState,
-    onCloseService: () -> Unit = {}
+    onExpandChanged: (Boolean) -> Unit = {}
 ) {
     val context = LocalContext.current
     var isExpanded by remember { mutableStateOf(false) }
@@ -75,42 +72,35 @@ fun WazeOverlayView(
         }
     }
 
-    Box(
-        modifier = Modifier.fillMaxSize()
-    ) {
-        if (!isExpanded) {
-            // ── 1. Collapsed Floating Spotify Button ──
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(top = 70.dp, end = 16.dp),
-                contentAlignment = Alignment.TopEnd
-            ) {
-                Surface(
-                    shape = CircleShape,
-                    color = Color.White,
-                    shadowElevation = 6.dp,
-                    modifier = Modifier
-                        .size(50.dp)
-                        .clickable {
-                            isExpanded = true
-                        }
-                ) {
-                    Box(
-                        contentAlignment = Alignment.Center,
-                        modifier = Modifier.fillMaxSize()
-                    ) {
-                        Image(
-                            painter = painterResource(id = R.drawable.ic_spotify_waze),
-                            contentDescription = "Spotify",
-                            modifier = Modifier.size(34.dp)
-                        )
-                    }
+    if (!isExpanded) {
+        // ── 1. Collapsed Floating Spotify Button ──
+        Surface(
+            shape = CircleShape,
+            color = Color.White,
+            shadowElevation = 6.dp,
+            modifier = Modifier
+                .fillMaxSize()
+                .clickable {
+                    isExpanded = true
+                    onExpandChanged(true)
                 }
+        ) {
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier.fillMaxSize()
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.ic_spotify_waze),
+                    contentDescription = "Spotify",
+                    modifier = Modifier.size(36.dp)
+                )
             }
-        } else {
-            // ── 2. Expanded Mode: Transparent Dismiss Backdrop + Player Bar ──
-
+        }
+    } else {
+        // ── 2. Expanded Mode: Full screen overlay with backdrop & top player bar ──
+        Box(
+            modifier = Modifier.fillMaxSize()
+        ) {
             // Backdrop: tapping outside closes the player
             Box(
                 modifier = Modifier
@@ -121,6 +111,7 @@ fun WazeOverlayView(
                     ) {
                         isExpanded = false
                         isShowList = false
+                        onExpandChanged(false)
                     }
             )
 
@@ -375,6 +366,7 @@ fun WazeOverlayView(
                                     .clickable {
                                         isExpanded = false
                                         isShowList = false
+                                        onExpandChanged(false)
                                     }
                             ) {
                                 Box(

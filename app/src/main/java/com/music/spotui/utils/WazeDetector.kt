@@ -9,6 +9,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Process
 import android.provider.Settings
+import com.music.spotui.data.preferences.isWazeAlwaysShowEnabled
 
 object WazeDetector {
 
@@ -58,12 +59,14 @@ object WazeDetector {
      * Checks if Waze is currently in the foreground using UsageEvents.
      */
     fun isWazeInForeground(context: Context): Boolean {
-        if (!hasUsageStatsPermission(context)) return false
+        if (!hasUsageStatsPermission(context)) {
+            // Fallback: If usage stats permission not granted, check if always-show mode is enabled
+            return isWazeAlwaysShowEnabled(context)
+        }
 
         val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as? UsageStatsManager ?: return false
         val now = System.currentTimeMillis()
-        // Check events in the last 10 seconds
-        val events = usm.queryEvents(now - 10000, now)
+        val events = usm.queryEvents(now - 15000, now)
         val event = UsageEvents.Event()
         var lastForegroundPackage: String? = null
         var lastEventTime = 0L
@@ -71,7 +74,7 @@ object WazeDetector {
         while (events.hasNextEvent()) {
             events.getNextEvent(event)
             if (event.eventType == UsageEvents.Event.ACTIVITY_RESUMED ||
-                event.eventType == UsageEvents.Event.MOVE_TO_FOREGROUND) {
+                event.eventType == 1 || event.eventType == UsageEvents.Event.MOVE_TO_FOREGROUND) {
                 if (event.timeStamp >= lastEventTime) {
                     lastEventTime = event.timeStamp
                     lastForegroundPackage = event.packageName
