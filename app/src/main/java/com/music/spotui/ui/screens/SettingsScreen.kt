@@ -284,26 +284,28 @@ fun SettingsScreen(navController: NavController) {
             }
 
             Spacer(Modifier.height(12.dp))
-            Spacer(Modifier.height(12.dp))
             SectionTitle("Waze & Car Integration")
-            var wazeOverlayOn by remember {
-                mutableStateOf(com.music.spotui.data.preferences.isWazeOverlayEnabled(context))
-            }
-            var wazeAlwaysShowOn by remember {
-                mutableStateOf(com.music.spotui.data.preferences.isWazeAlwaysShowEnabled(context))
-            }
-
             val hasOverlay = com.music.spotui.utils.WazeDetector.hasOverlayPermission(context)
             val hasUsage = com.music.spotui.utils.WazeDetector.hasUsageStatsPermission(context)
+            val allPermissionsGranted = hasOverlay && hasUsage
+
+            var wazeOverlayOn by remember {
+                mutableStateOf(com.music.spotui.data.preferences.isWazeOverlayEnabled(context) && allPermissionsGranted)
+            }
 
             SettingsSwitchRow(
                 title = "נגן צף אוטומטי ב-Waze",
-                subtitle = "הצגת כפתור ספוטיפיי צף ושליטה מלאה במוזיקה רק בעת כניסה ל-Waze",
+                subtitle = if (allPermissionsGranted && wazeOverlayOn) "✓ פעיל — יופיע אוטומטית ברגע כניסה ל-Waze" else "הצגת כפתור ספוטיפיי צף ושליטה במוזיקה רק ב-Waze",
                 checked = wazeOverlayOn,
                 onCheckedChange = { enable ->
                     wazeOverlayOn = enable
                     com.music.spotui.data.preferences.setWazeOverlayEnabled(context, enable)
                     if (enable) {
+                        if (!hasOverlay) {
+                            com.music.spotui.utils.WazeDetector.requestOverlayPermission(context)
+                        } else if (!hasUsage) {
+                            com.music.spotui.utils.WazeDetector.requestUsageStatsPermission(context)
+                        }
                         com.music.spotui.service.WazeOverlayService.start(context)
                     } else {
                         com.music.spotui.service.WazeOverlayService.stop(context)
@@ -311,15 +313,15 @@ fun SettingsScreen(navController: NavController) {
                 }
             )
 
-            if (wazeOverlayOn) {
+            if (wazeOverlayOn && !allPermissionsGranted) {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(start = 6.dp, top = 4.dp, bottom = 8.dp)
+                        .padding(start = 6.dp, top = 4.dp, bottom = 6.dp)
                 ) {
                     if (!hasOverlay) {
                         Text(
-                            text = "⚠️ שלב 1: נדרשת הרשאת 'הצגה מעל אפליקציות' — לחץ כאן לאישור",
+                            text = "⚠️ שלב 1: אשר 'הצגה מעל אפליקציות' — לחץ כאן",
                             color = Color(0xFFFFCC00),
                             fontSize = 13.sp,
                             fontWeight = FontWeight.SemiBold,
@@ -329,20 +331,12 @@ fun SettingsScreen(navController: NavController) {
                                 .clickable {
                                     com.music.spotui.utils.WazeDetector.requestOverlayPermission(context)
                                 }
-                                .padding(vertical = 8.dp)
-                        )
-                    } else {
-                        Text(
-                            text = "✓ הרשאת הצגה מעל אפליקציות פעילה",
-                            color = Color(0xFF1ED760),
-                            fontSize = 12.sp,
-                            modifier = Modifier.padding(vertical = 2.dp)
+                                .padding(vertical = 6.dp)
                         )
                     }
-
                     if (!hasUsage) {
                         Text(
-                            text = "⚠️ שלב 2: נדרשת הרשאת 'גישה לנתוני שימוש' (לזיהוי Waze) — לחץ כאן לאישור",
+                            text = "⚠️ שלב 2: אשר 'גישה לנתוני שימוש' (לזיהוי Waze) — לחץ כאן",
                             color = Color(0xFFFFCC00),
                             fontSize = 13.sp,
                             fontWeight = FontWeight.SemiBold,
@@ -352,27 +346,10 @@ fun SettingsScreen(navController: NavController) {
                                 .clickable {
                                     com.music.spotui.utils.WazeDetector.requestUsageStatsPermission(context)
                                 }
-                                .padding(vertical = 8.dp)
-                        )
-                    } else {
-                        Text(
-                            text = "✓ הרשאת זיהוי Waze פעילה",
-                            color = Color(0xFF1ED760),
-                            fontSize = 12.sp,
-                            modifier = Modifier.padding(vertical = 2.dp)
+                                .padding(vertical = 6.dp)
                         )
                     }
                 }
-
-                SettingsSwitchRow(
-                    title = "הצג תמיד כשהמוזיקה מנגנת",
-                    subtitle = "מציג את הכפתור הצף בכל מצב כשיש שיר פעיל (ללא צורך בהרשאת שימוש)",
-                    checked = wazeAlwaysShowOn,
-                    onCheckedChange = { enable ->
-                        wazeAlwaysShowOn = enable
-                        com.music.spotui.data.preferences.setWazeAlwaysShowEnabled(context, enable)
-                    }
-                )
             }
 
             Spacer(Modifier.height(12.dp))

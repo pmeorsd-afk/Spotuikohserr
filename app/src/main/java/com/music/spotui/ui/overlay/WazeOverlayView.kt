@@ -85,7 +85,7 @@ fun WazeOverlayView(
         Surface(
             shape = CircleShape,
             color = Color.White,
-            shadowElevation = 6.dp,
+            shadowElevation = 4.dp,
             modifier = Modifier
                 .fillMaxSize()
                 .clickable {
@@ -100,7 +100,7 @@ fun WazeOverlayView(
                 Image(
                     painter = painterResource(id = R.drawable.ic_spotify_waze),
                     contentDescription = "Spotify",
-                    modifier = Modifier.size(36.dp)
+                    modifier = Modifier.size(28.dp)
                 )
             }
         }
@@ -427,27 +427,81 @@ fun WazeOverlayView(
                         }
                     } else {
                         // ── 3. Show List View (3 Columns Grid) ──
-                        val showListSongs = remember(currentSongState.queue.value) {
-                            val q = currentSongState.queue.value
-                            if (q.isNotEmpty()) {
-                                q.take(18)
-                            } else {
-                                val hist = getListeningHistory(context)
-                                if (hist.isNotEmpty()) {
-                                    hist.take(18).map {
+                        val showListSongs = remember(currentSongState.queue.value, currentSongId) {
+                            val result = mutableListOf<SongsModel>()
+                            val seenArtists = mutableSetOf<String>()
+
+                            // 1. Current track
+                            val currentSong = currentSongState.queue.value.firstOrNull { it.id == currentSongId }
+                            if (currentSong != null) {
+                                result.add(currentSong)
+                                seenArtists.add(currentSong.singer.lowercase().trim())
+                            }
+
+                            // 2. Different tracks from history
+                            val history = getListeningHistory(context)
+                            for (entry in history) {
+                                val aKey = entry.singer.lowercase().trim()
+                                if (aKey !in seenArtists && entry.title.isNotBlank()) {
+                                    val sId = if (entry.songId > 0) entry.songId else (entry.title + entry.singer).hashCode() and 0x7fffffff
+                                    result.add(
                                         SongsModel(
-                                            id = it.songId,
-                                            title = it.title,
-                                            singer = it.singer,
-                                            coverUri = it.image,
-                                            album = it.album,
-                                            url = SongPlayer.buildSpotifyPlayQuery(it.songId.toString(), it.title, it.singer)
+                                            id = sId,
+                                            title = entry.title,
+                                            singer = entry.singer,
+                                            coverUri = entry.image,
+                                            album = entry.album,
+                                            url = SongPlayer.buildSpotifyPlayQuery(sId.toString(), entry.title, entry.singer)
+                                        )
+                                    )
+                                    seenArtists.add(aKey)
+                                }
+                                if (result.size >= 18) break
+                            }
+
+                            // 3. Fallback diverse curated tracks
+                            if (result.size < 9) {
+                                val fallbacks = listOf(
+                                    Triple("מלאך של כבוד", "Omer Adam", "https://i.scdn.co/image/ab67616d0000b27387f3b7b203c9454ee689f029"),
+                                    Triple("אמא אם הייתי", "חנן בן ארי", "https://i.scdn.co/image/ab67616d0000b273f5ba3bfa2c5d19f564757c91"),
+                                    Triple("במה קהל אהבה", "ישי ריבו", "https://i.scdn.co/image/ab67616d0000b2731872df0d00f7d54b455cb783"),
+                                    Triple("ניגוני הינוקא", "הינוקא", "https://i.scdn.co/image/ab67616d0000b27341857ba0b6d214a1a5b6c813"),
+                                    Triple("אלף מנעולים", "עקיבא", "https://i.scdn.co/image/ab67616d0000b273b067a9994c6bc312e737c355"),
+                                    Triple("ניגונים", "יובל דיין", "https://i.scdn.co/image/ab67616d0000b273a21644ce63b06a45749f7833"),
+                                    Triple("לוחות הלב", "עולמות", "https://i.scdn.co/image/ab67616d0000b273184d1264c78d5218d6a782b5"),
+                                    Triple("צמאה 5", "אברהם פריד", "https://i.scdn.co/image/ab67616d0000b273fdfbcf6a17b075b6d9e03d7c"),
+                                    Triple("דלתי תשובה", "שולי רנד", "https://i.scdn.co/image/ab67616d0000b27362a98f1fbe147b2c0db3b429"),
+                                    Triple("נפשי בשאלתי", "נתן גושן", "https://i.scdn.co/image/ab67616d0000b273b7d159a6eaebcb64e8e19572"),
+                                    Triple("ניגון הבעל שם טוב", "חיליק פרנק", "https://i.scdn.co/image/ab67616d0000b27303d7d7b1b5e5ebfc34563a69"),
+                                    Triple("מיקס ישי ריבו", "ישי ריבו", "https://i.scdn.co/image/ab67616d0000b273c3327d9ba6d781b0f1625d97")
+                                )
+                                for ((fTitle, fSinger, fCover) in fallbacks) {
+                                    if (result.none { it.title == fTitle }) {
+                                        val fId = (fTitle + fSinger).hashCode() and 0x7fffffff
+                                        result.add(
+                                            SongsModel(
+                                                id = fId,
+                                                title = fTitle,
+                                                singer = fSinger,
+                                                coverUri = fCover,
+                                                album = fTitle,
+                                                url = SongPlayer.buildSpotifyPlayQuery(fId.toString(), fTitle, fSinger)
+                                            )
                                         )
                                     }
-                                } else {
-                                    emptyList()
+                                    if (result.size >= 18) break
                                 }
                             }
+
+                            // 4. Fill with remaining queue items
+                            for (qSong in currentSongState.queue.value) {
+                                if (result.none { it.id == qSong.id || it.title == qSong.title }) {
+                                    result.add(qSong)
+                                }
+                                if (result.size >= 18) break
+                            }
+
+                            result
                         }
 
                         LazyVerticalGrid(

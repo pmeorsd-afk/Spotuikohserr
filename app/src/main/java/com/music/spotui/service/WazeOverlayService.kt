@@ -151,9 +151,9 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 gravity = Gravity.TOP or Gravity.START
             }
         } else {
-            val sizePx = (50 * density).toInt()
+            val sizePx = (44 * density).toInt()
             val marginEndPx = (12 * density).toInt()
-            val marginTopPx = (135 * density).toInt()
+            val marginTopPx = (128 * density).toInt()
             WindowManager.LayoutParams(
                 sizePx,
                 sizePx,

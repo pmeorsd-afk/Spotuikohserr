@@ -9,11 +9,15 @@ import android.net.Uri
 import android.os.Build
 import android.os.Process
 import android.provider.Settings
-import com.music.spotui.data.preferences.isWazeAlwaysShowEnabled
 
 object WazeDetector {
 
     const val WAZE_PACKAGE = "com.waze"
+
+    @Volatile
+    private var lastKnownForegroundPackage: String? = null
+    @Volatile
+    private var lastEventTimestamp: Long = 0L
 
     fun hasOverlayPermission(context: Context): Boolean {
         return Settings.canDrawOverlays(context)
@@ -56,39 +60,48 @@ object WazeDetector {
     }
 
     /**
-     * Checks if Waze is currently in the foreground using UsageEvents.
+     * Checks if Waze is currently in the foreground with state persistence.
      */
     fun isWazeInForeground(context: Context): Boolean {
         if (!hasUsageStatsPermission(context)) {
-            // Fallback: If usage stats permission not granted, check if always-show mode is enabled
-            return isWazeAlwaysShowEnabled(context)
+            return false
         }
 
         val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as? UsageStatsManager ?: return false
         val now = System.currentTimeMillis()
-        val events = usm.queryEvents(now - 15000, now)
-        val event = UsageEvents.Event()
-        var lastForegroundPackage: String? = null
-        var lastEventTime = 0L
+        val queryStart = if (lastEventTimestamp > 0 && now - lastEventTimestamp < 120_000) {
+            lastEventTimestamp
+        } else {
+            now - 60_000
+        }
 
-        while (events.hasNextEvent()) {
-            events.getNextEvent(event)
-            if (event.eventType == UsageEvents.Event.ACTIVITY_RESUMED ||
-                event.eventType == 1 || event.eventType == UsageEvents.Event.MOVE_TO_FOREGROUND) {
-                if (event.timeStamp >= lastEventTime) {
-                    lastEventTime = event.timeStamp
-                    lastForegroundPackage = event.packageName
+        val events = runCatching { usm.queryEvents(queryStart, now) }.getOrNull()
+        if (events != null) {
+            val event = UsageEvents.Event()
+            while (events.hasNextEvent()) {
+                events.getNextEvent(event)
+                val type = event.eventType
+                if (type == UsageEvents.Event.ACTIVITY_RESUMED || type == 1) {
+                    if (event.timeStamp >= lastEventTimestamp) {
+                        lastEventTimestamp = event.timeStamp
+                        lastKnownForegroundPackage = event.packageName
+                    }
                 }
             }
         }
 
-        if (lastForegroundPackage != null) {
-            return lastForegroundPackage == WAZE_PACKAGE
+        if (lastKnownForegroundPackage != null) {
+            return lastKnownForegroundPackage == WAZE_PACKAGE
         }
 
         // Fallback: Check highest lastTimeUsed in recent usage stats
         val stats = usm.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, now - 60000, now)
         val mostRecent = stats?.maxByOrNull { it.lastTimeUsed }
-        return mostRecent?.packageName == WAZE_PACKAGE
+        if (mostRecent != null) {
+            lastKnownForegroundPackage = mostRecent.packageName
+            return mostRecent.packageName == WAZE_PACKAGE
+        }
+
+        return false
     }
 }
