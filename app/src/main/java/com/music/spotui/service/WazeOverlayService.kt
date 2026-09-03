@@ -11,6 +11,8 @@ import android.os.Build
 import android.os.IBinder
 import android.util.Log
 import android.view.Gravity
+import android.view.MotionEvent
+import android.view.View
 import android.view.WindowManager
 import androidx.compose.ui.platform.ComposeView
 import androidx.core.app.NotificationCompat
@@ -23,13 +25,17 @@ import androidx.savedstate.SavedStateRegistryController
 import androidx.savedstate.SavedStateRegistryOwner
 import androidx.savedstate.setViewTreeSavedStateRegistryOwner
 import com.music.spotui.R
+import com.music.spotui.data.preferences.getWazeButtonX
+import com.music.spotui.data.preferences.getWazeButtonY
 import com.music.spotui.data.preferences.isWazeOverlayEnabled
+import com.music.spotui.data.preferences.setWazeButtonPosition
 import com.music.spotui.di.CurrentSongState
 import com.music.spotui.ui.overlay.WazeOverlayView
 import com.music.spotui.utils.WazeDetector
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import javax.inject.Inject
+import kotlin.math.hypot
 
 @AndroidEntryPoint
 class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
@@ -47,6 +53,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
     private var overlayView: ComposeView? = null
     private var isViewAdded = false
     private var isExpandedState = false
+    private var currentLayoutParams: WindowManager.LayoutParams? = null
 
     private val serviceScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
     private var watcherJob: Job? = null
@@ -126,7 +133,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 } catch (e: Exception) {
                     Log.e(TAG, "Error in WazeWatcher", e)
                 }
-                delay(1200)
+                delay(1000)
             }
         }
     }
@@ -149,11 +156,16 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 PixelFormat.TRANSLUCENT
             ).apply {
                 gravity = Gravity.TOP or Gravity.START
+                x = 0
+                y = 0
             }
         } else {
-            val sizePx = (44 * density).toInt()
-            val marginEndPx = (12 * density).toInt()
-            val marginTopPx = (128 * density).toInt()
+            val sizePx = (48 * density).toInt()
+            val defaultMarginX = (16 * density).toInt()
+            val defaultMarginY = (142 * density).toInt()
+            val savedX = getWazeButtonX(this, defaultMarginX)
+            val savedY = getWazeButtonY(this, defaultMarginY)
+
             WindowManager.LayoutParams(
                 sizePx,
                 sizePx,
@@ -169,8 +181,56 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 PixelFormat.TRANSLUCENT
             ).apply {
                 gravity = Gravity.TOP or Gravity.RIGHT
-                x = marginEndPx
-                y = marginTopPx
+                x = savedX
+                y = savedY
+            }
+        }
+    }
+
+    private fun setupDraggableTouch(view: View) {
+        var initialX = 0
+        var initialY = 0
+        var initialTouchX = 0f
+        var initialTouchY = 0f
+        var isDragging = false
+
+        view.setOnTouchListener { _, event ->
+            if (isExpandedState) return@setOnTouchListener false
+
+            val lp = currentLayoutParams ?: return@setOnTouchListener false
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    initialX = lp.x
+                    initialY = lp.y
+                    initialTouchX = event.rawX
+                    initialTouchY = event.rawY
+                    isDragging = false
+                    true
+                }
+                MotionEvent.ACTION_MOVE -> {
+                    val dx = (initialTouchX - event.rawX).toInt() // Gravity.RIGHT: leftward drag increases x
+                    val dy = (event.rawY - initialTouchY).toInt()
+                    if (hypot(dx.toDouble(), dy.toDouble()) > 8) {
+                        isDragging = true
+                        lp.x = (initialX + dx).coerceAtLeast(0)
+                        lp.y = (initialY + dy).coerceAtLeast(0)
+                        try {
+                            windowManager?.updateViewLayout(overlayView, lp)
+                        } catch (e: Exception) {
+                            Log.e(TAG, "Error updating dragged overlay", e)
+                        }
+                    }
+                    true
+                }
+                MotionEvent.ACTION_UP -> {
+                    if (isDragging) {
+                        setWazeButtonPosition(this, lp.x, lp.y)
+                    } else {
+                        setExpanded(true)
+                    }
+                    true
+                }
+                else -> false
             }
         }
     }
@@ -180,6 +240,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
 
         isExpandedState = false
         val layoutParams = getLayoutParams(false)
+        currentLayoutParams = layoutParams
 
         val view = ComposeView(this).apply {
             setViewTreeLifecycleOwner(this@WazeOverlayService)
@@ -193,6 +254,8 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 )
             }
         }
+
+        setupDraggableTouch(view)
 
         try {
             windowManager?.addView(view, layoutParams)
@@ -208,7 +271,9 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         if (isExpandedState == expanded || !isViewAdded || overlayView == null || windowManager == null) return
         isExpandedState = expanded
         try {
-            windowManager?.updateViewLayout(overlayView, getLayoutParams(expanded))
+            val lp = getLayoutParams(expanded)
+            currentLayoutParams = lp
+            windowManager?.updateViewLayout(overlayView, lp)
             Log.d(TAG, "Overlay layout updated to expanded=$expanded")
         } catch (e: Exception) {
             Log.e(TAG, "Failed to update layout params", e)
@@ -222,6 +287,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
             overlayView = null
             isViewAdded = false
             isExpandedState = false
+            currentLayoutParams = null
             Log.d(TAG, "Waze overlay removed from window")
         } catch (e: Exception) {
             Log.e(TAG, "Failed to remove overlay view", e)
