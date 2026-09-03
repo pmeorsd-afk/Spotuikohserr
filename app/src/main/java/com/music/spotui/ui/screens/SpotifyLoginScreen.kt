@@ -103,12 +103,8 @@ fun SpotifyLoginScreen(navController: NavController) {
         if (SpotifySession.spDc(context) != "anonymous") {
             com.music.spotui.di.SpotifyWebPlayer.attach(context as Activity)
         }
-        val source = com.music.spotui.data.preferences.getPrimaryMusicSource(context)
-        val needsSourceLogin = source == null ||
-            (source == MusicSource.YOUTUBE_MUSIC &&
-                !com.music.spotui.data.preferences.isYoutubeLoggedIn(context))
-        val dest = if (needsSourceLogin) Routes.MusicSource.route else Routes.Home.route
-        navController.navigate(dest) {
+        com.music.spotui.data.preferences.setPrimaryMusicSource(context, MusicSource.YOUTUBE_MUSIC)
+        navController.navigate(Routes.Home.route) {
             popUpTo(Routes.Login.route) { inclusive = true }
         }
     }

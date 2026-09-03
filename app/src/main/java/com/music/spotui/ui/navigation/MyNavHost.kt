@@ -62,10 +62,6 @@ fun MyNavHost(
     // First launch (no Spotify session) lands on the login screen.
     val startDestination = when {
         SpotifySession.spDc(context).isBlank() -> Routes.Login.route
-        com.music.spotui.data.preferences.getPrimaryMusicSource(context) == null -> Routes.MusicSource.route
-        com.music.spotui.data.preferences.getPrimaryMusicSource(context) ==
-            com.music.spotui.data.preferences.MusicSource.YOUTUBE_MUSIC &&
-            !com.music.spotui.data.preferences.isYoutubeLoggedIn(context) -> Routes.MusicSource.route
         else -> Routes.Home.route
     }
 
