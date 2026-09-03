@@ -35,6 +35,7 @@ class WebMediaPlayer(
         val metadata = MediaMetadata.Builder()
             .setTitle(title)
             .setArtist(artist)
+            .apply { if (cover.isNotBlank()) setArtworkUri(Uri.parse(cover)) }
             .build()
         val mediaItem = MediaItem.Builder()
             .setMediaId(id)

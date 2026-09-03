@@ -287,6 +287,7 @@ object SongPlayer {
         val metadata = androidx.media3.common.MediaMetadata.Builder()
             .setTitle(metaTitle)
             .setArtist(metaArtist)
+            .apply { if (metaCover.isNotBlank()) setArtworkUri(android.net.Uri.parse(metaCover)) }
             .build()
         return MediaItem.Builder()
             .setUri(streamUrl)
