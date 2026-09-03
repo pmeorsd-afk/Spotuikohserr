@@ -284,6 +284,32 @@ fun SettingsScreen(navController: NavController) {
             }
 
             Spacer(Modifier.height(12.dp))
+            SectionTitle("Waze & Car Integration")
+            var wazeOverlayOn by remember {
+                mutableStateOf(com.music.spotui.data.preferences.isWazeOverlayEnabled(context))
+            }
+            SettingsSwitchRow(
+                title = "נגן צף אוטומטי ב-Waze",
+                subtitle = "הצגת כפתור ספוטיפיי צף ושליטה מלאה במוזיקה רק בעת כניסה ל-Waze",
+                checked = wazeOverlayOn,
+                onCheckedChange = { enable ->
+                    wazeOverlayOn = enable
+                    com.music.spotui.data.preferences.setWazeOverlayEnabled(context, enable)
+                    if (enable) {
+                        if (!com.music.spotui.utils.WazeDetector.hasOverlayPermission(context)) {
+                            com.music.spotui.utils.WazeDetector.requestOverlayPermission(context)
+                        }
+                        if (!com.music.spotui.utils.WazeDetector.hasUsageStatsPermission(context)) {
+                            com.music.spotui.utils.WazeDetector.requestUsageStatsPermission(context)
+                        }
+                        com.music.spotui.service.WazeOverlayService.start(context)
+                    } else {
+                        com.music.spotui.service.WazeOverlayService.stop(context)
+                    }
+                }
+            )
+
+            Spacer(Modifier.height(12.dp))
             SectionTitle("Account")
             Text(
                 text = "Log out",

@@ -30,6 +30,10 @@ private const val KEY_CROSSFADE_DJ = "crossfade_dj_mode"
 private const val KEY_WEB_PLAYBACK = "web_playback_enabled"
 private const val KEY_VIDEO_FALLBACK = "video_fallback_enabled"
 private const val KEY_LIBRARY_GRID = "library_grid_view"
+private const val KEY_WAZE_OVERLAY = "waze_overlay_enabled"
+
+fun isWazeOverlayEnabled(c: Context): Boolean = prefs(c).getBoolean(KEY_WAZE_OVERLAY, true)
+fun setWazeOverlayEnabled(c: Context, v: Boolean) = prefs(c).edit().putBoolean(KEY_WAZE_OVERLAY, v).apply()
 
 /** Off (0s) … 12s. 0 disables crossfade. */
 const val CROSSFADE_MIN_MS = 0
