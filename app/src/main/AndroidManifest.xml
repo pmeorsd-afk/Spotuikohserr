@@ -62,6 +62,18 @@
             android:exported="false"
             android:foregroundServiceType="specialUse"
             tools:targetApi="upside_down_cake" />
+
+        <service
+            android:name=".service.WazeAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/waze_accessibility_service_config" />
+        </service>
     </application>
 
 </manifest>

@@ -11,8 +11,6 @@ import android.os.Build
 import android.os.IBinder
 import android.util.Log
 import android.view.Gravity
-import android.view.MotionEvent
-import android.view.View
 import android.view.WindowManager
 import androidx.compose.ui.platform.ComposeView
 import androidx.core.app.NotificationCompat
@@ -25,17 +23,13 @@ import androidx.savedstate.SavedStateRegistryController
 import androidx.savedstate.SavedStateRegistryOwner
 import androidx.savedstate.setViewTreeSavedStateRegistryOwner
 import com.music.spotui.R
-import com.music.spotui.data.preferences.getWazeButtonX
-import com.music.spotui.data.preferences.getWazeButtonY
 import com.music.spotui.data.preferences.isWazeOverlayEnabled
-import com.music.spotui.data.preferences.setWazeButtonPosition
 import com.music.spotui.di.CurrentSongState
 import com.music.spotui.ui.overlay.WazeOverlayView
 import com.music.spotui.utils.WazeDetector
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import javax.inject.Inject
-import kotlin.math.hypot
 
 @AndroidEntryPoint
 class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
@@ -63,6 +57,18 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         private const val CHANNEL_ID = "waze_overlay_channel"
         private const val NOTIFICATION_ID = 2048
 
+        @Volatile
+        private var dynamicX: Int? = null
+        @Volatile
+        private var dynamicY: Int? = null
+        @Volatile
+        private var dynamicWidth: Int? = null
+        @Volatile
+        private var dynamicHeight: Int? = null
+
+        @Volatile
+        private var activeServiceInstance: WazeOverlayService? = null
+
         fun start(context: Context) {
             val intent = Intent(context, WazeOverlayService::class.java)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -76,10 +82,28 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
             val intent = Intent(context, WazeOverlayService::class.java)
             context.stopService(intent)
         }
+
+        fun updateDynamicPosition(x: Int, y: Int, width: Int, height: Int) {
+            dynamicX = x
+            dynamicY = y
+            dynamicWidth = width
+            dynamicHeight = height
+
+            activeServiceInstance?.applyDynamicBounds(x, y, width, height)
+        }
+
+        fun onWazeActiveWithoutBounds() {
+            activeServiceInstance?.applyDefaultBoundsIfShowing()
+        }
+
+        fun onWazeLeft() {
+            activeServiceInstance?.hideOverlay()
+        }
     }
 
     override fun onCreate() {
         super.onCreate()
+        activeServiceInstance = this
         savedStateRegistryController.performRestore(null)
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START)
@@ -123,17 +147,21 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 try {
                     val enabledInSettings = isWazeOverlayEnabled(applicationContext)
                     val hasOverlay = WazeDetector.hasOverlayPermission(applicationContext)
-                    val isWazeActive = WazeDetector.isWazeInForeground(applicationContext)
+                    val isAccessibility = WazeAccessibilityService.isAccessibilityServiceEnabled(applicationContext)
+                    val isWazeActive = WazeDetector.isWazeInForeground(applicationContext) ||
+                        (isAccessibility && WazeAccessibilityService.instance != null)
 
                     if (enabledInSettings && hasOverlay && isWazeActive) {
-                        showOverlay()
-                    } else {
+                        if (!isViewAdded) {
+                            showOverlay()
+                        }
+                    } else if (!isWazeActive) {
                         hideOverlay()
                     }
                 } catch (e: Exception) {
                     Log.e(TAG, "Error in WazeWatcher", e)
                 }
-                delay(1000)
+                delay(1200)
             }
         }
     }
@@ -160,78 +188,82 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 y = 0
             }
         } else {
-            val sizePx = (48 * density).toInt()
-            val defaultMarginX = (16 * density).toInt()
-            val defaultMarginY = (142 * density).toInt()
-            val savedX = getWazeButtonX(this, defaultMarginX)
-            val savedY = getWazeButtonY(this, defaultMarginY)
+            val curX = dynamicX
+            val curY = dynamicY
+            val curW = dynamicWidth
+            val curH = dynamicHeight
 
-            WindowManager.LayoutParams(
-                sizePx,
-                sizePx,
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
-                } else {
-                    @Suppress("DEPRECATION")
-                    WindowManager.LayoutParams.TYPE_PHONE
-                },
-                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
-                    WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
-                    WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
-                PixelFormat.TRANSLUCENT
-            ).apply {
-                gravity = Gravity.TOP or Gravity.RIGHT
-                x = savedX
-                y = savedY
+            if (curX != null && curY != null && curW != null && curH != null && curW > 0 && curH > 0) {
+                // Exact real-time measured bounds from AccessibilityService!
+                WindowManager.LayoutParams(
+                    curW,
+                    curH,
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+                    } else {
+                        @Suppress("DEPRECATION")
+                        WindowManager.LayoutParams.TYPE_PHONE
+                    },
+                    WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
+                        WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
+                        WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
+                    PixelFormat.TRANSLUCENT
+                ).apply {
+                    gravity = Gravity.TOP or Gravity.START
+                    x = curX
+                    y = curY
+                }
+            } else {
+                // Fallback geometry
+                val sizePx = (48 * density).toInt()
+                val defaultMarginX = (14 * density).toInt()
+                val defaultMarginY = (140 * density).toInt()
+
+                WindowManager.LayoutParams(
+                    sizePx,
+                    sizePx,
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+                    } else {
+                        @Suppress("DEPRECATION")
+                        WindowManager.LayoutParams.TYPE_PHONE
+                    },
+                    WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
+                        WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
+                        WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
+                    PixelFormat.TRANSLUCENT
+                ).apply {
+                    gravity = Gravity.TOP or Gravity.RIGHT
+                    x = defaultMarginX
+                    y = defaultMarginY
+                }
             }
         }
     }
 
-    private fun setupDraggableTouch(view: View) {
-        var initialX = 0
-        var initialY = 0
-        var initialTouchX = 0f
-        var initialTouchY = 0f
-        var isDragging = false
+    fun applyDynamicBounds(x: Int, y: Int, width: Int, height: Int) {
+        if (!isWazeOverlayEnabled(this) || !WazeDetector.hasOverlayPermission(this)) return
 
-        view.setOnTouchListener { _, event ->
-            if (isExpandedState) return@setOnTouchListener false
+        if (!isViewAdded) {
+            showOverlay()
+            return
+        }
 
-            val lp = currentLayoutParams ?: return@setOnTouchListener false
-            when (event.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    initialX = lp.x
-                    initialY = lp.y
-                    initialTouchX = event.rawX
-                    initialTouchY = event.rawY
-                    isDragging = false
-                    true
-                }
-                MotionEvent.ACTION_MOVE -> {
-                    val dx = (initialTouchX - event.rawX).toInt() // Gravity.RIGHT: leftward drag increases x
-                    val dy = (event.rawY - initialTouchY).toInt()
-                    if (hypot(dx.toDouble(), dy.toDouble()) > 8) {
-                        isDragging = true
-                        lp.x = (initialX + dx).coerceAtLeast(0)
-                        lp.y = (initialY + dy).coerceAtLeast(0)
-                        try {
-                            windowManager?.updateViewLayout(overlayView, lp)
-                        } catch (e: Exception) {
-                            Log.e(TAG, "Error updating dragged overlay", e)
-                        }
-                    }
-                    true
-                }
-                MotionEvent.ACTION_UP -> {
-                    if (isDragging) {
-                        setWazeButtonPosition(this, lp.x, lp.y)
-                    } else {
-                        setExpanded(true)
-                    }
-                    true
-                }
-                else -> false
-            }
+        if (isExpandedState || overlayView == null || windowManager == null) return
+
+        val lp = getLayoutParams(false)
+        currentLayoutParams = lp
+        try {
+            windowManager?.updateViewLayout(overlayView, lp)
+            Log.d(TAG, "Dynamic bounds applied: x=$x, y=$y, w=$width, h=$height")
+        } catch (e: Exception) {
+            Log.e(TAG, "Error updating dynamic layout bounds", e)
+        }
+    }
+
+    fun applyDefaultBoundsIfShowing() {
+        if (!isViewAdded && isWazeOverlayEnabled(this) && WazeDetector.hasOverlayPermission(this)) {
+            showOverlay()
         }
     }
 
@@ -255,13 +287,11 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
             }
         }
 
-        setupDraggableTouch(view)
-
         try {
             windowManager?.addView(view, layoutParams)
             overlayView = view
             isViewAdded = true
-            Log.d(TAG, "Waze overlay added to window")
+            Log.d(TAG, "Waze overlay added to window with dynamic layout")
         } catch (e: Exception) {
             Log.e(TAG, "Failed to add overlay view", e)
         }
@@ -280,7 +310,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         }
     }
 
-    private fun hideOverlay() {
+    fun hideOverlay() {
         if (!isViewAdded || overlayView == null || windowManager == null) return
         try {
             windowManager?.removeView(overlayView)
@@ -296,6 +326,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
 
     override fun onDestroy() {
         super.onDestroy()
+        activeServiceInstance = null
         watcherJob?.cancel()
         serviceScope.cancel()
         hideOverlay()
