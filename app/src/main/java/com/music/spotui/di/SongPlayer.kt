@@ -1124,31 +1124,37 @@ object SongPlayer {
     }
 
     private fun CandidateScore.isAcceptableMatch(): Boolean {
-        val durationStrong = durationScore?.let { it >= 0.94 } ?: false
-        val albumUseful = albumScore?.let { it >= 0.45 } ?: false
+        val durationStrong = durationScore?.let { it >= 0.85 } ?: false
+        val albumUseful = albumScore?.let { it >= 0.40 } ?: false
         val hasDuration = durationScore != null
         val minScore = when {
-            hasDuration && item.isVideoSong -> 1.55
-            hasDuration -> 2.25
-            item.isVideoSong -> 0.78
-            else -> 1.35
+            hasDuration && item.isVideoSong -> 0.90
+            hasDuration -> 1.10
+            item.isVideoSong -> 0.50
+            else -> 0.70
         }
 
-        // Duration is deliberately weighted heavily, as in spotify_to_ytmusic,
-        // but these gates prevent a same-length wrong-artist song from winning.
-        // If Spotify did not ask for a remix/live/acoustic/etc version, do not
-        // let that alternate upload win just because its title and length are close.
-        // When duration is missing, allow strong title+artist/album matches
-        // instead of rejecting every possible candidate.
         val hasUnexpectedHardAlternate = hardVersionMarkers(unexpectedAlternates).isNotEmpty()
+        if (hasUnexpectedHardAlternate) return false
+
+        // 1. Strong title match (e.g. Hebrew/English transliterated or direct titles)
+        if (titleScore >= 0.60 && (durationStrong || (durationScore?.let { it >= 0.70 } ?: false) || artistEvidenceScore >= 0.15 || albumUseful)) {
+            return true
+        }
+
+        // 2. High title similarity (> 0.75) alone without hard mismatch
+        if (titleScore >= 0.75) {
+            return true
+        }
+
+        // 3. General match
         return score >= minScore &&
-            !hasUnexpectedHardAlternate &&
-            titleScore >= 0.45 &&
+            titleScore >= 0.35 &&
             (
-                artistEvidenceScore >= 0.32 ||
-                    (albumUseful && artistEvidenceScore >= 0.18) ||
-                    (durationStrong && artistEvidenceScore >= 0.25)
-                )
+                artistEvidenceScore >= 0.20 ||
+                    (albumUseful && artistEvidenceScore >= 0.10) ||
+                    (durationStrong)
+            )
     }
 
     private suspend fun ensureSpotifyMatchMetadata(query: String): TrackMatchMetadata? {
@@ -1270,20 +1276,15 @@ object SongPlayer {
                 )
                 .map { it.item }
             if (accepted.isEmpty()) {
-                val best = transferScored.maxByOrNull { it.score }
+                val fallbackList = hits.filter(::isRequestedEdition).ifEmpty { hits }
                 Log.w(
                     TAG,
-                    "resolveVideoId: rejecting weak YouTube match for '$searchText' " +
-                        "(best='${best?.item?.title}' score=${"%.2f".format(best?.score ?: 0.0)} " +
-                        "title=${"%.2f".format(best?.titleScore ?: 0.0)} " +
-                        "artist=${"%.2f".format(best?.artistEvidenceScore ?: 0.0)} " +
-                        "duration=${"%.2f".format(best?.durationScore ?: 0.0)} " +
-                        "album=${"%.2f".format(best?.albumScore ?: 0.0)} " +
-                        "alt=${best?.unexpectedAlternates.orEmpty().joinToString("/")})",
+                    "resolveVideoId: strict match empty for '$searchText' — using YouTube search ranking fallback: '${fallbackList.firstOrNull()?.title}'",
                 )
-                return emptyList()
+                fallbackList.distinctBy { it.id }
+            } else {
+                accepted.distinctBy { it.id }
             }
-            accepted.distinctBy { it.id }
         } else {
             // Legacy/plain queries without registered Spotify metadata: keep the
             // old best-effort ordering.
@@ -1297,6 +1298,7 @@ object SongPlayer {
                 .map { it.first }
             (explicitFirst(verifiedRanked) + explicitFirst(restRanked))
                 .filter(::isRequestedEdition)
+                .ifEmpty { hits }
                 .distinctBy { it.id }
         }
 
@@ -1324,7 +1326,7 @@ object SongPlayer {
 
     /**
      * Resolves a playable YouTube stream for [query], falling back through up to
-     * 3 ranked video candidates when one has no obtainable stream.
+     * 5 ranked video candidates when one has no obtainable stream.
      */
     private suspend fun resolveYtPlayback(
         query: String,
@@ -1348,16 +1350,11 @@ object SongPlayer {
             }
             return null
         }
-        tryIds(resolveVideoCandidates(query).take(3))?.let { return it }
-        if (!com.music.spotui.data.preferences.isVideoFallbackEnabled(appContext)) {
-            Log.w(TAG, "song candidates exhausted and video fallback disabled for: ${searchTextForPlayback(query)}")
-            return null
-        }
-        // Song results exhausted (e.g. every official upload is age-restricted and
-        // we're not signed in to YouTube). Regular video uploads — lyric videos,
-        // reuploads — usually aren't age-gated: last-resort pass over those.
-        Log.w(TAG, "song candidates exhausted, trying video search for: ${searchTextForPlayback(query)}")
-        tryIds(resolveVideoCandidates(query, YouTube.SearchFilter.FILTER_VIDEO).take(3))?.let { return it }
+        tryIds(resolveVideoCandidates(query).take(5))?.let { return it }
+
+        // Fallback to video search if song candidates fail
+        Log.w(TAG, "Song candidates exhausted, trying video search for: ${searchTextForPlayback(query)}")
+        tryIds(resolveVideoCandidates(query, YouTube.SearchFilter.FILTER_VIDEO).take(5))?.let { return it }
         Log.e(TAG, "All YouTube candidates failed for: ${searchTextForPlayback(query)}")
         return null
     }

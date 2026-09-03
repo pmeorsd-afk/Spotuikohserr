@@ -520,15 +520,18 @@ object YTPlayerUtils {
     ): PlayerResponse.StreamingData.Format? {
         Timber.tag(logTag).d("Finding format with audioQuality: $audioQuality, network metered: ${connectivityManager.isActiveNetworkMetered}")
 
-        val format = playerResponse.streamingData?.adaptiveFormats
-            ?.filter { it.isAudio && it.isOriginal }
+        val adaptiveAudio = playerResponse.streamingData?.adaptiveFormats?.filter { it.isAudio }
+        val format = adaptiveAudio
+            ?.filter { it.isOriginal }
             ?.maxByOrNull {
                 it.bitrate * when (audioQuality) {
                     AudioQuality.AUTO -> if (connectivityManager.isActiveNetworkMetered) -1 else 1
                     AudioQuality.HIGH -> 1
                     AudioQuality.LOW -> -1
                 } + (if (it.mimeType.startsWith("audio/webm")) 10240 else 0) // prefer opus stream
-            }
+            } ?: adaptiveAudio?.maxByOrNull { it.bitrate }
+              ?: playerResponse.streamingData?.formats?.firstOrNull { it.isAudio }
+              ?: playerResponse.streamingData?.formats?.firstOrNull()
 
         if (format != null) {
             Timber.tag(logTag).d("Selected format: ${format.mimeType}, bitrate: ${format.bitrate}")
