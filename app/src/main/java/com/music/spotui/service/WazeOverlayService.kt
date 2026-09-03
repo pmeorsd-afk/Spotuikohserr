@@ -13,7 +13,7 @@ import android.os.IBinder
 import android.util.Log
 import android.view.Gravity
 import android.view.MotionEvent
-import android.view.View
+import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.compose.ui.platform.ComposeView
 import androidx.core.app.NotificationCompat
@@ -33,7 +33,7 @@ import com.music.spotui.utils.WazeDetector
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import javax.inject.Inject
-import kotlin.math.hypot
+import kotlin.math.abs
 
 @AndroidEntryPoint
 class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
@@ -48,10 +48,12 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
     override val savedStateRegistry: SavedStateRegistry get() = savedStateRegistryController.savedStateRegistry
 
     private var windowManager: WindowManager? = null
-    private var overlayView: ComposeView? = null
-    private var isViewAdded = false
-    private var isExpandedState = false
-    private var currentLayoutParams: WindowManager.LayoutParams? = null
+    private var buttonView: ComposeView? = null
+    private var playerView: ComposeView? = null
+
+    private var isButtonAdded = false
+    private var isPlayerVisible = false
+    private var isAnimating = false
 
     private val serviceScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
     private var watcherJob: Job? = null
@@ -60,6 +62,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         private const val TAG = "WazeOverlayService"
         private const val CHANNEL_ID = "waze_overlay_channel"
         private const val NOTIFICATION_ID = 2048
+        private const val DRAG_THRESHOLD = 8f
 
         fun start(context: Context) {
             val intent = Intent(context, WazeOverlayService::class.java)
@@ -125,11 +128,11 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                     val isWazeActive = WazeDetector.isWazeInForeground(applicationContext)
 
                     if (enabledInSettings && hasOverlay && hasUsage && isWazeActive) {
-                        if (!isViewAdded) {
+                        if (!isButtonAdded) {
                             showOverlay()
                         }
                     } else {
-                        if (!isExpandedState) {
+                        if (isButtonAdded && !isPlayerVisible) {
                             hideOverlay()
                         }
                     }
@@ -141,135 +144,106 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         }
     }
 
-    private fun getStatusBarHeight(): Int {
-        val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
-        return if (resourceId > 0) {
-            resources.getDimensionPixelSize(resourceId)
-        } else {
-            (24 * resources.displayMetrics.density).toInt()
+    private fun getStatusBarHeightPx(): Int {
+        // שיטה 1: WindowInsets (API 30+) — הכי מדויק
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            val wm = getSystemService(Context.WINDOW_SERVICE) as? WindowManager
+            val insets = wm?.currentWindowMetrics?.windowInsets
+            val statusInsets = insets?.getInsets(WindowInsets.Type.statusBars())
+            if (statusInsets != null && statusInsets.top > 0) return statusInsets.top
         }
+        // שיטה 2: getIdentifier (API 23+) — fallback אמין
+        val resId = resources.getIdentifier("status_bar_height", "dimen", "android")
+        if (resId > 0) return resources.getDimensionPixelSize(resId)
+        // שיטה 3: ברירת מחדל — 24dp
+        val density = resources.displayMetrics.density
+        return (24 * density).toInt()
     }
 
-    private fun getLayoutParams(expanded: Boolean): WindowManager.LayoutParams {
-        val dm = resources.displayMetrics
-        val density = dm.density
-        val screenWidthPx = dm.widthPixels
-
-        return if (expanded) {
-            WindowManager.LayoutParams(
-                WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.MATCH_PARENT,
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
-                } else {
-                    @Suppress("DEPRECATION")
-                    WindowManager.LayoutParams.TYPE_PHONE
-                },
-                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
-                    WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
-                    WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                PixelFormat.TRANSLUCENT
-            ).apply {
-                gravity = Gravity.TOP or Gravity.LEFT
-                x = 0
-                y = 0
-            }
-        } else {
-            val savedSize = getWazeButtonSize(this, 44)
-            val sizePx = (savedSize * density).toInt()
-
-            val defaultX = (screenWidthPx - (14 * density) - sizePx).toInt()
-            val statusBarH = getStatusBarHeight()
-            val defaultY = statusBarH + (112 * density).toInt()
-
-            val posX = getWazeButtonX(this, defaultX)
-            val posY = getWazeButtonY(this, defaultY)
-
-            WindowManager.LayoutParams(
-                sizePx,
-                sizePx,
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
-                } else {
-                    @Suppress("DEPRECATION")
-                    WindowManager.LayoutParams.TYPE_PHONE
-                },
-                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
-                    WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
-                    WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
-                PixelFormat.TRANSLUCENT
-            ).apply {
-                gravity = Gravity.TOP or Gravity.LEFT
-                x = posX
-                y = posY
-            }
-        }
-    }
+    private fun dpToPx(dp: Float): Float = dp * resources.displayMetrics.density
 
     @SuppressLint("ClickableViewAccessibility")
     private fun showOverlay() {
-        if (isViewAdded || windowManager == null) return
+        if (isButtonAdded || windowManager == null) return
 
-        isExpandedState = false
-        val lp = getLayoutParams(expanded = false)
-        currentLayoutParams = lp
+        val density = resources.displayMetrics.density
+        val buttonSize = (44 * density).toInt()
+        val statusBarH = getStatusBarHeightPx()
 
-        val view = ComposeView(this).apply {
+        val savedX = getWazeButtonX(this, -1)
+        val savedY = getWazeButtonY(this, -1)
+
+        val posX = if (savedX >= 0) savedX else dpToPx(10f).toInt()
+        val posY = if (savedY >= 0) savedY else statusBarH + dpToPx(144f).toInt()
+
+        val buttonParams = WindowManager.LayoutParams(
+            buttonSize,
+            buttonSize,
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+            } else {
+                @Suppress("DEPRECATION")
+                WindowManager.LayoutParams.TYPE_PHONE
+            },
+            WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
+                WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+            PixelFormat.TRANSLUCENT
+        ).apply {
+            gravity = Gravity.TOP or Gravity.END
+            x = posX
+            y = posY
+        }
+
+        val bView = ComposeView(this).apply {
             setViewTreeLifecycleOwner(this@WazeOverlayService)
             setViewTreeSavedStateRegistryOwner(this@WazeOverlayService)
             setContent {
                 WazeOverlayView(
                     currentSongState = currentSongState,
-                    isExpanded = isExpandedState,
-                    onExpandChanged = { expanded ->
-                        setExpanded(expanded)
-                    }
+                    isExpanded = false
                 )
             }
         }
 
-        // Direct hardware touch listener for real-time finger dragging (Velociraptor pattern)
-        var initialX = 0
-        var initialY = 0
-        var initialTouchX = 0f
-        var initialTouchY = 0f
+        // Setup Drag & Tap exactly as specified in the technical guide
+        var startX = 0f
+        var startY = 0f
+        var startParamX = 0
+        var startParamY = 0
         var isDragging = false
 
-        view.setOnTouchListener { _, event ->
-            if (isExpandedState) return@setOnTouchListener false
-
-            val params = currentLayoutParams ?: return@setOnTouchListener false
+        bView.setOnTouchListener { _, event ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
-                    initialX = params.x
-                    initialY = params.y
-                    initialTouchX = event.rawX
-                    initialTouchY = event.rawY
+                    startX = event.rawX
+                    startY = event.rawY
+                    startParamX = buttonParams.x
+                    startParamY = buttonParams.y
                     isDragging = false
                     true
                 }
                 MotionEvent.ACTION_MOVE -> {
-                    val dx = (event.rawX - initialTouchX).toInt()
-                    val dy = (event.rawY - initialTouchY).toInt()
-                    if (hypot(dx.toDouble(), dy.toDouble()) > 10) {
+                    val dx = event.rawX - startX
+                    val dy = event.rawY - startY
+                    if (!isDragging && (abs(dx) > DRAG_THRESHOLD || abs(dy) > DRAG_THRESHOLD)) {
                         isDragging = true
-                        params.x = initialX + dx
-                        params.y = initialY + dy
+                    }
+                    if (isDragging) {
+                        // gravity = TOP | END -> x הוא מהקצה הימני, y מלמעלה
+                        buttonParams.x = (startParamX - dx).toInt()
+                        buttonParams.y = (startParamY + dy).toInt()
                         try {
-                            windowManager?.updateViewLayout(overlayView, params)
-                        } catch (e: Exception) {
-                            Log.e(TAG, "Error updating floating position", e)
-                        }
+                            windowManager?.updateViewLayout(bView, buttonParams)
+                        } catch (_: Exception) {}
                     }
                     true
                 }
                 MotionEvent.ACTION_UP -> {
                     if (isDragging) {
-                        setWazeButtonPosition(this@WazeOverlayService, params.x, params.y)
-                        Log.d(TAG, "Saved new floating position: x=${params.x}, y=${params.y}")
+                        setWazeButtonPosition(this, buttonParams.x, buttonParams.y)
+                        Log.d(TAG, "Saved position: x=${buttonParams.x}, y=${buttonParams.y}")
                     } else {
-                        // Tap detected: open the top player bar
-                        setExpanded(true)
+                        toggleMiniPlayer()
                     }
                     true
                 }
@@ -278,50 +252,107 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         }
 
         try {
-            windowManager?.addView(view, lp)
-            overlayView = view
-            isViewAdded = true
-            Log.d(TAG, "Waze overlay added to window.")
+            windowManager?.addView(bView, buttonParams)
+            buttonView = bView
+            isButtonAdded = true
+            Log.d(TAG, "Waze floating button added.")
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to add overlay view", e)
+            Log.e(TAG, "Failed to add button view", e)
         }
     }
 
-    private fun setExpanded(expanded: Boolean) {
-        if (isExpandedState == expanded || !isViewAdded || overlayView == null || windowManager == null) return
-        isExpandedState = expanded
-        try {
-            val lp = getLayoutParams(expanded = expanded)
-            currentLayoutParams = lp
-            windowManager?.updateViewLayout(overlayView, lp)
+    private fun toggleMiniPlayer() {
+        if (isAnimating) return
+        if (isPlayerVisible) {
+            hideMiniPlayer()
+        } else {
+            showMiniPlayer()
+        }
+    }
 
-            // Recompose with new expanded state
-            overlayView?.setContent {
+    private fun showMiniPlayer() {
+        if (isPlayerVisible || windowManager == null) return
+        isAnimating = true
+
+        val playerParams = WindowManager.LayoutParams(
+            WindowManager.LayoutParams.MATCH_PARENT,
+            WindowManager.LayoutParams.MATCH_PARENT,
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+            } else {
+                @Suppress("DEPRECATION")
+                WindowManager.LayoutParams.TYPE_PHONE
+            },
+            WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
+                WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+            PixelFormat.TRANSLUCENT
+        ).apply {
+            gravity = Gravity.TOP or Gravity.START
+            x = 0
+            y = 0
+        }
+
+        val pView = ComposeView(this).apply {
+            setViewTreeLifecycleOwner(this@WazeOverlayService)
+            setViewTreeSavedStateRegistryOwner(this@WazeOverlayService)
+            setContent {
                 WazeOverlayView(
                     currentSongState = currentSongState,
-                    isExpanded = isExpandedState,
-                    onExpandChanged = { exp ->
-                        setExpanded(exp)
+                    isExpanded = true,
+                    onExpandChanged = { expanded ->
+                        if (!expanded) {
+                            hideMiniPlayer()
+                        }
                     }
                 )
             }
-            Log.d(TAG, "Overlay layout updated to expanded=$expanded")
+        }
+
+        try {
+            if (playerView == null) {
+                windowManager?.addView(pView, playerParams)
+                playerView = pView
+            }
+            isPlayerVisible = true
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to update layout params", e)
+            Log.e(TAG, "Failed to show mini player", e)
+        } finally {
+            serviceScope.launch {
+                delay(360)
+                isAnimating = false
+            }
+        }
+    }
+
+    private fun hideMiniPlayer() {
+        if (!isPlayerVisible || playerView == null || windowManager == null) return
+        isAnimating = true
+
+        try {
+            windowManager?.removeView(playerView)
+            playerView = null
+            isPlayerVisible = false
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to hide mini player", e)
+        } finally {
+            serviceScope.launch {
+                delay(300)
+                isAnimating = false
+            }
         }
     }
 
     private fun hideOverlay() {
-        if (!isViewAdded || overlayView == null || windowManager == null) return
+        hideMiniPlayer()
+        if (!isButtonAdded || buttonView == null || windowManager == null) return
         try {
-            windowManager?.removeView(overlayView)
-            overlayView = null
-            isViewAdded = false
-            isExpandedState = false
-            currentLayoutParams = null
-            Log.d(TAG, "Waze overlay removed from window")
+            windowManager?.removeView(buttonView)
+            buttonView = null
+            isButtonAdded = false
+            Log.d(TAG, "Waze button removed from window")
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to remove overlay view", e)
+            Log.e(TAG, "Failed to remove button view", e)
         }
     }
 

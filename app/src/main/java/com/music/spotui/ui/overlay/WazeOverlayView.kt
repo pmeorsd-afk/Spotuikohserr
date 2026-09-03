@@ -3,6 +3,8 @@ package com.music.spotui.ui.overlay
 import android.content.Context
 import android.content.Intent
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
@@ -119,11 +121,17 @@ fun WazeOverlayView(
                     }
             )
 
-            // Animated Top Bar (Slide down smoothly from top)
+            // Animated Top Bar with FastOutSlowInEasing (360ms slide down from top)
             AnimatedVisibility(
                 visible = isExpanded,
-                enter = slideInVertically(initialOffsetY = { -it }) + fadeIn(),
-                exit = slideOutVertically(targetOffsetY = { -it }) + fadeOut(),
+                enter = slideInVertically(
+                    initialOffsetY = { -it },
+                    animationSpec = tween(durationMillis = 360, easing = FastOutSlowInEasing)
+                ) + fadeIn(animationSpec = tween(360)),
+                exit = slideOutVertically(
+                    targetOffsetY = { -it },
+                    animationSpec = tween(durationMillis = 300, easing = FastOutSlowInEasing)
+                ) + fadeOut(animationSpec = tween(300)),
                 modifier = Modifier
                     .align(Alignment.TopCenter)
                     .fillMaxWidth()
