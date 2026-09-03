@@ -33,6 +33,8 @@ private const val KEY_LIBRARY_GRID = "library_grid_view"
 private const val KEY_WAZE_OVERLAY = "waze_overlay_enabled"
 private const val KEY_WAZE_BTN_X = "waze_button_x"
 private const val KEY_WAZE_BTN_Y = "waze_button_y"
+private const val KEY_WAZE_BTN_SIZE = "waze_button_size"
+private const val KEY_WAZE_CALIBRATED = "waze_button_calibrated"
 
 fun isWazeOverlayEnabled(c: Context): Boolean = prefs(c).getBoolean(KEY_WAZE_OVERLAY, true)
 fun setWazeOverlayEnabled(c: Context, v: Boolean) = prefs(c).edit().putBoolean(KEY_WAZE_OVERLAY, v).apply()
@@ -41,6 +43,16 @@ fun getWazeButtonX(c: Context, defaultX: Int): Int = prefs(c).getInt(KEY_WAZE_BT
 fun getWazeButtonY(c: Context, defaultY: Int): Int = prefs(c).getInt(KEY_WAZE_BTN_Y, defaultY)
 fun setWazeButtonPosition(c: Context, x: Int, y: Int) {
     prefs(c).edit().putInt(KEY_WAZE_BTN_X, x).putInt(KEY_WAZE_BTN_Y, y).apply()
+}
+
+fun getWazeButtonSize(c: Context, defaultSize: Int = 44): Int = prefs(c).getInt(KEY_WAZE_BTN_SIZE, defaultSize)
+fun setWazeButtonSize(c: Context, size: Int) {
+    prefs(c).edit().putInt(KEY_WAZE_BTN_SIZE, size).apply()
+}
+
+fun isWazeCalibrated(c: Context): Boolean = prefs(c).getBoolean(KEY_WAZE_CALIBRATED, false)
+fun setWazeCalibrated(c: Context, v: Boolean) {
+    prefs(c).edit().putBoolean(KEY_WAZE_CALIBRATED, v).apply()
 }
 
 /** Off (0s) … 12s. 0 disables crossfade. */

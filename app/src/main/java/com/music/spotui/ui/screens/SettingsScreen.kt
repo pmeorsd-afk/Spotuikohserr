@@ -305,50 +305,72 @@ fun SettingsScreen(navController: NavController) {
                             com.music.spotui.utils.WazeDetector.requestOverlayPermission(context)
                         } else if (!hasUsage) {
                             com.music.spotui.utils.WazeDetector.requestUsageStatsPermission(context)
+                        } else {
+                            if (!com.music.spotui.data.preferences.isWazeCalibrated(context)) {
+                                com.music.spotui.service.WazeOverlayService.startCalibration(context)
+                            } else {
+                                com.music.spotui.service.WazeOverlayService.start(context)
+                            }
                         }
-                        com.music.spotui.service.WazeOverlayService.start(context)
                     } else {
                         com.music.spotui.service.WazeOverlayService.stop(context)
                     }
                 }
             )
 
-            if (wazeOverlayOn && !allPermissionsGranted) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(start = 6.dp, top = 4.dp, bottom = 6.dp)
-                ) {
-                    if (!hasOverlay) {
-                        Text(
-                            text = "⚠️ שלב 1: אשר 'הצגה מעל אפליקציות' — לחץ כאן",
-                            color = Color(0xFFFFCC00),
-                            fontSize = 13.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clip(RoundedCornerShape(8.dp))
-                                .clickable {
-                                    com.music.spotui.utils.WazeDetector.requestOverlayPermission(context)
-                                }
-                                .padding(vertical = 6.dp)
-                        )
+            if (wazeOverlayOn) {
+                if (!allPermissionsGranted) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(start = 6.dp, top = 4.dp, bottom = 6.dp)
+                    ) {
+                        if (!hasOverlay) {
+                            Text(
+                                text = "⚠️ שלב 1: אשר 'הצגה מעל אפליקציות' — לחץ כאן",
+                                color = Color(0xFFFFCC00),
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .clickable {
+                                        com.music.spotui.utils.WazeDetector.requestOverlayPermission(context)
+                                    }
+                                    .padding(vertical = 6.dp)
+                            )
+                        }
+                        if (!hasUsage) {
+                            Text(
+                                text = "⚠️ שלב 2: אשר 'גישה לנתוני שימוש' (לזיהוי כניסה ל-Waze) — לחץ כאן",
+                                color = Color(0xFFFFCC00),
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .clickable {
+                                        com.music.spotui.utils.WazeDetector.requestUsageStatsPermission(context)
+                                    }
+                                    .padding(vertical = 6.dp)
+                            )
+                        }
                     }
-                    if (!hasUsage) {
-                        Text(
-                            text = "⚠️ שלב 2: אשר 'גישה לנתוני שימוש' (לזיהוי כניסה ל-Waze) — לחץ כאן",
-                            color = Color(0xFFFFCC00),
-                            fontSize = 13.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clip(RoundedCornerShape(8.dp))
-                                .clickable {
-                                    com.music.spotui.utils.WazeDetector.requestUsageStatsPermission(context)
-                                }
-                                .padding(vertical = 6.dp)
-                        )
-                    }
+                } else {
+                    // Button to manually adjust position anytime
+                    Text(
+                        text = "🎯 התאמת מיקום וגודל הכפתור מעל Waze",
+                        color = Color(0xFF1ED760),
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clip(RoundedCornerShape(8.dp))
+                            .clickable {
+                                com.music.spotui.service.WazeOverlayService.startCalibration(context)
+                            }
+                            .padding(vertical = 6.dp, horizontal = 4.dp)
+                    )
                 }
             }
 

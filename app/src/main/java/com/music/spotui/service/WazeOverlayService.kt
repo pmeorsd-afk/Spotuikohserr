@@ -12,6 +12,7 @@ import android.os.IBinder
 import android.util.Log
 import android.view.Gravity
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.compose.ui.platform.ComposeView
 import androidx.core.app.NotificationCompat
 import androidx.lifecycle.Lifecycle
@@ -23,7 +24,7 @@ import androidx.savedstate.SavedStateRegistryController
 import androidx.savedstate.SavedStateRegistryOwner
 import androidx.savedstate.setViewTreeSavedStateRegistryOwner
 import com.music.spotui.R
-import com.music.spotui.data.preferences.isWazeOverlayEnabled
+import com.music.spotui.data.preferences.*
 import com.music.spotui.di.CurrentSongState
 import com.music.spotui.ui.overlay.WazeOverlayView
 import com.music.spotui.utils.WazeDetector
@@ -47,6 +48,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
     private var overlayView: ComposeView? = null
     private var isViewAdded = false
     private var isExpandedState = false
+    private var isCalibrationModeState = false
 
     private val serviceScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
     private var watcherJob: Job? = null
@@ -55,6 +57,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         private const val TAG = "WazeOverlayService"
         private const val CHANNEL_ID = "waze_overlay_channel"
         private const val NOTIFICATION_ID = 2048
+        const val ACTION_CALIBRATE = "com.music.spotui.ACTION_CALIBRATE"
 
         fun start(context: Context) {
             val intent = Intent(context, WazeOverlayService::class.java)
@@ -62,6 +65,25 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 context.startForegroundService(intent)
             } else {
                 context.startService(intent)
+            }
+        }
+
+        fun startCalibration(context: Context) {
+            // 1. Launch Waze if installed
+            val wazeIntent = context.packageManager.getLaunchIntentForPackage("com.waze")
+            if (wazeIntent != null) {
+                wazeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                context.startActivity(wazeIntent)
+            }
+
+            // 2. Start calibration overlay
+            val serviceIntent = Intent(context, WazeOverlayService::class.java).apply {
+                action = ACTION_CALIBRATE
+            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                context.startForegroundService(serviceIntent)
+            } else {
+                context.startService(serviceIntent)
             }
         }
 
@@ -82,6 +104,17 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         windowManager = getSystemService(Context.WINDOW_SERVICE) as WindowManager
 
         startWazeWatcher()
+    }
+
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        if (intent?.action == ACTION_CALIBRATE) {
+            isCalibrationModeState = true
+            serviceScope.launch {
+                delay(600) // Allow Waze to launch to foreground
+                showOverlay()
+            }
+        }
+        return START_STICKY
     }
 
     private fun startForegroundNotification() {
@@ -119,10 +152,19 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                     val hasUsage = WazeDetector.hasUsageStatsPermission(applicationContext)
                     val isWazeActive = WazeDetector.isWazeInForeground(applicationContext)
 
-                    if (enabledInSettings && hasOverlay && hasUsage && isWazeActive) {
-                        showOverlay()
+                    if (isCalibrationModeState) {
+                        // In calibration mode, keep overlay active
+                        if (!isViewAdded && hasOverlay) {
+                            showOverlay()
+                        }
+                    } else if (enabledInSettings && hasOverlay && hasUsage && isWazeActive) {
+                        if (!isViewAdded) {
+                            showOverlay()
+                        }
                     } else {
-                        hideOverlay()
+                        if (!isCalibrationModeState) {
+                            hideOverlay()
+                        }
                     }
                 } catch (e: Exception) {
                     Log.e(TAG, "Error in WazeWatcher", e)
@@ -141,9 +183,12 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         }
     }
 
-    private fun getLayoutParams(expanded: Boolean): WindowManager.LayoutParams {
-        val density = resources.displayMetrics.density
-        return if (expanded) {
+    private fun getLayoutParams(expanded: Boolean, isCalibration: Boolean): WindowManager.LayoutParams {
+        val dm = resources.displayMetrics
+        val density = dm.density
+        val screenWidthPx = dm.widthPixels
+
+        return if (isCalibration || expanded) {
             WindowManager.LayoutParams(
                 WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT,
@@ -153,9 +198,14 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                     @Suppress("DEPRECATION")
                     WindowManager.LayoutParams.TYPE_PHONE
                 },
-                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
-                    WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
-                    WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                if (isCalibration) {
+                    WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL or
+                        WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
+                } else {
+                    WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
+                        WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
+                        WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+                },
                 PixelFormat.TRANSLUCENT
             ).apply {
                 gravity = Gravity.TOP or Gravity.START
@@ -163,12 +213,15 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 y = 0
             }
         } else {
-            val sizePx = (44 * density).toInt()
-            val marginEndPx = (14 * density).toInt()
+            val savedSize = getWazeButtonSize(this, 44)
+            val sizePx = (savedSize * density).toInt()
+
+            val defaultX = (screenWidthPx - (14 * density) - sizePx).toInt()
             val statusBarH = getStatusBarHeight()
-            // In Waze: Top icon [♫] is at (statusBarH + 8dp), speaker [🔊] is at (statusBarH + 60dp),
-            // and Spotify button is at (statusBarH + 112dp) strictly under the speaker!
-            val marginTopPx = statusBarH + (112 * density).toInt()
+            val defaultY = statusBarH + (112 * density).toInt()
+
+            val posX = getWazeButtonX(this, defaultX)
+            val posY = getWazeButtonY(this, defaultY)
 
             WindowManager.LayoutParams(
                 sizePx,
@@ -184,9 +237,9 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                     WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
                 PixelFormat.TRANSLUCENT
             ).apply {
-                gravity = Gravity.TOP or Gravity.RIGHT
-                x = marginEndPx
-                y = marginTopPx
+                gravity = Gravity.TOP or Gravity.START
+                x = posX
+                y = posY
             }
         }
     }
@@ -195,7 +248,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         if (isViewAdded || windowManager == null) return
 
         isExpandedState = false
-        val layoutParams = getLayoutParams(false)
+        val layoutParams = getLayoutParams(expanded = false, isCalibration = isCalibrationModeState)
 
         val view = ComposeView(this).apply {
             setViewTreeLifecycleOwner(this@WazeOverlayService)
@@ -203,6 +256,22 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
             setContent {
                 WazeOverlayView(
                     currentSongState = currentSongState,
+                    isCalibrationMode = isCalibrationModeState,
+                    onCalibrationSaved = { x, y, sizeDp ->
+                        setWazeButtonPosition(this@WazeOverlayService, x, y)
+                        setWazeButtonSize(this@WazeOverlayService, sizeDp)
+                        setWazeCalibrated(this@WazeOverlayService, true)
+                        isCalibrationModeState = false
+
+                        // Switch to collapsed mode
+                        try {
+                            val collapsedLp = getLayoutParams(expanded = false, isCalibration = false)
+                            windowManager?.updateViewLayout(overlayView, collapsedLp)
+                            Toast.makeText(this@WazeOverlayService, "✓ מיקום וגודל הכפתור נשמרו!", Toast.LENGTH_SHORT).show()
+                        } catch (e: Exception) {
+                            Log.e(TAG, "Error updating after calibration", e)
+                        }
+                    },
                     onExpandChanged = { expanded ->
                         setExpanded(expanded)
                     }
@@ -214,17 +283,17 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
             windowManager?.addView(view, layoutParams)
             overlayView = view
             isViewAdded = true
-            Log.d(TAG, "Waze overlay added to window on right side")
+            Log.d(TAG, "Waze overlay added to window. isCalibration=$isCalibrationModeState")
         } catch (e: Exception) {
             Log.e(TAG, "Failed to add overlay view", e)
         }
     }
 
     private fun setExpanded(expanded: Boolean) {
-        if (isExpandedState == expanded || !isViewAdded || overlayView == null || windowManager == null) return
+        if (isExpandedState == expanded || !isViewAdded || overlayView == null || windowManager == null || isCalibrationModeState) return
         isExpandedState = expanded
         try {
-            val lp = getLayoutParams(expanded)
+            val lp = getLayoutParams(expanded = expanded, isCalibration = false)
             windowManager?.updateViewLayout(overlayView, lp)
             Log.d(TAG, "Overlay layout updated to expanded=$expanded")
         } catch (e: Exception) {
