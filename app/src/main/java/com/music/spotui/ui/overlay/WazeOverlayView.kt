@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.MutableTransitionState
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -49,6 +51,7 @@ import com.music.spotui.di.CurrentSongState
 import com.music.spotui.di.SongPlayer
 import com.music.spotui.ui.components.GlideImage
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @Composable
 fun WazeOverlayView(
@@ -85,7 +88,7 @@ fun WazeOverlayView(
 
     if (!isExpanded) {
         // ── 1. Collapsed Floating Spotify Button ──
-        val savedSize = remember { getWazeButtonSize(context, 44) }
+        val savedSize = remember { getWazeButtonSize(context, 54) }
         Surface(
             shape = CircleShape,
             color = Color.White,
@@ -105,29 +108,50 @@ fun WazeOverlayView(
         }
     } else {
         // ── 2. Expanded Mode: Full screen overlay with backdrop & top player bar ──
+        val visibleState = remember {
+            MutableTransitionState(false).apply {
+                targetState = true
+            }
+        }
+        val coroutineScope = rememberCoroutineScope()
+        val closePlayer: () -> Unit = {
+            coroutineScope.launch {
+                isShowList = false
+                visibleState.targetState = false
+                delay(320)
+                onExpandChanged(false)
+            }
+        }
+
+        val backdropAlpha by animateFloatAsState(
+            targetValue = if (visibleState.targetState && visibleState.currentState) 0.35f else 0f,
+            animationSpec = tween(300),
+            label = "backdropAlpha"
+        )
+
         Box(
             modifier = Modifier.fillMaxSize()
         ) {
-            // Backdrop: tapping outside closes the player
+            // Backdrop: tapping outside closes the player with smooth exit
             Box(
                 modifier = Modifier
                     .fillMaxSize()
+                    .background(Color.Black.copy(alpha = backdropAlpha))
                     .clickable(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = null
                     ) {
-                        isShowList = false
-                        onExpandChanged(false)
+                        closePlayer()
                     }
             )
 
-            // Animated Top Bar with FastOutSlowInEasing (360ms slide down from top)
+            // Animated Top Bar with FastOutSlowInEasing (380ms smooth slide down from top)
             AnimatedVisibility(
-                visible = isExpanded,
+                visibleState = visibleState,
                 enter = slideInVertically(
                     initialOffsetY = { -it },
-                    animationSpec = tween(durationMillis = 360, easing = FastOutSlowInEasing)
-                ) + fadeIn(animationSpec = tween(360)),
+                    animationSpec = tween(durationMillis = 380, easing = FastOutSlowInEasing)
+                ) + fadeIn(animationSpec = tween(380)),
                 exit = slideOutVertically(
                     targetOffsetY = { -it },
                     animationSpec = tween(durationMillis = 300, easing = FastOutSlowInEasing)
@@ -400,8 +424,7 @@ fun WazeOverlayView(
                                     // Right: Collapse Chevron (Blue arrow pointing up)
                                     IconButton(
                                         onClick = {
-                                            isShowList = false
-                                            onExpandChanged(false)
+                                            closePlayer()
                                         },
                                         modifier = Modifier.size(32.dp)
                                     ) {
