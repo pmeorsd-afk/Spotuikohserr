@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    packageNames is intentionally left unset: the service also needs to see other apps
+    coming to the foreground, so it can tell that Waze left the foreground entirely (menu vs.
+    map is then resolved in code, from getWindows() / rootInActiveWindow, which are not
+    affected by this filter either way).
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged|typeWindowContentChanged|typeWindowsChanged|typeViewFocused|typeViewClicked"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagRetrieveInteractiveWindows|flagReportViewIds|flagIncludeNotImportantViews"
+    android:canRetrieveWindowContent="true"
+    android:description="@string/waze_screen_service_description"
+    android:notificationTimeout="100"
+    android:settingsActivity="com.music.spotui.MainActivity" />

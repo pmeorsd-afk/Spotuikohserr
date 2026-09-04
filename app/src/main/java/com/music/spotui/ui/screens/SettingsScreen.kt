@@ -287,6 +287,7 @@ fun SettingsScreen(navController: NavController) {
             SectionTitle("Waze & Car Integration")
             val hasOverlay = com.music.spotui.utils.WazeDetector.hasOverlayPermission(context)
             val hasUsage = com.music.spotui.utils.WazeDetector.hasUsageStatsPermission(context)
+            val hasScreenDetector = com.music.spotui.utils.WazeDetector.hasScreenDetectorPermission(context)
             val allPermissionsGranted = hasOverlay && hasUsage
 
             var wazeOverlayOn by remember {
@@ -295,7 +296,11 @@ fun SettingsScreen(navController: NavController) {
 
             SettingsSwitchRow(
                 title = "נגן צף אוטומטי ב-Waze",
-                subtitle = if (allPermissionsGranted && wazeOverlayOn) "✓ פעיל — יופיע רק ב-Waze (ניתן לגרור את הכפתור לכל מקום)" else "הצגת כפתור ספוטיפיי צף ושליטה במוזיקה רק ב-Waze",
+                subtitle = when {
+                    !allPermissionsGranted || !wazeOverlayOn -> "הצגת כפתור ספוטיפיי צף ושליטה במוזיקה רק ב-Waze"
+                    !hasScreenDetector -> "✓ פעיל — יופיע רק ב-Waze (השלימו גם את שלב 3 כדי שהכפתור ייעלם בתוך תפריטי Waze)"
+                    else -> "✓ פעיל — מוצג על מסך המפה ב-Waze בלבד, ונעלם בתפריטים (ניתן לגרור את הכפתור לכל מקום)"
+                },
                 checked = wazeOverlayOn,
                 onCheckedChange = { enable ->
                     wazeOverlayOn = enable
@@ -305,6 +310,8 @@ fun SettingsScreen(navController: NavController) {
                             com.music.spotui.utils.WazeDetector.requestOverlayPermission(context)
                         } else if (!hasUsage) {
                             com.music.spotui.utils.WazeDetector.requestUsageStatsPermission(context)
+                        } else if (!hasScreenDetector) {
+                            com.music.spotui.utils.WazeDetector.requestScreenDetectorPermission(context)
                         }
                         com.music.spotui.service.WazeOverlayService.start(context)
                     } else {
@@ -313,7 +320,7 @@ fun SettingsScreen(navController: NavController) {
                 }
             )
 
-            if (wazeOverlayOn && !allPermissionsGranted) {
+            if (wazeOverlayOn && (!allPermissionsGranted || !hasScreenDetector)) {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -345,6 +352,21 @@ fun SettingsScreen(navController: NavController) {
                                 .clip(RoundedCornerShape(8.dp))
                                 .clickable {
                                     com.music.spotui.utils.WazeDetector.requestUsageStatsPermission(context)
+                                }
+                                .padding(vertical = 6.dp)
+                        )
+                    }
+                    if (!hasScreenDetector) {
+                        Text(
+                            text = "⚠️ שלב 3: הפעילו את שירות הנגישות 'זיהוי מסך ב-Waze' — כדי שהכפתור גם ייעלם בתוך תפריטי Waze (לא רק כשיוצאים מהאפליקציה) — לחץ כאן",
+                            color = Color(0xFFFFCC00),
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clip(RoundedCornerShape(8.dp))
+                                .clickable {
+                                    com.music.spotui.utils.WazeDetector.requestScreenDetectorPermission(context)
                                 }
                                 .padding(vertical = 6.dp)
                         )

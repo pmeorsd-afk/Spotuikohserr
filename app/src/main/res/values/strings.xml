@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Spotify</string>
-    <string name="waze_accessibility_description">שירות נגישות להתאמת גודל ומיקום מדויקים של נגן המוזיקה מעל Waze</string>
+    <string name="waze_screen_service_label">זיהוי מסך ב-Waze</string>
+    <string name="waze_screen_service_description">מזהה אם Waze מציג את מסך המפה או תפריט, כדי להציג ולהסתיר בהתאם את כפתור הנגן הצף. לא אוסף ואינו שולח מידע לשום מקום.</string>
 </resources>

@@ -3,6 +3,7 @@ package com.music.spotui.utils
 import android.app.AppOpsManager
 import android.app.usage.UsageEvents
 import android.app.usage.UsageStatsManager
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -99,5 +100,29 @@ object WazeDetector {
         val stats = usm.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, now - 60000, now)
         val mostRecent = stats?.maxByOrNull { it.lastTimeUsed }
         return mostRecent?.packageName == WAZE_PACKAGE
+    }
+
+    /**
+     * האם שירות הנגישות "זיהוי מסך ב-Waze" מופעל. נפרד מ-hasOverlayPermission/
+     * hasUsageStatsPermission: בלעדיו הכפתור עדיין עובד כמו היום (מופיע/נעלם לפי אם וויז
+     * בחזית), הוא פשוט לא יעלם גם בתוך התפריטים של וויז.
+     */
+    fun hasScreenDetectorPermission(context: Context): Boolean {
+        val component = ComponentName(context, com.music.spotui.service.WazeScreenAccessibilityService::class.java)
+        val enabled = Settings.Secure.getString(
+            context.contentResolver,
+            Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES
+        ) ?: return false
+        return enabled.split(':').any {
+            it.equals(component.flattenToString(), ignoreCase = true) ||
+                it.equals(component.flattenToShortString(), ignoreCase = true)
+        }
+    }
+
+    fun requestScreenDetectorPermission(context: Context) {
+        val intent = Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        }
+        context.startActivity(intent)
     }
 }

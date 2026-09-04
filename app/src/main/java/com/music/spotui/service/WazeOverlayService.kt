@@ -34,6 +34,8 @@ import com.music.spotui.data.preferences.*
 import com.music.spotui.di.CurrentSongState
 import com.music.spotui.ui.overlay.WazeOverlayView
 import com.music.spotui.utils.WazeDetector
+import com.music.spotui.utils.WazeScreenMonitor
+import com.music.spotui.utils.WazeScreenState
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import javax.inject.Inject
@@ -130,8 +132,11 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                     val hasOverlay = WazeDetector.hasOverlayPermission(applicationContext)
                     val hasUsage = WazeDetector.hasUsageStatsPermission(applicationContext)
                     val isWazeActive = WazeDetector.isWazeInForeground(applicationContext)
+                    // עד שההרשאה בסעיף 6 מופעלת, WazeScreenMonitor.state נשאר על ברירת
+                    // המחדל שלו (MAP) - כך שהתנאי הזה לא משנה כלום עד אז.
+                    val onMapScreen = WazeScreenMonitor.state == WazeScreenState.MAP
 
-                    if (enabledInSettings && hasOverlay && hasUsage && isWazeActive) {
+                    if (enabledInSettings && hasOverlay && hasUsage && isWazeActive && onMapScreen) {
                         if (!isButtonAdded) {
                             showOverlay()
                         }
