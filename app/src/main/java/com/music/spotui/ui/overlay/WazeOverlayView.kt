@@ -293,9 +293,13 @@ fun WazeOverlayView(
                                             SongPlayer.play()
                                             currentSongState.updatePlayingState(true)
                                             isPlayingLive = true
+                                            val positionAtTap = SongPlayer.getCurrentPosition()
                                             coroutineScope.launch {
-                                                delay(700)
-                                                if (!SongPlayer.isPlaying()) {
+                                                delay(1800)
+                                                // בודקים שהעמדה באמת התקדמה, לא רק ש-isPlaying() חוזר true - הדגל
+                                                // הזה יכול להישאר true גם כש-WebView שהוא מסתמך עליו כבר לא קיים.
+                                                val advanced = SongPlayer.getCurrentPosition() - positionAtTap
+                                                if (advanced < 400) {
                                                     currentSongState.updatePlayingState(false)
                                                     isPlayingLive = false
                                                     closePlayer()
