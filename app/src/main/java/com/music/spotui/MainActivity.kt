@@ -60,12 +60,6 @@ class MainActivity : ComponentActivity() {
         val token = SessionToken(this, ComponentName(this, PlaybackService::class.java))
         controllerFuture = MediaController.Builder(this, token).buildAsync()
 
-        if (com.music.spotui.data.preferences.isWazeOverlayEnabled(this) &&
-            com.music.spotui.utils.WazeDetector.hasOverlayPermission(this)) {
-            com.music.spotui.service.WazeOverlayService.start(this)
-        }
-
-
         enableEdgeToEdge()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             window.isNavigationBarContrastEnforced = false
@@ -104,7 +98,7 @@ class MainActivity : ComponentActivity() {
         if (!intent.getBooleanExtra(WazeResumeContract.EXTRA_RETURN_TO_WAZE, false)) return
 
         // Close/collapse the expanded mini-player so it returns to the floating button when returning to Waze
-        com.music.spotui.service.WazeOverlayService.collapseMiniPlayer()
+        com.music.spotui.service.WazeScreenAccessibilityService.collapseMiniPlayer()
 
         val songId = intent.getIntExtra(WazeResumeContract.EXTRA_SONG_ID, -1)
         val title = intent.getStringExtra(WazeResumeContract.EXTRA_TITLE)

@@ -299,15 +299,14 @@ fun SettingsScreen(navController: NavController) {
                 lifecycleOwner.lifecycle.addObserver(observer)
                 onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
             }
-            val hasOverlay = remember(permissionRefreshTrigger) { com.music.spotui.utils.WazeDetector.hasOverlayPermission(context) }
-            val hasUsage = remember(permissionRefreshTrigger) { com.music.spotui.utils.WazeDetector.hasUsageStatsPermission(context) }
-            val hasScreenDetector = remember(permissionRefreshTrigger) { com.music.spotui.utils.WazeDetector.hasScreenDetectorPermission(context) }
-            val allPermissionsGranted = hasOverlay && hasUsage && hasScreenDetector
+            val hasScreenDetector = remember(permissionRefreshTrigger) {
+                com.music.spotui.utils.WazeDetector.hasScreenDetectorPermission(context)
+            }
 
             var wazeOverlayOn by remember {
-                mutableStateOf(com.music.spotui.data.preferences.isWazeOverlayEnabled(context) && allPermissionsGranted)
+                mutableStateOf(com.music.spotui.data.preferences.isWazeOverlayEnabled(context) && hasScreenDetector)
             }
-            var showWazePermissionsSheet by remember { mutableStateOf(false) }
+            var showWazeAccessibilityPrompt by remember { mutableStateOf(false) }
 
             SettingsSwitchRow(
                 title = "נגן צף אוטומטי ב-Waze",
@@ -317,37 +316,34 @@ fun SettingsScreen(navController: NavController) {
                 checked = wazeOverlayOn,
                 onCheckedChange = { enable ->
                     if (enable) {
-                        if (allPermissionsGranted) {
+                        if (hasScreenDetector) {
                             wazeOverlayOn = true
                             com.music.spotui.data.preferences.setWazeOverlayEnabled(context, true)
-                            com.music.spotui.service.WazeOverlayService.start(context)
                         } else {
-                            showWazePermissionsSheet = true
+                            showWazeAccessibilityPrompt = true
                         }
                     } else {
                         wazeOverlayOn = false
                         com.music.spotui.data.preferences.setWazeOverlayEnabled(context, false)
-                        com.music.spotui.service.WazeOverlayService.stop(context)
                     }
                 }
             )
 
-            if (showWazePermissionsSheet) {
-                WazePermissionsSheet(
-                    hasOverlay = hasOverlay,
-                    hasUsage = hasUsage,
-                    hasScreenDetector = hasScreenDetector,
-                    onRequestOverlay = { com.music.spotui.utils.WazeDetector.requestOverlayPermission(context) },
-                    onRequestUsage = { com.music.spotui.utils.WazeDetector.requestUsageStatsPermission(context) },
-                    onRequestScreenDetector = { com.music.spotui.utils.WazeDetector.requestScreenDetectorPermission(context) },
-                    onAllGranted = {
-                        wazeOverlayOn = true
-                        com.music.spotui.data.preferences.setWazeOverlayEnabled(context, true)
-                        com.music.spotui.service.WazeOverlayService.start(context)
-                        showWazePermissionsSheet = false
+            if (showWazeAccessibilityPrompt) {
+                WazeAccessibilityPrompt(
+                    onRequestAccessibility = {
+                        com.music.spotui.utils.WazeDetector.requestScreenDetectorPermission(context)
                     },
-                    onDismiss = { showWazePermissionsSheet = false }
+                    onDismiss = { showWazeAccessibilityPrompt = false }
                 )
+            }
+
+            LaunchedEffect(hasScreenDetector) {
+                if (hasScreenDetector && showWazeAccessibilityPrompt) {
+                    wazeOverlayOn = true
+                    com.music.spotui.data.preferences.setWazeOverlayEnabled(context, true)
+                    showWazeAccessibilityPrompt = false
+                }
             }
 
             Spacer(Modifier.height(12.dp))

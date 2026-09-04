@@ -5,11 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
-        tools:ignore="ProtectedPermissions" />
     <!-- Exporting downloads to public Music/ on API <=28 (MediaStore needs none on 29+). -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28"/>
@@ -58,15 +54,6 @@
             </intent-filter>
         </service>
 
-        <service
-            android:name=".service.WazeOverlayService"
-            android:exported="false"
-            android:foregroundServiceType="specialUse"
-            tools:targetApi="upside_down_cake">
-            <property
-                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
-                android:value="waze-floating-music-controls" />
-        </service>
 
         <service
             android:name=".service.WazeScreenAccessibilityService"
