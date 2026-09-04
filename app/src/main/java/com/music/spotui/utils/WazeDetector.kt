@@ -57,23 +57,6 @@ object WazeDetector {
         context.startActivity(intent)
     }
 
-    fun hasAccessibilityPermission(context: Context): Boolean {
-        val enabledServices = Settings.Secure.getString(
-            context.contentResolver,
-            Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES
-        ) ?: return false
-        val expected = "${context.packageName}/${com.music.spotui.service.WazeAccessibilityService::class.java.canonicalName}"
-        val expectedShort = "${context.packageName}/.service.WazeAccessibilityService"
-        return enabledServices.contains(expected) || enabledServices.contains(expectedShort)
-    }
-
-    fun requestAccessibilityPermission(context: Context) {
-        val intent = Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK
-        }
-        context.startActivity(intent)
-    }
-
     /**
      * Checks if Waze is currently in the foreground.
      */

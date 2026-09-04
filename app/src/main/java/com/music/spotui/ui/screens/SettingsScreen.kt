@@ -287,7 +287,6 @@ fun SettingsScreen(navController: NavController) {
             SectionTitle("Waze & Car Integration")
             val hasOverlay = com.music.spotui.utils.WazeDetector.hasOverlayPermission(context)
             val hasUsage = com.music.spotui.utils.WazeDetector.hasUsageStatsPermission(context)
-            val hasAccessibility = com.music.spotui.utils.WazeDetector.hasAccessibilityPermission(context)
             val allPermissionsGranted = hasOverlay && hasUsage
 
             var wazeOverlayOn by remember {
@@ -296,7 +295,7 @@ fun SettingsScreen(navController: NavController) {
 
             SettingsSwitchRow(
                 title = "נגן צף אוטומטי ב-Waze",
-                subtitle = if (allPermissionsGranted && wazeOverlayOn) "✓ פעיל — יופיע רק ב-Waze (נעלם אוטומטית בתפריטים)" else "הצגת כפתור ספוטיפיי צף ושליטה במוזיקה רק ב-Waze",
+                subtitle = if (allPermissionsGranted && wazeOverlayOn) "✓ פעיל — יופיע רק ב-Waze (ניתן לגרור את הכפתור לכל מקום)" else "הצגת כפתור ספוטיפיי צף ושליטה במוזיקה רק ב-Waze",
                 checked = wazeOverlayOn,
                 onCheckedChange = { enable ->
                     wazeOverlayOn = enable
@@ -314,7 +313,7 @@ fun SettingsScreen(navController: NavController) {
                 }
             )
 
-            if (wazeOverlayOn) {
+            if (wazeOverlayOn && !allPermissionsGranted) {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -346,21 +345,6 @@ fun SettingsScreen(navController: NavController) {
                                 .clip(RoundedCornerShape(8.dp))
                                 .clickable {
                                     com.music.spotui.utils.WazeDetector.requestUsageStatsPermission(context)
-                                }
-                                .padding(vertical = 6.dp)
-                        )
-                    }
-                    if (!hasAccessibility && allPermissionsGranted) {
-                        Text(
-                            text = "💡 שירות נגישות: להעלמת הכפתור אוטומטית בכל תפריטי Waze — לחץ כאן",
-                            color = Color(0xFF1ED760),
-                            fontSize = 13.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clip(RoundedCornerShape(8.dp))
-                                .clickable {
-                                    com.music.spotui.utils.WazeDetector.requestAccessibilityPermission(context)
                                 }
                                 .padding(vertical = 6.dp)
                         )

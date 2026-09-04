@@ -58,7 +58,6 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
     private var isButtonAdded = false
     private var isPlayerVisible = false
     private var isAnimating = false
-    private var isMenuOpenState = false
 
     private val serviceScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
     private var watcherJob: Job? = null
@@ -68,9 +67,6 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         private const val CHANNEL_ID = "waze_overlay_channel"
         private const val NOTIFICATION_ID = 2048
         private const val DRAG_THRESHOLD = 8f
-
-        @Volatile
-        private var currentInstance: WazeOverlayService? = null
 
         fun start(context: Context) {
             val intent = Intent(context, WazeOverlayService::class.java)
@@ -85,15 +81,10 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
             val intent = Intent(context, WazeOverlayService::class.java)
             context.stopService(intent)
         }
-
-        fun setMenuState(isMenuOpen: Boolean) {
-            currentInstance?.updateMenuVisibility(isMenuOpen)
-        }
     }
 
     override fun onCreate() {
         super.onCreate()
-        currentInstance = this
         savedStateRegistryController.performRestore(null)
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START)
@@ -157,32 +148,6 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         }
     }
 
-    fun updateMenuVisibility(isMenuOpen: Boolean) {
-        if (isMenuOpenState == isMenuOpen) return
-        isMenuOpenState = isMenuOpen
-
-        serviceScope.launch(Dispatchers.Main) {
-            val view = buttonView ?: return@launch
-            if (isMenuOpen) {
-                view.animate()
-                    .alpha(0f)
-                    .setDuration(160)
-                    .withEndAction {
-                        if (isMenuOpenState) {
-                            view.visibility = View.GONE
-                        }
-                    }
-                    .start()
-            } else {
-                view.visibility = View.VISIBLE
-                view.animate()
-                    .alpha(1f)
-                    .setDuration(200)
-                    .start()
-            }
-        }
-    }
-
     private fun getStatusBarHeightPx(): Int {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             val wm = getSystemService(Context.WINDOW_SERVICE) as? WindowManager
@@ -231,7 +196,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
             y = posY
         }
 
-        // Native 54dp Circular Spotify Button View
+        // Native 54dp Circular Spotify Button View (zero touch conflict, instant response)
         val buttonFrame = FrameLayout(this).apply {
             layoutParams = FrameLayout.LayoutParams(buttonSize, buttonSize)
             background = GradientDrawable().apply {
@@ -239,10 +204,6 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 setColor(android.graphics.Color.WHITE)
             }
             elevation = dpToPx(6f)
-            if (isMenuOpenState) {
-                alpha = 0f
-                visibility = View.GONE
-            }
         }
 
         val iconView = ImageView(this).apply {
@@ -408,9 +369,6 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
 
     override fun onDestroy() {
         super.onDestroy()
-        if (currentInstance == this) {
-            currentInstance = null
-        }
         watcherJob?.cancel()
         serviceScope.cancel()
         hideOverlay()
