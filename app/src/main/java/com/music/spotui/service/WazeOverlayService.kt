@@ -17,6 +17,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.view.animation.DecelerateInterpolator
 import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.compose.ui.platform.ComposeView
@@ -38,6 +39,7 @@ import com.music.spotui.utils.WazeScreenMonitor
 import com.music.spotui.utils.WazeScreenState
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
 import kotlin.math.abs
 
@@ -55,6 +57,8 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
 
     private var windowManager: WindowManager? = null
     private var buttonView: View? = null
+    /** View שבתהליך דעיכה (fade-out) לפני הסרה בפועל - ראו hideOverlay(). */
+    private var fadingOutButtonView: View? = null
     private var playerView: ComposeView? = null
 
     private var isButtonAdded = false
@@ -69,6 +73,8 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         private const val CHANNEL_ID = "waze_overlay_channel"
         private const val NOTIFICATION_ID = 2048
         private const val DRAG_THRESHOLD = 8f
+        private const val SHOW_ANIM_MS = 150L
+        private const val HIDE_ANIM_MS = 120L
 
         fun start(context: Context) {
             val intent = Intent(context, WazeOverlayService::class.java)
@@ -126,30 +132,40 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
     private fun startWazeWatcher() {
         watcherJob?.cancel()
         watcherJob = serviceScope.launch {
+            // מגיב מיד ברגע ש-WazeScreenMonitor משנה מצב (בדרך כלל הרבה מתחת לשנייה), במקום
+            // לחכות לטיק הבא של הלולאה למטה. הלולאה עצמה נשארת - היא עדיין צריכה לתפוס את
+            // המקרה של "וויז לא בחזית בכלל" ואת בדיקות ההרשאה, ש-WazeScreenMonitor לא יודע עליהן.
+            launch {
+                WazeScreenMonitor.stateFlow.collect { refreshVisibility() }
+            }
             while (isActive) {
-                try {
-                    val enabledInSettings = isWazeOverlayEnabled(applicationContext)
-                    val hasOverlay = WazeDetector.hasOverlayPermission(applicationContext)
-                    val hasUsage = WazeDetector.hasUsageStatsPermission(applicationContext)
-                    val isWazeActive = WazeDetector.isWazeInForeground(applicationContext)
-                    // עד שההרשאה בסעיף 6 מופעלת, WazeScreenMonitor.state נשאר על ברירת
-                    // המחדל שלו (MAP) - כך שהתנאי הזה לא משנה כלום עד אז.
-                    val onMapScreen = WazeScreenMonitor.state == WazeScreenState.MAP
-
-                    if (enabledInSettings && hasOverlay && hasUsage && isWazeActive && onMapScreen) {
-                        if (!isButtonAdded) {
-                            showOverlay()
-                        }
-                    } else {
-                        if (isButtonAdded && !isPlayerVisible) {
-                            hideOverlay()
-                        }
-                    }
-                } catch (e: Exception) {
-                    Log.e(TAG, "Error in WazeWatcher", e)
-                }
+                refreshVisibility()
                 delay(800)
             }
+        }
+    }
+
+    private fun refreshVisibility() {
+        try {
+            val enabledInSettings = isWazeOverlayEnabled(applicationContext)
+            val hasOverlay = WazeDetector.hasOverlayPermission(applicationContext)
+            val hasUsage = WazeDetector.hasUsageStatsPermission(applicationContext)
+            val isWazeActive = WazeDetector.isWazeInForeground(applicationContext)
+            // עד שההרשאה בסעיף 6 (שלב 3) מופעלת, WazeScreenMonitor.state נשאר על ברירת
+            // המחדל שלו (MAP) - כך שהתנאי הזה לא משנה כלום עד אז.
+            val onMapScreen = WazeScreenMonitor.state == WazeScreenState.MAP
+
+            if (enabledInSettings && hasOverlay && hasUsage && isWazeActive && onMapScreen) {
+                if (!isButtonAdded) {
+                    showOverlay()
+                }
+            } else {
+                if (isButtonAdded && !isPlayerVisible) {
+                    hideOverlay()
+                }
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error in WazeWatcher", e)
         }
     }
 
@@ -171,6 +187,17 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
     @SuppressLint("ClickableViewAccessibility")
     private fun showOverlay() {
         if (isButtonAdded || windowManager == null) return
+
+        // ייתכן שאנימציית ה-fade-out של הכפתור הקודם עדיין רצה (למשל היפוך מהיר
+        // תפריט->מפה->תפריט) - מסירים אותה מיד כדי שלעולם לא יהיו שני כפתורים בו-זמנית.
+        fadingOutButtonView?.let { old ->
+            old.animate().cancel()
+            try {
+                windowManager?.removeView(old)
+            } catch (_: Exception) {
+            }
+            fadingOutButtonView = null
+        }
 
         val density = resources.displayMetrics.density
         val buttonSize = (54 * density).toInt()
@@ -267,10 +294,22 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
             }
         }
 
+        // מתחיל שקוף וקצת קטן יותר, ואז נכנס באנימציה - מרגיש חלק יותר מהופעה פתאומית.
+        buttonFrame.alpha = 0f
+        buttonFrame.scaleX = 0.8f
+        buttonFrame.scaleY = 0.8f
+
         try {
             windowManager?.addView(buttonFrame, buttonParams)
             buttonView = buttonFrame
             isButtonAdded = true
+            buttonFrame.animate()
+                .alpha(1f)
+                .scaleX(1f)
+                .scaleY(1f)
+                .setDuration(SHOW_ANIM_MS)
+                .setInterpolator(DecelerateInterpolator())
+                .start()
             Log.d(TAG, "Waze 54dp floating button added.")
         } catch (e: Exception) {
             Log.e(TAG, "Failed to add button view", e)
@@ -361,15 +400,31 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
 
     private fun hideOverlay() {
         hideMiniPlayer()
-        if (!isButtonAdded || buttonView == null || windowManager == null) return
-        try {
-            windowManager?.removeView(buttonView)
-            buttonView = null
-            isButtonAdded = false
-            Log.d(TAG, "Waze button removed from window")
-        } catch (e: Exception) {
-            Log.e(TAG, "Failed to remove button view", e)
-        }
+        val view = buttonView ?: return
+        if (!isButtonAdded || windowManager == null) return
+
+        // מסומן כמוסתר מיד (כדי שאם המצב יתהפך בחזרה, אפשר להראות כפתור חדש בלי לחכות),
+        // ה-View הישן רק דועך ברקע לפני שהוא באמת מוסר.
+        buttonView = null
+        isButtonAdded = false
+        fadingOutButtonView = view
+
+        view.animate()
+            .alpha(0f)
+            .scaleX(0.8f)
+            .scaleY(0.8f)
+            .setDuration(HIDE_ANIM_MS)
+            .setInterpolator(DecelerateInterpolator())
+            .withEndAction {
+                if (fadingOutButtonView === view) fadingOutButtonView = null
+                try {
+                    windowManager?.removeView(view)
+                    Log.d(TAG, "Waze button removed from window")
+                } catch (e: Exception) {
+                    Log.e(TAG, "Failed to remove button view", e)
+                }
+            }
+            .start()
     }
 
     override fun onDestroy() {
