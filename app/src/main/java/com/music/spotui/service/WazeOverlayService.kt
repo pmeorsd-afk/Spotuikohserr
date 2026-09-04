@@ -76,6 +76,14 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
         private const val SHOW_ANIM_MS = 150L
         private const val HIDE_ANIM_MS = 120L
 
+        @Volatile
+        var instance: WazeOverlayService? = null
+            private set
+
+        fun collapseMiniPlayer() {
+            instance?.hideMiniPlayer()
+        }
+
         fun start(context: Context) {
             val intent = Intent(context, WazeOverlayService::class.java)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -93,6 +101,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
 
     override fun onCreate() {
         super.onCreate()
+        instance = this
         savedStateRegistryController.performRestore(null)
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START)
@@ -429,6 +438,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
 
     override fun onDestroy() {
         super.onDestroy()
+        if (instance === this) instance = null
         watcherJob?.cancel()
         serviceScope.cancel()
         hideOverlay()

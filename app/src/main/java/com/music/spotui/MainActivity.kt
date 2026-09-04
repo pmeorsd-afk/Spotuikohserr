@@ -103,6 +103,9 @@ class MainActivity : ComponentActivity() {
         intent ?: return
         if (!intent.getBooleanExtra(WazeResumeContract.EXTRA_RETURN_TO_WAZE, false)) return
 
+        // Close/collapse the expanded mini-player so it returns to the floating button when returning to Waze
+        com.music.spotui.service.WazeOverlayService.collapseMiniPlayer()
+
         val songId = intent.getIntExtra(WazeResumeContract.EXTRA_SONG_ID, -1)
         val title = intent.getStringExtra(WazeResumeContract.EXTRA_TITLE)
         if (songId <= 0 || title.isNullOrBlank()) return

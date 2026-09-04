@@ -195,6 +195,7 @@ fun WazeOverlayView(
                                         modifier = Modifier
                                             .clip(RoundedCornerShape(6.dp))
                                             .clickable {
+                                                closePlayer()
                                                 val launchIntent = Intent(context, MainActivity::class.java).apply {
                                                     flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
                                                 }
@@ -292,7 +293,8 @@ fun WazeOverlayView(
                                             currentSongState.updatePlayingState(true)
                                             isPlayingLive = true
                                         } else {
-                                            // CurrentSongState ריק / נסגר - פותחים את SpotUI שיטען את השיר האחרון ויחזור לוויז
+                                            // CurrentSongState ריק / נסגר - סוגרים את המיני-נגן, פותחים את SpotUI שיטען את השיר ויחזור לוויז
+                                            closePlayer()
                                             resumeFromPersistedTrack(context)
                                         }
                                     },
