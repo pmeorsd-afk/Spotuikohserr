@@ -287,7 +287,7 @@ fun WazeOverlayView(
                                 // Paused State: Big Green "המשך ניגון" Pill Button
                                 Button(
                                     onClick = {
-                                        if (liveTitle.isNotBlank() && liveSongId > 0) {
+                                        if (liveTitle.isNotBlank() && liveSongId > 0 && com.music.spotui.MainActivity.isAlive) {
                                             // נסיון ראשון: המשך במקום. אם זה באמת לא מתחיל לנגן תוך 700ms
                                             // (הנגן האמיתי מאחורי CurrentSongState אופס) - נופלים למסלול הכבד.
                                             SongPlayer.play()
@@ -672,7 +672,12 @@ private fun addToLiked(context: Context, currentSongState: CurrentSongState) {
  * כדי שהיא תטען אותו ותנגן, ואז תחזור לבד לוויז.
  */
 private fun resumeFromPersistedTrack(context: Context) {
-    val track = com.music.spotui.data.preferences.getLastPlayedTrack(context) ?: return
+    val track = com.music.spotui.data.preferences.getLastPlayedTrack(context)
+    android.util.Log.d("WazeResume", "track from prefs: $track")
+    if (track == null) {
+        android.util.Log.w("WazeResume", "no persisted track - nothing to resume")
+        return
+    }
     val intent = Intent(context, MainActivity::class.java).apply {
         flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
         putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_SONG_ID, track.songId)
@@ -682,5 +687,10 @@ private fun resumeFromPersistedTrack(context: Context) {
         putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_COVER_URI, track.coverUri)
         putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_RETURN_TO_WAZE, true)
     }
-    context.startActivity(intent)
+    try {
+        context.startActivity(intent)
+        android.util.Log.d("WazeResume", "startActivity() returned normally")
+    } catch (e: Exception) {
+        android.util.Log.e("WazeResume", "startActivity() threw", e)
+    }
 }

@@ -37,6 +37,17 @@ class MainActivity : ComponentActivity() {
 
     private var controllerFuture: ListenableFuture<MediaController>? = null
 
+    companion object {
+        /**
+         * האם קיים כרגע instance של MainActivity (נוצר ועדיין לא נהרס - לא בהכרח גלוי). משמש את
+         * כפתור "המשך ניגון" במיני-נגן של Waze: WebView של ספוטיפיי מוצמד ל-MainActivity
+         * עצמה - אם היא לא חיה, אין דרך לנגן דרכו, גם אם CurrentSongState נשאר מאוכלס.
+         */
+        @Volatile
+        var isAlive: Boolean = false
+            private set
+    }
+
     private val notificationPermission =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { /* no-op */ }
 
@@ -45,6 +56,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?){
 
         super.onCreate(savedInstanceState)
+        isAlive = true
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
 
         // Ask for notification permission (Android 13+) so the media notification shows.
@@ -126,6 +138,7 @@ class MainActivity : ComponentActivity() {
     }
 
     override fun onDestroy() {
+        isAlive = false
         super.onDestroy()
         controllerFuture?.let { MediaController.releaseFuture(it) }
         SongPlayer.release()
