@@ -38,16 +38,30 @@ fun saveLastPlayedTrack(context: Context, track: LastPlayedTrack) {
 
 fun getLastPlayedTrack(context: Context): LastPlayedTrack? {
     val p = prefs(context)
-    val songId = p.getInt(KEY_SONG_ID, -1)
     val title = p.getString(KEY_TITLE, null)
-    if (songId <= 0 || title.isNullOrBlank()) return null
-    return LastPlayedTrack(
-        songId = songId,
-        title = title,
-        singer = p.getString(KEY_SINGER, "") ?: "",
-        album = p.getString(KEY_ALBUM, "") ?: "",
-        coverUri = p.getString(KEY_COVER_URI, "") ?: "",
-    )
+    if (!title.isNullOrBlank()) {
+        val songId = p.getInt(KEY_SONG_ID, -1)
+        val singer = p.getString(KEY_SINGER, "") ?: ""
+        val effectiveId = if (songId > 0) songId else (title + singer).hashCode() and 0x7fffffff
+        return LastPlayedTrack(
+            songId = effectiveId,
+            title = title,
+            singer = singer,
+            album = p.getString(KEY_ALBUM, "") ?: "",
+            coverUri = p.getString(KEY_COVER_URI, "") ?: "",
+        )
+    }
+    // Fallback to PlaybackStatePref if WazeResumePref is not populated yet
+    return loadLastPlayback(context)?.first?.let { song ->
+        val sId = if (song.id > 0) song.id else (song.title + song.singer).hashCode() and 0x7fffffff
+        LastPlayedTrack(
+            songId = sId,
+            title = song.title,
+            singer = song.singer,
+            album = song.album,
+            coverUri = song.coverUri,
+        )
+    }
 }
 
 /**

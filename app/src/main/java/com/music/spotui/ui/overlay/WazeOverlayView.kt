@@ -66,10 +66,19 @@ fun WazeOverlayView(
     var isPlayingLive by remember { mutableStateOf(SongPlayer.isPlaying()) }
     val isPlaying = isPlayingState || isPlayingLive
 
-    val title = currentSongState.title.value
-    val singer = currentSongState.singer.value
-    val coverUri = currentSongState.coverUri.value
-    val currentSongId = currentSongState.songId.value
+    val liveTitle = currentSongState.title.value
+    val liveSinger = currentSongState.singer.value
+    val liveCoverUri = currentSongState.coverUri.value
+    val liveSongId = currentSongState.songId.value
+
+    val lastSavedTrack = remember(liveTitle, isExpanded) {
+        if (liveTitle.isBlank()) com.music.spotui.data.preferences.getLastPlayedTrack(context) else null
+    }
+
+    val title = if (liveTitle.isNotBlank()) liveTitle else lastSavedTrack?.title.orEmpty()
+    val singer = if (liveSinger.isNotBlank()) liveSinger else lastSavedTrack?.singer.orEmpty()
+    val coverUri = if (liveCoverUri.isNotBlank()) liveCoverUri else lastSavedTrack?.coverUri.orEmpty()
+    val currentSongId = if (liveSongId > 0) liveSongId else lastSavedTrack?.songId ?: 0
 
     var progress by remember { mutableFloatStateOf(0f) }
 
@@ -277,13 +286,13 @@ fun WazeOverlayView(
                                 // Paused State: Big Green "המשך ניגון" Pill Button
                                 Button(
                                     onClick = {
-                                        if (title.isNotBlank() && currentSongId > 0) {
+                                        if (liveTitle.isNotBlank() && liveSongId > 0) {
                                             // ה-process עדיין חי - להמשיך במקום, כרגיל
                                             SongPlayer.play()
                                             currentSongState.updatePlayingState(true)
                                             isPlayingLive = true
                                         } else {
-                                            // CurrentSongState ריק - פותחים את SpotUI שיטען את השיר האחרון ויחזור לוויז
+                                            // CurrentSongState ריק / נסגר - פותחים את SpotUI שיטען את השיר האחרון ויחזור לוויז
                                             resumeFromPersistedTrack(context)
                                         }
                                     },

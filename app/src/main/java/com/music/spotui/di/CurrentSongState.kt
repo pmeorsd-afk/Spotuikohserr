@@ -150,10 +150,11 @@ class CurrentSongState @Inject constructor() {
                     com.music.spotui.MyApplication.instance, track)
             }
         }
-        if (title.isNotBlank() && songId > 0) {
+        if (title.isNotBlank()) {
+            val sId = if (songId > 0) songId else (title + singer).hashCode() and 0x7fffffff
             com.music.spotui.data.preferences.saveLastPlayedTrack(
                 com.music.spotui.MyApplication.instance,
-                com.music.spotui.data.preferences.LastPlayedTrack(songId, title, singer, album, coverUri)
+                com.music.spotui.data.preferences.LastPlayedTrack(sId, title, singer, album, coverUri)
             )
         }
         // Warm the lyrics cache in the background so they're already loaded by the
