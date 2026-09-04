@@ -277,9 +277,15 @@ fun WazeOverlayView(
                                 // Paused State: Big Green "המשך ניגון" Pill Button
                                 Button(
                                     onClick = {
-                                        SongPlayer.play()
-                                        currentSongState.updatePlayingState(true)
-                                        isPlayingLive = true
+                                        if (title.isNotBlank() && currentSongId > 0) {
+                                            // ה-process עדיין חי - להמשיך במקום, כרגיל
+                                            SongPlayer.play()
+                                            currentSongState.updatePlayingState(true)
+                                            isPlayingLive = true
+                                        } else {
+                                            // CurrentSongState ריק - פותחים את SpotUI שיטען את השיר האחרון ויחזור לוויז
+                                            resumeFromPersistedTrack(context)
+                                        }
                                     },
                                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1ED760)),
                                     shape = RoundedCornerShape(24.dp),
@@ -348,6 +354,8 @@ fun WazeOverlayView(
                                                         SongPlayer.pause()
                                                         currentSongState.updatePlayingState(false)
                                                         isPlayingLive = false
+                                                        // ההשהיה סוגרת את המיני-נגן וחוזרת לכפתור בלבד
+                                                        closePlayer()
                                                     } else {
                                                         SongPlayer.play()
                                                         currentSongState.updatePlayingState(true)
@@ -637,4 +645,22 @@ private fun skipPrevious(context: Context, currentSongState: CurrentSongState) {
 
 private fun addToLiked(context: Context, currentSongState: CurrentSongState) {
     // Add song to local liked playlist
+}
+
+/**
+ * "המשך ניגון" נלחץ אבל CurrentSongState ריק - פותחים את MainActivity עם השיר האחרון שנשמר,
+ * כדי שהיא תטען אותו ותנגן, ואז תחזור לבד לוויז.
+ */
+private fun resumeFromPersistedTrack(context: Context) {
+    val track = com.music.spotui.data.preferences.getLastPlayedTrack(context) ?: return
+    val intent = Intent(context, MainActivity::class.java).apply {
+        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_SONG_ID, track.songId)
+        putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_TITLE, track.title)
+        putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_SINGER, track.singer)
+        putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_ALBUM, track.album)
+        putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_COVER_URI, track.coverUri)
+        putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_RETURN_TO_WAZE, true)
+    }
+    context.startActivity(intent)
 }
