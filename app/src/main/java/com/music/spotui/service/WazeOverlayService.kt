@@ -8,7 +8,6 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.graphics.PixelFormat
-import android.graphics.Rect
 import android.graphics.drawable.GradientDrawable
 import android.os.Build
 import android.os.IBinder
@@ -16,7 +15,6 @@ import android.util.Log
 import android.view.Gravity
 import android.view.MotionEvent
 import android.view.View
-import android.view.ViewTreeObserver
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.FrameLayout
@@ -60,7 +58,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
     private var isButtonAdded = false
     private var isPlayerVisible = false
     private var isAnimating = false
-    private var isMenuOrKeyboardOpen = false
+    private var isMenuOpenState = false
 
     private val serviceScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
     private var watcherJob: Job? = null
@@ -160,17 +158,17 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
     }
 
     fun updateMenuVisibility(isMenuOpen: Boolean) {
-        if (isMenuOrKeyboardOpen == isMenuOpen) return
-        isMenuOrKeyboardOpen = isMenuOpen
+        if (isMenuOpenState == isMenuOpen) return
+        isMenuOpenState = isMenuOpen
 
         serviceScope.launch(Dispatchers.Main) {
             val view = buttonView ?: return@launch
             if (isMenuOpen) {
                 view.animate()
                     .alpha(0f)
-                    .setDuration(180)
+                    .setDuration(160)
                     .withEndAction {
-                        if (isMenuOrKeyboardOpen) {
+                        if (isMenuOpenState) {
                             view.visibility = View.GONE
                         }
                     }
@@ -179,7 +177,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 view.visibility = View.VISIBLE
                 view.animate()
                     .alpha(1f)
-                    .setDuration(220)
+                    .setDuration(200)
                     .start()
             }
         }
@@ -233,7 +231,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
             y = posY
         }
 
-        // Native 54dp Circular Spotify Button View (instant hardware touch response)
+        // Native 54dp Circular Spotify Button View
         val buttonFrame = FrameLayout(this).apply {
             layoutParams = FrameLayout.LayoutParams(buttonSize, buttonSize)
             background = GradientDrawable().apply {
@@ -241,7 +239,7 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 setColor(android.graphics.Color.WHITE)
             }
             elevation = dpToPx(6f)
-            if (isMenuOrKeyboardOpen) {
+            if (isMenuOpenState) {
                 alpha = 0f
                 visibility = View.GONE
             }
@@ -302,21 +300,6 @@ class WazeOverlayService : Service(), LifecycleOwner, SavedStateRegistryOwner {
                 else -> false
             }
         }
-
-        // Global Layout / Soft Keyboard Listener (Instant auto-hide on keyboard/search)
-        val globalLayoutListener = ViewTreeObserver.OnGlobalLayoutListener {
-            val r = Rect()
-            buttonFrame.getWindowVisibleDisplayFrame(r)
-            val screenHeight = buttonFrame.rootView.height
-            if (screenHeight > 0) {
-                val keypadHeight = screenHeight - r.bottom
-                val isKeyboardShowing = keypadHeight > screenHeight * 0.15
-                if (isKeyboardShowing) {
-                    updateMenuVisibility(true)
-                }
-            }
-        }
-        buttonFrame.viewTreeObserver.addOnGlobalLayoutListener(globalLayoutListener)
 
         try {
             windowManager?.addView(buttonFrame, buttonParams)
