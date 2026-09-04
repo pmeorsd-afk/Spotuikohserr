@@ -288,12 +288,21 @@ fun WazeOverlayView(
                                 Button(
                                     onClick = {
                                         if (liveTitle.isNotBlank() && liveSongId > 0) {
-                                            // ה-process עדיין חי - להמשיך במקום, כרגיל
+                                            // נסיון ראשון: המשך במקום. אם זה באמת לא מתחיל לנגן תוך 700ms
+                                            // (הנגן האמיתי מאחורי CurrentSongState אופס) - נופלים למסלול הכבד.
                                             SongPlayer.play()
                                             currentSongState.updatePlayingState(true)
                                             isPlayingLive = true
+                                            coroutineScope.launch {
+                                                delay(700)
+                                                if (!SongPlayer.isPlaying()) {
+                                                    currentSongState.updatePlayingState(false)
+                                                    isPlayingLive = false
+                                                    closePlayer()
+                                                    resumeFromPersistedTrack(context)
+                                                }
+                                            }
                                         } else {
-                                            // CurrentSongState ריק / נסגר - סוגרים את המיני-נגן, פותחים את SpotUI שיטען את השיר ויחזור לוויז
                                             closePlayer()
                                             resumeFromPersistedTrack(context)
                                         }
