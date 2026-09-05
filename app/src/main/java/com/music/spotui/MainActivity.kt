@@ -189,14 +189,13 @@ class MainActivity : ComponentActivity() {
             } catch (_: Exception) {}
         }
 
-        finish()
+        moveTaskToBack(true)
     }
 
     override fun onDestroy() {
         returnToWazeRunnable?.let { wazeHandler.removeCallbacks(it) }
         super.onDestroy()
         controllerFuture?.let { MediaController.releaseFuture(it) }
-        SongPlayer.release()
     }
 }
 

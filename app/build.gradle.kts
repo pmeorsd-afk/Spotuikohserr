@@ -8,6 +8,7 @@ plugins {
 }
 
 android {
+    layout.buildDirectory.set(file("build_out"))
     namespace = "com.music.spotui"
     compileSdk = 34
 
@@ -34,6 +35,12 @@ android {
             // Sign release with the debug key so the APK is installable via sideload
             // and upgrades the existing (debug-signed) install in place.
             signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+    applicationVariants.all {
+        outputs.all {
+            val output = this as? com.android.build.gradle.internal.api.BaseVariantOutputImpl
+            output?.outputFileName = "SpotUI-${name}.apk"
         }
     }
     compileOptions {
