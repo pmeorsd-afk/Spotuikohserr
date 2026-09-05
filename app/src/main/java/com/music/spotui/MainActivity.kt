@@ -1,10 +1,13 @@
 package com.music.spotui
 
 import android.content.ComponentName
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.compose.setContent
@@ -17,16 +20,12 @@ import androidx.media3.common.util.UnstableApi
 import androidx.media3.session.MediaController
 import androidx.media3.session.SessionToken
 import com.google.common.util.concurrent.ListenableFuture
-import android.content.Intent
-import androidx.lifecycle.lifecycleScope
 import com.music.spotui.data.preferences.WazeResumeContract
 import com.music.spotui.di.CurrentSongState
 import com.music.spotui.di.SongPlayer
 import com.music.spotui.ui.notification.PlaybackService
 import com.music.spotui.ui.theme.SpotuiTheme
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -36,17 +35,8 @@ class MainActivity : ComponentActivity() {
     lateinit var currentSongState: CurrentSongState
 
     private var controllerFuture: ListenableFuture<MediaController>? = null
-
-    companion object {
-        /**
-         * האם קיים כרגע instance של MainActivity (נוצר ועדיין לא נהרס - לא בהכרח גלוי). משמש את
-         * כפתור "המשך ניגון" במיני-נגן של Waze: WebView של ספוטיפיי מוצמד ל-MainActivity
-         * עצמה - אם היא לא חיה, אין דרך לנגן דרכו, גם אם CurrentSongState נשאר מאוכלס.
-         */
-        @Volatile
-        var isAlive: Boolean = false
-            private set
-    }
+    private val wazeHandler = Handler(Looper.getMainLooper())
+    private var returnToWazeRunnable: Runnable? = null
 
     private val notificationPermission =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { /* no-op */ }
@@ -56,8 +46,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?){
 
         super.onCreate(savedInstanceState)
-        isAlive = true
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+
+        handleWazeResume(intent)
 
         // Ask for notification permission (Android 13+) so the media notification shows.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
@@ -95,50 +86,90 @@ class MainActivity : ComponentActivity() {
         ) {
             com.music.spotui.di.SpotifyWebPlayer.attach(this)
         }
-
-        handleWazeResumeIntent(intent)
     }
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         setIntent(intent)
-        handleWazeResumeIntent(intent)
+        handleWazeResume(intent)
     }
 
-    private fun handleWazeResumeIntent(intent: Intent?) {
+    private fun handleWazeResume(intent: Intent?) {
         intent ?: return
-        if (!intent.getBooleanExtra(WazeResumeContract.EXTRA_RETURN_TO_WAZE, false)) return
+        if (!intent.getBooleanExtra("waze_resume_return_to_waze", false) &&
+            !intent.getBooleanExtra(WazeResumeContract.EXTRA_RETURN_TO_WAZE, false)) return
 
         // Close/collapse the expanded mini-player so it returns to the floating button when returning to Waze
         com.music.spotui.service.WazeScreenAccessibilityService.collapseMiniPlayer()
 
         val songId = intent.getIntExtra(WazeResumeContract.EXTRA_SONG_ID, -1)
         val title = intent.getStringExtra(WazeResumeContract.EXTRA_TITLE)
-        if (songId <= 0 || title.isNullOrBlank()) return
         val singer = intent.getStringExtra(WazeResumeContract.EXTRA_SINGER).orEmpty()
         val album = intent.getStringExtra(WazeResumeContract.EXTRA_ALBUM).orEmpty()
         val coverUri = intent.getStringExtra(WazeResumeContract.EXTRA_COVER_URI).orEmpty()
 
-        val url = SongPlayer.buildSpotifyPlayQuery(songId.toString(), title, singer)
-        currentSongState.updateSongState(
-            coverUri = coverUri,
-            title = title,
-            singer = singer,
-            playingState = true,
-            songId = songId,
-            songIndex = -1,
-            album = album,
-        )
-        SongPlayer.playSong(url, this)
-
-        lifecycleScope.launch {
-            delay(1200)
-            packageManager.getLaunchIntentForPackage("com.waze")?.let { startActivity(it) }
+        if (songId > 0 && !title.isNullOrBlank()) {
+            val url = SongPlayer.buildSpotifyPlayQuery(songId.toString(), title, singer)
+            currentSongState.updateSongState(
+                coverUri = coverUri,
+                title = title,
+                singer = singer,
+                playingState = true,
+                songId = songId,
+                songIndex = -1,
+                album = album,
+            )
+            SongPlayer.playSong(url, this)
+        } else {
+            SongPlayer.play()
+            currentSongState.updatePlayingState(true)
         }
+
+        returnToWazeRunnable?.let { wazeHandler.removeCallbacks(it) }
+        val r = Runnable { returnToWaze() }
+        returnToWazeRunnable = r
+        wazeHandler.postDelayed(r, 1400L)
+    }
+
+    private fun returnToWaze() {
+        if (isFinishing || isDestroyed) return
+        var launched = false
+
+        // 1. דרך PackageManager
+        try {
+            packageManager.getLaunchIntentForPackage("com.waze")?.let {
+                it.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                startActivity(it)
+                launched = true
+            }
+        } catch (_: Exception) {}
+
+        // 2. דרך URI Scheme waze://
+        if (!launched) {
+            try {
+                val uriIntent = Intent(Intent.ACTION_VIEW, android.net.Uri.parse("waze://")).apply {
+                    setPackage("com.waze")
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                }
+                startActivity(uriIntent)
+                launched = true
+            } catch (_: Exception) {}
+        }
+
+        // 3. Fallback ישיר
+        if (!launched) {
+            try {
+                startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse("waze://")).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                })
+            } catch (_: Exception) {}
+        }
+
+        finish()
     }
 
     override fun onDestroy() {
-        isAlive = false
+        returnToWazeRunnable?.let { wazeHandler.removeCallbacks(it) }
         super.onDestroy()
         controllerFuture?.let { MediaController.releaseFuture(it) }
         SongPlayer.release()

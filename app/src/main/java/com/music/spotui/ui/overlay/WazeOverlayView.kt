@@ -1,7 +1,11 @@
 package com.music.spotui.ui.overlay
 
+import android.app.ActivityOptions
+import android.app.PendingIntent
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.MutableTransitionState
@@ -287,29 +291,8 @@ fun WazeOverlayView(
                                 // Paused State: Big Green "המשך ניגון" Pill Button
                                 Button(
                                     onClick = {
-                                        if (liveTitle.isNotBlank() && liveSongId > 0 && com.music.spotui.MainActivity.isAlive) {
-                                            // נסיון ראשון: המשך במקום. אם זה באמת לא מתחיל לנגן תוך 700ms
-                                            // (הנגן האמיתי מאחורי CurrentSongState אופס) - נופלים למסלול הכבד.
-                                            SongPlayer.play()
-                                            currentSongState.updatePlayingState(true)
-                                            isPlayingLive = true
-                                            val positionAtTap = SongPlayer.getCurrentPosition()
-                                            coroutineScope.launch {
-                                                delay(1800)
-                                                // בודקים שהעמדה באמת התקדמה, לא רק ש-isPlaying() חוזר true - הדגל
-                                                // הזה יכול להישאר true גם כש-WebView שהוא מסתמך עליו כבר לא קיים.
-                                                val advanced = SongPlayer.getCurrentPosition() - positionAtTap
-                                                if (advanced < 400) {
-                                                    currentSongState.updatePlayingState(false)
-                                                    isPlayingLive = false
-                                                    closePlayer()
-                                                    resumeFromPersistedTrack(context)
-                                                }
-                                            }
-                                        } else {
-                                            closePlayer()
-                                            resumeFromPersistedTrack(context)
-                                        }
+                                        closePlayer()
+                                        resumeFromPersistedTrack(context)
                                     },
                                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1ED760)),
                                     shape = RoundedCornerShape(24.dp),
@@ -677,24 +660,39 @@ private fun addToLiked(context: Context, currentSongState: CurrentSongState) {
  */
 private fun resumeFromPersistedTrack(context: Context) {
     val track = com.music.spotui.data.preferences.getLastPlayedTrack(context)
-    android.util.Log.d("WazeResume", "track from prefs: $track")
-    if (track == null) {
-        android.util.Log.w("WazeResume", "no persisted track - nothing to resume")
-        return
-    }
     val intent = Intent(context, MainActivity::class.java).apply {
+        component = ComponentName("com.music.spotui", "com.music.spotui.MainActivity")
         flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
-        putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_SONG_ID, track.songId)
-        putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_TITLE, track.title)
-        putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_SINGER, track.singer)
-        putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_ALBUM, track.album)
-        putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_COVER_URI, track.coverUri)
+        putExtra("waze_resume_return_to_waze", true)
         putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_RETURN_TO_WAZE, true)
+        if (track != null) {
+            putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_SONG_ID, track.songId)
+            putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_TITLE, track.title)
+            putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_SINGER, track.singer)
+            putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_ALBUM, track.album)
+            putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_COVER_URI, track.coverUri)
+        }
     }
     try {
-        context.startActivity(intent)
-        android.util.Log.d("WazeResume", "startActivity() returned normally")
-    } catch (e: Exception) {
-        android.util.Log.e("WazeResume", "startActivity() threw", e)
+        if (Build.VERSION.SDK_INT >= 34) {
+            val options = ActivityOptions.makeBasic()
+            options.setPendingIntentBackgroundActivityStartMode(
+                ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED
+            )
+            val pi = PendingIntent.getActivity(
+                context,
+                0,
+                intent,
+                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+                options.toBundle()
+            )
+            pi.send()
+        } else {
+            context.startActivity(intent)
+        }
+    } catch (_: Exception) {
+        try {
+            context.startActivity(intent)
+        } catch (_: Exception) {}
     }
 }
