@@ -108,21 +108,45 @@ class MainActivity : ComponentActivity() {
         val album = intent.getStringExtra(WazeResumeContract.EXTRA_ALBUM).orEmpty()
         val coverUri = intent.getStringExtra(WazeResumeContract.EXTRA_COVER_URI).orEmpty()
 
-        if (songId > 0 && !title.isNullOrBlank()) {
-            val url = SongPlayer.buildSpotifyPlayQuery(songId.toString(), title, singer)
-            currentSongState.updateSongState(
-                coverUri = coverUri,
-                title = title,
-                singer = singer,
-                playingState = true,
-                songId = songId,
-                songIndex = -1,
-                album = album,
-            )
-            SongPlayer.playSong(url, this)
-        } else {
+        // 1. If player already has a track loaded (paused mid-song), simply resume playback
+        // exactly from the paused second (do NOT restart the song from 0:00).
+        val player = SongPlayer.exoPlayer
+        if (player != null && player.mediaItemCount > 0) {
             SongPlayer.play()
             currentSongState.updatePlayingState(true)
+        } else {
+            // 2. Fresh launch / killed in background: restore the last saved session (track + position)
+            val lastPlayback = com.music.spotui.data.preferences.loadLastPlayback(this)
+            if (lastPlayback != null) {
+                val (song, positionMs) = lastPlayback
+                currentSongState.updateQueue(listOf(song))
+                currentSongState.updateSongState(
+                    coverUri = song.coverUri,
+                    title = song.title,
+                    singer = song.singer,
+                    playingState = true,
+                    songId = song.id,
+                    songIndex = 0,
+                    album = song.album
+                )
+                SongPlayer.setRestorePoint(song.url, positionMs)
+                SongPlayer.playSong(song.url, this)
+            } else if (songId > 0 && !title.isNullOrBlank()) {
+                val url = SongPlayer.buildSpotifyPlayQuery(songId.toString(), title, singer)
+                currentSongState.updateSongState(
+                    coverUri = coverUri,
+                    title = title,
+                    singer = singer,
+                    playingState = true,
+                    songId = songId,
+                    songIndex = -1,
+                    album = album,
+                )
+                SongPlayer.playSong(url, this)
+            } else {
+                SongPlayer.play()
+                currentSongState.updatePlayingState(true)
+            }
         }
 
         returnToWazeRunnable?.let { wazeHandler.removeCallbacks(it) }

@@ -145,10 +145,16 @@ class CurrentSongState @Inject constructor() {
         SongPlayer.setNowPlayingMeta(title, singer, coverUri)
         // Persist the current track so a fresh launch can restore the session.
         if (playingState && title.isNotBlank()) {
-            _queue.value.firstOrNull { it.id == songId }?.let { track ->
-                com.music.spotui.data.preferences.saveLastPlayback(
-                    com.music.spotui.MyApplication.instance, track)
-            }
+            val track = _queue.value.firstOrNull { it.id == songId } ?: com.music.spotui.data.entity.SongsModel(
+                id = if (songId > 0) songId else (title + singer).hashCode() and 0x7fffffff,
+                title = title,
+                singer = singer,
+                album = album,
+                coverUri = coverUri,
+                url = SongPlayer.buildSpotifyPlayQuery(songId.toString(), title, singer)
+            )
+            com.music.spotui.data.preferences.saveLastPlayback(
+                com.music.spotui.MyApplication.instance, track)
         }
         if (title.isNotBlank()) {
             val sId = if (songId > 0) songId else (title + singer).hashCode() and 0x7fffffff
