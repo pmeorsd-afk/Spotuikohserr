@@ -1,9 +1,9 @@
 {
-  "versionCode": 15,
-  "versionName": "1.5",
-  "title": "יצא עדכון חדש לאפליקציה! 🎉",
-  "message": "גרסה חדשה זמינה להורדה עם שיפורים ותיקונים. לחץ על כפתור ההורדה כדי לעדכן.",
-  "downloadUrl": "https://mitmachim.top/post/1237813",
+  "versionCode": 16,
+  "versionName": "1.6",
+  "title": "יצא עדכון משמעותי לאפליקציה! 🎉",
+  "message": "גרסה חדשה זמינה להורדה , נוסף מיני נגן לוויז!.",
+  "downloadUrl": "https://mitmachim.top/post/1239494",
   "forceUpdate": false,
   "updateButtonText": "הורד עדכון עכשיו",
   "cancelButtonText": "הזכר לי מאוחר יותר"
