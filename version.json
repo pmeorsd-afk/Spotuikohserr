@@ -4,7 +4,7 @@
   "title": "יצא עדכון משמעותי לאפליקציה! 🎉",
   "message": "גרסה חדשה זמינה להורדה , נוסף מיני נגן לוויז, ותיקון תמונות במסך התראות.",
   "downloadUrl": "https://mitmachim.top/post/1239494",
-  "forceUpdate": True,
+  "forceUpdate": true,
   "updateButtonText": "הורד עדכון עכשיו",
   "cancelButtonText": "הזכר לי מאוחר יותר"
 }
