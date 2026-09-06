@@ -34,11 +34,11 @@ jobs:
     - name: Upload Debug APK
       uses: actions/upload-artifact@v4
       with:
-        name: Spotui-WithImages-Debug-APK
-        path: app/build/outputs/apk/debug/app-debug.apk
+        name: Spotui-${{ github.ref_name }}-Debug-APK
+        path: app/build/outputs/apk/debug/*.apk
 
     - name: Upload Release APK
       uses: actions/upload-artifact@v4
       with:
-        name: Spotui-WithImages-Release-APK
-        path: app/build/outputs/apk/release/app-release.apk
+        name: Spotui-${{ github.ref_name }}-Release-APK
+        path: app/build/outputs/apk/release/*.apk
