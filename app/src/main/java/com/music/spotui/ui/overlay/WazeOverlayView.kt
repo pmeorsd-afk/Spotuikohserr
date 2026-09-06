@@ -572,7 +572,7 @@ fun WazeOverlayView(
                                                     album = song.album
                                                 )
                                                 SongPlayer.playSong(song.url, context)
-                                                isShowList = false
+                                                closePlayer()
                                             }
                                     ) {
                                         Box(
