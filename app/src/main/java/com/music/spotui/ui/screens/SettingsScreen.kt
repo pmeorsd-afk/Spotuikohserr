@@ -311,7 +311,7 @@ fun SettingsScreen(navController: NavController) {
             SettingsSwitchRow(
                 title = "נגן צף אוטומטי ב-Waze",
                 subtitle = if (wazeOverlayOn)
-                    "✓ פעיל — מוצג על מסך המפה ב-Waze בלבד, ונעלם בתפריטים (ניתן לגרור את הכפתור לכל מקום)"
+                    "✓ פעיל — מוצג באפליקציית Waze (ניתן לגרור את הכפתור לכל מקום)"
                 else "הצגת כפתור ספוטיפיי צף ושליטה במוזיקה רק ב-Waze",
                 checked = wazeOverlayOn,
                 onCheckedChange = { enable ->
