@@ -1,10 +1,10 @@
 {
-  "versionCode": 16,
-  "versionName": "1.6",
+  "versionCode": 17,
+  "versionName": "1.7",
   "title": "יצא עדכון משמעותי לאפליקציה! 🎉",
-  "message": "גרסה חדשה זמינה להורדה , נוסף מיני נגן לוויז!.",
+  "message": "גרסה חדשה זמינה להורדה , נוסף מיני נגן לוויז, ותיקון תמונות במסך התראות.",
   "downloadUrl": "https://mitmachim.top/post/1239494",
-  "forceUpdate": false,
+  "forceUpdate": True,
   "updateButtonText": "הורד עדכון עכשיו",
   "cancelButtonText": "הזכר לי מאוחר יותר"
 }
