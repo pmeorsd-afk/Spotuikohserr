@@ -13,15 +13,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
-import com.bumptech.glide.integration.compose.GlideImage as RealGlideImage
-import com.bumptech.glide.integration.compose.placeholder
 import com.music.spotui.R
 
 /**
- * GlideImage Composable that renders full remote album and artist artwork across the application.
+ * Clean, 100% image-free Composable replacing GlideImage across the entire application.
+ * Never performs any network requests for images and renders a sleek music placeholder.
  */
-@OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 fun GlideImage(
     model: Any? = null,
@@ -31,18 +28,7 @@ fun GlideImage(
     loading: Any? = null,
     failure: Any? = null
 ) {
-    if (model == null || (model is String && model.isBlank())) {
-        NoImagePlaceholder(modifier = modifier)
-    } else {
-        RealGlideImage(
-            model = model,
-            contentDescription = contentDescription,
-            modifier = modifier,
-            contentScale = contentScale,
-            loading = placeholder { NoImagePlaceholder(modifier = Modifier.fillMaxSize()) },
-            failure = placeholder { NoImagePlaceholder(modifier = Modifier.fillMaxSize()) }
-        )
-    }
+    NoImagePlaceholder(modifier = modifier)
 }
 
 @Composable
