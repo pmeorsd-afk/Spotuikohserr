@@ -28,6 +28,7 @@ class MyApplication : Application(){
     override fun onCreate() {
         super.onCreate()
         instance = this
+        com.music.spotui.util.CrashLogger.init(this)
         if (BuildConfig.DEBUG && Timber.forest().isEmpty()) {
             Timber.plant(Timber.DebugTree())
         }

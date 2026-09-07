@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.screens
+package com.music.spotui.ui.screens
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -128,8 +128,14 @@ fun PlaylistScreen(navController: NavController, playlistId: String, playlistNam
         }
 
         var dominentColor by remember { mutableStateOf(Color(AppBackground.toArgb())) }
-        Palette().extractSecondColorFromCoverUrl(context = context, playlist.coverUri) { color ->
-            dominentColor = color
+        LaunchedEffect(playlist.coverUri) {
+            if (playlist.coverUri.isNotBlank()) {
+                runCatching {
+                    Palette().extractSecondColorFromCoverUrl(context = context, playlist.coverUri) { color ->
+                        dominentColor = color
+                    }
+                }
+            }
         }
 
         Scaffold(
@@ -330,17 +336,19 @@ fun PlaylistScreen(navController: NavController, playlistId: String, playlistNam
                                                 songs.any { it.id == playlistViewModel.currentSongId.value } ->
                                                     playlistViewModel.setPlaying(true)
                                                 else -> {
-                                                    playlistViewModel.updateQueue(displaySongs)
-                                                    SongPlayer.playSong(displaySongs[0].url, context)
-                                                    playlistViewModel.updateSongState(
-                                                        displaySongs[0].coverUri,
-                                                        displaySongs[0].title,
-                                                        displaySongs[0].singer,
-                                                        true,
-                                                        displaySongs[0].id,
-                                                        0,
-                                                        playlist.name
-                                                    )
+                                                    displaySongs.firstOrNull()?.let { firstSong ->
+                                                        playlistViewModel.updateQueue(displaySongs)
+                                                        SongPlayer.playSong(firstSong.url, context)
+                                                        playlistViewModel.updateSongState(
+                                                            firstSong.coverUri,
+                                                            firstSong.title,
+                                                            firstSong.singer,
+                                                            true,
+                                                            firstSong.id,
+                                                            0,
+                                                            playlist.name
+                                                        )
+                                                    }
                                                 }
                                             }
                                         }
@@ -359,7 +367,7 @@ fun PlaylistScreen(navController: NavController, playlistId: String, playlistNam
                     }
                 }
 
-                itemsIndexed(displaySongs, key = { _, song -> song.id }) { index, song ->
+                itemsIndexed(displaySongs, key = { index, song -> "${song.id}_${index}_${song.url.hashCode()}" }) { index, song ->
                     val currentColor = if (song.id == playlistViewModel.currentSongId.value)
                         Color(AppPalette.toArgb()) else Color.White
 

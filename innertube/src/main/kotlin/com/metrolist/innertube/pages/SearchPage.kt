@@ -7,9 +7,11 @@ import com.metrolist.innertube.models.ArtistItem
 import com.metrolist.innertube.models.BrowseEndpoint.BrowseEndpointContextSupportedConfigs.BrowseEndpointContextMusicConfig.Companion.MUSIC_PAGE_TYPE_PODCAST_SHOW_DETAIL_PAGE
 import com.metrolist.innertube.models.EpisodeItem
 import com.metrolist.innertube.models.MusicResponsiveListItemRenderer
+import com.metrolist.innertube.models.MusicTwoRowItemRenderer
 import com.metrolist.innertube.models.PlaylistItem
 import com.metrolist.innertube.models.PodcastItem
 import com.metrolist.innertube.models.SongItem
+import com.metrolist.innertube.models.WatchEndpoint
 import com.metrolist.innertube.models.YTItem
 import com.metrolist.innertube.models.oddElements
 import com.metrolist.innertube.models.splitBySeparator
@@ -349,6 +351,70 @@ object SearchPage {
                             ?.menuNavigationItemRenderer
                             ?.navigationEndpoint
                             ?.watchPlaylistEndpoint,
+                )
+            }
+            else -> null
+        }
+    }
+
+    fun toYTItem(renderer: MusicTwoRowItemRenderer): YTItem? {
+        val titleText = renderer.title.runs?.firstOrNull()?.text ?: return null
+        val thumbUrl = renderer.thumbnailRenderer.musicThumbnailRenderer?.getThumbnailUrl()
+        val secondaryRuns = renderer.subtitle?.runs
+        return when {
+            renderer.isPlaylist -> {
+                val browseId = renderer.navigationEndpoint.browseEndpoint?.browseId?.removePrefix("VL") ?: return null
+                val authorName = secondaryRuns?.firstOrNull()?.text
+                val authorId = secondaryRuns?.firstOrNull()?.navigationEndpoint?.browseEndpoint?.browseId
+                PlaylistItem(
+                    id = browseId,
+                    title = titleText,
+                    author = authorName?.let { Artist(name = it, id = authorId) },
+                    songCountText = secondaryRuns?.lastOrNull()?.text,
+                    thumbnail = thumbUrl ?: "",
+                    playEndpoint = renderer.thumbnailOverlay?.musicItemThumbnailOverlayRenderer?.content
+                        ?.musicPlayButtonRenderer?.playNavigationEndpoint?.watchPlaylistEndpoint,
+                    shuffleEndpoint = null,
+                    radioEndpoint = null,
+                )
+            }
+            renderer.isSong -> {
+                val videoId = (renderer.navigationEndpoint.endpoint as? WatchEndpoint)?.videoId ?: return null
+                val artistName = secondaryRuns?.firstOrNull()?.text.orEmpty()
+                SongItem(
+                    id = videoId,
+                    title = titleText,
+                    artists = listOf(Artist(name = artistName, id = secondaryRuns?.firstOrNull()?.navigationEndpoint?.browseEndpoint?.browseId)),
+                    album = null,
+                    duration = null,
+                    thumbnail = thumbUrl ?: "",
+                    explicit = renderer.subtitleBadges?.find { it.musicInlineBadgeRenderer?.icon?.iconType == "MUSIC_EXPLICIT_BADGE" } != null,
+                )
+            }
+            renderer.isAlbum -> {
+                val browseId = renderer.navigationEndpoint.browseEndpoint?.browseId ?: return null
+                val playlistId = renderer.thumbnailOverlay?.musicItemThumbnailOverlayRenderer?.content
+                    ?.musicPlayButtonRenderer?.playNavigationEndpoint?.anyWatchEndpoint?.playlistId ?: browseId
+                val artistName = secondaryRuns?.firstOrNull()?.text.orEmpty()
+                AlbumItem(
+                    browseId = browseId,
+                    playlistId = playlistId,
+                    title = titleText,
+                    artists = listOf(Artist(name = artistName, id = null)),
+                    year = secondaryRuns?.lastOrNull()?.text?.toIntOrNull(),
+                    thumbnail = thumbUrl ?: "",
+                    explicit = renderer.subtitleBadges?.find { it.musicInlineBadgeRenderer?.icon?.iconType == "MUSIC_EXPLICIT_BADGE" } != null,
+                )
+            }
+            renderer.isArtist || renderer.isUserChannel -> {
+                val browseId = renderer.navigationEndpoint.browseEndpoint?.browseId ?: return null
+                ArtistItem(
+                    id = browseId,
+                    title = titleText,
+                    thumbnail = thumbUrl ?: "",
+                    shuffleEndpoint = null,
+                    radioEndpoint = null,
+                    isProfile = renderer.isUserChannel,
                 )
             }
             else -> null

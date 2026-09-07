@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
@@ -344,6 +345,106 @@ fun SettingsScreen(navController: NavController) {
                     com.music.spotui.data.preferences.setWazeOverlayEnabled(context, true)
                     showWazeAccessibilityPrompt = false
                 }
+            }
+
+            Spacer(Modifier.height(12.dp))
+            SectionTitle("יומן קריסות ושגיאות (Crash Log)")
+            var showCrashDialog by remember { mutableStateOf(false) }
+            val hasCrashes = remember { com.music.spotui.util.CrashLogger.hasCrashes(context) }
+            
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 6.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween,
+            ) {
+                Column(Modifier.weight(1f)) {
+                    Text("יומן שגיאות מערכת", color = Color.White, fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
+                    Text(
+                        if (hasCrashes) "ישנן קריסות מתועדות לצפייה" else "אין קריסות מתועדות - הכל תקין",
+                        color = if (hasCrashes) Color(0xFFFF6B6B) else Color(0xFFB3B3B3),
+                        fontSize = 12.sp,
+                    )
+                }
+            }
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(Color(0xFF282828))
+                        .clickable { showCrashDialog = true }
+                        .padding(vertical = 10.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("הצג יומן שגיאות", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
+                }
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(Color(0xFF282828))
+                        .clickable {
+                            val log = com.music.spotui.util.CrashLogger.getCrashLogs(context)
+                            val clipboard = context.getSystemService(android.content.Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager
+                            clipboard.setPrimaryClip(android.content.ClipData.newPlainText("Crash Log", log))
+                            android.widget.Toast.makeText(context, "יומן השגיאות הועתק ללוח!", android.widget.Toast.LENGTH_SHORT).show()
+                        }
+                        .padding(vertical = 10.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("העתק יומן ללוח", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
+                }
+            }
+            if (showCrashDialog) {
+                val logText = remember { com.music.spotui.util.CrashLogger.getCrashLogs(context) }
+                androidx.compose.material3.AlertDialog(
+                    onDismissRequest = { showCrashDialog = false },
+                    title = { Text("יומן קריסות ושגיאות", color = Color.White, fontWeight = FontWeight.Bold) },
+                    text = {
+                        androidx.compose.foundation.lazy.LazyColumn(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .heightIn(max = 350.dp)
+                                .background(Color(0xFF181818), RoundedCornerShape(8.dp))
+                                .padding(12.dp)
+                        ) {
+                            item {
+                                Text(
+                                    text = logText,
+                                    color = Color(0xFFDDDDDD),
+                                    fontSize = 11.sp,
+                                    fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace
+                                )
+                            }
+                        }
+                    },
+                    confirmButton = {
+                        Text(
+                            "סגור",
+                            color = AppPalette,
+                            modifier = Modifier.clickable { showCrashDialog = false }.padding(8.dp)
+                        )
+                    },
+                    dismissButton = {
+                        Text(
+                            "נקה יומן",
+                            color = Color(0xFFFF6B6B),
+                            modifier = Modifier.clickable {
+                                com.music.spotui.util.CrashLogger.clearLogs(context)
+                                showCrashDialog = false
+                                android.widget.Toast.makeText(context, "היומן נוקה בהצלחה", android.widget.Toast.LENGTH_SHORT).show()
+                            }.padding(8.dp)
+                        )
+                    },
+                    containerColor = Color(0xFF222222),
+                )
             }
 
             Spacer(Modifier.height(12.dp))
