@@ -118,11 +118,82 @@ object YouTube {
             (body.contains("accountName") && !body.contains("Sign in"))
     }
 
+    data class YouTubePlaylistDetails(
+        val id: String,
+        val title: String,
+        val author: String,
+        val description: String,
+        val thumbnail: String,
+        val songCount: Int,
+        val songs: List<com.metrolist.innertube.models.SongItem>,
+    )
+
+    suspend fun playlistDetails(playlistId: String): Result<YouTubePlaylistDetails> = runCatching {
+        val cleanId = playlistId.removePrefix("youtube:").removePrefix("yt:").trim()
+        val browseId = if (cleanId.startsWith("VL") || cleanId.startsWith("MPREb_") || cleanId.startsWith("FEmusic_")) cleanId else "VL$cleanId"
+        val response = innerTube.browse(WEB_REMIX, browseId = browseId).body<com.metrolist.innertube.models.response.BrowseResponse>()
+        val sectionContents = response.contents?.singleColumnBrowseResultsRenderer?.tabs?.firstOrNull()
+            ?.tabRenderer?.content?.sectionListRenderer?.contents
+            ?: response.contents?.twoColumnBrowseResultsRenderer?.secondaryContents?.sectionListRenderer?.contents
+            ?: response.contents?.sectionListRenderer?.contents
+            ?: emptyList()
+        val songs = sectionContents.flatMap { section ->
+            val playlistShelf = section.musicPlaylistShelfRenderer
+            val shelf = section.musicShelfRenderer
+            val shelfContents = playlistShelf?.contents ?: shelf?.contents ?: emptyList()
+            shelfContents.mapNotNull { content ->
+                val renderer = content.musicResponsiveListItemRenderer
+                if (renderer != null) {
+                    val item = SearchPage.toYTItem(renderer)
+                    when (item) {
+                        is com.metrolist.innertube.models.SongItem -> item
+                        is com.metrolist.innertube.models.EpisodeItem -> item.asSongItem()
+                        else -> null
+                    }
+                } else null
+            }
+        }
+        val headerDetail = response.header?.musicDetailHeaderRenderer
+        val headerResp = response.header?.musicResponsiveHeaderRenderer
+        val title = headerDetail?.title?.runs?.firstOrNull()?.text
+            ?: headerResp?.title?.runs?.firstOrNull()?.text
+            ?: ""
+        val author = headerDetail?.subtitle?.runs?.firstOrNull()?.text
+            ?: headerResp?.subtitle?.runs?.firstOrNull()?.text
+            ?: ""
+        val description = headerDetail?.description?.runs?.firstOrNull()?.text
+            ?: headerResp?.description?.runs?.firstOrNull()?.text
+            ?: ""
+        val thumb = headerDetail?.thumbnail?.musicThumbnailRenderer?.getThumbnailUrl()
+            ?: headerDetail?.thumbnail?.croppedSquareThumbnailRenderer?.getThumbnailUrl()
+            ?: headerResp?.thumbnail?.musicThumbnailRenderer?.getThumbnailUrl()
+            ?: headerResp?.thumbnail?.croppedSquareThumbnailRenderer?.getThumbnailUrl()
+            ?: songs.firstOrNull()?.thumbnail
+            ?: ""
+
+        YouTubePlaylistDetails(
+            id = cleanId,
+            title = title,
+            author = author,
+            description = description,
+            thumbnail = thumb,
+            songCount = songs.size,
+            songs = songs,
+        )
+    }
+
+    suspend fun playlist(playlistId: String): Result<List<com.metrolist.innertube.models.SongItem>> =
+        playlistDetails(playlistId).map { it.songs }
+
     @JvmInline
     value class SearchFilter(val value: String) {
         companion object {
+            val FILTER_ALL = SearchFilter("")
             val FILTER_SONG = SearchFilter("EgWKAQIIAWoKEAkQBRAKEAMQBA%3D%3D")
             val FILTER_VIDEO = SearchFilter("EgWKAQIQAWoKEAkQChAFEAMQBA%3D%3D")
+            val FILTER_PLAYLIST = SearchFilter("EgWKAQIoAWoKEAkQChAFEAMQBA%3D%3D")
+            val FILTER_ALBUM = SearchFilter("EgWKAQIYAWoKEAkQChAFEAMQBA%3D%3D")
+            val FILTER_ARTIST = SearchFilter("EgWKAQIgAWoKEAkQChAFEAMQBA%3D%3D")
         }
     }
 

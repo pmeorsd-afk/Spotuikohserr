@@ -225,6 +225,26 @@ class Api @Inject constructor(
     }
 
     /**
+     * Live search via YouTube Music InnerTube API (songs, playlists, albums, artists).
+     */
+    suspend fun searchYouTube(
+        query: String,
+        filter: com.metrolist.innertube.YouTube.SearchFilter = com.metrolist.innertube.YouTube.SearchFilter.FILTER_ALL,
+    ): Flow<Response<List<com.metrolist.innertube.models.YTItem>>> = flow {
+        emit(Response.Loading())
+        if (query.isBlank()) {
+            emit(Response.Success(emptyList())); return@flow
+        }
+        com.metrolist.innertube.YouTube.search(query, filter).fold(
+            onSuccess = { res -> emit(Response.Success(res.items)) },
+            onFailure = {
+                Log.e("Api", "searchYouTube failed", it)
+                emit(Response.Error(it.message ?: "YouTube search failed"))
+            }
+        )
+    }
+
+    /**
      * Combined search: tracks + albums + artists in a single GraphQL call
      * (searchDesktop, not rate-limited). Powers the Search screen so users can
      * find albums and artists, not just songs.
@@ -527,6 +547,31 @@ class Api @Inject constructor(
         if (playlistId.isBlank()) {
             emit(Response.Success(emptyList())); return@flow
         }
+        if (playlistId.startsWith("youtube:") || playlistId.startsWith("yt:") || playlistId.startsWith("VL") || playlistId.startsWith("PL") || playlistId.startsWith("RDAMPL") || playlistId.startsWith("MPREb_")) {
+            com.metrolist.innertube.YouTube.playlist(playlistId).fold(
+                onSuccess = { items ->
+                    val songs = items.map { item ->
+                        SongsModel(
+                            id = stableId("yt:${item.id}"),
+                            title = item.title,
+                            album = item.album?.name ?: "",
+                            singer = item.artists.joinToString(", ") { it.name },
+                            coverUri = item.thumbnail,
+                            url = "youtube:${item.id}|${item.title} ${item.artists.firstOrNull()?.name.orEmpty()}",
+                            spotifyTrackId = "",
+                            explicit = item.explicit,
+                            durationMs = (item.duration ?: 0) * 1000,
+                        )
+                    }
+                    emit(Response.Success(songs))
+                },
+                onFailure = {
+                    Log.e("Api", "getPlaylistSongs YouTube failed", it)
+                    emit(Response.Error(it.message ?: "error"))
+                }
+            )
+            return@flow
+        }
         if (!SpotifyTokenProvider.ensureToken(context)) {
             emit(Response.Error("Spotify not authenticated — set sp_dc cookie")); return@flow
         }
@@ -690,6 +735,24 @@ class Api @Inject constructor(
         emit(Response.Loading())
         if (playlistId.isBlank()) {
             emit(Response.Error("missing playlist id")); return@flow
+        }
+        if (playlistId.startsWith("youtube:") || playlistId.startsWith("yt:") || playlistId.startsWith("VL") || playlistId.startsWith("PL") || playlistId.startsWith("RDAMPL") || playlistId.startsWith("MPREb_")) {
+            com.metrolist.innertube.YouTube.playlistDetails(playlistId).fold(
+                onSuccess = { details ->
+                    emit(Response.Success(AlbumsModel(
+                        id = stableId("playlist:${details.id}"),
+                        artists = details.author.ifBlank { "YouTube Music" },
+                        coverUri = details.thumbnail,
+                        name = details.title,
+                        time = details.description.ifBlank { "${details.songCount} songs" },
+                    )))
+                },
+                onFailure = {
+                    Log.e("Api", "getPlaylist YouTube failed", it)
+                    emit(Response.Error(it.message ?: "error"))
+                }
+            )
+            return@flow
         }
         if (!SpotifyTokenProvider.ensureToken(context)) {
             emit(Response.Error("Spotify not authenticated — set sp_dc cookie")); return@flow

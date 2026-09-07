@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.screens
+package com.music.spotui.ui.screens
 
 import android.os.Build
 import android.util.Log
@@ -72,6 +72,7 @@ import com.music.spotui.ui.navigation.Routes
 import com.music.spotui.ui.navigation.albumRoute
 import com.music.spotui.ui.navigation.artistRoute
 import com.music.spotui.ui.navigation.categoryRoute
+import com.music.spotui.ui.navigation.playlistRoute
 import com.music.spotui.ui.navigation.showRoute
 import com.music.spotui.ui.theme.AppBackground
 import com.music.spotui.ui.theme.AppPalette
@@ -81,8 +82,11 @@ import com.music.spotui.ui.viewmodel.SearchViewModel
 @RequiresApi(Build.VERSION_CODES.S)
 @Composable
 fun SearchScreen(navController: NavController) {
-    val searchViewModel : SearchViewModel = hiltViewModel()
+    val searchViewModel: SearchViewModel = hiltViewModel()
     val results by searchViewModel.results.collectAsState()
+    val ytResultsResp by searchViewModel.ytResults.collectAsState()
+    val searchSource by searchViewModel.searchSource.collectAsState()
+    val ytFilter by searchViewModel.ytFilter.collectAsState()
 
     // Results are live search hits (or empty); never gate the search UI on them.
     val searchResults = (results as? Response.Success)?.data ?: SearchResults()
@@ -92,7 +96,14 @@ fun SearchScreen(navController: NavController) {
             .fillMaxSize()
             .background(Color(AppBackground.toArgb()))
     ) {
-        SumUpSearchScreen(navController = navController, searchResults, searchViewModel)
+        SumUpSearchScreen(
+            navController = navController,
+            results = searchResults,
+            ytResultsResp = ytResultsResp,
+            searchSource = searchSource,
+            ytFilter = ytFilter,
+            searchViewModel = searchViewModel,
+        )
     }
 }
 
@@ -103,6 +114,9 @@ fun SearchScreen(navController: NavController) {
 fun SumUpSearchScreen(
     navController: NavController,
     results: SearchResults,
+    ytResultsResp: Response<List<com.metrolist.innertube.models.YTItem>>,
+    searchSource: com.music.spotui.ui.viewmodel.SearchSource,
+    ytFilter: com.music.spotui.ui.viewmodel.YouTubeFilter,
     searchViewModel: SearchViewModel,
 ) {
     val context = LocalContext.current
@@ -144,29 +158,65 @@ fun SumUpSearchScreen(
         }
     }
 
+    // Warm stream cache for YouTube song hits too
+    val ytSongs = (ytResultsResp as? Response.Success)?.data?.filterIsInstance<com.metrolist.innertube.models.SongItem>().orEmpty()
+    LaunchedEffect(ytSongs) {
+        if (ytSongs.isNotEmpty()) {
+            val ytUrls = ytSongs.take(3).map { "youtube:${it.id}|${it.title}" }
+            SongPlayer.prefetchList(ytUrls, context, count = 3)
+        }
+    }
+
     LazyColumn(
         contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 130.dp),
         modifier = Modifier
             .fillMaxSize()
             .background(Color(AppBackground.toArgb()))
             .statusBarsPadding()
-
-    ){
-        item{
+    ) {
+        item {
             SearchTopBar()
         }
         stickyHeader {
-            SearchStickyBar(
-                text,
-                onFocusChange = { searchFocused = it },
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Color(AppBackground.toArgb()))
             ) {
-                text = it
-                searchViewModel.search(it)
+                SearchStickyBar(
+                    text,
+                    onFocusChange = { searchFocused = it },
+                ) {
+                    text = it
+                    searchViewModel.search(it)
+                }
+
+                // Dual Engine Search Tabs (Spotify vs YouTube Music)
+                SearchEngineTabs(
+                    selectedSource = searchSource,
+                    onSelectSource = { searchViewModel.setSearchSource(it) },
+                )
+
+                // YouTube category filter chips (when in YouTube Music mode)
+                if (searchSource == com.music.spotui.ui.viewmodel.SearchSource.YOUTUBE_MUSIC) {
+                    YouTubeFilterChips(
+                        selectedFilter = ytFilter,
+                        onSelectFilter = { searchViewModel.setYouTubeFilter(it) },
+                    )
+                }
             }
         }
 
         if (text.isBlank()) {
-            if (searchFocused && recents.isNotEmpty()) {
+            if (searchSource == com.music.spotui.ui.viewmodel.SearchSource.YOUTUBE_MUSIC) {
+                // YouTube Music Quick Starters (popular searches & community playlists)
+                item {
+                    YouTubeQuickStarters { selectedQuery ->
+                        text = selectedQuery
+                        searchViewModel.search(selectedQuery)
+                    }
+                }
+            } else if (searchFocused && recents.isNotEmpty()) {
                 // ── Recent searches: the items the user opened (Spotify-style),
                 // shown only once the search bar is focused ──
                 item {
@@ -210,7 +260,8 @@ fun SumUpSearchScreen(
                                     }.let { savedUrl ->
                                         if (
                                             item.spotifyTrackId.isNotBlank() &&
-                                            !savedUrl.startsWith("spotify:track:")
+                                            !savedUrl.startsWith("spotify:track:") &&
+                                            !savedUrl.startsWith("youtube:")
                                         ) {
                                             SongPlayer.buildSpotifyPlayQuery(item.spotifyTrackId, item.name, item.singer)
                                         } else {
@@ -231,6 +282,7 @@ fun SumUpSearchScreen(
                                 "artist" -> navController.navigate(artistRoute(item.name, item.key.takeIf { it != item.name }.orEmpty()))
                                 "album" -> navController.navigate(albumRoute(item.name, item.singer))
                                 "show" -> navController.navigate(showRoute(item.key, item.name))
+                                "playlist" -> navController.navigate(playlistRoute(item.key, item.name))
                             }
                         },
                         onRemove = {
@@ -242,68 +294,193 @@ fun SumUpSearchScreen(
             } else {
                 // ── Spotify-style "Browse all" category grid ──
                 item {
-                    // Real Spotify opens a genre *catalogue* (a page of curated
-                    // playlists) rather than running a keyword song search.
                     BrowseAllSection { genre, title ->
                         navController.navigate(categoryRoute(genre, title))
                     }
                 }
             }
         } else {
-            items(mixed.size) { i ->
-                when (val row = mixed[i]) {
-                    is SearchRow.Song -> SearchSongRow(row.song, searchedList, searchViewModel, onPlayed = {
-                        recordRecent(row.song.toRecentItem())
-                    }, onLongClick = { menuSong = row.song })
-                    is SearchRow.Artist -> SearchArtistRow(row.artist) {
-                        recordRecent(com.music.spotui.data.preferences.RecentItem(
-                            type = "artist",
-                            key = row.artist.id.ifBlank { row.artist.name },
-                            name = row.artist.name,
-                            image = row.artist.coverUri,
-                        ))
-                        navController.navigate(artistRoute(row.artist.name, row.artist.id))
-                    }
-                    is SearchRow.Album -> SearchAlbumRow(row.album) {
-                        recordRecent(com.music.spotui.data.preferences.RecentItem(
-                            type = "album",
-                            key = row.album.name,
-                            name = row.album.name,
-                            singer = row.album.artists,
-                            image = row.album.coverUri,
-                        ))
-                        navController.navigate(albumRoute(row.album.name, row.album.artists))
-                    }
-                }
-            }
-            // ── Podcasts: shows (→ detail) then individual episodes (→ play) ──
-            if (results.shows.isNotEmpty()) {
-                item { SearchSectionHeader("Podcasts") }
-                items(results.shows.size) { i ->
-                    val show = results.shows[i]
-                    SearchShowRow(show) {
-                        recordRecent(com.music.spotui.data.preferences.RecentItem(
-                            type = "show",
-                            key = show.id,
-                            name = show.name,
-                            singer = show.publisher,
-                            image = show.coverUri,
-                        ))
-                        navController.navigate(showRoute(show.id, show.name))
+            // Search has a query
+            if (searchSource == com.music.spotui.ui.viewmodel.SearchSource.SPOTIFY) {
+                // Spotify Results
+                items(mixed.size) { i ->
+                    when (val row = mixed[i]) {
+                        is SearchRow.Song -> SearchSongRow(row.song, searchedList, searchViewModel, onPlayed = {
+                            recordRecent(row.song.toRecentItem())
+                        }, onLongClick = { menuSong = row.song })
+                        is SearchRow.Artist -> SearchArtistRow(row.artist) {
+                            recordRecent(com.music.spotui.data.preferences.RecentItem(
+                                type = "artist",
+                                key = row.artist.id.ifBlank { row.artist.name },
+                                name = row.artist.name,
+                                image = row.artist.coverUri,
+                            ))
+                            navController.navigate(artistRoute(row.artist.name, row.artist.id))
+                        }
+                        is SearchRow.Album -> SearchAlbumRow(row.album) {
+                            recordRecent(com.music.spotui.data.preferences.RecentItem(
+                                type = "album",
+                                key = row.album.name,
+                                name = row.album.name,
+                                singer = row.album.artists,
+                                image = row.album.coverUri,
+                            ))
+                            navController.navigate(albumRoute(row.album.name, row.album.artists))
+                        }
                     }
                 }
-            }
-            if (results.episodes.isNotEmpty()) {
-                item { SearchSectionHeader("Episodes") }
-                items(results.episodes.size) { i ->
-                    val ep = results.episodes[i]
-                    SearchSongRow(ep, results.episodes, searchViewModel, onPlayed = {
-                        recordRecent(ep.toRecentItem())
-                    }, onLongClick = { menuSong = ep })
+                // ── Podcasts: shows (→ detail) then individual episodes (→ play) ──
+                if (results.shows.isNotEmpty()) {
+                    item { SearchSectionHeader("Podcasts") }
+                    items(results.shows.size) { i ->
+                        val show = results.shows[i]
+                        SearchShowRow(show) {
+                            recordRecent(com.music.spotui.data.preferences.RecentItem(
+                                type = "show",
+                                key = show.id,
+                                name = show.name,
+                                singer = show.publisher,
+                                image = show.coverUri,
+                            ))
+                            navController.navigate(showRoute(show.id, show.name))
+                        }
+                    }
+                }
+                if (results.episodes.isNotEmpty()) {
+                    item { SearchSectionHeader("Episodes") }
+                    items(results.episodes.size) { i ->
+                        val ep = results.episodes[i]
+                        SearchSongRow(ep, results.episodes, searchViewModel, onPlayed = {
+                            recordRecent(ep.toRecentItem())
+                        }, onLongClick = { menuSong = ep })
+                    }
+                }
+            } else {
+                // YouTube Music Results
+                when (ytResultsResp) {
+                    is Response.Loading -> {
+                        item {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(200.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Loader()
+                            }
+                        }
+                    }
+                    is Response.Error -> {
+                        item {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(32.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(
+                                    text = "שגיאה בטעינת תוצאות מיוטיוב",
+                                    color = Color.Gray,
+                                    fontSize = 14.sp,
+                                )
+                            }
+                        }
+                    }
+                    is Response.Success -> {
+                        val ytList = ytResultsResp.data
+                        if (ytList.isEmpty()) {
+                            item {
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(32.dp),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        text = "לא נמצאו תוצאות ב-YouTube Music",
+                                        color = Color.Gray,
+                                        fontSize = 14.sp,
+                                    )
+                                }
+                            }
+                        } else {
+                            items(ytList.size) { i ->
+                                when (val item = ytList[i]) {
+                                    is com.metrolist.innertube.models.SongItem -> {
+                                        SearchYTSongRow(
+                                            item = item,
+                                            searchViewModel = searchViewModel,
+                                            onPlayed = {
+                                                recordRecent(
+                                                    com.music.spotui.data.preferences.RecentItem(
+                                                        type = "song",
+                                                        key = "youtube:${item.id}",
+                                                        name = item.title,
+                                                        singer = item.artists.joinToString(", ") { it.name },
+                                                        image = item.thumbnail,
+                                                        songId = (item.id.hashCode() and 0x7fffffff),
+                                                        songAlbum = item.album?.name ?: "",
+                                                        songUrl = "youtube:${item.id}|${item.title} ${item.artists.firstOrNull()?.name.orEmpty()}",
+                                                        spotifyTrackId = "",
+                                                        explicit = item.explicit,
+                                                        durationMs = (item.duration ?: 0) * 1000,
+                                                    )
+                                                )
+                                            }
+                                        )
+                                    }
+                                    is com.metrolist.innertube.models.PlaylistItem -> {
+                                        SearchYTPlaylistRow(
+                                            item = item,
+                                            onClick = {
+                                                recordRecent(
+                                                    com.music.spotui.data.preferences.RecentItem(
+                                                        type = "playlist",
+                                                        key = "youtube:${item.id}",
+                                                        name = item.title,
+                                                        singer = item.author?.name.orEmpty(),
+                                                        image = item.thumbnail ?: "",
+                                                    )
+                                                )
+                                                navController.navigate(playlistRoute("youtube:${item.id}", item.title))
+                                            }
+                                        )
+                                    }
+                                    is com.metrolist.innertube.models.AlbumItem -> {
+                                        SearchYTAlbumRow(
+                                            item = item,
+                                            onClick = {
+                                                val targetId = item.playlistId.ifBlank { item.browseId }
+                                                recordRecent(
+                                                    com.music.spotui.data.preferences.RecentItem(
+                                                        type = "album",
+                                                        key = "youtube:$targetId",
+                                                        name = item.title,
+                                                        singer = item.artists?.joinToString(", ") { it.name }.orEmpty(),
+                                                        image = item.thumbnail,
+                                                    )
+                                                )
+                                                navController.navigate(playlistRoute("youtube:$targetId", item.title))
+                                            }
+                                        )
+                                    }
+                                    is com.metrolist.innertube.models.ArtistItem -> {
+                                        SearchYTArtistRow(
+                                            item = item,
+                                            onClick = {
+                                                text = item.title
+                                                searchViewModel.search(item.title)
+                                            }
+                                        )
+                                    }
+                                    else -> Unit
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
-
     }
 }
 
@@ -758,5 +935,350 @@ fun SearchStickyBar(
                 )
             }
         )
+    }
+}
+
+@Composable
+fun SearchEngineTabs(
+    selectedSource: com.music.spotui.ui.viewmodel.SearchSource,
+    onSelectSource: (com.music.spotui.ui.viewmodel.SearchSource) -> Unit,
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 12.dp, vertical = 6.dp),
+        horizontalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
+        val spotifySelected = selectedSource == com.music.spotui.ui.viewmodel.SearchSource.SPOTIFY
+        Box(
+            modifier = Modifier
+                .weight(1f)
+                .height(38.dp)
+                .clip(RoundedCornerShape(20.dp))
+                .background(if (spotifySelected) Color(0xFF1DB954) else Color(0xFF282828))
+                .clickable { onSelectSource(com.music.spotui.ui.viewmodel.SearchSource.SPOTIFY) },
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = "Spotify",
+                color = if (spotifySelected) Color.Black else Color.White,
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp
+            )
+        }
+
+        val ytSelected = selectedSource == com.music.spotui.ui.viewmodel.SearchSource.YOUTUBE_MUSIC
+        Box(
+            modifier = Modifier
+                .weight(1f)
+                .height(38.dp)
+                .clip(RoundedCornerShape(20.dp))
+                .background(if (ytSelected) Color(0xFFFF0000) else Color(0xFF282828))
+                .clickable { onSelectSource(com.music.spotui.ui.viewmodel.SearchSource.YOUTUBE_MUSIC) },
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = "YouTube Music",
+                color = Color.White,
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp
+            )
+        }
+    }
+}
+
+@Composable
+fun YouTubeFilterChips(
+    selectedFilter: com.music.spotui.ui.viewmodel.YouTubeFilter,
+    onSelectFilter: (com.music.spotui.ui.viewmodel.YouTubeFilter) -> Unit,
+) {
+    androidx.compose.foundation.lazy.LazyRow(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 12.dp, vertical = 4.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        val filters = com.music.spotui.ui.viewmodel.YouTubeFilter.values()
+        items(filters.size) { index ->
+            val filter = filters[index]
+            val isSelected = selectedFilter == filter
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(if (isSelected) Color.White else Color(0xFF282828))
+                    .clickable { onSelectFilter(filter) }
+                    .padding(horizontal = 14.dp, vertical = 6.dp)
+            ) {
+                Text(
+                    text = filter.title,
+                    color = if (isSelected) Color.Black else Color.White,
+                    fontSize = 13.sp,
+                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
+                )
+            }
+        }
+    }
+}
+
+@Composable
+fun YouTubeQuickStarters(onSelectQuery: (String) -> Unit) {
+    val starters = listOf(
+        "פלייליסט דתי",
+        "שירי שבת",
+        "מוזיקה יהודית",
+        "מוזיקה חסידית",
+        "שירי רגש ונשמה",
+        "להיטים 2024",
+        "סטים ורמיקסים",
+        "ווקאלי ללא מוזיקה",
+        "מוזיקה מזרחית",
+        "שירים שקטים",
+    )
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp)
+    ) {
+        Text(
+            text = "חיפושים פופולריים ופלייליסטים קהילתיים",
+            color = Color.White,
+            fontSize = 18.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(bottom = 12.dp)
+        )
+        starters.chunked(2).forEach { pair ->
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                pair.forEach { query ->
+                    Box(
+                        modifier = Modifier
+                            .weight(1f)
+                            .clip(RoundedCornerShape(8.dp))
+                            .background(Color(0xFF282828))
+                            .clickable { onSelectQuery(query) }
+                            .padding(12.dp),
+                        contentAlignment = Alignment.CenterStart
+                    ) {
+                        Text(
+                            text = query,
+                            color = Color.White,
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Medium
+                        )
+                    }
+                }
+                if (pair.size == 1) {
+                    Spacer(Modifier.weight(1f))
+                }
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalGlideComposeApi::class)
+@Composable
+fun SearchYTSongRow(
+    item: com.metrolist.innertube.models.SongItem,
+    searchViewModel: SearchViewModel,
+    onPlayed: () -> Unit,
+) {
+    val context = LocalContext.current
+    val songId = item.id.hashCode() and 0x7fffffff
+    val isPlayingThis = searchViewModel.currentSongId.value == songId
+    val indicatorColor = if (isPlayingThis) Color(AppPalette.toArgb()) else Color.White
+
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable {
+                onPlayed()
+                val song = searchViewModel.startRadioFromYouTubeSong(item)
+                SongPlayer.playSong(song.url, context)
+                searchViewModel.updateSongState(
+                    song.coverUri,
+                    song.title,
+                    song.singer,
+                    true,
+                    song.id,
+                    0,
+                    song.album
+                )
+            }
+            .padding(16.dp, 8.dp)
+    ) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.weight(1f).padding(end = 8.dp)
+        ) {
+            GlideImage(
+                modifier = Modifier
+                    .padding(end = 10.dp)
+                    .size(48.dp)
+                    .clip(RoundedCornerShape(6.dp)),
+                model = item.thumbnail,
+                contentScale = ContentScale.Crop,
+                failure = placeholder(R.drawable.placeholder),
+                loading = placeholder(R.drawable.placeholder),
+                contentDescription = "",
+            )
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = item.title,
+                    color = indicatorColor,
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Medium,
+                    maxLines = 1
+                )
+                val artistStr = item.artists.joinToString(", ") { it.name }
+                Text(
+                    text = "שיר • $artistStr",
+                    color = Color.Gray,
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Medium,
+                    maxLines = 1
+                )
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalGlideComposeApi::class)
+@Composable
+fun SearchYTPlaylistRow(
+    item: com.metrolist.innertube.models.PlaylistItem,
+    onClick: () -> Unit,
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onClick() }
+            .padding(16.dp, 8.dp)
+    ) {
+        GlideImage(
+            modifier = Modifier
+                .padding(end = 10.dp)
+                .size(52.dp)
+                .clip(RoundedCornerShape(6.dp)),
+            model = item.thumbnail ?: "",
+            contentScale = ContentScale.Crop,
+            failure = placeholder(R.drawable.placeholder),
+            loading = placeholder(R.drawable.placeholder),
+            contentDescription = "",
+        )
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = item.title,
+                color = Color.White,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Bold,
+                maxLines = 1
+            )
+            val sub = buildString {
+                append("פלייליסט")
+                item.author?.name?.let { if (it.isNotBlank()) append(" • $it") }
+                item.songCountText?.let { if (it.isNotBlank()) append(" • $it") }
+            }
+            Text(
+                text = sub,
+                color = Color.Gray,
+                fontSize = 12.sp,
+                fontWeight = FontWeight.Medium,
+                maxLines = 1
+            )
+        }
+    }
+}
+
+@OptIn(ExperimentalGlideComposeApi::class)
+@Composable
+fun SearchYTAlbumRow(
+    item: com.metrolist.innertube.models.AlbumItem,
+    onClick: () -> Unit,
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onClick() }
+            .padding(16.dp, 8.dp)
+    ) {
+        GlideImage(
+            modifier = Modifier
+                .padding(end = 10.dp)
+                .size(48.dp)
+                .clip(RoundedCornerShape(6.dp)),
+            model = item.thumbnail,
+            contentScale = ContentScale.Crop,
+            failure = placeholder(R.drawable.placeholder),
+            loading = placeholder(R.drawable.placeholder),
+            contentDescription = "",
+        )
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = item.title,
+                color = Color.White,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Medium,
+                maxLines = 1
+            )
+            val artistStr = item.artists?.joinToString(", ") { it.name }.orEmpty()
+            Text(
+                text = "אלבום" + (if (artistStr.isNotBlank()) " • $artistStr" else ""),
+                color = Color.Gray,
+                fontSize = 12.sp,
+                fontWeight = FontWeight.Medium,
+                maxLines = 1
+            )
+        }
+    }
+}
+
+@OptIn(ExperimentalGlideComposeApi::class)
+@Composable
+fun SearchYTArtistRow(
+    item: com.metrolist.innertube.models.ArtistItem,
+    onClick: () -> Unit,
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onClick() }
+            .padding(16.dp, 8.dp)
+    ) {
+        GlideImage(
+            modifier = Modifier
+                .padding(end = 10.dp)
+                .size(48.dp)
+                .clip(RoundedCornerShape(100.dp)),
+            model = item.thumbnail ?: "",
+            contentScale = ContentScale.Crop,
+            failure = placeholder(R.drawable.placeholder),
+            loading = placeholder(R.drawable.placeholder),
+            contentDescription = "",
+        )
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = item.title,
+                color = Color.White,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Medium,
+                maxLines = 1
+            )
+            Text(
+                text = "אמן",
+                color = Color.Gray,
+                fontSize = 12.sp,
+                fontWeight = FontWeight.Medium,
+                maxLines = 1
+            )
+        }
     }
 }

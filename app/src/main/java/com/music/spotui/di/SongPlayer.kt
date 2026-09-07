@@ -422,6 +422,33 @@ object SongPlayer {
             }
             return song
         }
+
+        // Direct YouTube track playback (instant start, no search / no proxy latency)
+        val directVideoId = when {
+            song.startsWith("youtube:") -> song.removePrefix("youtube:").substringBefore('|').trim()
+            song.startsWith("yt:") -> song.removePrefix("yt:").substringBefore('|').trim()
+            else -> null
+        }
+        if (directVideoId != null) {
+            val quality = com.music.spotui.data.preferences.currentStreamingQuality(appContext)
+            if (forPlayback) {
+                currentSource = "YouTube"
+                currentQuality = ""
+            }
+            val playback = resolveYtPlayback(directVideoId, quality.audioQuality, appContext)
+            if (playback != null) {
+                val codec = playback.format.mimeType
+                    .substringAfter("codecs=\"", "").substringBefore('"').substringBefore('.')
+                    .uppercase()
+                val ytQuality = listOf(codec, "${playback.format.bitrate / 1000} kbps")
+                    .filter { it.isNotBlank() }.joinToString(" ")
+                if (forPlayback) currentQuality = ytQuality
+                streamCache[song] = playback.streamUrl
+                sourceCache[song] = "YouTube"
+                qualityCache[song] = ytQuality
+                return playback.streamUrl
+            }
+        }
         alternativeStreamForPlayback(song, appContext)?.let { alt ->
             invalidateResolvedStream(song)
             return when {
@@ -489,7 +516,7 @@ object SongPlayer {
         var heldDeezer: com.music.spotui.deezer.DeezerSource.Result.Success? = null
         if (deezerEnabled && com.music.spotui.data.preferences.isDeezerEnabled(appContext)) {
             val spotifyId = trackIdRegistry[song] ?: spotifyTrackIdForPlayback(song)
-            val r = kotlinx.coroutines.withTimeoutOrNull(12_000) {
+            val r = kotlinx.coroutines.withTimeoutOrNull(2_500) {
                 com.music.spotui.deezer.DeezerSource.resolve(
                     appContext,
                     spotifyId = spotifyId,
@@ -517,7 +544,7 @@ object SongPlayer {
         // Lossless FLAC: SpotiFLAC gated (if verified) + Tidal/community, ISRC-matched.
         if (losslessStreaming && quality.lossless) {
             (trackIdRegistry[song] ?: spotifyTrackIdForPlayback(song))?.let { spotifyId ->
-                val r = kotlinx.coroutines.withTimeoutOrNull(15_000) {
+                val r = kotlinx.coroutines.withTimeoutOrNull(2_500) {
                     com.music.spotui.lossless.LosslessSource.resolve(appContext, spotifyId, preferHiRes = losslessHiRes)
                 }
                 if (r is com.music.spotui.lossless.LosslessSource.Result.Success) {
@@ -1336,6 +1363,26 @@ object SongPlayer {
     ): YTPlayerUtils.PlaybackData? {
         val connectivityManager =
             appContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        // Direct videoId fast-path: if query is already a direct YouTube videoId, try it immediately
+        val directVid = videoIdFromYouTubeLink(query)
+            ?: when {
+                query.startsWith("youtube:") -> query.removePrefix("youtube:").substringBefore('|').trim()
+                query.startsWith("yt:") -> query.removePrefix("yt:").substringBefore('|').trim()
+                query.trim().matches(Regex("""[A-Za-z0-9_-]{11}""")) -> query.trim()
+                else -> null
+            }
+        if (directVid != null && directVid.matches(Regex("""[A-Za-z0-9_-]{11}"""))) {
+            YTPlayerUtils.playerResponseForPlayback(
+                videoId = directVid,
+                audioQuality = audioQuality,
+                connectivityManager = connectivityManager,
+            ).fold(
+                onSuccess = { return it },
+                onFailure = { Log.w(TAG, "direct videoId stream failed for $directVid: ${it.message}") }
+            )
+        }
+
         val tried = mutableSetOf<String>()
         suspend fun tryIds(ids: List<String>): YTPlayerUtils.PlaybackData? {
             for (videoId in ids) {
