@@ -65,16 +65,31 @@ object YouTube {
             innerTube.useLoginForBrowse = value
         }
 
-    suspend fun search(query: String, filter: SearchFilter): Result<SearchResult> = runCatching {
-        val response = innerTube.search(WEB_REMIX, query, filter.value).body<SearchResponse>()
-        val shelves = response.contents?.tabbedSearchResultsRenderer?.tabs?.firstOrNull()
-            ?.tabRenderer?.content?.sectionListRenderer?.contents
-            ?.mapNotNull { it.musicShelfRenderer }
-            .orEmpty()
+    suspend fun search(query: String, filter: SearchFilter = SearchFilter.FILTER_ALL): Result<SearchResult> = runCatching {
+        val params = filter.value.takeIf { it.isNotBlank() }
+        val response = innerTube.search(WEB_REMIX, query, params).body<SearchResponse>()
+        val tabContent = response.contents?.tabbedSearchResultsRenderer?.tabs?.firstOrNull()
+            ?.tabRenderer?.content?.sectionListRenderer
+        val sectionContents = tabContent?.contents.orEmpty()
+        val shelves = sectionContents.mapNotNull { it.musicShelfRenderer }
+        val cardShelves = sectionContents.mapNotNull { it.musicCardShelfRenderer }
+        val carouselShelves = sectionContents.mapNotNull { it.musicCarouselShelfRenderer }
+
+        val itemsFromShelves = shelves.flatMap { shelf ->
+            shelf.contents?.getItems()?.mapNotNull { SearchPage.toYTItem(it) } ?: emptyList()
+        }
+        val itemsFromCards = cardShelves.flatMap { card ->
+            card.contents?.mapNotNull { it.musicResponsiveListItemRenderer?.let { r -> SearchPage.toYTItem(r) } } ?: emptyList()
+        }
+        val itemsFromCarousels = carouselShelves.flatMap { carousel ->
+            carousel.contents.mapNotNull { content ->
+                content.musicResponsiveListItemRenderer?.let { r -> SearchPage.toYTItem(r) }
+                    ?: content.musicTwoRowItemRenderer?.let { r -> SearchPage.toYTItem(r) }
+            }
+        }
+        val allItems = (itemsFromCards + itemsFromShelves + itemsFromCarousels).distinctBy { it.id }
         SearchResult(
-            items = shelves.flatMap { shelf ->
-                shelf.contents?.getItems()?.mapNotNull { SearchPage.toYTItem(it) } ?: emptyList()
-            }.distinctBy { it.id },
+            items = allItems,
             continuation = shelves.firstOrNull { it.continuations != null }
                 ?.continuations?.getContinuation()
         )
