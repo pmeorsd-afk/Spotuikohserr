@@ -13,6 +13,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -60,8 +61,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -172,17 +175,22 @@ fun SumUpSearchScreen(
 
     var text by remember { mutableStateOf("") }
     var searchActive by remember { mutableStateOf(false) }
+    var isSubmitted by remember { mutableStateOf(false) }
     var selectedCategory by remember { mutableStateOf<SearchCategory?>(null) }
     var recents by remember { mutableStateOf(com.music.spotui.data.preferences.getRecentItems(context)) }
     var menuSong by remember { mutableStateOf<SongsModel?>(null) }
-
-
+    val suggestions by searchViewModel.suggestions.collectAsState()
 
     BackHandler(enabled = searchActive) {
-        searchActive = false
-        text = ""
-        searchViewModel.search("")
-        keyboardController?.hide()
+        if (isSubmitted) {
+            isSubmitted = false
+        } else {
+            searchActive = false
+            text = ""
+            isSubmitted = false
+            searchViewModel.search("")
+            keyboardController?.hide()
+        }
     }
 
     LaunchedEffect(searchActive) {
@@ -243,29 +251,44 @@ fun SumUpSearchScreen(
                         text = text,
                         focusRequester = focusRequester,
                         onBackClick = {
-                            searchActive = false
-                            text = ""
-                            searchViewModel.search("")
-                            keyboardController?.hide()
+                            if (isSubmitted) {
+                                isSubmitted = false
+                            } else {
+                                searchActive = false
+                                text = ""
+                                isSubmitted = false
+                                searchViewModel.search("")
+                                keyboardController?.hide()
+                            }
                         },
                         onTextChange = {
                             text = it
+                            isSubmitted = false
                             if (it.isBlank()) {
                                 selectedCategory = null
                             }
                             searchViewModel.search(it)
+                            searchViewModel.fetchSuggestions(it)
                         },
                         onClearClick = {
                             text = ""
+                            isSubmitted = false
                             selectedCategory = null
                             searchViewModel.search("")
+                        },
+                        onSearch = {
+                            if (text.isNotBlank()) {
+                                isSubmitted = true
+                                keyboardController?.hide()
+                                searchViewModel.search(text)
+                            }
                         }
                     )
                 }
             }
 
             AnimatedVisibility(
-                visible = (searchActive || text.isNotBlank()) && text.isNotBlank(),
+                visible = (searchActive || text.isNotBlank()) && text.isNotBlank() && isSubmitted,
                 enter = fadeIn(tween(200)) + slideInVertically(tween(200)) { -it / 2 },
                 exit = fadeOut(tween(150)) + slideOutVertically(tween(150)) { -it / 2 }
             ) {
@@ -416,6 +439,59 @@ fun SumUpSearchScreen(
                                                 fontWeight = FontWeight.Normal,
                                                 textAlign = TextAlign.Center
                                             )
+                                        }
+                                    }
+                                }
+                            }
+                        } else if (!isSubmitted) {
+                            if (suggestions.isNotEmpty()) {
+                                items(suggestions.size) { i ->
+                                    val suggestion = suggestions[i]
+                                    SearchSuggestionRow(
+                                        suggestion = suggestion,
+                                        onClick = {
+                                            text = suggestion
+                                            isSubmitted = true
+                                            keyboardController?.hide()
+                                            searchViewModel.search(suggestion)
+                                        },
+                                        onInsert = {
+                                            text = suggestion
+                                            isSubmitted = false
+                                            searchViewModel.search(suggestion)
+                                            searchViewModel.fetchSuggestions(suggestion)
+                                        }
+                                    )
+                                }
+                            }
+                            if (mixed.isNotEmpty()) {
+                                items(mixed.size) { i ->
+                                    when (val row = mixed[i]) {
+                                        is SearchRow.Song -> SearchSongRow(
+                                            song = row.song,
+                                            songList = unifiedResults.songs,
+                                            searchViewModel = searchViewModel,
+                                            onPlayed = { recordRecent(row.song.toRecentItem()) },
+                                            onLongClick = { menuSong = row.song }
+                                        )
+                                        is SearchRow.Artist -> SearchArtistRow(row.artist) {
+                                            recordRecent(com.music.spotui.data.preferences.RecentItem(
+                                                type = "artist",
+                                                key = row.artist.id.ifBlank { row.artist.name },
+                                                name = row.artist.name,
+                                                image = row.artist.coverUri,
+                                            ))
+                                            navController.navigate(artistRoute(row.artist.name, row.artist.id))
+                                        }
+                                        is SearchRow.Album -> SearchAlbumRow(row.album) {
+                                            recordRecent(com.music.spotui.data.preferences.RecentItem(
+                                                type = "album",
+                                                key = row.album.name,
+                                                name = row.album.name,
+                                                singer = row.album.artists,
+                                                image = row.album.coverUri,
+                                            ))
+                                            navController.navigate(albumRoute(row.album.name, row.album.artists))
                                         }
                                     }
                                 }
@@ -722,6 +798,7 @@ fun SearchActiveBar(
     onBackClick: () -> Unit,
     onTextChange: (String) -> Unit,
     onClearClick: () -> Unit,
+    onSearch: () -> Unit = {},
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -766,7 +843,7 @@ fun SearchActiveBar(
                 cursorBrush = SolidColor(Color(0xFF1ED760)),
                 singleLine = true,
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                keyboardActions = KeyboardActions(onSearch = {}),
+                keyboardActions = KeyboardActions(onSearch = { onSearch() }),
                 decorationBox = { innerTextField ->
                     Box(
                         modifier = Modifier.fillMaxWidth(),
@@ -895,6 +972,84 @@ fun SearchEmptyMessage(message: String) {
             color = Color.Gray,
             fontSize = 14.sp,
         )
+    }
+}
+
+@Composable
+fun DiagonalArrowIcon(
+    modifier: Modifier = Modifier,
+    tint: Color = Color(0xFFB3B3B3),
+) {
+    Canvas(modifier = modifier.size(16.dp)) {
+        val w = size.width
+        val h = size.height
+        val strokeWidth = 1.8.dp.toPx()
+        drawLine(
+            color = tint,
+            start = Offset(w * 0.72f, h * 0.72f),
+            end = Offset(w * 0.28f, h * 0.28f),
+            strokeWidth = strokeWidth,
+            cap = StrokeCap.Round
+        )
+        drawLine(
+            color = tint,
+            start = Offset(w * 0.28f, h * 0.28f),
+            end = Offset(w * 0.62f, h * 0.28f),
+            strokeWidth = strokeWidth,
+            cap = StrokeCap.Round
+        )
+        drawLine(
+            color = tint,
+            start = Offset(w * 0.28f, h * 0.28f),
+            end = Offset(w * 0.28f, h * 0.62f),
+            strokeWidth = strokeWidth,
+            cap = StrokeCap.Round
+        )
+    }
+}
+
+@Composable
+fun SearchSuggestionRow(
+    suggestion: String,
+    onClick: () -> Unit,
+    onInsert: () -> Unit,
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+            ) { onClick() }
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Icon(
+            painter = painterResource(id = R.drawable.ic_search_big),
+            tint = Color(0xFFB3B3B3),
+            contentDescription = "חיפוש",
+            modifier = Modifier.size(18.dp)
+        )
+        Spacer(modifier = Modifier.width(16.dp))
+        Text(
+            text = suggestion,
+            color = Color.White,
+            fontSize = 15.sp,
+            fontWeight = FontWeight.Medium,
+            maxLines = 1,
+            modifier = Modifier.weight(1f)
+        )
+        Box(
+            modifier = Modifier
+                .clickable(
+                    interactionSource = remember { MutableInteractionSource() },
+                    indication = null,
+                ) { onInsert() }
+                .padding(6.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            DiagonalArrowIcon(tint = Color(0xFFB3B3B3))
+        }
     }
 }
 
