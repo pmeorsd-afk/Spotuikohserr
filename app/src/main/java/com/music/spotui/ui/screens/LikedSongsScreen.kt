@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.screens
+package com.music.spotui.ui.screens
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -308,7 +308,7 @@ fun LikedSongsScreen(navController: NavController) {
                     }
                 }
 
-                itemsIndexed(songs, key = { _, song -> song.id }) { index, song ->
+                itemsIndexed(songs, key = { index, song -> "${song.id}_${index}_${song.url.hashCode()}" }) { index, song ->
                     val currentColor = if (song.id == likedSongsViewModel.currentSongId.value)
                         Color(AppPalette.toArgb()) else Color.White
 

@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.screens
+package com.music.spotui.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -135,7 +135,7 @@ fun QueueScreen(navController: NavController) {
                         modifier = Modifier.padding(16.dp, 18.dp, 16.dp, 6.dp)
                     )
                 }
-                itemsIndexed(upcoming, key = { _, s -> s.id }) { upIdx, song ->
+                itemsIndexed(upcoming, key = { upIdx, song -> "${song.id}_${upIdx}_${song.url.hashCode()}" }) { upIdx, song ->
                     val isDragging = draggingId == song.id
                     val dismissState = rememberSwipeToDismissBoxState(
                         confirmValueChange = { value ->
