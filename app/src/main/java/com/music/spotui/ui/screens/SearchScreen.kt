@@ -172,16 +172,7 @@ fun SumUpSearchScreen(
     var recents by remember { mutableStateOf(com.music.spotui.data.preferences.getRecentItems(context)) }
     var menuSong by remember { mutableStateOf<SongsModel?>(null) }
 
-    val infiniteTransition = rememberInfiniteTransition(label = "cursorAnimation")
-    val cursorAlpha by infiniteTransition.animateFloat(
-        initialValue = 1f,
-        targetValue = 0f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 530, easing = LinearEasing),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "cursorAlpha"
-    )
+
 
     BackHandler(enabled = searchActive) {
         searchActive = false
@@ -241,7 +232,6 @@ fun SumUpSearchScreen(
                     } else {
                         SearchActiveBar(
                             text = text,
-                            cursorAlpha = cursorAlpha,
                             focusRequester = focusRequester,
                             onBackClick = {
                                 searchActive = false
@@ -681,7 +671,6 @@ fun SearchIdleBar(onClick: () -> Unit) {
 @Composable
 fun SearchActiveBar(
     text: String,
-    cursorAlpha: Float,
     focusRequester: FocusRequester,
     onBackClick: () -> Unit,
     onTextChange: (String) -> Unit,
@@ -710,7 +699,9 @@ fun SearchActiveBar(
         Spacer(modifier = Modifier.width(12.dp))
 
         Box(
-            modifier = Modifier.weight(1f),
+            modifier = Modifier
+                .weight(1f)
+                .padding(top = 1.dp),
             contentAlignment = Alignment.CenterStart
         ) {
             BasicTextField(
@@ -730,28 +721,21 @@ fun SearchActiveBar(
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
                 keyboardActions = KeyboardActions(onSearch = {}),
                 decorationBox = { innerTextField ->
-                    if (text.isEmpty()) {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
+                    Box(
+                        modifier = Modifier.fillMaxWidth(),
+                        contentAlignment = Alignment.CenterStart
+                    ) {
+                        if (text.isEmpty()) {
                             Text(
                                 text = "לאיזה תוכן תרצו להאזין?",
                                 color = Color(0xFFB3B3B3),
                                 fontSize = 15.sp,
                                 fontWeight = FontWeight.Normal,
-                            )
-                            Spacer(modifier = Modifier.width(2.dp))
-                            Box(
-                                modifier = Modifier
-                                    .width(2.dp)
-                                    .height(18.dp)
-                                    .alpha(cursorAlpha)
-                                    .background(Color(0xFF1ED760))
+                                modifier = Modifier.padding(start = 3.dp)
                             )
                         }
+                        innerTextField()
                     }
-                    innerTextField()
                 }
             )
         }
