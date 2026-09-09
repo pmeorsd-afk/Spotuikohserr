@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.components
+package com.music.spotui.ui.components
 
 import android.content.Context
 import android.content.Intent
@@ -15,13 +15,13 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Share
@@ -61,6 +61,7 @@ import com.music.spotui.ui.navigation.Routes
 import com.music.spotui.ui.navigation.albumRoute
 import com.music.spotui.ui.navigation.artistRoute
 import com.music.spotui.ui.theme.AppPalette
+import com.music.spotui.util.TelegramNotifier
 
 /**
  * Long-press context menu for a single track. Mirrors Spotify's "3-dot" sheet:
@@ -224,6 +225,15 @@ fun SongOptionsSheet(
                 context.startActivity(Intent.createChooser(send, "Share"))
                 onDismiss()
             }
+            SongMenuRow(Icons.Default.CheckCircle, "הצע לבדיקה והיתר תמונות") {
+                TelegramNotifier.sendTrackApprovalRequest(
+                    context = context,
+                    trackTitle = song.title,
+                    artistName = song.singer,
+                    trackId = song.spotifyTrackId
+                )
+                onDismiss()
+            }
             Spacer(modifier = Modifier.padding(8.dp))
         }
     }
@@ -261,7 +271,7 @@ private fun SongMenuRow(
         )
         if (trailingArrow) {
             Icon(
-                imageVector = Icons.Default.KeyboardArrowRight,
+                imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
                 contentDescription = null,
                 tint = Color.Gray,
                 modifier = Modifier.size(20.dp)
