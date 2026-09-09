@@ -44,6 +44,50 @@ class SearchViewModel @Inject constructor(
     private val _unifiedResults = MutableStateFlow<Response<UnifiedSearchResults>>(Response.Success(UnifiedSearchResults()))
     val unifiedResults: StateFlow<Response<UnifiedSearchResults>> = _unifiedResults
 
+    private val _suggestions = MutableStateFlow<List<String>>(emptyList())
+    val suggestions: StateFlow<List<String>> = _suggestions
+
+    private val httpClient = okhttp3.OkHttpClient.Builder()
+        .connectTimeout(3, java.util.concurrent.TimeUnit.SECONDS)
+        .readTimeout(3, java.util.concurrent.TimeUnit.SECONDS)
+        .build()
+
+    private var suggestionJob: Job? = null
+
+    fun fetchSuggestions(query: String) {
+        suggestionJob?.cancel()
+        if (query.isBlank()) {
+            _suggestions.value = emptyList()
+            return
+        }
+        suggestionJob = viewModelScope.launch(Dispatchers.IO) {
+            val list = mutableListOf<String>()
+            runCatching {
+                val encoded = java.net.URLEncoder.encode(query, "UTF-8")
+                val url = "https://suggestqueries-clients6.youtube.com/complete/search?client=firefox&ds=yt&q=$encoded&hl=iw&gl=IL"
+                val request = okhttp3.Request.Builder()
+                    .url(url)
+                    .header("User-Agent", "Mozilla/5.0")
+                    .build()
+                val response = httpClient.newCall(request).execute()
+                val body = response.body?.string()
+                if (!body.isNullOrBlank()) {
+                    val jsonArray = org.json.JSONArray(body)
+                    val array = jsonArray.optJSONArray(1)
+                    if (array != null) {
+                        for (i in 0 until minOf(array.length(), 6)) {
+                            val item = array.optString(i)
+                            if (item.isNotBlank() && !list.contains(item)) {
+                                list.add(item)
+                            }
+                        }
+                    }
+                }
+            }
+            _suggestions.value = list
+        }
+    }
+
     private val _songs = MutableStateFlow<Response<List<SongsModel>>>(Response.Success(emptyList()))
     val songs: StateFlow<Response<List<SongsModel>>> = _songs
 
@@ -95,6 +139,7 @@ class SearchViewModel @Inject constructor(
     fun search(query: String) {
         searchJob?.cancel()
         if (query.isBlank()) {
+            _suggestions.value = emptyList()
             _unifiedResults.value = Response.Success(UnifiedSearchResults())
             _songs.value = Response.Success(emptyList())
             return
