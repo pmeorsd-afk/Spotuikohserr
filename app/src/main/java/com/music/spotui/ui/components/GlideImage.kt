@@ -1,8 +1,7 @@
 package com.music.spotui.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.BoxWithConstraints
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
@@ -16,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage as RealGlideImage
 import com.bumptech.glide.integration.compose.placeholder
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.music.spotui.R
 
 /**
@@ -27,7 +27,7 @@ fun GlideImage(
     model: Any? = null,
     contentDescription: String? = null,
     modifier: Modifier = Modifier,
-    contentScale: ContentScale = ContentScale.Fit,
+    contentScale: ContentScale = ContentScale.Crop,
     loading: Any? = null,
     failure: Any? = null
 ) {
@@ -39,8 +39,13 @@ fun GlideImage(
             contentDescription = contentDescription,
             modifier = modifier,
             contentScale = contentScale,
-            loading = placeholder { NoImagePlaceholder(modifier = Modifier.fillMaxSize()) },
-            failure = placeholder { NoImagePlaceholder(modifier = Modifier.fillMaxSize()) }
+            loading = placeholder(R.drawable.placeholder),
+            failure = placeholder(R.drawable.placeholder),
+            requestBuilderTransform = { requestBuilder ->
+                requestBuilder
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .dontAnimate()
+            }
         )
     }
 }
@@ -49,7 +54,7 @@ fun GlideImage(
 fun NoImagePlaceholder(
     modifier: Modifier = Modifier
 ) {
-    BoxWithConstraints(
+    Box(
         modifier = modifier
             .background(
                 brush = Brush.linearGradient(
@@ -61,12 +66,11 @@ fun NoImagePlaceholder(
             ),
         contentAlignment = Alignment.Center
     ) {
-        val iconSize = (maxWidth * 0.45f).coerceIn(16.dp, 72.dp)
         Icon(
             painter = painterResource(id = R.drawable.ic_library_big),
             contentDescription = null,
             tint = Color(0xFF1ED760), // Spotify Green
-            modifier = Modifier.size(iconSize)
+            modifier = Modifier.size(28.dp)
         )
     }
 }
