@@ -239,7 +239,7 @@ fun SongOptionsSheet(
                         iconTint = Color(0xFFE57373)
                     ) {
                         if (song.spotifyTrackId.isNotBlank()) {
-                            com.music.spotui.util.KosherWhitelistManager.removeTrack(context, song.spotifyTrackId)
+                            com.music.spotui.util.KosherWhitelistManager.removeTrack(context, song.spotifyTrackId, song.title, song.singer)
                             android.widget.Toast.makeText(context, "השיר הוסר מההיתר", android.widget.Toast.LENGTH_SHORT).show()
                         }
                         onDismiss()

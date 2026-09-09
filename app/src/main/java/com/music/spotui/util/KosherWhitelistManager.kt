@@ -501,18 +501,25 @@ object KosherWhitelistManager {
 
     /**
      * Removes a track from the whitelist and persists to local cache.
+     * If the track's artist is whitelisted, adds the track to blocked_tracks so it is specifically excluded.
      */
     @Synchronized
-    fun removeTrack(context: Context, id: String): Boolean {
+    fun removeTrack(context: Context, id: String, title: String = "", artist: String = ""): Boolean {
         val cleanId = id.trim()
         if (cleanId.isBlank()) return false
         val removed = trackEntries.removeAll { it.id == cleanId }
         whitelistedTrackIds.remove(cleanId)
-        if (removed) {
-            saveToCache(context)
-            _versionState.intValue += 1
+
+        if (isArtistInWhitelist(null, artist)) {
+            if (!blockedTrackIds.contains(cleanId)) {
+                blockedTrackIds.add(cleanId)
+                blockedTrackEntries.add(0, WhitelistTrackEntry(cleanId, title.trim(), artist.trim()))
+            }
         }
-        return removed
+
+        saveToCache(context)
+        _versionState.intValue += 1
+        return true
     }
 
     /**

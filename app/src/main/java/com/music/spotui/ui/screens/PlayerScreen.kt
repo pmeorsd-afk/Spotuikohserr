@@ -1204,7 +1204,7 @@ fun PlayerOptionsSheet(
                             iconTint = Color(0xFFE57373),
                         ) {
                             if (trackId.isNotBlank()) {
-                                com.music.spotui.util.KosherWhitelistManager.removeTrack(context, trackId)
+                                com.music.spotui.util.KosherWhitelistManager.removeTrack(context, trackId, title, singer)
                                 Toast.makeText(context, "השיר הוסר מההיתר", Toast.LENGTH_SHORT).show()
                             }
                             onDismiss()
