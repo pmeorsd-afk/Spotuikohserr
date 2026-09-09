@@ -1078,6 +1078,8 @@ fun PlayerOptionsSheet(
     // The full track model (spotify id, real album, stream url) — the state above
     // only carries display strings, and `album` is the *context* name (playlist…).
     val currentSong = playerViewModel.queue.value.firstOrNull { it.id == songId }
+    val isSongAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(currentSong) ||
+            com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(currentSong?.spotifyTrackId, title, singer)
     var downloaded by remember(songId) { mutableStateOf(com.music.spotui.data.preferences.isDownloaded(context, songId.toString())) }
     var downloadingNow by remember(songId) { mutableStateOf(currentSong != null && SongPlayer.isDownloading(currentSong.url)) }
     val alternativeKey = currentSong?.let { alternativeStreamKey(it) }.orEmpty()
@@ -1164,6 +1166,7 @@ fun PlayerOptionsSheet(
                             .clip(RoundedCornerShape(4.dp)),
                         model = cover,
                         contentScale = ContentScale.Crop,
+                        isAllowed = isSongAllowed,
                         contentDescription = ""
                     )
                     Spacer(modifier = Modifier.width(12.dp))
@@ -1187,6 +1190,20 @@ fun PlayerOptionsSheet(
                         putExtra(Intent.EXTRA_TEXT, shareText)
                     }
                     context.startActivity(Intent.createChooser(send, "Share"))
+                    onDismiss()
+                }
+                PlayerMenuRow(
+                    icon = Icons.Default.CheckCircle,
+                    label = "הצע לבדיקה והיתר תמונות",
+                    iconTint = Color(0xFF1ED760),
+                ) {
+                    val trackId = currentSong?.spotifyTrackId.orEmpty()
+                    com.music.spotui.util.TelegramNotifier.sendTrackApprovalRequest(
+                        context = context,
+                        trackTitle = title,
+                        artistName = singer,
+                        trackId = trackId
+                    )
                     onDismiss()
                 }
                 PlayerMenuRow(
