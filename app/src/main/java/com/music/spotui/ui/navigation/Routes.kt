@@ -4,13 +4,14 @@ import androidx.annotation.DrawableRes
 import com.music.spotui.R
 
 sealed class Routes(
-    @DrawableRes val icon : Int = 0,
+    @property:DrawableRes val icon : Int = 0,
     val label : String,
-    val route : String
+    val route : String,
+    @property:DrawableRes val selectedIcon : Int = icon
 ) {
-    object Home : Routes(icon = R.drawable.ic_home_filled, label = "Home", route = "home")
-    object Search : Routes(icon = R.drawable.ic_search_big, label = "Search", route = "search")
-    object Library : Routes(icon = R.drawable.ic_library_big, label = "Library", route = "library")
+    object Home : Routes(icon = R.drawable.ic_home_outline, label = "מסך הבית", route = "home", selectedIcon = R.drawable.ic_home_filled)
+    object Search : Routes(icon = R.drawable.ic_search_outline, label = "חיפוש", route = "search", selectedIcon = R.drawable.ic_search_filled)
+    object Library : Routes(icon = R.drawable.ic_library_outline, label = "הספרייה", route = "library", selectedIcon = R.drawable.ic_library_filled)
     object Album : Routes(0, "Album", "album")
     object Player : Routes(0, "Player", "player")
     object Artist : Routes(0, "Artist", "artist")

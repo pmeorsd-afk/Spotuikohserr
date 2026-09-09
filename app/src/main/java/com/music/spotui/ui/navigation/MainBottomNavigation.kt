@@ -97,25 +97,23 @@ fun MainBottomNavigation(navController: NavHostController, bottomBarState: Mutab
                         val currentRoute = navStack?.destination?.route
 
                         navItems.forEach { item ->
+                            val isSelected = currentRoute == item.route
+                            val iconRes = if (isSelected) item.selectedIcon else item.icon
                             NavigationBarItem(
-                                selected = currentRoute == item.route,
+                                selected = isSelected,
                                 icon = {
                                     Icon(
                                         painter = painterResource(
-                                            id = item.icon
-                                        ), contentDescription = "home"
+                                            id = iconRes
+                                        ), contentDescription = item.label
                                     )
                                 },
                                 label = {
-                                    if (currentRoute == item.route) {
-                                        Text(color = Color.White, text = item.label, fontSize = 11.sp)
-                                    } else {
-                                        Text(
-                                            color = Color.Gray,
-                                            text = item.label,
-                                            fontSize = 11.sp
-                                        )
-                                    }
+                                    Text(
+                                        color = if (isSelected) Color.White else Color(0xFFB3B3B3),
+                                        text = item.label,
+                                        fontSize = 11.sp
+                                    )
                                 },
                                 onClick = {
                                     navController.navigate(item.route) {
@@ -130,7 +128,9 @@ fun MainBottomNavigation(navController: NavHostController, bottomBarState: Mutab
                                 interactionSource = NoRippleInteractionSource(),
                                 colors = NavigationBarItemDefaults.colors(
                                     selectedIconColor = Color.White,
-                                    unselectedIconColor = Color.Gray,
+                                    unselectedIconColor = Color(0xFFB3B3B3),
+                                    selectedTextColor = Color.White,
+                                    unselectedTextColor = Color(0xFFB3B3B3),
                                     indicatorColor = Color.Transparent
                                 )
                             )
