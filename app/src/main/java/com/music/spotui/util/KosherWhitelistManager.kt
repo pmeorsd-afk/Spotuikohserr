@@ -232,9 +232,10 @@ object KosherWhitelistManager {
     }
 
     /**
-     * Checks if an artist is whitelisted by ID or name.
+     * Checks if an artist is explicitly present in the whitelist JSON (regardless of Admin mode).
+     * Used by Admin UI toggles to accurately display "Approve" vs "Remove".
      */
-    fun isArtistWhitelisted(artistId: String? = null, artistName: String? = null): Boolean {
+    fun isArtistInWhitelist(artistId: String? = null, artistName: String? = null): Boolean {
         val cleanId = artistId?.trim() ?: ""
         if (cleanId.isNotBlank() && whitelistedArtistIds.contains(cleanId)) {
             return true
@@ -260,9 +261,10 @@ object KosherWhitelistManager {
     }
 
     /**
-     * Checks if a track is whitelisted.
+     * Checks if a track is explicitly present in the whitelist JSON (regardless of Admin mode).
+     * Used by Admin UI toggles to accurately display "Approve" vs "Remove".
      */
-    fun isTrackWhitelisted(
+    fun isTrackInWhitelist(
         trackId: String? = null,
         trackTitle: String? = null,
         artistName: String? = null
@@ -274,18 +276,44 @@ object KosherWhitelistManager {
         if (cleanId.isNotBlank() && whitelistedTrackIds.contains(cleanId)) {
             return true
         }
-        if (isArtistWhitelisted(null, artistName)) {
+        if (isArtistInWhitelist(null, artistName)) {
             return true
         }
         return false
     }
 
     /**
-     * Checks if a [SongsModel] is whitelisted, and if so, registers its cover URL as allowed.
+     * Checks if an artist is allowed for display.
+     * In Admin mode, ALWAYS returns true so admin can view images for verification.
+     */
+    fun isArtistWhitelisted(artistId: String? = null, artistName: String? = null): Boolean {
+        if (com.music.spotui.BuildConfig.IS_ADMIN) return true
+        return isArtistInWhitelist(artistId, artistName)
+    }
+
+    /**
+     * Checks if a track is allowed for display.
+     * In Admin mode, ALWAYS returns true so admin can view images for verification.
+     */
+    fun isTrackWhitelisted(
+        trackId: String? = null,
+        trackTitle: String? = null,
+        artistName: String? = null
+    ): Boolean {
+        if (com.music.spotui.BuildConfig.IS_ADMIN) return true
+        return isTrackInWhitelist(trackId, trackTitle, artistName)
+    }
+
+    /**
+     * Checks if a [SongsModel] is allowed, and if so, registers its cover URL as allowed.
      */
     fun isSongWhitelisted(song: SongsModel?): Boolean {
         if (song == null) return false
-        val allowed = isTrackWhitelisted(
+        if (com.music.spotui.BuildConfig.IS_ADMIN) {
+            if (song.coverUri.isNotBlank()) allowImageUrl(song.coverUri)
+            return true
+        }
+        val allowed = isTrackInWhitelist(
             trackId = song.spotifyTrackId,
             trackTitle = song.title,
             artistName = song.singer
@@ -297,11 +325,15 @@ object KosherWhitelistManager {
     }
 
     /**
-     * Checks if an [ArtistsModel] is whitelisted, and if so, registers its image URL as allowed.
+     * Checks if an [ArtistsModel] is allowed, and if so, registers its image URL as allowed.
      */
     fun isArtistModelWhitelisted(artist: ArtistsModel?): Boolean {
         if (artist == null) return false
-        val allowed = isArtistWhitelisted(artist.id, artist.name)
+        if (com.music.spotui.BuildConfig.IS_ADMIN) {
+            if (artist.coverUri.isNotBlank()) allowImageUrl(artist.coverUri)
+            return true
+        }
+        val allowed = isArtistInWhitelist(artist.id, artist.name)
         if (allowed && artist.coverUri.isNotBlank()) {
             allowImageUrl(artist.coverUri)
         }
@@ -309,11 +341,15 @@ object KosherWhitelistManager {
     }
 
     /**
-     * Checks if an [AlbumsModel] is whitelisted, and if so, registers its cover URL as allowed.
+     * Checks if an [AlbumsModel] is allowed, and if so, registers its cover URL as allowed.
      */
     fun isAlbumWhitelisted(album: AlbumsModel?): Boolean {
         if (album == null) return false
-        val allowed = isArtistWhitelisted(null, album.artists)
+        if (com.music.spotui.BuildConfig.IS_ADMIN) {
+            if (album.coverUri.isNotBlank()) allowImageUrl(album.coverUri)
+            return true
+        }
+        val allowed = isArtistInWhitelist(null, album.artists)
         if (allowed && album.coverUri.isNotBlank()) {
             allowImageUrl(album.coverUri)
         }
@@ -321,13 +357,17 @@ object KosherWhitelistManager {
     }
 
     /**
-     * Checks if a [HomeItem] is whitelisted, and if so, registers its image URL as allowed.
+     * Checks if a [HomeItem] is allowed, and if so, registers its image URL as allowed.
      */
     fun isHomeItemWhitelisted(item: HomeItem?): Boolean {
         if (item == null) return false
+        if (com.music.spotui.BuildConfig.IS_ADMIN) {
+            if (item.imageUrl.isNotBlank()) allowImageUrl(item.imageUrl)
+            return true
+        }
         val allowed = when (item) {
-            is HomeItem.Artist -> isArtistWhitelisted(item.id, item.name)
-            is HomeItem.Album -> isArtistWhitelisted(null, item.artists.ifBlank { item.subtitle })
+            is HomeItem.Artist -> isArtistInWhitelist(item.id, item.name)
+            is HomeItem.Album -> isArtistInWhitelist(null, item.artists.ifBlank { item.subtitle })
             is HomeItem.Playlist -> false
         }
         if (allowed && item.imageUrl.isNotBlank()) {
@@ -337,14 +377,18 @@ object KosherWhitelistManager {
     }
 
     /**
-     * Checks if a RecentItem is whitelisted.
+     * Checks if a RecentItem is allowed.
      */
     fun isRecentItemWhitelisted(recent: RecentItem?): Boolean {
         if (recent == null) return false
+        if (com.music.spotui.BuildConfig.IS_ADMIN) {
+            if (recent.image.isNotBlank()) allowImageUrl(recent.image)
+            return true
+        }
         val allowed = when (recent.type) {
-            "artist" -> isArtistWhitelisted(recent.key, recent.name)
-            "song" -> isTrackWhitelisted(recent.spotifyTrackId.ifBlank { recent.key }, recent.name, recent.singer)
-            "album" -> isArtistWhitelisted(null, recent.singer)
+            "artist" -> isArtistInWhitelist(recent.key, recent.name)
+            "song" -> isTrackInWhitelist(recent.spotifyTrackId.ifBlank { recent.key }, recent.name, recent.singer)
+            "album" -> isArtistInWhitelist(null, recent.singer)
             else -> false
         }
         if (allowed && recent.image.isNotBlank()) {
@@ -367,6 +411,7 @@ object KosherWhitelistManager {
      * Checks if an image URL is allowed.
      */
     fun isUrlAllowed(url: String?): Boolean {
+        if (com.music.spotui.BuildConfig.IS_ADMIN) return true
         val clean = url?.trim() ?: return false
         return allowedImageUrls.contains(clean)
     }
@@ -376,6 +421,7 @@ object KosherWhitelistManager {
      */
     fun isImageAllowed(model: Any?): Boolean {
         if (model == null) return false
+        if (com.music.spotui.BuildConfig.IS_ADMIN) return true
         return when (model) {
             is String -> isUrlAllowed(model)
             else -> false

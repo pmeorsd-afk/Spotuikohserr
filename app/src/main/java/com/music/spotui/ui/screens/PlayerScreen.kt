@@ -1196,7 +1196,7 @@ fun PlayerOptionsSheet(
                 }
                 if (com.music.spotui.BuildConfig.IS_ADMIN) {
                     val trackId = currentSong?.spotifyTrackId.orEmpty()
-                    val isTrackApproved = com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(trackId, title, singer)
+                    val isTrackApproved = com.music.spotui.util.KosherWhitelistManager.isTrackInWhitelist(trackId, title, singer)
                     if (isTrackApproved) {
                         PlayerMenuRow(
                             icon = Icons.Default.Close,
@@ -1223,7 +1223,7 @@ fun PlayerOptionsSheet(
                         }
                     }
 
-                    val isSingerApproved = com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(null, singer)
+                    val isSingerApproved = com.music.spotui.util.KosherWhitelistManager.isArtistInWhitelist(null, singer)
                     if (!isSingerApproved && singer.isNotBlank()) {
                         PlayerMenuRow(
                             icon = Icons.Default.Person,
