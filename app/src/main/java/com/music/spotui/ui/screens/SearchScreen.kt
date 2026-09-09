@@ -3,12 +3,16 @@ package com.music.spotui.ui.screens
 import android.os.Build
 import androidx.activity.compose.BackHandler
 import androidx.annotation.RequiresApi
-import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -212,418 +216,461 @@ fun SumUpSearchScreen(
     }
 
     CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-        LazyColumn(
-            contentPadding = PaddingValues(bottom = 130.dp),
+        Column(
             modifier = Modifier
                 .fillMaxSize()
                 .background(Color(AppBackground.toArgb()))
                 .statusBarsPadding()
         ) {
-            stickyHeader {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .background(Color(AppBackground.toArgb()))
-                ) {
-                    if (!searchActive && text.isBlank()) {
-                        SearchIdleBar(
-                            onClick = { searchActive = true }
+            AnimatedContent(
+                targetState = searchActive || text.isNotBlank(),
+                transitionSpec = {
+                    (fadeIn(animationSpec = tween(220, easing = LinearOutSlowInEasing)) +
+                            slideInVertically(animationSpec = tween(220, easing = LinearOutSlowInEasing)) { -it / 4 })
+                        .togetherWith(
+                            fadeOut(animationSpec = tween(180, easing = FastOutSlowInEasing)) +
+                                    slideOutVertically(animationSpec = tween(180, easing = FastOutSlowInEasing)) { -it / 4 }
                         )
-                    } else {
-                        SearchActiveBar(
-                            text = text,
-                            focusRequester = focusRequester,
-                            onBackClick = {
-                                searchActive = false
-                                text = ""
-                                searchViewModel.search("")
-                                keyboardController?.hide()
-                            },
-                            onTextChange = {
-                                text = it
-                                if (it.isBlank()) {
-                                    selectedCategory = null
-                                }
-                                searchViewModel.search(it)
-                            },
-                            onClearClick = {
-                                text = ""
+                },
+                label = "SearchBarTransition"
+            ) { isSearching ->
+                if (!isSearching) {
+                    SearchIdleBar(
+                        onClick = { searchActive = true }
+                    )
+                } else {
+                    SearchActiveBar(
+                        text = text,
+                        focusRequester = focusRequester,
+                        onBackClick = {
+                            searchActive = false
+                            text = ""
+                            searchViewModel.search("")
+                            keyboardController?.hide()
+                        },
+                        onTextChange = {
+                            text = it
+                            if (it.isBlank()) {
                                 selectedCategory = null
-                                searchViewModel.search("")
                             }
-                        )
-
-                        if (text.isNotBlank()) {
-                            SearchCategoryFilterChips(
-                                selectedCategory = selectedCategory,
-                                onSelectCategory = { cat ->
-                                    selectedCategory = if (selectedCategory == cat) null else cat
-                                }
-                            )
+                            searchViewModel.search(it)
+                        },
+                        onClearClick = {
+                            text = ""
+                            selectedCategory = null
+                            searchViewModel.search("")
                         }
-                    }
+                    )
                 }
             }
 
-            if (!searchActive && text.isBlank()) {
-                item {
-                    CategoryGridSection { genre, title ->
-                        navController.navigate(categoryRoute(genre, title))
+            AnimatedVisibility(
+                visible = (searchActive || text.isNotBlank()) && text.isNotBlank(),
+                enter = fadeIn(tween(200)) + slideInVertically(tween(200)) { -it / 2 },
+                exit = fadeOut(tween(150)) + slideOutVertically(tween(150)) { -it / 2 }
+            ) {
+                SearchCategoryFilterChips(
+                    selectedCategory = selectedCategory,
+                    onSelectCategory = { cat ->
+                        selectedCategory = if (selectedCategory == cat) null else cat
                     }
-                }
-            } else if (text.isBlank()) {
-                if (recents.isNotEmpty()) {
-                    item {
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(16.dp, 16.dp, 16.dp, 4.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                        ) {
-                            Text(
-                                "חיפושים אחרונים",
-                                color = Color.White,
-                                fontSize = 18.sp,
-                                fontWeight = FontWeight.Bold,
+                )
+            }
+
+            AnimatedContent(
+                targetState = searchActive || text.isNotBlank(),
+                transitionSpec = {
+                    if (targetState) {
+                        (fadeIn(animationSpec = tween(260, easing = LinearOutSlowInEasing)) +
+                                slideInVertically(animationSpec = tween(260, easing = LinearOutSlowInEasing)) { it / 8 })
+                            .togetherWith(
+                                fadeOut(animationSpec = tween(180, easing = FastOutSlowInEasing))
                             )
-                            Text(
-                                "נקה הכל",
-                                color = Color(0xFFB3B3B3),
-                                fontSize = 13.sp,
-                                fontWeight = FontWeight.SemiBold,
-                                modifier = Modifier.clickable(
-                                    interactionSource = remember { MutableInteractionSource() },
-                                    indication = null,
-                                ) {
-                                    com.music.spotui.data.preferences.clearRecentItems(context)
-                                    recents = emptyList()
-                                },
+                    } else {
+                        (fadeIn(animationSpec = tween(260, easing = LinearOutSlowInEasing)))
+                            .togetherWith(
+                                fadeOut(animationSpec = tween(180, easing = FastOutSlowInEasing)) +
+                                        slideOutVertically(animationSpec = tween(180, easing = FastOutSlowInEasing)) { it / 8 }
                             )
+                    }
+                },
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth(),
+                label = "SearchBodyTransition"
+            ) { isSearching ->
+                if (!isSearching) {
+                    LazyColumn(
+                        contentPadding = PaddingValues(bottom = 130.dp),
+                        modifier = Modifier.fillMaxSize()
+                    ) {
+                        item {
+                            CategoryGridSection { genre, title ->
+                                navController.navigate(categoryRoute(genre, title))
+                            }
                         }
-                    }
-                    items(recents.size) { i ->
-                        val item = recents[i]
-                        RecentItemRow(
-                            item = item,
-                            onClick = {
-                                when (item.type) {
-                                    "song" -> {
-                                        val songUrl = item.songUrl.ifBlank {
-                                            SongPlayer.buildSpotifyPlayQuery(item.spotifyTrackId, item.name, item.singer)
-                                        }.let { savedUrl ->
-                                            if (
-                                                item.spotifyTrackId.isNotBlank() &&
-                                                !savedUrl.startsWith("spotify:track:") &&
-                                                !savedUrl.startsWith("youtube:")
-                                            ) {
-                                                SongPlayer.buildSpotifyPlayQuery(item.spotifyTrackId, item.name, item.singer)
-                                            } else {
-                                                savedUrl
-                                            }
-                                        }
-                                        val song = SongsModel(
-                                            item.songId, item.name, item.songAlbum, item.singer,
-                                            item.image, songUrl, item.spotifyTrackId,
-                                            explicit = item.explicit,
-                                            durationMs = item.durationMs,
-                                        )
-                                        searchViewModel.startRadioFromSong(song)
-                                        SongPlayer.playSong(song.url, context)
-                                        searchViewModel.updateSongState(
-                                            song.coverUri, song.title, song.singer, true, song.id, 0, song.album)
-                                    }
-                                    "artist" -> navController.navigate(artistRoute(item.name, item.key.takeIf { it != item.name }.orEmpty()))
-                                    "album" -> navController.navigate(albumRoute(item.name, item.singer))
-                                    "show" -> navController.navigate(showRoute(item.key, item.name))
-                                    "playlist" -> navController.navigate(playlistRoute(item.key, item.name))
-                                }
-                            },
-                            onRemove = {
-                                com.music.spotui.data.preferences.removeRecentItem(context, item)
-                                recents = com.music.spotui.data.preferences.getRecentItems(context)
-                            },
-                        )
                     }
                 } else {
-                    item {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(top = 180.dp),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Column(
-                                horizontalAlignment = Alignment.CenterHorizontally,
-                                modifier = Modifier.padding(horizontal = 32.dp)
-                            ) {
-                                Text(
-                                    text = "נגנו מוזיקה שאתם אוהבים",
-                                    color = Color.White,
-                                    fontSize = 19.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    textAlign = TextAlign.Center
-                                )
-                                Spacer(modifier = Modifier.height(8.dp))
-                                Text(
-                                    text = "חפשו אמנים, שירים, פלייליסטים, פודקאסטים ועוד.",
-                                    color = Color(0xFFB3B3B3),
-                                    fontSize = 13.sp,
-                                    fontWeight = FontWeight.Normal,
-                                    textAlign = TextAlign.Center
-                                )
-                            }
-                        }
-                    }
-                }
-            } else {
-                when (unifiedResultsResp) {
-                    is Response.Loading -> {
-                        item {
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .height(200.dp),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Loader()
-                            }
-                        }
-                    }
-                    is Response.Error -> {
-                        item {
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(32.dp),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Text(
-                                    text = "שגיאה בחיפוש",
-                                    color = Color.Gray,
-                                    fontSize = 14.sp,
-                                )
-                            }
-                        }
-                    }
-                    is Response.Success -> {
-                        when (selectedCategory) {
-                            SearchCategory.SONGS -> {
-                                if (unifiedResults.songs.isEmpty()) {
-                                    item { SearchEmptyMessage("לא נמצאו שירים עבור \"$text\"") }
-                                } else {
-                                    items(unifiedResults.songs.size) { i ->
-                                        val song = unifiedResults.songs[i]
-                                        SearchSongRow(
-                                            song = song,
-                                            songList = unifiedResults.songs,
-                                            searchViewModel = searchViewModel,
-                                            onPlayed = { recordRecent(song.toRecentItem()) },
-                                            onLongClick = { menuSong = song }
+                    LazyColumn(
+                        contentPadding = PaddingValues(bottom = 130.dp),
+                        modifier = Modifier.fillMaxSize()
+                    ) {
+                        if (text.isBlank()) {
+                            if (recents.isNotEmpty()) {
+                                item {
+                                    Row(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .padding(16.dp, 16.dp, 16.dp, 4.dp),
+                                        verticalAlignment = Alignment.CenterVertically,
+                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                    ) {
+                                        Text(
+                                            "חיפושים אחרונים",
+                                            color = Color.White,
+                                            fontSize = 18.sp,
+                                            fontWeight = FontWeight.Bold,
+                                        )
+                                        Text(
+                                            "נקה הכל",
+                                            color = Color(0xFFB3B3B3),
+                                            fontSize = 13.sp,
+                                            fontWeight = FontWeight.SemiBold,
+                                            modifier = Modifier.clickable(
+                                                interactionSource = remember { MutableInteractionSource() },
+                                                indication = null,
+                                            ) {
+                                                com.music.spotui.data.preferences.clearRecentItems(context)
+                                                recents = emptyList()
+                                            },
                                         )
                                     }
                                 }
-                            }
-                            SearchCategory.PLAYLISTS -> {
-                                if (unifiedResults.playlists.isEmpty()) {
-                                    item { SearchEmptyMessage("לא נמצאו פלייליסטים עבור \"$text\"") }
-                                } else {
-                                    items(unifiedResults.playlists.size) { i ->
-                                        val playlistItem = unifiedResults.playlists[i]
-                                        SearchYTPlaylistRow(
-                                            item = playlistItem,
-                                            onClick = {
-                                                recordRecent(
-                                                    com.music.spotui.data.preferences.RecentItem(
-                                                        type = "playlist",
-                                                        key = "youtube:${playlistItem.id}",
-                                                        name = playlistItem.title,
-                                                        singer = playlistItem.author?.name.orEmpty(),
-                                                        image = playlistItem.thumbnail ?: "",
+                                items(recents.size) { i ->
+                                    val item = recents[i]
+                                    RecentItemRow(
+                                        item = item,
+                                        onClick = {
+                                            when (item.type) {
+                                                "song" -> {
+                                                    val songUrl = item.songUrl.ifBlank {
+                                                        SongPlayer.buildSpotifyPlayQuery(item.spotifyTrackId, item.name, item.singer)
+                                                    }.let { savedUrl ->
+                                                        if (
+                                                            item.spotifyTrackId.isNotBlank() &&
+                                                            !savedUrl.startsWith("spotify:track:") &&
+                                                            !savedUrl.startsWith("youtube:")
+                                                        ) {
+                                                            SongPlayer.buildSpotifyPlayQuery(item.spotifyTrackId, item.name, item.singer)
+                                                        } else {
+                                                            savedUrl
+                                                        }
+                                                    }
+                                                    val song = SongsModel(
+                                                        item.songId, item.name, item.songAlbum, item.singer,
+                                                        item.image, songUrl, item.spotifyTrackId,
+                                                        explicit = item.explicit,
+                                                        durationMs = item.durationMs,
                                                     )
-                                                )
-                                                navController.navigate(playlistRoute("youtube:${playlistItem.id}", playlistItem.title))
-                                            }
-                                        )
-                                    }
-                                }
-                            }
-                            SearchCategory.ALBUMS -> {
-                                if (unifiedResults.albums.isEmpty()) {
-                                    item { SearchEmptyMessage("לא נמצאו אלבומים עבור \"$text\"") }
-                                } else {
-                                    items(unifiedResults.albums.size) { i ->
-                                        val album = unifiedResults.albums[i]
-                                        SearchAlbumRow(
-                                            album = album,
-                                            onClick = {
-                                                recordRecent(
-                                                    com.music.spotui.data.preferences.RecentItem(
-                                                        type = "album",
-                                                        key = album.name,
-                                                        name = album.name,
-                                                        singer = album.artists,
-                                                        image = album.coverUri,
-                                                    )
-                                                )
-                                                navController.navigate(albumRoute(album.name, album.artists))
-                                            }
-                                        )
-                                    }
-                                }
-                            }
-                            SearchCategory.ARTISTS -> {
-                                if (unifiedResults.artists.isEmpty()) {
-                                    item { SearchEmptyMessage("לא נמצאו אמנים עבור \"$text\"") }
-                                } else {
-                                    items(unifiedResults.artists.size) { i ->
-                                        val artist = unifiedResults.artists[i]
-                                        SearchArtistRow(
-                                            artist = artist,
-                                            onClick = {
-                                                recordRecent(
-                                                    com.music.spotui.data.preferences.RecentItem(
-                                                        type = "artist",
-                                                        key = artist.id.ifBlank { artist.name },
-                                                        name = artist.name,
-                                                        image = artist.coverUri,
-                                                    )
-                                                )
-                                                navController.navigate(artistRoute(artist.name, artist.id))
-                                            }
-                                        )
-                                    }
-                                }
-                            }
-                            SearchCategory.PODCASTS -> {
-                                val hasPodcasts = unifiedResults.shows.isNotEmpty() || unifiedResults.episodes.isNotEmpty()
-                                if (!hasPodcasts) {
-                                    item { SearchEmptyMessage("לא נמצאו פודקאסטים עבור \"$text\"") }
-                                } else {
-                                    if (unifiedResults.shows.isNotEmpty()) {
-                                        item { SearchSectionHeader("פודקאסטים") }
-                                        items(unifiedResults.shows.size) { i ->
-                                            val show = unifiedResults.shows[i]
-                                            SearchShowRow(show) {
-                                                recordRecent(
-                                                    com.music.spotui.data.preferences.RecentItem(
-                                                        type = "show",
-                                                        key = show.id,
-                                                        name = show.name,
-                                                        singer = show.publisher,
-                                                        image = show.coverUri,
-                                                    )
-                                                )
-                                                navController.navigate(showRoute(show.id, show.name))
-                                            }
-                                        }
-                                    }
-                                    if (unifiedResults.episodes.isNotEmpty()) {
-                                        item { SearchSectionHeader("פרקים") }
-                                        items(unifiedResults.episodes.size) { i ->
-                                            val ep = unifiedResults.episodes[i]
-                                            SearchSongRow(
-                                                song = ep,
-                                                songList = unifiedResults.episodes,
-                                                searchViewModel = searchViewModel,
-                                                onPlayed = { recordRecent(ep.toRecentItem()) },
-                                                onLongClick = { menuSong = ep }
-                                            )
-                                        }
-                                    }
-                                }
-                            }
-                            null -> {
-                                val isEmpty = unifiedResults.songs.isEmpty() &&
-                                        unifiedResults.playlists.isEmpty() &&
-                                        unifiedResults.artists.isEmpty() &&
-                                        unifiedResults.albums.isEmpty() &&
-                                        unifiedResults.shows.isEmpty() &&
-                                        unifiedResults.episodes.isEmpty()
-
-                                if (isEmpty) {
-                                    item { SearchEmptyMessage("לא נמצאו תוצאות עבור \"$text\"") }
-                                } else {
-                                    if (unifiedResults.playlists.isNotEmpty()) {
-                                        item { SearchSectionHeader("פלייליסטים") }
-                                        items(unifiedResults.playlists.size) { i ->
-                                            val playlistItem = unifiedResults.playlists[i]
-                                            SearchYTPlaylistRow(
-                                                item = playlistItem,
-                                                onClick = {
-                                                    recordRecent(
-                                                        com.music.spotui.data.preferences.RecentItem(
-                                                            type = "playlist",
-                                                            key = "youtube:${playlistItem.id}",
-                                                            name = playlistItem.title,
-                                                            singer = playlistItem.author?.name.orEmpty(),
-                                                            image = playlistItem.thumbnail ?: "",
-                                                        )
-                                                    )
-                                                    navController.navigate(playlistRoute("youtube:${playlistItem.id}", playlistItem.title))
+                                                    searchViewModel.startRadioFromSong(song)
+                                                    SongPlayer.playSong(song.url, context)
+                                                    searchViewModel.updateSongState(
+                                                        song.coverUri, song.title, song.singer, true, song.id, 0, song.album)
                                                 }
+                                                "artist" -> navController.navigate(artistRoute(item.name, item.key.takeIf { it != item.name }.orEmpty()))
+                                                "album" -> navController.navigate(albumRoute(item.name, item.singer))
+                                                "show" -> navController.navigate(showRoute(item.key, item.name))
+                                                "playlist" -> navController.navigate(playlistRoute(item.key, item.name))
+                                            }
+                                        },
+                                        onRemove = {
+                                            com.music.spotui.data.preferences.removeRecentItem(context, item)
+                                            recents = com.music.spotui.data.preferences.getRecentItems(context)
+                                        },
+                                    )
+                                }
+                            } else {
+                                item {
+                                    Box(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .padding(top = 180.dp),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Column(
+                                            horizontalAlignment = Alignment.CenterHorizontally,
+                                            modifier = Modifier.padding(horizontal = 32.dp)
+                                        ) {
+                                            Text(
+                                                text = "נגנו מוזיקה שאתם אוהבים",
+                                                color = Color.White,
+                                                fontSize = 19.sp,
+                                                fontWeight = FontWeight.Bold,
+                                                textAlign = TextAlign.Center
+                                            )
+                                            Spacer(modifier = Modifier.height(8.dp))
+                                            Text(
+                                                text = "חפשו אמנים, שירים, פלייליסטים, פודקאסטים ועוד.",
+                                                color = Color(0xFFB3B3B3),
+                                                fontSize = 13.sp,
+                                                fontWeight = FontWeight.Normal,
+                                                textAlign = TextAlign.Center
                                             )
                                         }
                                     }
-                                    items(mixed.size) { i ->
-                                        when (val row = mixed[i]) {
-                                            is SearchRow.Song -> SearchSongRow(
-                                                song = row.song,
-                                                songList = unifiedResults.songs,
-                                                searchViewModel = searchViewModel,
-                                                onPlayed = { recordRecent(row.song.toRecentItem()) },
-                                                onLongClick = { menuSong = row.song }
-                                            )
-                                            is SearchRow.Artist -> SearchArtistRow(row.artist) {
-                                                recordRecent(com.music.spotui.data.preferences.RecentItem(
-                                                    type = "artist",
-                                                    key = row.artist.id.ifBlank { row.artist.name },
-                                                    name = row.artist.name,
-                                                    image = row.artist.coverUri,
-                                                ))
-                                                navController.navigate(artistRoute(row.artist.name, row.artist.id))
-                                            }
-                                            is SearchRow.Album -> SearchAlbumRow(row.album) {
-                                                recordRecent(com.music.spotui.data.preferences.RecentItem(
-                                                    type = "album",
-                                                    key = row.album.name,
-                                                    name = row.album.name,
-                                                    singer = row.album.artists,
-                                                    image = row.album.coverUri,
-                                                ))
-                                                navController.navigate(albumRoute(row.album.name, row.album.artists))
-                                            }
+                                }
+                            }
+                        } else {
+                            when (unifiedResultsResp) {
+                                is Response.Loading -> {
+                                    item {
+                                        Box(
+                                            modifier = Modifier
+                                                .fillMaxWidth()
+                                                .height(200.dp),
+                                            contentAlignment = Alignment.Center
+                                        ) {
+                                            Loader()
                                         }
                                     }
-                                    if (unifiedResults.shows.isNotEmpty()) {
-                                        item { SearchSectionHeader("פודקאסטים") }
-                                        items(unifiedResults.shows.size) { i ->
-                                            val show = unifiedResults.shows[i]
-                                            SearchShowRow(show) {
-                                                recordRecent(com.music.spotui.data.preferences.RecentItem(
-                                                    type = "show",
-                                                    key = show.id,
-                                                    name = show.name,
-                                                    singer = show.publisher,
-                                                    image = show.coverUri,
-                                                ))
-                                                navController.navigate(showRoute(show.id, show.name))
-                                            }
+                                }
+                                is Response.Error -> {
+                                    item {
+                                        Box(
+                                            modifier = Modifier
+                                                .fillMaxWidth()
+                                                .padding(32.dp),
+                                            contentAlignment = Alignment.Center
+                                        ) {
+                                            Text(
+                                                text = "שגיאה בחיפוש",
+                                                color = Color.Gray,
+                                                fontSize = 14.sp,
+                                            )
                                         }
                                     }
-                                    if (unifiedResults.episodes.isNotEmpty()) {
-                                        item { SearchSectionHeader("פרקים") }
-                                        items(unifiedResults.episodes.size) { i ->
-                                            val ep = unifiedResults.episodes[i]
-                                            SearchSongRow(
-                                                ep,
-                                                unifiedResults.episodes,
-                                                searchViewModel,
-                                                onPlayed = {
-                                                    recordRecent(ep.toRecentItem())
-                                                },
-                                                onLongClick = { menuSong = ep }
-                                            )
+                                }
+                                is Response.Success -> {
+                                    when (selectedCategory) {
+                                        SearchCategory.SONGS -> {
+                                            if (unifiedResults.songs.isEmpty()) {
+                                                item { SearchEmptyMessage("לא נמצאו שירים עבור \"$text\"") }
+                                            } else {
+                                                items(unifiedResults.songs.size) { i ->
+                                                    val song = unifiedResults.songs[i]
+                                                    SearchSongRow(
+                                                        song = song,
+                                                        songList = unifiedResults.songs,
+                                                        searchViewModel = searchViewModel,
+                                                        onPlayed = { recordRecent(song.toRecentItem()) },
+                                                        onLongClick = { menuSong = song }
+                                                    )
+                                                }
+                                            }
+                                        }
+                                        SearchCategory.PLAYLISTS -> {
+                                            if (unifiedResults.playlists.isEmpty()) {
+                                                item { SearchEmptyMessage("לא נמצאו פלייליסטים עבור \"$text\"") }
+                                            } else {
+                                                items(unifiedResults.playlists.size) { i ->
+                                                    val playlistItem = unifiedResults.playlists[i]
+                                                    SearchYTPlaylistRow(
+                                                        item = playlistItem,
+                                                        onClick = {
+                                                            recordRecent(
+                                                                com.music.spotui.data.preferences.RecentItem(
+                                                                    type = "playlist",
+                                                                    key = "youtube:${playlistItem.id}",
+                                                                    name = playlistItem.title,
+                                                                    singer = playlistItem.author?.name.orEmpty(),
+                                                                    image = playlistItem.thumbnail ?: "",
+                                                                )
+                                                            )
+                                                            navController.navigate(playlistRoute("youtube:${playlistItem.id}", playlistItem.title))
+                                                        }
+                                                    )
+                                                }
+                                            }
+                                        }
+                                        SearchCategory.ALBUMS -> {
+                                            if (unifiedResults.albums.isEmpty()) {
+                                                item { SearchEmptyMessage("לא נמצאו אלבומים עבור \"$text\"") }
+                                            } else {
+                                                items(unifiedResults.albums.size) { i ->
+                                                    val album = unifiedResults.albums[i]
+                                                    SearchAlbumRow(
+                                                        album = album,
+                                                        onClick = {
+                                                            recordRecent(
+                                                                com.music.spotui.data.preferences.RecentItem(
+                                                                    type = "album",
+                                                                    key = album.name,
+                                                                    name = album.name,
+                                                                    singer = album.artists,
+                                                                    image = album.coverUri,
+                                                                )
+                                                            )
+                                                            navController.navigate(albumRoute(album.name, album.artists))
+                                                        }
+                                                    )
+                                                }
+                                            }
+                                        }
+                                        SearchCategory.ARTISTS -> {
+                                            if (unifiedResults.artists.isEmpty()) {
+                                                item { SearchEmptyMessage("לא נמצאו אמנים עבור \"$text\"") }
+                                            } else {
+                                                items(unifiedResults.artists.size) { i ->
+                                                    val artist = unifiedResults.artists[i]
+                                                    SearchArtistRow(
+                                                        artist = artist,
+                                                        onClick = {
+                                                            recordRecent(
+                                                                com.music.spotui.data.preferences.RecentItem(
+                                                                    type = "artist",
+                                                                    key = artist.id.ifBlank { artist.name },
+                                                                    name = artist.name,
+                                                                    image = artist.coverUri,
+                                                                )
+                                                            )
+                                                            navController.navigate(artistRoute(artist.name, artist.id))
+                                                        }
+                                                    )
+                                                }
+                                            }
+                                        }
+                                        SearchCategory.PODCASTS -> {
+                                            val hasPodcasts = unifiedResults.shows.isNotEmpty() || unifiedResults.episodes.isNotEmpty()
+                                            if (!hasPodcasts) {
+                                                item { SearchEmptyMessage("לא נמצאו פודקאסטים עבור \"$text\"") }
+                                            } else {
+                                                if (unifiedResults.shows.isNotEmpty()) {
+                                                    item { SearchSectionHeader("פודקאסטים") }
+                                                    items(unifiedResults.shows.size) { i ->
+                                                        val show = unifiedResults.shows[i]
+                                                        SearchShowRow(show) {
+                                                            recordRecent(
+                                                                com.music.spotui.data.preferences.RecentItem(
+                                                                    type = "show",
+                                                                    key = show.id,
+                                                                    name = show.name,
+                                                                    singer = show.publisher,
+                                                                    image = show.coverUri,
+                                                                )
+                                                            )
+                                                            navController.navigate(showRoute(show.id, show.name))
+                                                        }
+                                                    }
+                                                }
+                                                if (unifiedResults.episodes.isNotEmpty()) {
+                                                    item { SearchSectionHeader("פרקים") }
+                                                    items(unifiedResults.episodes.size) { i ->
+                                                        val ep = unifiedResults.episodes[i]
+                                                        SearchSongRow(
+                                                            song = ep,
+                                                            songList = unifiedResults.episodes,
+                                                            searchViewModel = searchViewModel,
+                                                            onPlayed = { recordRecent(ep.toRecentItem()) },
+                                                            onLongClick = { menuSong = ep }
+                                                        )
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        null -> {
+                                            val isEmpty = unifiedResults.songs.isEmpty() &&
+                                                    unifiedResults.playlists.isEmpty() &&
+                                                    unifiedResults.artists.isEmpty() &&
+                                                    unifiedResults.albums.isEmpty() &&
+                                                    unifiedResults.shows.isEmpty() &&
+                                                    unifiedResults.episodes.isEmpty()
+
+                                            if (isEmpty) {
+                                                item { SearchEmptyMessage("לא נמצאו תוצאות עבור \"$text\"") }
+                                            } else {
+                                                if (unifiedResults.playlists.isNotEmpty()) {
+                                                    item { SearchSectionHeader("פלייליסטים") }
+                                                    items(unifiedResults.playlists.size) { i ->
+                                                        val playlistItem = unifiedResults.playlists[i]
+                                                        SearchYTPlaylistRow(
+                                                            item = playlistItem,
+                                                            onClick = {
+                                                                recordRecent(
+                                                                    com.music.spotui.data.preferences.RecentItem(
+                                                                        type = "playlist",
+                                                                        key = "youtube:${playlistItem.id}",
+                                                                        name = playlistItem.title,
+                                                                        singer = playlistItem.author?.name.orEmpty(),
+                                                                        image = playlistItem.thumbnail ?: "",
+                                                                    )
+                                                                )
+                                                                navController.navigate(playlistRoute("youtube:${playlistItem.id}", playlistItem.title))
+                                                            }
+                                                        )
+                                                    }
+                                                }
+                                                items(mixed.size) { i ->
+                                                    when (val row = mixed[i]) {
+                                                        is SearchRow.Song -> SearchSongRow(
+                                                            song = row.song,
+                                                            songList = unifiedResults.songs,
+                                                            searchViewModel = searchViewModel,
+                                                            onPlayed = { recordRecent(row.song.toRecentItem()) },
+                                                            onLongClick = { menuSong = row.song }
+                                                        )
+                                                        is SearchRow.Artist -> SearchArtistRow(row.artist) {
+                                                            recordRecent(com.music.spotui.data.preferences.RecentItem(
+                                                                type = "artist",
+                                                                key = row.artist.id.ifBlank { row.artist.name },
+                                                                name = row.artist.name,
+                                                                image = row.artist.coverUri,
+                                                            ))
+                                                            navController.navigate(artistRoute(row.artist.name, row.artist.id))
+                                                        }
+                                                        is SearchRow.Album -> SearchAlbumRow(row.album) {
+                                                            recordRecent(com.music.spotui.data.preferences.RecentItem(
+                                                                type = "album",
+                                                                key = row.album.name,
+                                                                name = row.album.name,
+                                                                singer = row.album.artists,
+                                                                image = row.album.coverUri,
+                                                            ))
+                                                            navController.navigate(albumRoute(row.album.name, row.album.artists))
+                                                        }
+                                                    }
+                                                }
+                                                if (unifiedResults.shows.isNotEmpty()) {
+                                                    item { SearchSectionHeader("פודקאסטים") }
+                                                    items(unifiedResults.shows.size) { i ->
+                                                        val show = unifiedResults.shows[i]
+                                                        SearchShowRow(show) {
+                                                            recordRecent(com.music.spotui.data.preferences.RecentItem(
+                                                                type = "show",
+                                                                key = show.id,
+                                                                name = show.name,
+                                                                singer = show.publisher,
+                                                                image = show.coverUri,
+                                                            ))
+                                                            navController.navigate(showRoute(show.id, show.name))
+                                                        }
+                                                    }
+                                                }
+                                                if (unifiedResults.episodes.isNotEmpty()) {
+                                                    item { SearchSectionHeader("פרקים") }
+                                                    items(unifiedResults.episodes.size) { i ->
+                                                        val ep = unifiedResults.episodes[i]
+                                                        SearchSongRow(
+                                                            ep,
+                                                            unifiedResults.episodes,
+                                                            searchViewModel,
+                                                            onPlayed = {
+                                                                recordRecent(ep.toRecentItem())
+                                                            },
+                                                            onLongClick = { menuSong = ep }
+                                                        )
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
