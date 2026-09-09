@@ -147,17 +147,44 @@ class SearchViewModel @Inject constructor(
                 )
             }
 
+            // Extract YouTube albums
+            val ytAlbums = ytGeneral.filterIsInstance<com.metrolist.innertube.models.AlbumItem>().map { item ->
+                val targetId = item.playlistId.ifBlank { item.browseId }
+                AlbumsModel(
+                    id = (targetId.hashCode() and 0x7fffffff),
+                    name = item.title,
+                    artists = item.artists?.joinToString(", ") { it.name }.orEmpty(),
+                    coverUri = item.thumbnail,
+                    time = item.year?.toString() ?: "",
+                )
+            }
+
+            // Extract YouTube artists
+            val ytArtists = ytGeneral.filterIsInstance<com.metrolist.innertube.models.ArtistItem>().map { item ->
+                ArtistsModel(
+                    id = item.id,
+                    name = item.title,
+                    coverUri = item.thumbnail ?: "",
+                )
+            }
+
             // Combine Playlists
             val allYtPlaylists = (ytGeneral.filterIsInstance<PlaylistItem>() + ytPlaylists).distinctBy { it.id }
 
             // Combine Songs (Spotify hits + YouTube hits, deduped)
             val combinedSongs = (spotifyRes.songs + ytSongs).distinctBy { "${it.title.lowercase().trim()}_${it.singer.lowercase().trim()}" }
 
+            // Combine Albums (Spotify hits + YouTube hits, deduped)
+            val combinedAlbums = (spotifyRes.albums + ytAlbums).distinctBy { "${it.name.lowercase().trim()}_${it.artists.lowercase().trim()}" }
+
+            // Combine Artists (Spotify hits + YouTube hits, deduped)
+            val combinedArtists = (spotifyRes.artists + ytArtists).distinctBy { it.name.lowercase().trim() }
+
             val unified = UnifiedSearchResults(
                 songs = combinedSongs,
                 playlists = allYtPlaylists,
-                albums = spotifyRes.albums,
-                artists = spotifyRes.artists,
+                albums = combinedAlbums,
+                artists = combinedArtists,
                 shows = spotifyRes.shows,
                 episodes = spotifyRes.episodes,
             )
