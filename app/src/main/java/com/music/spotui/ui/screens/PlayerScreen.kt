@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.screens
+package com.music.spotui.ui.screens
 
 import android.content.Context
 import android.content.Intent
@@ -237,10 +237,20 @@ fun PlayerScreen(navController: NavController) {
         }
     }
 
-    // Load the current track's Spotify Canvas (full-screen looping video background).
-    LaunchedEffect(playerViewModel.currentSongId.value, queueSongs) {
-        val track = queueSongs.firstOrNull { it.id == playerViewModel.currentSongId.value }
-        playerViewModel.loadCanvas(track?.spotifyTrackId.orEmpty())
+    val currentTrack = queueSongs.firstOrNull { it.id == playerViewModel.currentSongId.value }
+    val isCurrentSongAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(currentTrack) ||
+            com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(currentTrack?.spotifyTrackId, songTitle, songSinger)
+
+    // Load the current track's Spotify Canvas only if whitelisted.
+    LaunchedEffect(playerViewModel.currentSongId.value, queueSongs, isCurrentSongAllowed) {
+        if (isCurrentSongAllowed) {
+            val track = queueSongs.firstOrNull { it.id == playerViewModel.currentSongId.value }
+            playerViewModel.loadCanvas(track?.spotifyTrackId.orEmpty())
+            if (songCoverUri.isNotBlank()) com.music.spotui.util.KosherWhitelistManager.allowImageUrl(songCoverUri)
+            track?.coverUri?.takeIf { it.isNotBlank() }?.let { com.music.spotui.util.KosherWhitelistManager.allowImageUrl(it) }
+        } else {
+            playerViewModel.loadCanvas("")
+        }
     }
 
 
@@ -287,7 +297,7 @@ fun PlayerScreen(navController: NavController) {
 
 
 
-    val canvasUrl = playerViewModel.canvasUrl.value
+    val canvasUrl = if (isCurrentSongAllowed) playerViewModel.canvasUrl.value else null
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -368,6 +378,7 @@ fun PlayerScreen(navController: NavController) {
                             .alpha(if (canvasUrl != null) 0f else 1f),
                         model = songCoverUri,
                         contentScale = ContentScale.Crop,
+                        isAllowed = isCurrentSongAllowed,
                         contentDescription = "")
                 } else {
                     HorizontalPager(
@@ -376,14 +387,18 @@ fun PlayerScreen(navController: NavController) {
                             .sizeIn(maxWidth = 385.dp, maxHeight = 385.dp)
                             .aspectRatio(1f),
                     ) { page ->
+                        val pageSong = queueSongs.getOrNull(page)
+                        val pageAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(pageSong) ||
+                                (page == artworkPagerState.currentPage && isCurrentSongAllowed)
                         GlideImage(
                             modifier = Modifier
                                 .fillMaxSize()
                                 .padding(20.dp)
                                 .clip(RoundedCornerShape(10.dp))
                                 .alpha(if (canvasUrl != null) 0f else 1f),
-                            model = queueSongs.getOrNull(page)?.coverUri ?: songCoverUri,
+                            model = pageSong?.coverUri ?: songCoverUri,
                             contentScale = ContentScale.Crop,
+                            isAllowed = pageAllowed,
                             contentDescription = "")
                     }
                 }

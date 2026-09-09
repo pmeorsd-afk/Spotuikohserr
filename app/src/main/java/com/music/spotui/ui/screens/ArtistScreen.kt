@@ -139,6 +139,25 @@ private fun ArtistOverviewContent(
         )
     }
 
+    val isArtistAllowed = com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(overview.id, displayName)
+    LaunchedEffect(isArtistAllowed, overview) {
+        if (isArtistAllowed) {
+            val h = overview.headerImage
+            val a = overview.avatarImage
+            if (h.isNotBlank()) com.music.spotui.util.KosherWhitelistManager.allowImageUrl(h)
+            if (a.isNotBlank()) com.music.spotui.util.KosherWhitelistManager.allowImageUrl(a)
+            tracks.forEach { tr ->
+                if (tr.song.coverUri.isNotBlank()) com.music.spotui.util.KosherWhitelistManager.allowImageUrl(tr.song.coverUri)
+            }
+            overview.popularReleases.forEach { alb ->
+                if (alb.coverUri.isNotBlank()) com.music.spotui.util.KosherWhitelistManager.allowImageUrl(alb.coverUri)
+            }
+            overview.appearsOn.forEach { alb ->
+                if (alb.coverUri.isNotBlank()) com.music.spotui.util.KosherWhitelistManager.allowImageUrl(alb.coverUri)
+            }
+        }
+    }
+
     // Warm the stream cache for the top tracks so the first tap plays instantly.
     LaunchedEffect(tracks) {
         if (tracks.isNotEmpty()) {
@@ -183,6 +202,7 @@ private fun ArtistOverviewContent(
                     failure = placeholder(R.drawable.placeholder),
                     loading = placeholder(R.drawable.placeholder),
                     contentDescription = "",
+                    isAllowed = isArtistAllowed,
                 )
                 Box(modifier = Modifier
                     .fillMaxSize()

@@ -2,10 +2,10 @@ package com.music.spotui.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.BoxWithConstraints
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -13,22 +13,50 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
+import com.bumptech.glide.integration.compose.GlideImage as RealGlideImage
+import com.bumptech.glide.integration.compose.placeholder
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.music.spotui.R
+import com.music.spotui.util.KosherWhitelistManager
 
 /**
- * Clean, 100% image-free Composable replacing GlideImage across the entire application.
- * Never performs any network requests for images and renders a sleek music placeholder.
+ * Kosher GlideImage Composable that renders album and artist artwork ONLY if whitelisted.
+ * If not whitelisted or model is empty, renders the clean music placeholder without any network requests.
  */
+@OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 fun GlideImage(
     model: Any? = null,
     contentDescription: String? = null,
     modifier: Modifier = Modifier,
-    contentScale: ContentScale = ContentScale.Fit,
+    contentScale: ContentScale = ContentScale.Crop,
     loading: Any? = null,
-    failure: Any? = null
+    failure: Any? = null,
+    isAllowed: Boolean? = null,
 ) {
-    NoImagePlaceholder(modifier = modifier)
+    // Read the version state so that when background sync updates the whitelist, this composable re-evaluates
+    val version by KosherWhitelistManager.versionState
+
+    val allowed = isAllowed ?: KosherWhitelistManager.isImageAllowed(model)
+
+    if (!allowed || model == null || (model is String && model.isBlank())) {
+        NoImagePlaceholder(modifier = modifier)
+    } else {
+        RealGlideImage(
+            model = model,
+            contentDescription = contentDescription,
+            modifier = modifier,
+            contentScale = contentScale,
+            loading = placeholder(R.drawable.placeholder),
+            failure = placeholder(R.drawable.placeholder),
+            requestBuilderTransform = { requestBuilder ->
+                requestBuilder
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .dontAnimate()
+            }
+        )
+    }
 }
 
 @Composable

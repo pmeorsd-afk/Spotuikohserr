@@ -1149,6 +1149,7 @@ fun RecentItemRow(
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isRecentItemWhitelisted(item),
             contentDescription = "",
         )
         Column(
@@ -1238,6 +1239,7 @@ fun SearchSongRow(
                 contentScale = ContentScale.Crop,
                 failure = placeholder(R.drawable.placeholder),
                 loading = placeholder(R.drawable.placeholder),
+                isAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(song),
                 contentDescription = "",
             )
             Column(modifier = Modifier.weight(1f)) {
@@ -1332,6 +1334,7 @@ fun SearchArtistRow(artist: com.music.spotui.data.entity.ArtistsModel, onClick: 
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isArtistModelWhitelisted(artist),
             contentDescription = "",
         )
         Column {
@@ -1363,6 +1366,7 @@ fun SearchAlbumRow(album: com.music.spotui.data.entity.AlbumsModel, onClick: () 
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(album),
             contentDescription = "",
         )
         Column {

@@ -224,7 +224,7 @@ private fun QueueRow(
             model = song.coverUri,
             contentScale = ContentScale.Crop,
             loading = placeholder(R.drawable.placeholder),
-            failure = placeholder(R.drawable.placeholder),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(song),
             contentDescription = ""
         )
         Spacer(modifier = Modifier.width(12.dp))
