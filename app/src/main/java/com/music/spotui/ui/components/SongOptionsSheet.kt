@@ -19,6 +19,7 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.KeyboardArrowDown
@@ -225,14 +226,65 @@ fun SongOptionsSheet(
                 context.startActivity(Intent.createChooser(send, "Share"))
                 onDismiss()
             }
-            SongMenuRow(Icons.Default.CheckCircle, "הצע לבדיקה והיתר תמונות") {
-                TelegramNotifier.sendTrackApprovalRequest(
-                    context = context,
-                    trackTitle = song.title,
-                    artistName = song.singer,
-                    trackId = song.spotifyTrackId
+            if (com.music.spotui.BuildConfig.IS_ADMIN) {
+                val isTrackApproved = com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(
+                    song.spotifyTrackId,
+                    song.title,
+                    song.singer
                 )
-                onDismiss()
+                if (isTrackApproved) {
+                    SongMenuRow(
+                        icon = Icons.Default.Close,
+                        label = "הסר שיר מההיתר (Admin)",
+                        iconTint = Color(0xFFE57373)
+                    ) {
+                        if (song.spotifyTrackId.isNotBlank()) {
+                            com.music.spotui.util.KosherWhitelistManager.removeTrack(context, song.spotifyTrackId)
+                            android.widget.Toast.makeText(context, "השיר הוסר מההיתר", android.widget.Toast.LENGTH_SHORT).show()
+                        }
+                        onDismiss()
+                    }
+                } else {
+                    SongMenuRow(
+                        icon = Icons.Default.CheckCircle,
+                        label = "אשר שיר לרשימת ההיתר (Admin)",
+                        iconTint = Color(0xFF1ED760)
+                    ) {
+                        if (song.spotifyTrackId.isNotBlank()) {
+                            com.music.spotui.util.KosherWhitelistManager.addTrack(
+                                context,
+                                song.spotifyTrackId,
+                                song.title,
+                                song.singer
+                            )
+                            android.widget.Toast.makeText(context, "השיר נוסף לרשימת ההיתר!", android.widget.Toast.LENGTH_SHORT).show()
+                        }
+                        onDismiss()
+                    }
+                }
+
+                val isSingerApproved = com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(null, song.singer)
+                if (!isSingerApproved && song.singer.isNotBlank()) {
+                    SongMenuRow(
+                        icon = Icons.Default.Person,
+                        label = "אשר את כל שירי ${song.singer} (Admin)",
+                        iconTint = Color(0xFF1ED760)
+                    ) {
+                        com.music.spotui.util.KosherWhitelistManager.addArtist(context, name = song.singer)
+                        android.widget.Toast.makeText(context, "${song.singer} נוסף לרשימת ההיתר!", android.widget.Toast.LENGTH_SHORT).show()
+                        onDismiss()
+                    }
+                }
+            } else {
+                SongMenuRow(Icons.Default.CheckCircle, "הצע לבדיקה והיתר תמונות") {
+                    TelegramNotifier.sendTrackApprovalRequest(
+                        context = context,
+                        trackTitle = song.title,
+                        artistName = song.singer,
+                        trackId = song.spotifyTrackId
+                    )
+                    onDismiss()
+                }
             }
             Spacer(modifier = Modifier.padding(8.dp))
         }

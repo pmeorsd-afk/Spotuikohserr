@@ -212,6 +212,14 @@ fun MyNavHost(
             LocalFilesScreen(navHostController)
         }
 
+        composable(Routes.KosherAdmin.route) {
+            LaunchedEffect(playerState) {
+                bottomBarState.value = false
+                bottomBarPlayerState.value = playerState != ""
+            }
+            com.music.spotui.ui.screens.KosherAdminScreen(navHostController)
+        }
+
         composable(
             "${Routes.SpotiflacVerify.route}?next={next}",
             arguments = listOf(navArgument("next") { defaultValue = "" }),
