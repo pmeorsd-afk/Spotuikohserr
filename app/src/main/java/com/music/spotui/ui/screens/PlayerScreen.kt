@@ -33,6 +33,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.KeyboardArrowDown
@@ -238,7 +239,8 @@ fun PlayerScreen(navController: NavController) {
     }
 
     val currentTrack = queueSongs.firstOrNull { it.id == playerViewModel.currentSongId.value }
-    val isCurrentSongAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(currentTrack) ||
+    val isCurrentSongAllowed = com.music.spotui.BuildConfig.IS_ADMIN ||
+            com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(currentTrack) ||
             com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(currentTrack?.spotifyTrackId, songTitle, songSinger)
 
     // Load the current track's Spotify Canvas only if whitelisted.
@@ -1192,19 +1194,62 @@ fun PlayerOptionsSheet(
                     context.startActivity(Intent.createChooser(send, "Share"))
                     onDismiss()
                 }
-                PlayerMenuRow(
-                    icon = Icons.Default.CheckCircle,
-                    label = "הצע לבדיקה והיתר תמונות",
-                    iconTint = Color(0xFF1ED760),
-                ) {
+                if (com.music.spotui.BuildConfig.IS_ADMIN) {
                     val trackId = currentSong?.spotifyTrackId.orEmpty()
-                    com.music.spotui.util.TelegramNotifier.sendTrackApprovalRequest(
-                        context = context,
-                        trackTitle = title,
-                        artistName = singer,
-                        trackId = trackId
-                    )
-                    onDismiss()
+                    val isTrackApproved = com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(trackId, title, singer)
+                    if (isTrackApproved) {
+                        PlayerMenuRow(
+                            icon = Icons.Default.Close,
+                            label = "הסר שיר מההיתר (Admin)",
+                            iconTint = Color(0xFFE57373),
+                        ) {
+                            if (trackId.isNotBlank()) {
+                                com.music.spotui.util.KosherWhitelistManager.removeTrack(context, trackId)
+                                Toast.makeText(context, "השיר הוסר מההיתר", Toast.LENGTH_SHORT).show()
+                            }
+                            onDismiss()
+                        }
+                    } else {
+                        PlayerMenuRow(
+                            icon = Icons.Default.CheckCircle,
+                            label = "אשר שיר לרשימת ההיתר (Admin)",
+                            iconTint = Color(0xFF1ED760),
+                        ) {
+                            if (trackId.isNotBlank()) {
+                                com.music.spotui.util.KosherWhitelistManager.addTrack(context, trackId, title, singer)
+                                Toast.makeText(context, "השיר נוסף לרשימת ההיתר!", Toast.LENGTH_SHORT).show()
+                            }
+                            onDismiss()
+                        }
+                    }
+
+                    val isSingerApproved = com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(null, singer)
+                    if (!isSingerApproved && singer.isNotBlank()) {
+                        PlayerMenuRow(
+                            icon = Icons.Default.Person,
+                            label = "אשר את כל שירי $singer (Admin)",
+                            iconTint = Color(0xFF1ED760),
+                        ) {
+                            com.music.spotui.util.KosherWhitelistManager.addArtist(context, name = singer)
+                            Toast.makeText(context, "$singer נוסף לרשימת ההיתר!", Toast.LENGTH_SHORT).show()
+                            onDismiss()
+                        }
+                    }
+                } else {
+                    PlayerMenuRow(
+                        icon = Icons.Default.CheckCircle,
+                        label = "הצע לבדיקה והיתר תמונות",
+                        iconTint = Color(0xFF1ED760),
+                    ) {
+                        val trackId = currentSong?.spotifyTrackId.orEmpty()
+                        com.music.spotui.util.TelegramNotifier.sendTrackApprovalRequest(
+                            context = context,
+                            trackTitle = title,
+                            artistName = singer,
+                            trackId = trackId
+                        )
+                        onDismiss()
+                    }
                 }
                 PlayerMenuRow(
                     icon = if (downloaded) Icons.Default.CheckCircle else ImageVector.vectorResource(R.drawable.ic_download),

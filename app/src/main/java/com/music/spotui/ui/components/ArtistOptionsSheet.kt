@@ -16,6 +16,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -112,20 +113,47 @@ fun ArtistOptionsSheet(
                 },
             )
 
-            // Option 2: Suggest for Kosher Whitelist review via Telegram
-            ArtistMenuRow(
-                icon = Icons.Default.CheckCircle,
-                label = "הצע לבדיקה והיתר תמונות",
-                iconTint = Color(0xFF1ED760),
-                onClick = {
-                    TelegramNotifier.sendArtistApprovalRequest(
-                        context = context,
-                        artistName = artistName,
-                        artistId = artistId,
+            if (com.music.spotui.BuildConfig.IS_ADMIN) {
+                val isWhitelisted = com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(artistId, artistName)
+                if (isWhitelisted) {
+                    ArtistMenuRow(
+                        icon = Icons.Default.Close,
+                        label = "הסר אמן מההיתר (Admin)",
+                        iconTint = Color(0xFFE57373),
+                        onClick = {
+                            com.music.spotui.util.KosherWhitelistManager.removeArtist(context, artistId, artistName)
+                            android.widget.Toast.makeText(context, "$artistName הוסר מההיתר", android.widget.Toast.LENGTH_SHORT).show()
+                            onDismiss()
+                        },
                     )
-                    onDismiss()
-                },
-            )
+                } else {
+                    ArtistMenuRow(
+                        icon = Icons.Default.CheckCircle,
+                        label = "אשר אמן לרשימת ההיתר (Admin)",
+                        iconTint = Color(0xFF1ED760),
+                        onClick = {
+                            com.music.spotui.util.KosherWhitelistManager.addArtist(context, artistId, artistName)
+                            android.widget.Toast.makeText(context, "$artistName נוסף לרשימת ההיתר!", android.widget.Toast.LENGTH_SHORT).show()
+                            onDismiss()
+                        },
+                    )
+                }
+            } else {
+                // Regular User mode: Suggest for Kosher Whitelist review via Telegram
+                ArtistMenuRow(
+                    icon = Icons.Default.CheckCircle,
+                    label = "הצע לבדיקה והיתר תמונות",
+                    iconTint = Color(0xFF1ED760),
+                    onClick = {
+                        TelegramNotifier.sendArtistApprovalRequest(
+                            context = context,
+                            artistName = artistName,
+                            artistId = artistId,
+                        )
+                        onDismiss()
+                    },
+                )
+            }
 
             Spacer(modifier = Modifier.padding(8.dp))
         }

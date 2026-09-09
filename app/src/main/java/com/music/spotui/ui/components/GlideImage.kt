@@ -38,7 +38,11 @@ fun GlideImage(
     // Read the version state so that when background sync updates the whitelist, this composable re-evaluates
     val version by KosherWhitelistManager.versionState
 
-    val allowed = isAllowed ?: KosherWhitelistManager.isImageAllowed(model)
+    val allowed = if (com.music.spotui.BuildConfig.IS_ADMIN) {
+        true
+    } else {
+        isAllowed ?: KosherWhitelistManager.isImageAllowed(model)
+    }
 
     if (!allowed || model == null || (model is String && model.isBlank())) {
         NoImagePlaceholder(modifier = modifier)

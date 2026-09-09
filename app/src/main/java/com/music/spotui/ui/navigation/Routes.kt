@@ -31,6 +31,7 @@ sealed class Routes(
     object YouTubeLogin : Routes(0, "YouTubeLogin", "youtubelogin")
     object LocalFiles : Routes(0, "LocalFiles", "localfiles")
     object SpotiflacVerify : Routes(0, "SpotiflacVerify", "spotiflacverify")
+    object KosherAdmin : Routes(0, "Kosher Admin", "kosher_admin")
 }
 
 /** Builds a Browse-category route carrying the search genre and a display title. */

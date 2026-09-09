@@ -22,6 +22,22 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        manifestPlaceholders["appLabel"] = "SpotUI כשר"
+    }
+
+    flavorDimensions += "mode"
+    productFlavors {
+        create("user") {
+            dimension = "mode"
+            manifestPlaceholders["appLabel"] = "SpotUI כשר"
+            buildConfigField("boolean", "IS_ADMIN", "false")
+        }
+        create("admin") {
+            dimension = "mode"
+            applicationIdSuffix = ".admin"
+            manifestPlaceholders["appLabel"] = "SpotUI מנהל"
+            buildConfigField("boolean", "IS_ADMIN", "true")
+        }
     }
 
     buildTypes {
