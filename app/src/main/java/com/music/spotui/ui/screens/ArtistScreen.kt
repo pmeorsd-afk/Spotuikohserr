@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.screens
+package com.music.spotui.ui.screens
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -38,6 +38,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import com.music.spotui.ui.components.ArtistOptionsSheet
 import com.music.spotui.ui.components.SongOptionsSheet
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -124,6 +125,17 @@ private fun ArtistOverviewContent(
             navController = navController,
             context = context,
             onDismiss = { menuSong = null },
+        )
+    }
+
+    var showArtistOptions by remember { mutableStateOf(false) }
+    if (showArtistOptions) {
+        ArtistOptionsSheet(
+            artistName = displayName,
+            artistId = overview.id,
+            avatarImage = overview.avatarImage.ifBlank { overview.headerImage },
+            context = context,
+            onDismiss = { showArtistOptions = false },
         )
     }
 
@@ -275,9 +287,14 @@ private fun ArtistOverviewContent(
                     Spacer(Modifier.width(16.dp))
                     Icon(
                         painter = painterResource(id = R.drawable.ic_dots),
-                        contentDescription = "",
+                        contentDescription = "Artist options",
                         tint = Color.Gray,
-                        modifier = Modifier.size(22.dp),
+                        modifier = Modifier
+                            .size(22.dp)
+                            .clickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null,
+                            ) { showArtistOptions = true },
                     )
                 }
 
