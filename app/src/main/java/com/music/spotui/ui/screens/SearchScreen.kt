@@ -1,7 +1,14 @@
 package com.music.spotui.ui.screens
 
 import android.os.Build
+import androidx.activity.compose.BackHandler
 import androidx.annotation.RequiresApi
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -24,14 +31,16 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
@@ -42,18 +51,24 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
-import androidx.compose.ui.focus.onFocusChanged
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -89,6 +104,37 @@ enum class SearchCategory(val title: String) {
     PODCASTS("פודקאסטים"),
 }
 
+data class BrowseCategory(
+    val title: String,
+    val color: Color,
+    val query: String,
+    val coverUrl: String,
+)
+
+private val browseCategories: List<BrowseCategory> = listOf(
+    BrowseCategory("פודקאסטים", Color(0xFF006450), "פודקאסטים", "https://i.scdn.co/image/ab6765630000ba8a7e025b4408d66dfa99908cf8"),
+    BrowseCategory("מוזיקה", Color(0xFFDC148C), "מוזיקה", "https://i.scdn.co/image/ab67706f00000002b8d003e62f559ccaa19fa00c"),
+    BrowseCategory("במיוחד בשבילכם", Color(0xFF8D67AB), "במיוחד בשבילכם", "https://misc.scdn.co/liked-songs/liked-songs-640.png"),
+    BrowseCategory("אירועים חיים", Color(0xFF8400E7), "אירועים חיים", "https://concerts.spotifycdn.com/images/live-events_500.jpg"),
+    BrowseCategory("מה חדש?", Color(0xFF608108), "מה חדש", "https://i.scdn.co/image/ab67706f000000027ea4d505212b9de1f72c5112"),
+    BrowseCategory("ריליסים שצפויים בקרוב", Color(0xFF056952), "ריליסים", "https://i.scdn.co/image/ab67706f00000002fe24d7084be4aa2288d6cdc3"),
+    BrowseCategory("היפ-הופ", Color(0xFF477D95), "היפ הופ", "https://i.scdn.co/image/ab67706f000000029bb7d9ab80004944d650058b"),
+    BrowseCategory("פופ", Color(0xFF509BF5), "פופ", "https://i.scdn.co/image/ab67706f0000000282b243023b937c336ae3533f"),
+    BrowseCategory("לטיני", Color(0xFF1E3264), "לטיני", "https://i.scdn.co/image/ab67706f000000027f30215c0e11894a4ae7339d"),
+    BrowseCategory("רוק", Color(0xFF006450), "רוק", "https://i.scdn.co/image/ab67706f00000002fe24d7084be4aa2288d6cdc3"),
+    BrowseCategory("ישראלי", Color(0xFFE1118C), "ישראלי", "https://i.scdn.co/image/ab67706f00000002078aa27cf5c49740e53a270f"),
+    BrowseCategory("מזרחית", Color(0xFFD84000), "מזרחית", "https://i.scdn.co/image/ab67706f00000002b1f862db80bf38f828a2a537"),
+    BrowseCategory("יהודי ודתי", Color(0xFFBA5D07), "חסידי יהודי", "https://i.scdn.co/image/ab67706f0000000236a28723c316279f15037d04"),
+    BrowseCategory("אימון וכושר", Color(0xFF777777), "אימון", "https://i.scdn.co/image/ab67706f000000029249b35d23e07d9b0f4eb4c6"),
+    BrowseCategory("צ'יל ורגיעה", Color(0xFF1E3264), "צ'יל", "https://i.scdn.co/image/ab67706f000000026e515187c071e45918e9f8de"),
+    BrowseCategory("דאנס ואלקטרוני", Color(0xFF056952), "אלקטרוני", "https://i.scdn.co/image/ab67706f00000002037149a4f4d2f831bfaeb034"),
+    BrowseCategory("אינדי", Color(0xFF608108), "אינדי", "https://i.scdn.co/image/ab67706f0000000224bf1694f4a3bfec6a66a70e"),
+    BrowseCategory("מצעדים ולהיטים", Color(0xFF8C1932), "מצעדים", "https://charts-images.scdn.co/REGULAR/overview-default.jpg"),
+    BrowseCategory("ג'אז", Color(0xFF503750), "ג'אז", "https://i.scdn.co/image/ab67706f000000025a1768c78b4081c7ffcc0872"),
+    BrowseCategory("קלאסי", Color(0xFF7D4B98), "קלאסי", "https://i.scdn.co/image/ab67706f000000021670415982183ba89832a792"),
+    BrowseCategory("שינה ומנוחה", Color(0xFF1E3264), "שינה", "https://i.scdn.co/image/ab67706f00000002b70502d6174a7846f4ab5118"),
+)
+
 @RequiresApi(Build.VERSION_CODES.S)
 @Composable
 fun SearchScreen(navController: NavController) {
@@ -117,20 +163,40 @@ fun SumUpSearchScreen(
     searchViewModel: SearchViewModel,
 ) {
     val context = LocalContext.current
+    val keyboardController = LocalSoftwareKeyboardController.current
+    val focusRequester = remember { FocusRequester() }
 
-    var text by remember {
-        mutableStateOf("")
-    }
-    var selectedCategory by remember {
-        mutableStateOf<SearchCategory?>(null)
-    }
-    // Recents are the *items opened from results* (songs/artists/albums), not the
-    // typed queries, and only appear once the user taps into the search bar.
-    var searchFocused by remember { mutableStateOf(false) }
-    var recents by remember {
-        mutableStateOf(com.music.spotui.data.preferences.getRecentItems(context))
-    }
+    var text by remember { mutableStateOf("") }
+    var searchActive by remember { mutableStateOf(false) }
+    var selectedCategory by remember { mutableStateOf<SearchCategory?>(null) }
+    var recents by remember { mutableStateOf(com.music.spotui.data.preferences.getRecentItems(context)) }
     var menuSong by remember { mutableStateOf<SongsModel?>(null) }
+
+    val infiniteTransition = rememberInfiniteTransition(label = "cursorAnimation")
+    val cursorAlpha by infiniteTransition.animateFloat(
+        initialValue = 1f,
+        targetValue = 0f,
+        animationSpec = infiniteRepeatable(
+            animation = tween(durationMillis = 530, easing = LinearEasing),
+            repeatMode = RepeatMode.Reverse
+        ),
+        label = "cursorAlpha"
+    )
+
+    BackHandler(enabled = searchActive) {
+        searchActive = false
+        text = ""
+        searchViewModel.search("")
+        keyboardController?.hide()
+    }
+
+    LaunchedEffect(searchActive) {
+        if (searchActive) {
+            focusRequester.requestFocus()
+            keyboardController?.show()
+        }
+    }
+
     menuSong?.let { sel ->
         SongOptionsSheet(
             song = sel,
@@ -148,320 +214,230 @@ fun SumUpSearchScreen(
     val unifiedResults = (unifiedResultsResp as? Response.Success)?.data ?: UnifiedSearchResults()
     val mixed = remember(unifiedResults) { mixSearchResults(unifiedResults) }
 
-    // Warm the stream cache for the top search hits so tapping a result plays (near-)instantly
     LaunchedEffect(unifiedResults.songs) {
         if (unifiedResults.songs.isNotEmpty()) {
             SongPlayer.prefetchList(unifiedResults.songs.map { it.url }, context, count = 3)
         }
     }
 
-    LazyColumn(
-        contentPadding = PaddingValues(bottom = 130.dp),
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color(AppBackground.toArgb()))
-            .statusBarsPadding()
-    ) {
-        item {
-            SearchTopBar()
-        }
-        stickyHeader {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(Color(AppBackground.toArgb()))
-            ) {
-                SearchStickyBar(
-                    text = text,
-                    onFocusChange = { searchFocused = it },
+    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+        LazyColumn(
+            contentPadding = PaddingValues(bottom = 130.dp),
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color(AppBackground.toArgb()))
+                .statusBarsPadding()
+        ) {
+            stickyHeader {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(Color(AppBackground.toArgb()))
                 ) {
-                    text = it
-                    if (it.isBlank()) {
-                        selectedCategory = null
-                    }
-                    searchViewModel.search(it)
-                }
-
-                if (text.isNotBlank()) {
-                    SearchCategoryFilterChips(
-                        selectedCategory = selectedCategory,
-                        onSelectCategory = { cat ->
-                            selectedCategory = if (selectedCategory == cat) null else cat
-                        }
-                    )
-                }
-            }
-        }
-
-        if (text.isBlank()) {
-            if (searchFocused && recents.isNotEmpty()) {
-                // ── Recent searches: the items the user opened (Spotify-style),
-                // shown only once the search bar is focused ──
-                item {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(16.dp, 16.dp, 16.dp, 4.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                    ) {
-                        Text(
-                            "Recent searches",
-                            color = Color.White,
-                            fontSize = 18.sp,
-                            fontWeight = FontWeight.Bold,
+                    if (!searchActive && text.isBlank()) {
+                        SearchIdleBar(
+                            onClick = { searchActive = true }
                         )
-                        Text(
-                            "Clear",
-                            color = Color(0xFFB3B3B3),
-                            fontSize = 13.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            modifier = Modifier.clickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = null,
-                            ) {
-                                com.music.spotui.data.preferences.clearRecentItems(context)
-                                recents = emptyList()
+                    } else {
+                        SearchActiveBar(
+                            text = text,
+                            cursorAlpha = cursorAlpha,
+                            focusRequester = focusRequester,
+                            onBackClick = {
+                                searchActive = false
+                                text = ""
+                                searchViewModel.search("")
+                                keyboardController?.hide()
                             },
-                        )
-                    }
-                }
-                items(recents.size) { i ->
-                    val item = recents[i]
-                    RecentItemRow(
-                        item = item,
-                        onClick = {
-                            when (item.type) {
-                                "song" -> {
-                                    val songUrl = item.songUrl.ifBlank {
-                                        SongPlayer.buildSpotifyPlayQuery(item.spotifyTrackId, item.name, item.singer)
-                                    }.let { savedUrl ->
-                                        if (
-                                            item.spotifyTrackId.isNotBlank() &&
-                                            !savedUrl.startsWith("spotify:track:") &&
-                                            !savedUrl.startsWith("youtube:")
-                                        ) {
-                                            SongPlayer.buildSpotifyPlayQuery(item.spotifyTrackId, item.name, item.singer)
-                                        } else {
-                                            savedUrl
-                                        }
-                                    }
-                                    val song = SongsModel(
-                                        item.songId, item.name, item.songAlbum, item.singer,
-                                        item.image, songUrl, item.spotifyTrackId,
-                                        explicit = item.explicit,
-                                        durationMs = item.durationMs,
-                                    )
-                                    searchViewModel.startRadioFromSong(song)
-                                    SongPlayer.playSong(song.url, context)
-                                    searchViewModel.updateSongState(
-                                        song.coverUri, song.title, song.singer, true, song.id, 0, song.album)
+                            onTextChange = {
+                                text = it
+                                if (it.isBlank()) {
+                                    selectedCategory = null
                                 }
-                                "artist" -> navController.navigate(artistRoute(item.name, item.key.takeIf { it != item.name }.orEmpty()))
-                                "album" -> navController.navigate(albumRoute(item.name, item.singer))
-                                "show" -> navController.navigate(showRoute(item.key, item.name))
-                                "playlist" -> navController.navigate(playlistRoute(item.key, item.name))
+                                searchViewModel.search(it)
+                            },
+                            onClearClick = {
+                                text = ""
+                                selectedCategory = null
+                                searchViewModel.search("")
                             }
-                        },
-                        onRemove = {
-                            com.music.spotui.data.preferences.removeRecentItem(context, item)
-                            recents = com.music.spotui.data.preferences.getRecentItems(context)
-                        },
-                    )
-                }
-            } else {
-                // ── Spotify-style "Browse all" category grid ──
-                item {
-                    BrowseAllSection { genre, title ->
-                        navController.navigate(categoryRoute(genre, title))
-                    }
-                }
-            }
-        } else {
-            // Search has a query
-            when (unifiedResultsResp) {
-                is Response.Loading -> {
-                    item {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(200.dp),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Loader()
-                        }
-                    }
-                }
-                is Response.Error -> {
-                    item {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(32.dp),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text(
-                                text = "שגיאה בחיפוש",
-                                color = Color.Gray,
-                                fontSize = 14.sp,
+                        )
+
+                        if (text.isNotBlank()) {
+                            SearchCategoryFilterChips(
+                                selectedCategory = selectedCategory,
+                                onSelectCategory = { cat ->
+                                    selectedCategory = if (selectedCategory == cat) null else cat
+                                }
                             )
                         }
                     }
                 }
-                is Response.Success -> {
-                    when (selectedCategory) {
-                        SearchCategory.SONGS -> {
-                            if (unifiedResults.songs.isEmpty()) {
-                                item {
-                                    SearchEmptyMessage("לא נמצאו שירים עבור \"$text\"")
-                                }
-                            } else {
-                                items(unifiedResults.songs.size) { i ->
-                                    val song = unifiedResults.songs[i]
-                                    SearchSongRow(
-                                        song = song,
-                                        songList = unifiedResults.songs,
-                                        searchViewModel = searchViewModel,
-                                        onPlayed = { recordRecent(song.toRecentItem()) },
-                                        onLongClick = { menuSong = song }
-                                    )
-                                }
-                            }
+            }
+
+            if (!searchActive && text.isBlank()) {
+                item {
+                    CategoryGridSection { genre, title ->
+                        navController.navigate(categoryRoute(genre, title))
+                    }
+                }
+            } else if (text.isBlank()) {
+                if (recents.isNotEmpty()) {
+                    item {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(16.dp, 16.dp, 16.dp, 4.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                        ) {
+                            Text(
+                                "חיפושים אחרונים",
+                                color = Color.White,
+                                fontSize = 18.sp,
+                                fontWeight = FontWeight.Bold,
+                            )
+                            Text(
+                                "נקה הכל",
+                                color = Color(0xFFB3B3B3),
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                modifier = Modifier.clickable(
+                                    interactionSource = remember { MutableInteractionSource() },
+                                    indication = null,
+                                ) {
+                                    com.music.spotui.data.preferences.clearRecentItems(context)
+                                    recents = emptyList()
+                                },
+                            )
                         }
-                        SearchCategory.PLAYLISTS -> {
-                            if (unifiedResults.playlists.isEmpty()) {
-                                item {
-                                    SearchEmptyMessage("לא נמצאו פלייליסטים עבור \"$text\"")
-                                }
-                            } else {
-                                items(unifiedResults.playlists.size) { i ->
-                                    val playlistItem = unifiedResults.playlists[i]
-                                    SearchYTPlaylistRow(
-                                        item = playlistItem,
-                                        onClick = {
-                                            recordRecent(
-                                                com.music.spotui.data.preferences.RecentItem(
-                                                    type = "playlist",
-                                                    key = "youtube:${playlistItem.id}",
-                                                    name = playlistItem.title,
-                                                    singer = playlistItem.author?.name.orEmpty(),
-                                                    image = playlistItem.thumbnail ?: "",
-                                                )
-                                            )
-                                            navController.navigate(playlistRoute("youtube:${playlistItem.id}", playlistItem.title))
+                    }
+                    items(recents.size) { i ->
+                        val item = recents[i]
+                        RecentItemRow(
+                            item = item,
+                            onClick = {
+                                when (item.type) {
+                                    "song" -> {
+                                        val songUrl = item.songUrl.ifBlank {
+                                            SongPlayer.buildSpotifyPlayQuery(item.spotifyTrackId, item.name, item.singer)
+                                        }.let { savedUrl ->
+                                            if (
+                                                item.spotifyTrackId.isNotBlank() &&
+                                                !savedUrl.startsWith("spotify:track:") &&
+                                                !savedUrl.startsWith("youtube:")
+                                            ) {
+                                                SongPlayer.buildSpotifyPlayQuery(item.spotifyTrackId, item.name, item.singer)
+                                            } else {
+                                                savedUrl
+                                            }
                                         }
-                                    )
-                                }
-                            }
-                        }
-                        SearchCategory.ALBUMS -> {
-                            if (unifiedResults.albums.isEmpty()) {
-                                item {
-                                    SearchEmptyMessage("לא נמצאו אלבומים עבור \"$text\"")
-                                }
-                            } else {
-                                items(unifiedResults.albums.size) { i ->
-                                    val album = unifiedResults.albums[i]
-                                    SearchAlbumRow(
-                                        album = album,
-                                        onClick = {
-                                            recordRecent(
-                                                com.music.spotui.data.preferences.RecentItem(
-                                                    type = "album",
-                                                    key = album.name,
-                                                    name = album.name,
-                                                    singer = album.artists,
-                                                    image = album.coverUri,
-                                                )
-                                            )
-                                            navController.navigate(albumRoute(album.name, album.artists))
-                                        }
-                                    )
-                                }
-                            }
-                        }
-                        SearchCategory.ARTISTS -> {
-                            if (unifiedResults.artists.isEmpty()) {
-                                item {
-                                    SearchEmptyMessage("לא נמצאו אמנים עבור \"$text\"")
-                                }
-                            } else {
-                                items(unifiedResults.artists.size) { i ->
-                                    val artist = unifiedResults.artists[i]
-                                    SearchArtistRow(
-                                        artist = artist,
-                                        onClick = {
-                                            recordRecent(
-                                                com.music.spotui.data.preferences.RecentItem(
-                                                    type = "artist",
-                                                    key = artist.id.ifBlank { artist.name },
-                                                    name = artist.name,
-                                                    image = artist.coverUri,
-                                                )
-                                            )
-                                            navController.navigate(artistRoute(artist.name, artist.id))
-                                        }
-                                    )
-                                }
-                            }
-                        }
-                        SearchCategory.PODCASTS -> {
-                            val hasPodcasts = unifiedResults.shows.isNotEmpty() || unifiedResults.episodes.isNotEmpty()
-                            if (!hasPodcasts) {
-                                item {
-                                    SearchEmptyMessage("לא נמצאו פודקאסטים עבור \"$text\"")
-                                }
-                            } else {
-                                if (unifiedResults.shows.isNotEmpty()) {
-                                    item { SearchSectionHeader("תוכניות פודקאסט") }
-                                    items(unifiedResults.shows.size) { i ->
-                                        val show = unifiedResults.shows[i]
-                                        SearchShowRow(show) {
-                                            recordRecent(
-                                                com.music.spotui.data.preferences.RecentItem(
-                                                    type = "show",
-                                                    key = show.id,
-                                                    name = show.name,
-                                                    singer = show.publisher,
-                                                    image = show.coverUri,
-                                                )
-                                            )
-                                            navController.navigate(showRoute(show.id, show.name))
-                                        }
+                                        val song = SongsModel(
+                                            item.songId, item.name, item.songAlbum, item.singer,
+                                            item.image, songUrl, item.spotifyTrackId,
+                                            explicit = item.explicit,
+                                            durationMs = item.durationMs,
+                                        )
+                                        searchViewModel.startRadioFromSong(song)
+                                        SongPlayer.playSong(song.url, context)
+                                        searchViewModel.updateSongState(
+                                            song.coverUri, song.title, song.singer, true, song.id, 0, song.album)
                                     }
+                                    "artist" -> navController.navigate(artistRoute(item.name, item.key.takeIf { it != item.name }.orEmpty()))
+                                    "album" -> navController.navigate(albumRoute(item.name, item.singer))
+                                    "show" -> navController.navigate(showRoute(item.key, item.name))
+                                    "playlist" -> navController.navigate(playlistRoute(item.key, item.name))
                                 }
-                                if (unifiedResults.episodes.isNotEmpty()) {
-                                    item { SearchSectionHeader("פרקים") }
-                                    items(unifiedResults.episodes.size) { i ->
-                                        val ep = unifiedResults.episodes[i]
+                            },
+                            onRemove = {
+                                com.music.spotui.data.preferences.removeRecentItem(context, item)
+                                recents = com.music.spotui.data.preferences.getRecentItems(context)
+                            },
+                        )
+                    }
+                } else {
+                    item {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 180.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                modifier = Modifier.padding(horizontal = 32.dp)
+                            ) {
+                                Text(
+                                    text = "נגנו מוזיקה שאתם אוהבים",
+                                    color = Color.White,
+                                    fontSize = 19.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    textAlign = TextAlign.Center
+                                )
+                                Spacer(modifier = Modifier.height(8.dp))
+                                Text(
+                                    text = "חפשו אמנים, שירים, פלייליסטים, פודקאסטים ועוד.",
+                                    color = Color(0xFFB3B3B3),
+                                    fontSize = 13.sp,
+                                    fontWeight = FontWeight.Normal,
+                                    textAlign = TextAlign.Center
+                                )
+                            }
+                        }
+                    }
+                }
+            } else {
+                when (unifiedResultsResp) {
+                    is Response.Loading -> {
+                        item {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(200.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Loader()
+                            }
+                        }
+                    }
+                    is Response.Error -> {
+                        item {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(32.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(
+                                    text = "שגיאה בחיפוש",
+                                    color = Color.Gray,
+                                    fontSize = 14.sp,
+                                )
+                            }
+                        }
+                    }
+                    is Response.Success -> {
+                        when (selectedCategory) {
+                            SearchCategory.SONGS -> {
+                                if (unifiedResults.songs.isEmpty()) {
+                                    item { SearchEmptyMessage("לא נמצאו שירים עבור \"$text\"") }
+                                } else {
+                                    items(unifiedResults.songs.size) { i ->
+                                        val song = unifiedResults.songs[i]
                                         SearchSongRow(
-                                            song = ep,
-                                            songList = unifiedResults.episodes,
+                                            song = song,
+                                            songList = unifiedResults.songs,
                                             searchViewModel = searchViewModel,
-                                            onPlayed = { recordRecent(ep.toRecentItem()) },
-                                            onLongClick = { menuSong = ep }
+                                            onPlayed = { recordRecent(song.toRecentItem()) },
+                                            onLongClick = { menuSong = song }
                                         )
                                     }
                                 }
                             }
-                        }
-                        null -> {
-                            // Unified/All view
-                            val isEmpty = unifiedResults.songs.isEmpty() &&
-                                    unifiedResults.playlists.isEmpty() &&
-                                    unifiedResults.artists.isEmpty() &&
-                                    unifiedResults.albums.isEmpty() &&
-                                    unifiedResults.shows.isEmpty() &&
-                                    unifiedResults.episodes.isEmpty()
-
-                            if (isEmpty) {
-                                item {
-                                    SearchEmptyMessage("לא נמצאו תוצאות עבור \"$text\"")
-                                }
-                            } else {
-                                // Playlists section if any playlists found
-                                if (unifiedResults.playlists.isNotEmpty()) {
-                                    item { SearchSectionHeader("פלייליסטים") }
+                            SearchCategory.PLAYLISTS -> {
+                                if (unifiedResults.playlists.isEmpty()) {
+                                    item { SearchEmptyMessage("לא נמצאו פלייליסטים עבור \"$text\"") }
+                                } else {
                                     items(unifiedResults.playlists.size) { i ->
                                         val playlistItem = unifiedResults.playlists[i]
                                         SearchYTPlaylistRow(
@@ -481,21 +457,131 @@ fun SumUpSearchScreen(
                                         )
                                     }
                                 }
+                            }
+                            SearchCategory.ALBUMS -> {
+                                if (unifiedResults.albums.isEmpty()) {
+                                    item { SearchEmptyMessage("לא נמצאו אלבומים עבור \"$text\"") }
+                                } else {
+                                    items(unifiedResults.albums.size) { i ->
+                                        val album = unifiedResults.albums[i]
+                                        SearchAlbumRow(
+                                            album = album,
+                                            onClick = {
+                                                recordRecent(
+                                                    com.music.spotui.data.preferences.RecentItem(
+                                                        type = "album",
+                                                        key = album.name,
+                                                        name = album.name,
+                                                        singer = album.artists,
+                                                        image = album.coverUri,
+                                                    )
+                                                )
+                                                navController.navigate(albumRoute(album.name, album.artists))
+                                            }
+                                        )
+                                    }
+                                }
+                            }
+                            SearchCategory.ARTISTS -> {
+                                if (unifiedResults.artists.isEmpty()) {
+                                    item { SearchEmptyMessage("לא נמצאו אמנים עבור \"$text\"") }
+                                } else {
+                                    items(unifiedResults.artists.size) { i ->
+                                        val artist = unifiedResults.artists[i]
+                                        SearchArtistRow(
+                                            artist = artist,
+                                            onClick = {
+                                                recordRecent(
+                                                    com.music.spotui.data.preferences.RecentItem(
+                                                        type = "artist",
+                                                        key = artist.id.ifBlank { artist.name },
+                                                        name = artist.name,
+                                                        image = artist.coverUri,
+                                                    )
+                                                )
+                                                navController.navigate(artistRoute(artist.name, artist.id))
+                                            }
+                                        )
+                                    }
+                                }
+                            }
+                            SearchCategory.PODCASTS -> {
+                                val hasPodcasts = unifiedResults.shows.isNotEmpty() || unifiedResults.episodes.isNotEmpty()
+                                if (!hasPodcasts) {
+                                    item { SearchEmptyMessage("לא נמצאו פודקאסטים עבור \"$text\"") }
+                                } else {
+                                    if (unifiedResults.shows.isNotEmpty()) {
+                                        item { SearchSectionHeader("פודקאסטים") }
+                                        items(unifiedResults.shows.size) { i ->
+                                            val show = unifiedResults.shows[i]
+                                            SearchShowRow(show) {
+                                                recordRecent(
+                                                    com.music.spotui.data.preferences.RecentItem(
+                                                        type = "show",
+                                                        key = show.id,
+                                                        name = show.name,
+                                                        singer = show.publisher,
+                                                        image = show.coverUri,
+                                                    )
+                                                )
+                                                navController.navigate(showRoute(show.id, show.name))
+                                            }
+                                        }
+                                    }
+                                    if (unifiedResults.episodes.isNotEmpty()) {
+                                        item { SearchSectionHeader("פרקים") }
+                                        items(unifiedResults.episodes.size) { i ->
+                                            val ep = unifiedResults.episodes[i]
+                                            SearchSongRow(
+                                                song = ep,
+                                                songList = unifiedResults.episodes,
+                                                searchViewModel = searchViewModel,
+                                                onPlayed = { recordRecent(ep.toRecentItem()) },
+                                                onLongClick = { menuSong = ep }
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+                            null -> {
+                                val isEmpty = unifiedResults.songs.isEmpty() &&
+                                        unifiedResults.playlists.isEmpty() &&
+                                        unifiedResults.artists.isEmpty() &&
+                                        unifiedResults.albums.isEmpty() &&
+                                        unifiedResults.shows.isEmpty() &&
+                                        unifiedResults.episodes.isEmpty()
 
-                                // Mixed Results (Songs, Artists, Albums)
-                                if (mixed.isNotEmpty()) {
+                                if (isEmpty) {
+                                    item { SearchEmptyMessage("לא נמצאו תוצאות עבור \"$text\"") }
+                                } else {
                                     if (unifiedResults.playlists.isNotEmpty()) {
-                                        item { SearchSectionHeader("שירים ותוצאות נוספות") }
+                                        item { SearchSectionHeader("פלייליסטים") }
+                                        items(unifiedResults.playlists.size) { i ->
+                                            val playlistItem = unifiedResults.playlists[i]
+                                            SearchYTPlaylistRow(
+                                                item = playlistItem,
+                                                onClick = {
+                                                    recordRecent(
+                                                        com.music.spotui.data.preferences.RecentItem(
+                                                            type = "playlist",
+                                                            key = "youtube:${playlistItem.id}",
+                                                            name = playlistItem.title,
+                                                            singer = playlistItem.author?.name.orEmpty(),
+                                                            image = playlistItem.thumbnail ?: "",
+                                                        )
+                                                    )
+                                                    navController.navigate(playlistRoute("youtube:${playlistItem.id}", playlistItem.title))
+                                                }
+                                            )
+                                        }
                                     }
                                     items(mixed.size) { i ->
                                         when (val row = mixed[i]) {
                                             is SearchRow.Song -> SearchSongRow(
-                                                row.song,
-                                                unifiedResults.songs,
-                                                searchViewModel,
-                                                onPlayed = {
-                                                    recordRecent(row.song.toRecentItem())
-                                                },
+                                                song = row.song,
+                                                songList = unifiedResults.songs,
+                                                searchViewModel = searchViewModel,
+                                                onPlayed = { recordRecent(row.song.toRecentItem()) },
                                                 onLongClick = { menuSong = row.song }
                                             )
                                             is SearchRow.Artist -> SearchArtistRow(row.artist) {
@@ -519,38 +605,36 @@ fun SumUpSearchScreen(
                                             }
                                         }
                                     }
-                                }
-
-                                // Podcasts: Shows & Episodes
-                                if (unifiedResults.shows.isNotEmpty()) {
-                                    item { SearchSectionHeader("Podcasts") }
-                                    items(unifiedResults.shows.size) { i ->
-                                        val show = unifiedResults.shows[i]
-                                        SearchShowRow(show) {
-                                            recordRecent(com.music.spotui.data.preferences.RecentItem(
-                                                type = "show",
-                                                key = show.id,
-                                                name = show.name,
-                                                singer = show.publisher,
-                                                image = show.coverUri,
-                                            ))
-                                            navController.navigate(showRoute(show.id, show.name))
+                                    if (unifiedResults.shows.isNotEmpty()) {
+                                        item { SearchSectionHeader("פודקאסטים") }
+                                        items(unifiedResults.shows.size) { i ->
+                                            val show = unifiedResults.shows[i]
+                                            SearchShowRow(show) {
+                                                recordRecent(com.music.spotui.data.preferences.RecentItem(
+                                                    type = "show",
+                                                    key = show.id,
+                                                    name = show.name,
+                                                    singer = show.publisher,
+                                                    image = show.coverUri,
+                                                ))
+                                                navController.navigate(showRoute(show.id, show.name))
+                                            }
                                         }
                                     }
-                                }
-                                if (unifiedResults.episodes.isNotEmpty()) {
-                                    item { SearchSectionHeader("Episodes") }
-                                    items(unifiedResults.episodes.size) { i ->
-                                        val ep = unifiedResults.episodes[i]
-                                        SearchSongRow(
-                                            ep,
-                                            unifiedResults.episodes,
-                                            searchViewModel,
-                                            onPlayed = {
-                                                recordRecent(ep.toRecentItem())
-                                            },
-                                            onLongClick = { menuSong = ep }
-                                        )
+                                    if (unifiedResults.episodes.isNotEmpty()) {
+                                        item { SearchSectionHeader("פרקים") }
+                                        items(unifiedResults.episodes.size) { i ->
+                                            val ep = unifiedResults.episodes[i]
+                                            SearchSongRow(
+                                                ep,
+                                                unifiedResults.episodes,
+                                                searchViewModel,
+                                                onPlayed = {
+                                                    recordRecent(ep.toRecentItem())
+                                                },
+                                                onLongClick = { menuSong = ep }
+                                            )
+                                        }
                                     }
                                 }
                             }
@@ -559,6 +643,211 @@ fun SumUpSearchScreen(
                 }
             }
         }
+    }
+}
+
+@Composable
+fun SearchIdleBar(onClick: () -> Unit) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 14.dp, vertical = 10.dp)
+            .clip(RoundedCornerShape(8.dp))
+            .height(48.dp)
+            .background(Color.White)
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+            ) { onClick() }
+            .padding(horizontal = 12.dp)
+    ) {
+        Icon(
+            painter = painterResource(id = R.drawable.ic_search_big),
+            tint = Color(0xFF121212),
+            contentDescription = "חיפוש",
+            modifier = Modifier.size(20.dp)
+        )
+        Spacer(modifier = Modifier.width(10.dp))
+        Text(
+            text = "לאיזה תוכן תרצו להאזין?",
+            color = Color(0xFF242424),
+            fontSize = 15.sp,
+            fontWeight = FontWeight.Bold,
+        )
+    }
+}
+
+@Composable
+fun SearchActiveBar(
+    text: String,
+    cursorAlpha: Float,
+    focusRequester: FocusRequester,
+    onBackClick: () -> Unit,
+    onTextChange: (String) -> Unit,
+    onClearClick: () -> Unit,
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(48.dp)
+            .background(Color(0xFF282828))
+            .padding(horizontal = 12.dp)
+    ) {
+        Icon(
+            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+            contentDescription = "חזרה",
+            tint = Color.White,
+            modifier = Modifier
+                .size(24.dp)
+                .clickable(
+                    interactionSource = remember { MutableInteractionSource() },
+                    indication = null,
+                ) { onBackClick() }
+        )
+
+        Spacer(modifier = Modifier.width(12.dp))
+
+        Box(
+            modifier = Modifier.weight(1f),
+            contentAlignment = Alignment.CenterStart
+        ) {
+            BasicTextField(
+                value = text,
+                onValueChange = onTextChange,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .focusRequester(focusRequester),
+                textStyle = TextStyle(
+                    color = Color.White,
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Medium,
+                    textDirection = TextDirection.ContentOrRtl
+                ),
+                cursorBrush = SolidColor(Color(0xFF1ED760)),
+                singleLine = true,
+                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                keyboardActions = KeyboardActions(onSearch = {}),
+                decorationBox = { innerTextField ->
+                    if (text.isEmpty()) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Text(
+                                text = "לאיזה תוכן תרצו להאזין?",
+                                color = Color(0xFFB3B3B3),
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.Normal,
+                            )
+                            Spacer(modifier = Modifier.width(2.dp))
+                            Box(
+                                modifier = Modifier
+                                    .width(2.dp)
+                                    .height(18.dp)
+                                    .alpha(cursorAlpha)
+                                    .background(Color(0xFF1ED760))
+                            )
+                        }
+                    }
+                    innerTextField()
+                }
+            )
+        }
+
+        if (text.isNotBlank()) {
+            Icon(
+                imageVector = Icons.Default.Close,
+                tint = Color.White,
+                contentDescription = "נקה",
+                modifier = Modifier
+                    .size(20.dp)
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null,
+                    ) { onClearClick() }
+            )
+        }
+    }
+}
+
+@Composable
+fun CategoryGridSection(onCategoryClick: (genre: String, title: String) -> Unit) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 10.dp, vertical = 6.dp)
+    ) {
+        browseCategories.chunked(2).forEach { rowItems ->
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 5.dp),
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                rowItems.forEach { cat ->
+                    BrowseCategoryTile(
+                        name = cat.title,
+                        color = cat.color,
+                        coverUrl = cat.coverUrl,
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        onCategoryClick(cat.query, cat.title)
+                    }
+                }
+                if (rowItems.size == 1) Spacer(modifier = Modifier.weight(1f))
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalGlideComposeApi::class)
+@Composable
+private fun BrowseCategoryTile(
+    name: String,
+    color: Color,
+    coverUrl: String,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit,
+) {
+    Box(
+        modifier = modifier
+            .height(100.dp)
+            .clip(RoundedCornerShape(8.dp))
+            .background(color)
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+            ) { onClick() },
+    ) {
+        if (coverUrl.isNotBlank()) {
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomStart)
+                    .offset(x = (-10).dp, y = 10.dp)
+                    .rotate(-22f)
+            ) {
+                GlideImage(
+                    model = coverUrl,
+                    contentScale = ContentScale.Crop,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(68.dp)
+                        .clip(RoundedCornerShape(4.dp)),
+                )
+            }
+        }
+        Text(
+            text = name,
+            color = Color.White,
+            fontSize = 15.sp,
+            fontWeight = FontWeight.Bold,
+            maxLines = 2,
+            modifier = Modifier
+                .align(Alignment.TopEnd)
+                .padding(12.dp),
+        )
     }
 }
 
@@ -583,55 +872,41 @@ fun SearchCategoryFilterChips(
     selectedCategory: SearchCategory?,
     onSelectCategory: (SearchCategory) -> Unit,
 ) {
-    CompositionLocalProvider(
-        LocalLayoutDirection provides LayoutDirection.Rtl
+    LazyRow(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 4.dp, bottom = 8.dp),
+        contentPadding = PaddingValues(horizontal = 12.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        LazyRow(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(bottom = 8.dp),
-            contentPadding = PaddingValues(horizontal = 12.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            val categories = SearchCategory.values()
-            items(categories.size) { index ->
-                val category = categories[index]
-                val isSelected = selectedCategory == category
-                Box(
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(20.dp))
-                        .background(if (isSelected) Color(0xFF1DB954) else Color(0xFF2A2A2A))
-                        .clickable(
-                            interactionSource = remember { MutableInteractionSource() },
-                            indication = null,
-                        ) { onSelectCategory(category) }
-                        .padding(horizontal = 16.dp, vertical = 8.dp),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = category.title,
-                        color = if (isSelected) Color.Black else Color.White,
-                        fontSize = 13.sp,
-                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium
-                    )
-                }
+        val categories = SearchCategory.values()
+        items(categories.size) { index ->
+            val category = categories[index]
+            val isSelected = selectedCategory == category
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(50))
+                    .background(if (isSelected) Color(0xFF1ED760) else Color(0xFF2A2A2A))
+                    .clickable { onSelectCategory(category) }
+                    .padding(horizontal = 14.dp, vertical = 6.dp),
+            ) {
+                Text(
+                    text = category.title,
+                    color = if (isSelected) Color.Black else Color.White,
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.Medium,
+                )
             }
         }
     }
 }
 
-/** A single row in the search results: a track, an artist, or an album. */
 sealed class SearchRow {
     data class Song(val song: SongsModel) : SearchRow()
     data class Artist(val artist: com.music.spotui.data.entity.ArtistsModel) : SearchRow()
     data class Album(val album: com.music.spotui.data.entity.AlbumsModel) : SearchRow()
 }
 
-/**
- * Interleaves the three result types into one list, weighted toward songs
- * (2 songs per artist+album cycle) so the list reads as mixed rather than
- * grouped, while songs — the most common search intent — stay prominent.
- */
 private fun mixSearchResults(results: UnifiedSearchResults): List<SearchRow> {
     val songs = results.songs.iterator()
     val artists = results.artists.iterator()
@@ -645,7 +920,6 @@ private fun mixSearchResults(results: UnifiedSearchResults): List<SearchRow> {
     return out
 }
 
-/** Maps a tapped search-result song to a persisted recent item. */
 private fun SongsModel.toRecentItem() = com.music.spotui.data.preferences.RecentItem(
     type = "song",
     key = spotifyTrackId.ifBlank { url },
@@ -660,7 +934,6 @@ private fun SongsModel.toRecentItem() = com.music.spotui.data.preferences.Recent
     durationMs = durationMs,
 )
 
-/** A recent item row (song/artist/album/show the user opened), with remove (x). */
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 fun RecentItemRow(
@@ -695,10 +968,11 @@ fun RecentItemRow(
         ) {
             Text(text = item.name, color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.Medium, maxLines = 1)
             val subtitle = when (item.type) {
-                "song" -> "Song • ${item.singer}"
-                "artist" -> "Artist"
-                "album" -> "Album • ${item.singer}"
-                "show" -> "Podcast" + (if (item.singer.isNotBlank()) " • ${item.singer}" else "")
+                "song" -> "שיר • ${item.singer}"
+                "artist" -> "אמן"
+                "album" -> "אלבום • ${item.singer}"
+                "show" -> "פודקאסט" + (if (item.singer.isNotBlank()) " • ${item.singer}" else "")
+                "playlist" -> "פלייליסט" + (if (item.singer.isNotBlank()) " • ${item.singer}" else "")
                 else -> ""
             }
             Text(text = subtitle, color = Color.Gray, fontSize = 12.sp, fontWeight = FontWeight.Medium, maxLines = 1)
@@ -712,7 +986,7 @@ fun RecentItemRow(
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null,
                 ) { onRemove() },
-            contentDescription = "Remove",
+            contentDescription = "הסר",
         )
     }
 }
@@ -778,7 +1052,7 @@ fun SearchSongRow(
             )
             Column(modifier = Modifier.weight(1f)) {
                 Text(text = song.title, color = currentPlayingIndicatorColor, fontSize = 14.sp, fontWeight = FontWeight.Medium, maxLines = 1)
-                Text(text = "Song • ${song.singer}", color = Color.Gray, fontSize = 12.sp, fontWeight = FontWeight.Medium, maxLines = 1)
+                Text(text = "שיר • ${song.singer}", color = Color.Gray, fontSize = 12.sp, fontWeight = FontWeight.Medium, maxLines = 1)
             }
         }
 
@@ -839,7 +1113,7 @@ fun SearchShowRow(show: com.music.spotui.data.entity.PodcastModel, onClick: () -
         Column {
             Text(text = show.name, color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.Medium, maxLines = 1)
             Text(
-                text = "Podcast" + (if (show.publisher.isNotBlank()) " • ${show.publisher}" else ""),
+                text = "פודקאסט" + (if (show.publisher.isNotBlank()) " • ${show.publisher}" else ""),
                 color = Color.Gray, fontSize = 12.sp, fontWeight = FontWeight.Medium, maxLines = 1,
             )
         }
@@ -872,7 +1146,7 @@ fun SearchArtistRow(artist: com.music.spotui.data.entity.ArtistsModel, onClick: 
         )
         Column {
             Text(text = artist.name, color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.Medium)
-            Text(text = "Artist", color = Color.Gray, fontSize = 12.sp, fontWeight = FontWeight.Medium)
+            Text(text = "אמן", color = Color.Gray, fontSize = 12.sp, fontWeight = FontWeight.Medium)
         }
     }
 }
@@ -903,189 +1177,7 @@ fun SearchAlbumRow(album: com.music.spotui.data.entity.AlbumsModel, onClick: () 
         )
         Column {
             Text(text = album.name, color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.Medium)
-            Text(text = "Album • ${album.artists}", color = Color.Gray, fontSize = 12.sp, fontWeight = FontWeight.Medium, maxLines = 1)
-        }
-    }
-}
-
-/** Spotify's "Browse all" categories: name + tile colour + the search query it runs. */
-private val browseCategories: List<Triple<String, Color, String>> = listOf(
-    Triple("Music", Color(0xFFDC148C), "Top hits"),
-    Triple("Podcasts", Color(0xFF1E3264), "Podcast"),
-    Triple("Made For You", Color(0xFF8768A8), "Discover weekly"),
-    Triple("New Releases", Color(0xFFE8115B), "New releases"),
-    Triple("Pop", Color(0xFF8D67AB), "Pop"),
-    Triple("Hip-Hop", Color(0xFF477D95), "Hip hop"),
-    Triple("Rock", Color(0xFFE61E32), "Rock"),
-    Triple("Latin", Color(0xFFE1118C), "Latin"),
-    Triple("Country", Color(0xFFD84000), "Country"),
-    Triple("R&B", Color(0xFFBA5D07), "R&B"),
-    Triple("K-Pop", Color(0xFF148A08), "K-pop"),
-    Triple("Indie", Color(0xFF608108), "Indie"),
-    Triple("Dance/Electronic", Color(0xFF056952), "Electronic dance"),
-    Triple("Metal", Color(0xFF777777), "Metal"),
-    Triple("Chill", Color(0xFF1E3264), "Chill"),
-    Triple("Charts", Color(0xFF8C1932), "Top charts"),
-    Triple("Workout", Color(0xFF777777), "Workout"),
-    Triple("Jazz", Color(0xFF503750), "Jazz"),
-)
-
-@Composable
-fun BrowseAllSection(onCategoryClick: (genre: String, title: String) -> Unit) {
-    Column(modifier = Modifier.fillMaxWidth()) {
-        Text(
-            text = "Browse all",
-            color = Color.White,
-            fontSize = 22.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(16.dp, 12.dp, 16.dp, 8.dp),
-        )
-        browseCategories.chunked(2).forEach { rowItems ->
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(8.dp, 4.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
-            ) {
-                rowItems.forEach { (name, color, query) ->
-                    BrowseCategoryTile(name, color, query, Modifier.weight(1f)) { onCategoryClick(query, name) }
-                }
-                // Keep a half-width spacer if the last row has a single tile.
-                if (rowItems.size == 1) Spacer(Modifier.weight(1f))
-            }
-        }
-    }
-}
-
-@OptIn(ExperimentalGlideComposeApi::class)
-@Composable
-private fun BrowseCategoryTile(
-    name: String,
-    color: Color,
-    query: String,
-    modifier: Modifier = Modifier,
-    onClick: () -> Unit,
-) {
-    val context = LocalContext.current
-    // Cover of the category's top playlist, shown tilted in the corner like
-    // Spotify web's browse tiles. Empty until resolved (cached per session).
-    val cover by androidx.compose.runtime.produceState(initialValue = "", key1 = query) {
-        value = com.music.spotui.data.api.BrowseTileImages.coverFor(context, query)
-    }
-    Box(
-        modifier = modifier
-            .height(96.dp)
-            .clip(RoundedCornerShape(8.dp))
-            .background(color)
-            .clickable(
-                interactionSource = remember { MutableInteractionSource() },
-                indication = null,
-            ) { onClick() },
-    ) {
-        if (cover.isNotBlank()) {
-            GlideImage(
-                model = cover,
-                contentScale = ContentScale.Crop,
-                contentDescription = null,
-                modifier = Modifier
-                    .align(Alignment.BottomEnd)
-                    .size(64.dp)
-                    .offset(x = 16.dp, y = 10.dp)
-                    .rotate(25f)
-                    .clip(RoundedCornerShape(4.dp)),
-            )
-        }
-        Text(
-            text = name,
-            color = Color.White,
-            fontSize = 16.sp,
-            fontWeight = FontWeight.Bold,
-            maxLines = 2,
-            modifier = Modifier.padding(12.dp),
-        )
-    }
-}
-
-@Composable
-fun SearchTopBar() {
-    Row(horizontalArrangement = Arrangement.Start,
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp)
-    ) {
-        Text(text = "Search", color = Color.White, fontSize = 22.sp, fontWeight = FontWeight.Bold)
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@RequiresApi(Build.VERSION_CODES.S)
-@Composable
-fun SearchStickyBar(
-    text: String,
-    onFocusChange: (Boolean) -> Unit = {},
-    onTextChange: (String) -> Unit,
-) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 10.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .height(55.dp)
-            .background(Color.White)
-            .padding(horizontal = 10.dp)
-    ) {
-        Icon(
-            painterResource(id = R.drawable.ic_search_big),
-            tint = Color.Black,
-            contentDescription = ""
-        )
-
-        TextField(
-            enabled = true,
-            modifier = Modifier
-                .weight(1f)
-                .onFocusChanged { onFocusChange(it.isFocused) },
-            value = text,
-            textStyle = TextStyle.Default.copy(
-                fontSize = 16.sp,
-                color = Color.Black,
-                fontWeight = FontWeight(500)
-            ),
-            colors = TextFieldDefaults.colors(
-                unfocusedContainerColor = Color.Transparent,
-                disabledContainerColor = Color.Transparent,
-                focusedContainerColor = Color.Transparent,
-                disabledIndicatorColor = Color.Transparent,
-                focusedIndicatorColor = Color.Transparent,
-                unfocusedIndicatorColor = Color.Transparent,
-                cursorColor = Color.Black
-            ),
-            singleLine = true,
-            onValueChange = onTextChange,
-            placeholder = {
-                Text(
-                    fontWeight = FontWeight.Bold,
-                    text = "מה תרצה לשמוע?"
-                )
-            }
-        )
-
-        if (text.isNotBlank()) {
-            Icon(
-                imageVector = Icons.Default.Close,
-                tint = Color.Black,
-                contentDescription = "Clear",
-                modifier = Modifier
-                    .size(22.dp)
-                    .clickable(
-                        interactionSource = remember { MutableInteractionSource() },
-                        indication = null,
-                    ) {
-                        onTextChange("")
-                    }
-            )
+            Text(text = "אלבום • ${album.artists}", color = Color.Gray, fontSize = 12.sp, fontWeight = FontWeight.Medium, maxLines = 1)
         }
     }
 }
@@ -1137,4 +1229,5 @@ fun SearchYTPlaylistRow(
         }
     }
 }
+
 
