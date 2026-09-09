@@ -906,8 +906,8 @@ fun SearchCategoryFilterChips(
     LazyRow(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 4.dp, bottom = 8.dp),
-        contentPadding = PaddingValues(horizontal = 12.dp),
+            .padding(top = 12.dp, bottom = 12.dp),
+        contentPadding = PaddingValues(horizontal = 14.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         val categories = SearchCategory.values()
@@ -918,8 +918,12 @@ fun SearchCategoryFilterChips(
                 modifier = Modifier
                     .clip(RoundedCornerShape(50))
                     .background(if (isSelected) Color(0xFF1ED760) else Color(0xFF2A2A2A))
-                    .clickable { onSelectCategory(category) }
-                    .padding(horizontal = 14.dp, vertical = 6.dp),
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null,
+                    ) { onSelectCategory(category) }
+                    .padding(horizontal = 15.dp, vertical = 7.dp),
+                contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = category.title,
