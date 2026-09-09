@@ -114,7 +114,7 @@ fun ArtistOptionsSheet(
             )
 
             if (com.music.spotui.BuildConfig.IS_ADMIN) {
-                val isWhitelisted = com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(artistId, artistName)
+                val isWhitelisted = com.music.spotui.util.KosherWhitelistManager.isArtistInWhitelist(artistId, artistName)
                 if (isWhitelisted) {
                     ArtistMenuRow(
                         icon = Icons.Default.Close,
