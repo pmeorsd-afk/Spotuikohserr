@@ -29,6 +29,7 @@ class MyApplication : Application(){
         super.onCreate()
         instance = this
         com.music.spotui.util.CrashLogger.init(this)
+        com.music.spotui.util.KosherWhitelistManager.init(this)
         if (BuildConfig.DEBUG && Timber.forest().isEmpty()) {
             Timber.plant(Timber.DebugTree())
         }

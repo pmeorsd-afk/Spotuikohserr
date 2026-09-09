@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.screens
+package com.music.spotui.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -204,6 +204,7 @@ private fun HistoryRow(entry: HistoryEntry, onRemove: () -> Unit) {
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(null, entry.title, entry.singer),
             contentDescription = "",
         )
         Column(

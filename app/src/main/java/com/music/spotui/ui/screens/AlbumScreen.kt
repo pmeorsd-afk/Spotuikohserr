@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.screens
+package com.music.spotui.ui.screens
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -223,6 +223,19 @@ fun SumUpAlbumScreen(
     ) { innerPadding ->
 
 
+        val albumArtist = album.firstOrNull()?.artists?.ifBlank { albumSongs.firstOrNull()?.singer ?: "" } ?: ""
+        val isAlbumAllowed = com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(null, albumArtist)
+        LaunchedEffect(isAlbumAllowed, album, albumSongs) {
+            if (isAlbumAllowed) {
+                album.firstOrNull()?.coverUri?.takeIf { it.isNotBlank() }?.let {
+                    com.music.spotui.util.KosherWhitelistManager.allowImageUrl(it)
+                }
+                albumSongs.forEach { s ->
+                    if (s.coverUri.isNotBlank()) com.music.spotui.util.KosherWhitelistManager.allowImageUrl(s.coverUri)
+                }
+            }
+        }
+
         Column(modifier = Modifier
             .fillMaxSize()
             .background(Color(AppBackground.toArgb()))
@@ -259,6 +272,7 @@ fun SumUpAlbumScreen(
                         failure = placeholder(R.drawable.placeholder),
                         //loading = placeholder(R.drawable.album),
                         //contentScale = ContentScale.Crop,
+                        isAllowed = isAlbumAllowed,
                         contentDescription = "",
                     )
                 }
@@ -312,6 +326,7 @@ fun SumUpAlbumScreen(
                                 failure = placeholder(R.drawable.placeholder),
                                 //loading = placeholder(R.drawable.album),
                                 contentScale = ContentScale.Crop,
+                                isAllowed = isAlbumAllowed,
                                 contentDescription = "",
                             )
                             Icon(

@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.screens
+package com.music.spotui.ui.screens
 
 import android.os.Build
 import android.util.Log
@@ -281,6 +281,7 @@ private fun HomeShortcutGrid(navController: NavController, items: List<HomeItem>
                             model = item.imageUrl,
                             loading = placeholder(R.drawable.placeholder),
                             failure = placeholder(R.drawable.placeholder),
+                            isAllowed = com.music.spotui.util.KosherWhitelistManager.isHomeItemWhitelisted(item),
                             contentDescription = "",
                         )
                         Text(
@@ -342,6 +343,7 @@ private fun HomeFeedCard(item: HomeItem, onClick: () -> Unit) {
             model = item.imageUrl,
             loading = placeholder(R.drawable.placeholder),
             failure = placeholder(R.drawable.placeholder),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isHomeItemWhitelisted(item),
             contentDescription = "",
         )
         Spacer(modifier = Modifier.height(6.dp))
@@ -495,12 +497,14 @@ fun HomePlaylistGrid(navController: NavController, albums: List<AlbumsModel>) {
                                 navController.navigate(albumRoute(albumModel.name, albumModel.artists))
                             }
                     ) {
+                        val albItem = chunkedAlbums[it][album]
                         GlideImage(modifier = Modifier
                             .size(55.dp),
                             contentScale = ContentScale.Crop,
-                            model = chunkedAlbums[it][album].coverUri,
+                            model = albItem.coverUri,
                             loading = placeholder(R.drawable.placeholder),
                             failure = placeholder(R.drawable.placeholder),
+                            isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(albItem),
                             contentDescription = "Profile")
                         Text(modifier = Modifier.padding(5.dp),
                             text = chunkedAlbums[it][album].name,
@@ -549,12 +553,14 @@ fun HomeAlbums(
                     horizontalAlignment = Alignment.Start,
                     ) {
 
+                    val albItem = reversedAlbum[album]
                     GlideImage(modifier = Modifier
                         .size(150.dp),
                         contentScale = ContentScale.Crop,
-                        model = reversedAlbum[album].coverUri,
+                        model = albItem.coverUri,
                         loading = placeholder(R.drawable.placeholder),
                         failure = placeholder(R.drawable.placeholder),
+                        isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(albItem),
                         contentDescription = "Albums")
                     Text(
                         fontSize = 13.sp,
@@ -647,12 +653,14 @@ fun HomeArtists(
 
 
 
+                    val artistItem = artists[artist]
                     GlideImage(modifier = Modifier
                         .size(150.dp),
                         contentScale = ContentScale.Crop,
-                        model = artists[artist].coverUri,
+                        model = artistItem.coverUri,
                         loading = placeholder(R.drawable.placeholder),
                         failure = placeholder(R.drawable.placeholder),
+                        isAllowed = com.music.spotui.util.KosherWhitelistManager.isArtistModelWhitelisted(artistItem),
                         contentDescription = "Albums")
                     Text(modifier = Modifier.padding(2.dp),
                         text = "This is ${artists[artist].name}",
@@ -705,12 +713,14 @@ fun ImageCard(
                     modifier = Modifier
                         .fillMaxSize()
                 ) {
+                    val albumItem = albums[album]
                     GlideImage(
                         modifier = Modifier.fillMaxSize(),
-                        model = albums[album].coverUri,
+                        model = albumItem.coverUri,
                         contentDescription = "artists",
                         loading = placeholder(R.drawable.placeholder),
                         failure = placeholder(R.drawable.placeholder),
+                        isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(albumItem),
                         contentScale = ContentScale.Crop
                     )
                     Box(

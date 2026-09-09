@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.screens
+package com.music.spotui.ui.screens
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -248,6 +248,7 @@ fun DownloadsScreen(navController: NavController) {
                             model = song.coverUri,
                             failure = placeholder(R.drawable.placeholder),
                             contentScale = ContentScale.Crop,
+                            isAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(song),
                             contentDescription = "",
                         )
                         Column(modifier = Modifier.padding(start = 12.dp).weight(1f)) {
