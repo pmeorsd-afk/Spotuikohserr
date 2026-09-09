@@ -4,10 +4,10 @@ import androidx.annotation.DrawableRes
 import com.music.spotui.R
 
 sealed class Routes(
-    @property:DrawableRes val icon : Int = 0,
+    @param:DrawableRes val icon : Int = 0,
     val label : String,
     val route : String,
-    @property:DrawableRes val selectedIcon : Int = icon
+    @param:DrawableRes val selectedIcon : Int = icon
 ) {
     object Home : Routes(icon = R.drawable.ic_home_outline, label = "מסך הבית", route = "home", selectedIcon = R.drawable.ic_home_filled)
     object Search : Routes(icon = R.drawable.ic_search_outline, label = "חיפוש", route = "search", selectedIcon = R.drawable.ic_search_filled)
