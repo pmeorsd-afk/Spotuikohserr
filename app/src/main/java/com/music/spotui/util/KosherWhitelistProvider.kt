@@ -13,6 +13,7 @@ class KosherWhitelistProvider : ContentProvider() {
         const val ADMIN_AUTHORITY = "com.music.spotui.admin.provider.whitelist"
         val CONTENT_URI_ADMIN: Uri = Uri.parse("content://$ADMIN_AUTHORITY/whitelist")
         val CONTENT_URI_USER: Uri = Uri.parse("content://$AUTHORITY/whitelist")
+        const val COLUMN_WHITELIST_JSON = "whitelist_json"
     }
 
     override fun onCreate(): Boolean = true
@@ -24,7 +25,7 @@ class KosherWhitelistProvider : ContentProvider() {
         selectionArgs: Array<out String>?,
         sortOrder: String?
     ): Cursor {
-        val cursor = MatrixCursor(arrayOf("json"))
+        val cursor = MatrixCursor(arrayOf(COLUMN_WHITELIST_JSON, "json"))
         val ctx = context?.applicationContext
         val json = if (ctx != null) {
             val cacheFile = java.io.File(ctx.filesDir, "whitelist_cache.json")
@@ -36,7 +37,7 @@ class KosherWhitelistProvider : ContentProvider() {
         } else {
             KosherWhitelistManager.exportWhitelistJson()
         }
-        cursor.addRow(arrayOf(json))
+        cursor.addRow(arrayOf(json, json))
         return cursor
     }
 

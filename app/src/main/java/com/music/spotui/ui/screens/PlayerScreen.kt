@@ -240,10 +240,28 @@ fun PlayerScreen(navController: NavController) {
     }
 
     val currentTrack = queueSongs.firstOrNull { it.id == playerViewModel.currentSongId.value }
-    val effectiveTrackId = currentTrack?.spotifyTrackId?.ifBlank { currentTrack?.url }
+    val effectiveTrackId = com.music.spotui.util.KosherWhitelistManager.canonicalTrackId(currentTrack)
+        .ifBlank { currentTrack?.spotifyTrackId?.ifBlank { currentTrack?.url } }
     val isCurrentSongAllowed = com.music.spotui.BuildConfig.IS_ADMIN ||
-            com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(currentTrack) ||
+            com.music.spotui.util.KosherWhitelistManager.isTrackAllowed(currentTrack) ||
             com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(effectiveTrackId, songTitle, songSinger)
+
+    // Detailed debug logging recommended by ChatGPT
+    LaunchedEffect(playerViewModel.currentSongId.value, songTitle, songSinger, isCurrentSongAllowed, whitelistVersion) {
+        android.util.Log.d(
+            "WHITELIST_DEBUG",
+            """
+            title=$songTitle
+            singer=$songSinger
+            queueId=${currentTrack?.id}
+            spotifyTrackId=${currentTrack?.spotifyTrackId}
+            url=${currentTrack?.url}
+            effectiveTrackId=$effectiveTrackId
+            allowed=$isCurrentSongAllowed
+            whitelistVersion=$whitelistVersion
+            """.trimIndent()
+        )
+    }
 
     // Load the current track's Spotify Canvas only if whitelisted.
     LaunchedEffect(playerViewModel.currentSongId.value, queueSongs, isCurrentSongAllowed) {
@@ -1197,7 +1215,8 @@ fun PlayerOptionsSheet(
                     onDismiss()
                 }
                 if (com.music.spotui.BuildConfig.IS_ADMIN) {
-                    val trackId = currentSong?.spotifyTrackId.orEmpty().ifBlank { currentSong?.url.orEmpty() }
+                    val trackId = com.music.spotui.util.KosherWhitelistManager.canonicalTrackId(currentSong)
+                        .ifBlank { currentSong?.spotifyTrackId.orEmpty().ifBlank { currentSong?.url.orEmpty() } }
                     val isTrackApproved = com.music.spotui.util.KosherWhitelistManager.isTrackInWhitelist(trackId, title, singer)
                     if (isTrackApproved) {
                         PlayerMenuRow(
