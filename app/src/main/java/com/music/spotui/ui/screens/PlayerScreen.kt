@@ -59,6 +59,9 @@ import androidx.compose.material3.SliderColors
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
@@ -133,6 +136,8 @@ fun PlayerScreen(navController: NavController) {
     var showLyrics by remember { mutableStateOf(false) }
     var showSavedIn by remember { mutableStateOf(false) }
     var showDebugDialog by remember { mutableStateOf(false) }
+    var showAdminAllowDialog by remember { mutableStateOf(false) }
+    var songToAllowAdmin by remember { mutableStateOf<SongsModel?>(null) }
 
     if (showMenu) {
         PlayerOptionsSheet(
@@ -325,6 +330,92 @@ fun PlayerScreen(navController: NavController) {
         )
     }
 
+    if (com.music.spotui.BuildConfig.IS_ADMIN && showAdminAllowDialog) {
+        val target = songToAllowAdmin ?: currentTrack
+        val targetTitle = target?.title?.takeIf { it.isNotBlank() } ?: songTitle
+        val targetSinger = target?.singer?.takeIf { it.isNotBlank() } ?: songSinger
+        val targetTrackId = com.music.spotui.util.KosherWhitelistManager.canonicalTrackId(target)
+            .ifBlank { target?.spotifyTrackId.orEmpty().ifBlank { target?.url.orEmpty() } }
+            .ifBlank { effectiveTrackId.orEmpty() }
+        val isAlreadyApproved = com.music.spotui.util.KosherWhitelistManager.isTrackInWhitelist(targetTrackId, targetTitle, targetSinger)
+
+        CompositionLocalProvider(
+            LocalLayoutDirection provides LayoutDirection.Rtl
+        ) {
+            androidx.compose.material3.AlertDialog(
+                onDismissRequest = {
+                    showAdminAllowDialog = false
+                    songToAllowAdmin = null
+                },
+                title = {
+                    Text(
+                        text = if (isAlreadyApproved) "התמונה כבר מותרת" else "התרת תמונה",
+                        color = Color.White,
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                },
+                text = {
+                    Column {
+                        Text(
+                            text = if (isAlreadyApproved)
+                                "התמונה של שיר זה כבר נמצאת ברשימת ההיתר."
+                            else
+                                "האם להתיר את התמונה של השיר?",
+                            color = Color.White,
+                            fontSize = 15.sp
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            text = "$targetTitle • $targetSinger",
+                            color = Color(0xFFB3B3B3),
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.Medium
+                        )
+                    }
+                },
+                confirmButton = {
+                    androidx.compose.material3.TextButton(
+                        onClick = {
+                            showAdminAllowDialog = false
+                            if (!isAlreadyApproved) {
+                                com.music.spotui.util.KosherWhitelistManager.addTrack(
+                                    context,
+                                    targetTrackId,
+                                    targetTitle,
+                                    targetSinger
+                                )
+                                Toast.makeText(context, "התמונה הותרה בהצלחה!", Toast.LENGTH_SHORT).show()
+                            }
+                            // Automatically skip to next song
+                            playerViewModel.playNextSongs(queueSongs, context)
+                            isLiked.value = isSongLiked(context, playerViewModel.currentSongId.value.toString())
+                            songToAllowAdmin = null
+                        }
+                    ) {
+                        Text(
+                            text = if (isAlreadyApproved) "עבור לשיר הבא" else "התר תמונה ועבור הלאה",
+                            color = Color(0xFF1ED760),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 15.sp
+                        )
+                    }
+                },
+                dismissButton = {
+                    androidx.compose.material3.TextButton(
+                        onClick = {
+                            showAdminAllowDialog = false
+                            songToAllowAdmin = null
+                        }
+                    ) {
+                        Text("ביטול", color = Color.Gray, fontSize = 14.sp)
+                    }
+                },
+                containerColor = Color(0xFF1E1E1E)
+            )
+        }
+    }
+
     // Detailed debug logging recommended by ChatGPT
     LaunchedEffect(playerViewModel.currentSongId.value, songTitle, songSinger, isCurrentSongAllowed, whitelistVersion) {
         android.util.Log.d(
@@ -476,8 +567,13 @@ fun PlayerScreen(navController: NavController) {
                         modifier = Modifier
                             .sizeIn(maxWidth = 385.dp, maxHeight = 385.dp)
                             .aspectRatio(1f)
-                            .clickable(enabled = !singleAllowed) {
-                                showDebugDialog = true
+                            .clickable(
+                                enabled = com.music.spotui.BuildConfig.IS_ADMIN,
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null
+                            ) {
+                                songToAllowAdmin = currentTrack
+                                showAdminAllowDialog = true
                             },
                         contentAlignment = Alignment.Center
                     ) {
@@ -507,8 +603,13 @@ fun PlayerScreen(navController: NavController) {
                         Box(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .clickable(enabled = !pageAllowed) {
-                                    showDebugDialog = true
+                                .clickable(
+                                    enabled = com.music.spotui.BuildConfig.IS_ADMIN,
+                                    interactionSource = remember { MutableInteractionSource() },
+                                    indication = null
+                                ) {
+                                    songToAllowAdmin = pageSong ?: currentTrack
+                                    showAdminAllowDialog = true
                                 },
                             contentAlignment = Alignment.Center
                         ) {
