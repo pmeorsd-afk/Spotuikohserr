@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.components
+package com.music.spotui.ui.components
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -275,6 +275,7 @@ fun LikedSongsScreen(
                                 contentScale = ContentScale.Crop,
                                 failure = placeholder(R.drawable.placeholder),
                                 loading = placeholder(R.drawable.placeholder),
+                                isAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(likedSongs[song]),
                                 contentDescription = ""
                             )
                             Column {

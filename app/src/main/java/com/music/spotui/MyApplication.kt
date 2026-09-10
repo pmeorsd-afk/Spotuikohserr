@@ -30,6 +30,16 @@ class MyApplication : Application(){
         instance = this
         com.music.spotui.util.CrashLogger.init(this)
         com.music.spotui.util.KosherWhitelistManager.init(this)
+        if (!BuildConfig.IS_ADMIN) {
+            runCatching {
+                androidx.core.content.ContextCompat.registerReceiver(
+                    this,
+                    com.music.spotui.util.WhitelistSyncReceiver(),
+                    android.content.IntentFilter(com.music.spotui.util.WhitelistSyncReceiver.ACTION_WHITELIST_SYNC),
+                    androidx.core.content.ContextCompat.RECEIVER_EXPORTED
+                )
+            }
+        }
         if (BuildConfig.DEBUG && Timber.forest().isEmpty()) {
             Timber.plant(Timber.DebugTree())
         }

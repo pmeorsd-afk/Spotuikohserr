@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.components
+package com.music.spotui.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -187,6 +187,9 @@ fun MiniPlayer(navController: NavHostController) {
                     contentScale = ContentScale.Crop,
                     failure = placeholder(R.drawable.placeholder),
                     loading = placeholder(R.drawable.placeholder),
+                    isAllowed = com.music.spotui.BuildConfig.IS_ADMIN ||
+                        com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(currentTrack) ||
+                        com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(currentTrack?.spotifyTrackId, songTitle, songSinger),
                     contentDescription = ""
                 )
                 Column(

@@ -3,6 +3,8 @@ package com.music.spotui.util
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableIntStateOf
 import com.music.spotui.data.entity.AlbumsModel
@@ -26,15 +28,6 @@ import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.CopyOnWriteArrayList
 
 /**
- * Data representation of a whitelisted artist.
- */
-data class WhitelistArtistEntry(
-    val id: String = "",
-    val name: String = "",
-    val notes: String = "approved"
-)
-
-/**
  * Data representation of a whitelisted or blocked track.
  */
 data class WhitelistTrackEntry(
@@ -44,13 +37,22 @@ data class WhitelistTrackEntry(
 )
 
 /**
+ * Data representation of a whitelisted artist (preserved for schema compatibility).
+ */
+data class WhitelistArtistEntry(
+    val id: String = "",
+    val name: String = "",
+    val notes: String = "approved"
+)
+
+/**
  * Central Kosher Whitelist Manager.
  *
- * Enforces airtight kosher image filtering across SpotUI:
- * - Default: All images are blocked and rendered with a sleek music placeholder.
- * - Whitelisted: Artists and tracks on the whitelist have their artwork allowed.
- * - Auto-sync: Fetches the latest whitelist from GitHub raw in the background and caches it locally.
- * - Admin Mode: Allows adding/removing artists & tracks and exporting updated whitelist.json.
+ * 100% Strict Whitelist by Track ID:
+ * - Default: All album covers & artwork are strictly blocked across the entire app.
+ * - Allowed: A track's artwork is allowed ONLY if that specific track has been approved.
+ * - No artist-level inheritance (eliminates duet / album leak risks completely).
+ * - Real-time IPC sync: When Admin approves/blocks a track, it immediately pushes the update to SpotUI-Kosher on the device.
  */
 object KosherWhitelistManager {
 
@@ -59,15 +61,15 @@ object KosherWhitelistManager {
     private const val CACHE_FILE_NAME = "whitelist_cache.json"
 
     // In-memory structured entry lists
-    private val artistEntries = CopyOnWriteArrayList<WhitelistArtistEntry>()
     private val trackEntries = CopyOnWriteArrayList<WhitelistTrackEntry>()
     private val blockedTrackEntries = CopyOnWriteArrayList<WhitelistTrackEntry>()
+    private val artistEntries = CopyOnWriteArrayList<WhitelistArtistEntry>()
 
     // In-memory lookup sets (O(1) lookups)
-    private val whitelistedArtistIds = ConcurrentHashMap.newKeySet<String>()
-    private val whitelistedArtistNames = ConcurrentHashMap.newKeySet<String>()
     private val whitelistedTrackIds = ConcurrentHashMap.newKeySet<String>()
+    private val whitelistedTrackKeys = ConcurrentHashMap.newKeySet<String>() // "title|artist" normalized
     private val blockedTrackIds = ConcurrentHashMap.newKeySet<String>()
+    private val blockedTrackKeys = ConcurrentHashMap.newKeySet<String>() // "title|artist" normalized
 
     // Dynamically registered allowed image URLs
     private val allowedImageUrls = ConcurrentHashMap.newKeySet<String>()
@@ -82,7 +84,8 @@ object KosherWhitelistManager {
      * Initializes the manager:
      * 1. Loads bundled assets/whitelist.json
      * 2. Overlays cached whitelist_cache.json (if present)
-     * 3. Fetches the latest whitelist from GitHub in the background
+     * 3. In User mode: queries ContentProvider from Admin app on same device if available
+     * 4. Fetches the latest whitelist from GitHub in the background
      */
     fun init(context: Context) {
         if (initialized) return
@@ -107,7 +110,12 @@ object KosherWhitelistManager {
                 }
             }
 
-            // Step 3: Fetch latest from GitHub raw in background
+            // Step 3: If in User mode, query Admin app on the same device for instant local sync
+            if (!com.music.spotui.BuildConfig.IS_ADMIN) {
+                syncFromAdminProvider(app)
+            }
+
+            // Step 4: Fetch latest from GitHub raw in background
             syncWithRemote(app)
         }
     }
@@ -130,7 +138,7 @@ object KosherWhitelistManager {
 
                 if (conn.responseCode in 200..299) {
                     val remoteJson = conn.inputStream.bufferedReader().readText()
-                    if (remoteJson.isNotBlank() && remoteJson.contains("artists")) {
+                    if (remoteJson.isNotBlank() && remoteJson.contains("version")) {
                         // Persist to local cache
                         val cacheFile = File(app.filesDir, CACHE_FILE_NAME)
                         cacheFile.writeText(remoteJson)
@@ -157,18 +165,57 @@ object KosherWhitelistManager {
         return str?.trim()?.lowercase(Locale.ROOT) ?: ""
     }
 
+    fun trackKey(title: String?, artist: String?): String {
+        val t = normalize(title)
+        val a = normalize(artist)
+        return if (t.isNotBlank() && a.isNotBlank()) "$t|$a" else ""
+    }
+
     /**
      * Parses the JSON structure into in-memory collections and lookup sets.
      */
     @Synchronized
-    private fun parseWhitelistJson(jsonStr: String) {
+    fun parseWhitelistJson(jsonStr: String) {
         try {
             val root = JSONObject(jsonStr)
 
-            val newArtistEntries = mutableListOf<WhitelistArtistEntry>()
-            val newArtistIds = mutableSetOf<String>()
-            val newArtistNames = mutableSetOf<String>()
+            val newTrackEntries = mutableListOf<WhitelistTrackEntry>()
+            val newTrackIds = mutableSetOf<String>()
+            val newTrackKeys = mutableSetOf<String>()
 
+            val tracksArray = root.optJSONArray("tracks") ?: JSONArray()
+            for (i in 0 until tracksArray.length()) {
+                val obj = tracksArray.optJSONObject(i) ?: continue
+                val id = obj.optString("id").trim()
+                val title = obj.optString("title").trim()
+                val artist = obj.optString("artist").trim()
+                if (id.isNotBlank() || (title.isNotBlank() && artist.isNotBlank())) {
+                    newTrackEntries.add(WhitelistTrackEntry(id, title, artist))
+                    if (id.isNotBlank()) newTrackIds.add(id)
+                    val key = trackKey(title, artist)
+                    if (key.isNotBlank()) newTrackKeys.add(key)
+                }
+            }
+
+            val newBlockedEntries = mutableListOf<WhitelistTrackEntry>()
+            val newBlockedIds = mutableSetOf<String>()
+            val newBlockedKeys = mutableSetOf<String>()
+
+            val blockedArray = root.optJSONArray("blocked_tracks") ?: JSONArray()
+            for (i in 0 until blockedArray.length()) {
+                val obj = blockedArray.optJSONObject(i) ?: continue
+                val id = obj.optString("id").trim()
+                val title = obj.optString("title").trim()
+                val artist = obj.optString("artist").trim()
+                if (id.isNotBlank() || (title.isNotBlank() && artist.isNotBlank())) {
+                    newBlockedEntries.add(WhitelistTrackEntry(id, title, artist))
+                    if (id.isNotBlank()) newBlockedIds.add(id)
+                    val key = trackKey(title, artist)
+                    if (key.isNotBlank()) newBlockedKeys.add(key)
+                }
+            }
+
+            val newArtistEntries = mutableListOf<WhitelistArtistEntry>()
             val artistsArray = root.optJSONArray("artists") ?: JSONArray()
             for (i in 0 until artistsArray.length()) {
                 val obj = artistsArray.optJSONObject(i) ?: continue
@@ -177,87 +224,28 @@ object KosherWhitelistManager {
                 val notes = obj.optString("notes", "approved")
                 if (id.isNotBlank() || name.isNotBlank()) {
                     newArtistEntries.add(WhitelistArtistEntry(id, name, notes))
-                    if (id.isNotBlank()) newArtistIds.add(id)
-                    if (name.isNotBlank()) newArtistNames.add(normalize(name))
                 }
             }
-
-            val newTrackEntries = mutableListOf<WhitelistTrackEntry>()
-            val newTrackIds = mutableSetOf<String>()
-            val tracksArray = root.optJSONArray("tracks") ?: JSONArray()
-            for (i in 0 until tracksArray.length()) {
-                val obj = tracksArray.optJSONObject(i) ?: continue
-                val id = obj.optString("id").trim()
-                val title = obj.optString("title").trim()
-                val artist = obj.optString("artist").trim()
-                if (id.isNotBlank()) {
-                    newTrackEntries.add(WhitelistTrackEntry(id, title, artist))
-                    newTrackIds.add(id)
-                }
-            }
-
-            val newBlockedEntries = mutableListOf<WhitelistTrackEntry>()
-            val newBlockedIds = mutableSetOf<String>()
-            val blockedArray = root.optJSONArray("blocked_tracks") ?: JSONArray()
-            for (i in 0 until blockedArray.length()) {
-                val obj = blockedArray.optJSONObject(i) ?: continue
-                val id = obj.optString("id").trim()
-                val title = obj.optString("title").trim()
-                val artist = obj.optString("artist").trim()
-                if (id.isNotBlank()) {
-                    newBlockedEntries.add(WhitelistTrackEntry(id, title, artist))
-                    newBlockedIds.add(id)
-                }
-            }
-
-            artistEntries.clear()
-            artistEntries.addAll(newArtistEntries)
-            whitelistedArtistIds.clear()
-            whitelistedArtistIds.addAll(newArtistIds)
-            whitelistedArtistNames.clear()
-            whitelistedArtistNames.addAll(newArtistNames)
 
             trackEntries.clear()
             trackEntries.addAll(newTrackEntries)
             whitelistedTrackIds.clear()
             whitelistedTrackIds.addAll(newTrackIds)
+            whitelistedTrackKeys.clear()
+            whitelistedTrackKeys.addAll(newTrackKeys)
 
             blockedTrackEntries.clear()
             blockedTrackEntries.addAll(newBlockedEntries)
             blockedTrackIds.clear()
             blockedTrackIds.addAll(newBlockedIds)
+            blockedTrackKeys.clear()
+            blockedTrackKeys.addAll(newBlockedKeys)
+
+            artistEntries.clear()
+            artistEntries.addAll(newArtistEntries)
         } catch (e: Exception) {
             e.printStackTrace()
         }
-    }
-
-    /**
-     * Checks if an artist is explicitly present in the whitelist JSON (regardless of Admin mode).
-     * Used by Admin UI toggles to accurately display "Approve" vs "Remove".
-     */
-    fun isArtistInWhitelist(artistId: String? = null, artistName: String? = null): Boolean {
-        val cleanId = artistId?.trim() ?: ""
-        if (cleanId.isNotBlank() && whitelistedArtistIds.contains(cleanId)) {
-            return true
-        }
-
-        val normName = normalize(artistName)
-        if (normName.isNotBlank()) {
-            if (whitelistedArtistNames.contains(normName)) return true
-
-            // Check comma-separated artists (e.g. "Ishay Ribo, Akiva")
-            if (artistName != null && artistName.contains(",")) {
-                val parts = artistName.split(",")
-                for (p in parts) {
-                    val normPart = normalize(p)
-                    if (normPart.isNotBlank() && whitelistedArtistNames.contains(normPart)) {
-                        return true
-                    }
-                }
-            }
-        }
-
-        return false
     }
 
     /**
@@ -270,15 +258,32 @@ object KosherWhitelistManager {
         artistName: String? = null
     ): Boolean {
         val cleanId = trackId?.trim() ?: ""
+        val key = trackKey(trackTitle, artistName)
+
+        // 1. Explicitly blocked check
         if (cleanId.isNotBlank() && blockedTrackIds.contains(cleanId)) {
             return false
         }
+        if (key.isNotBlank() && blockedTrackKeys.contains(key)) {
+            return false
+        }
+
+        // 2. Explicitly whitelisted track check (by ID or Title+Artist)
         if (cleanId.isNotBlank() && whitelistedTrackIds.contains(cleanId)) {
             return true
         }
-        if (isArtistInWhitelist(null, artistName)) {
+        if (key.isNotBlank() && whitelistedTrackKeys.contains(key)) {
             return true
         }
+
+        // Strictly Track ID only: No automatic artist-level inheritance!
+        return false
+    }
+
+    /**
+     * Compatibility helper: In Track ID Only mode, artists are not automatically whitelisted.
+     */
+    fun isArtistInWhitelist(artistId: String? = null, artistName: String? = null): Boolean {
         return false
     }
 
@@ -288,7 +293,7 @@ object KosherWhitelistManager {
      */
     fun isArtistWhitelisted(artistId: String? = null, artistName: String? = null): Boolean {
         if (com.music.spotui.BuildConfig.IS_ADMIN) return true
-        return isArtistInWhitelist(artistId, artistName)
+        return false
     }
 
     /**
@@ -313,8 +318,9 @@ object KosherWhitelistManager {
             if (song.coverUri.isNotBlank()) allowImageUrl(song.coverUri)
             return true
         }
+        val effectiveId = song.spotifyTrackId.ifBlank { song.url }
         val allowed = isTrackInWhitelist(
-            trackId = song.spotifyTrackId,
+            trackId = effectiveId,
             trackTitle = song.title,
             artistName = song.singer
         )
@@ -325,7 +331,7 @@ object KosherWhitelistManager {
     }
 
     /**
-     * Checks if an [ArtistsModel] is allowed, and if so, registers its image URL as allowed.
+     * ArtistsModel in Track ID Only mode is blocked for users, open for admin.
      */
     fun isArtistModelWhitelisted(artist: ArtistsModel?): Boolean {
         if (artist == null) return false
@@ -333,15 +339,11 @@ object KosherWhitelistManager {
             if (artist.coverUri.isNotBlank()) allowImageUrl(artist.coverUri)
             return true
         }
-        val allowed = isArtistInWhitelist(artist.id, artist.name)
-        if (allowed && artist.coverUri.isNotBlank()) {
-            allowImageUrl(artist.coverUri)
-        }
-        return allowed
+        return false
     }
 
     /**
-     * Checks if an [AlbumsModel] is allowed, and if so, registers its cover URL as allowed.
+     * AlbumsModel in Track ID Only mode is blocked for users, open for admin.
      */
     fun isAlbumWhitelisted(album: AlbumsModel?): Boolean {
         if (album == null) return false
@@ -349,15 +351,11 @@ object KosherWhitelistManager {
             if (album.coverUri.isNotBlank()) allowImageUrl(album.coverUri)
             return true
         }
-        val allowed = isArtistInWhitelist(null, album.artists)
-        if (allowed && album.coverUri.isNotBlank()) {
-            allowImageUrl(album.coverUri)
-        }
-        return allowed
+        return false
     }
 
     /**
-     * Checks if a [HomeItem] is allowed, and if so, registers its image URL as allowed.
+     * HomeItem in Track ID Only mode is blocked for users, open for admin.
      */
     fun isHomeItemWhitelisted(item: HomeItem?): Boolean {
         if (item == null) return false
@@ -365,19 +363,11 @@ object KosherWhitelistManager {
             if (item.imageUrl.isNotBlank()) allowImageUrl(item.imageUrl)
             return true
         }
-        val allowed = when (item) {
-            is HomeItem.Artist -> isArtistInWhitelist(item.id, item.name)
-            is HomeItem.Album -> isArtistInWhitelist(null, item.artists.ifBlank { item.subtitle })
-            is HomeItem.Playlist -> false
-        }
-        if (allowed && item.imageUrl.isNotBlank()) {
-            allowImageUrl(item.imageUrl)
-        }
-        return allowed
+        return false
     }
 
     /**
-     * Checks if a RecentItem is allowed.
+     * RecentItem check: only allowed if it's a song and that song is whitelisted.
      */
     fun isRecentItemWhitelisted(recent: RecentItem?): Boolean {
         if (recent == null) return false
@@ -385,11 +375,14 @@ object KosherWhitelistManager {
             if (recent.image.isNotBlank()) allowImageUrl(recent.image)
             return true
         }
-        val allowed = when (recent.type) {
-            "artist" -> isArtistInWhitelist(recent.key, recent.name)
-            "song" -> isTrackInWhitelist(recent.spotifyTrackId.ifBlank { recent.key }, recent.name, recent.singer)
-            "album" -> isArtistInWhitelist(null, recent.singer)
-            else -> false
+        val allowed = if (recent.type == "song") {
+            isTrackInWhitelist(
+                trackId = recent.spotifyTrackId.ifBlank { recent.key },
+                trackTitle = recent.name,
+                artistName = recent.singer
+            )
+        } else {
+            false
         }
         if (allowed && recent.image.isNotBlank()) {
             allowImageUrl(recent.image)
@@ -433,23 +426,42 @@ object KosherWhitelistManager {
     // ==========================================
 
     /**
-     * Adds an artist to the whitelist and persists to local cache.
+     * Adds a track to the whitelist and persists to local cache + broadcasts to User app.
      */
     @Synchronized
-    fun addArtist(context: Context, id: String = "", name: String = "", notes: String = "approved"): Boolean {
+    fun addTrack(context: Context, id: String, title: String = "", artist: String = ""): Boolean {
         val cleanId = id.trim()
-        val cleanName = name.trim()
-        if (cleanId.isBlank() && cleanName.isBlank()) return false
+        val key = trackKey(title, artist)
+        if (cleanId.isBlank() && key.isBlank()) return false
 
-        val norm = normalize(cleanName)
-        val alreadyExists = (cleanId.isNotBlank() && whitelistedArtistIds.contains(cleanId)) ||
-                (norm.isNotBlank() && whitelistedArtistNames.contains(norm))
-        if (alreadyExists) return false
+        // Remove from blocked sets
+        if (cleanId.isNotBlank()) {
+            blockedTrackIds.remove(cleanId)
+        }
+        if (key.isNotBlank()) {
+            blockedTrackKeys.remove(key)
+        }
+        blockedTrackEntries.removeAll {
+            (cleanId.isNotBlank() && it.id == cleanId) ||
+                    (key.isNotBlank() && trackKey(it.title, it.artist) == key)
+        }
 
-        val entry = WhitelistArtistEntry(cleanId, cleanName, notes)
-        artistEntries.add(0, entry)
-        if (cleanId.isNotBlank()) whitelistedArtistIds.add(cleanId)
-        if (norm.isNotBlank()) whitelistedArtistNames.add(norm)
+        // Add to whitelisted sets
+        if (cleanId.isNotBlank()) {
+            whitelistedTrackIds.add(cleanId)
+        }
+        if (key.isNotBlank()) {
+            whitelistedTrackKeys.add(key)
+        }
+
+        // Avoid duplicate entry in trackEntries
+        val alreadyInList = trackEntries.any {
+            (cleanId.isNotBlank() && it.id == cleanId) ||
+                    (key.isNotBlank() && trackKey(it.title, it.artist) == key)
+        }
+        if (!alreadyInList) {
+            trackEntries.add(0, WhitelistTrackEntry(cleanId, title.trim(), artist.trim()))
+        }
 
         saveToCache(context)
         _versionState.intValue += 1
@@ -457,21 +469,79 @@ object KosherWhitelistManager {
     }
 
     /**
-     * Removes an artist from the whitelist and persists to local cache.
+     * Removes a track from the whitelist and adds it to blocked_tracks so it is strictly excluded.
+     */
+    @Synchronized
+    fun removeTrack(context: Context, id: String, title: String = "", artist: String = ""): Boolean {
+        val cleanId = id.trim()
+        val key = trackKey(title, artist)
+        if (cleanId.isBlank() && key.isBlank()) return false
+
+        // Remove from whitelisted sets
+        if (cleanId.isNotBlank()) {
+            whitelistedTrackIds.remove(cleanId)
+        }
+        if (key.isNotBlank()) {
+            whitelistedTrackKeys.remove(key)
+        }
+        trackEntries.removeAll {
+            (cleanId.isNotBlank() && it.id == cleanId) ||
+                    (key.isNotBlank() && trackKey(it.title, it.artist) == key)
+        }
+
+        // Add to blocked sets
+        if (cleanId.isNotBlank()) {
+            blockedTrackIds.add(cleanId)
+        }
+        if (key.isNotBlank()) {
+            blockedTrackKeys.add(key)
+        }
+
+        val alreadyInBlockedList = blockedTrackEntries.any {
+            (cleanId.isNotBlank() && it.id == cleanId) ||
+                    (key.isNotBlank() && trackKey(it.title, it.artist) == key)
+        }
+        if (!alreadyInBlockedList) {
+            blockedTrackEntries.add(0, WhitelistTrackEntry(cleanId, title.trim(), artist.trim()))
+        }
+
+        saveToCache(context)
+        _versionState.intValue += 1
+        return true
+    }
+
+    /**
+     * Adds an artist to artistEntries (for schema compatibility and admin record keeping).
+     */
+    @Synchronized
+    fun addArtist(context: Context, id: String = "", name: String = ""): Boolean {
+        val cleanId = id.trim()
+        val cleanName = name.trim()
+        if (cleanId.isBlank() && cleanName.isBlank()) return false
+        val already = artistEntries.any {
+            (cleanId.isNotBlank() && it.id.equals(cleanId, ignoreCase = true)) ||
+                    (cleanName.isNotBlank() && it.name.equals(cleanName, ignoreCase = true))
+        }
+        if (!already) {
+            artistEntries.add(0, WhitelistArtistEntry(cleanId, cleanName, "approved"))
+            saveToCache(context)
+            _versionState.intValue += 1
+            return true
+        }
+        return false
+    }
+
+    /**
+     * Removes an artist from artistEntries.
      */
     @Synchronized
     fun removeArtist(context: Context, id: String = "", name: String = ""): Boolean {
         val cleanId = id.trim()
         val cleanName = name.trim()
-        val norm = normalize(cleanName)
-
         val removed = artistEntries.removeAll { entry ->
             (cleanId.isNotBlank() && entry.id.equals(cleanId, ignoreCase = true)) ||
-                    (norm.isNotBlank() && normalize(entry.name) == norm)
+                    (cleanName.isNotBlank() && entry.name.equals(cleanName, ignoreCase = true))
         }
-        if (cleanId.isNotBlank()) whitelistedArtistIds.remove(cleanId)
-        if (norm.isNotBlank()) whitelistedArtistNames.remove(norm)
-
         if (removed) {
             saveToCache(context)
             _versionState.intValue += 1
@@ -480,57 +550,9 @@ object KosherWhitelistManager {
     }
 
     /**
-     * Adds a track to the whitelist and persists to local cache.
-     */
-    @Synchronized
-    fun addTrack(context: Context, id: String, title: String = "", artist: String = ""): Boolean {
-        val cleanId = id.trim()
-        if (cleanId.isBlank()) return false
-        if (whitelistedTrackIds.contains(cleanId)) return false
-
-        blockedTrackIds.remove(cleanId)
-        blockedTrackEntries.removeAll { it.id == cleanId }
-
-        trackEntries.add(0, WhitelistTrackEntry(cleanId, title.trim(), artist.trim()))
-        whitelistedTrackIds.add(cleanId)
-
-        saveToCache(context)
-        _versionState.intValue += 1
-        return true
-    }
-
-    /**
-     * Removes a track from the whitelist and persists to local cache.
-     * If the track's artist is whitelisted, adds the track to blocked_tracks so it is specifically excluded.
-     */
-    @Synchronized
-    fun removeTrack(context: Context, id: String, title: String = "", artist: String = ""): Boolean {
-        val cleanId = id.trim()
-        if (cleanId.isBlank()) return false
-        val removed = trackEntries.removeAll { it.id == cleanId }
-        whitelistedTrackIds.remove(cleanId)
-
-        if (isArtistInWhitelist(null, artist)) {
-            if (!blockedTrackIds.contains(cleanId)) {
-                blockedTrackIds.add(cleanId)
-                blockedTrackEntries.add(0, WhitelistTrackEntry(cleanId, title.trim(), artist.trim()))
-            }
-        }
-
-        saveToCache(context)
-        _versionState.intValue += 1
-        return true
-    }
-
-    /**
      * Returns the list of whitelisted artists.
      */
     fun getWhitelistedArtists(): List<WhitelistArtistEntry> = artistEntries.toList()
-
-    /**
-     * Returns the list of whitelisted tracks.
-     */
-    fun getWhitelistedTracks(): List<WhitelistTrackEntry> = trackEntries.toList()
 
     /**
      * Returns total count of whitelisted artists.
@@ -538,12 +560,28 @@ object KosherWhitelistManager {
     fun getWhitelistedArtistsCount(): Int = artistEntries.size
 
     /**
+     * Returns the list of whitelisted tracks.
+     */
+    fun getWhitelistedTracks(): List<WhitelistTrackEntry> = trackEntries.toList()
+
+    /**
      * Returns total count of whitelisted tracks.
      */
     fun getWhitelistedTracksCount(): Int = trackEntries.size
 
     /**
+     * Returns the list of blocked tracks.
+     */
+    fun getBlockedTracks(): List<WhitelistTrackEntry> = blockedTrackEntries.toList()
+
+    /**
+     * Returns total count of blocked tracks.
+     */
+    fun getBlockedTracksCount(): Int = blockedTrackEntries.size
+
+    /**
      * Saves current in-memory whitelist to local cache file.
+     * When running in Admin mode, immediately pushes the update to the Kosher user app on the device.
      */
     fun saveToCache(context: Context) {
         val app = context.applicationContext
@@ -551,6 +589,64 @@ object KosherWhitelistManager {
             val cacheFile = File(app.filesDir, CACHE_FILE_NAME)
             val json = exportWhitelistJson()
             cacheFile.writeText(json)
+
+            // If running in Admin mode, instantly push update to Kosher user app!
+            if (com.music.spotui.BuildConfig.IS_ADMIN) {
+                // 1. Send explicit broadcast to com.music.spotui
+                val syncIntent = Intent(WhitelistSyncReceiver.ACTION_WHITELIST_SYNC).apply {
+                    setPackage("com.music.spotui")
+                    putExtra("whitelist_json", json)
+                }
+                app.sendBroadcast(syncIntent)
+
+                // 2. Notify ContentProvider URI
+                runCatching {
+                    app.contentResolver.notifyChange(
+                        KosherWhitelistProvider.CONTENT_URI_ADMIN,
+                        null
+                    )
+                }
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    /**
+     * Pulls the latest whitelist from the Admin app's ContentProvider (if installed on the same device).
+     */
+    fun syncFromAdminProvider(context: Context): Boolean {
+        return try {
+            val uri = Uri.parse("content://com.music.spotui.admin.provider.whitelist/whitelist")
+            val cursor = context.contentResolver.query(uri, null, null, null, null)
+            cursor?.use {
+                if (it.moveToFirst()) {
+                    val json = it.getString(0)
+                    if (!json.isNullOrBlank() && json.contains("version")) {
+                        applyExternalWhitelist(context, json)
+                        return true
+                    }
+                }
+            }
+            false
+        } catch (e: Exception) {
+            false
+        }
+    }
+
+    /**
+     * Applies an externally received whitelist JSON string (from Broadcast or ContentProvider).
+     * Caches to local disk and triggers immediate UI recomposition.
+     */
+    fun applyExternalWhitelist(context: Context, jsonStr: String) {
+        val app = context.applicationContext
+        try {
+            val cacheFile = File(app.filesDir, CACHE_FILE_NAME)
+            cacheFile.writeText(jsonStr)
+            parseWhitelistJson(jsonStr)
+            CoroutineScope(Dispatchers.Main).launch {
+                _versionState.intValue += 1
+            }
         } catch (e: Exception) {
             e.printStackTrace()
         }
