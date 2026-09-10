@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission
+        android:name="com.music.spotui.permission.READ_WHITELIST" />
+
+    <application>
+        <receiver
+            android:name=".util.WhitelistSyncReceiver"
+            android:exported="true"
+            android:permission="com.music.spotui.permission.READ_WHITELIST">
+            <intent-filter>
+                <action android:name="com.music.spotui.ACTION_WHITELIST_SYNC" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

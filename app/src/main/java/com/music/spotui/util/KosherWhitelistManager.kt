@@ -164,12 +164,26 @@ object KosherWhitelistManager {
         var value = rawId.trim()
 
         if (value.startsWith("spotify:track:", ignoreCase = true)) {
-            value = value.removePrefix("spotify:track:").substringBefore("?").substringBefore("#")
+            value = value.removePrefix("spotify:track:")
+                .substringBefore("|")
+                .substringBefore("?")
+                .substringBefore("#")
+                .trim()
         } else if (value.contains("open.spotify.com/track/", ignoreCase = true)) {
-            value = value.substringAfter("/track/").substringBefore("?").substringBefore("#").substringBefore("/")
+            value = value.substringAfter("/track/")
+                .substringBefore("?")
+                .substringBefore("#")
+                .substringBefore("/")
+                .substringBefore("|")
+                .trim()
         } else if (value.startsWith("youtube:", ignoreCase = true)) {
             val afterPrefix = value.removePrefix("youtube:").trim()
-            value = "youtube:" + afterPrefix.substringBefore("|").trim()
+            value = "youtube:" + afterPrefix.substringBefore("|").substringBefore("?").substringBefore("#").trim()
+        } else if (value.contains("|")) {
+            val beforePipe = value.substringBefore("|").trim()
+            if (beforePipe.matches(Regex("^[a-zA-Z0-9]{22}$"))) {
+                value = beforePipe
+            }
         }
 
         return value.trim()
@@ -677,11 +691,10 @@ object KosherWhitelistManager {
 
             // If running in Admin mode, instantly push update to Kosher user app!
             if (com.music.spotui.BuildConfig.IS_ADMIN) {
-                // 1. Send explicit broadcast to com.music.spotui with permission and FLAG_INCLUDE_STOPPED_PACKAGES
+                // 1. Send explicit broadcast to com.music.spotui with signature permission as trigger only
                 val syncIntent = Intent(WhitelistSyncReceiver.ACTION_WHITELIST_SYNC).apply {
                     setPackage("com.music.spotui")
                     addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES)
-                    putExtra("whitelist_json", json)
                 }
                 app.sendBroadcast(syncIntent, WhitelistSyncReceiver.PERMISSION_READ_WHITELIST)
 
@@ -733,6 +746,55 @@ object KosherWhitelistManager {
             android.util.Log.e("WHITELIST_SYNC", "Provider read failed", e)
             false
         }
+    }
+
+    /**
+     * Live diagnostic inspector used by WhitelistDebugPanel and debug dialog.
+     * Evaluates IPC ContentProvider status, record counts, and checks for test tracks.
+     */
+    fun debugWhitelistSync(context: Context): String {
+        val sb = StringBuilder()
+        val uri = Uri.parse("content://com.music.spotui.admin.provider.whitelist/whitelist")
+        sb.appendLine("=== WHITELIST DIAGNOSTIC REPORT ===")
+        sb.appendLine("Provider URI: $uri")
+        sb.appendLine("Flavor: ${if (com.music.spotui.BuildConfig.IS_ADMIN) "ADMIN (com.music.spotui.admin)" else "USER (com.music.spotui)"}")
+        sb.appendLine("In-Memory Version: ${_versionState.intValue}")
+        sb.appendLine("In-Memory Whitelisted Tracks: ${whitelistedTrackIds.size} (Keys: ${whitelistedTrackKeys.size})")
+        sb.appendLine("In-Memory Whitelisted Artists: ${whitelistedArtistNames.size}")
+        sb.appendLine("In-Memory Blocked Tracks: ${blockedTrackIds.size}")
+
+        val cacheFile = File(context.applicationContext.filesDir, CACHE_FILE_NAME)
+        sb.appendLine("Local Cache: exists=${cacheFile.exists()}, size=${if (cacheFile.exists()) cacheFile.length() else 0} bytes")
+
+        try {
+            val cursor = context.contentResolver.query(
+                uri,
+                arrayOf(KosherWhitelistProvider.COLUMN_WHITELIST_JSON),
+                null,
+                null,
+                null
+            )
+            sb.appendLine("Provider query cursor: ${if (cursor != null) "SUCCESS (NOT NULL)" else "NULL"}")
+            cursor?.use {
+                sb.appendLine("Cursor count: ${it.count}")
+                if (it.moveToFirst()) {
+                    val idx = it.getColumnIndex(KosherWhitelistProvider.COLUMN_WHITELIST_JSON)
+                    val actualIdx = if (idx >= 0) idx else 0
+                    val json = it.getString(actualIdx)
+                    sb.appendLine("JSON length: ${json?.length ?: 0}")
+                    sb.appendLine("Contains 'version': ${json?.contains("\"version\"")}")
+                    sb.appendLine("Contains 'חייזרית': ${json?.contains("חייזרית")}")
+                    sb.appendLine("Contains 'פאר טסי': ${json?.contains("פאר טסי")}")
+                } else {
+                    sb.appendLine("Cursor moveToFirst: FALSE (empty result)")
+                }
+            }
+        } catch (e: SecurityException) {
+            sb.appendLine("SECURITY_EXCEPTION: ${e.message}")
+        } catch (e: Exception) {
+            sb.appendLine("EXCEPTION: ${e.javaClass.simpleName}: ${e.message}")
+        }
+        return sb.toString()
     }
 
     /**
