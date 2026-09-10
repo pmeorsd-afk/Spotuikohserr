@@ -408,6 +408,7 @@ private fun ArtistOverviewContent(
                                 model = overview.avatarImage,
                                 contentScale = ContentScale.Crop,
                                 failure = placeholder(R.drawable.placeholder),
+                                isAllowed = isArtistAllowed,
                                 contentDescription = "",
                             )
                         }
@@ -509,6 +510,7 @@ private fun PopularTrackRow(
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(song),
             contentDescription = "",
         )
         Column(modifier = Modifier.weight(1f)) {
@@ -567,6 +569,7 @@ private fun ReleaseCard(album: AlbumsModel, onClick: () -> Unit) {
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(album),
             contentDescription = "",
         )
         Spacer(Modifier.height(6.dp))
@@ -601,6 +604,7 @@ private fun ReleaseRow(album: AlbumsModel, onClick: () -> Unit) {
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(album),
             contentDescription = "",
         )
         Spacer(Modifier.width(14.dp))

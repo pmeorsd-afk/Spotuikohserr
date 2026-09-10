@@ -88,6 +88,13 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        if (!com.music.spotui.BuildConfig.IS_ADMIN) {
+            com.music.spotui.util.KosherWhitelistManager.syncFromAdminProvider(this)
+        }
+    }
+
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         setIntent(intent)

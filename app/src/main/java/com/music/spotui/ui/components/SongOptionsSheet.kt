@@ -227,8 +227,9 @@ fun SongOptionsSheet(
                 onDismiss()
             }
             if (com.music.spotui.BuildConfig.IS_ADMIN) {
+                val effectiveTrackId = song.spotifyTrackId.ifBlank { song.url }
                 val isTrackApproved = com.music.spotui.util.KosherWhitelistManager.isTrackInWhitelist(
-                    song.spotifyTrackId,
+                    effectiveTrackId,
                     song.title,
                     song.singer
                 )
@@ -238,10 +239,8 @@ fun SongOptionsSheet(
                         label = "הסר שיר מההיתר (Admin)",
                         iconTint = Color(0xFFE57373)
                     ) {
-                        if (song.spotifyTrackId.isNotBlank()) {
-                            com.music.spotui.util.KosherWhitelistManager.removeTrack(context, song.spotifyTrackId, song.title, song.singer)
-                            android.widget.Toast.makeText(context, "השיר הוסר מההיתר", android.widget.Toast.LENGTH_SHORT).show()
-                        }
+                        com.music.spotui.util.KosherWhitelistManager.removeTrack(context, effectiveTrackId, song.title, song.singer)
+                        android.widget.Toast.makeText(context, "השיר הוסר מההיתר", android.widget.Toast.LENGTH_SHORT).show()
                         onDismiss()
                     }
                 } else {
@@ -250,28 +249,13 @@ fun SongOptionsSheet(
                         label = "אשר שיר לרשימת ההיתר (Admin)",
                         iconTint = Color(0xFF1ED760)
                     ) {
-                        if (song.spotifyTrackId.isNotBlank()) {
-                            com.music.spotui.util.KosherWhitelistManager.addTrack(
-                                context,
-                                song.spotifyTrackId,
-                                song.title,
-                                song.singer
-                            )
-                            android.widget.Toast.makeText(context, "השיר נוסף לרשימת ההיתר!", android.widget.Toast.LENGTH_SHORT).show()
-                        }
-                        onDismiss()
-                    }
-                }
-
-                val isSingerApproved = com.music.spotui.util.KosherWhitelistManager.isArtistInWhitelist(null, song.singer)
-                if (!isSingerApproved && song.singer.isNotBlank()) {
-                    SongMenuRow(
-                        icon = Icons.Default.Person,
-                        label = "אשר את כל שירי ${song.singer} (Admin)",
-                        iconTint = Color(0xFF1ED760)
-                    ) {
-                        com.music.spotui.util.KosherWhitelistManager.addArtist(context, name = song.singer)
-                        android.widget.Toast.makeText(context, "${song.singer} נוסף לרשימת ההיתר!", android.widget.Toast.LENGTH_SHORT).show()
+                        com.music.spotui.util.KosherWhitelistManager.addTrack(
+                            context,
+                            effectiveTrackId,
+                            song.title,
+                            song.singer
+                        )
+                        android.widget.Toast.makeText(context, "השיר נוסף לרשימת ההיתר!", android.widget.Toast.LENGTH_SHORT).show()
                         onDismiss()
                     }
                 }
