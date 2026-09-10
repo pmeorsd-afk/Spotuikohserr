@@ -189,8 +189,13 @@ fun MiniPlayer(navController: NavHostController) {
                     failure = placeholder(R.drawable.placeholder),
                     loading = placeholder(R.drawable.placeholder),
                     isAllowed = com.music.spotui.BuildConfig.IS_ADMIN ||
-                        com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(currentTrack) ||
-                        com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(currentTrack?.spotifyTrackId?.ifBlank { currentTrack?.url }, songTitle, songSinger),
+                        com.music.spotui.util.KosherWhitelistManager.isTrackAllowed(currentTrack) ||
+                        com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(
+                            com.music.spotui.util.KosherWhitelistManager.canonicalTrackId(currentTrack)
+                                .ifBlank { currentTrack?.spotifyTrackId?.ifBlank { currentTrack?.url } },
+                            songTitle,
+                            songSinger
+                        ),
                     contentDescription = ""
                 )
                 Column(

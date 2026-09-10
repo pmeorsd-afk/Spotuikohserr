@@ -10,6 +10,13 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28"/>
 
+    <permission
+        android:name="com.music.spotui.permission.READ_WHITELIST"
+        android:protectionLevel="signature" />
+
+    <uses-permission
+        android:name="com.music.spotui.permission.READ_WHITELIST" />
+
     <queries>
         <package android:name="com.waze" />
         <package android:name="com.music.spotui" />
@@ -79,11 +86,14 @@
         <provider
             android:name=".util.KosherWhitelistProvider"
             android:authorities="${applicationId}.provider.whitelist"
-            android:exported="true" />
+            android:exported="true"
+            android:readPermission="com.music.spotui.permission.READ_WHITELIST"
+            android:grantUriPermissions="false" />
 
         <receiver
             android:name=".util.WhitelistSyncReceiver"
-            android:exported="true">
+            android:exported="true"
+            android:permission="com.music.spotui.permission.READ_WHITELIST">
             <intent-filter>
                 <action android:name="com.music.spotui.ACTION_WHITELIST_SYNC" />
             </intent-filter>

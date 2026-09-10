@@ -227,7 +227,8 @@ fun SongOptionsSheet(
                 onDismiss()
             }
             if (com.music.spotui.BuildConfig.IS_ADMIN) {
-                val effectiveTrackId = song.spotifyTrackId.ifBlank { song.url }
+                val effectiveTrackId = com.music.spotui.util.KosherWhitelistManager.canonicalTrackId(song)
+                    .ifBlank { song.spotifyTrackId.ifBlank { song.url } }
                 val isTrackApproved = com.music.spotui.util.KosherWhitelistManager.isTrackInWhitelist(
                     effectiveTrackId,
                     song.title,
