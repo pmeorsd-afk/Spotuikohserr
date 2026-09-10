@@ -60,13 +60,14 @@ class Api @Inject constructor(
         }
     }
 
-    private fun SpotifyTrack.toSongModel(): SongsModel {
+    private fun SpotifyTrack.toSongModel(albumCover: String = "", albumName: String = ""): SongsModel {
         val singer = artists.joinToString(", ") { it.name }
-        val cover = album?.images?.firstOrNull()?.url ?: ""
+        val cover = album?.images?.firstOrNull()?.url?.takeIf { it.isNotBlank() } ?: albumCover
+        val albumTitle = album?.name?.takeIf { it.isNotBlank() } ?: albumName
         return SongsModel(
             id = stableId("track:$id"),
             title = name.take(128),
-            album = album?.name ?: "",
+            album = albumTitle,
             singer = singer,
             coverUri = cover,
             // Playback resolves the search text in this key against YouTube, but
@@ -531,7 +532,11 @@ class Api @Inject constructor(
             emit(Response.Success(emptyList())); return@flow
         }
         Spotify.album(albumId).fold(
-            onSuccess = { full -> emit(Response.Success(full.tracks?.items.orEmpty().map { it.toSongModel() })) },
+            onSuccess = { full ->
+                val albumCover = full.images.firstOrNull()?.url.orEmpty()
+                val albumName = full.name
+                emit(Response.Success(full.tracks?.items.orEmpty().map { it.toSongModel(albumCover, albumName) }))
+            },
             onFailure = { Log.e("Api", "getAlbumSongs failed", it); emit(Response.Error(it.message ?: "error")) },
         )
     }

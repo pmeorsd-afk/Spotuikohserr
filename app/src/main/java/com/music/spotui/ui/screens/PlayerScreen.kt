@@ -1,5 +1,7 @@
 package com.music.spotui.ui.screens
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -14,6 +16,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.sizeIn
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -36,6 +39,7 @@ import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.List
@@ -128,6 +132,7 @@ fun PlayerScreen(navController: NavController) {
     var showMenu by remember { mutableStateOf(false) }
     var showLyrics by remember { mutableStateOf(false) }
     var showSavedIn by remember { mutableStateOf(false) }
+    var showDebugDialog by remember { mutableStateOf(false) }
 
     if (showMenu) {
         PlayerOptionsSheet(
@@ -135,7 +140,8 @@ fun PlayerScreen(navController: NavController) {
             playerViewModel = playerViewModel,
             context = context,
             isLiked = isLiked,
-            onDismiss = { showMenu = false }
+            onDismiss = { showMenu = false },
+            onShowDebug = { showDebugDialog = true }
         )
     }
 
@@ -245,6 +251,79 @@ fun PlayerScreen(navController: NavController) {
     val isCurrentSongAllowed = com.music.spotui.BuildConfig.IS_ADMIN ||
             com.music.spotui.util.KosherWhitelistManager.isTrackAllowed(currentTrack) ||
             com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(effectiveTrackId, songTitle, songSinger)
+
+    if (showDebugDialog) {
+        val report = remember(whitelistVersion, playerViewModel.currentSongId.value, showDebugDialog) {
+            val sb = StringBuilder()
+            sb.appendLine(com.music.spotui.util.KosherWhitelistManager.debugWhitelistSync(context))
+            sb.appendLine("=== CURRENT PLAYING SONG ===")
+            sb.appendLine("Title: $songTitle")
+            sb.appendLine("Singer: $songSinger")
+            sb.appendLine("Queue ID: ${currentTrack?.id}")
+            sb.appendLine("Spotify Track ID: ${currentTrack?.spotifyTrackId}")
+            sb.appendLine("Canonical ID: $effectiveTrackId")
+            sb.appendLine("URL: ${currentTrack?.url}")
+            sb.appendLine("Cover URI: ${currentTrack?.coverUri?.takeIf { it.isNotBlank() } ?: songCoverUri}")
+            sb.appendLine("isTrackAllowed: $isCurrentSongAllowed")
+            sb.appendLine("isTrackInWhitelist: ${com.music.spotui.util.KosherWhitelistManager.isTrackInWhitelist(effectiveTrackId, songTitle, songSinger)}")
+            sb.appendLine("isArtistInWhitelist: ${com.music.spotui.util.KosherWhitelistManager.isArtistInWhitelist(null, songSinger)}")
+            sb.toString()
+        }
+
+        androidx.compose.material3.AlertDialog(
+            onDismissRequest = { showDebugDialog = false },
+            title = {
+                Text("בדיקת סנכרון כשרות (Debug)", color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+            },
+            text = {
+                androidx.compose.foundation.lazy.LazyColumn(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .heightIn(max = 380.dp)
+                ) {
+                    item {
+                        androidx.compose.foundation.text.selection.SelectionContainer {
+                            Text(
+                                text = report,
+                                color = Color.LightGray,
+                                fontSize = 12.sp,
+                                fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace
+                            )
+                        }
+                    }
+                }
+            },
+            confirmButton = {
+                androidx.compose.material3.TextButton(
+                    onClick = {
+                        val cm = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                        cm.setPrimaryClip(ClipData.newPlainText("Whitelist Debug", report))
+                        Toast.makeText(context, "הדוח הועתק ללוח!", Toast.LENGTH_SHORT).show()
+                    }
+                ) {
+                    Text("העתק דוח", color = Color(0xFF1ED760))
+                }
+            },
+            dismissButton = {
+                Row {
+                    androidx.compose.material3.TextButton(
+                        onClick = {
+                            val ok = com.music.spotui.util.KosherWhitelistManager.syncFromAdminProvider(context)
+                            Toast.makeText(context, if (ok) "סונכרן בהצלחה מ-Admin!" else "סנכרון נכשל (בדוק אם Admin מותקן)", Toast.LENGTH_SHORT).show()
+                        }
+                    ) {
+                        Text("סנכרן עכשיו", color = Color(0xFF64B5F6))
+                    }
+                    androidx.compose.material3.TextButton(
+                        onClick = { showDebugDialog = false }
+                    ) {
+                        Text("סגור", color = Color.Gray)
+                    }
+                }
+            },
+            containerColor = Color(0xFF1E1E1E),
+        )
+    }
 
     // Detailed debug logging recommended by ChatGPT
     LaunchedEffect(playerViewModel.currentSongId.value, songTitle, songSinger, isCurrentSongAllowed, whitelistVersion) {
@@ -391,17 +470,28 @@ fun PlayerScreen(navController: NavController) {
                     .fillMaxWidth()
             ) {
                 if (queueSongs.isEmpty()) {
-                    GlideImage(
+                    val singleCover = songCoverUri.takeIf { it.isNotBlank() }
+                    val singleAllowed = com.music.spotui.BuildConfig.IS_ADMIN || isCurrentSongAllowed
+                    Box(
                         modifier = Modifier
                             .sizeIn(maxWidth = 385.dp, maxHeight = 385.dp)
                             .aspectRatio(1f)
-                            .padding(20.dp)
-                            .clip(RoundedCornerShape(10.dp))
-                            .alpha(if (canvasUrl != null) 0f else 1f),
-                        model = songCoverUri,
-                        contentScale = ContentScale.Crop,
-                        isAllowed = isCurrentSongAllowed,
-                        contentDescription = "")
+                            .clickable(enabled = !singleAllowed) {
+                                showDebugDialog = true
+                            },
+                        contentAlignment = Alignment.Center
+                    ) {
+                        GlideImage(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .padding(20.dp)
+                                .clip(RoundedCornerShape(10.dp))
+                                .alpha(if (canvasUrl != null) 0f else 1f),
+                            model = singleCover,
+                            contentScale = ContentScale.Crop,
+                            isAllowed = singleAllowed,
+                            contentDescription = "")
+                    }
                 } else {
                     HorizontalPager(
                         state = artworkPagerState,
@@ -410,18 +500,29 @@ fun PlayerScreen(navController: NavController) {
                             .aspectRatio(1f),
                     ) { page ->
                         val pageSong = queueSongs.getOrNull(page)
-                        val pageAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(pageSong) ||
+                        val pageAllowed = com.music.spotui.BuildConfig.IS_ADMIN ||
+                                com.music.spotui.util.KosherWhitelistManager.isTrackAllowed(pageSong) ||
                                 (page == artworkPagerState.currentPage && isCurrentSongAllowed)
-                        GlideImage(
+                        val pageCover = pageSong?.coverUri?.takeIf { it.isNotBlank() } ?: songCoverUri.takeIf { it.isNotBlank() }
+                        Box(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .padding(20.dp)
-                                .clip(RoundedCornerShape(10.dp))
-                                .alpha(if (canvasUrl != null) 0f else 1f),
-                            model = pageSong?.coverUri ?: songCoverUri,
-                            contentScale = ContentScale.Crop,
-                            isAllowed = pageAllowed,
-                            contentDescription = "")
+                                .clickable(enabled = !pageAllowed) {
+                                    showDebugDialog = true
+                                },
+                            contentAlignment = Alignment.Center
+                        ) {
+                            GlideImage(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .padding(20.dp)
+                                    .clip(RoundedCornerShape(10.dp))
+                                    .alpha(if (canvasUrl != null) 0f else 1f),
+                                model = pageCover,
+                                contentScale = ContentScale.Crop,
+                                isAllowed = pageAllowed,
+                                contentDescription = "")
+                        }
                     }
                 }
             }
@@ -1085,7 +1186,8 @@ fun PlayerOptionsSheet(
     playerViewModel: PlayerViewModel,
     context: Context,
     isLiked: MutableState<Boolean>,
-    onDismiss: () -> Unit
+    onDismiss: () -> Unit,
+    onShowDebug: (() -> Unit)? = null,
 ) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var showSleep by remember { mutableStateOf(false) }
@@ -1214,6 +1316,16 @@ fun PlayerOptionsSheet(
                     context.startActivity(Intent.createChooser(send, "Share"))
                     onDismiss()
                 }
+
+                PlayerMenuRow(
+                    icon = Icons.Default.Info,
+                    label = "בדיקת סנכרון והיתר (Debug Info)",
+                    iconTint = Color(0xFF64B5F6),
+                ) {
+                    onShowDebug?.invoke()
+                    onDismiss()
+                }
+
                 if (com.music.spotui.BuildConfig.IS_ADMIN) {
                     val trackId = com.music.spotui.util.KosherWhitelistManager.canonicalTrackId(currentSong)
                         .ifBlank { currentSong?.spotifyTrackId.orEmpty().ifBlank { currentSong?.url.orEmpty() } }
