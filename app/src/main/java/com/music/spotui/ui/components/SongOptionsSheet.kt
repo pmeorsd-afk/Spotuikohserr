@@ -243,6 +243,29 @@ fun SongOptionsSheet(
                         android.widget.Toast.makeText(context, "השיר הוסר מההיתר", android.widget.Toast.LENGTH_SHORT).show()
                         onDismiss()
                     }
+
+                    val isSingerApproved = com.music.spotui.util.KosherWhitelistManager.isArtistInWhitelist(null, song.singer)
+                    if (isSingerApproved) {
+                        SongMenuRow(
+                            icon = Icons.Default.Close,
+                            label = "הסר את כל שירי ${song.singer} מההיתר (Admin)",
+                            iconTint = Color(0xFFE57373)
+                        ) {
+                            com.music.spotui.util.KosherWhitelistManager.removeArtist(context, name = song.singer)
+                            android.widget.Toast.makeText(context, "כל שירי ${song.singer} הוסרו מההיתר", android.widget.Toast.LENGTH_SHORT).show()
+                            onDismiss()
+                        }
+                    } else if (song.singer.isNotBlank()) {
+                        SongMenuRow(
+                            icon = Icons.Default.Person,
+                            label = "אשר את כל שירי ${song.singer} (Admin)",
+                            iconTint = Color(0xFF1ED760)
+                        ) {
+                            com.music.spotui.util.KosherWhitelistManager.addArtist(context, name = song.singer)
+                            android.widget.Toast.makeText(context, "${song.singer} נוסף לרשימת ההיתר!", android.widget.Toast.LENGTH_SHORT).show()
+                            onDismiss()
+                        }
+                    }
                 } else {
                     SongMenuRow(
                         icon = Icons.Default.CheckCircle,

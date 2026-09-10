@@ -25,7 +25,17 @@ class KosherWhitelistProvider : ContentProvider() {
         sortOrder: String?
     ): Cursor {
         val cursor = MatrixCursor(arrayOf("json"))
-        val json = KosherWhitelistManager.exportWhitelistJson()
+        val ctx = context?.applicationContext
+        val json = if (ctx != null) {
+            val cacheFile = java.io.File(ctx.filesDir, "whitelist_cache.json")
+            if (cacheFile.exists() && cacheFile.length() > 0) {
+                cacheFile.readText()
+            } else {
+                KosherWhitelistManager.exportWhitelistJson()
+            }
+        } else {
+            KosherWhitelistManager.exportWhitelistJson()
+        }
         cursor.addRow(arrayOf(json))
         return cursor
     }

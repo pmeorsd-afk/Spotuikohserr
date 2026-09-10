@@ -14,6 +14,8 @@
         <package android:name="com.waze" />
         <package android:name="com.music.spotui" />
         <package android:name="com.music.spotui.admin" />
+        <provider android:authorities="com.music.spotui.admin.provider.whitelist" />
+        <provider android:authorities="com.music.spotui.provider.whitelist" />
     </queries>
 
     <application

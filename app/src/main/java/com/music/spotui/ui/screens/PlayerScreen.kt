@@ -121,6 +121,7 @@ fun PlayerScreen(navController: NavController) {
     val songPlayingState = playerViewModel.currentSongPlayingState.value
     val songId = playerViewModel.currentSongId.value
     val context = LocalContext.current
+    val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
     val isLiked = remember {
         mutableStateOf(isSongLiked(context, songId.toString()))
     }
@@ -239,9 +240,10 @@ fun PlayerScreen(navController: NavController) {
     }
 
     val currentTrack = queueSongs.firstOrNull { it.id == playerViewModel.currentSongId.value }
+    val effectiveTrackId = currentTrack?.spotifyTrackId?.ifBlank { currentTrack?.url }
     val isCurrentSongAllowed = com.music.spotui.BuildConfig.IS_ADMIN ||
             com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(currentTrack) ||
-            com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(currentTrack?.spotifyTrackId, songTitle, songSinger)
+            com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(effectiveTrackId, songTitle, songSinger)
 
     // Load the current track's Spotify Canvas only if whitelisted.
     LaunchedEffect(playerViewModel.currentSongId.value, queueSongs, isCurrentSongAllowed) {
@@ -1215,6 +1217,29 @@ fun PlayerOptionsSheet(
                         ) {
                             com.music.spotui.util.KosherWhitelistManager.addTrack(context, trackId, title, singer)
                             Toast.makeText(context, "השיר נוסף לרשימת ההיתר!", Toast.LENGTH_SHORT).show()
+                            onDismiss()
+                        }
+                    }
+
+                    val isSingerApproved = com.music.spotui.util.KosherWhitelistManager.isArtistInWhitelist(null, singer)
+                    if (isSingerApproved) {
+                        PlayerMenuRow(
+                            icon = Icons.Default.Close,
+                            label = "הסר את כל שירי $singer מההיתר (Admin)",
+                            iconTint = Color(0xFFE57373),
+                        ) {
+                            com.music.spotui.util.KosherWhitelistManager.removeArtist(context, name = singer)
+                            Toast.makeText(context, "כל שירי $singer הוסרו מההיתר", Toast.LENGTH_SHORT).show()
+                            onDismiss()
+                        }
+                    } else if (singer.isNotBlank()) {
+                        PlayerMenuRow(
+                            icon = Icons.Default.Person,
+                            label = "אשר את כל שירי $singer (Admin)",
+                            iconTint = Color(0xFF1ED760),
+                        ) {
+                            com.music.spotui.util.KosherWhitelistManager.addArtist(context, name = singer)
+                            Toast.makeText(context, "$singer נוסף לרשימת ההיתר!", Toast.LENGTH_SHORT).show()
                             onDismiss()
                         }
                     }
