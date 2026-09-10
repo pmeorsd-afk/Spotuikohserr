@@ -133,6 +133,7 @@ fun MiniPlayer(navController: NavHostController) {
         isLiked = isSongLiked(context, songId.toString())
     }
     val currentTrack = miniPlayerViewModel.queue.value.firstOrNull { it.id == songId }
+    val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
     var showSavedIn by remember { mutableStateOf(false) }
     if (showSavedIn && currentTrack != null) {
         SavedInSheet(
@@ -189,7 +190,7 @@ fun MiniPlayer(navController: NavHostController) {
                     loading = placeholder(R.drawable.placeholder),
                     isAllowed = com.music.spotui.BuildConfig.IS_ADMIN ||
                         com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(currentTrack) ||
-                        com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(currentTrack?.spotifyTrackId, songTitle, songSinger),
+                        com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(currentTrack?.spotifyTrackId?.ifBlank { currentTrack?.url }, songTitle, songSinger),
                     contentDescription = ""
                 )
                 Column(

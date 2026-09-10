@@ -49,6 +49,9 @@ class MainActivity : ComponentActivity() {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
 
         handleWazeResume(intent)
+        if (!com.music.spotui.BuildConfig.IS_ADMIN) {
+            com.music.spotui.util.KosherWhitelistManager.syncFromAdminProvider(this)
+        }
 
         // Ask for notification permission (Android 13+) so the media notification shows.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&

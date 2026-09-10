@@ -81,6 +81,7 @@ fun HomeScreen(navController: NavController){
     val home by homeViewModel.home.collectAsState()
     val albums by homeViewModel.albums.collectAsState()
     val artists by homeViewModel.artists.collectAsState()
+    val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
 
     Surface(
         modifier = Modifier
