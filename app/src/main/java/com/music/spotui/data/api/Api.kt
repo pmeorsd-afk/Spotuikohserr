@@ -80,9 +80,9 @@ class Api @Inject constructor(
         )
     }
 
-    private fun SpotifyAlbum.toAlbumModel(): AlbumsModel = AlbumsModel(
+    private fun SpotifyAlbum.toAlbumModel(fallbackArtist: String = ""): AlbumsModel = AlbumsModel(
         id = stableId("album:$id"),
-        artists = artists.joinToString(", ") { it.name },
+        artists = artists.joinToString(", ") { it.name }.ifBlank { fallbackArtist },
         coverUri = images.firstOrNull()?.url ?: "",
         name = name,
         time = releaseDate ?: "",
@@ -482,9 +482,10 @@ class Api @Inject constructor(
             onSuccess = { o ->
                 val avatar = o.avatarImages.firstOrNull()?.url?.ifBlank { null } ?: searchCover
                 val header = o.headerImages.firstOrNull()?.url?.ifBlank { null } ?: avatar
+                val pageArtist = o.name.ifBlank { artistName }
                 emit(Response.Success(ArtistOverviewModel(
                     id = o.id,
-                    name = o.name.ifBlank { artistName },
+                    name = pageArtist,
                     verified = o.verified,
                     monthlyListeners = o.monthlyListeners,
                     biography = o.biography,
@@ -497,8 +498,8 @@ class Api @Inject constructor(
                             playcount = t.playcount,
                         )
                     },
-                    popularReleases = o.popularReleases.map { it.toAlbumModel() },
-                    appearsOn = o.appearsOn.map { it.toAlbumModel() },
+                    popularReleases = o.popularReleases.map { it.toAlbumModel(fallbackArtist = pageArtist) },
+                    appearsOn = o.appearsOn.map { it.toAlbumModel(fallbackArtist = pageArtist) },
                     relatedArtists = o.relatedArtists.map { it.toArtistModel() },
                 )))
             },
