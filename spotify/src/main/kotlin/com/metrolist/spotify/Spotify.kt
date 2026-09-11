@@ -1949,6 +1949,9 @@ object Spotify {
                     ?: elem.jsonObject
                 val uri = rel.str("uri")
                 val id = uri?.substringAfterLast(":") ?: rel.str("id") ?: return null
+                val artists = (rel.obj("artists")?.arr("items") ?: elem.jsonObject.obj("artists")?.arr("items"))
+                    ?.mapNotNull { parseGqlSimpleArtist(it.jsonObject) }
+                    ?: emptyList()
                 return SpotifyAlbum(
                     id = id,
                     name = rel.str("name") ?: "",
@@ -1956,6 +1959,7 @@ object Spotify {
                     // node) is authoritative — the item-level `type` field is often
                     // missing or wrong, which made album/EP labels look random.
                     albumType = forcedType ?: rel.str("type")?.lowercase(),
+                    artists = artists,
                     images = parseGqlImages(rel.obj("coverArt")?.arr("sources")),
                     releaseDate = rel.obj("date")?.int("year")?.toString(),
                     uri = uri,
@@ -1990,10 +1994,14 @@ object Spotify {
                         ?: elem.jsonObject
                     val uri = rel.str("uri")
                     val id = uri?.substringAfterLast(":") ?: rel.str("id") ?: return@mapNotNull null
+                    val artists = (rel.obj("artists")?.arr("items") ?: elem.jsonObject.obj("artists")?.arr("items"))
+                        ?.mapNotNull { parseGqlSimpleArtist(it.jsonObject) }
+                        ?: emptyList()
                     SpotifyAlbum(
                         id = id,
                         name = rel.str("name") ?: "",
                         albumType = rel.str("type")?.lowercase(),
+                        artists = artists,
                         images = parseGqlImages(rel.obj("coverArt")?.arr("sources")),
                         releaseDate = rel.obj("date")?.int("year")?.toString(),
                         uri = uri,
