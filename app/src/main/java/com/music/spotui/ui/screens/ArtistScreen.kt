@@ -367,7 +367,7 @@ private fun ArtistOverviewContent(
         if (overview.popularReleases.isNotEmpty()) {
             item { SectionHeader("Popular releases") }
             itemsIndexed(overview.popularReleases.take(4)) { _, album ->
-                ReleaseRow(album, fallbackArtist = displayName) {
+                ReleaseRow(album) {
                     navController.navigate(albumRoute(album.name, album.artists.ifBlank { displayName }))
                 }
             }
@@ -447,7 +447,7 @@ private fun ArtistOverviewContent(
                     contentPadding = androidx.compose.foundation.layout.PaddingValues(12.dp, 0.dp),
                 ) {
                     items(overview.appearsOn.size) { i ->
-                        ReleaseCard(overview.appearsOn[i], fallbackArtist = displayName) {
+                        ReleaseCard(overview.appearsOn[i]) {
                             navController.navigate(albumRoute(overview.appearsOn[i].name, overview.appearsOn[i].artists.ifBlank { displayName }))
                         }
                     }
@@ -542,7 +542,7 @@ private fun SectionHeader(title: String) {
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-private fun ReleaseCard(album: AlbumsModel, fallbackArtist: String = "", onClick: () -> Unit) {
+private fun ReleaseCard(album: AlbumsModel, onClick: () -> Unit) {
     Column(
         modifier = Modifier
             .width(140.dp)
@@ -560,13 +560,13 @@ private fun ReleaseCard(album: AlbumsModel, fallbackArtist: String = "", onClick
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
-            isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(album, fallbackArtist),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(album),
             contentDescription = "",
         )
         Spacer(Modifier.height(6.dp))
         Text(text = album.name, color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Medium, maxLines = 1)
         Text(
-            text = album.time.ifBlank { album.artists.ifBlank { fallbackArtist } }.let { if (album.time.isNotBlank()) "${album.time} • Album" else it },
+            text = album.time.ifBlank { album.artists }.let { if (album.time.isNotBlank()) "${album.time} • Album" else it },
             color = Color.Gray,
             fontSize = 11.sp,
             maxLines = 1,
@@ -576,7 +576,7 @@ private fun ReleaseCard(album: AlbumsModel, fallbackArtist: String = "", onClick
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-private fun ReleaseRow(album: AlbumsModel, fallbackArtist: String = "", onClick: () -> Unit) {
+private fun ReleaseRow(album: AlbumsModel, onClick: () -> Unit) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
@@ -595,7 +595,7 @@ private fun ReleaseRow(album: AlbumsModel, fallbackArtist: String = "", onClick:
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
-            isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(album, fallbackArtist),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(album),
             contentDescription = "",
         )
         Spacer(Modifier.width(14.dp))
@@ -716,27 +716,27 @@ fun ArtistReleasesScreen(navController: NavController, artistName: String) {
                 item { Loader() }
             }
             when (filter) {
-                "albums" -> items(albums.size) { i -> ReleaseRow(albums[i], fallbackArtist = artistName) { openAlbum(albums[i]) } }
-                "singles" -> items(singles.size) { i -> ReleaseRow(singles[i], fallbackArtist = artistName) { openAlbum(singles[i]) } }
-                "featured" -> items(featuredOn.size) { i -> ReleaseRow(featuredOn[i], fallbackArtist = artistName) { openAlbum(featuredOn[i]) } }
+                "albums" -> items(albums.size) { i -> ReleaseRow(albums[i]) { openAlbum(albums[i]) } }
+                "singles" -> items(singles.size) { i -> ReleaseRow(singles[i]) { openAlbum(singles[i]) } }
+                "featured" -> items(featuredOn.size) { i -> ReleaseRow(featuredOn[i]) { openAlbum(featuredOn[i]) } }
                 else -> {
                     latest?.let {
                         item { ReleaseSectionHeader("Latest release") }
-                        item { ReleaseRow(it, fallbackArtist = artistName) { openAlbum(it) } }
+                        item { ReleaseRow(it) { openAlbum(it) } }
                     }
                     if (albums.isNotEmpty()) {
                         item { ReleaseSectionHeader("Albums") }
-                        items(albums.size) { i -> ReleaseRow(albums[i], fallbackArtist = artistName) { openAlbum(albums[i]) } }
+                        items(albums.size) { i -> ReleaseRow(albums[i]) { openAlbum(albums[i]) } }
                     }
                     if (singles.isNotEmpty()) {
                         item { ReleaseSectionHeader("Singles and EPs") }
-                        items(singles.size) { i -> ReleaseRow(singles[i], fallbackArtist = artistName) { openAlbum(singles[i]) } }
+                        items(singles.size) { i -> ReleaseRow(singles[i]) { openAlbum(singles[i]) } }
                     }
                     if (untyped.isNotEmpty()) {
                         if (albums.isEmpty() && singles.isEmpty()) {
                             item { ReleaseSectionHeader("Popular releases") }
                         }
-                        items(untyped.size) { i -> ReleaseRow(untyped[i], fallbackArtist = artistName) { openAlbum(untyped[i]) } }
+                        items(untyped.size) { i -> ReleaseRow(untyped[i]) { openAlbum(untyped[i]) } }
                     }
                 }
             }

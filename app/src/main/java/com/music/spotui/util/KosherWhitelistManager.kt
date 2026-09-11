@@ -434,15 +434,14 @@ object KosherWhitelistManager {
     /**
      * Checks if an [AlbumsModel] is allowed for display.
      */
-    fun isAlbumWhitelisted(album: AlbumsModel?, fallbackArtist: String? = null): Boolean {
+    fun isAlbumWhitelisted(album: AlbumsModel?): Boolean {
         if (album == null) return false
         if (com.music.spotui.BuildConfig.IS_ADMIN) {
             if (album.coverUri.isNotBlank()) allowImageUrl(album.coverUri)
             return true
         }
-        val artists = album.artists.ifBlank { fallbackArtist.orEmpty() }
-        val allowed = if (artists.isNotBlank()) {
-            areAllArtistsInWhitelist(artists) || isUrlAllowed(album.coverUri)
+        val allowed = if (album.artists.isNotBlank()) {
+            areAllArtistsInWhitelist(album.artists) || isUrlAllowed(album.coverUri)
         } else {
             isUrlAllowed(album.coverUri)
         }

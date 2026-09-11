@@ -30,6 +30,9 @@ import io.ktor.http.ContentType
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.content.TextContent
 import io.ktor.serialization.kotlinx.json.json
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
@@ -60,6 +63,8 @@ object Spotify {
     var accessToken: String? = null
 
     private const val GQL_URL = "https://api-partner.spotify.com/pathfinder/v2/query"
+
+    private val albumArtistsCache = java.util.concurrent.ConcurrentHashMap<String, List<SpotifySimpleArtist>>()
 
     private fun randomUserAgent(): String {
         val osOptions = arrayOf(
@@ -2027,6 +2032,59 @@ object Spotify {
                     )
                 }
 
+            val albumArtistsFromTopTracks = topTracks.mapNotNull {
+                val aId = it.track.album?.id
+                if (!aId.isNullOrBlank() && it.track.artists.isNotEmpty()) {
+                    aId to it.track.artists
+                } else null
+            }.toMap()
+
+            val resolvedPopularReleases = coroutineScope {
+                popularReleases.map { rel ->
+                    async {
+                        if (rel.artists.isNotEmpty()) return@async rel
+                        val fromTop = albumArtistsFromTopTracks[rel.id]
+                        if (!fromTop.isNullOrEmpty()) {
+                            return@async rel.copy(artists = fromTop)
+                        }
+                        val cached = albumArtistsCache[rel.id]
+                        if (cached != null) {
+                            return@async rel.copy(artists = cached)
+                        }
+                        val fetched = album(rel.id).getOrNull()?.artists
+                        if (!fetched.isNullOrEmpty()) {
+                            albumArtistsCache[rel.id] = fetched
+                            rel.copy(artists = fetched)
+                        } else {
+                            rel
+                        }
+                    }
+                }.awaitAll()
+            }
+
+            val resolvedAppearsOn = coroutineScope {
+                appearsOn.map { rel ->
+                    async {
+                        if (rel.artists.isNotEmpty()) return@async rel
+                        val fromTop = albumArtistsFromTopTracks[rel.id]
+                        if (!fromTop.isNullOrEmpty()) {
+                            return@async rel.copy(artists = fromTop)
+                        }
+                        val cached = albumArtistsCache[rel.id]
+                        if (cached != null) {
+                            return@async rel.copy(artists = cached)
+                        }
+                        val fetched = album(rel.id).getOrNull()?.artists
+                        if (!fetched.isNullOrEmpty()) {
+                            albumArtistsCache[rel.id] = fetched
+                            rel.copy(artists = fetched)
+                        } else {
+                            rel
+                        }
+                    }
+                }.awaitAll()
+            }
+
             SpotifyArtistOverview(
                 id = artistId,
                 name = profile?.str("name") ?: "",
@@ -2036,8 +2094,8 @@ object Spotify {
                 avatarImages = avatar,
                 headerImages = header,
                 topTracks = topTracks,
-                popularReleases = popularReleases,
-                appearsOn = appearsOn,
+                popularReleases = resolvedPopularReleases,
+                appearsOn = resolvedAppearsOn,
                 relatedArtists = related,
             )
         }

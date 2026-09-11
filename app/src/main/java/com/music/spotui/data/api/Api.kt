@@ -80,9 +80,9 @@ class Api @Inject constructor(
         )
     }
 
-    private fun SpotifyAlbum.toAlbumModel(fallbackArtist: String = ""): AlbumsModel = AlbumsModel(
+    private fun SpotifyAlbum.toAlbumModel(): AlbumsModel = AlbumsModel(
         id = stableId("album:$id"),
-        artists = artists.joinToString(", ") { it.name }.ifBlank { fallbackArtist },
+        artists = artists.joinToString(", ") { it.name },
         coverUri = images.firstOrNull()?.url ?: "",
         name = name,
         time = releaseDate ?: "",
@@ -498,8 +498,8 @@ class Api @Inject constructor(
                             playcount = t.playcount,
                         )
                     },
-                    popularReleases = o.popularReleases.map { it.toAlbumModel(fallbackArtist = pageArtist) },
-                    appearsOn = o.appearsOn.map { it.toAlbumModel(fallbackArtist = pageArtist) },
+                    popularReleases = o.popularReleases.map { it.toAlbumModel() },
+                    appearsOn = o.appearsOn.map { it.toAlbumModel() },
                     relatedArtists = o.relatedArtists.map { it.toArtistModel() },
                 )))
             },
