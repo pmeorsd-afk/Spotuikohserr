@@ -38,4 +38,12 @@ sealed class HomeItem {
         val subtitle: String,
         val id: String = "",
     ) : HomeItem()
+
+    data class Track(
+        val song: SongsModel,
+    ) : HomeItem() {
+        override val name: String get() = song.title
+        override val imageUrl: String get() = song.coverUri
+        val subtitle: String get() = song.singer
+    }
 }

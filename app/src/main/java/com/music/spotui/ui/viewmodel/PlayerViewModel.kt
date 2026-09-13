@@ -19,11 +19,16 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import com.music.spotui.data.local.LocalListeningTracker
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 @HiltViewModel
-class PlayerViewModel @Inject constructor(private val currentSongState: CurrentSongState, private val repository: AppRepository) : ViewModel(){
+class PlayerViewModel @Inject constructor(
+    private val currentSongState: CurrentSongState,
+    private val repository: AppRepository,
+    private val listeningTracker: LocalListeningTracker
+) : ViewModel(){
 
     val currentSongTitle: State<String> get() = currentSongState.title
     val currentSongSinger: State<String> get() = currentSongState.singer
@@ -81,8 +86,29 @@ class PlayerViewModel @Inject constructor(private val currentSongState: CurrentS
 
     val playingArtist by mutableStateOf(currentSongSinger.value)
 
+    private var listeningSongKey: String = ""
+
     init {
         fetchSongs()
+        SongPlayer.setPositionListener { positionMs, durationMs ->
+            val q = currentSongState.queue.value
+            val song = q.firstOrNull { it.id == currentSongState.songId.value } ?: return@setPositionListener
+            val key = song.spotifyTrackId.trim().ifBlank { song.url.trim() }
+            if (key.isBlank()) return@setPositionListener
+
+            if (listeningSongKey != key) {
+                listeningSongKey = key
+                listeningTracker.onSongStarted(song)
+            }
+
+            if (positionMs >= 30_000L) {
+                listeningTracker.recordPlay(song)
+            }
+
+            if (durationMs > 0L && positionMs >= durationMs * 0.75f) {
+                listeningTracker.recordCompletion(song)
+            }
+        }
     }
 
 
