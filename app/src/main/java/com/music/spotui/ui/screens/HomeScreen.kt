@@ -70,6 +70,9 @@ import com.music.spotui.ui.theme.AppBackground
 import com.music.spotui.ui.theme.AppPalette
 import com.music.spotui.ui.theme.GridBackground
 import com.music.spotui.ui.viewmodel.HomeViewModel
+import com.music.spotui.ui.viewmodel.PlayerViewModel
+import com.music.spotui.data.entity.SongsModel
+import com.music.spotui.di.SongPlayer
 import java.time.LocalTime
 
 
@@ -78,6 +81,8 @@ import java.time.LocalTime
 fun HomeScreen(navController: NavController){
 
     val homeViewModel : HomeViewModel = hiltViewModel()
+    val playerViewModel : PlayerViewModel = hiltViewModel()
+    val context = androidx.compose.ui.platform.LocalContext.current
     val home by homeViewModel.home.collectAsState()
     val albums by homeViewModel.albums.collectAsState()
     val artists by homeViewModel.artists.collectAsState()
@@ -99,7 +104,10 @@ fun HomeScreen(navController: NavController){
         when {
             // Preferred: the real personalized Spotify home feed.
             feed != null && feed.sections.isNotEmpty() -> {
-                HomeFeedContent(navController, feed)
+                HomeFeedContent(navController, feed) { song ->
+                    playerViewModel.updateQueue(listOf(song))
+                    SongPlayer.playSong(song.url, context)
+                }
             }
 
             // Still resolving the real personalized home feed. Show the loader even
@@ -128,7 +136,11 @@ fun HomeScreen(navController: NavController){
     }
 }
 
-private fun onHomeItemClick(navController: NavController, item: HomeItem) {
+private fun onHomeItemClick(
+    navController: NavController,
+    item: HomeItem,
+    onPlaySong: ((SongsModel) -> Unit)? = null
+) {
     when (item) {
         is HomeItem.Album -> navController.navigate(albumRoute(item.name, item.artists.ifBlank { item.subtitle }))
         is HomeItem.Artist -> navController.navigate(artistRoute(item.name, item.id))
@@ -136,12 +148,17 @@ private fun onHomeItemClick(navController: NavController, item: HomeItem) {
         is HomeItem.Playlist ->
             if (item.id.isNotBlank()) navController.navigate(playlistRoute(item.id, item.name))
             else navController.navigate(albumRoute(item.name))
+        is HomeItem.Track -> onPlaySong?.invoke(item.song)
     }
 }
 
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
-fun HomeFeedContent(navController: NavController, feed: HomeFeedModel) {
+fun HomeFeedContent(
+    navController: NavController,
+    feed: HomeFeedModel,
+    onPlaySong: ((SongsModel) -> Unit)? = null
+) {
     // Mirror open.spotify.com exactly: sections render in the order the feed
     // returns them. The 2-column "shortcuts" grid is only used for the UNTITLED
     // section the web home starts with — if the feed leads with a titled section
@@ -162,11 +179,11 @@ fun HomeFeedContent(navController: NavController, feed: HomeFeedModel) {
         }
         gridSection?.let { section ->
             item {
-                HomeShortcutGrid(navController, section.items.take(8))
+                HomeShortcutGrid(navController, section.items.take(8), onPlaySong)
             }
         }
         items(carousels.size) { i ->
-            HomeFeedSection(navController, carousels[i])
+            HomeFeedSection(navController, carousels[i], onPlaySong)
         }
     }
 }
@@ -254,7 +271,11 @@ private fun HomeHeaderRow(navController: NavController) {
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-private fun HomeShortcutGrid(navController: NavController, items: List<HomeItem>) {
+private fun HomeShortcutGrid(
+    navController: NavController,
+    items: List<HomeItem>,
+    onPlaySong: ((SongsModel) -> Unit)? = null
+) {
     Column(modifier = Modifier.padding(8.dp, 4.dp)) {
         items.chunked(2).forEach { rowItems ->
             Row(
@@ -274,7 +295,7 @@ private fun HomeShortcutGrid(navController: NavController, items: List<HomeItem>
                             .clickable(
                                 interactionSource = remember { MutableInteractionSource() },
                                 indication = null,
-                            ) { onHomeItemClick(navController, item) },
+                            ) { onHomeItemClick(navController, item, onPlaySong) },
                     ) {
                         GlideImage(
                             modifier = Modifier.size(48.dp),
@@ -302,7 +323,11 @@ private fun HomeShortcutGrid(navController: NavController, items: List<HomeItem>
 }
 
 @Composable
-private fun HomeFeedSection(navController: NavController, section: HomeSection) {
+private fun HomeFeedSection(
+    navController: NavController,
+    section: HomeSection,
+    onPlaySong: ((SongsModel) -> Unit)? = null
+) {
     Text(
         text = section.title,
         color = Color.White,
@@ -312,7 +337,7 @@ private fun HomeFeedSection(navController: NavController, section: HomeSection) 
     )
     LazyRow(contentPadding = androidx.compose.foundation.layout.PaddingValues(10.dp, 0.dp)) {
         items(section.items.size) { i ->
-            HomeFeedCard(section.items[i]) { onHomeItemClick(navController, section.items[i]) }
+            HomeFeedCard(section.items[i]) { onHomeItemClick(navController, section.items[i], onPlaySong) }
         }
     }
 }
@@ -325,6 +350,7 @@ private fun HomeFeedCard(item: HomeItem, onClick: () -> Unit) {
         is HomeItem.Album -> item.subtitle
         is HomeItem.Playlist -> item.subtitle
         is HomeItem.Artist -> "Artist"
+        is HomeItem.Track -> item.subtitle
     }
     Column(
         horizontalAlignment = if (isArtist) Alignment.CenterHorizontally else Alignment.Start,

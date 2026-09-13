@@ -1663,6 +1663,12 @@ object SongPlayer {
         pendingNextSong = null
     }
 
+    @Volatile private var positionListener: ((positionMs: Long, durationMs: Long) -> Unit)? = null
+
+    fun setPositionListener(listener: ((positionMs: Long, durationMs: Long) -> Unit)?) {
+        positionListener = listener
+    }
+
     /** (Re)start the loop that watches playback position and fires a crossfade as the
      *  current track approaches its end. */
     private var posSaveTick = 0
@@ -1682,17 +1688,19 @@ object SongPlayer {
                         if (pos > 0) com.music.spotui.data.preferences.saveLastPosition(ctx, pos)
                     }
                 }
-                if (isCrossfading) continue
-                val crossfadeMs = com.music.spotui.data.preferences.getCrossfadeMs(ctx)
-                if (crossfadeMs <= 0) continue
-                val state = boundState ?: continue
-                if (state.repeat.value) continue // repeat-one loops the same track
                 val p = player ?: continue
                 val playing = withContext(Dispatchers.Main) { p.isPlaying }
                 if (!playing) continue
                 val dur = withContext(Dispatchers.Main) { p.duration }
                 val pos = withContext(Dispatchers.Main) { p.currentPosition }
                 if (dur <= 0 || pos < 0) continue
+                positionListener?.invoke(pos, dur)
+
+                if (isCrossfading) continue
+                val crossfadeMs = com.music.spotui.data.preferences.getCrossfadeMs(ctx)
+                if (crossfadeMs <= 0) continue
+                val state = boundState ?: continue
+                if (state.repeat.value) continue // repeat-one loops the same track
                 if (pos >= dur - crossfadeMs) {
                     triggerCrossfade(ctx, crossfadeMs)
                 }
