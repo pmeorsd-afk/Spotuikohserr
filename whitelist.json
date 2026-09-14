@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 100,
-  "last_updated": "2026-09-14T19:41:47.946Z",
+  "version": 101,
+  "last_updated": "2026-09-14T19:42:00.664Z",
   "artists": [
+    {
+      "id": "4sLaClvJafP0CtSZsHCq8Y",
+      "canonical_name": "חיבת הפיוט | hibbat hapiyut",
+      "aliases": [
+        "חיבת הפיוט | hibbat hapiyut"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:42:00.664Z"
+    },
     {
       "id": "1Ad4fz2qEUGdzgdKfFz5ez",
       "canonical_name": "תזמורת אנדלוסאלם",
