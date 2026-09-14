@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 61,
-  "last_updated": "2026-09-14T19:27:26.646Z",
+  "version": 62,
+  "last_updated": "2026-09-14T19:27:36.991Z",
   "artists": [
+    {
+      "id": "6lQ484EsHlqDESmgDq8PFR",
+      "canonical_name": "Pini Einhorn",
+      "aliases": [
+        "Pini Einhorn"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:27:36.991Z"
+    },
     {
       "id": "0NHS8TjVHF6yeZoGhELqXJ",
       "canonical_name": "שייע גרוס",
