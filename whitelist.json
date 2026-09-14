@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 65,
-  "last_updated": "2026-09-14T19:29:59.755Z",
+  "version": 66,
+  "last_updated": "2026-09-14T19:30:18.475Z",
   "artists": [
     {
       "id": "1WWc6zXfTwpakU8Ds5yS1G",
@@ -390,6 +390,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44t8ofCDsaORHScldYd4mX",
+      "title": "דרך העושים מאהבה",
+      "artist": "Ishay Ribo, Zusha",
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:30:18.475Z"
+    },
     {
       "id": "6GgxeHmuC1CSS9OM2kCAGX",
       "title": "רבי נחמן אמר",
