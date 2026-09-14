@@ -96,6 +96,7 @@ class MainActivity : ComponentActivity() {
         if (!com.music.spotui.BuildConfig.IS_ADMIN) {
             com.music.spotui.util.KosherWhitelistManager.syncFromAdminProvider(this)
         }
+        com.music.spotui.util.KosherWhitelistManager.syncWithRemote(this)
     }
 
     override fun onNewIntent(intent: Intent) {

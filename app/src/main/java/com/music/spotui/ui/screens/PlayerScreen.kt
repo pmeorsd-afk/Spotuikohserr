@@ -315,7 +315,9 @@ fun PlayerScreen(navController: NavController) {
                     androidx.compose.material3.TextButton(
                         onClick = {
                             val ok = com.music.spotui.util.KosherWhitelistManager.syncFromAdminProvider(context)
-                            Toast.makeText(context, if (ok) "סונכרן בהצלחה מ-Admin!" else "סנכרון נכשל (בדוק אם Admin מותקן)", Toast.LENGTH_SHORT).show()
+                            com.music.spotui.util.KosherWhitelistManager.syncWithRemote(context) { synced ->
+                                Toast.makeText(context, if (ok || synced) "סונכרן בהצלחה!" else "סנכרון הושלם", Toast.LENGTH_SHORT).show()
+                            }
                         }
                     ) {
                         Text("סנכרן עכשיו", color = Color(0xFF64B5F6))
