@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 52,
-  "last_updated": "2026-09-14T19:25:41.254Z",
+  "version": 53,
+  "last_updated": "2026-09-14T19:25:54.020Z",
   "artists": [
+    {
+      "id": "2aJG5Lz9f4ejCBpr84oQjs",
+      "canonical_name": "Uri Davidi",
+      "aliases": [
+        "Uri Davidi"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:25:54.020Z"
+    },
     {
       "id": "45VX6Rgs7tUiftvOCWKXaO",
       "canonical_name": "Ohad Moskowitz",
