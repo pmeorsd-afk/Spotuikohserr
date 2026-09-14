@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 107,
-  "last_updated": "2026-09-14T19:42:51.913Z",
+  "version": 108,
+  "last_updated": "2026-09-14T19:43:05.304Z",
   "artists": [
+    {
+      "id": "7jNbN2QEbFNb1yc2X2YGqx",
+      "canonical_name": "ישראל סוסנה ותזמורתו",
+      "aliases": [
+        "ישראל סוסנה ותזמורתו"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:43:05.304Z"
+    },
     {
       "id": "2fd49Ivtugf8m63NCXlOGg",
       "canonical_name": "ישי לפידות",
