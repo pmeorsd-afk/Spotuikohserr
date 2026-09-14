@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 50,
-  "last_updated": "2026-09-14T19:25:30.002Z",
+  "version": 51,
+  "last_updated": "2026-09-14T19:25:35.775Z",
   "artists": [
+    {
+      "id": "20rPZiTB5B15ihzFxxyYfZ",
+      "canonical_name": "איציק וינגרטן",
+      "aliases": [
+        "איציק וינגרטן"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:25:35.775Z"
+    },
     {
       "id": "0bS6FyrgaWjHrWec3TxVkO",
       "canonical_name": "Amiran Dvir",
