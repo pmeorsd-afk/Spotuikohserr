@@ -5,6 +5,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.widget.Toast
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableIntStateOf
 import com.music.spotui.data.entity.AlbumsModel
@@ -67,6 +68,7 @@ object KosherWhitelistManager {
     private const val FALLBACK_WHITELIST_URL =
         "https://raw.githubusercontent.com/pmeorsd-afk/Spotuikohserr/main/whitelist.json"
     private const val CACHE_FILE_NAME = "whitelist_cache.json"
+    private const val ADMIN_API_KEY = "SPOTUI_ADMIN_SECRET_KEY_2026"
 
     // In-memory structured entry lists
     private val artistEntries = CopyOnWriteArrayList<WhitelistArtistEntry>()
@@ -664,14 +666,11 @@ object KosherWhitelistManager {
     }
 
     // ==========================================
-    // Admin Operations
+    // Admin Operations (Local + Central Google Apps Script API)
     // ==========================================
 
-    /**
-     * Adds a track to the whitelist and persists to local cache + broadcasts to User app.
-     */
     @Synchronized
-    fun addTrack(context: Context, id: String, title: String = "", artist: String = ""): Boolean {
+    private fun addTrackLocally(context: Context, id: String, title: String = "", artist: String = ""): Boolean {
         val rawId = id.trim()
         val cId = canonicalTrackId(rawId)
         val cleanId = cId.ifBlank { rawId }
@@ -696,11 +695,8 @@ object KosherWhitelistManager {
         return true
     }
 
-    /**
-     * Removes a track from the whitelist (marks as blocked).
-     */
     @Synchronized
-    fun removeTrack(context: Context, id: String, title: String = "", artist: String = ""): Boolean {
+    private fun removeTrackLocally(context: Context, id: String, title: String = "", artist: String = ""): Boolean {
         val rawId = id.trim()
         val cId = canonicalTrackId(rawId)
         val cleanId = cId.ifBlank { rawId }
@@ -725,11 +721,8 @@ object KosherWhitelistManager {
         return true
     }
 
-    /**
-     * Adds an artist to artistEntries and marks as approved.
-     */
     @Synchronized
-    fun addArtist(context: Context, id: String = "", name: String = ""): Boolean {
+    private fun addArtistLocally(context: Context, id: String = "", name: String = ""): Boolean {
         val cleanId = id.trim()
         val cleanName = name.trim()
         if (cleanId.isBlank() && cleanName.isBlank()) return false
@@ -760,7 +753,7 @@ object KosherWhitelistManager {
                 canonicalName = cleanName,
                 aliases = if (cleanName.isNotBlank()) listOf(cleanName) else emptyList(),
                 status = "approved",
-                notes = "added locally"
+                notes = "added via admin"
             ))
         }
 
@@ -770,11 +763,8 @@ object KosherWhitelistManager {
         return true
     }
 
-    /**
-     * Removes an artist from whitelist (marks as blocked).
-     */
     @Synchronized
-    fun removeArtist(context: Context, id: String = "", name: String = ""): Boolean {
+    private fun removeArtistLocally(context: Context, id: String = "", name: String = ""): Boolean {
         val cleanId = id.trim()
         val cleanName = name.trim()
         if (cleanId.isBlank() && cleanName.isBlank()) return false
@@ -805,7 +795,7 @@ object KosherWhitelistManager {
                 canonicalName = cleanName,
                 aliases = if (cleanName.isNotBlank()) listOf(cleanName) else emptyList(),
                 status = "blocked",
-                notes = "blocked locally"
+                notes = "blocked via admin"
             ))
         }
 
@@ -813,6 +803,145 @@ object KosherWhitelistManager {
         saveToCache(context)
         _versionState.intValue += 1
         return true
+    }
+
+    fun addTrack(context: Context, id: String, title: String = "", artist: String = "", onResult: ((Boolean, String?) -> Unit)? = null): Boolean {
+        val ok = addTrackLocally(context, id, title, artist)
+        if (com.music.spotui.BuildConfig.IS_ADMIN) {
+            sendAdminCommand(context, "approve_track", spotifyId = id, title = title, artist = artist, onResult = onResult)
+        }
+        return ok
+    }
+
+    fun removeTrack(context: Context, id: String, title: String = "", artist: String = "", onResult: ((Boolean, String?) -> Unit)? = null): Boolean {
+        val ok = removeTrackLocally(context, id, title, artist)
+        if (com.music.spotui.BuildConfig.IS_ADMIN) {
+            sendAdminCommand(context, "block_track", spotifyId = id, title = title, artist = artist, onResult = onResult)
+        }
+        return ok
+    }
+
+    fun addArtist(context: Context, id: String = "", name: String = "", onResult: ((Boolean, String?) -> Unit)? = null): Boolean {
+        val ok = addArtistLocally(context, id, name)
+        if (com.music.spotui.BuildConfig.IS_ADMIN) {
+            sendAdminCommand(context, "approve_artist", spotifyId = id, name = name, onResult = onResult)
+        }
+        return ok
+    }
+
+    fun removeArtist(context: Context, id: String = "", name: String = "", onResult: ((Boolean, String?) -> Unit)? = null): Boolean {
+        val ok = removeArtistLocally(context, id, name)
+        if (com.music.spotui.BuildConfig.IS_ADMIN) {
+            sendAdminCommand(context, "block_artist", spotifyId = id, name = name, onResult = onResult)
+        }
+        return ok
+    }
+
+    private fun sendAdminCommand(
+        context: Context,
+        action: String,
+        spotifyId: String = "",
+        name: String = "",
+        title: String = "",
+        artist: String = "",
+        onResult: ((Boolean, String?) -> Unit)? = null
+    ) {
+        val app = context.applicationContext
+        val requestId = java.util.UUID.randomUUID().toString()
+
+        CoroutineScope(Dispatchers.IO).launch {
+            var success = false
+            var errorMessage: String? = null
+
+            try {
+                val payload = JSONObject().apply {
+                    put("api_version", 1)
+                    put("type", "admin_action")
+                    put("action", action)
+                    put("request_id", requestId)
+                    put("admin_token", ADMIN_API_KEY)
+                    put("artist", JSONObject().apply {
+                        put("spotify_id", spotifyId)
+                        put("name", name)
+                    })
+                    put("track", JSONObject().apply {
+                        put("spotify_id", spotifyId)
+                        put("title", title)
+                        put("artist", artist)
+                    })
+                    put("actor", JSONObject().apply {
+                        put("type", "admin")
+                        put("id", "SpotUI-Admin")
+                    })
+                }
+
+                val postBytes = payload.toString().toByteArray(Charsets.UTF_8)
+                var currentUrl = PRIMARY_WHITELIST_URL
+                var responseText: String? = null
+
+                for (redirect in 0 until 5) {
+                    val conn = (URL(currentUrl).openConnection() as HttpURLConnection).apply {
+                        connectTimeout = 12000
+                        readTimeout = 15000
+                        instanceFollowRedirects = false
+                        useCaches = false
+                        setRequestProperty("User-Agent", "SpotUI-Admin/2.4")
+                    }
+
+                    if (redirect == 0) {
+                        conn.requestMethod = "POST"
+                        conn.doOutput = true
+                        conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8")
+                        conn.setRequestProperty("Authorization", "Bearer $ADMIN_API_KEY")
+                        conn.outputStream.use { it.write(postBytes) }
+                    } else {
+                        conn.requestMethod = "GET"
+                    }
+
+                    val code = conn.responseCode
+                    if (code in 300..399) {
+                        val loc = conn.getHeaderField("Location")
+                        if (!loc.isNullOrBlank()) {
+                            currentUrl = loc
+                            continue
+                        }
+                    }
+
+                    if (code in 200..299) {
+                        responseText = conn.inputStream.bufferedReader().readText()
+                        break
+                    } else {
+                        val err = conn.errorStream?.bufferedReader()?.readText() ?: "HTTP $code"
+                        errorMessage = "Server error $code: $err"
+                        break
+                    }
+                }
+
+                if (!responseText.isNullOrBlank()) {
+                    val respObj = JSONObject(responseText)
+                    if (respObj.optBoolean("ok", false)) {
+                        success = true
+                        syncWithRemote(app)
+                    } else {
+                        errorMessage = respObj.optString("error", "Unknown server error")
+                    }
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                errorMessage = e.localizedMessage ?: "Network error"
+            }
+
+            withContext(Dispatchers.Main) {
+                if (success) {
+                    val desc = if (name.isNotBlank()) name else if (title.isNotBlank()) title else spotifyId
+                    val actHeb = if (action.startsWith("approve")) "אושר וסונכרן בהצלחה ל-GitHub ולכל המשתמשים!" else "נחסם וסונכרן בהצלחה ל-GitHub ולכל המשתמשים!"
+                    Toast.makeText(app, "✅ $desc $actHeb", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(app, "⚠️ שגיאה בסנכרון לשרת: $errorMessage", Toast.LENGTH_LONG).show()
+                }
+                onResult?.invoke(success, errorMessage)
+            }
+        }
     }
 
     fun getWhitelistedArtists(): List<WhitelistArtistEntry> =
