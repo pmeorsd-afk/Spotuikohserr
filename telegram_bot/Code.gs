@@ -1,4 +1,4 @@
-﻿// ==============================================================================
+// ==============================================================================
 // SpotUI Kosher - Telegram Approval & Report Bot Webhook (Google Apps Script)
 // ==============================================================================
 
@@ -100,6 +100,8 @@ function handleCallbackQuery(query) {
       return;
     }
 
+    if (!whitelist.artists) whitelist.artists = [];
+
     var exists = whitelist.artists.some(function(a) {
       return (spotifyId && a.id === spotifyId) ||
              (artistName && a.name.toLowerCase() === artistName.toLowerCase());
@@ -107,11 +109,20 @@ function handleCallbackQuery(query) {
 
     if (!exists) {
       whitelist.artists.unshift({
-        id: spotifyId,
-        name: artistName,
+        id: spotifyId || "",
+        name: artistName || "",
         notes: "approved"
       });
     }
+
+    // אם היה ברשימת החסומים, מסירים אותו משם
+    if (whitelist.blocked_artists) {
+      whitelist.blocked_artists = whitelist.blocked_artists.filter(function(b) {
+        return !(spotifyId && b.id === spotifyId) &&
+               !(artistName && b.name.toLowerCase() === artistName.toLowerCase());
+      });
+    }
+
     itemActionDescription = "האמן " + (artistName || spotifyId) + " נוסף לרשימת ההיתר";
     actionStatusText = "✅ *אושר ונוסף לרשימה הכשרה ע\"י " + userMention + "!*";
 
@@ -130,11 +141,20 @@ function handleCallbackQuery(query) {
 
     if (!exists) {
       whitelist.tracks.unshift({
-        id: spotifyId,
-        title: trackTitle,
-        artist: artistName
+        id: spotifyId || "",
+        title: trackTitle || "",
+        artist: artistName || ""
       });
     }
+
+    // אם היה ברשימת החסומים, מסירים אותו משם
+    if (whitelist.blocked_tracks) {
+      whitelist.blocked_tracks = whitelist.blocked_tracks.filter(function(b) {
+        return !(spotifyId && b.id === spotifyId) &&
+               !(trackTitle && b.title.toLowerCase() === trackTitle.toLowerCase());
+      });
+    }
+
     itemActionDescription = "השיר " + (trackTitle || spotifyId) + " נוסף לרשימת ההיתר";
     actionStatusText = "✅ *אושר ונוסף לרשימה הכשרה ע\"י " + userMention + "!*";
 
@@ -144,13 +164,31 @@ function handleCallbackQuery(query) {
       return;
     }
 
-    whitelist.artists = whitelist.artists.filter(function(a) {
-      return !(spotifyId && a.id === spotifyId) &&
-             !(artistName && a.name.toLowerCase() === artistName.toLowerCase());
+    // הסרה מרשימת המותרים
+    if (whitelist.artists) {
+      whitelist.artists = whitelist.artists.filter(function(a) {
+        return !(spotifyId && a.id === spotifyId) &&
+               !(artistName && a.name.toLowerCase() === artistName.toLowerCase());
+      });
+    }
+
+    // הוספה לרשימת החסומים
+    if (!whitelist.blocked_artists) whitelist.blocked_artists = [];
+    var alreadyBlocked = whitelist.blocked_artists.some(function(b) {
+      return (spotifyId && b.id === spotifyId) ||
+             (artistName && b.name.toLowerCase() === artistName.toLowerCase());
     });
 
-    itemActionDescription = "האמן " + (artistName || spotifyId) + " הוסר מרשימת ההיתר";
-    actionStatusText = "❌ *הוסר מרשימת ההיתר ע\"י " + userMention + "!*";
+    if (!alreadyBlocked) {
+      whitelist.blocked_artists.unshift({
+        id: spotifyId || "",
+        name: artistName || "",
+        notes: "blocked via telegram"
+      });
+    }
+
+    itemActionDescription = "האמן " + (artistName || spotifyId) + " הוסר מרשימת ההיתר ונחסם";
+    actionStatusText = "❌ *הוסר מרשימת ההיתר ונחסם ע\"י " + userMention + "!*";
 
   } else if (isRemoveTrack) {
     if (!trackTitle && !spotifyId) {
@@ -173,9 +211,9 @@ function handleCallbackQuery(query) {
 
     if (!alreadyBlocked) {
       whitelist.blocked_tracks.unshift({
-        id: spotifyId,
-        title: trackTitle,
-        artist: artistName
+        id: spotifyId || "",
+        title: trackTitle || "",
+        artist: artistName || ""
       });
     }
 
