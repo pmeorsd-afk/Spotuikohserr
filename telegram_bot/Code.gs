@@ -1,35 +1,72 @@
 // ==============================================================================
-// SpotUI Kosher - Telegram Approval & Report Bot Webhook (Google Apps Script)
+// SpotUI Kosher - Telegram Approval & Report Bot Webhook + Admin Command API
+// (Google Apps Script - Unified Backend Engine)
 // ==============================================================================
 
 var CONFIG = {
   TELEGRAM_BOT_TOKEN: "8800365444:AAH2W5JBJhrytzmthZMI1TlmzDTpNWnTlo4",
+  TELEGRAM_CHANNEL_ID: "-1004491387106", // @spotifty_kosher
   GITHUB_TOKEN: "PUT_YOUR_GITHUB_TOKEN_HERE",
   GITHUB_REPO_OWNER: "pmeorsd-afk",
   GITHUB_REPO_NAME: "Spotuikohserr",
-  GITHUB_BRANCH: "main"
+  GITHUB_BRANCH: "main",
+  ADMIN_API_KEY: "SPOTUI_ADMIN_SECRET_KEY_2026"
 };
+
+// ------------------------------------------------------------------------------
+// HTTP POST Endpoint (Telegram Webhook + SpotUI Admin Command API)
+// ------------------------------------------------------------------------------
 
 function doPost(e) {
   try {
     if (!e || !e.postData || !e.postData.contents) {
-      return ContentService.createTextOutput("No post data");
+      if (e && e.parameter && e.parameter.action) {
+        return handleAdminApiRequest(e, {});
+      }
+      return ContentService.createTextOutput(JSON.stringify({ ok: false, error: "no_post_data" }))
+        .setMimeType(ContentService.MimeType.JSON);
     }
-    
-    var update = JSON.parse(e.postData.contents);
-    if (update.callback_query) {
-      handleCallbackQuery(update.callback_query);
+
+    var body = {};
+    try {
+      body = JSON.parse(e.postData.contents);
+    } catch (parseErr) {
+      Logger.log("doPost JSON parse error: " + parseErr);
+      return ContentService.createTextOutput(JSON.stringify({ ok: false, error: "invalid_json" }))
+        .setMimeType(ContentService.MimeType.JSON);
     }
-    
-    return ContentService.createTextOutput("OK");
+
+    // 1. Telegram Callback Query Webhook
+    if (body.callback_query) {
+      handleCallbackQuery(body.callback_query);
+      return ContentService.createTextOutput("OK");
+    }
+
+    // 2. SpotUI Admin Command API
+    if (body.type === "admin_action" || body.action || body.source === "admin_app") {
+      return handleAdminApiRequest(e, body);
+    }
+
+    return ContentService.createTextOutput(JSON.stringify({ ok: false, error: "unknown_payload_type" }))
+      .setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
     Logger.log("doPost error: " + err);
-    return ContentService.createTextOutput("Error: " + err.toString());
+    return ContentService.createTextOutput(JSON.stringify({ ok: false, error: String(err) }))
+      .setMimeType(ContentService.MimeType.JSON);
   }
 }
 
+// ------------------------------------------------------------------------------
+// HTTP GET Endpoint (Public Read API for Android 0-Second Sync + Admin Action)
+// ------------------------------------------------------------------------------
+
 function doGet(e) {
   try {
+    // If admin action is called via GET query parameters
+    if (e && e.parameter && e.parameter.action) {
+      return handleAdminApiRequest(e, {});
+    }
+
     var cache = CacheService.getScriptCache();
     var json = cache ? cache.get("whitelist_v2") : null;
 
@@ -62,9 +99,13 @@ function doGet(e) {
   }
 }
 
+// ------------------------------------------------------------------------------
+// Cache Helpers (Multi-tier: CacheService + PropertiesService)
+// ------------------------------------------------------------------------------
+
 function saveWhitelistCache(jsonString) {
   try {
-    CacheService.getScriptCache().put("whitelist_v2", jsonString, 21600);
+    CacheService.getScriptCache().put("whitelist_v2", jsonString, 21600); // 6 hours
   } catch (e) {
     Logger.log("saveWhitelistCache CacheService error: " + e);
   }
@@ -74,6 +115,207 @@ function saveWhitelistCache(jsonString) {
     Logger.log("saveWhitelistCache PropertiesService error: " + e);
   }
 }
+
+// ------------------------------------------------------------------------------
+// Admin API Handler & Authentication
+// ------------------------------------------------------------------------------
+
+function getEffectiveAdminKey() {
+  try {
+    var key = PropertiesService.getScriptProperties().getProperty("ADMIN_API_KEY");
+    if (key) return key;
+  } catch (e) {}
+  return CONFIG.ADMIN_API_KEY || "SPOTUI_ADMIN_SECRET_KEY_2026";
+}
+
+function handleAdminApiRequest(e, body) {
+  var authHeader = (e && e.headers && (e.headers["Authorization"] || e.headers["authorization"])) || "";
+  var token = "";
+  if (authHeader.indexOf("Bearer ") === 0) {
+    token = authHeader.substring(7).trim();
+  } else if (body.admin_token) {
+    token = String(body.admin_token).trim();
+  } else if (e && e.parameter && e.parameter.token) {
+    token = String(e.parameter.token).trim();
+  }
+
+  var expectedKey = getEffectiveAdminKey();
+  if (token !== expectedKey) {
+    Logger.log("Unauthorized admin request. Token was: " + token);
+    return ContentService.createTextOutput(JSON.stringify({
+      ok: false,
+      error: "unauthorized"
+    })).setMimeType(ContentService.MimeType.JSON);
+  }
+
+  var action = String(body.action || (e && e.parameter && e.parameter.action) || "").trim();
+  var artist = body.artist || {};
+  var track = body.track || {};
+  var spotifyId = String(artist.spotify_id || track.spotify_id || body.id || (e && e.parameter && e.parameter.id) || "").trim();
+  var artistName = String(artist.name || track.artist || body.name || (e && e.parameter && e.parameter.name) || "").trim();
+  var trackTitle = String(track.title || body.title || (e && e.parameter && e.parameter.title) || "").trim();
+  var requestId = String(body.request_id || (e && e.parameter && e.parameter.request_id) || "").trim();
+  var actorName = (body.actor && body.actor.id) ? String(body.actor.id) : "SpotUI-Admin";
+
+  // Normalize action names
+  if (action === "appr:art") action = "approve_artist";
+  if (action === "rem:art")  action = "block_artist";
+  if (action === "appr:trk") action = "approve_track";
+  if (action === "rem:trk")  action = "block_track";
+
+  if (!action) {
+    return ContentService.createTextOutput(JSON.stringify({
+      ok: false,
+      error: "missing_action"
+    })).setMimeType(ContentService.MimeType.JSON);
+  }
+
+  var result = applyWhitelistAction({
+    source: "admin",
+    action: action,
+    requestId: requestId,
+    spotifyId: spotifyId,
+    artistName: artistName,
+    trackTitle: trackTitle,
+    actorName: actorName
+  });
+
+  return ContentService.createTextOutput(JSON.stringify(result))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+// ------------------------------------------------------------------------------
+// Central Unified Whitelist Action Engine (ScriptLock + Idempotency + Single Truth)
+// ------------------------------------------------------------------------------
+
+function checkIdempotency(requestId) {
+  if (!requestId) return null;
+  try {
+    var str = CacheService.getScriptCache().get("req:" + requestId);
+    if (!str) {
+      str = PropertiesService.getScriptProperties().getProperty("req:" + requestId);
+    }
+    if (str) return JSON.parse(str);
+  } catch (e) {
+    Logger.log("checkIdempotency error: " + e);
+  }
+  return null;
+}
+
+function recordIdempotency(requestId, result) {
+  if (!requestId) return;
+  try {
+    var str = JSON.stringify(result);
+    CacheService.getScriptCache().put("req:" + requestId, str, 7200); // 2 hours
+    PropertiesService.getScriptProperties().setProperty("req:" + requestId, str);
+  } catch (e) {
+    Logger.log("recordIdempotency error: " + e);
+  }
+}
+
+function applyWhitelistAction(params) {
+  // 1. Idempotency fast-path
+  if (params.requestId) {
+    var cached = checkIdempotency(params.requestId);
+    if (cached) {
+      Logger.log("Idempotent hit for request_id: " + params.requestId);
+      return cached;
+    }
+  }
+
+  // 2. Concurrency Control: ScriptLock prevents race conditions across Telegram and Admin
+  var lock = LockService.getScriptLock();
+  var hasLock = lock.tryLock(30000); // Wait up to 30 seconds
+  if (!hasLock) {
+    return { ok: false, error: "server_busy_lock_timeout" };
+  }
+
+  try {
+    // Re-check idempotency inside lock
+    if (params.requestId) {
+      var cachedAgain = checkIdempotency(params.requestId);
+      if (cachedAgain) return cachedAgain;
+    }
+
+    // Fetch current GitHub file and SHA
+    var fileInfo = fetchGitHubWhitelist();
+    if (!fileInfo || !fileInfo.content) {
+      return { ok: false, error: "github_fetch_failed" };
+    }
+
+    var whitelist = fileInfo.content;
+    var currentSha = fileInfo.sha;
+    var now = new Date().toISOString();
+    var isApprove = (params.action === "approve_artist" || params.action === "approve_track");
+    var status = isApprove ? "approved" : "blocked";
+    var actorDesc = params.actorName || (params.source === "admin" ? "SpotUI Admin" : "Telegram Admin");
+    var defaultNotes = (isApprove ? "approved" : "blocked") + " via " + (params.source === "admin" ? "SpotUI Admin" : "telegram");
+    var notes = params.notes || defaultNotes;
+    var commitMessage = "";
+
+    if (params.action === "approve_artist" || params.action === "block_artist") {
+      if (!params.artistName && !params.spotifyId) {
+        return { ok: false, error: "missing_artist_name_or_id" };
+      }
+      upsertArtistStatus(whitelist, params.spotifyId, params.artistName, status, now, notes);
+      commitMessage = (isApprove ? "Approve " : "Remove ") + (params.artistName || params.spotifyId) + " via " + actorDesc;
+    } else {
+      if (!params.trackTitle && !params.spotifyId) {
+        return { ok: false, error: "missing_track_title_or_id" };
+      }
+      upsertTrackStatus(whitelist, params.spotifyId, params.trackTitle, params.artistName, status, now, notes);
+      commitMessage = (isApprove ? "Approve " : "Remove ") + (params.trackTitle || params.spotifyId) + " via " + actorDesc;
+    }
+
+    whitelist.schema_version = 2;
+    whitelist.version = Number(whitelist.version || 0) + 1;
+    whitelist.last_updated = now;
+
+    var newJsonString = JSON.stringify(whitelist, null, 2);
+    var saveSuccess = saveGitHubWhitelist(whitelist, currentSha, commitMessage);
+    if (!saveSuccess) {
+      return { ok: false, error: "github_save_failed" };
+    }
+
+    // 0-second cache update
+    saveWhitelistCache(newJsonString);
+
+    var result = {
+      ok: true,
+      version: whitelist.version,
+      status: status,
+      action: params.action,
+      id: params.spotifyId,
+      name: params.artistName,
+      title: params.trackTitle,
+      request_id: params.requestId || ""
+    };
+
+    if (params.requestId) {
+      recordIdempotency(params.requestId, result);
+    }
+
+    // Notify Telegram admin channel if action was from admin app
+    if (params.source === "admin") {
+      try {
+        notifyTelegramChannel(params, whitelist);
+      } catch (e) {
+        Logger.log("notifyTelegramChannel error: " + e);
+      }
+    }
+
+    return result;
+  } catch (err) {
+    Logger.log("applyWhitelistAction error: " + err);
+    return { ok: false, error: String(err) };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+// ------------------------------------------------------------------------------
+// Telegram Callback Query Handler
+// ------------------------------------------------------------------------------
 
 function handleCallbackQuery(query) {
   var queryId = query.id;
@@ -90,14 +332,12 @@ function handleCallbackQuery(query) {
 
   Logger.log("Callback received: data=" + data + " from=" + fromName + " (" + fromId + ")");
 
-  // 1. בדיקת הרשאת מנהל בערוץ
   var isAdmin = checkIsAdmin(chatId, fromId);
   if (!isAdmin) {
     answerCallbackQuery(queryId, "⛔ רק מנהלי הערוץ מורשים לאשר או להסיר בקשות!", true);
     return;
   }
 
-  // 2. פענוח הבקשה (אישור או הסרה)
   var isApproveArtist = data.indexOf("appr:art") === 0;
   var isApproveTrack  = data.indexOf("appr:trk") === 0;
   var isRemoveArtist  = data.indexOf("rem:art") === 0;
@@ -108,11 +348,9 @@ function handleCallbackQuery(query) {
     return;
   }
 
-  // חילוץ מזהה Spotify אם קיים ב-callback_data
   var parts = data.split(":");
   var spotifyId = parts.length >= 3 ? parts[2].trim() : "";
 
-  // חילוץ פרטים מטקסט ההודעה
   var artistName = "";
   var trackTitle = "";
 
@@ -127,88 +365,36 @@ function handleCallbackQuery(query) {
     spotifyId = idMatch[1].trim();
   }
 
-  Logger.log("Parsed: spotifyId=" + spotifyId + ", artistName=" + artistName + ", trackTitle=" + trackTitle);
+  var action = "";
+  if (isApproveArtist) action = "approve_artist";
+  else if (isRemoveArtist) action = "block_artist";
+  else if (isApproveTrack) action = "approve_track";
+  else if (isRemoveTrack) action = "block_track";
 
-  // 3. משיכת whitelist.json הנוכחי מ-GitHub
-  var fileInfo = fetchGitHubWhitelist();
-  if (!fileInfo || !fileInfo.content) {
-    answerCallbackQuery(queryId, "❌ שגיאה במשיכת הנתונים מ-GitHub", true);
-    return;
-  }
-
-  var whitelist = fileInfo.content;
-  var currentSha = fileInfo.sha;
-  var oldJsonString = JSON.stringify(whitelist, null, 2);
-  var itemActionDescription = "";
-  var actionStatusText = "";
   var userMention = from.username ? "@" + from.username : fromName;
-  var now = new Date().toISOString();
 
-  if (isApproveArtist) {
-    if (!artistName && !spotifyId) {
-      answerCallbackQuery(queryId, "❌ לא זוהה שם אמן בבקשה", true);
-      return;
-    }
-    upsertArtistStatus(whitelist, spotifyId, artistName, "approved", now);
-    itemActionDescription = "האמן " + (artistName || spotifyId) + " אושר בהצלחה";
-    actionStatusText = "✅ *אושר ונוסף לרשימה הכשרה על ידי " + userMention + "!*";
+  var result = applyWhitelistAction({
+    source: "telegram",
+    action: action,
+    spotifyId: spotifyId,
+    artistName: artistName,
+    trackTitle: trackTitle,
+    actorName: userMention
+  });
 
-  } else if (isRemoveArtist) {
-    if (!artistName && !spotifyId) {
-      answerCallbackQuery(queryId, "❌ לא זוהה שם אמן להסרה", true);
-      return;
-    }
-    upsertArtistStatus(whitelist, spotifyId, artistName, "blocked", now);
-    itemActionDescription = "האמן " + (artistName || spotifyId) + " הוסר ונחסם";
-    actionStatusText = "❌ *הוסר מרשימת ההיתר ונחסם על ידי " + userMention + "!*";
-
-  } else if (isApproveTrack) {
-    if (!trackTitle && !spotifyId) {
-      answerCallbackQuery(queryId, "❌ לא זוהה שם שיר בבקשה", true);
-      return;
-    }
-    upsertTrackStatus(whitelist, spotifyId, trackTitle, artistName, "approved", now);
-    itemActionDescription = "השיר " + (trackTitle || spotifyId) + " נוסף לרשימת ההיתר";
-    actionStatusText = "✅ *אושר ונוסף לרשימה הכשרה על ידי " + userMention + "!*";
-
-  } else if (isRemoveTrack) {
-    if (!trackTitle && !spotifyId) {
-      answerCallbackQuery(queryId, "❌ לא זוהה שם שיר להסרה", true);
-      return;
-    }
-    upsertTrackStatus(whitelist, spotifyId, trackTitle, artistName, "blocked", now);
-    itemActionDescription = "השיר " + (trackTitle || spotifyId) + " נחסם והוסר מההיתר";
-    actionStatusText = "❌ *נחסם והוסר מההיתר על ידי " + userMention + "!*";
-  }
-
-  // עדכון גרסה ותאריך קנוני
-  whitelist.schema_version = 2;
-  whitelist.version = Number(whitelist.version || 0) + 1;
-  whitelist.last_updated = now;
-
-  var newJsonString = JSON.stringify(whitelist, null, 2);
-  if (oldJsonString === newJsonString) {
-    Logger.log("WARNING: Old JSON and New JSON are identical! Save is NO-OP.");
-  } else {
-    Logger.log("JSON changed: new version=" + whitelist.version);
-  }
-
-  // 4. שמירה ודחיפה חזרה ל-GitHub
-  var actionPrefix = (isRemoveArtist || isRemoveTrack) ? "Remove " : "Approve ";
-  var commitMessage = actionPrefix + (artistName || trackTitle || spotifyId) + " via Telegram (@" + (from.username || fromName) + ")";
-  var saveSuccess = saveGitHubWhitelist(whitelist, currentSha, commitMessage);
-
-  if (!saveSuccess) {
-    answerCallbackQuery(queryId, "❌ שגיאה בשמירה ל-GitHub. נסה שנית.", true);
+  if (!result || !result.ok) {
+    answerCallbackQuery(queryId, "❌ שגיאה בביצוע הפעולה: " + (result ? result.error : "unknown"), true);
     return;
   }
 
-  // שמירה מיידית ב-Cache של Google Apps Script לעדכון ב-0 שניות באפליקציה!
-  saveWhitelistCache(newJsonString);
+  var isApprove = (action.indexOf("approve") === 0);
+  var itemActionDescription = isApprove ? "אושר בהצלחה" : "נחסם והוסר";
+  var actionStatusText = isApprove
+    ? ("✅ *אושר ונוסף לרשימה הכשרה על ידי " + userMention + "!*")
+    : ("❌ *הוסר מרשימת ההיתר ונחסם על ידי " + userMention + "!*");
 
-  var updatedText = text + "\n\n━━━━━━━━━━━━━━━━━━━━\n" + actionStatusText;
+  var updatedText = text + "\n\n━━━━━━━━━━━━━━━━━━━━\n" + actionStatusText + "\n(גרסה " + result.version + ")";
 
-  // משאירים רק את כפתור הספוטיפיי אם קיים
   var newInlineKeyboard = [];
   if (msg.reply_markup && msg.reply_markup.inline_keyboard) {
     for (var r = 0; r < msg.reply_markup.inline_keyboard.length; r++) {
@@ -224,11 +410,11 @@ function handleCallbackQuery(query) {
   }
 
   editMessageText(chatId, msgId, updatedText, newInlineKeyboard);
-  answerCallbackQuery(queryId, "✅ " + itemActionDescription + " בהצלחה ב-GitHub!", false);
+  answerCallbackQuery(queryId, "✅ " + itemActionDescription + " ב-GitHub (גרסה " + result.version + ")!", false);
 }
 
 // ------------------------------------------------------------------------------
-// ניהול רשומות קנוני (Upsert & Uniqueness)
+// ניהול רשומות קנוני (Upsert & Deduplication)
 // ------------------------------------------------------------------------------
 
 function norm(str) {
@@ -266,7 +452,7 @@ function matchesArtist(a, spId, name) {
   return false;
 }
 
-function upsertArtistStatus(whitelist, spotifyId, artistName, status, now) {
+function upsertArtistStatus(whitelist, spotifyId, artistName, status, now, notes) {
   if (!whitelist.artists) whitelist.artists = [];
 
   var matches = [];
@@ -303,20 +489,19 @@ function upsertArtistStatus(whitelist, spotifyId, artistName, status, now) {
   target.canonical_name = target.canonical_name || artistName || "";
   target.aliases = uniqueNames(allAliases);
   target.status = status;
-  target.notes = status === "approved" ? "approved via telegram" : "blocked via telegram";
+  target.notes = notes || (status === "approved" ? "approved via telegram" : "blocked via telegram");
   target.updated_at = now;
 
-  // ביטול כפילויות – משאירים רק את הרשומה הקנונית target
   whitelist.artists = whitelist.artists.filter(function(a) {
     return a === target || matches.indexOf(a) === -1;
   });
 
   delete whitelist.blocked_artists;
-  Logger.log("upsertArtistStatus completed: id=" + target.id + ", name=" + target.canonical_name + ", status=" + target.status);
+  Logger.log("upsertArtistStatus: id=" + target.id + ", name=" + target.canonical_name + ", status=" + target.status);
   return target;
 }
 
-function upsertTrackStatus(whitelist, spotifyId, trackTitle, artistName, status, now) {
+function upsertTrackStatus(whitelist, spotifyId, trackTitle, artistName, status, now, notes) {
   if (!whitelist.tracks) whitelist.tracks = [];
 
   var cleanSpId = String(spotifyId || "").trim();
@@ -347,15 +532,15 @@ function upsertTrackStatus(whitelist, spotifyId, trackTitle, artistName, status,
   target.title = target.title || trackTitle || "";
   target.artist = target.artist || artistName || "";
   target.status = status;
+  target.notes = notes || (status === "approved" ? "approved" : "blocked");
   target.updated_at = now;
 
-  // ביטול כפילויות
   whitelist.tracks = whitelist.tracks.filter(function(t) {
     return t === target || matches.indexOf(t) === -1;
   });
 
   delete whitelist.blocked_tracks;
-  Logger.log("upsertTrackStatus completed: id=" + target.id + ", title=" + target.title + ", status=" + target.status);
+  Logger.log("upsertTrackStatus: id=" + target.id + ", title=" + target.title + ", status=" + target.status);
   return target;
 }
 
@@ -419,6 +604,43 @@ function editMessageText(chatId, messageId, newText, inlineKeyboard) {
   }
 }
 
+function sendTelegramMessage(chatId, text) {
+  try {
+    var url = "https://api.telegram.org/bot" + CONFIG.TELEGRAM_BOT_TOKEN + "/sendMessage";
+    var payload = {
+      chat_id: chatId,
+      text: text,
+      parse_mode: "Markdown"
+    };
+    UrlFetchApp.fetch(url, {
+      method: "post",
+      contentType: "application/json",
+      payload: JSON.stringify(payload),
+      muteHttpExceptions: true
+    });
+  } catch (e) {
+    Logger.log("sendTelegramMessage error: " + e);
+  }
+}
+
+function notifyTelegramChannel(params, whitelist) {
+  var actionDesc = "";
+  if (params.action === "approve_artist") actionDesc = "אישור אמן להיתר תמונות ✅";
+  else if (params.action === "block_artist") actionDesc = "חסימת אמן מההיתר ⛔";
+  else if (params.action === "approve_track") actionDesc = "אישור שיר להיתר תמונות ✅";
+  else if (params.action === "block_track") actionDesc = "חסימת שיר מההיתר ⛔";
+
+  var entityDesc = params.artistName || params.trackTitle || params.spotifyId;
+  var text = "🛡️ *עדכון רשימת היתר מתוך SpotUI Admin*\n\n" +
+             "👤 *ישות:* " + entityDesc + "\n" +
+             (params.spotifyId ? ("🆔 *Spotify ID:* `" + params.spotifyId + "`\n") : "") +
+             "🔄 *פעולה:* " + actionDesc + "\n" +
+             "📦 *גרסה חדשה:* `" + whitelist.version + "`\n" +
+             "📱 *מקור:* " + (params.actorName || "SpotUI-Admin");
+
+  sendTelegramMessage(CONFIG.TELEGRAM_CHANNEL_ID, text);
+}
+
 // ------------------------------------------------------------------------------
 // עוזרי GitHub API
 // ------------------------------------------------------------------------------
@@ -439,7 +661,7 @@ function fetchGitHubWhitelist() {
       headers: {
         "Authorization": "Bearer " + token,
         "Accept": "application/vnd.github+json",
-        "User-Agent": "SpotUI-Telegram-Bot"
+        "User-Agent": "SpotUI-Backend"
       },
       muteHttpExceptions: true
     });
@@ -482,7 +704,7 @@ function saveGitHubWhitelist(whitelistObj, currentSha, message) {
       headers: {
         "Authorization": "Bearer " + token,
         "Accept": "application/vnd.github+json",
-        "User-Agent": "SpotUI-Telegram-Bot"
+        "User-Agent": "SpotUI-Backend"
       },
       contentType: "application/json",
       payload: JSON.stringify(payload),
