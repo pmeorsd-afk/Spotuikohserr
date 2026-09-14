@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 81,
-  "last_updated": "2026-09-14T19:37:48.224Z",
+  "version": 82,
+  "last_updated": "2026-09-14T19:39:34.517Z",
   "artists": [
     {
       "id": "7CgBEyXbjOjFX3HiysHtXN",
@@ -310,8 +310,9 @@
         "Motty Steinmetz",
         "מוטי שטיינמץ"
       ],
-      "status": "blocked",
-      "notes": "blocked via telegram"
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-14T19:39:34.517Z"
     },
     {
       "id": "",
