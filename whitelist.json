@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 42,
-  "last_updated": "2026-09-14T19:24:41.174Z",
+  "version": 43,
+  "last_updated": "2026-09-14T19:24:46.596Z",
   "artists": [
+    {
+      "id": "6qoI5oVBsvLAd6ivzoF1Vk",
+      "canonical_name": "Avi Ilson",
+      "aliases": [
+        "Avi Ilson"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:24:46.596Z"
+    },
     {
       "id": "3Y0YvS2crBLVS9eA5jX8Ux",
       "canonical_name": "משה קליין",
