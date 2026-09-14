@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 48,
-  "last_updated": "2026-09-14T19:25:14.912Z",
+  "version": 49,
+  "last_updated": "2026-09-14T19:25:23.543Z",
   "artists": [
+    {
+      "id": "70287pcNpILjcpoBl0soPs",
+      "canonical_name": "Itzik Dadya",
+      "aliases": [
+        "Itzik Dadya"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:25:23.543Z"
+    },
     {
       "id": "20G5aH4jbljiz5B6eXOobW",
       "canonical_name": "נהוראי אריאלי",
