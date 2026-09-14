@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 49,
-  "last_updated": "2026-09-14T19:25:23.543Z",
+  "version": 50,
+  "last_updated": "2026-09-14T19:25:30.002Z",
   "artists": [
+    {
+      "id": "0bS6FyrgaWjHrWec3TxVkO",
+      "canonical_name": "Amiran Dvir",
+      "aliases": [
+        "Amiran Dvir"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:25:30.002Z"
+    },
     {
       "id": "70287pcNpILjcpoBl0soPs",
       "canonical_name": "Itzik Dadya",
