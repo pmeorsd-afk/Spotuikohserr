@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 76,
-  "last_updated": "2026-09-14T19:35:02.704Z",
+  "version": 77,
+  "last_updated": "2026-09-14T19:35:17.353Z",
   "artists": [
     {
       "id": "2HTxp63G47uFSTqQ5urmbU",
@@ -410,6 +410,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3rKq9QQzb28Klhwh1LK9nn",
+      "title": "אור גדול",
+      "artist": "Amir Dadon",
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:35:17.353Z"
+    },
     {
       "id": "5yqH8tkVWyNQIxKek3paNP",
       "title": "אין הרבה מה לעשות",
