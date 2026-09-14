@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 108,
-  "last_updated": "2026-09-14T19:43:05.304Z",
+  "version": 109,
+  "last_updated": "2026-09-14T19:43:35.044Z",
   "artists": [
+    {
+      "id": "4sEXpunx9rSoHMRpfiEnEY",
+      "canonical_name": "בנימין בוזגלו",
+      "aliases": [
+        "בנימין בוזגלו"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:43:35.044Z"
+    },
     {
       "id": "7jNbN2QEbFNb1yc2X2YGqx",
       "canonical_name": "ישראל סוסנה ותזמורתו",
