@@ -29,7 +29,50 @@ function doPost(e) {
 }
 
 function doGet(e) {
-  return ContentService.createTextOutput("SpotUI Telegram Approver & Report Bot is running!");
+  try {
+    var cache = CacheService.getScriptCache();
+    var json = cache ? cache.get("whitelist_v2") : null;
+
+    if (!json) {
+      json = PropertiesService.getScriptProperties().getProperty("whitelist_v2");
+    }
+
+    if (!json) {
+      var fileInfo = fetchGitHubWhitelist();
+      if (fileInfo && fileInfo.content) {
+        json = JSON.stringify(fileInfo.content, null, 2);
+        saveWhitelistCache(json);
+      }
+    }
+
+    if (!json) {
+      return ContentService.createTextOutput(JSON.stringify({
+        ok: false,
+        error: "whitelist_unavailable"
+      })).setMimeType(ContentService.MimeType.JSON);
+    }
+
+    return ContentService.createTextOutput(json).setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    Logger.log("doGet error: " + err);
+    return ContentService.createTextOutput(JSON.stringify({
+      ok: false,
+      error: String(err)
+    })).setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function saveWhitelistCache(jsonString) {
+  try {
+    CacheService.getScriptCache().put("whitelist_v2", jsonString, 21600);
+  } catch (e) {
+    Logger.log("saveWhitelistCache CacheService error: " + e);
+  }
+  try {
+    PropertiesService.getScriptProperties().setProperty("whitelist_v2", jsonString);
+  } catch (e) {
+    Logger.log("saveWhitelistCache PropertiesService error: " + e);
+  }
 }
 
 function handleCallbackQuery(query) {
@@ -159,6 +202,9 @@ function handleCallbackQuery(query) {
     answerCallbackQuery(queryId, "❌ שגיאה בשמירה ל-GitHub. נסה שנית.", true);
     return;
   }
+
+  // שמירה מיידית ב-Cache של Google Apps Script לעדכון ב-0 שניות באפליקציה!
+  saveWhitelistCache(newJsonString);
 
   var updatedText = text + "\n\n━━━━━━━━━━━━━━━━━━━━\n" + actionStatusText;
 

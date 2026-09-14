@@ -62,7 +62,9 @@ data class WhitelistArtistEntry(
  */
 object KosherWhitelistManager {
 
-    private const val REMOTE_WHITELIST_URL =
+    private const val PRIMARY_WHITELIST_URL =
+        "https://script.google.com/macros/s/AKfycbxjKBX2VHdyKfkih9EOgTOs5C08iFKqOEOaSeis1Ov1NZPBjR2HEVtMX-aAEricAXpPJw/exec"
+    private const val FALLBACK_WHITELIST_URL =
         "https://raw.githubusercontent.com/pmeorsd-afk/Spotuikohserr/main/whitelist.json"
     private const val CACHE_FILE_NAME = "whitelist_cache.json"
 
@@ -94,7 +96,7 @@ object KosherWhitelistManager {
      * Initializes the manager:
      * 1. If cache exists, loads snapshot.
      * 2. Else loads bundled assets/whitelist.json as seed.
-     * 3. Fetches the latest authoritative whitelist from GitHub.
+     * 3. Fetches the latest authoritative whitelist from Apps Script / GitHub.
      */
     fun init(context: Context) {
         if (initialized) return
@@ -123,31 +125,65 @@ object KosherWhitelistManager {
         }
     }
 
+    private fun fetchJsonWithRedirects(urlString: String, maxRedirects: Int = 5): String? {
+        var currentUrl = urlString
+        for (i in 0 until maxRedirects) {
+            try {
+                val conn = (URL(currentUrl).openConnection() as HttpURLConnection).apply {
+                    connectTimeout = 8000
+                    readTimeout = 8000
+                    instanceFollowRedirects = true
+                    useCaches = false
+                    setRequestProperty("User-Agent", "SpotUI-Kosher/2.2")
+                }
+                val code = conn.responseCode
+                if (code in 300..399) {
+                    val loc = conn.getHeaderField("Location")
+                    if (!loc.isNullOrBlank()) {
+                        currentUrl = loc
+                        continue
+                    }
+                }
+                if (code in 200..299) {
+                    val text = conn.inputStream.bufferedReader().readText()
+                    if (text.isNotBlank() && (text.contains("artists") || text.contains("version"))) {
+                        return text
+                    }
+                }
+                return null
+            } catch (e: Exception) {
+                e.printStackTrace()
+                return null
+            }
+        }
+        return null
+    }
+
     /**
-     * Synchronizes whitelist with remote GitHub repository.
-     * Replaces local memory and cache with fresh remote state.
+     * Synchronizes whitelist:
+     * 1. Tries Google Apps Script Web App (0-second instant cache reflection).
+     * 2. Falls back to raw.githubusercontent.com if Apps Script is unreachable.
+     * Replaces local memory and cache with fresh state.
      */
     fun syncWithRemote(context: Context, onComplete: ((Boolean) -> Unit)? = null) {
         val app = context.applicationContext
         CoroutineScope(Dispatchers.IO).launch {
             var updated = false
             try {
-                val url = URL("$REMOTE_WHITELIST_URL?t=${System.currentTimeMillis()}")
-                val conn = (url.openConnection() as HttpURLConnection).apply {
-                    connectTimeout = 8000
-                    readTimeout = 8000
-                    useCaches = false
-                    setRequestProperty("User-Agent", "SpotUI-Kosher/2.2")
+                // 1. נסה קודם כל את Google Apps Script (0 שניות השהייה, ללא CDN Cache)
+                val primaryJson = fetchJsonWithRedirects(PRIMARY_WHITELIST_URL)
+                val finalJson = if (!primaryJson.isNullOrBlank()) {
+                    primaryJson
+                } else {
+                    // 2. Fallback ל-GitHub raw במקרה של כשל
+                    fetchJsonWithRedirects("$FALLBACK_WHITELIST_URL?t=${System.currentTimeMillis()}")
                 }
 
-                if (conn.responseCode in 200..299) {
-                    val remoteJson = conn.inputStream.bufferedReader().readText()
-                    if (remoteJson.isNotBlank() && (remoteJson.contains("artists") || remoteJson.contains("version"))) {
-                        updated = replaceStateFromJson(remoteJson)
-                        if (updated) {
-                            runCatching {
-                                File(app.filesDir, CACHE_FILE_NAME).writeText(remoteJson)
-                            }
+                if (!finalJson.isNullOrBlank()) {
+                    updated = replaceStateFromJson(finalJson)
+                    if (updated) {
+                        runCatching {
+                            File(app.filesDir, CACHE_FILE_NAME).writeText(finalJson)
                         }
                     }
                 }
