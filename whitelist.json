@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 97,
-  "last_updated": "2026-09-14T19:41:26.996Z",
+  "version": 98,
+  "last_updated": "2026-09-14T19:41:35.576Z",
   "artists": [
+    {
+      "id": "730Lys5xKr3j0vTMwjFNgB",
+      "canonical_name": "אלחנן משמרתי",
+      "aliases": [
+        "אלחנן משמרתי"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:41:35.576Z"
+    },
     {
       "id": "3CZPOR06sMMvYVWnQX171K",
       "canonical_name": "Zion Golan",
