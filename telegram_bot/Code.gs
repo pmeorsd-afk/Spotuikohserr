@@ -108,7 +108,7 @@ function handleCallbackQuery(query) {
     }
     upsertArtistStatus(whitelist, spotifyId, artistName, "approved", now);
     itemActionDescription = "האמן " + (artistName || spotifyId) + " אושר בהצלחה";
-    actionStatusText = "✅ *אושר ונוסף לרשימה הכשרה ע"י " + userMention + "!*";
+    actionStatusText = "✅ *אושר ונוסף לרשימה הכשרה על ידי " + userMention + "!*";
 
   } else if (isRemoveArtist) {
     if (!artistName && !spotifyId) {
@@ -117,7 +117,7 @@ function handleCallbackQuery(query) {
     }
     upsertArtistStatus(whitelist, spotifyId, artistName, "blocked", now);
     itemActionDescription = "האמן " + (artistName || spotifyId) + " הוסר ונחסם";
-    actionStatusText = "❌ *הוסר מרשימת ההיתר ונחסם ע"י " + userMention + "!*";
+    actionStatusText = "❌ *הוסר מרשימת ההיתר ונחסם על ידי " + userMention + "!*";
 
   } else if (isApproveTrack) {
     if (!trackTitle && !spotifyId) {
@@ -126,7 +126,7 @@ function handleCallbackQuery(query) {
     }
     upsertTrackStatus(whitelist, spotifyId, trackTitle, artistName, "approved", now);
     itemActionDescription = "השיר " + (trackTitle || spotifyId) + " נוסף לרשימת ההיתר";
-    actionStatusText = "✅ *אושר ונוסף לרשימה הכשרה ע"י " + userMention + "!*";
+    actionStatusText = "✅ *אושר ונוסף לרשימה הכשרה על ידי " + userMention + "!*";
 
   } else if (isRemoveTrack) {
     if (!trackTitle && !spotifyId) {
@@ -135,7 +135,7 @@ function handleCallbackQuery(query) {
     }
     upsertTrackStatus(whitelist, spotifyId, trackTitle, artistName, "blocked", now);
     itemActionDescription = "השיר " + (trackTitle || spotifyId) + " נחסם והוסר מההיתר";
-    actionStatusText = "❌ *נחסם והוסר מההיתר ע"י " + userMention + "!*";
+    actionStatusText = "❌ *נחסם והוסר מההיתר על ידי " + userMention + "!*";
   }
 
   // עדכון גרסה ותאריך קנוני
