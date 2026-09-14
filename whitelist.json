@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 67,
-  "last_updated": "2026-09-14T19:30:47.370Z",
+  "version": 68,
+  "last_updated": "2026-09-14T19:33:02.967Z",
   "artists": [
     {
       "id": "1WWc6zXfTwpakU8Ds5yS1G",
@@ -390,6 +390,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0ety2yTiWVKeqQeaed4Spj",
+      "title": "נחכה לך",
+      "artist": "Nathan Goshen, Ishay Ribo",
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:33:02.967Z"
+    },
     {
       "id": "1OX3DVd7IeHgvPjBo3LqRs",
       "title": "אני אוהב את אלוהים",
