@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 74,
-  "last_updated": "2026-09-14T19:34:28.256Z",
+  "version": 75,
+  "last_updated": "2026-09-14T19:34:46.884Z",
   "artists": [
     {
       "id": "2HTxp63G47uFSTqQ5urmbU",
@@ -410,6 +410,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2uMDJQGTybiF5CEzDgU6KW",
+      "title": "סיפור אחר",
+      "artist": "Nathan Goshen",
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:34:46.884Z"
+    },
     {
       "id": "1tYAHtvNKGvCpt3fkXv6Zo",
       "title": "לצאת מדיכאון",
