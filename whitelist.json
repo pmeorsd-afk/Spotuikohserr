@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 46,
-  "last_updated": "2026-09-14T19:25:04.450Z",
+  "version": 47,
+  "last_updated": "2026-09-14T19:25:10.611Z",
   "artists": [
+    {
+      "id": "0NLEL3BBW71Oshh5R7wpJl",
+      "canonical_name": "Simche Friedman",
+      "aliases": [
+        "Simche Friedman"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:25:10.611Z"
+    },
     {
       "id": "7LY0kkWc7vJDNoNqPsrJ97",
       "canonical_name": "שוקי סלומון",
