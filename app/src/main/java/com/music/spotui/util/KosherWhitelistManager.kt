@@ -90,6 +90,11 @@ object KosherWhitelistManager {
     private val _versionState = mutableIntStateOf(0)
     val versionState: State<Int> get() = _versionState
 
+    // Monotonic remote version tracker
+    @Volatile
+    private var currentVersion: Long = 0L
+    val currentWhitelistVersion: Long get() = currentVersion
+
     private var initialized = false
 
     /**
@@ -270,6 +275,12 @@ object KosherWhitelistManager {
             val root = JSONObject(jsonStr)
             if (!root.has("artists") && !root.has("tracks")) return false
 
+            val remoteVersion = root.optLong("version", -1L)
+            if (remoteVersion > 0 && remoteVersion < currentVersion) {
+                android.util.Log.w("KosherWhitelist", "Ignoring stale remote version $remoteVersion < local $currentVersion")
+                return false
+            }
+
             val parsedArtists = mutableListOf<WhitelistArtistEntry>()
             val artistsArray = root.optJSONArray("artists") ?: JSONArray()
             for (i in 0 until artistsArray.length()) {
@@ -358,6 +369,9 @@ object KosherWhitelistManager {
             }
 
             rebuildIndexes(parsedArtists, parsedTracks)
+            if (remoteVersion > 0) {
+                currentVersion = remoteVersion
+            }
             true
         } catch (e: Exception) {
             e.printStackTrace()
@@ -367,6 +381,8 @@ object KosherWhitelistManager {
 
     @Synchronized
     private fun rebuildIndexes(newArtists: List<WhitelistArtistEntry>, newTracks: List<WhitelistTrackEntry>) {
+        allowedImageUrls.clear()
+
         approvedArtistIds.clear()
         approvedArtistNames.clear()
         blockedArtistIds.clear()

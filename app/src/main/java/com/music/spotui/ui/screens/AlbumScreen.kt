@@ -224,7 +224,10 @@ fun SumUpAlbumScreen(
 
 
         val albumArtist = album.firstOrNull()?.artists?.ifBlank { albumSongs.firstOrNull()?.singer ?: "" } ?: ""
-        val isAlbumAllowed = com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(null, albumArtist)
+        val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
+        val isAlbumAllowed = remember(whitelistVersion, albumArtist) {
+            com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(null, albumArtist)
+        }
         LaunchedEffect(isAlbumAllowed, album, albumSongs) {
             if (isAlbumAllowed) {
                 album.firstOrNull()?.coverUri?.takeIf { it.isNotBlank() }?.let {

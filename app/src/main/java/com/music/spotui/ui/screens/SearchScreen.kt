@@ -170,6 +170,7 @@ fun SumUpSearchScreen(
     searchViewModel: SearchViewModel,
 ) {
     val context = LocalContext.current
+    val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
     val keyboardController = LocalSoftwareKeyboardController.current
     val focusRequester = remember { FocusRequester() }
 

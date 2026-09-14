@@ -139,7 +139,10 @@ private fun ArtistOverviewContent(
         )
     }
 
-    val isArtistAllowed = com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(overview.id, displayName)
+    val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
+    val isArtistAllowed = remember(whitelistVersion, overview.id, displayName) {
+        com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(overview.id, displayName)
+    }
     LaunchedEffect(isArtistAllowed, overview) {
         if (isArtistAllowed) {
             val h = overview.headerImage
@@ -468,6 +471,10 @@ private fun PopularTrackRow(
 ) {
     val context = LocalContext.current
     val song = item.song
+    val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
+    val isSongAllowed = remember(whitelistVersion, song) {
+        com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(song)
+    }
     var isLiked by remember { mutableStateOf(isSongLiked(context, song.id.toString())) }
     val likeState = artistViewModel.likeState.value
     LaunchedEffect(likeState) { isLiked = isSongLiked(context, song.id.toString()) }
@@ -501,7 +508,7 @@ private fun PopularTrackRow(
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
-            isAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(song),
+            isAllowed = isSongAllowed,
             contentDescription = "",
         )
         Column(modifier = Modifier.weight(1f)) {
@@ -543,6 +550,11 @@ private fun SectionHeader(title: String) {
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 private fun ReleaseCard(album: AlbumsModel, onClick: () -> Unit) {
+    val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
+    val isAlbumAllowed = remember(whitelistVersion, album) {
+        com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(album)
+    }
+
     Column(
         modifier = Modifier
             .width(140.dp)
@@ -560,7 +572,7 @@ private fun ReleaseCard(album: AlbumsModel, onClick: () -> Unit) {
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
-            isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(album),
+            isAllowed = isAlbumAllowed,
             contentDescription = "",
         )
         Spacer(Modifier.height(6.dp))
@@ -577,6 +589,11 @@ private fun ReleaseCard(album: AlbumsModel, onClick: () -> Unit) {
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 private fun ReleaseRow(album: AlbumsModel, onClick: () -> Unit) {
+    val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
+    val isAlbumAllowed = remember(whitelistVersion, album) {
+        com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(album)
+    }
+
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
@@ -595,7 +612,7 @@ private fun ReleaseRow(album: AlbumsModel, onClick: () -> Unit) {
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
-            isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(album),
+            isAllowed = isAlbumAllowed,
             contentDescription = "",
         )
         Spacer(Modifier.width(14.dp))
@@ -779,6 +796,11 @@ private fun ReleaseFilterChip(label: String, selected: Boolean, onClick: () -> U
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 private fun RelatedArtistCard(artist: ArtistsModel, onClick: () -> Unit) {
+    val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
+    val isArtistAllowed = remember(whitelistVersion, artist) {
+        com.music.spotui.util.KosherWhitelistManager.isArtistModelWhitelisted(artist)
+    }
+
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
@@ -797,6 +819,7 @@ private fun RelatedArtistCard(artist: ArtistsModel, onClick: () -> Unit) {
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
+            isAllowed = isArtistAllowed,
             contentDescription = "",
         )
         Spacer(Modifier.height(6.dp))
