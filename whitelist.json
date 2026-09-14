@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 56,
-  "last_updated": "2026-09-14T19:26:41.838Z",
+  "version": 57,
+  "last_updated": "2026-09-14T19:26:48.823Z",
   "artists": [
+    {
+      "id": "7D2Ijrlwjl2vsEtJoPrsH3",
+      "canonical_name": "Moshe Tischler",
+      "aliases": [
+        "Moshe Tischler"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:26:48.823Z"
+    },
     {
       "id": "3r6vHIeByPZouwc26vg7rK",
       "canonical_name": "אבי מן",
