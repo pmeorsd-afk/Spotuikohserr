@@ -37,8 +37,10 @@ class HomeViewModel @Inject constructor(
         refreshHome()
         viewModelScope.launch {
             listeningTracker.revision.drop(1).collect {
-                homeFeedEngine.invalidate()
-                refreshHome(force = true)
+                val updatedFeed = homeFeedEngine.updateRecentListeningOnly()
+                if (updatedFeed.sections.isNotEmpty()) {
+                    _home.value = Response.Success(updatedFeed)
+                }
             }
         }
         viewModelScope.launch {
@@ -64,7 +66,11 @@ class HomeViewModel @Inject constructor(
         }
 
         repository.provideHomeFeed().collect { feed ->
-            _home.value = feed
+            if (feed is Response.Success && feed.data?.sections?.isNotEmpty() == true) {
+                _home.value = feed
+            } else if (_home.value !is Response.Success) {
+                _home.value = feed
+            }
         }
     }
 }

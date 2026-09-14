@@ -248,20 +248,32 @@ fun MyNavHost(
         }
 
         composable(
-            "${Routes.Album.route}/{uString}?artist={artist}",
-            arguments = listOf(navArgument("artist") { defaultValue = "" }),
+            "${Routes.Album.route}/{uString}?artist={artist}&cover={cover}&albumId={albumId}",
+            arguments = listOf(
+                navArgument("artist") { defaultValue = "" },
+                navArgument("cover") { defaultValue = "" },
+                navArgument("albumId") { defaultValue = "" },
+            ),
         ) { navBackStackEntry ->
             LaunchedEffect(playerState) {
                 bottomBarState.value = true
                 bottomBarPlayerState.value = playerState != ""
             }
 
-            /* Extracting the id from the route */
+            /* Extracting the arguments from the route */
             val uId = navBackStackEntry.arguments?.getString("uString")
             val artist = navBackStackEntry.arguments?.getString("artist").orEmpty()
+            val cover = navBackStackEntry.arguments?.getString("cover").orEmpty()
+            val albumId = navBackStackEntry.arguments?.getString("albumId").orEmpty()
             /* We check if it's not null */
-            uId?.let { id->
-                AlbumScreen(navController = navHostController, albumName = id, artist = artist)
+            uId?.let { id ->
+                AlbumScreen(
+                    navController = navHostController,
+                    albumName = id,
+                    artist = artist,
+                    coverUrl = cover,
+                    albumId = albumId
+                )
             }
         }
 

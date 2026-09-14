@@ -61,8 +61,12 @@ fun artistRoute(name: String, id: String = ""): String {
  * Builds an album route, optionally carrying the artist so same-named albums by
  * different artists resolve to the right one. The artist value is URL-encoded.
  */
-fun albumRoute(name: String, artist: String = ""): String {
+fun albumRoute(name: String, artist: String = "", cover: String = "", albumId: String = ""): String {
     val base = "${Routes.Album.route}/${android.net.Uri.encode(name)}"
-    return if (artist.isBlank()) base
-    else "$base?artist=${android.net.Uri.encode(artist)}"
+    val params = mutableListOf<String>()
+    if (artist.isNotBlank()) params.add("artist=${android.net.Uri.encode(artist)}")
+    if (cover.isNotBlank()) params.add("cover=${android.net.Uri.encode(cover)}")
+    if (albumId.isNotBlank()) params.add("albumId=${android.net.Uri.encode(albumId)}")
+    return if (params.isEmpty()) base else "$base?${params.joinToString("&")}"
 }
+

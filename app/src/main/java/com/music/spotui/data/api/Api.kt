@@ -507,36 +507,79 @@ class Api @Inject constructor(
         )
     }
 
+    private data class CachedAlbumSongs(val timestamp: Long, val songs: List<SongsModel>)
+    private val albumSongsCache = java.util.concurrent.ConcurrentHashMap<String, CachedAlbumSongs>()
+    private val ALBUM_CACHE_TTL_MS = 10 * 60 * 1000L // 10 minutes
+
     /**
-     * Loads the actual track list for an album. The UI navigates by album *name*
-     * (the real Spotify id is lost during mapping), so we resolve the album via
-     * search, then fetch its tracks. Uses GraphQL endpoints (not rate-limited).
+     * Loads the actual track list for an album. Uses cached results if available,
+     * otherwise resolves via Spotify albumId or smart search, then fetches its tracks.
      */
-    suspend fun getAlbumSongs(albumName: String, artist: String = ""): Flow<Response<List<SongsModel>>> = flow {
-        emit(Response.Loading())
-        if (albumName.isBlank()) {
+    suspend fun getAlbumSongs(albumName: String, artist: String = "", albumId: String = ""): Flow<Response<List<SongsModel>>> = flow {
+        if (albumName.isBlank() && albumId.isBlank()) {
             emit(Response.Success(emptyList())); return@flow
         }
+        val cleanArtist = artist.split(",", "&", "feat.", "ft.").firstOrNull()?.trim().orEmpty()
+        val cacheKey = if (albumId.isNotBlank()) "id:$albumId" else "name:${com.music.spotui.util.KosherWhitelistManager.normalizeText(albumName).lowercase()}|${com.music.spotui.util.KosherWhitelistManager.normalizeText(cleanArtist).lowercase()}"
+
+        val cached = albumSongsCache[cacheKey]
+        if (cached != null && (System.currentTimeMillis() - cached.timestamp) < ALBUM_CACHE_TTL_MS) {
+            emit(Response.Success(cached.songs))
+            return@flow
+        }
+
+        emit(Response.Loading())
         if (!SpotifyTokenProvider.ensureToken(context)) {
             emit(Response.Error("Spotify not authenticated — set sp_dc cookie")); return@flow
         }
-        // Two albums can share a name (different artists). Search the name and,
-        // when we know the artist, pick the candidate whose artists match instead
-        // of blindly taking the first (most-popular) result.
-        val candidates = Spotify.search(
-            if (artist.isBlank()) albumName else "$albumName $artist",
-            types = listOf("album"),
-            limit = 10,
-        ).getOrNull()?.albums?.items.orEmpty()
-        val albumId = pickAlbum(candidates, albumName, artist)?.id
-        if (albumId.isNullOrBlank()) {
+
+        val resolvedAlbumId: String? = if (albumId.isNotBlank()) {
+            albumId
+        } else {
+            // 1. Try search with clean primary artist
+            val searchParam = if (cleanArtist.isBlank()) albumName else "$albumName $cleanArtist"
+            var candidates = Spotify.search(
+                searchParam,
+                types = listOf("album"),
+                limit = 10,
+            ).getOrNull()?.albums?.items.orEmpty()
+
+            // 2. If no candidate, try search with just albumName
+            if (candidates.isEmpty() && cleanArtist.isNotBlank()) {
+                candidates = Spotify.search(
+                    albumName,
+                    types = listOf("album"),
+                    limit = 10,
+                ).getOrNull()?.albums?.items.orEmpty()
+            }
+
+            var picked = pickAlbum(candidates, albumName, artist)?.id
+
+            // 3. Fallback: Search as track if album search found nothing (singles/duets)
+            if (picked.isNullOrBlank()) {
+                val trackCandidates = Spotify.search(
+                    searchParam,
+                    types = listOf("track"),
+                    limit = 5,
+                ).getOrNull()?.tracks?.items.orEmpty()
+                picked = trackCandidates.firstOrNull()?.album?.id
+            }
+            picked
+        }
+
+        if (resolvedAlbumId.isNullOrBlank()) {
             emit(Response.Success(emptyList())); return@flow
         }
-        Spotify.album(albumId).fold(
+
+        Spotify.album(resolvedAlbumId).fold(
             onSuccess = { full ->
                 val albumCover = full.images.firstOrNull()?.url.orEmpty()
-                val albumName = full.name
-                emit(Response.Success(full.tracks?.items.orEmpty().map { it.toSongModel(albumCover, albumName) }))
+                val realAlbumName = full.name
+                val songsList = full.tracks?.items.orEmpty().map { it.toSongModel(albumCover, realAlbumName) }
+                val entry = CachedAlbumSongs(System.currentTimeMillis(), songsList)
+                albumSongsCache[cacheKey] = entry
+                albumSongsCache["id:$resolvedAlbumId"] = entry
+                emit(Response.Success(songsList))
             },
             onFailure = { Log.e("Api", "getAlbumSongs failed", it); emit(Response.Error(it.message ?: "error")) },
         )

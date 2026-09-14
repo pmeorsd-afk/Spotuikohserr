@@ -28,6 +28,7 @@ import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.material3.Scaffold
@@ -82,16 +83,22 @@ import kotlinx.coroutines.delay
 
 
 @Composable
-fun AlbumScreen(navController: NavController, albumName: String, artist: String = "") {
+fun AlbumScreen(
+    navController: NavController,
+    albumName: String,
+    artist: String = "",
+    coverUrl: String = "",
+    albumId: String = ""
+) {
 
 
     val albumViewModel : AlbumViewModel = hiltViewModel()
     val songs by albumViewModel.songs.collectAsState()
     val albums by albumViewModel.albums.collectAsState()
 
-    // Load this album's actual tracks from Spotify (by name, disambiguated by artist).
-    LaunchedEffect(albumName, artist) {
-        albumViewModel.loadAlbumSongs(albumName, artist)
+    // Load this album's actual tracks from Spotify (by name/id, disambiguated by artist).
+    LaunchedEffect(albumName, artist, albumId) {
+        albumViewModel.loadAlbumSongs(albumName, artist, albumId)
     }
 
     val context = LocalContext.current
@@ -108,22 +115,26 @@ fun AlbumScreen(navController: NavController, albumName: String, artist: String 
     ) {
         val albumsResponse = (albums as? Response.Success)?.data.orEmpty()
         val songsResponse = (songs as? Response.Success)?.data.orEmpty()
+        val isSongsLoading = songs is Response.Loading
 
-        when {
-            albums is Response.Loading && songs is Response.Loading -> {
-                Log.d("homeMain", "loading..-albums")
+        if (albumName == "Liked Songs") {
+            if (songs is Response.Loading && albums is Response.Loading) {
                 Loader()
+            } else {
+                LikedSongsScreen(albumsResponse, songsResponse, navController, context)
             }
-
-            else -> {
-                Log.d("homeMain", "albums ready")
-                if (albumName == "Liked Songs"){
-                    LikedSongsScreen(albumsResponse, songsResponse, navController, context)
-                }
-                else{
-                    SumUpAlbumScreen(navController = navController,albumViewModel, albumsResponse, songsResponse, albumName, context)
-                }
-            }
+        } else {
+            SumUpAlbumScreen(
+                navController = navController,
+                albumViewModel = albumViewModel,
+                albums = albumsResponse,
+                songs = songsResponse,
+                isSongsLoading = isSongsLoading,
+                albumName = albumName,
+                initialArtist = artist,
+                initialCover = coverUrl,
+                context = context
+            )
         }
     }
 
@@ -135,7 +146,10 @@ fun SumUpAlbumScreen(
     albumViewModel: AlbumViewModel,
     albums: List<AlbumsModel>,
     songs: List<SongsModel>,
+    isSongsLoading: Boolean,
     albumName: String,
+    initialArtist: String = "",
+    initialCover: String = "",
     context: Context
 ) {
     // `songs` is already this album's track list (loaded by AlbumViewModel).
@@ -151,13 +165,13 @@ fun SumUpAlbumScreen(
 
     val albumByName : Map<String, List<AlbumsModel>> = albums.groupBy { it.name }
     // The album may not be in the cached new-releases list (e.g. opened from
-    // search) — fall back to a model built from the album's first track.
+    // search) — fall back to a model built from navigation args or the album's first track.
     val album : List<AlbumsModel> = albumByName[albumName]
         ?: listOf(
             AlbumsModel(
                 id = albumName.hashCode() and 0x7fffffff,
-                artists = albumSongs.firstOrNull()?.singer ?: "",
-                coverUri = albumSongs.firstOrNull()?.coverUri ?: "",
+                artists = initialArtist.ifBlank { albumSongs.firstOrNull()?.singer ?: "" },
+                coverUri = initialCover.ifBlank { albumSongs.firstOrNull()?.coverUri ?: "" },
                 name = albumName,
                 time = "",
             )
@@ -165,8 +179,11 @@ fun SumUpAlbumScreen(
     var dominentColor by remember {
         mutableStateOf(Color(AppBackground.toArgb()))
     }
-    Palette().extractSecondColorFromCoverUrl(context = context, album[0].coverUri){ color ->
-        dominentColor = color
+    val coverToExtract = album.firstOrNull()?.coverUri?.ifBlank { initialCover } ?: ""
+    if (coverToExtract.isNotBlank()) {
+        Palette().extractSecondColorFromCoverUrl(context = context, coverToExtract) { color ->
+            dominentColor = color
+        }
     }
 
     var isAlbumLiked by remember { mutableStateOf( isAlbumLiked(context, album[0].id.toString())) }
@@ -223,14 +240,23 @@ fun SumUpAlbumScreen(
     ) { innerPadding ->
 
 
-        val albumArtist = album.firstOrNull()?.artists?.ifBlank { albumSongs.firstOrNull()?.singer ?: "" } ?: ""
+        val albumModel = album.firstOrNull()
+        val albumArtist = albumModel?.artists?.ifBlank {
+            initialArtist.ifBlank { albumSongs.firstOrNull()?.singer ?: "" }
+        } ?: initialArtist
+
         val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
-        val isAlbumAllowed = remember(whitelistVersion, albumArtist) {
-            com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(null, albumArtist)
+        val isAlbumAllowed = remember(whitelistVersion, albumModel, albumArtist) {
+            com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(albumModel) ||
+            (albumArtist.isNotBlank() && (
+                com.music.spotui.util.KosherWhitelistManager.areAllArtistsInWhitelist(albumArtist) ||
+                com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(null, albumArtist)
+            ))
         }
-        LaunchedEffect(isAlbumAllowed, album, albumSongs) {
+        LaunchedEffect(isAlbumAllowed, albumModel, albumSongs) {
             if (isAlbumAllowed) {
-                album.firstOrNull()?.coverUri?.takeIf { it.isNotBlank() }?.let {
+                val cover = albumModel?.coverUri?.ifBlank { initialCover }
+                cover?.takeIf { it.isNotBlank() }?.let {
                     com.music.spotui.util.KosherWhitelistManager.allowImageUrl(it)
                 }
                 albumSongs.forEach { s ->
@@ -574,6 +600,42 @@ fun SumUpAlbumScreen(
                             contentDescription = ""
                         )
                     }
+                }
+            } else if (isSongsLoading) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 48.dp, bottom = 48.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        CircularProgressIndicator(
+                            color = Color(AppPalette.toArgb()),
+                            modifier = Modifier.size(32.dp),
+                            strokeWidth = 3.dp
+                        )
+                        Text(
+                            text = "טוען שירים...",
+                            color = Color.Gray,
+                            fontSize = 13.sp
+                        )
+                    }
+                }
+            } else {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 40.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "לא נמצאו שירים",
+                        color = Color.Gray,
+                        fontSize = 13.sp
+                    )
                 }
             }
 
