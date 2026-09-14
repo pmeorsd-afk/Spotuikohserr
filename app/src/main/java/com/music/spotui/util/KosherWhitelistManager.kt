@@ -108,7 +108,7 @@ object KosherWhitelistManager {
             if (cacheFile.exists()) {
                 runCatching {
                     val cachedStr = cacheFile.readText()
-                    parseWhitelistJson(cachedStr)
+                    mergeWhitelistJson(app, cachedStr)
                 }
             }
 
@@ -810,11 +810,11 @@ object KosherWhitelistManager {
     fun applyExternalWhitelist(context: Context, jsonStr: String) {
         val app = context.applicationContext
         try {
-            val cacheFile = File(app.filesDir, CACHE_FILE_NAME)
-            cacheFile.writeText(jsonStr)
-            parseWhitelistJson(jsonStr)
-            CoroutineScope(Dispatchers.Main).launch {
-                _versionState.intValue += 1
+            val updated = mergeWhitelistJson(app, jsonStr)
+            if (updated) {
+                CoroutineScope(Dispatchers.Main).launch {
+                    _versionState.intValue += 1
+                }
             }
         } catch (e: Exception) {
             e.printStackTrace()
