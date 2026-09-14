@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 63,
-  "last_updated": "2026-09-14T19:27:46.314Z",
+  "version": 64,
+  "last_updated": "2026-09-14T19:28:01.610Z",
   "artists": [
+    {
+      "id": "1WWc6zXfTwpakU8Ds5yS1G",
+      "canonical_name": "Moti Weiss",
+      "aliases": [
+        "Moti Weiss"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:28:01.610Z"
+    },
     {
       "id": "6IDzwVsZdjzXYLF7IDENaq",
       "canonical_name": "שמוליק סוכות",
