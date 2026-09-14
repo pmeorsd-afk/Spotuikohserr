@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 62,
-  "last_updated": "2026-09-14T19:27:36.991Z",
+  "version": 63,
+  "last_updated": "2026-09-14T19:27:46.314Z",
   "artists": [
+    {
+      "id": "6IDzwVsZdjzXYLF7IDENaq",
+      "canonical_name": "שמוליק סוכות",
+      "aliases": [
+        "שמוליק סוכות"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:27:46.314Z"
+    },
     {
       "id": "6lQ484EsHlqDESmgDq8PFR",
       "canonical_name": "Pini Einhorn",
