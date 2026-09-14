@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 106,
-  "last_updated": "2026-09-14T19:42:43.262Z",
+  "version": 107,
+  "last_updated": "2026-09-14T19:42:51.913Z",
   "artists": [
+    {
+      "id": "2fd49Ivtugf8m63NCXlOGg",
+      "canonical_name": "ישי לפידות",
+      "aliases": [
+        "ישי לפידות"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:42:51.913Z"
+    },
     {
       "id": "4sLaClvJafP0CtSZsHCq8Y",
       "canonical_name": "חיבת הפיוט | hibbat hapiyut",
