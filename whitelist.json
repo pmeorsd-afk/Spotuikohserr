@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 39,
-  "last_updated": "2026-09-14T19:22:06.703Z",
+  "version": 40,
+  "last_updated": "2026-09-14T19:24:24.319Z",
   "artists": [
+    {
+      "id": "2h0dMILtNngHh2mxwdjwB9",
+      "canonical_name": "Thank You Hashem",
+      "aliases": [
+        "Thank You Hashem"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:24:24.319Z"
+    },
     {
       "id": "2y68BTFta7hwNZVdFcmtyZ",
       "canonical_name": "Mordechai Ben David",
