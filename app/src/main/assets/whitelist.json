@@ -1,125 +1,131 @@
 {
-  "version": 1,
+  "schema_version": 2,
+  "version": 2,
   "last_updated": "2026-09-14",
   "artists": [
     {
       "id": "1pZcigV84ihZL3erh8v0gY",
-      "name": "Motty Steinmetz",
+      "canonical_name": "Motty Steinmetz",
+      "aliases": [
+        "Motty Steinmetz",
+        "מוטי שטיינמץ"
+      ],
+      "status": "blocked",
+      "notes": "blocked via telegram"
+    },
+    {
+      "id": "",
+      "canonical_name": "יאיר אלייצור",
+      "aliases": [
+        "יאיר אלייצור",
+        "אלייצור",
+        "Yair Elitzur",
+        "Yair Elyitzur"
+      ],
+      "status": "approved",
       "notes": "approved"
     },
     {
       "id": "",
-      "name": "מוטי שטיינמץ",
+      "canonical_name": "Ishay Ribo",
+      "aliases": [
+        "Ishay Ribo",
+        "ישי ריבו"
+      ],
+      "status": "approved",
       "notes": "approved"
     },
     {
       "id": "",
-      "name": "יאיר אלייצור",
+      "canonical_name": "Avraham Fried",
+      "aliases": [
+        "Avraham Fried",
+        "אברהם פריד"
+      ],
+      "status": "approved",
       "notes": "approved"
     },
     {
       "id": "",
-      "name": "ישי ריבו",
+      "canonical_name": "Mordechai Shapiro",
+      "aliases": [
+        "Mordechai Shapiro",
+        "מרדכי שפירא"
+      ],
+      "status": "approved",
       "notes": "approved"
     },
     {
       "id": "",
-      "name": "Ishay Ribo",
+      "canonical_name": "Naftali Kempeh",
+      "aliases": [
+        "Naftali Kempeh",
+        "נפתלי קמפה"
+      ],
+      "status": "approved",
       "notes": "approved"
     },
     {
       "id": "",
-      "name": "אברהם פריד",
+      "canonical_name": "Benny Friedman",
+      "aliases": [
+        "Benny Friedman",
+        "בני פרידמן"
+      ],
+      "status": "approved",
       "notes": "approved"
     },
     {
       "id": "",
-      "name": "Avraham Fried",
+      "canonical_name": "Akiva",
+      "aliases": [
+        "Akiva",
+        "עקיבא"
+      ],
+      "status": "approved",
       "notes": "approved"
     },
     {
       "id": "",
-      "name": "מרדכי שפירא",
+      "canonical_name": "Shmueli Ungar",
+      "aliases": [
+        "Shmueli Ungar",
+        "שמילי אונגר"
+      ],
+      "status": "approved",
       "notes": "approved"
     },
     {
       "id": "",
-      "name": "Mordechai Shapiro",
+      "canonical_name": "Shulem",
+      "aliases": [
+        "Shulem",
+        "Shulem Lemmer",
+        "שולם למר",
+        "שלום למר"
+      ],
+      "status": "approved",
       "notes": "approved"
     },
     {
       "id": "",
-      "name": "נפתלי קמפה",
-      "notes": "approved"
-    },
-    {
-      "id": "",
-      "name": "Naftali Kempeh",
-      "notes": "approved"
-    },
-    {
-      "id": "",
-      "name": "בני פרידמן",
-      "notes": "approved"
-    },
-    {
-      "id": "",
-      "name": "Benny Friedman",
-      "notes": "approved"
-    },
-    {
-      "id": "",
-      "name": "עקיבא",
-      "notes": "approved"
-    },
-    {
-      "id": "",
-      "name": "Akiva",
-      "notes": "approved"
-    },
-    {
-      "id": "",
-      "name": "שמילי אונגר",
-      "notes": "approved"
-    },
-    {
-      "id": "",
-      "name": "Shmueli Ungar",
-      "notes": "approved"
-    },
-    {
-      "id": "",
-      "name": "שולם למר",
-      "notes": "approved"
-    },
-    {
-      "id": "",
-      "name": "Shulem",
-      "notes": "approved"
-    },
-    {
-      "id": "",
-      "name": "יעקב שוואקי",
-      "notes": "approved"
-    },
-    {
-      "id": "",
-      "name": "Yaakov Shwekey",
-      "notes": "approved"
-    },
-    {
-      "id": "",
-      "name": "מידד טסה",
-      "notes": "approved"
-    },
-    {
-      "id": "",
-      "name": "Meidad Tasa",
+      "canonical_name": "Yaakov Shwekey",
+      "aliases": [
+        "Yaakov Shwekey",
+        "יעקב שוואקי"
+      ],
+      "status": "approved",
       "notes": "approved"
     },
     {
       "id": "3UJvSl87KCeQdagMKQ4zMZ",
-      "name": "Meydad Tasa",
+      "canonical_name": "Meydad Tasa",
+      "aliases": [
+        "Meydad Tasa",
+        "Meidad Tasa",
+        "מידד טסה"
+      ],
+      "status": "approved",
       "notes": "approved"
     }
   ],
@@ -127,9 +133,8 @@
     {
       "id": "7pdniD9t65ZEuULdrpm7Sn",
       "title": "כולי תפילה",
-      "artist": "Eden Hason, Meydad Tasa"
+      "artist": "Eden Hason, Meydad Tasa",
+      "status": "approved"
     }
-  ],
-  "blocked_tracks": [],
-  "blocked_artists": []
+  ]
 }
