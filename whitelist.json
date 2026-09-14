@@ -113,6 +113,12 @@
       "notes": "approved"
     }
   ],
-  "tracks": [],
+  "tracks": [
+    {
+      "id": "7pdniD9t65ZEuULdrpm7Sn",
+      "title": "כולי תפילה",
+      "artist": "Eden Hason, Meydad Tasa"
+    }
+  ],
   "blocked_tracks": []
 }
