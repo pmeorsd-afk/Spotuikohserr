@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -6,6 +8,15 @@ plugins {
     id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
 }
+
+val localProps = Properties()
+val localPropsFile = rootProject.file("local.properties")
+if (localPropsFile.exists()) {
+    localPropsFile.inputStream().use { stream ->
+        localProps.load(stream)
+    }
+}
+val githubAdminToken: String = localProps.getProperty("github.admin.token", "")
 
 android {
     namespace = "com.music.spotui"
@@ -31,12 +42,14 @@ android {
             dimension = "mode"
             manifestPlaceholders["appLabel"] = "SpotUI כשר"
             buildConfigField("boolean", "IS_ADMIN", "false")
+            buildConfigField("String", "GITHUB_ADMIN_TOKEN", "\"\"")
         }
         create("admin") {
             dimension = "mode"
             applicationIdSuffix = ".admin"
             manifestPlaceholders["appLabel"] = "SpotUI מנהל"
             buildConfigField("boolean", "IS_ADMIN", "true")
+            buildConfigField("String", "GITHUB_ADMIN_TOKEN", "\"$githubAdminToken\"")
         }
     }
 
