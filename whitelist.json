@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 55,
-  "last_updated": "2026-09-14T19:26:36.135Z",
+  "version": 56,
+  "last_updated": "2026-09-14T19:26:41.838Z",
   "artists": [
+    {
+      "id": "3r6vHIeByPZouwc26vg7rK",
+      "canonical_name": "אבי מן",
+      "aliases": [
+        "אבי מן"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:26:41.838Z"
+    },
     {
       "id": "4A95eIw3CcKx3uHHPUivSL",
       "canonical_name": "Matt Dubb",
