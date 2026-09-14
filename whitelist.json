@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 43,
-  "last_updated": "2026-09-14T19:24:46.596Z",
+  "version": 44,
+  "last_updated": "2026-09-14T19:24:51.627Z",
   "artists": [
+    {
+      "id": "4OqhRVs3bnTqs7ugKApPp9",
+      "canonical_name": "קובי ברומר",
+      "aliases": [
+        "קובי ברומר"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:24:51.627Z"
+    },
     {
       "id": "6qoI5oVBsvLAd6ivzoF1Vk",
       "canonical_name": "Avi Ilson",
