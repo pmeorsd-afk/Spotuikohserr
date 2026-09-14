@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 40,
-  "last_updated": "2026-09-14T19:24:24.319Z",
+  "version": 41,
+  "last_updated": "2026-09-14T19:24:32.283Z",
   "artists": [
+    {
+      "id": "7arqN4IvLt54cm3gEhuzKI",
+      "canonical_name": "DJ Farbreng",
+      "aliases": [
+        "DJ Farbreng"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:24:32.283Z"
+    },
     {
       "id": "2h0dMILtNngHh2mxwdjwB9",
       "canonical_name": "Thank You Hashem",
