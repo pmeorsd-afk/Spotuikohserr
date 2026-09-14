@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 111,
-  "last_updated": "2026-09-14T19:44:36.910Z",
+  "version": 112,
+  "last_updated": "2026-09-14T19:44:50.965Z",
   "artists": [
+    {
+      "id": "220BgM72mxm5sR2yGJSrN8",
+      "canonical_name": "DJ יהודה מור",
+      "aliases": [
+        "DJ יהודה מור"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:44:50.965Z"
+    },
     {
       "id": "1IDLHVDUKWnQ92dgvar9es",
       "canonical_name": "Yosef Karduner",
