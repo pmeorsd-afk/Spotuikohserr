@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 44,
-  "last_updated": "2026-09-14T19:24:51.627Z",
+  "version": 45,
+  "last_updated": "2026-09-14T19:24:57.641Z",
   "artists": [
+    {
+      "id": "0kF5nmRrCc9oZpAkVbWaUt",
+      "canonical_name": "נמואל",
+      "aliases": [
+        "נמואל"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:24:57.641Z"
+    },
     {
       "id": "4OqhRVs3bnTqs7ugKApPp9",
       "canonical_name": "קובי ברומר",
