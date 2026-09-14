@@ -4,6 +4,11 @@
   "artists": [
     {
       "id": "",
+      "name": "יאיר אלייצור",
+      "notes": "approved"
+    },
+    {
+      "id": "",
       "name": "ישי ריבו",
       "notes": "approved"
     },
