@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 51,
-  "last_updated": "2026-09-14T19:25:35.775Z",
+  "version": 52,
+  "last_updated": "2026-09-14T19:25:41.254Z",
   "artists": [
+    {
+      "id": "45VX6Rgs7tUiftvOCWKXaO",
+      "canonical_name": "Ohad Moskowitz",
+      "aliases": [
+        "Ohad Moskowitz"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:25:41.254Z"
+    },
     {
       "id": "20rPZiTB5B15ihzFxxyYfZ",
       "canonical_name": "איציק וינגרטן",
