@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 89,
-  "last_updated": "2026-09-14T19:40:54.964Z",
+  "version": 90,
+  "last_updated": "2026-09-14T19:41:02.244Z",
   "artists": [
+    {
+      "id": "3sY8HKqV2QqTI1eegDci6p",
+      "canonical_name": "דוד חפצדי",
+      "aliases": [
+        "דוד חפצדי"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:41:02.244Z"
+    },
     {
       "id": "4jZrPUsuZrKIMoqI5vhVaR",
       "canonical_name": "משה דוויק",
