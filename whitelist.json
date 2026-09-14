@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 98,
-  "last_updated": "2026-09-14T19:41:35.576Z",
+  "version": 99,
+  "last_updated": "2026-09-14T19:41:45.367Z",
   "artists": [
+    {
+      "id": "1Ad4fz2qEUGdzgdKfFz5ez",
+      "canonical_name": "תזמורת אנדלוסאלם",
+      "aliases": [
+        "תזמורת אנדלוסאלם"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:41:45.367Z"
+    },
     {
       "id": "730Lys5xKr3j0vTMwjFNgB",
       "canonical_name": "אלחנן משמרתי",
