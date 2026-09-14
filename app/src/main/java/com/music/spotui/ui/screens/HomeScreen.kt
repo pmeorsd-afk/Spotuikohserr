@@ -73,6 +73,11 @@ import com.music.spotui.ui.viewmodel.HomeViewModel
 import com.music.spotui.ui.viewmodel.PlayerViewModel
 import com.music.spotui.data.entity.SongsModel
 import com.music.spotui.di.SongPlayer
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.ui.text.style.TextOverflow
+import com.music.spotui.data.entity.HomeSectionIds
+import com.music.spotui.data.entity.HomeSectionType
 import java.time.LocalTime
 
 
@@ -144,11 +149,11 @@ private fun onHomeItemClick(
     when (item) {
         is HomeItem.Album -> navController.navigate(albumRoute(item.name, item.artists.ifBlank { item.subtitle }))
         is HomeItem.Artist -> navController.navigate(artistRoute(item.name, item.id))
-        // Load the real playlist content by its Spotify id (daily mixes, etc).
         is HomeItem.Playlist ->
             if (item.id.isNotBlank()) navController.navigate(playlistRoute(item.id, item.name))
             else navController.navigate(albumRoute(item.name))
         is HomeItem.Track -> onPlaySong?.invoke(item.song)
+        is HomeItem.LikedSongs -> navController.navigate(Routes.Liked.route)
     }
 }
 
@@ -159,14 +164,8 @@ fun HomeFeedContent(
     feed: HomeFeedModel,
     onPlaySong: ((SongsModel) -> Unit)? = null
 ) {
-    // Mirror open.spotify.com exactly: sections render in the order the feed
-    // returns them. The 2-column "shortcuts" grid is only used for the UNTITLED
-    // section the web home starts with — if the feed leads with a titled section
-    // ("Jump back in", "Made For …"), it renders as a titled carousel first,
-    // not force-squeezed into the grid.
+    val topGridItems = feed.topGrid.take(4)
     val sections = feed.sections
-    val gridSection = sections.firstOrNull()?.takeIf { it.title.isBlank() }
-    val carousels = if (gridSection != null) sections.drop(1) else sections
 
     LazyColumn(
         contentPadding = PaddingValues(bottom = 130.dp),
@@ -177,19 +176,18 @@ fun HomeFeedContent(
         item {
             HomeHeaderRow(navController)
         }
-        gridSection?.let { section ->
+        if (topGridItems.isNotEmpty()) {
             item {
-                HomeShortcutGrid(navController, section.items.take(8), onPlaySong)
+                HomeTopGrid(navController, topGridItems, onPlaySong)
             }
         }
-        items(carousels.size) { i ->
-            HomeFeedSection(navController, carousels[i], onPlaySong)
+        items(sections.size, key = { i -> sections[i].id.ifBlank { "sec_$i" } }) { i ->
+            HomeFeedSection(navController, sections[i], onPlaySong)
         }
     }
 }
 
-/** Spotify-style top row: profile avatar on the left (opens Settings, like the
- *  official app's profile drawer), then the filter pills — one single row. */
+/** Spotify-style top row: profile avatar on the left, filter pills on the right. */
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 private fun HomeHeaderRow(navController: NavController) {
@@ -234,11 +232,10 @@ private fun HomeHeaderRow(navController: NavController) {
                 )
             }
         }
-        // Filter pills — Podcasts/Audiobooks jump to Search (where they're indexed).
-        val filters = listOf("All", "Music", "Podcasts", "Audiobooks")
-        var selected by remember { androidx.compose.runtime.mutableStateOf("All") }
+        val filters = listOf("הכול", "מוזיקה", "פודקאסטים")
+        var selected by remember { androidx.compose.runtime.mutableStateOf("הכול") }
         LazyRow(
-            contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 12.dp),
+            contentPadding = PaddingValues(horizontal = 12.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             modifier = Modifier.weight(1f),
         ) {
@@ -251,7 +248,7 @@ private fun HomeHeaderRow(navController: NavController) {
                         .background(if (isSel) Color(0xFF1ED760) else Color(0xFF2A2A2A))
                         .clickable {
                             selected = label
-                            if (label == "Podcasts" || label == "Audiobooks") {
+                            if (label == "פודקאסטים") {
                                 navController.navigate(Routes.Search.route)
                             }
                         }
@@ -269,56 +266,81 @@ private fun HomeHeaderRow(navController: NavController) {
     }
 }
 
+/** Exactly 4 shortcut buttons (2x2 grid) for recently played items */
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-private fun HomeShortcutGrid(
+private fun HomeTopGrid(
     navController: NavController,
     items: List<HomeItem>,
     onPlaySong: ((SongsModel) -> Unit)? = null
 ) {
-    Column(modifier = Modifier.padding(8.dp, 4.dp)) {
-        items.chunked(2).forEach { rowItems ->
+    val four = items.take(4)
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 6.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        four.chunked(2).forEach { rowItems ->
             Row(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(8.dp, 4.dp),
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 rowItems.forEach { item ->
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier
-                            .weight(1f)
-                            .height(48.dp)
-                            .clip(RoundedCornerShape(4.dp))
-                            .background(Color(GridBackground.toArgb()))
-                            .clickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = null,
-                            ) { onHomeItemClick(navController, item, onPlaySong) },
-                    ) {
-                        GlideImage(
-                            modifier = Modifier.size(48.dp),
-                            contentScale = ContentScale.Crop,
-                            model = item.imageUrl,
-                            loading = placeholder(R.drawable.placeholder),
-                            failure = placeholder(R.drawable.placeholder),
-                            isAllowed = com.music.spotui.util.KosherWhitelistManager.isHomeItemWhitelisted(item),
-                            contentDescription = "",
-                        )
-                        Text(
-                            text = item.name,
-                            color = Color.White,
-                            fontSize = 12.sp,
-                            fontWeight = FontWeight.Bold,
-                            maxLines = 2,
-                            modifier = Modifier.padding(8.dp, 4.dp),
-                        )
-                    }
+                    HomeGridCard(
+                        navController = navController,
+                        item = item,
+                        modifier = Modifier.weight(1f),
+                        onPlaySong = onPlaySong
+                    )
                 }
-                if (rowItems.size == 1) Spacer(modifier = Modifier.weight(1f))
+                if (rowItems.size == 1) {
+                    Spacer(modifier = Modifier.weight(1f))
+                }
             }
         }
+    }
+}
+
+@OptIn(ExperimentalGlideComposeApi::class)
+@Composable
+private fun HomeGridCard(
+    navController: NavController,
+    item: HomeItem,
+    modifier: Modifier = Modifier,
+    onPlaySong: ((SongsModel) -> Unit)? = null
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = modifier
+            .height(56.dp)
+            .clip(RoundedCornerShape(6.dp))
+            .background(Color(0xFF282828))
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null
+            ) { onHomeItemClick(navController, item, onPlaySong) }
+    ) {
+        GlideImage(
+            modifier = Modifier.size(56.dp),
+            contentScale = ContentScale.Crop,
+            model = item.imageUrl,
+            loading = placeholder(R.drawable.placeholder),
+            failure = placeholder(R.drawable.placeholder),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isHomeItemWhitelisted(item),
+            contentDescription = item.name
+        )
+        Text(
+            text = item.name,
+            color = Color.White,
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Bold,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier
+                .weight(1f)
+                .padding(horizontal = 8.dp)
+        )
     }
 }
 
@@ -328,17 +350,206 @@ private fun HomeFeedSection(
     section: HomeSection,
     onPlaySong: ((SongsModel) -> Unit)? = null
 ) {
-    Text(
-        text = section.title,
-        color = Color.White,
-        fontSize = 21.sp,
-        fontWeight = FontWeight.Bold,
-        modifier = Modifier.padding(16.dp, 20.dp, 16.dp, 4.dp),
-    )
-    LazyRow(contentPadding = androidx.compose.foundation.layout.PaddingValues(10.dp, 0.dp)) {
-        items(section.items.size) { i ->
-            HomeFeedCard(section.items[i]) { onHomeItemClick(navController, section.items[i], onPlaySong) }
+    if (section.id == HomeSectionIds.SIMILAR_ARTISTS || section.headerArtist != null) {
+        ArtistSectionHeader(section) {
+            section.headerArtist?.let { artist ->
+                navController.navigate(artistRoute(artist.name, artist.id))
+            }
         }
+    } else {
+        Text(
+            text = section.title,
+            color = Color.White,
+            fontSize = 21.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 22.dp, bottom = 10.dp)
+        )
+    }
+
+    LazyRow(
+        contentPadding = PaddingValues(horizontal = 12.dp),
+        horizontalArrangement = Arrangement.spacedBy(4.dp)
+    ) {
+        items(section.items.size) { i ->
+            val item = section.items[i]
+            when {
+                item is HomeItem.LikedSongs -> {
+                    LikedSongsCard(count = item.count) {
+                        onHomeItemClick(navController, item, onPlaySong)
+                    }
+                }
+                section.type == HomeSectionType.ARTISTS && item is HomeItem.Artist -> {
+                    HomeArtistCircleCard(artist = item) {
+                        onHomeItemClick(navController, item, onPlaySong)
+                    }
+                }
+                else -> {
+                    HomeFeedCard(item = item) {
+                        onHomeItemClick(navController, item, onPlaySong)
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** Header with artist avatar next to "אמנים נוספים כמו" */
+@OptIn(ExperimentalGlideComposeApi::class)
+@Composable
+private fun ArtistSectionHeader(
+    section: HomeSection,
+    onArtistClick: () -> Unit
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 16.dp, end = 16.dp, top = 22.dp, bottom = 10.dp)
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null
+            ) { onArtistClick() }
+    ) {
+        val artist = section.headerArtist
+        if (artist != null && artist.coverUri.isNotBlank()) {
+            GlideImage(
+                modifier = Modifier
+                    .size(46.dp)
+                    .clip(CircleShape),
+                contentScale = ContentScale.Crop,
+                model = artist.coverUri,
+                loading = placeholder(R.drawable.placeholder),
+                failure = placeholder(R.drawable.placeholder),
+                isAllowed = com.music.spotui.util.KosherWhitelistManager.isArtistModelWhitelisted(artist),
+                contentDescription = artist.name
+            )
+            Spacer(modifier = Modifier.width(12.dp))
+        }
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = section.subtitle ?: "אמנים נוספים כמו",
+                color = Color(0xFFB3B3B3),
+                fontSize = 11.sp,
+                fontWeight = FontWeight.SemiBold
+            )
+            Text(
+                text = section.title,
+                color = Color.White,
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold
+            )
+        }
+    }
+}
+
+/** Pinned card for "שירים שאהבתם" in Recently Played */
+@Composable
+private fun LikedSongsCard(count: Int, onClick: () -> Unit) {
+    Column(
+        modifier = Modifier
+            .width(148.dp)
+            .padding(6.dp)
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null
+            ) { onClick() }
+    ) {
+        Box(
+            modifier = Modifier
+                .size(148.dp)
+                .clip(RoundedCornerShape(8.dp))
+                .background(
+                    Brush.linearGradient(
+                        colors = listOf(
+                            Color(0xFF450AF5),
+                            Color(0xFF8E8EE5),
+                            Color(0xFFC4B5FD)
+                        )
+                    )
+                ),
+            contentAlignment = Alignment.Center
+        ) {
+            androidx.compose.material3.Icon(
+                imageVector = Icons.Default.Favorite,
+                contentDescription = "Liked Songs",
+                tint = Color.White,
+                modifier = Modifier.size(54.dp)
+            )
+        }
+        Spacer(modifier = Modifier.height(6.dp))
+        Text(
+            text = "שירים שאהבתם",
+            color = Color.White,
+            fontSize = 13.sp,
+            fontWeight = FontWeight.SemiBold,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
+        )
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(top = 2.dp)
+        ) {
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier
+                    .size(14.dp)
+                    .clip(CircleShape)
+                    .background(Color(0xFF1ED760))
+            ) {
+                Text(
+                    text = "✓",
+                    color = Color.Black,
+                    fontSize = 9.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            Spacer(modifier = Modifier.width(4.dp))
+            Text(
+                text = if (count == 1) "נוסף שיר 1" else "$count שירים",
+                color = Color(0xFFB3B3B3),
+                fontSize = 11.sp,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+        }
+    }
+}
+
+/** Circular card for "אמנים פופולריים" */
+@OptIn(ExperimentalGlideComposeApi::class)
+@Composable
+private fun HomeArtistCircleCard(artist: HomeItem.Artist, onClick: () -> Unit) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier
+            .width(140.dp)
+            .padding(6.dp)
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null
+            ) { onClick() }
+    ) {
+        GlideImage(
+            modifier = Modifier
+                .size(130.dp)
+                .clip(CircleShape),
+            contentScale = ContentScale.Crop,
+            model = artist.imageUrl,
+            loading = placeholder(R.drawable.placeholder),
+            failure = placeholder(R.drawable.placeholder),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isHomeItemWhitelisted(artist),
+            contentDescription = artist.name
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        Text(
+            text = artist.name,
+            color = Color.White,
+            fontSize = 13.sp,
+            fontWeight = FontWeight.SemiBold,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            textAlign = TextAlign.Center
+        )
     }
 }
 
@@ -351,11 +562,12 @@ private fun HomeFeedCard(item: HomeItem, onClick: () -> Unit) {
         is HomeItem.Playlist -> item.subtitle
         is HomeItem.Artist -> "Artist"
         is HomeItem.Track -> item.subtitle
+        is HomeItem.LikedSongs -> "${item.count} שירים"
     }
     Column(
         horizontalAlignment = if (isArtist) Alignment.CenterHorizontally else Alignment.Start,
         modifier = Modifier
-            .width(150.dp)
+            .width(148.dp)
             .padding(6.dp)
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
@@ -364,14 +576,14 @@ private fun HomeFeedCard(item: HomeItem, onClick: () -> Unit) {
     ) {
         GlideImage(
             modifier = Modifier
-                .size(150.dp)
+                .size(148.dp)
                 .clip(if (isArtist) CircleShape else RoundedCornerShape(8.dp)),
             contentScale = ContentScale.Crop,
             model = item.imageUrl,
             loading = placeholder(R.drawable.placeholder),
             failure = placeholder(R.drawable.placeholder),
             isAllowed = com.music.spotui.util.KosherWhitelistManager.isHomeItemWhitelisted(item),
-            contentDescription = "",
+            contentDescription = item.name,
         )
         Spacer(modifier = Modifier.height(6.dp))
         Text(
@@ -380,6 +592,7 @@ private fun HomeFeedCard(item: HomeItem, onClick: () -> Unit) {
             fontSize = 13.sp,
             fontWeight = FontWeight.SemiBold,
             maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
             textAlign = if (isArtist) TextAlign.Center else TextAlign.Start,
         )
         Text(
@@ -387,6 +600,7 @@ private fun HomeFeedCard(item: HomeItem, onClick: () -> Unit) {
             color = Color(0xFFB3B3B3),
             fontSize = 11.sp,
             maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
             textAlign = if (isArtist) TextAlign.Center else TextAlign.Start,
         )
     }

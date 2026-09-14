@@ -20,6 +20,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import com.music.spotui.data.local.LocalListeningTracker
+import com.music.spotui.data.home.HomeFeedEngine
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
@@ -27,7 +28,8 @@ import javax.inject.Inject
 class PlayerViewModel @Inject constructor(
     private val currentSongState: CurrentSongState,
     private val repository: AppRepository,
-    private val listeningTracker: LocalListeningTracker
+    private val listeningTracker: LocalListeningTracker,
+    private val homeFeedEngine: HomeFeedEngine
 ) : ViewModel(){
 
     val currentSongTitle: State<String> get() = currentSongState.title
@@ -103,10 +105,12 @@ class PlayerViewModel @Inject constructor(
 
             if (positionMs >= 30_000L) {
                 listeningTracker.recordPlay(song)
+                homeFeedEngine.invalidate()
             }
 
             if (durationMs > 0L && positionMs >= durationMs * 0.75f) {
                 listeningTracker.recordCompletion(song)
+                homeFeedEngine.invalidate()
             }
         }
     }
