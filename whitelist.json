@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 41,
-  "last_updated": "2026-09-14T19:24:32.283Z",
+  "version": 42,
+  "last_updated": "2026-09-14T19:24:41.174Z",
   "artists": [
+    {
+      "id": "3Y0YvS2crBLVS9eA5jX8Ux",
+      "canonical_name": "משה קליין",
+      "aliases": [
+        "משה קליין"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:24:41.174Z"
+    },
     {
       "id": "7arqN4IvLt54cm3gEhuzKI",
       "canonical_name": "DJ Farbreng",
