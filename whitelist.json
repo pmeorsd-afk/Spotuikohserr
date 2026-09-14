@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 73,
-  "last_updated": "2026-09-14T19:33:49.146Z",
+  "version": 74,
+  "last_updated": "2026-09-14T19:34:28.256Z",
   "artists": [
     {
       "id": "2HTxp63G47uFSTqQ5urmbU",
@@ -410,6 +410,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1tYAHtvNKGvCpt3fkXv6Zo",
+      "title": "לצאת מדיכאון",
+      "artist": "יגל אושרי",
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:34:28.256Z"
+    },
     {
       "id": "0fHqGVs897kRSCPiWBgiNc",
       "title": "באתי לחלום",
