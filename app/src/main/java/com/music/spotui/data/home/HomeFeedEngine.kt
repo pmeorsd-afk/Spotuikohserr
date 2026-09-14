@@ -21,19 +21,29 @@ import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withTimeoutOrNull
+import android.content.Context
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.withContext
+import org.json.JSONArray
+import org.json.JSONObject
+import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class HomeFeedEngine @Inject constructor(
     private val repository: AppRepository,
-    private val listeningTracker: LocalListeningTracker
+    private val listeningTracker: LocalListeningTracker,
+    @ApplicationContext private val context: Context
 ) {
 
     private var cachedFeed: HomeFeedModel? = null
     private var cachedAt: Long = 0L
     private val cacheTtlMs = 2 * 60 * 1000L // 2 minutes in-memory cache
     private val mutex = Mutex()
+    private val singleFlightMutex = Mutex()
+    private var inFlightRefresh: Deferred<HomeFeedModel>? = null
 
     fun invalidate() {
         cachedFeed = null
@@ -42,7 +52,12 @@ class HomeFeedEngine @Inject constructor(
 
     private fun isCacheValid(): Boolean {
         val feed = cachedFeed ?: return false
-        return (System.currentTimeMillis() - cachedAt) < cacheTtlMs && feed.sections.isNotEmpty()
+        return (System.currentTimeMillis() - cachedAt) < cacheTtlMs && feed.isHealthy()
+    }
+
+    private fun HomeFeedModel.isHealthy(): Boolean {
+        return sections.any { it.id == HomeSectionIds.RECENTLY_PLAYED && it.items.isNotEmpty() } &&
+               sections.count { it.items.isNotEmpty() } >= 3
     }
 
     suspend fun getHomeFeed(forceRefresh: Boolean = false): HomeFeedModel {
@@ -50,15 +65,83 @@ class HomeFeedEngine @Inject constructor(
             return cachedFeed!!
         }
 
-        return mutex.withLock {
+        if (!forceRefresh && cachedFeed == null) {
+            val disk = loadFromDisk()
+            if (disk != null && disk.isHealthy()) {
+                cachedFeed = disk
+                cachedAt = System.currentTimeMillis()
+                return disk
+            }
+        }
+
+        // Single-flight refresh: if a full refresh is already running, await it
+        val job = singleFlightMutex.withLock {
             if (!forceRefresh && isCacheValid()) {
-                return@withLock cachedFeed!!
+                return cachedFeed!!
+            }
+            val existing = inFlightRefresh
+            if (existing != null && existing.isActive) {
+                existing
+            } else {
+                val newJob = kotlinx.coroutines.CoroutineScope(Dispatchers.IO).async {
+                    doOrchestratedRefresh()
+                }
+                inFlightRefresh = newJob
+                newJob
+            }
+        }
+
+        return job.await()
+    }
+
+    private suspend fun doOrchestratedRefresh(): HomeFeedModel = mutex.withLock {
+        val newFeed = buildOrchestratedFeed()
+        val finalFeed = if (newFeed.isHealthy()) {
+            cachedFeed = newFeed
+            cachedAt = System.currentTimeMillis()
+            saveToDisk(newFeed)
+            newFeed
+        } else {
+            // Anti-degradation: Never replace a healthy feed with a degraded feed!
+            val healthyBase = when {
+                cachedFeed != null && cachedFeed!!.isHealthy() -> cachedFeed
+                else -> loadFromDisk()?.takeIf { it.isHealthy() }
             }
 
-            val feed = buildOrchestratedFeed()
-            cachedFeed = feed
+            if (healthyBase != null) {
+                val recentTracks = listeningTracker.recentTracks(limit = 10)
+                val likedSongs = loadLikedSongs()
+                val merged = mergeLocalRecent(healthyBase, recentTracks, likedSongs)
+                cachedFeed = merged
+                cachedAt = System.currentTimeMillis()
+                saveToDisk(merged)
+                merged
+            } else {
+                cachedFeed = newFeed
+                cachedAt = System.currentTimeMillis()
+                newFeed
+            }
+        }
+        finalFeed
+    }
+
+    /**
+     * Incremental update for local events (song played / liked) in <5ms without re-hitting network.
+     */
+    suspend fun updateRecentListeningOnly(): HomeFeedModel = withContext(Dispatchers.IO) {
+        mutex.withLock {
+            val base = cachedFeed ?: loadFromDisk()
+            val recentTracks = listeningTracker.recentTracks(limit = 10)
+            val likedSongs = loadLikedSongs()
+            val updated = if (base != null) {
+                mergeLocalRecent(base, recentTracks, likedSongs)
+            } else {
+                buildOrchestratedFeed()
+            }
+            cachedFeed = updated
             cachedAt = System.currentTimeMillis()
-            feed
+            saveToDisk(updated)
+            updated
         }
     }
 
@@ -464,6 +547,234 @@ class HomeFeedEngine @Inject constructor(
             } ?: emptyList()
         } catch (e: Exception) {
             emptyList()
+        }
+    }
+
+    private fun mergeLocalRecent(
+        baseFeed: HomeFeedModel,
+        recentTracks: List<TrackListenStat>,
+        likedSongs: List<SongsModel>
+    ): HomeFeedModel {
+        // 1. Rebuild Top Grid
+        val topGrid = mutableListOf<HomeItem>()
+        if (recentTracks.isNotEmpty()) {
+            topGrid.addAll(recentTracks.take(4).map { HomeItem.Track(it.toSongModel()) })
+        }
+        val remainingNeeded = 4 - topGrid.size
+        if (remainingNeeded > 0) {
+            topGrid.addAll(baseFeed.topGrid.filterNot { it in topGrid }.take(remainingNeeded))
+        }
+
+        // 2. Rebuild RECENTLY_PLAYED section
+        val recentItems = mutableListOf<HomeItem>()
+        recentItems.add(HomeItem.LikedSongs(count = likedSongs.size))
+        recentTracks.forEach { stat ->
+            recentItems.add(HomeItem.Track(stat.toSongModel()))
+        }
+        val recentSection = HomeSection(
+            id = HomeSectionIds.RECENTLY_PLAYED,
+            title = "לאחרונה",
+            type = HomeSectionType.HORIZONTAL,
+            items = recentItems
+        )
+
+        // 3. Update sections list
+        val updatedSections = baseFeed.sections.toMutableList()
+        val index = updatedSections.indexOfFirst { it.id == HomeSectionIds.RECENTLY_PLAYED }
+        if (index != -1) {
+            updatedSections[index] = recentSection
+        } else {
+            updatedSections.add(recentSection)
+        }
+
+        return baseFeed.copy(
+            topGrid = topGrid.take(4),
+            sections = updatedSections
+        )
+    }
+
+    private fun saveToDisk(feed: HomeFeedModel) {
+        runCatching {
+            val root = JSONObject().apply {
+                put("version", 1)
+                put("cachedAt", System.currentTimeMillis())
+                val feedObj = JSONObject().apply {
+                    put("greeting", feed.greeting)
+                    val gridArr = JSONArray()
+                    feed.topGrid.forEach { item ->
+                        itemToJson(item)?.let { gridArr.put(it) }
+                    }
+                    put("topGrid", gridArr)
+
+                    val secArr = JSONArray()
+                    feed.sections.forEach { sec ->
+                        val secObj = JSONObject().apply {
+                            put("id", sec.id)
+                            put("title", sec.title)
+                            put("subtitle", sec.subtitle ?: "")
+                            put("type", sec.type.name)
+                            if (sec.headerArtist != null) {
+                                put("headerArtist", JSONObject().apply {
+                                    put("name", sec.headerArtist.name)
+                                    put("coverUri", sec.headerArtist.coverUri)
+                                    put("id", sec.headerArtist.id)
+                                })
+                            }
+                            val itemsArr = JSONArray()
+                            sec.items.forEach { item ->
+                                itemToJson(item)?.let { itemsArr.put(it) }
+                            }
+                            put("items", itemsArr)
+                        }
+                        secArr.put(secObj)
+                    }
+                    put("sections", secArr)
+                }
+                put("feed", feedObj)
+            }
+            val file = File(context.filesDir, "home_feed_cache.json")
+            file.writeText(root.toString())
+        }
+    }
+
+    private fun loadFromDisk(): HomeFeedModel? {
+        return runCatching {
+            val file = File(context.filesDir, "home_feed_cache.json")
+            if (!file.exists()) return null
+            val root = JSONObject(file.readText())
+            val feedObj = root.optJSONObject("feed") ?: return null
+            val greeting = feedObj.optString("greeting", "שלום")
+
+            val gridArr = feedObj.optJSONArray("topGrid")
+            val topGrid = mutableListOf<HomeItem>()
+            if (gridArr != null) {
+                for (i in 0 until gridArr.length()) {
+                    gridArr.optJSONObject(i)?.let { jsonToItem(it)?.let { item -> topGrid.add(item) } }
+                }
+            }
+
+            val secArr = feedObj.optJSONArray("sections")
+            val sections = mutableListOf<HomeSection>()
+            if (secArr != null) {
+                for (i in 0 until secArr.length()) {
+                    val secObj = secArr.optJSONObject(i) ?: continue
+                    val id = secObj.optString("id", "")
+                    val title = secObj.optString("title", "")
+                    val subtitle = secObj.optString("subtitle").takeIf { it.isNotBlank() }
+                    val typeStr = secObj.optString("type", HomeSectionType.HORIZONTAL.name)
+                    val type = runCatching { HomeSectionType.valueOf(typeStr) }.getOrDefault(HomeSectionType.HORIZONTAL)
+
+                    val headerArtistObj = secObj.optJSONObject("headerArtist")
+                    val headerArtist = headerArtistObj?.let {
+                        ArtistsModel(name = it.optString("name"), coverUri = it.optString("coverUri"), id = it.optString("id"))
+                    }
+
+                    val itemsArr = secObj.optJSONArray("items")
+                    val items = mutableListOf<HomeItem>()
+                    if (itemsArr != null) {
+                        for (j in 0 until itemsArr.length()) {
+                            itemsArr.optJSONObject(j)?.let { jsonToItem(it)?.let { item -> items.add(item) } }
+                        }
+                    }
+
+                    sections.add(HomeSection(id, title, subtitle, headerArtist, type, items))
+                }
+            }
+
+            HomeFeedModel(greeting, topGrid, sections)
+        }.getOrNull()
+    }
+
+    private fun itemToJson(item: HomeItem): JSONObject? {
+        val o = JSONObject()
+        when (item) {
+            is HomeItem.Album -> {
+                o.put("itemType", "album")
+                o.put("name", item.name)
+                o.put("imageUrl", item.imageUrl)
+                o.put("subtitle", item.subtitle)
+                o.put("artists", item.artists)
+            }
+            is HomeItem.Artist -> {
+                o.put("itemType", "artist")
+                o.put("name", item.name)
+                o.put("imageUrl", item.imageUrl)
+                o.put("id", item.id)
+            }
+            is HomeItem.Playlist -> {
+                o.put("itemType", "playlist")
+                o.put("name", item.name)
+                o.put("imageUrl", item.imageUrl)
+                o.put("subtitle", item.subtitle)
+                o.put("id", item.id)
+            }
+            is HomeItem.Track -> {
+                o.put("itemType", "track")
+                val s = item.song
+                val songObj = JSONObject().apply {
+                    put("id", s.id)
+                    put("title", s.title)
+                    put("singer", s.singer)
+                    put("album", s.album)
+                    put("coverUri", s.coverUri)
+                    put("url", s.url)
+                    put("spotifyTrackId", s.spotifyTrackId)
+                    put("explicit", s.explicit)
+                    put("durationMs", s.durationMs)
+                }
+                o.put("song", songObj)
+            }
+            is HomeItem.LikedSongs -> {
+                o.put("itemType", "liked_songs")
+                o.put("count", item.count)
+                o.put("name", item.name)
+                o.put("imageUrl", item.imageUrl)
+            }
+        }
+        return o
+    }
+
+    private fun jsonToItem(o: JSONObject): HomeItem? {
+        return when (o.optString("itemType")) {
+            "album" -> HomeItem.Album(
+                name = o.optString("name"),
+                imageUrl = o.optString("imageUrl"),
+                subtitle = o.optString("subtitle"),
+                artists = o.optString("artists")
+            )
+            "artist" -> HomeItem.Artist(
+                name = o.optString("name"),
+                imageUrl = o.optString("imageUrl"),
+                id = o.optString("id")
+            )
+            "playlist" -> HomeItem.Playlist(
+                name = o.optString("name"),
+                imageUrl = o.optString("imageUrl"),
+                subtitle = o.optString("subtitle"),
+                id = o.optString("id")
+            )
+            "track" -> {
+                val s = o.optJSONObject("song") ?: return null
+                HomeItem.Track(
+                    SongsModel(
+                        id = s.optInt("id"),
+                        title = s.optString("title"),
+                        singer = s.optString("singer"),
+                        album = s.optString("album"),
+                        coverUri = s.optString("coverUri"),
+                        url = s.optString("url"),
+                        spotifyTrackId = s.optString("spotifyTrackId"),
+                        explicit = s.optBoolean("explicit"),
+                        durationMs = s.optInt("durationMs")
+                    )
+                )
+            }
+            "liked_songs" -> HomeItem.LikedSongs(
+                count = o.optInt("count"),
+                name = o.optString("name", "שירים שאהבתם"),
+                imageUrl = o.optString("imageUrl")
+            )
+            else -> null
         }
     }
 }

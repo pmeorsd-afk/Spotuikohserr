@@ -22,7 +22,7 @@ class AppRepository @Inject constructor(private val api : Api) {
         filter: com.metrolist.innertube.YouTube.SearchFilter = com.metrolist.innertube.YouTube.SearchFilter.FILTER_ALL,
     ) = api.searchYouTube(query, filter)
 
-    suspend fun provideAlbumSongs(albumName: String, artist: String = "") = api.getAlbumSongs(albumName, artist)
+    suspend fun provideAlbumSongs(albumName: String, artist: String = "", albumId: String = "") = api.getAlbumSongs(albumName, artist, albumId)
 
     suspend fun provideArtistSongs(artistName: String) = api.getArtistSongs(artistName)
 

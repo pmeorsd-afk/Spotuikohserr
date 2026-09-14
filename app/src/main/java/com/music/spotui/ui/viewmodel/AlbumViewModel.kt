@@ -26,7 +26,7 @@ class AlbumViewModel @Inject constructor(private val repository: AppRepository, 
     private val _songs : MutableStateFlow<Response<List<SongsModel>>> = MutableStateFlow(Response.Loading())
     val songs : StateFlow<Response<List<SongsModel>>> = _songs
 
-    private val _albums : MutableStateFlow<Response<List<AlbumsModel>>> = MutableStateFlow(Response.Loading())
+    private val _albums : MutableStateFlow<Response<List<AlbumsModel>>> = MutableStateFlow(Response.Success(emptyList()))
     val albums : StateFlow<Response<List<AlbumsModel>>> = _albums
 
     val queue: State<List<SongsModel>> get() = currentSongState.queue
@@ -50,27 +50,18 @@ class AlbumViewModel @Inject constructor(private val repository: AppRepository, 
     fun updateLikeState(likeState : Boolean){
         currentSongState.updateLikeState(likeState)
     }
-    init {
-        fetchAlbums()
-    }
 
     private var albumKey: String? = null
 
-    /** Loads the tracks for a specific album (resolved via Spotify search). */
-    fun loadAlbumSongs(name: String, artist: String = "") {
-        val key = "$name|$artist"
+    /** Loads the tracks for a specific album (resolved via Spotify albumId or smart search). */
+    fun loadAlbumSongs(name: String, artist: String = "", albumId: String = "") {
+        val key = "$name|$artist|$albumId"
         if (albumKey == key) return
         albumKey = key
         viewModelScope.launch(Dispatchers.IO) {
-            repository.provideAlbumSongs(name, artist).collect { songs ->
+            repository.provideAlbumSongs(name, artist, albumId).collect { songs ->
                 _songs.value = songs as Response<List<SongsModel>>
             }
-        }
-    }
-
-    private fun fetchAlbums() = viewModelScope.launch(Dispatchers.IO) {
-        repository.provideAlbums().collect{ album ->
-            _albums.value = album as Response<List<AlbumsModel>>
         }
     }
 

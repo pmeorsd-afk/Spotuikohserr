@@ -160,14 +160,14 @@ private fun onHomeItemClick(
     onPlaySong: ((SongsModel) -> Unit)? = null
 ) {
     when (item) {
-        is HomeItem.Album -> navController.navigate(albumRoute(item.name, item.artists.ifBlank { item.subtitle }))
+        is HomeItem.Album -> navController.navigate(albumRoute(item.name, item.artists.ifBlank { item.subtitle }, item.imageUrl))
         is HomeItem.Artist -> navController.navigate(artistRoute(item.name, item.id))
         is HomeItem.Playlist ->
             if (item.id.isNotBlank()) navController.navigate(playlistRoute(item.id, item.name))
-            else navController.navigate(albumRoute(item.name))
+            else navController.navigate(albumRoute(item.name, cover = item.imageUrl))
         is HomeItem.Track -> {
             val albumOrTitle = item.song.album.ifBlank { item.song.title }
-            navController.navigate(albumRoute(albumOrTitle, item.song.singer))
+            navController.navigate(albumRoute(albumOrTitle, item.song.singer, item.song.coverUri))
         }
         is HomeItem.LikedSongs -> navController.navigate(Routes.Liked.route)
     }
@@ -751,7 +751,7 @@ fun HomePlaylistGrid(navController: NavController, albums: List<AlbumsModel>) {
                             ) {
                                 val albumModel = chunkedAlbums[it][album]
                                 Log.d("check", albumModel.name)
-                                navController.navigate(albumRoute(albumModel.name, albumModel.artists))
+                                navController.navigate(albumRoute(albumModel.name, albumModel.artists, albumModel.coverUri))
                             }
                     ) {
                         val albItem = chunkedAlbums[it][album]
@@ -803,7 +803,7 @@ fun HomeAlbums(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = null
                     ) {
-                        navController.navigate(albumRoute(reversedAlbum[album].name, reversedAlbum[album].artists))
+                        navController.navigate(albumRoute(reversedAlbum[album].name, reversedAlbum[album].artists, reversedAlbum[album].coverUri))
                     }
             ){
                 Column(
@@ -963,7 +963,7 @@ fun ImageCard(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = null
                     ) {
-                       navController.navigate(albumRoute(albums[album].name, albums[album].artists))
+                        navController.navigate(albumRoute(albums[album].name, albums[album].artists, albums[album].coverUri))
                     }
             ) {
                 Box(
