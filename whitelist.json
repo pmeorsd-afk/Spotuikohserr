@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 109,
-  "last_updated": "2026-09-14T19:43:35.044Z",
+  "version": 110,
+  "last_updated": "2026-09-14T19:44:14.858Z",
   "artists": [
+    {
+      "id": "1IDLHVDUKWnQ92dgvar9es",
+      "canonical_name": "Yosef Karduner",
+      "aliases": [
+        "Yosef Karduner"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-14T19:44:14.858Z"
+    },
     {
       "id": "4sEXpunx9rSoHMRpfiEnEY",
       "canonical_name": "בנימין בוזגלו",
