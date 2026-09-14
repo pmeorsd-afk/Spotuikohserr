@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 53,
-  "last_updated": "2026-09-14T19:25:54.020Z",
+  "version": 54,
+  "last_updated": "2026-09-14T19:25:59.258Z",
   "artists": [
+    {
+      "id": "2uIWyY3ooACBAX8ut3Ikvs",
+      "canonical_name": "Yoni Z",
+      "aliases": [
+        "Yoni Z"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:25:59.258Z"
+    },
     {
       "id": "2aJG5Lz9f4ejCBpr84oQjs",
       "canonical_name": "Uri Davidi",
