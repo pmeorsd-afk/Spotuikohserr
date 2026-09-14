@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 57,
-  "last_updated": "2026-09-14T19:26:48.823Z",
+  "version": 58,
+  "last_updated": "2026-09-14T19:26:54.788Z",
   "artists": [
+    {
+      "id": "1FhNwjc5mmtqOytC3xQYsn",
+      "canonical_name": "Moshe Storch",
+      "aliases": [
+        "Moshe Storch"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:26:54.788Z"
+    },
     {
       "id": "7D2Ijrlwjl2vsEtJoPrsH3",
       "canonical_name": "Moshe Tischler",
