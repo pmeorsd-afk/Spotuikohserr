@@ -55,6 +55,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -70,19 +71,23 @@ import androidx.navigation.NavController
 import com.music.spotui.R
 import com.music.spotui.ui.theme.AppBackground
 import com.music.spotui.ui.theme.AppPalette
+import com.music.spotui.util.GitHubWhitelistSync
 import com.music.spotui.util.KosherWhitelistManager
 import com.music.spotui.util.WhitelistArtistEntry
 import com.music.spotui.util.WhitelistTrackEntry
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun KosherAdminScreen(navController: NavController) {
     val context = LocalContext.current
     val version by KosherWhitelistManager.versionState
+    val scope = rememberCoroutineScope()
 
     var selectedTab by remember { mutableIntStateOf(0) }
     var searchQuery by remember { mutableStateOf("") }
     var isSyncing by remember { mutableStateOf(false) }
+    var isPushingToGitHub by remember { mutableStateOf(false) }
 
     var showAddArtistDialog by remember { mutableStateOf(false) }
     var showAddTrackDialog by remember { mutableStateOf(false) }
@@ -172,6 +177,25 @@ fun KosherAdminScreen(navController: NavController) {
             AdminHeaderCard(
                 artistCount = artists.size,
                 trackCount = tracks.size,
+                isPushingToGitHub = isPushingToGitHub,
+                onPushToGitHub = {
+                    if (!isPushingToGitHub) {
+                        isPushingToGitHub = true
+                        scope.launch {
+                            val json = KosherWhitelistManager.exportWhitelistJson()
+                            val res = GitHubWhitelistSync.pushToGitHub(context, json)
+                            isPushingToGitHub = false
+                            res.fold(
+                                onSuccess = { msg ->
+                                    Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+                                },
+                                onFailure = { err ->
+                                    Toast.makeText(context, err.message ?: "שגיאה בסנכרון ל-GitHub", Toast.LENGTH_LONG).show()
+                                }
+                            )
+                        }
+                    }
+                },
                 onCopyJson = {
                     val ok = KosherWhitelistManager.copyJsonToClipboard(context)
                     val msg = if (ok) "whitelist.json הועתק ללוח! הדבק אותו ב-GitHub" else "שגיאה בהעתקה"
@@ -378,6 +402,8 @@ fun KosherAdminScreen(navController: NavController) {
 private fun AdminHeaderCard(
     artistCount: Int,
     trackCount: Int,
+    isPushingToGitHub: Boolean,
+    onPushToGitHub: () -> Unit,
     onCopyJson: () -> Unit,
     onAddClick: () -> Unit
 ) {
@@ -407,6 +433,24 @@ private fun AdminHeaderCard(
                         color = Color.Gray,
                         fontSize = 13.sp
                     )
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.padding(top = 4.dp)
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .size(7.dp)
+                                .clip(CircleShape)
+                                .background(Color(0xFF1ED760))
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = "סנכרון אוטומטי ל-GitHub פעיל",
+                            color = Color(0xFF1ED760),
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.Medium
+                        )
+                    }
                 }
 
                 Button(
@@ -429,23 +473,61 @@ private fun AdminHeaderCard(
             Spacer(modifier = Modifier.height(14.dp))
 
             Button(
+                onClick = onPushToGitHub,
+                enabled = !isPushingToGitHub,
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(containerColor = AppPalette),
+                shape = RoundedCornerShape(12.dp)
+            ) {
+                if (isPushingToGitHub) {
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(16.dp),
+                        color = Color.Black,
+                        strokeWidth = 2.dp
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(
+                        "מעדכן ב-GitHub...",
+                        color = Color.Black,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 13.sp
+                    )
+                } else {
+                    Icon(
+                        imageVector = Icons.Default.Refresh,
+                        contentDescription = null,
+                        tint = Color.Black,
+                        modifier = Modifier.size(18.dp)
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(
+                        "סנכרן עכשיו ל-GitHub",
+                        color = Color.Black,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 13.sp
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.height(6.dp))
+
+            OutlinedButton(
                 onClick = onCopyJson,
                 modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2E2E2E)),
-                shape = RoundedCornerShape(12.dp)
+                shape = RoundedCornerShape(12.dp),
+                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFFB3B3B3))
             ) {
                 Icon(
                     imageVector = Icons.Default.Share,
                     contentDescription = null,
-                    tint = AppPalette,
-                    modifier = Modifier.size(18.dp)
+                    tint = Color(0xFFB3B3B3),
+                    modifier = Modifier.size(15.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
-                    "העתק whitelist.json מעודכן ל-GitHub",
-                    color = Color.White,
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 13.sp
+                    "העתק JSON ללוח (גיבוי)",
+                    color = Color(0xFFB3B3B3),
+                    fontSize = 12.sp
                 )
             }
         }

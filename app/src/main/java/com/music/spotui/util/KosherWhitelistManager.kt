@@ -711,6 +711,13 @@ object KosherWhitelistManager {
                         null
                     )
                 }
+
+                // 3. Automatically push updated whitelist to GitHub in background
+                if (GitHubWhitelistSync.hasToken(app)) {
+                    CoroutineScope(Dispatchers.IO).launch {
+                        GitHubWhitelistSync.pushToGitHub(app, json)
+                    }
+                }
             }
         } catch (e: Exception) {
             e.printStackTrace()
