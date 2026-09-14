@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 80,
-  "last_updated": "2026-09-14T19:36:49.585Z",
+  "version": 81,
+  "last_updated": "2026-09-14T19:37:48.224Z",
   "artists": [
     {
       "id": "7CgBEyXbjOjFX3HiysHtXN",
@@ -430,6 +430,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0qgVN2SlWEBfxFZLqC0TXg",
+      "title": "לכה דודי",
+      "artist": "Shlomi Shabat, Moshe Perez, ליאור נרקיס, דודו אהרון, בניה ברבי, Yaakov Shwekey, Akiva, Yaniv Ben Mashiach, עלאי ונתאי צרפתי",
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:37:48.224Z"
+    },
     {
       "id": "3CZdlwKHGTvfveatbfKD3q",
       "title": "תמיד אוהב אותי",
