@@ -465,6 +465,7 @@ object KosherWhitelistManager {
             is HomeItem.Album -> areAllArtistsInWhitelist(item.subtitle)
             is HomeItem.Playlist -> false
             is HomeItem.Track -> isSongWhitelisted(item.song)
+            is HomeItem.LikedSongs -> true
         }
         if (allowed && item.imageUrl.isNotBlank()) {
             allowImageUrl(item.imageUrl)

@@ -21,26 +21,27 @@ class HomeViewModel @Inject constructor(
     private val homeFeedEngine: HomeFeedEngine
 ) : ViewModel() {
 
+    private val _home : MutableStateFlow<Response<HomeFeedModel>> = MutableStateFlow(Response.Loading())
+    val home : StateFlow<Response<HomeFeedModel>> = _home
+
     private val _albums : MutableStateFlow<Response<List<AlbumsModel>>> = MutableStateFlow(Response.Loading())
     val albums : StateFlow<Response<List<AlbumsModel>>> = _albums
 
     private val _artists : MutableStateFlow<Response<List<ArtistsModel>>> = MutableStateFlow(Response.Loading())
     val artists : StateFlow<Response<List<ArtistsModel>>> = _artists
 
-    private val _home : MutableStateFlow<Response<HomeFeedModel>> = MutableStateFlow(Response.Loading())
-    val home : StateFlow<Response<HomeFeedModel>> = _home
-
     init {
         refreshHome()
-        fetchArtists()
-        fetchAlbums()
     }
 
-    fun refreshHome() = viewModelScope.launch(Dispatchers.IO) {
+    fun refreshHome(force: Boolean = false) = viewModelScope.launch(Dispatchers.IO) {
+        if (_home.value !is Response.Success) {
+            _home.value = Response.Loading()
+        }
         try {
-            val personalized = homeFeedEngine.buildPersonalizedFeed()
-            if (personalized != null && personalized.sections.isNotEmpty()) {
-                _home.value = Response.Success(personalized)
+            val feed = homeFeedEngine.getHomeFeed(force)
+            if (feed.sections.isNotEmpty()) {
+                _home.value = Response.Success(feed)
                 return@launch
             }
         } catch (e: Exception) {
@@ -51,19 +52,4 @@ class HomeViewModel @Inject constructor(
             _home.value = feed
         }
     }
-
-    private fun fetchAlbums() = viewModelScope.launch(Dispatchers.IO) {
-            repository.provideAlbums().collect{ album ->
-                _albums.value = album as Response<List<AlbumsModel>>
-            }
-    }
-
-    private fun fetchArtists() = viewModelScope.launch(Dispatchers.IO) {
-        repository.provideArtists().collect { artist ->
-            _artists.value = artist as Response<List<ArtistsModel>>
-        }
-    }
-
-
-
 }
