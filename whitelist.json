@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 54,
-  "last_updated": "2026-09-14T19:25:59.258Z",
+  "version": 55,
+  "last_updated": "2026-09-14T19:26:36.135Z",
   "artists": [
+    {
+      "id": "4A95eIw3CcKx3uHHPUivSL",
+      "canonical_name": "Matt Dubb",
+      "aliases": [
+        "Matt Dubb"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:26:36.135Z"
+    },
     {
       "id": "2uIWyY3ooACBAX8ut3Ikvs",
       "canonical_name": "Yoni Z",
