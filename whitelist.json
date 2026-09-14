@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 92,
-  "last_updated": "2026-09-14T19:41:08.137Z",
+  "version": 93,
+  "last_updated": "2026-09-14T19:41:11.020Z",
   "artists": [
     {
       "id": "3sY8HKqV2QqTI1eegDci6p",
@@ -31,7 +31,7 @@
       ],
       "status": "approved",
       "notes": "approved via telegram",
-      "updated_at": "2026-09-14T19:41:08.137Z"
+      "updated_at": "2026-09-14T19:41:11.020Z"
     },
     {
       "id": "7CgBEyXbjOjFX3HiysHtXN",
