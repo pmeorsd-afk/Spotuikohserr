@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 69,
-  "last_updated": "2026-09-14T19:33:14.872Z",
+  "version": 70,
+  "last_updated": "2026-09-14T19:33:26.529Z",
   "artists": [
+    {
+      "id": "6Odeor35vCn3mr7VIiqIiq",
+      "canonical_name": "ותן חלקנו",
+      "aliases": [
+        "ותן חלקנו"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:33:26.529Z"
+    },
     {
       "id": "1WWc6zXfTwpakU8Ds5yS1G",
       "canonical_name": "Moti Weiss",
