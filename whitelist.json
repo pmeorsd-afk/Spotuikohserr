@@ -9,6 +9,11 @@
     },
     {
       "id": "",
+      "name": "מוטי שטיינמץ",
+      "notes": "approved"
+    },
+    {
+      "id": "",
       "name": "יאיר אלייצור",
       "notes": "approved"
     },
@@ -126,16 +131,5 @@
     }
   ],
   "blocked_tracks": [],
-  "blocked_artists": [
-    {
-      "id": "1pZcigV84ihZL3erh8v0gY",
-      "name": "Motty Steinmetz",
-      "notes": "blocked via telegram"
-    },
-    {
-      "id": "",
-      "name": "מוטי שטיינמץ",
-      "notes": "blocked via telegram"
-    }
-  ]
+  "blocked_artists": []
 }

@@ -262,11 +262,19 @@ object KosherWhitelistManager {
                 val id = canonicalTrackId(rawId).ifBlank { rawId }
                 val title = obj.optString("title").trim()
                 val artist = obj.optString("artist").trim()
+                val key = trackKey(title, artist)
+
+                // If already in newTrackIds or newTrackKeys, it is approved - do not block
+                if ((id.isNotBlank() && newTrackIds.contains(id)) ||
+                    (rawId.isNotBlank() && newTrackIds.contains(rawId)) ||
+                    (key.isNotBlank() && newTrackKeys.contains(key))) {
+                    continue
+                }
+
                 if (id.isNotBlank() || (title.isNotBlank() && artist.isNotBlank())) {
                     newBlockedEntries.add(WhitelistTrackEntry(id, title, artist))
                     if (id.isNotBlank()) newBlockedIds.add(id)
                     if (rawId.isNotBlank() && rawId != id) newBlockedIds.add(rawId)
-                    val key = trackKey(title, artist)
                     if (key.isNotBlank()) newBlockedKeys.add(key)
                 }
             }
@@ -299,10 +307,17 @@ object KosherWhitelistManager {
                 val id = canonicalTrackId(rawId).ifBlank { rawId }
                 val name = obj.optString("name").trim()
                 val notes = obj.optString("notes", "blocked")
+                val norm = normalizeText(name)
+
+                // If already in newArtistIds or newArtistNames, it is approved - do not block
+                if ((id.isNotBlank() && newArtistIds.contains(id)) ||
+                    (norm.isNotBlank() && newArtistNames.contains(norm))) {
+                    continue
+                }
+
                 if (id.isNotBlank() || name.isNotBlank()) {
                     newBlockedArtistEntries.add(WhitelistArtistEntry(id, name, notes))
                     if (id.isNotBlank()) newBlockedArtistIds.add(id)
-                    val norm = normalizeText(name)
                     if (norm.isNotBlank()) newBlockedArtistNames.add(norm)
                 }
             }
@@ -904,14 +919,20 @@ object KosherWhitelistManager {
                 val artist = obj.optString("artist").trim()
                 val key = trackKey(title, artist)
 
+                // If remote says track is approved, unblock it from local blocked sets!
+                if (id.isNotBlank()) blockedTrackIds.remove(id)
+                if (rawId.isNotBlank()) blockedTrackIds.remove(rawId)
+                if (key.isNotBlank()) blockedTrackKeys.remove(key)
+                blockedTrackEntries.removeAll {
+                    (id.isNotBlank() && (it.id == id || it.id == rawId)) ||
+                            (key.isNotBlank() && trackKey(it.title, it.artist) == key)
+                }
+
                 val alreadyWhitelisted = (id.isNotBlank() && whitelistedTrackIds.contains(id)) ||
                         (rawId.isNotBlank() && whitelistedTrackIds.contains(rawId)) ||
                         (key.isNotBlank() && whitelistedTrackKeys.contains(key))
-                val isBlocked = (id.isNotBlank() && blockedTrackIds.contains(id)) ||
-                        (rawId.isNotBlank() && blockedTrackIds.contains(rawId)) ||
-                        (key.isNotBlank() && blockedTrackKeys.contains(key))
 
-                if (!alreadyWhitelisted && !isBlocked && (id.isNotBlank() || key.isNotBlank())) {
+                if (!alreadyWhitelisted && (id.isNotBlank() || key.isNotBlank())) {
                     if (id.isNotBlank()) whitelistedTrackIds.add(id)
                     if (rawId.isNotBlank() && rawId != id) whitelistedTrackIds.add(rawId)
                     if (key.isNotBlank()) whitelistedTrackKeys.add(key)
@@ -929,6 +950,14 @@ object KosherWhitelistManager {
                 val title = obj.optString("title").trim()
                 val artist = obj.optString("artist").trim()
                 val key = trackKey(title, artist)
+
+                // If track is in remote approved tracks, do not block!
+                val isExplicitlyApproved = (id.isNotBlank() && whitelistedTrackIds.contains(id)) ||
+                        (rawId.isNotBlank() && whitelistedTrackIds.contains(rawId)) ||
+                        (key.isNotBlank() && whitelistedTrackKeys.contains(key))
+                if (isExplicitlyApproved) {
+                    continue
+                }
 
                 val alreadyBlocked = (id.isNotBlank() && blockedTrackIds.contains(id)) ||
                         (rawId.isNotBlank() && blockedTrackIds.contains(rawId)) ||
@@ -960,12 +989,18 @@ object KosherWhitelistManager {
                 val notes = obj.optString("notes", "approved")
                 val norm = normalize(name)
 
-                val isBlocked = (id.isNotBlank() && blockedArtistIds.contains(id)) ||
-                        (norm.isNotBlank() && blockedArtistNames.contains(norm))
+                // If remote says artist is approved, unblock them from local blocked sets!
+                if (id.isNotBlank()) blockedArtistIds.remove(id)
+                if (norm.isNotBlank()) blockedArtistNames.remove(norm)
+                blockedArtistEntries.removeAll {
+                    (id.isNotBlank() && it.id == id) ||
+                            (norm.isNotBlank() && normalize(it.name) == norm)
+                }
+
                 val alreadyArtist = (id.isNotBlank() && whitelistedArtistIds.contains(id)) ||
                         (norm.isNotBlank() && whitelistedArtistNames.contains(norm))
 
-                if (!isBlocked && !alreadyArtist && (id.isNotBlank() || norm.isNotBlank())) {
+                if (!alreadyArtist && (id.isNotBlank() || norm.isNotBlank())) {
                     if (id.isNotBlank()) whitelistedArtistIds.add(id)
                     if (norm.isNotBlank()) whitelistedArtistNames.add(norm)
                     artistEntries.add(WhitelistArtistEntry(id, name, notes))
@@ -981,6 +1016,13 @@ object KosherWhitelistManager {
                 val name = obj.optString("name").trim()
                 val notes = obj.optString("notes", "blocked")
                 val norm = normalize(name)
+
+                // If artist is in remote approved artists, do not block!
+                val isExplicitlyApproved = (id.isNotBlank() && whitelistedArtistIds.contains(id)) ||
+                        (norm.isNotBlank() && whitelistedArtistNames.contains(norm))
+                if (isExplicitlyApproved) {
+                    continue
+                }
 
                 val alreadyBlocked = (id.isNotBlank() && blockedArtistIds.contains(id)) ||
                         (norm.isNotBlank() && blockedArtistNames.contains(norm))
