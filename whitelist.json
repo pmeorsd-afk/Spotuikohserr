@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 45,
-  "last_updated": "2026-09-14T19:24:57.641Z",
+  "version": 46,
+  "last_updated": "2026-09-14T19:25:04.450Z",
   "artists": [
+    {
+      "id": "7LY0kkWc7vJDNoNqPsrJ97",
+      "canonical_name": "שוקי סלומון",
+      "aliases": [
+        "שוקי סלומון"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:25:04.450Z"
+    },
     {
       "id": "0kF5nmRrCc9oZpAkVbWaUt",
       "canonical_name": "נמואל",
