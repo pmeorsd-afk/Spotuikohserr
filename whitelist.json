@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2,
-  "last_updated": "2026-09-14",
+  "version": 23,
+  "last_updated": "2026-09-14T17:27:16.904Z",
   "artists": [
+    {
+      "id": "2y68BTFta7hwNZVdFcmtyZ",
+      "canonical_name": "Mordechai Ben David",
+      "aliases": [
+        "Mordechai Ben David"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-14T17:27:16.904Z"
+    },
     {
       "id": "1pZcigV84ihZL3erh8v0gY",
       "canonical_name": "Motty Steinmetz",
