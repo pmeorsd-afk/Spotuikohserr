@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 78,
-  "last_updated": "2026-09-14T19:35:24.760Z",
+  "version": 79,
+  "last_updated": "2026-09-14T19:36:08.347Z",
   "artists": [
+    {
+      "id": "7CgBEyXbjOjFX3HiysHtXN",
+      "canonical_name": "Shuli Rand",
+      "aliases": [
+        "Shuli Rand"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:36:08.347Z"
+    },
     {
       "id": "4Xw4xAhE5l6mEHFjbZCWmp",
       "canonical_name": "Yonatan Razel",
