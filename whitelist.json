@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 71,
-  "last_updated": "2026-09-14T19:33:35.018Z",
+  "version": 72,
+  "last_updated": "2026-09-14T19:33:38.780Z",
   "artists": [
     {
       "id": "6Odeor35vCn3mr7VIiqIiq",
@@ -400,6 +400,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0fHqGVs897kRSCPiWBgiNc",
+      "title": "באתי לחלום",
+      "artist": "Nathan Goshen",
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:33:38.780Z"
+    },
     {
       "id": "7n6emXIcaECmkljP1rPlvQ",
       "title": "לבחור נכון",
