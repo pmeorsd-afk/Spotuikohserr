@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 77,
-  "last_updated": "2026-09-14T19:35:17.353Z",
+  "version": 78,
+  "last_updated": "2026-09-14T19:35:24.760Z",
   "artists": [
+    {
+      "id": "4Xw4xAhE5l6mEHFjbZCWmp",
+      "canonical_name": "Yonatan Razel",
+      "aliases": [
+        "Yonatan Razel"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:35:24.760Z"
+    },
     {
       "id": "2HTxp63G47uFSTqQ5urmbU",
       "canonical_name": "שמואל",
