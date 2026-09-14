@@ -1,127 +1,118 @@
 {
-    "version":  1,
-    "last_updated":  "2026-09-09",
-    "artists":  [
-                    {
-                        "id":  "",
-                        "name":  "יאיר אלייצור",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "ישי ריבו",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "Ishay Ribo",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "אברהם פריד",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "Avraham Fried",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "מרדכי שפירא",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "Mordechai Shapiro",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "מוטי שטיינמץ",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "Motty Steinmetz",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "נפתלי קמפה",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "Naftali Kempeh",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "בני פרידמן",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "Benny Friedman",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "עקיבא",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "Akiva",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "שמילי אונגר",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "Shmueli Ungar",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "שולם למר",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "Shulem",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "יעקב שוואקי",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "Yaakov Shwekey",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "מידד טסה",
-                        "notes":  "approved"
-                    },
-                    {
-                        "id":  "",
-                        "name":  "Meidad Tasa",
-                        "notes":  "approved"
-                    }
-                ],
-    "tracks":  [
-
-               ],
-    "blocked_tracks":  [
-
-                       ]
+  "version": 1,
+  "last_updated": "2026-09-14",
+  "artists": [
+    {
+      "id": "",
+      "name": "ישי ריבו",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "Ishay Ribo",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "אברהם פריד",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "Avraham Fried",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "מרדכי שפירא",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "Mordechai Shapiro",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "מוטי שטיינמץ",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "Motty Steinmetz",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "נפתלי קמפה",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "Naftali Kempeh",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "בני פרידמן",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "Benny Friedman",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "עקיבא",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "Akiva",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "שמילי אונגר",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "Shmueli Ungar",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "שולם למר",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "Shulem",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "יעקב שוואקי",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "Yaakov Shwekey",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "מידד טסה",
+      "notes": "approved"
+    },
+    {
+      "id": "",
+      "name": "Meidad Tasa",
+      "notes": "approved"
+    }
+  ],
+  "tracks": [],
+  "blocked_tracks": []
 }
