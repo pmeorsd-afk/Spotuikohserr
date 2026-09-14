@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 68,
-  "last_updated": "2026-09-14T19:33:02.967Z",
+  "version": 69,
+  "last_updated": "2026-09-14T19:33:14.872Z",
   "artists": [
     {
       "id": "1WWc6zXfTwpakU8Ds5yS1G",
@@ -390,6 +390,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "72W6xVQGdKHQl348KYgwg2",
+      "title": "שלמים",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:33:14.872Z"
+    },
     {
       "id": "0ety2yTiWVKeqQeaed4Spj",
       "title": "נחכה לך",
