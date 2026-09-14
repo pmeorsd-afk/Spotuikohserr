@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 93,
-  "last_updated": "2026-09-14T19:41:11.020Z",
+  "version": 94,
+  "last_updated": "2026-09-14T19:41:12.666Z",
   "artists": [
+    {
+      "id": "3EQL62TTyZjlpKDr4k3vXJ",
+      "canonical_name": "Youval Taieb",
+      "aliases": [
+        "Youval Taieb"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:41:12.666Z"
+    },
     {
       "id": "3sY8HKqV2QqTI1eegDci6p",
       "canonical_name": "דוד חפצדי",
