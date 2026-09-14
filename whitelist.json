@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 79,
-  "last_updated": "2026-09-14T19:36:08.347Z",
+  "version": 80,
+  "last_updated": "2026-09-14T19:36:49.585Z",
   "artists": [
     {
       "id": "7CgBEyXbjOjFX3HiysHtXN",
@@ -430,6 +430,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3CZdlwKHGTvfveatbfKD3q",
+      "title": "תמיד אוהב אותי",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:36:49.585Z"
+    },
     {
       "id": "3rKq9QQzb28Klhwh1LK9nn",
       "title": "אור גדול",
