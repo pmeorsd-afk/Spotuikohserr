@@ -6,6 +6,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.json.JSONArray
 import org.json.JSONObject
 import java.io.OutputStreamWriter
 import java.net.HttpURLConnection
@@ -39,7 +40,30 @@ object TelegramNotifier {
             append("\n📱 *נשלח מתוך אפליקציית ספוטיפיי כשר*")
         }
 
-        sendTelegramMessage(context, text, onComplete)
+        val replyMarkup = JSONObject().apply {
+            val keyboard = JSONArray().apply {
+                val row1 = JSONArray().apply {
+                    put(JSONObject().apply {
+                        put("text", "✅ אשר והוסף לרשימה")
+                        put("callback_data", if (cleanId.isNotBlank()) "appr:art:$cleanId" else "appr:art")
+                    })
+                }
+                put(row1)
+
+                if (spotifyUrl.isNotBlank()) {
+                    val row2 = JSONArray().apply {
+                        put(JSONObject().apply {
+                            put("text", "🎧 פתח בספוטיפיי")
+                            put("url", spotifyUrl)
+                        })
+                    }
+                    put(row2)
+                }
+            }
+            put("inline_keyboard", keyboard)
+        }
+
+        sendTelegramMessage(context, text, replyMarkup, onComplete)
     }
 
     /**
@@ -68,12 +92,36 @@ object TelegramNotifier {
             append("\n📱 *נשלח מתוך אפליקציית ספוטיפיי כשר*")
         }
 
-        sendTelegramMessage(context, text, onComplete)
+        val replyMarkup = JSONObject().apply {
+            val keyboard = JSONArray().apply {
+                val row1 = JSONArray().apply {
+                    put(JSONObject().apply {
+                        put("text", "✅ אשר והוסף לרשימה")
+                        put("callback_data", if (cleanId.isNotBlank()) "appr:trk:$cleanId" else "appr:trk")
+                    })
+                }
+                put(row1)
+
+                if (spotifyUrl.isNotBlank()) {
+                    val row2 = JSONArray().apply {
+                        put(JSONObject().apply {
+                            put("text", "🎧 פתח בספוטיפיי")
+                            put("url", spotifyUrl)
+                        })
+                    }
+                    put(row2)
+                }
+            }
+            put("inline_keyboard", keyboard)
+        }
+
+        sendTelegramMessage(context, text, replyMarkup, onComplete)
     }
 
     private fun sendTelegramMessage(
         context: Context,
         markdownText: String,
+        replyMarkup: JSONObject? = null,
         onComplete: ((Boolean) -> Unit)? = null
     ) {
         CoroutineScope(Dispatchers.IO).launch {
@@ -93,6 +141,9 @@ object TelegramNotifier {
                     put("chat_id", CHANNEL_ID)
                     put("text", markdownText)
                     put("parse_mode", "Markdown")
+                    if (replyMarkup != null) {
+                        put("reply_markup", replyMarkup)
+                    }
                 }
 
                 OutputStreamWriter(conn.outputStream, "UTF-8").use { writer ->
