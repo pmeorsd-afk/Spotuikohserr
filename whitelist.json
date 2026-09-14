@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 59,
-  "last_updated": "2026-09-14T19:27:12.574Z",
+  "version": 60,
+  "last_updated": "2026-09-14T19:27:18.938Z",
   "artists": [
+    {
+      "id": "0k3ewAJBunYv0uDX7U95Yz",
+      "canonical_name": "Boruch Sholom",
+      "aliases": [
+        "Boruch Sholom"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:27:18.938Z"
+    },
     {
       "id": "0EDCMem9qWHmG4Smn3evci",
       "canonical_name": "Joey Newcomb",
