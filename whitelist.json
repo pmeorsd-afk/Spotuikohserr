@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 9,
-  "last_updated": "2026-09-14T15:08:42.238Z",
+  "version": 10,
+  "last_updated": "2026-09-14T17:21:00.428Z",
   "artists": [
     {
       "id": "2y68BTFta7hwNZVdFcmtyZ",
@@ -9,9 +9,9 @@
       "aliases": [
         "Mordechai Ben David"
       ],
-      "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-14T15:08:42.238Z"
+      "status": "blocked",
+      "notes": "blocked via telegram",
+      "updated_at": "2026-09-14T17:21:00.428Z"
     },
     {
       "id": "1pZcigV84ihZL3erh8v0gY",
