@@ -48,6 +48,7 @@ import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ModalBottomSheet
@@ -1476,19 +1477,37 @@ fun PlayerOptionsSheet(
                         }
                     }
                 } else {
-                    PlayerMenuRow(
-                        icon = Icons.Default.CheckCircle,
-                        label = "הצע לבדיקה והיתר תמונות",
-                        iconTint = Color(0xFF1ED760),
-                    ) {
-                        val trackId = currentSong?.spotifyTrackId.orEmpty()
-                        com.music.spotui.util.TelegramNotifier.sendTrackApprovalRequest(
-                            context = context,
-                            trackTitle = title,
-                            artistName = singer,
-                            trackId = trackId
-                        )
-                        onDismiss()
+                    val isSongAllowed = currentSong?.let { com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(it) } ?: false
+                    if (isSongAllowed) {
+                        PlayerMenuRow(
+                            icon = Icons.Default.Warning,
+                            label = "דיווח על היתר תמונות",
+                            iconTint = Color(0xFFFFA726),
+                        ) {
+                            val trackId = currentSong?.spotifyTrackId.orEmpty()
+                            com.music.spotui.util.TelegramNotifier.sendTrackReportRequest(
+                                context = context,
+                                trackTitle = title,
+                                artistName = singer,
+                                trackId = trackId
+                            )
+                            onDismiss()
+                        }
+                    } else {
+                        PlayerMenuRow(
+                            icon = Icons.Default.CheckCircle,
+                            label = "הצע לבדיקה והיתר תמונות",
+                            iconTint = Color(0xFF1ED760),
+                        ) {
+                            val trackId = currentSong?.spotifyTrackId.orEmpty()
+                            com.music.spotui.util.TelegramNotifier.sendTrackApprovalRequest(
+                                context = context,
+                                trackTitle = title,
+                                artistName = singer,
+                                trackId = trackId
+                            )
+                            onDismiss()
+                        }
                     }
                 }
                 PlayerMenuRow(

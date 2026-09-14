@@ -63,7 +63,7 @@ object TelegramNotifier {
             put("inline_keyboard", keyboard)
         }
 
-        sendTelegramMessage(context, text, replyMarkup, onComplete)
+        sendTelegramMessage(context, text, replyMarkup, "הבקשה נשלחה בהצלחה לבדיקה!", onComplete)
     }
 
     /**
@@ -115,13 +115,118 @@ object TelegramNotifier {
             put("inline_keyboard", keyboard)
         }
 
-        sendTelegramMessage(context, text, replyMarkup, onComplete)
+        sendTelegramMessage(context, text, replyMarkup, "הבקשה נשלחה בהצלחה לבדיקה!", onComplete)
+    }
+
+    /**
+     * Sends an artist report request to the Telegram channel (when artist is already whitelisted).
+     */
+    fun sendArtistReportRequest(
+        context: Context,
+        artistName: String,
+        artistId: String,
+        onComplete: ((Boolean) -> Unit)? = null
+    ) {
+        val cleanId = artistId.trim()
+        val spotifyUrl = if (cleanId.isNotBlank()) "https://open.spotify.com/artist/$cleanId" else ""
+
+        val text = buildString {
+            append("⚠️ *דיווח על היתר תמונות לאמן*\n\n")
+            append("🎤 *אמן:* $artistName\n")
+            if (cleanId.isNotBlank()) {
+                append("🆔 *מזהה ספוטיפיי:* `$cleanId`\n")
+            }
+            if (spotifyUrl.isNotBlank()) {
+                append("🔗 [פתח פרופיל בספוטיפיי]($spotifyUrl)\n")
+            }
+            append("\n📢 *האמן נמצא כעת ברשימת ההיתר, אך משתמש דיווח לבדיקה חוזרת.*")
+            append("\n📱 *נשלח מתוך אפליקציית ספוטיפיי כשר*")
+        }
+
+        val replyMarkup = JSONObject().apply {
+            val keyboard = JSONArray().apply {
+                val row1 = JSONArray().apply {
+                    put(JSONObject().apply {
+                        put("text", "❌ הסר מרשימת ההיתר")
+                        put("callback_data", if (cleanId.isNotBlank()) "rem:art:$cleanId" else "rem:art")
+                    })
+                }
+                put(row1)
+
+                if (spotifyUrl.isNotBlank()) {
+                    val row2 = JSONArray().apply {
+                        put(JSONObject().apply {
+                            put("text", "🎧 פתח בספוטיפיי")
+                            put("url", spotifyUrl)
+                        })
+                    }
+                    put(row2)
+                }
+            }
+            put("inline_keyboard", keyboard)
+        }
+
+        sendTelegramMessage(context, text, replyMarkup, "הדיווח נשלח בהצלחה לבדיקת המנהל!", onComplete)
+    }
+
+    /**
+     * Sends a track report request to the Telegram channel (when track is already whitelisted).
+     */
+    fun sendTrackReportRequest(
+        context: Context,
+        trackTitle: String,
+        artistName: String,
+        trackId: String,
+        onComplete: ((Boolean) -> Unit)? = null
+    ) {
+        val cleanId = trackId.trim()
+        val spotifyUrl = if (cleanId.isNotBlank()) "https://open.spotify.com/track/$cleanId" else ""
+
+        val text = buildString {
+            append("⚠️ *דיווח על היתר תמונות לשיר*\n\n")
+            append("🎶 *שיר:* $trackTitle\n")
+            append("🎤 *אמן:* $artistName\n")
+            if (cleanId.isNotBlank()) {
+                append("🆔 *מזהה ספוטיפיי:* `$cleanId`\n")
+            }
+            if (spotifyUrl.isNotBlank()) {
+                append("🔗 [פתח שיר בספוטיפיי]($spotifyUrl)\n")
+            }
+            append("\n📢 *השיר/האמן נמצא כעת ברשימת ההיתר, אך משתמש דיווח לבדיקה חוזרת.*")
+            append("\n📱 *נשלח מתוך אפליקציית ספוטיפיי כשר*")
+        }
+
+        val replyMarkup = JSONObject().apply {
+            val keyboard = JSONArray().apply {
+                val row1 = JSONArray().apply {
+                    put(JSONObject().apply {
+                        put("text", "❌ הסר מרשימת ההיתר")
+                        put("callback_data", if (cleanId.isNotBlank()) "rem:trk:$cleanId" else "rem:trk")
+                    })
+                }
+                put(row1)
+
+                if (spotifyUrl.isNotBlank()) {
+                    val row2 = JSONArray().apply {
+                        put(JSONObject().apply {
+                            put("text", "🎧 פתח בספוטיפיי")
+                            put("url", spotifyUrl)
+                        })
+                    }
+                    put(row2)
+                }
+            }
+            put("inline_keyboard", keyboard)
+        }
+
+        sendTelegramMessage(context, text, replyMarkup, "הדיווח נשלח בהצלחה לבדיקת המנהל!", onComplete)
     }
 
     private fun sendTelegramMessage(
         context: Context,
         markdownText: String,
         replyMarkup: JSONObject? = null,
+        successToast: String = "הבקשה נשלחה בהצלחה לבדיקה!",
         onComplete: ((Boolean) -> Unit)? = null
     ) {
         CoroutineScope(Dispatchers.IO).launch {
@@ -160,9 +265,9 @@ object TelegramNotifier {
 
             withContext(Dispatchers.Main) {
                 if (success) {
-                    Toast.makeText(context, "הבקשה נשלחה בהצלחה לבדיקה!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, successToast, Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(context, "שגיאה בשליחת הבקשה, נסה שנית.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "שגיאה בשליחה, נסה שנית.", Toast.LENGTH_SHORT).show()
                 }
                 onComplete?.invoke(success)
             }

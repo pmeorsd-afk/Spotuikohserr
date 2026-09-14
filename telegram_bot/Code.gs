@@ -1,18 +1,5 @@
 ﻿// ==============================================================================
-// SpotUI Kosher - Telegram Approval Bot Webhook (Google Apps Script)
-// ==============================================================================
-// הוראות התקנה תוך דקה:
-// 1. היכנס ל- https://script.google.com ולחץ על "New project" ("פרויקט חדש").
-// 2. מחק את מה שיש שם, הדבק את כל הקוד הזה ולחץ על סמל השמירה (Ctrl+S).
-// 3. לחץ על הכפתור הכחול למעלה "Deploy" -> "New deployment":
-//    - בחר סוג (גלגל שיניים): "Web app".
-//    - Description: "SpotUI Telegram Approver".
-//    - Execute as: "Me" (החשבון שלך).
-//    - Who has access: "Anyone" (חשוב מאוד - כדי שטלגרם יוכל לשלוח קריאות).
-// 4. לחץ "Deploy", תאשר הרשאות (Authorize access -> Advanced -> Go to project).
-// 5. העתק את ה-Web App URL שקיבלת (מתחיל ב- https://script.google.com/macros/s/...).
-// 6. הרץ בדפדפן (או שלח לי את ה-URL) את הקישור הבא להפעלת ה-Webhook:
-//    https://api.telegram.org/bot8800365444:AAH2W5JBJhrytzmthZMI1TlmzDTpNWnTlo4/setWebhook?url=YOUR_WEB_APP_URL
+// SpotUI Kosher - Telegram Approval & Report Bot Webhook (Google Apps Script)
 // ==============================================================================
 
 var CONFIG = {
@@ -41,7 +28,7 @@ function doPost(e) {
 }
 
 function doGet(e) {
-  return ContentService.createTextOutput("SpotUI Telegram Approver Bot is running!");
+  return ContentService.createTextOutput("SpotUI Telegram Approver & Report Bot is running!");
 }
 
 function handleCallbackQuery(query) {
@@ -60,15 +47,17 @@ function handleCallbackQuery(query) {
   // 1. בדיקת הרשאת מנהל בערוץ
   var isAdmin = checkIsAdmin(chatId, fromId);
   if (!isAdmin) {
-    answerCallbackQuery(queryId, "⛔ רק מנהלי הערוץ מורשים לאשר בקשות!", true);
+    answerCallbackQuery(queryId, "⛔ רק מנהלי הערוץ מורשים לאשר או להסיר בקשות!", true);
     return;
   }
 
-  // 2. פענוח הבקשה (אמן או שיר)
-  var isArtist = data.indexOf("appr:art") === 0;
-  var isTrack = data.indexOf("appr:trk") === 0;
+  // 2. פענוח הבקשה (אישור או הסרה)
+  var isApproveArtist = data.indexOf("appr:art") === 0;
+  var isApproveTrack  = data.indexOf("appr:trk") === 0;
+  var isRemoveArtist  = data.indexOf("rem:art") === 0;
+  var isRemoveTrack   = data.indexOf("rem:trk") === 0;
 
-  if (!isArtist && !isTrack) {
+  if (!isApproveArtist && !isApproveTrack && !isRemoveArtist && !isRemoveTrack) {
     answerCallbackQuery(queryId, "פעולה לא מוכרת", false);
     return;
   }
@@ -101,9 +90,11 @@ function handleCallbackQuery(query) {
 
   var whitelist = fileInfo.content;
   var currentSha = fileInfo.sha;
-  var itemAddedDescription = "";
+  var itemActionDescription = "";
+  var actionStatusText = "";
+  var userMention = from.username ? "@" + from.username : fromName;
 
-  if (isArtist) {
+  if (isApproveArtist) {
     if (!artistName && !spotifyId) {
       answerCallbackQuery(queryId, "❌ לא זוהה שם אמן בבקשה", true);
       return;
@@ -121,8 +112,10 @@ function handleCallbackQuery(query) {
         notes: "approved"
       });
     }
-    itemAddedDescription = "האמן " + (artistName || spotifyId);
-  } else if (isTrack) {
+    itemActionDescription = "האמן " + (artistName || spotifyId) + " נוסף לרשימת ההיתר";
+    actionStatusText = "✅ *אושר ונוסף לרשימה הכשרה ע\"י " + userMention + "!*";
+
+  } else if (isApproveTrack) {
     if (!trackTitle && !spotifyId) {
       answerCallbackQuery(queryId, "❌ לא זוהה שם שיר בבקשה", true);
       return;
@@ -142,11 +135,57 @@ function handleCallbackQuery(query) {
         artist: artistName
       });
     }
-    itemAddedDescription = "השיר " + (trackTitle || spotifyId);
+    itemActionDescription = "השיר " + (trackTitle || spotifyId) + " נוסף לרשימת ההיתר";
+    actionStatusText = "✅ *אושר ונוסף לרשימה הכשרה ע\"י " + userMention + "!*";
+
+  } else if (isRemoveArtist) {
+    if (!artistName && !spotifyId) {
+      answerCallbackQuery(queryId, "❌ לא זוהה שם אמן להסרה", true);
+      return;
+    }
+
+    whitelist.artists = whitelist.artists.filter(function(a) {
+      return !(spotifyId && a.id === spotifyId) &&
+             !(artistName && a.name.toLowerCase() === artistName.toLowerCase());
+    });
+
+    itemActionDescription = "האמן " + (artistName || spotifyId) + " הוסר מרשימת ההיתר";
+    actionStatusText = "❌ *הוסר מרשימת ההיתר ע\"י " + userMention + "!*";
+
+  } else if (isRemoveTrack) {
+    if (!trackTitle && !spotifyId) {
+      answerCallbackQuery(queryId, "❌ לא זוהה שם שיר להסרה", true);
+      return;
+    }
+
+    if (whitelist.tracks) {
+      whitelist.tracks = whitelist.tracks.filter(function(t) {
+        return !(spotifyId && t.id === spotifyId) &&
+               !(trackTitle && t.title.toLowerCase() === trackTitle.toLowerCase());
+      });
+    }
+
+    if (!whitelist.blocked_tracks) whitelist.blocked_tracks = [];
+    var alreadyBlocked = whitelist.blocked_tracks.some(function(b) {
+      return (spotifyId && b.id === spotifyId) ||
+             (trackTitle && b.title.toLowerCase() === trackTitle.toLowerCase());
+    });
+
+    if (!alreadyBlocked) {
+      whitelist.blocked_tracks.unshift({
+        id: spotifyId,
+        title: trackTitle,
+        artist: artistName
+      });
+    }
+
+    itemActionDescription = "השיר " + (trackTitle || spotifyId) + " נחסם והוסר מההיתר";
+    actionStatusText = "❌ *נחסם והוסר מההיתר ע\"י " + userMention + "!*";
   }
 
   // 4. שמירה ודחיפה חזרה ל-GitHub
-  var commitMessage = "Approve " + (artistName || trackTitle || spotifyId) + " via Telegram (@" + (from.username || fromName) + ")";
+  var actionPrefix = (isRemoveArtist || isRemoveTrack) ? "Remove " : "Approve ";
+  var commitMessage = actionPrefix + (artistName || trackTitle || spotifyId) + " via Telegram (@" + (from.username || fromName) + ")";
   var saveSuccess = saveGitHubWhitelist(whitelist, currentSha, commitMessage);
 
   if (!saveSuccess) {
@@ -154,9 +193,8 @@ function handleCallbackQuery(query) {
     return;
   }
 
-  // 5. עדכון ההודעה בטלגרם והסרת כפתור האישור
-  var userMention = from.username ? "@" + from.username : fromName;
-  var updatedText = text + "\n\n━━━━━━━━━━━━━━━━━━━━\n✅ *אושר ונוסף לרשימה הכשרה ע\"י " + userMention + "!*";
+  // 5. עדכון ההודעה בטלגרם והסרת כפתור הפעולה
+  var updatedText = text + "\n\n━━━━━━━━━━━━━━━━━━━━\n" + actionStatusText;
 
   // משאירים רק את כפתור הספוטיפיי אם קיים
   var newInlineKeyboard = [];
@@ -174,7 +212,7 @@ function handleCallbackQuery(query) {
   }
 
   editMessageText(chatId, msgId, updatedText, newInlineKeyboard);
-  answerCallbackQuery(queryId, "✅ " + itemAddedDescription + " נוסף בהצלחה ל-GitHub!", false);
+  answerCallbackQuery(queryId, "✅ " + itemActionDescription + " בהצלחה ב-GitHub!", false);
 }
 
 // ------------------------------------------------------------------------------

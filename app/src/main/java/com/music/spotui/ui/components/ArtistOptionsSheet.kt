@@ -18,6 +18,7 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -139,20 +140,37 @@ fun ArtistOptionsSheet(
                     )
                 }
             } else {
-                // Regular User mode: Suggest for Kosher Whitelist review via Telegram
-                ArtistMenuRow(
-                    icon = Icons.Default.CheckCircle,
-                    label = "הצע לבדיקה והיתר תמונות",
-                    iconTint = Color(0xFF1ED760),
-                    onClick = {
-                        TelegramNotifier.sendArtistApprovalRequest(
-                            context = context,
-                            artistName = artistName,
-                            artistId = artistId,
-                        )
-                        onDismiss()
-                    },
-                )
+                val isWhitelisted = com.music.spotui.util.KosherWhitelistManager.isArtistInWhitelist(artistId, artistName)
+                if (isWhitelisted) {
+                    ArtistMenuRow(
+                        icon = Icons.Default.Warning,
+                        label = "דיווח על היתר תמונות",
+                        iconTint = Color(0xFFFFA726),
+                        onClick = {
+                            TelegramNotifier.sendArtistReportRequest(
+                                context = context,
+                                artistName = artistName,
+                                artistId = artistId,
+                            )
+                            onDismiss()
+                        },
+                    )
+                } else {
+                    // Regular User mode: Suggest for Kosher Whitelist review via Telegram
+                    ArtistMenuRow(
+                        icon = Icons.Default.CheckCircle,
+                        label = "הצע לבדיקה והיתר תמונות",
+                        iconTint = Color(0xFF1ED760),
+                        onClick = {
+                            TelegramNotifier.sendArtistApprovalRequest(
+                                context = context,
+                                artistName = artistName,
+                                artistId = artistId,
+                            )
+                            onDismiss()
+                        },
+                    )
+                }
             }
 
             Spacer(modifier = Modifier.padding(8.dp))

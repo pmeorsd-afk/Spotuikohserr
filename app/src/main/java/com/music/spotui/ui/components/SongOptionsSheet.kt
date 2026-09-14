@@ -26,6 +26,7 @@ import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -284,14 +285,31 @@ fun SongOptionsSheet(
                     }
                 }
             } else {
-                SongMenuRow(Icons.Default.CheckCircle, "הצע לבדיקה והיתר תמונות") {
-                    TelegramNotifier.sendTrackApprovalRequest(
-                        context = context,
-                        trackTitle = song.title,
-                        artistName = song.singer,
-                        trackId = song.spotifyTrackId
-                    )
-                    onDismiss()
+                val isSongAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(song)
+                if (isSongAllowed) {
+                    SongMenuRow(
+                        icon = Icons.Default.Warning,
+                        label = "דיווח על היתר תמונות",
+                        iconTint = Color(0xFFFFA726)
+                    ) {
+                        TelegramNotifier.sendTrackReportRequest(
+                            context = context,
+                            trackTitle = song.title,
+                            artistName = song.singer,
+                            trackId = song.spotifyTrackId
+                        )
+                        onDismiss()
+                    }
+                } else {
+                    SongMenuRow(Icons.Default.CheckCircle, "הצע לבדיקה והיתר תמונות") {
+                        TelegramNotifier.sendTrackApprovalRequest(
+                            context = context,
+                            trackTitle = song.title,
+                            artistName = song.singer,
+                            trackId = song.spotifyTrackId
+                        )
+                        onDismiss()
+                    }
                 }
             }
             Spacer(modifier = Modifier.padding(8.dp))
