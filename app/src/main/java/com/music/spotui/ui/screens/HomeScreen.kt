@@ -93,6 +93,19 @@ fun HomeScreen(navController: NavController){
     val artists by homeViewModel.artists.collectAsState()
     val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
 
+    val lifecycleOwner = androidx.compose.ui.platform.LocalLifecycleOwner.current
+    androidx.compose.runtime.DisposableEffect(lifecycleOwner) {
+        val observer = androidx.lifecycle.LifecycleEventObserver { _, event ->
+            if (event == androidx.lifecycle.Lifecycle.Event.ON_RESUME) {
+                homeViewModel.refreshHome(force = false)
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(observer)
+        }
+    }
+
     Surface(
         modifier = Modifier
             .fillMaxSize()
@@ -152,7 +165,10 @@ private fun onHomeItemClick(
         is HomeItem.Playlist ->
             if (item.id.isNotBlank()) navController.navigate(playlistRoute(item.id, item.name))
             else navController.navigate(albumRoute(item.name))
-        is HomeItem.Track -> onPlaySong?.invoke(item.song)
+        is HomeItem.Track -> {
+            val albumOrTitle = item.song.album.ifBlank { item.song.title }
+            navController.navigate(albumRoute(albumOrTitle, item.song.singer))
+        }
         is HomeItem.LikedSongs -> navController.navigate(Routes.Liked.route)
     }
 }

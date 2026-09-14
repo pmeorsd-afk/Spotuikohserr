@@ -70,6 +70,12 @@ class HomeFeedEngine @Inject constructor(
         val albumsDeferred = async(Dispatchers.IO) { loadAlbums() }
         val artistsDeferred = async(Dispatchers.IO) { loadArtists() }
         val likedSongsDeferred = async(Dispatchers.IO) { loadLikedSongs() }
+        val mixesDeferred = async(Dispatchers.IO) { loadPlaylists("מיקס") }
+        val radioDeferred = async(Dispatchers.IO) { loadPlaylists("רדיו") }
+        val fallbackSongsDeferred = async(Dispatchers.IO) { loadTopSongs() }
+        val fallbackAlbumsDeferred = async(Dispatchers.IO) { loadSearchAlbums("2024") }
+        val fallbackPlaylistsDeferred = async(Dispatchers.IO) { loadPlaylists("להיטים") }
+        val fallbackArtistsDeferred = async(Dispatchers.IO) { loadSearchArtists("ישראלי") }
 
         val recentTracks = recentDeferred.await()
         val topArtists = topArtistsDeferred.await()
@@ -77,6 +83,12 @@ class HomeFeedEngine @Inject constructor(
         val albums = albumsDeferred.await()
         val artists = artistsDeferred.await()
         val likedSongs = likedSongsDeferred.await()
+        val fallbackMixes = mixesDeferred.await()
+        val fallbackRadio = radioDeferred.await()
+        val fallbackTopSongs = fallbackSongsDeferred.await()
+        val fallbackAlbums = fallbackAlbumsDeferred.await()
+        val fallbackPlaylists = fallbackPlaylistsDeferred.await()
+        val fallbackArtists = fallbackArtistsDeferred.await()
 
         // Seeds for recommendations based on recent plays
         val seedIds = recentTracks.mapNotNull { it.trackId.takeIf { id -> id.isNotBlank() } }.take(5)
@@ -88,18 +100,32 @@ class HomeFeedEngine @Inject constructor(
 
         // Phase 2: Personalization dependent on Top Artist
         val topArtist = topArtists.firstOrNull()
-        val similarContent = if (topArtist != null && topArtist.artistName.isNotBlank()) {
-            loadSimilarContent(topArtist.artistName)
+        val similarDeferred = if (topArtist != null && topArtist.artistName.isNotBlank()) {
+            async(Dispatchers.IO) { loadSimilarContent(topArtist.artistName) }
         } else null
+
+        val tastePlaylistsDeferred = if (topArtist != null && topArtist.artistName.isNotBlank()) {
+            async(Dispatchers.IO) { loadPlaylists("${topArtist.artistName} פלייליסט") }
+        } else null
+
+        val similarContent = similarDeferred?.await()
+        val tastePlaylists = tastePlaylistsDeferred?.await().orEmpty()
 
         assembleFeed(
             recentTracks = recentTracks,
             topArtist = topArtist,
             spotifyHome = spotifyHome,
             albums = albums,
+            fallbackAlbums = fallbackAlbums,
             artists = artists,
+            fallbackArtists = fallbackArtists,
             likedSongs = likedSongs,
             recommendations = recommendations,
+            fallbackTopSongs = fallbackTopSongs,
+            fallbackMixes = fallbackMixes,
+            fallbackRadio = fallbackRadio,
+            fallbackPlaylists = fallbackPlaylists,
+            tastePlaylists = tastePlaylists,
             similarContent = similarContent
         )
     }
@@ -109,61 +135,77 @@ class HomeFeedEngine @Inject constructor(
         topArtist: ArtistListenStat?,
         spotifyHome: HomeFeedModel?,
         albums: List<AlbumsModel>,
+        fallbackAlbums: List<HomeItem.Album>,
         artists: List<ArtistsModel>,
+        fallbackArtists: List<ArtistsModel>,
         likedSongs: List<SongsModel>,
         recommendations: List<SongsModel>,
+        fallbackTopSongs: List<SongsModel>,
+        fallbackMixes: List<HomeItem.Playlist>,
+        fallbackRadio: List<HomeItem.Playlist>,
+        fallbackPlaylists: List<HomeItem.Playlist>,
+        tastePlaylists: List<HomeItem.Playlist>,
         similarContent: SimilarArtistData?
     ): HomeFeedModel {
+        val rawSections = spotifyHome?.sections.orEmpty()
         val sections = mutableListOf<HomeSection>()
 
-        // 0. Top 2x2 Grid (4 items)
+        // ── Resolved Data Elements ──
+        val albumItems = if (albums.isNotEmpty()) {
+            albums.map { HomeItem.Album(name = it.name, imageUrl = it.coverUri, subtitle = it.artists, artists = it.artists) }
+        } else {
+            fallbackAlbums
+        }
+
+        val mixItems = rawSections.firstOrNull { s ->
+            val t = s.title.lowercase()
+            t.contains("מיקס") || t.contains("mix") || t.contains("daily")
+        }?.items?.takeIf { it.isNotEmpty() } ?: fallbackMixes
+
+        val radioItems = rawSections.firstOrNull { s ->
+            val t = s.title.lowercase()
+            t.contains("רדיו") || t.contains("radio") || t.contains("station")
+        }?.items?.takeIf { it.isNotEmpty() } ?: fallbackRadio
+
+        // ── 0. Top 2x2 Grid (Guaranteed EXACTLY 4 items) ──
         val topGrid = mutableListOf<HomeItem>()
         if (recentTracks.isNotEmpty()) {
             topGrid.addAll(recentTracks.take(4).map { HomeItem.Track(it.toSongModel()) })
         }
-        if (topGrid.size < 4 && albums.isNotEmpty()) {
+        if (topGrid.size < 4 && albumItems.isNotEmpty()) {
             val needed = 4 - topGrid.size
-            albums.take(needed).forEach { alb ->
-                topGrid.add(HomeItem.Album(name = alb.name, imageUrl = alb.coverUri, subtitle = alb.artists, artists = alb.artists))
-            }
+            topGrid.addAll(albumItems.take(needed))
+        }
+        if (topGrid.size < 4 && mixItems.isNotEmpty()) {
+            val needed = 4 - topGrid.size
+            topGrid.addAll(mixItems.take(needed))
         }
 
-        // Helper to locate sections from Spotify GQL home
-        val rawSections = spotifyHome?.sections.orEmpty()
-
-        // 1. המיקסים המובילים שלכם (Top Mixes)
-        val mixesSection = rawSections.firstOrNull { s ->
-            val titleLower = s.title.lowercase()
-            titleLower.contains("מיקס") || titleLower.contains("mix") || titleLower.contains("daily")
-        }
-        if (mixesSection != null && mixesSection.items.isNotEmpty()) {
+        // ── 1. המיקסים המובילים שלכם ──
+        if (mixItems.isNotEmpty()) {
             sections.add(
                 HomeSection(
                     id = HomeSectionIds.TOP_MIXES,
                     title = "המיקסים המובילים שלכם",
                     type = HomeSectionType.MIXES,
-                    items = mixesSection.items
+                    items = mixItems
                 )
             )
         }
 
-        // 2. רדיו פופולרי (Popular Radio)
-        val radioSection = rawSections.firstOrNull { s ->
-            val titleLower = s.title.lowercase()
-            titleLower.contains("רדיו") || titleLower.contains("radio") || titleLower.contains("station")
-        }
-        if (radioSection != null && radioSection.items.isNotEmpty()) {
+        // ── 2. רדיו פופולרי ──
+        if (radioItems.isNotEmpty()) {
             sections.add(
                 HomeSection(
                     id = HomeSectionIds.POPULAR_RADIO,
                     title = "רדיו פופולרי",
                     type = HomeSectionType.HORIZONTAL,
-                    items = radioSection.items
+                    items = radioItems
                 )
             )
         }
 
-        // 3. לאחרונה (Recently Played) with pinned Liked Songs card
+        // ── 3. לאחרונה (Liked Songs pinned first + recent tracks) ──
         val recentItems = mutableListOf<HomeItem>()
         recentItems.add(HomeItem.LikedSongs(count = likedSongs.size))
         recentTracks.forEach { stat ->
@@ -178,25 +220,24 @@ class HomeFeedEngine @Inject constructor(
             )
         )
 
-        // 4. מומלץ להיום (Recommended Today)
-        val recItems = if (recommendations.isNotEmpty()) {
-            recommendations.take(15).map { HomeItem.Track(it) }
+        // ── 4. מומלץ להיום (MUST BE TRACKS ONLY - NO ARTISTS!) ──
+        val recSongs = if (recommendations.isNotEmpty()) {
+            recommendations
         } else {
-            rawSections.firstOrNull { it.title.isNotBlank() && it.id != HomeSectionIds.TOP_MIXES && it.id != HomeSectionIds.POPULAR_RADIO }
-                ?.items?.take(10) ?: emptyList()
+            fallbackTopSongs
         }
-        if (recItems.isNotEmpty()) {
+        if (recSongs.isNotEmpty()) {
             sections.add(
                 HomeSection(
                     id = HomeSectionIds.RECOMMENDED_TODAY,
                     title = "מומלץ להיום",
                     type = HomeSectionType.HORIZONTAL,
-                    items = recItems
+                    items = recSongs.take(15).map { HomeItem.Track(it) }
                 )
             )
         }
 
-        // 5. אמנים נוספים כמו [שם האמן המוביל] (Similar Artists)
+        // ── 5. אמנים נוספים כמו [שם האמן המוביל] (ONLY ARTISTS!) ──
         if (topArtist != null && similarContent != null && similarContent.items.isNotEmpty()) {
             sections.add(
                 HomeSection(
@@ -204,84 +245,79 @@ class HomeFeedEngine @Inject constructor(
                     title = topArtist.artistName,
                     subtitle = "אמנים נוספים כמו",
                     headerArtist = similarContent.topArtistModel,
-                    type = HomeSectionType.HORIZONTAL,
-                    items = similarContent.items
+                    type = HomeSectionType.ARTISTS,
+                    items = similarContent.items // ONLY artists!
                 )
             )
         }
 
-        // 6. על סמך היסטוריית ההאזנה שלכם בזמן האחרון (Based on recent history)
-        val historySection = rawSections.firstOrNull { s ->
-            val titleLower = s.title.lowercase()
-            (titleLower.contains("היסטוריית") || titleLower.contains("האזנה") || titleLower.contains("recent") || titleLower.contains("jump back") || titleLower.contains("חזרה")) &&
-            s.id != HomeSectionIds.TOP_MIXES && s.id != HomeSectionIds.POPULAR_RADIO
+        // ── 6. על סמך היסטוריית ההאזנה שלכם בזמן האחרון ──
+        val historyItems = if (tastePlaylists.isNotEmpty()) {
+            tastePlaylists
+        } else {
+            val fromSpotify = rawSections.firstOrNull { s ->
+                val t = s.title.lowercase()
+                (t.contains("היסטוריית") || t.contains("האזנה") || t.contains("recent") || t.contains("jump back") || t.contains("חזרה")) &&
+                s.id != HomeSectionIds.TOP_MIXES && s.id != HomeSectionIds.POPULAR_RADIO
+            }?.items
+            fromSpotify?.takeIf { it.isNotEmpty() } ?: fallbackPlaylists
         }
-        if (historySection != null && historySection.items.isNotEmpty()) {
+        if (historyItems.isNotEmpty()) {
             sections.add(
                 HomeSection(
                     id = HomeSectionIds.HISTORY_BASED,
                     title = "על סמך היסטוריית ההאזנה שלכם בזמן האחרון",
                     type = HomeSectionType.HORIZONTAL,
-                    items = historySection.items
+                    items = historyItems
                 )
             )
-        } else {
-            val otherSpotifySection = rawSections.firstOrNull { s ->
-                s.title.isNotBlank() &&
-                s != mixesSection &&
-                s != radioSection &&
-                s.items.isNotEmpty()
-            }
-            if (otherSpotifySection != null) {
-                sections.add(
-                    HomeSection(
-                        id = HomeSectionIds.HISTORY_BASED,
-                        title = otherSpotifySection.title,
-                        type = HomeSectionType.HORIZONTAL,
-                        items = otherSpotifySection.items
-                    )
-                )
-            }
         }
 
-        // 7. אלבומים וסינגלים פופולריים (Popular Albums & Singles)
-        if (albums.isNotEmpty()) {
+        // ── 7. אלבומים וסינגלים פופולריים ──
+        if (albumItems.isNotEmpty()) {
             sections.add(
                 HomeSection(
                     id = HomeSectionIds.POPULAR_ALBUMS,
                     title = "אלבומים וסינגלים פופולריים",
                     type = HomeSectionType.ALBUMS,
-                    items = albums.map {
-                        HomeItem.Album(name = it.name, imageUrl = it.coverUri, subtitle = it.artists, artists = it.artists)
-                    }
+                    items = albumItems
                 )
             )
         }
 
-        // 8. אמנים פופולריים (Popular Artists - circular cards)
-        if (artists.isNotEmpty()) {
+        // ── 8. אמנים פופולריים (Always Hebrew title + circular cards) ──
+        val artistItems = if (artists.isNotEmpty()) {
+            artists.map { HomeItem.Artist(name = it.name, imageUrl = it.coverUri, id = it.id) }
+        } else {
+            val fromSpotify = rawSections.firstOrNull { s ->
+                val t = s.title.lowercase()
+                t.contains("popular artists") || t.contains("אמנים") || t.contains("favorite artists")
+            }?.items?.filterIsInstance<HomeItem.Artist>()
+            fromSpotify?.takeIf { it.isNotEmpty() } ?: fallbackArtists.map {
+                HomeItem.Artist(name = it.name, imageUrl = it.coverUri, id = it.id)
+            }
+        }
+        if (artistItems.isNotEmpty()) {
             sections.add(
                 HomeSection(
                     id = HomeSectionIds.POPULAR_ARTISTS,
                     title = "אמנים פופולריים",
                     type = HomeSectionType.ARTISTS,
-                    items = artists.map {
-                        HomeItem.Artist(name = it.name, imageUrl = it.coverUri, id = it.id)
-                    }
+                    items = artistItems
                 )
             )
         }
 
         return HomeFeedModel(
             greeting = spotifyHome?.greeting?.ifBlank { "שלום" } ?: "שלום",
-            topGrid = topGrid,
+            topGrid = topGrid.take(4),
             sections = sections
         )
     }
 
     private data class SimilarArtistData(
         val topArtistModel: ArtistsModel?,
-        val items: List<HomeItem>
+        val items: List<HomeItem.Artist>
     )
 
     private suspend fun loadSimilarContent(artistName: String): SimilarArtistData {
@@ -298,20 +334,73 @@ class HomeFeedEngine @Inject constructor(
                     id = overview.id
                 )
 
-                val items = mutableListOf<HomeItem>()
-                overview.relatedArtists.take(4).forEach { rel ->
-                    if (rel.name.isNotBlank()) {
-                        items.add(HomeItem.Artist(name = rel.name, imageUrl = rel.coverUri, id = rel.id))
-                    }
-                }
-                overview.topTracks.take(8).forEach { trackUi ->
-                    items.add(HomeItem.Track(trackUi.song))
-                }
+                // Add ONLY similar artists (no topTracks!)
+                val items = overview.relatedArtists.take(12)
+                    .filter { it.name.isNotBlank() }
+                    .map { HomeItem.Artist(name = it.name, imageUrl = it.coverUri, id = it.id) }
 
                 SimilarArtistData(topArtistModel, items)
             } ?: SimilarArtistData(null, emptyList())
         } catch (e: Exception) {
             SimilarArtistData(null, emptyList())
+        }
+    }
+
+    private suspend fun loadPlaylists(query: String): List<HomeItem.Playlist> {
+        return try {
+            withTimeoutOrNull(5000L) {
+                val resp = repository.provideCategoryPlaylists(query)
+                    .filter { it !is Response.Loading }
+                    .firstOrNull()
+                val entries = (resp as? Response.Success)?.data.orEmpty()
+                entries.map {
+                    HomeItem.Playlist(name = it.name, imageUrl = it.coverUri, subtitle = it.subtitle, id = it.spotifyId)
+                }
+            } ?: emptyList()
+        } catch (e: Exception) {
+            emptyList()
+        }
+    }
+
+    private suspend fun loadSearchAlbums(query: String): List<HomeItem.Album> {
+        return try {
+            withTimeoutOrNull(5000L) {
+                val resp = repository.searchEverything(query)
+                    .filter { it !is Response.Loading }
+                    .firstOrNull()
+                val albums = (resp as? Response.Success)?.data?.albums.orEmpty()
+                albums.map {
+                    HomeItem.Album(name = it.name, imageUrl = it.coverUri, subtitle = it.artists, artists = it.artists)
+                }
+            } ?: emptyList()
+        } catch (e: Exception) {
+            emptyList()
+        }
+    }
+
+    private suspend fun loadTopSongs(): List<SongsModel> {
+        return try {
+            withTimeoutOrNull(5000L) {
+                val resp = repository.provideSongs()
+                    .filter { it !is Response.Loading }
+                    .firstOrNull()
+                (resp as? Response.Success)?.data.orEmpty()
+            } ?: emptyList()
+        } catch (e: Exception) {
+            emptyList()
+        }
+    }
+
+    private suspend fun loadSearchArtists(query: String): List<ArtistsModel> {
+        return try {
+            withTimeoutOrNull(5000L) {
+                val resp = repository.searchEverything(query)
+                    .filter { it !is Response.Loading }
+                    .firstOrNull()
+                (resp as? Response.Success)?.data?.artists.orEmpty()
+            } ?: emptyList()
+        } catch (e: Exception) {
+            emptyList()
         }
     }
 
