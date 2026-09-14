@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 72,
-  "last_updated": "2026-09-14T19:33:38.780Z",
+  "version": 73,
+  "last_updated": "2026-09-14T19:33:49.146Z",
   "artists": [
+    {
+      "id": "2HTxp63G47uFSTqQ5urmbU",
+      "canonical_name": "שמואל",
+      "aliases": [
+        "שמואל"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:33:49.146Z"
+    },
     {
       "id": "6Odeor35vCn3mr7VIiqIiq",
       "canonical_name": "ותן חלקנו",
