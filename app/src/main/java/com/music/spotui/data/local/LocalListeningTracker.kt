@@ -58,6 +58,8 @@ class LocalListeningTracker @Inject constructor(
     private val prefs: SharedPreferences =
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
+    val revision = kotlinx.coroutines.flow.MutableStateFlow(0)
+
     @Volatile
     private var currentSessionKey: String = ""
 
@@ -119,6 +121,7 @@ class LocalListeningTracker @Inject constructor(
         updateArtists(song = song, now = now, completion = false)
 
         playRecordedForCurrentSession = true
+        revision.value++
     }
 
     /**
@@ -155,6 +158,7 @@ class LocalListeningTracker @Inject constructor(
         updateArtists(song = song, now = now, completion = true)
 
         completionRecordedForCurrentSession = true
+        revision.value++
     }
 
     /**

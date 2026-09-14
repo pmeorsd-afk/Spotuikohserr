@@ -116,6 +116,9 @@ fun MainBottomNavigation(navController: NavHostController, bottomBarState: Mutab
                                     )
                                 },
                                 onClick = {
+                                    if (item == Routes.Home) {
+                                        com.music.spotui.ui.viewmodel.HomeRefreshSignal.trigger()
+                                    }
                                     navController.navigate(item.route) {
                                         navController.graph.startDestinationRoute?.let {
                                             popUpTo(item.route)

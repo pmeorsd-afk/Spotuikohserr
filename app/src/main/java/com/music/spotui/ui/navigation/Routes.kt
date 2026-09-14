@@ -62,7 +62,7 @@ fun artistRoute(name: String, id: String = ""): String {
  * different artists resolve to the right one. The artist value is URL-encoded.
  */
 fun albumRoute(name: String, artist: String = ""): String {
-    val base = "${Routes.Album.route}/$name"
+    val base = "${Routes.Album.route}/${android.net.Uri.encode(name)}"
     return if (artist.isBlank()) base
     else "$base?artist=${android.net.Uri.encode(artist)}"
 }

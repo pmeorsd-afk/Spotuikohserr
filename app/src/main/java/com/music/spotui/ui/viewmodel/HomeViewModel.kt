@@ -12,13 +12,16 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import com.music.spotui.data.local.LocalListeningTracker
+import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val repository: AppRepository,
-    private val homeFeedEngine: HomeFeedEngine
+    private val homeFeedEngine: HomeFeedEngine,
+    private val listeningTracker: LocalListeningTracker
 ) : ViewModel() {
 
     private val _home : MutableStateFlow<Response<HomeFeedModel>> = MutableStateFlow(Response.Loading())
@@ -32,6 +35,18 @@ class HomeViewModel @Inject constructor(
 
     init {
         refreshHome()
+        viewModelScope.launch {
+            listeningTracker.revision.drop(1).collect {
+                homeFeedEngine.invalidate()
+                refreshHome(force = true)
+            }
+        }
+        viewModelScope.launch {
+            HomeRefreshSignal.events.collect {
+                homeFeedEngine.invalidate()
+                refreshHome(force = true)
+            }
+        }
     }
 
     fun refreshHome(force: Boolean = false) = viewModelScope.launch(Dispatchers.IO) {
