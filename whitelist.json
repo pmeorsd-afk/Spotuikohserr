@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 64,
-  "last_updated": "2026-09-14T19:28:01.610Z",
+  "version": 65,
+  "last_updated": "2026-09-14T19:29:59.755Z",
   "artists": [
     {
       "id": "1WWc6zXfTwpakU8Ds5yS1G",
@@ -390,6 +390,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6GgxeHmuC1CSS9OM2kCAGX",
+      "title": "רבי נחמן אמר",
+      "artist": "ששון איפרם שאולוב, Zehavi",
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:29:59.755Z"
+    },
     {
       "id": "7pdniD9t65ZEuULdrpm7Sn",
       "title": "כולי תפילה",
