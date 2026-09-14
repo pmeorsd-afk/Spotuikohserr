@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 96,
-  "last_updated": "2026-09-14T19:41:24.615Z",
+  "version": 97,
+  "last_updated": "2026-09-14T19:41:26.996Z",
   "artists": [
+    {
+      "id": "3CZPOR06sMMvYVWnQX171K",
+      "canonical_name": "Zion Golan",
+      "aliases": [
+        "Zion Golan"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:41:26.996Z"
+    },
     {
       "id": "3EQL62TTyZjlpKDr4k3vXJ",
       "canonical_name": "Youval Taieb",
