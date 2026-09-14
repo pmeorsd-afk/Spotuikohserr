@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 60,
-  "last_updated": "2026-09-14T19:27:18.938Z",
+  "version": 61,
+  "last_updated": "2026-09-14T19:27:26.646Z",
   "artists": [
+    {
+      "id": "0NHS8TjVHF6yeZoGhELqXJ",
+      "canonical_name": "שייע גרוס",
+      "aliases": [
+        "שייע גרוס"
+      ],
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-14T19:27:26.646Z"
+    },
     {
       "id": "0k3ewAJBunYv0uDX7U95Yz",
       "canonical_name": "Boruch Sholom",
