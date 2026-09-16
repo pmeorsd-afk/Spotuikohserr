@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 129,
-  "last_updated": "2026-09-16T16:57:44.935Z",
+  "version": 130,
+  "last_updated": "2026-09-16T16:58:04.320Z",
   "artists": [
     {
       "id": "220BgM72mxm5sR2yGJSrN8",
@@ -567,7 +567,7 @@
       "artist": "נחמן סבג, ניסים סבג",
       "status": "approved",
       "notes": "approved via telegram",
-      "updated_at": "2026-09-16T16:57:44.935Z"
+      "updated_at": "2026-09-16T16:58:04.320Z"
     },
     {
       "id": "6xXFcCysU0Vnxeprp6oQhj",
