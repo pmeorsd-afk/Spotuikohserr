@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 117,
-  "last_updated": "2026-09-14T19:46:22.166Z",
+  "version": 118,
+  "last_updated": "2026-09-16T16:55:45.648Z",
   "artists": [
     {
       "id": "220BgM72mxm5sR2yGJSrN8",
@@ -561,6 +561,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6xXFcCysU0Vnxeprp6oQhj",
+      "title": "הריני מקשר",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-16T16:55:45.648Z"
+    },
     {
       "id": "0qgVN2SlWEBfxFZLqC0TXg",
       "title": "לכה דודי",
