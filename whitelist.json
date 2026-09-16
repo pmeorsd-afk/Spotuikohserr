@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 135,
-  "last_updated": "2026-09-16T16:58:34.518Z",
+  "version": 136,
+  "last_updated": "2026-09-16T16:58:38.273Z",
   "artists": [
     {
       "id": "220BgM72mxm5sR2yGJSrN8",
@@ -561,6 +561,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4YhIleZHWSFNUI3zVj1VQx",
+      "title": "יש עניין שנתהפך",
+      "artist": "ניסים סבג, נחמן סבג",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-16T16:58:38.273Z"
+    },
     {
       "id": "28ypBxW5OMnDbiTfDQGRX6",
       "title": "מחרוזת רבי נחמן",
