@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 124,
-  "last_updated": "2026-09-16T16:57:13.096Z",
+  "version": 125,
+  "last_updated": "2026-09-16T16:57:16.345Z",
   "artists": [
     {
       "id": "220BgM72mxm5sR2yGJSrN8",
@@ -561,6 +561,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "28ypBxW5OMnDbiTfDQGRX6",
+      "title": "מחרוזת רבי נחמן",
+      "artist": "נחמן סבג, ניסים סבג",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-16T16:57:16.345Z"
+    },
     {
       "id": "6xXFcCysU0Vnxeprp6oQhj",
       "title": "הריני מקשר",
