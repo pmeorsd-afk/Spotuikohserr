@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 120,
-  "last_updated": "2026-09-16T16:55:55.907Z",
+  "version": 121,
+  "last_updated": "2026-09-16T16:56:04.854Z",
   "artists": [
     {
       "id": "220BgM72mxm5sR2yGJSrN8",
@@ -567,7 +567,7 @@
       "artist": "Osher Cohen",
       "status": "approved",
       "notes": "approved via telegram",
-      "updated_at": "2026-09-16T16:55:55.907Z"
+      "updated_at": "2026-09-16T16:56:04.854Z"
     },
     {
       "id": "0qgVN2SlWEBfxFZLqC0TXg",
