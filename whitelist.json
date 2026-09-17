@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 173,
-  "last_updated": "2026-09-17T19:18:10.399Z",
+  "version": 174,
+  "last_updated": "2026-09-17T19:19:40.245Z",
   "artists": [
     {
       "id": "5muJpQsbEN7NzhHyFpbjnM",
@@ -586,9 +586,9 @@
       "id": "4A5lRH29TyKxllsl94BWex",
       "title": "סדר העבודה",
       "artist": "Ishay Ribo",
-      "status": "blocked",
-      "notes": "blocked via telegram",
-      "updated_at": "2026-09-17T19:16:19.212Z"
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-17T19:19:40.245Z"
     },
     {
       "id": "4YhIleZHWSFNUI3zVj1VQx",
