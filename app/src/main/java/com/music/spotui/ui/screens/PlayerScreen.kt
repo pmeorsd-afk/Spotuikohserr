@@ -98,6 +98,7 @@ import com.music.spotui.ui.components.GlideImage
 import com.music.spotui.R
 import com.music.spotui.data.api.Response
 import com.music.spotui.data.entity.SongsModel
+import com.music.spotui.data.preferences.addLikedSong
 import com.music.spotui.data.preferences.addLikedSongId
 import com.music.spotui.data.preferences.alternativeStreamKey
 import com.music.spotui.data.preferences.clearAlternativeStream
@@ -105,6 +106,7 @@ import com.music.spotui.data.preferences.getAlternativeStream
 import com.music.spotui.data.preferences.getLikedSongIds
 import com.music.spotui.data.preferences.getSongsByIds
 import com.music.spotui.data.preferences.isSongLiked
+import com.music.spotui.data.preferences.removeLikedSong
 import com.music.spotui.data.preferences.removeLikedSongId
 import com.music.spotui.data.preferences.setLocalAlternativeStream
 import com.music.spotui.data.preferences.setYouTubeAlternativeStream
@@ -208,6 +210,20 @@ fun PlayerScreen(navController: NavController) {
     // search results, liked songs) — stored when the song was tapped. Falling back
     // to the global top-tracks feed used to crash / be empty (it's rate-limited).
     val queueSongs = playerViewModel.queue.value
+
+    LaunchedEffect(songId, queueSongs) {
+        val current = queueSongs.firstOrNull { it.id == songId }
+        isLiked.value = if (current != null) {
+            isSongLiked(context, current)
+        } else {
+            isSongLiked(
+                context,
+                songId = songId.toString(),
+                title = songTitle,
+                singer = songSinger
+            )
+        }
+    }
 
     // ── Now-playing swipe pager ──
     // Index of the playing track in the queue (fallback to 0 so the pager is valid
@@ -632,18 +648,19 @@ fun PlayerScreen(navController: NavController) {
             ){
                 // Reads each 300ms tick (songProgress recomposition) so it reflects
                 // the current engine — Spotify vs Lossless (SpotiFLAC) vs YouTube.
+                val currentTrack = queueSongs.firstOrNull { it.id == songId }
                 PlayerInfo(
                     songTitle, songSinger, songId, context, isLiked,
                     source = SongPlayer.currentSource,
                     quality = SongPlayer.currentQuality,
                     onArtistClick = {
-                        val track = queueSongs.firstOrNull { it.id == songId }
-                        playerViewModel.goToArtist(track?.spotifyTrackId.orEmpty(), songSinger) { route ->
+                        playerViewModel.goToArtist(currentTrack?.spotifyTrackId.orEmpty(), songSinger) { route ->
                             navController.navigate(route)
                         }
                     },
-                    spotifyTrackId = queueSongs.firstOrNull { it.id == songId }?.spotifyTrackId.orEmpty(),
+                    spotifyTrackId = currentTrack?.spotifyTrackId.orEmpty(),
                     onShowSavedIn = { showSavedIn = true },
+                    song = currentTrack,
                 )
 
                 // Smooth scrubbing: while dragging, the thumb follows the finger
@@ -829,6 +846,7 @@ fun PlayerInfo(
     onArtistClick: (() -> Unit)? = null,
     spotifyTrackId: String = "",
     onShowSavedIn: (() -> Unit)? = null,
+    song: SongsModel? = null,
 ) {
 
     var snackbarMessage by remember {
@@ -869,54 +887,72 @@ fun PlayerInfo(
 //                            contentScale = ContentScale.Crop,
 //                            contentDescription = ""
 //                        )
-            Column {
+            Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    modifier = Modifier.basicMarquee(iterations = Int.MAX_VALUE),
                     text = songTitle,
                     color = Color.White,
-                    fontSize = 19.sp,
-                    fontWeight = FontWeight.Medium,
-                    maxLines = 1,
-                    softWrap = false,
-                )
-                Text(
-                    text = songSinger,
-                    color = Color.Gray,
-                    fontSize = 13.sp,
-                    fontWeight = FontWeight.Medium,
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
                     maxLines = 1,
                     overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
-                    modifier = if (onArtistClick != null) Modifier.clickable(
-                        interactionSource = remember { MutableInteractionSource() },
-                        indication = null,
-                    ) { onArtistClick() } else Modifier,
+                    modifier = Modifier.basicMarquee()
                 )
-                if (source.isNotBlank()) {
-                    // Source badge: green = real Spotify; other colors = not Spotify
-                    // (Lossless via SpotiFLAC's Tidal/Qobuz/Amazon mirrors, or YouTube).
-                    val badgeColor = when {
-                        source == "Spotify" -> Color(0xFF1ED760)
-                        source.startsWith("Lossless") -> Color(0xFFFFC862)
-                        source == "Downloaded" -> Color(0xFF9C9C9C)
-                        else -> Color(0xFFFF6B6B)
-                    }
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier.padding(top = 3.dp),
-                    ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(
+                        text = songSinger,
+                        color = Color.Gray,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Medium,
+                        maxLines = 1,
+                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
+                        modifier = Modifier
+                            .weight(1f, fill = false)
+                            .then(
+                                if (onArtistClick != null) Modifier.clickable(
+                                    interactionSource = remember { MutableInteractionSource() },
+                                    indication = null,
+                                    onClick = onArtistClick
+                                ) else Modifier
+                            )
+                    )
+                    // Badges: Lossless FLAC vs Hi-Res vs Lossy (YouTube)
+                    if (source.isNotBlank()) {
+                        val isLossless = source.startsWith("Lossless")
+                        val isHiRes = quality.contains("24-bit", ignoreCase = true)
+                        val badgeColor = when {
+                            isHiRes -> Color(0xFFFFD700)      // Gold for 24-bit Hi-Res
+                            isLossless -> Color(AppPalette.toArgb()) // Green for 16-bit FLAC
+                            else -> Color.Gray
+                        }
+                        val badgeText = when {
+                            isHiRes -> "HI-RES"
+                            isLossless -> "LOSSLESS"
+                            else -> quality.ifBlank { "HQ" }
+                        }
                         Box(
+                            contentAlignment = Alignment.Center,
                             modifier = Modifier
-                                .size(7.dp)
-                                .clip(CircleShape)
-                                .background(badgeColor)
-                        )
+                                .padding(start = 8.dp)
+                                .clip(RoundedCornerShape(3.dp))
+                                .background(badgeColor.copy(alpha = 0.2f))
+                                .padding(horizontal = 5.dp, vertical = 1.dp)
+                        ) {
+                            Text(
+                                text = badgeText,
+                                color = badgeColor,
+                                fontSize = 9.sp,
+                                fontWeight = FontWeight.Bold,
+                                letterSpacing = 0.5.sp
+                            )
+                        }
+                    }
+                    if (quality.isNotBlank() && !quality.contains("24-bit", ignoreCase = true)) {
                         Text(
-                            // Don't advertise the fallback engine — just "Streamed".
-                            // Append the stream quality (codec/bitrate or FLAC depth)
-                            // so the user can see what they're actually hearing.
-                            text = (if (source == "YouTube") "Streamed" else source) +
-                                (if (quality.isNotBlank()) " • $quality" else ""),
-                            color = badgeColor,
+                            text = quality,
+                            color = Color.DarkGray,
                             fontSize = 11.sp,
                             fontWeight = FontWeight.SemiBold,
                             maxLines = 1,
@@ -941,17 +977,29 @@ fun PlayerInfo(
                         onShowSavedIn()
                         return@clickable
                     }
+                    val targetSong = song ?: SongsModel(
+                        id = songId,
+                        title = songTitle,
+                        album = "",
+                        singer = songSinger,
+                        coverUri = "",
+                        url = if (spotifyTrackId.isNotBlank()) "spotify:track:$spotifyTrackId" else "youtube:$songTitle $songSinger",
+                        spotifyTrackId = spotifyTrackId,
+                        durationMs = SongPlayer.getDuration().toInt().coerceAtLeast(0)
+                    )
                     if (isLiked.value) {
-                        removeLikedSongId(context, songId.toString())
+                        removeLikedSong(context, targetSong)
                         snackbarMessage = "Removed from Liked Songs"
                     } else {
-                        addLikedSongId(context, songId.toString())
+                        addLikedSong(context, targetSong)
                         snackbarMessage = "Added to Liked Songs"
                     }
                     snackbarVisible = true
-                    isLiked.value = isSongLiked(context, songId.toString())
-                    // Mirror the like to the real Spotify account.
-                    com.music.spotui.data.api.SpotifySync.setTrackSaved(context, spotifyTrackId, isLiked.value)
+                    isLiked.value = isSongLiked(context, targetSong)
+                    // Mirror the like to the real Spotify account if Spotify ID exists.
+                    if (targetSong.spotifyTrackId.isNotBlank()) {
+                        com.music.spotui.data.api.SpotifySync.setTrackSaved(context, targetSong.spotifyTrackId, isLiked.value)
+                    }
                 },
             painter = if (isLiked.value){
                 painterResource(id = R.drawable.added)
@@ -1557,15 +1605,26 @@ fun PlayerOptionsSheet(
                     iconTint = if (isLiked.value) Color(AppPalette.toArgb()) else Color.White,
                     label = if (isLiked.value) "Remove from Liked Songs" else "Add to Liked Songs"
                 ) {
+                    val targetSong = currentSong ?: SongsModel(
+                        id = songId,
+                        title = title,
+                        album = album,
+                        singer = singer,
+                        coverUri = cover,
+                        url = "youtube:$title $singer",
+                        durationMs = SongPlayer.getDuration().toInt().coerceAtLeast(0)
+                    )
                     if (isLiked.value) {
-                        removeLikedSongId(context, songId.toString())
+                        removeLikedSong(context, targetSong)
                     } else {
-                        addLikedSongId(context, songId.toString())
+                        addLikedSong(context, targetSong)
                     }
-                    isLiked.value = isSongLiked(context, songId.toString())
-                    // Mirror the like to the real Spotify account.
-                    com.music.spotui.data.api.SpotifySync.setTrackSaved(
-                        context, currentSong?.spotifyTrackId.orEmpty(), isLiked.value)
+                    isLiked.value = isSongLiked(context, targetSong)
+                    // Mirror the like to the real Spotify account if Spotify ID exists.
+                    if (targetSong.spotifyTrackId.isNotBlank()) {
+                        com.music.spotui.data.api.SpotifySync.setTrackSaved(
+                            context, targetSong.spotifyTrackId, isLiked.value)
+                    }
                     onDismiss()
                 }
                 PlayerMenuRow(

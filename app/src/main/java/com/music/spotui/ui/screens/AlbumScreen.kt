@@ -66,10 +66,12 @@ import com.music.spotui.data.api.Response
 import com.music.spotui.data.entity.AlbumsModel
 import com.music.spotui.data.entity.SongsModel
 import com.music.spotui.data.preferences.addLikedAlbumId
+import com.music.spotui.data.preferences.addLikedSong
 import com.music.spotui.data.preferences.addLikedSongId
 import com.music.spotui.data.preferences.isAlbumLiked
 import com.music.spotui.data.preferences.isSongLiked
 import com.music.spotui.data.preferences.removeLikedAlbumId
+import com.music.spotui.data.preferences.removeLikedSong
 import com.music.spotui.data.preferences.removeLikedSongId
 import com.music.spotui.di.Palette
 import com.music.spotui.di.SongPlayer
@@ -502,11 +504,11 @@ fun SumUpAlbumScreen(
 
 
                     var isLiked by remember {
-                        mutableStateOf(isSongLiked(context, albumSongs[song].id.toString()))
+                        mutableStateOf(isSongLiked(context, albumSongs[song]))
                     }
                     val likeState = albumViewModel.likeState.value
                     LaunchedEffect(likeState){
-                        isLiked = isSongLiked(context, albumSongs[song].id.toString())
+                        isLiked = isSongLiked(context, albumSongs[song])
                     }
                     val songId = albumSongs[song].id
 
@@ -576,14 +578,20 @@ fun SumUpAlbumScreen(
                                     interactionSource = remember { MutableInteractionSource() },
                                     indication = null
                                 ) {
+                                    val currentTrack = albumSongs[song]
                                     if (isLiked) {
-                                        removeLikedSongId(context, songId.toString())
+                                        removeLikedSong(context, currentTrack)
+                                        if (currentTrack.spotifyTrackId.isNotBlank()) {
+                                            com.music.spotui.data.api.SpotifySync.setTrackSaved(context, currentTrack.spotifyTrackId, false)
+                                        }
                                     } else {
-                                        addLikedSongId(context, songId.toString())
+                                        addLikedSong(context, currentTrack)
+                                        if (currentTrack.spotifyTrackId.isNotBlank()) {
+                                            com.music.spotui.data.api.SpotifySync.setTrackSaved(context, currentTrack.spotifyTrackId, true)
+                                        }
                                     }
-                                    isLiked = isSongLiked(context, songId.toString())
+                                    isLiked = isSongLiked(context, currentTrack)
                                     albumViewModel.updateLikeState(!albumViewModel.likeState.value)
-
                                 },
                             painter = if (isLiked){
                                 painterResource(id = R.drawable.added)

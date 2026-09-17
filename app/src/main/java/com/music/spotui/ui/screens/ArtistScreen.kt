@@ -63,8 +63,10 @@ import com.music.spotui.data.entity.AlbumsModel
 import com.music.spotui.data.entity.ArtistOverviewModel
 import com.music.spotui.data.entity.ArtistTrackUi
 import com.music.spotui.data.entity.ArtistsModel
+import com.music.spotui.data.preferences.addLikedSong
 import com.music.spotui.data.preferences.addLikedSongId
 import com.music.spotui.data.preferences.isSongLiked
+import com.music.spotui.data.preferences.removeLikedSong
 import com.music.spotui.data.preferences.removeLikedSongId
 import com.music.spotui.di.SongPlayer
 import com.music.spotui.ui.components.Loader
@@ -475,9 +477,9 @@ private fun PopularTrackRow(
     val isSongAllowed = remember(whitelistVersion, song) {
         com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(song)
     }
-    var isLiked by remember { mutableStateOf(isSongLiked(context, song.id.toString())) }
+    var isLiked by remember { mutableStateOf(isSongLiked(context, song)) }
     val likeState = artistViewModel.likeState.value
-    LaunchedEffect(likeState) { isLiked = isSongLiked(context, song.id.toString()) }
+    LaunchedEffect(likeState) { isLiked = isSongLiked(context, song) }
     val titleColor =
         if (song.id == artistViewModel.currentSongId.value) Color(AppPalette.toArgb()) else Color.White
 
@@ -527,9 +529,18 @@ private fun PopularTrackRow(
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null,
                 ) {
-                    if (isLiked) removeLikedSongId(context, song.id.toString())
-                    else addLikedSongId(context, song.id.toString())
-                    isLiked = isSongLiked(context, song.id.toString())
+                    if (isLiked) {
+                        removeLikedSong(context, song)
+                        if (song.spotifyTrackId.isNotBlank()) {
+                            com.music.spotui.data.api.SpotifySync.setTrackSaved(context, song.spotifyTrackId, false)
+                        }
+                    } else {
+                        addLikedSong(context, song)
+                        if (song.spotifyTrackId.isNotBlank()) {
+                            com.music.spotui.data.api.SpotifySync.setTrackSaved(context, song.spotifyTrackId, true)
+                        }
+                    }
+                    isLiked = isSongLiked(context, song)
                     artistViewModel.updateLikeState(!artistViewModel.likeState.value)
                 },
         )

@@ -41,10 +41,14 @@ class LikedSongsViewModel @Inject constructor(
         currentSongState.updateSongState(coverUri, title, singer, playingState, songId, songIndex, album)
     }
 
-    init {
+    fun refresh() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.provideLikedSongs().collect { _songs.value = it }
         }
+    }
+
+    init {
+        refresh()
     }
 
     /** Drops an unliked song from the displayed list without a refetch. */
@@ -52,6 +56,20 @@ class LikedSongsViewModel @Inject constructor(
         val current = _songs.value
         if (current is Response.Success) {
             _songs.value = Response.Success(current.data.filterNot { it.id == songId })
+        }
+    }
+
+    fun removeLocally(song: SongsModel) {
+        val current = _songs.value
+        if (current is Response.Success) {
+            val normTitle = song.title.trim().lowercase()
+            val normSinger = song.singer.trim().lowercase()
+            _songs.value = Response.Success(current.data.filterNot {
+                it.id == song.id ||
+                (song.spotifyTrackId.isNotBlank() && it.spotifyTrackId == song.spotifyTrackId) ||
+                (normTitle.isNotBlank() && normSinger.isNotBlank() &&
+                 it.title.trim().lowercase() == normTitle && it.singer.trim().lowercase() == normSinger)
+            })
         }
     }
 }

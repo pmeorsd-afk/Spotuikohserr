@@ -650,9 +650,9 @@ class HomeFeedEngine @Inject constructor(
                     .filter { it !is Response.Loading }
                     .firstOrNull()
                 (resp as? Response.Success)?.data.orEmpty()
-            } ?: emptyList()
+            } ?: com.music.spotui.data.preferences.getLocallyLikedSongs(context)
         } catch (e: Exception) {
-            emptyList()
+            com.music.spotui.data.preferences.getLocallyLikedSongs(context)
         }
     }
 

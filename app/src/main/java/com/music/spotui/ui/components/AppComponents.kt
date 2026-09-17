@@ -50,8 +50,11 @@ import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.music.spotui.ui.components.GlideImage
 import com.bumptech.glide.integration.compose.placeholder
 import com.music.spotui.R
+import com.music.spotui.data.entity.SongsModel
+import com.music.spotui.data.preferences.addLikedSong
 import com.music.spotui.data.preferences.addLikedSongId
 import com.music.spotui.data.preferences.isSongLiked
+import com.music.spotui.data.preferences.removeLikedSong
 import com.music.spotui.data.preferences.removeLikedSongId
 import com.music.spotui.di.Palette
 import com.music.spotui.di.SongPlayer
@@ -128,11 +131,20 @@ fun MiniPlayer(navController: NavHostController) {
     var isLiked by remember {
         mutableStateOf(false)
     }
-    val likeState = miniPlayerViewModel.likeState.value
-    LaunchedEffect(likeState, songId) {
-        isLiked = isSongLiked(context, songId.toString())
-    }
     val currentTrack = miniPlayerViewModel.queue.value.firstOrNull { it.id == songId }
+    val effectiveSong = currentTrack ?: SongsModel(
+        id = songId,
+        title = songTitle,
+        album = "",
+        singer = songSinger,
+        coverUri = songCoverUri,
+        url = "youtube:$songTitle $songSinger",
+        durationMs = SongPlayer.getDuration().toInt().coerceAtLeast(0)
+    )
+    val likeState = miniPlayerViewModel.likeState.value
+    LaunchedEffect(likeState, songId, currentTrack) {
+        isLiked = isSongLiked(context, effectiveSong)
+    }
     val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
     var showSavedIn by remember { mutableStateOf(false) }
     if (showSavedIn && currentTrack != null) {
@@ -235,12 +247,14 @@ fun MiniPlayer(navController: NavHostController) {
                                 interactionSource = remember { MutableInteractionSource() },
                                 indication = null
                             ) {
-                                addLikedSongId(context, songId.toString())
+                                addLikedSong(context, effectiveSong)
                                 isLiked = true
                                 miniPlayerViewModel.updateLikeState(!likeState)
-                                // Mirror the like to the real Spotify account.
-                                com.music.spotui.data.api.SpotifySync.setTrackSaved(
-                                    context, currentTrack?.spotifyTrackId.orEmpty(), true)
+                                // Mirror the like to the real Spotify account if Spotify ID exists.
+                                if (effectiveSong.spotifyTrackId.isNotBlank()) {
+                                    com.music.spotui.data.api.SpotifySync.setTrackSaved(
+                                        context, effectiveSong.spotifyTrackId, true)
+                                }
                             },
                         painter = painterResource(id = R.drawable.ic_add),
                         tint = Color.White,

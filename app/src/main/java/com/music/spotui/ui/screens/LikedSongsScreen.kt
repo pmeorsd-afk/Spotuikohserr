@@ -75,6 +75,10 @@ fun LikedSongsScreen(navController: NavController) {
     val songsResp by likedSongsViewModel.songs.collectAsState()
     val context = LocalContext.current
 
+    LaunchedEffect(Unit) {
+        likedSongsViewModel.refresh()
+    }
+
     val songs = (songsResp as? Response.Success)?.data.orEmpty()
 
     LaunchedEffect(songs) {
@@ -90,10 +94,9 @@ fun LikedSongsScreen(navController: NavController) {
             navController = navController,
             context = context,
             onDismiss = {
-                // If the song was unliked in the menu, drop it from the list right
-                // away (the Spotify-side removal is already in flight).
-                if (!com.music.spotui.data.preferences.isSongLiked(context, sel.id.toString())) {
-                    likedSongsViewModel.removeLocally(sel.id)
+                // If the song was unliked in the menu, drop it from the list right away
+                if (!com.music.spotui.data.preferences.isSongLiked(context, sel)) {
+                    likedSongsViewModel.removeLocally(sel)
                 }
                 menuSong = null
             },

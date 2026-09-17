@@ -56,8 +56,10 @@ import androidx.navigation.NavController
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.music.spotui.ui.components.GlideImage
 import com.music.spotui.data.entity.SongsModel
+import com.music.spotui.data.preferences.addLikedSong
 import com.music.spotui.data.preferences.addLikedSongId
 import com.music.spotui.data.preferences.isSongLiked
+import com.music.spotui.data.preferences.removeLikedSong
 import com.music.spotui.data.preferences.removeLikedSongId
 import com.music.spotui.ui.navigation.Routes
 import com.music.spotui.ui.navigation.albumRoute
@@ -83,7 +85,7 @@ fun SongOptionsSheet(
     val playerViewModel: com.music.spotui.ui.viewmodel.PlayerViewModel =
         androidx.hilt.navigation.compose.hiltViewModel()
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    var liked by remember { mutableStateOf(isSongLiked(context, song.id.toString())) }
+    var liked by remember { mutableStateOf(isSongLiked(context, song)) }
     var downloaded by remember { mutableStateOf(com.music.spotui.data.preferences.isDownloaded(context, song.id.toString())) }
     var downloadingNow by remember { mutableStateOf(com.music.spotui.di.SongPlayer.isDownloading(song.url)) }
     var downloadPct by remember { mutableStateOf(com.music.spotui.di.SongPlayer.downloadProgress(song.url)) }
@@ -154,11 +156,13 @@ fun SongOptionsSheet(
                 label = if (liked) "Remove from Liked Songs" else "Add to Liked Songs",
                 iconTint = if (liked) Color(AppPalette.toArgb()) else Color.White,
             ) {
-                if (liked) removeLikedSongId(context, song.id.toString())
-                else addLikedSongId(context, song.id.toString())
+                if (liked) removeLikedSong(context, song)
+                else addLikedSong(context, song)
                 liked = !liked
-                // Mirror the like to the real Spotify account.
-                com.music.spotui.data.api.SpotifySync.setTrackSaved(context, song.spotifyTrackId, liked)
+                // Mirror the like to the real Spotify account if Spotify ID exists.
+                if (song.spotifyTrackId.isNotBlank()) {
+                    com.music.spotui.data.api.SpotifySync.setTrackSaved(context, song.spotifyTrackId, liked)
+                }
             }
             SongMenuRow(
                 icon = if (downloaded) Icons.Default.CheckCircle else ImageVector.vectorResource(R.drawable.ic_download),

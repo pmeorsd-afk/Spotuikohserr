@@ -86,8 +86,10 @@ import com.bumptech.glide.integration.compose.placeholder
 import com.music.spotui.R
 import com.music.spotui.data.api.Response
 import com.music.spotui.data.entity.SongsModel
+import com.music.spotui.data.preferences.addLikedSong
 import com.music.spotui.data.preferences.addLikedSongId
 import com.music.spotui.data.preferences.isSongLiked
+import com.music.spotui.data.preferences.removeLikedSong
 import com.music.spotui.data.preferences.removeLikedSongId
 import com.music.spotui.di.SongPlayer
 import com.music.spotui.ui.components.GlideImage
@@ -1178,9 +1180,9 @@ fun SearchSongRow(
     onLongClick: (() -> Unit)? = null,
 ) {
     val context = LocalContext.current
-    var isLiked by remember { mutableStateOf(isSongLiked(context, song.id.toString())) }
+    var isLiked by remember { mutableStateOf(isSongLiked(context, song)) }
     val likeState = searchViewModel.likeState.value
-    LaunchedEffect(likeState) { isLiked = isSongLiked(context, song.id.toString()) }
+    LaunchedEffect(likeState) { isLiked = isSongLiked(context, song) }
     val currentPlayingIndicatorColor =
         if (song.id == searchViewModel.currentSongId.value) Color(AppPalette.toArgb()) else Color.White
 
@@ -1240,9 +1242,18 @@ fun SearchSongRow(
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null,
                 ) {
-                    if (isLiked) removeLikedSongId(context, song.id.toString())
-                    else addLikedSongId(context, song.id.toString())
-                    isLiked = isSongLiked(context, song.id.toString())
+                    if (isLiked) {
+                        removeLikedSong(context, song)
+                        if (song.spotifyTrackId.isNotBlank()) {
+                            com.music.spotui.data.api.SpotifySync.setTrackSaved(context, song.spotifyTrackId, false)
+                        }
+                    } else {
+                        addLikedSong(context, song)
+                        if (song.spotifyTrackId.isNotBlank()) {
+                            com.music.spotui.data.api.SpotifySync.setTrackSaved(context, song.spotifyTrackId, true)
+                        }
+                    }
+                    isLiked = isSongLiked(context, song)
                     searchViewModel.updateLikeState(!searchViewModel.likeState.value)
                 },
             painter = if (isLiked) painterResource(id = R.drawable.added) else painterResource(id = R.drawable.ic_add),

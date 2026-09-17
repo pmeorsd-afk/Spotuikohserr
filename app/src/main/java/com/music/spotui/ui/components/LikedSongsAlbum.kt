@@ -53,10 +53,13 @@ import com.bumptech.glide.integration.compose.placeholder
 import com.music.spotui.R
 import com.music.spotui.data.entity.AlbumsModel
 import com.music.spotui.data.entity.SongsModel
+import com.music.spotui.data.preferences.addLikedSong
 import com.music.spotui.data.preferences.addLikedSongId
 import com.music.spotui.data.preferences.getLikedSongIds
+import com.music.spotui.data.preferences.getLocallyLikedSongs
 import com.music.spotui.data.preferences.getSongsByIds
 import com.music.spotui.data.preferences.isSongLiked
+import com.music.spotui.data.preferences.removeLikedSong
 import com.music.spotui.data.preferences.removeLikedSongId
 import com.music.spotui.di.Palette
 import com.music.spotui.di.SongPlayer
@@ -87,7 +90,8 @@ fun LikedSongsScreen(
     }
     val likeState = albumViewModel.likeState.value
     LaunchedEffect(likeState) {
-        likedSongs = getSongsByIds(likesSongIds, songs).sortedBy { it.title }
+        val local = getLocallyLikedSongs(context)
+        likedSongs = if (local.isNotEmpty()) local else getSongsByIds(likesSongIds, songs).sortedBy { it.title }
     }
 
 
@@ -232,7 +236,7 @@ fun LikedSongsScreen(
                 repeat(likedSongs.size) {song ->
 
                     var isLiked by remember {
-                        mutableStateOf(isSongLiked(context, likedSongs[song].id.toString()))
+                        mutableStateOf(isSongLiked(context, likedSongs[song]))
                     }
                     val songId = likedSongs[song].id
                     val currentPlayingIndicatorColor = if(songId == albumViewModel.currentSongId.value) Color(
@@ -301,14 +305,19 @@ fun LikedSongsScreen(
                                     interactionSource = remember { MutableInteractionSource() },
                                     indication = null
                                 ) {
+                                    val currentTrack = likedSongs[song]
                                     if (isLiked) {
-                                        removeLikedSongId(context, songId.toString())
+                                        removeLikedSong(context, currentTrack)
+                                        if (currentTrack.spotifyTrackId.isNotBlank()) {
+                                            com.music.spotui.data.api.SpotifySync.setTrackSaved(context, currentTrack.spotifyTrackId, false)
+                                        }
                                     } else {
-                                        addLikedSongId(context, songId.toString())
+                                        addLikedSong(context, currentTrack)
+                                        if (currentTrack.spotifyTrackId.isNotBlank()) {
+                                            com.music.spotui.data.api.SpotifySync.setTrackSaved(context, currentTrack.spotifyTrackId, true)
+                                        }
                                     }
-                                    //isLiked = isSongLiked(context, songId.toString())
                                     albumViewModel.updateLikeState(!albumViewModel.likeState.value)
-
                                 },
                             painter = if (isLiked){
                                 painterResource(id = R.drawable.added)

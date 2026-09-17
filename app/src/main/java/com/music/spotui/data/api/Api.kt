@@ -669,8 +669,28 @@ class Api @Inject constructor(
      */
     suspend fun getLibrary(): Flow<Response<List<com.music.spotui.data.entity.LibraryEntry>>> = flow {
         HomeCache.library?.let { emit(Response.Success(it)) } ?: emit(Response.Loading())
+
+        // Pin "Liked Songs" first, exactly like the Spotify app.
+        val liked = com.music.spotui.data.entity.LibraryEntry(
+            spotifyId = LIKED_SONGS_ID,
+            name = "Liked Songs",
+            subtitle = "Playlist • Liked songs",
+            coverUri = "https://misc.scdn.co/liked-songs/liked-songs-640.png",
+            isPlaylist = true,
+        )
+        // Pin a "Downloaded" shortcut to the offline tracks, like Spotify's library.
+        val downloaded = com.music.spotui.data.entity.LibraryEntry(
+            spotifyId = DOWNLOADS_ID,
+            name = "Downloaded",
+            subtitle = "Available offline",
+            coverUri = "",
+            isPlaylist = true,
+        )
+
         if (!SpotifyTokenProvider.ensureToken(context)) {
-            if (HomeCache.library == null) emit(Response.Error("Spotify not authenticated — set sp_dc cookie"))
+            val localOnly = listOf(liked, downloaded)
+            HomeCache.library = localOnly
+            emit(Response.Success(localOnly))
             return@flow
         }
         val albums = fetchAllPages { offset -> Spotify.myAlbums(limit = 50, offset = offset) }.map { a ->
@@ -692,22 +712,6 @@ class Api @Inject constructor(
                 isPlaylist = true,
             )
         }
-        // Pin "Liked Songs" first, exactly like the Spotify app.
-        val liked = com.music.spotui.data.entity.LibraryEntry(
-            spotifyId = LIKED_SONGS_ID,
-            name = "Liked Songs",
-            subtitle = "Playlist • Liked songs",
-            coverUri = "https://misc.scdn.co/liked-songs/liked-songs-640.png",
-            isPlaylist = true,
-        )
-        // Pin a "Downloaded" shortcut to the offline tracks, like Spotify's library.
-        val downloaded = com.music.spotui.data.entity.LibraryEntry(
-            spotifyId = DOWNLOADS_ID,
-            name = "Downloaded",
-            subtitle = "Available offline",
-            coverUri = "",
-            isPlaylist = true,
-        )
         val merged = listOf(liked, downloaded) + playlists + albums
         HomeCache.library = merged
         emit(Response.Success(merged))
@@ -731,33 +735,73 @@ class Api @Inject constructor(
         val map = java.util.concurrent.ConcurrentHashMap<String, Entry>()
     }
 
-    /** The user's Spotify "Liked Songs" (saved tracks) as playable songs. */
+    /** The user's "Liked Songs" (saved tracks) as playable songs. */
     suspend fun getLikedSongs(): Flow<Response<List<SongsModel>>> = flow {
         emit(Response.Loading())
-        if (!SpotifyTokenProvider.ensureToken(context)) {
-            emit(Response.Error("Spotify not authenticated")); return@flow
+
+        // 1. Instantly emit locally saved liked songs (0ms latency, works offline & in guest mode)
+        val localLiked = com.music.spotui.data.preferences.getLocallyLikedSongs(context)
+        if (localLiked.isNotEmpty()) {
+            emit(Response.Success(localLiked))
         }
+
+        // 2. If Spotify is not authenticated (Guest Mode), emit local list and finish
+        if (!SpotifyTokenProvider.ensureToken(context)) {
+            emit(Response.Success(localLiked))
+            return@flow
+        }
+
+        // 3. Spotify is authenticated: fetch library and merge with local non-Spotify tracks
+        val nonSpotifyLocal = localLiked.filter { it.spotifyTrackId.isBlank() }
+
         Spotify.likedSongs(limit = 50).fold(
             onSuccess = { first ->
-                val models = first.items.map { it.track.toSongModel() }.toMutableList()
-                // Seed the local like registry so hearts/menus show these as liked
-                // and unliking them can be mirrored back to Spotify.
-                models.forEach { com.music.spotui.data.preferences.addLikedSongId(context, it.id.toString()) }
-                // First page immediately, then page through the whole library.
-                emit(Response.Success(models.toList()))
+                val firstSpotifyModels = first.items.map { it.track.toSongModel() }
+                com.music.spotui.data.preferences.saveLocalLikedSongs(context, firstSpotifyModels)
+
+                val currentSpotifyList = firstSpotifyModels.toMutableList()
+                emit(Response.Success(mergeLikedTracks(nonSpotifyLocal, currentSpotifyList)))
+
                 var offset = first.items.size
                 while (offset < first.total && first.items.isNotEmpty()) {
                     val page = Spotify.likedSongs(limit = 50, offset = offset).getOrNull() ?: break
                     if (page.items.isEmpty()) break
                     val pageModels = page.items.map { it.track.toSongModel() }
-                    pageModels.forEach { com.music.spotui.data.preferences.addLikedSongId(context, it.id.toString()) }
-                    models += pageModels
+                    com.music.spotui.data.preferences.saveLocalLikedSongs(context, pageModels)
+                    currentSpotifyList += pageModels
                     offset += page.items.size
-                    emit(Response.Success(models.toList()))
+                    emit(Response.Success(mergeLikedTracks(nonSpotifyLocal, currentSpotifyList)))
                 }
             },
-            onFailure = { Log.e("Api", "getLikedSongs failed", it); emit(Response.Error(it.message ?: "error")) },
+            onFailure = { err ->
+                Log.e("Api", "getLikedSongs Spotify fetch failed", err)
+                emit(Response.Success(localLiked))
+            },
         )
+    }
+
+    private fun mergeLikedTracks(
+        nonSpotify: List<SongsModel>,
+        spotify: List<SongsModel>,
+    ): List<SongsModel> {
+        val seen = mutableSetOf<String>()
+        val result = mutableListOf<SongsModel>()
+
+        // Non-Spotify local tracks (YouTube / kosher tracks)
+        for (track in nonSpotify) {
+            val key = track.title.trim().lowercase() + "|" + track.singer.trim().lowercase()
+            if (seen.add(key)) {
+                result.add(track)
+            }
+        }
+        for (track in spotify) {
+            val idKey = if (track.spotifyTrackId.isNotBlank()) "spotify:${track.spotifyTrackId}" else ""
+            val metaKey = track.title.trim().lowercase() + "|" + track.singer.trim().lowercase()
+            if ((idKey.isBlank() || seen.add(idKey)) && seen.add(metaKey)) {
+                result.add(track)
+            }
+        }
+        return result
     }
 
     /** The logged-in user's account (name, email, avatar, plan) for settings. */

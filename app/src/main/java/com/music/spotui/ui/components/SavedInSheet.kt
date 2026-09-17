@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.components
+package com.music.spotui.ui.components
 
 import android.content.Context
 import androidx.compose.foundation.background
@@ -57,8 +57,10 @@ import com.metrolist.spotify.models.SpotifyPlaylist
 import com.music.spotui.R
 import com.music.spotui.data.api.SpotifySync
 import com.music.spotui.data.entity.SongsModel
+import com.music.spotui.data.preferences.addLikedSong
 import com.music.spotui.data.preferences.addLikedSongId
 import com.music.spotui.data.preferences.isSongLiked
+import com.music.spotui.data.preferences.removeLikedSong
 import com.music.spotui.data.preferences.removeLikedSongId
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -79,7 +81,7 @@ fun SavedInSheet(
     onLikedChanged: (Boolean) -> Unit = {},
 ) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    var liked by remember { mutableStateOf(isSongLiked(context, song.id.toString())) }
+    var liked by remember { mutableStateOf(isSongLiked(context, song)) }
     var playlists by remember { mutableStateOf<List<SpotifyPlaylist>?>(null) }
     // playlistId → does it contain this track (filled lazily per row).
     val membership = remember { mutableStateMapOf<String, Boolean>() }
@@ -192,9 +194,11 @@ fun SavedInSheet(
                 },
             ) {
                 liked = !liked
-                if (liked) addLikedSongId(context, song.id.toString())
-                else removeLikedSongId(context, song.id.toString())
-                SpotifySync.setTrackSaved(context, song.spotifyTrackId, liked)
+                if (liked) addLikedSong(context, song)
+                else removeLikedSong(context, song)
+                if (song.spotifyTrackId.isNotBlank()) {
+                    SpotifySync.setTrackSaved(context, song.spotifyTrackId, liked)
+                }
                 onLikedChanged(liked)
             }
 
