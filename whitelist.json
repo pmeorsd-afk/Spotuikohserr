@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 161,
-  "last_updated": "2026-09-17T18:56:40.869Z",
+  "version": 162,
+  "last_updated": "2026-09-17T18:57:55.361Z",
   "artists": [
     {
       "id": "6hZQpZhZfZJuyAVkPZ1W7n",
@@ -475,7 +475,7 @@
       ],
       "status": "blocked",
       "notes": "blocked via telegram",
-      "updated_at": "2026-09-17T18:56:40.869Z"
+      "updated_at": "2026-09-17T18:57:55.361Z"
     },
     {
       "id": "",
