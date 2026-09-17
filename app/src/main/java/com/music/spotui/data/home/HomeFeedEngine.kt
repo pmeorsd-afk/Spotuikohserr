@@ -145,6 +145,123 @@ class HomeFeedEngine @Inject constructor(
         }
     }
 
+    /**
+     * Non-destructive personalized patch: updates SIMILAR_ARTISTS, RECOMMENDED_TODAY,
+     * and HISTORY_BASED based on the latest listening tracker stats without destroying
+     * or rebuilding healthy base sections (albums, mixes, radio, popular artists).
+     */
+    suspend fun updatePersonalizedRecommendations(): HomeFeedModel = withContext(Dispatchers.IO) {
+        mutex.withLock {
+            val base = cachedFeed ?: loadFromDisk() ?: return@withLock updateRecentListeningOnly()
+            val recentTracks = listeningTracker.recentTracks(limit = 10)
+            val likedSongs = loadLikedSongs()
+            val topArtists = listeningTracker.topArtists(limit = 1)
+            val topArtist = topArtists.firstOrNull()
+
+            val seedIds = recentTracks.mapNotNull { it.trackId.takeIf { id -> id.isNotBlank() } }.take(5)
+
+            // Parallel fetch of personalized recommendations
+            val (recommendations, similarContent, tastePlaylists) = coroutineScope {
+                val recDeferred = if (seedIds.isNotEmpty()) {
+                    async(Dispatchers.IO) { loadRecommendations(seedIds) }
+                } else null
+
+                val similarDeferred = if (topArtist != null && topArtist.artistName.isNotBlank()) {
+                    async(Dispatchers.IO) { loadSimilarContent(topArtist.artistName) }
+                } else null
+
+                val tastePlaylistsDeferred = if (topArtist != null && topArtist.artistName.isNotBlank()) {
+                    async(Dispatchers.IO) { loadPlaylists("${topArtist.artistName} פלייליסט") }
+                } else null
+
+                Triple(
+                    recDeferred?.await().orEmpty(),
+                    similarDeferred?.await(),
+                    tastePlaylistsDeferred?.await().orEmpty()
+                )
+            }
+
+            // 1. Merge recent tracks and top grid first
+            val mergedWithRecent = mergeLocalRecent(base, recentTracks, likedSongs)
+            val updatedSections = mergedWithRecent.sections.toMutableList()
+
+            // 2. Non-destructive patch: Replace section if new content arrived, else preserve existing!
+            // RECOMMENDED_TODAY
+            if (recommendations.isNotEmpty()) {
+                val recSection = HomeSection(
+                    id = HomeSectionIds.RECOMMENDED_TODAY,
+                    title = "מומלץ להיום",
+                    type = HomeSectionType.HORIZONTAL,
+                    items = recommendations.take(15).map { HomeItem.Track(it) }
+                )
+                val idx = updatedSections.indexOfFirst { it.id == HomeSectionIds.RECOMMENDED_TODAY }
+                if (idx != -1) {
+                    updatedSections[idx] = recSection
+                } else {
+                    updatedSections.add(recSection)
+                }
+            }
+
+            // SIMILAR_ARTISTS
+            if (topArtist != null && similarContent != null && similarContent.items.isNotEmpty()) {
+                val similarSection = HomeSection(
+                    id = HomeSectionIds.SIMILAR_ARTISTS,
+                    title = topArtist.artistName,
+                    subtitle = "אמנים נוספים כמו",
+                    headerArtist = similarContent.topArtistModel,
+                    type = HomeSectionType.ARTISTS,
+                    items = similarContent.items
+                )
+                val idx = updatedSections.indexOfFirst { it.id == HomeSectionIds.SIMILAR_ARTISTS }
+                if (idx != -1) {
+                    updatedSections[idx] = similarSection
+                } else {
+                    updatedSections.add(similarSection)
+                }
+            }
+
+            // HISTORY_BASED
+            if (tastePlaylists.isNotEmpty()) {
+                val histSection = HomeSection(
+                    id = HomeSectionIds.HISTORY_BASED,
+                    title = "על סמך היסטוריית ההאזנה שלכם בזמן האחרון",
+                    type = HomeSectionType.HORIZONTAL,
+                    items = tastePlaylists
+                )
+                val idx = updatedSections.indexOfFirst { it.id == HomeSectionIds.HISTORY_BASED }
+                if (idx != -1) {
+                    updatedSections[idx] = histSection
+                } else {
+                    updatedSections.add(histSection)
+                }
+            }
+
+            // 3. Sort sections according to canonical order
+            val canonicalOrder = listOf(
+                HomeSectionIds.TOP_MIXES,
+                HomeSectionIds.POPULAR_RADIO,
+                HomeSectionIds.RECENTLY_PLAYED,
+                HomeSectionIds.RECOMMENDED_TODAY,
+                HomeSectionIds.SIMILAR_ARTISTS,
+                HomeSectionIds.HISTORY_BASED,
+                HomeSectionIds.POPULAR_ALBUMS,
+                HomeSectionIds.POPULAR_ARTISTS
+            )
+            updatedSections.sortBy { sec ->
+                val ord = canonicalOrder.indexOf(sec.id)
+                if (ord != -1) ord else 999
+            }
+
+            val finalFeed = mergedWithRecent.copy(sections = updatedSections)
+            if (finalFeed.isHealthy()) {
+                cachedFeed = finalFeed
+                cachedAt = System.currentTimeMillis()
+                saveToDisk(finalFeed)
+            }
+            finalFeed
+        }
+    }
+
     private suspend fun buildOrchestratedFeed(): HomeFeedModel = coroutineScope {
         // Phase 1: Parallel fetch of all independent data sources
         val recentDeferred = async(Dispatchers.IO) { listeningTracker.recentTracks(limit = 10) }

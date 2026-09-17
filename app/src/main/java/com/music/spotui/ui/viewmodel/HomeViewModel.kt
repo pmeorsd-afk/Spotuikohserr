@@ -33,13 +33,29 @@ class HomeViewModel @Inject constructor(
     private val _artists : MutableStateFlow<Response<List<ArtistsModel>>> = MutableStateFlow(Response.Loading())
     val artists : StateFlow<Response<List<ArtistsModel>>> = _artists
 
+    private var personalizedRefreshJob: kotlinx.coroutines.Job? = null
+
     init {
         refreshHome()
         viewModelScope.launch {
             listeningTracker.revision.drop(1).collect {
-                val updatedFeed = homeFeedEngine.updateRecentListeningOnly()
-                if (updatedFeed.sections.isNotEmpty()) {
-                    _home.value = Response.Success(updatedFeed)
+                // 1. Immediate local update for RECENTLY_PLAYED & Top Grid (0ms latency)
+                val fastFeed = homeFeedEngine.updateRecentListeningOnly()
+                if (fastFeed.sections.isNotEmpty()) {
+                    _home.value = Response.Success(fastFeed)
+                }
+
+                // 2. Background: single-flight personalized update (similar artists & recommendations)
+                personalizedRefreshJob?.cancel()
+                personalizedRefreshJob = viewModelScope.launch(Dispatchers.IO) {
+                    try {
+                        val personalizedFeed = homeFeedEngine.updatePersonalizedRecommendations()
+                        if (personalizedFeed.sections.isNotEmpty()) {
+                            _home.value = Response.Success(personalizedFeed)
+                        }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
                 }
             }
         }

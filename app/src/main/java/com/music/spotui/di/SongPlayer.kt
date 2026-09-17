@@ -1684,6 +1684,29 @@ object SongPlayer {
         pendingNextSong = null
     }
 
+    data class PlaybackPosition(
+        val positionMs: Long,
+        val durationMs: Long,
+        val isPlaying: Boolean
+    )
+
+    suspend fun getPlaybackPosition(): PlaybackPosition {
+        if (webPlaybackActive()) {
+            return PlaybackPosition(
+                positionMs = SpotifyWebPlayer.positionMs,
+                durationMs = SpotifyWebPlayer.durationMs,
+                isPlaying = SpotifyWebPlayer.isPlaying
+            )
+        }
+        val p = player ?: return PlaybackPosition(0L, 0L, false)
+        return withContext(Dispatchers.Main) {
+            val isPlaying = runCatching { p.isPlaying }.getOrDefault(false)
+            val pos = runCatching { p.currentPosition }.getOrDefault(0L)
+            val dur = runCatching { p.duration }.getOrDefault(0L)
+            PlaybackPosition(positionMs = pos, durationMs = dur, isPlaying = isPlaying)
+        }
+    }
+
     @Volatile private var positionListener: ((positionMs: Long, durationMs: Long) -> Unit)? = null
 
     fun setPositionListener(listener: ((positionMs: Long, durationMs: Long) -> Unit)?) {
@@ -1700,29 +1723,25 @@ object SongPlayer {
             while (isActive) {
                 kotlinx.coroutines.delay(250)
                 val ctx = appCtx ?: continue
+                val status = getPlaybackPosition()
+
                 // Persist the position every ~3s so a relaunch resumes mid-track.
                 if (++posSaveTick % 12 == 0 && !webPlaybackActive()) {
-                    player?.let { p ->
-                        val pos = withContext(Dispatchers.Main) {
-                            if (p.isPlaying) p.currentPosition else -1L
-                        }
-                        if (pos > 0) com.music.spotui.data.preferences.saveLastPosition(ctx, pos)
+                    if (status.isPlaying && status.positionMs > 0) {
+                        com.music.spotui.data.preferences.saveLastPosition(ctx, status.positionMs)
                     }
                 }
-                val p = player ?: continue
-                val playing = withContext(Dispatchers.Main) { p.isPlaying }
-                if (!playing) continue
-                val dur = withContext(Dispatchers.Main) { p.duration }
-                val pos = withContext(Dispatchers.Main) { p.currentPosition }
-                if (dur <= 0 || pos < 0) continue
-                positionListener?.invoke(pos, dur)
+
+                if (!status.isPlaying) continue
+                if (status.durationMs <= 0 || status.positionMs < 0) continue
+                positionListener?.invoke(status.positionMs, status.durationMs)
 
                 if (isCrossfading) continue
                 val crossfadeMs = com.music.spotui.data.preferences.getCrossfadeMs(ctx)
                 if (crossfadeMs <= 0) continue
                 val state = boundState ?: continue
                 if (state.repeat.value) continue // repeat-one loops the same track
-                if (pos >= dur - crossfadeMs) {
+                if (status.positionMs >= status.durationMs - crossfadeMs) {
                     triggerCrossfade(ctx, crossfadeMs)
                 }
             }

@@ -91,6 +91,8 @@ class PlayerViewModel @Inject constructor(
     val playingArtist by mutableStateOf(currentSongSinger.value)
 
     private var listeningSongKey: String = ""
+    private var thirtySecondReported = false
+    private var completionReported = false
 
     init {
         fetchSongs()
@@ -102,17 +104,19 @@ class PlayerViewModel @Inject constructor(
 
             if (listeningSongKey != key) {
                 listeningSongKey = key
+                thirtySecondReported = false
+                completionReported = false
                 listeningTracker.onSongStarted(song)
             }
 
-            if (positionMs >= 30_000L) {
+            if (!thirtySecondReported && positionMs >= 30_000L) {
+                thirtySecondReported = true
                 listeningTracker.recordPlay(song)
-                homeFeedEngine.invalidate()
             }
 
-            if (durationMs > 0L && positionMs >= durationMs * 0.75f) {
+            if (!completionReported && durationMs > 0L && positionMs >= durationMs * 0.75f) {
+                completionReported = true
                 listeningTracker.recordCompletion(song)
-                homeFeedEngine.invalidate()
             }
         }
     }
