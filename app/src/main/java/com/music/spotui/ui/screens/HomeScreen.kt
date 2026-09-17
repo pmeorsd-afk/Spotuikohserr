@@ -97,6 +97,8 @@ fun HomeScreen(navController: NavController){
     androidx.compose.runtime.DisposableEffect(lifecycleOwner) {
         val observer = androidx.lifecycle.LifecycleEventObserver { _, event ->
             if (event == androidx.lifecycle.Lifecycle.Event.ON_RESUME) {
+                com.music.spotui.data.preferences.notifyLikedSongsChanged()
+                homeViewModel.syncLikedSongsCount()
                 homeViewModel.refreshHome(force = false)
             }
         }
@@ -461,6 +463,12 @@ private fun ArtistSectionHeader(
 /** Pinned card for "שירים שאהבתם" in Recently Played */
 @Composable
 private fun LikedSongsCard(count: Int, onClick: () -> Unit) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+    val revision by com.music.spotui.data.preferences.likedSongsRevision.collectAsState()
+    val liveCount = remember(revision) {
+        com.music.spotui.data.preferences.getLikedSongsCount(context)
+    }
+    val effectiveCount = liveCount
     Column(
         modifier = Modifier
             .width(148.dp)
@@ -521,7 +529,7 @@ private fun LikedSongsCard(count: Int, onClick: () -> Unit) {
             }
             Spacer(modifier = Modifier.width(4.dp))
             Text(
-                text = if (count == 1) "נוסף שיר 1" else "$count שירים",
+                text = if (effectiveCount == 1) "נוסף שיר 1" else "$effectiveCount שירים",
                 color = Color(0xFFB3B3B3),
                 fontSize = 11.sp,
                 maxLines = 1,
@@ -572,13 +580,18 @@ private fun HomeArtistCircleCard(artist: HomeItem.Artist, onClick: () -> Unit) {
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 private fun HomeFeedCard(item: HomeItem, onClick: () -> Unit) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+    val revision by com.music.spotui.data.preferences.likedSongsRevision.collectAsState()
+    val liveCount = remember(revision) {
+        com.music.spotui.data.preferences.getLikedSongsCount(context)
+    }
     val isArtist = item is HomeItem.Artist
     val subtitle = when (item) {
         is HomeItem.Album -> item.subtitle
         is HomeItem.Playlist -> item.subtitle
         is HomeItem.Artist -> "Artist"
         is HomeItem.Track -> item.subtitle
-        is HomeItem.LikedSongs -> "${item.count} שירים"
+        is HomeItem.LikedSongs -> if (liveCount == 1) "נוסף שיר 1" else "$liveCount שירים"
     }
     Column(
         horizontalAlignment = if (isArtist) Alignment.CenterHorizontally else Alignment.Start,

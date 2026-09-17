@@ -11,6 +11,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -49,6 +50,11 @@ class LikedSongsViewModel @Inject constructor(
 
     init {
         refresh()
+        viewModelScope.launch {
+            com.music.spotui.data.preferences.likedSongsRevision.drop(1).collect {
+                refresh()
+            }
+        }
     }
 
     /** Drops an unliked song from the displayed list without a refetch. */

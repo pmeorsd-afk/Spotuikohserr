@@ -60,24 +60,48 @@ class HomeFeedEngine @Inject constructor(
                sections.count { it.items.isNotEmpty() } >= 3
     }
 
+    fun patchLikedSongsCount(feed: HomeFeedModel): HomeFeedModel {
+        val currentCount = com.music.spotui.data.preferences.getLikedSongsCount(context)
+        val updatedSections = feed.sections.map { section ->
+            if (section.id == HomeSectionIds.RECENTLY_PLAYED) {
+                val updatedItems = section.items.map { item ->
+                    if (item is HomeItem.LikedSongs) {
+                        item.copy(count = currentCount)
+                    } else {
+                        item
+                    }
+                }
+                section.copy(items = updatedItems)
+            } else {
+                section
+            }
+        }
+        val patched = feed.copy(sections = updatedSections)
+        if (cachedFeed != null) {
+            cachedFeed = patched
+        }
+        return patched
+    }
+
     suspend fun getHomeFeed(forceRefresh: Boolean = false): HomeFeedModel {
         if (!forceRefresh && isCacheValid()) {
-            return cachedFeed!!
+            return patchLikedSongsCount(cachedFeed!!)
         }
 
         if (!forceRefresh && cachedFeed == null) {
             val disk = loadFromDisk()
             if (disk != null && disk.isHealthy()) {
-                cachedFeed = disk
+                val patched = patchLikedSongsCount(disk)
+                cachedFeed = patched
                 cachedAt = System.currentTimeMillis()
-                return disk
+                return patched
             }
         }
 
         // Single-flight refresh: if a full refresh is already running, await it
         val job = singleFlightMutex.withLock {
             if (!forceRefresh && isCacheValid()) {
-                return cachedFeed!!
+                return patchLikedSongsCount(cachedFeed!!)
             }
             val existing = inFlightRefresh
             if (existing != null && existing.isActive) {
@@ -97,9 +121,6 @@ class HomeFeedEngine @Inject constructor(
     private suspend fun doOrchestratedRefresh(): HomeFeedModel = mutex.withLock {
         val newFeed = buildOrchestratedFeed()
         val finalFeed = if (newFeed.isHealthy()) {
-            cachedFeed = newFeed
-            cachedAt = System.currentTimeMillis()
-            saveToDisk(newFeed)
             newFeed
         } else {
             // Anti-degradation: Never replace a healthy feed with a degraded feed!
@@ -111,18 +132,16 @@ class HomeFeedEngine @Inject constructor(
             if (healthyBase != null) {
                 val recentTracks = listeningTracker.recentTracks(limit = 10)
                 val likedSongs = loadLikedSongs()
-                val merged = mergeLocalRecent(healthyBase, recentTracks, likedSongs)
-                cachedFeed = merged
-                cachedAt = System.currentTimeMillis()
-                saveToDisk(merged)
-                merged
+                mergeLocalRecent(healthyBase, recentTracks, likedSongs)
             } else {
-                cachedFeed = newFeed
-                cachedAt = System.currentTimeMillis()
                 newFeed
             }
         }
-        finalFeed
+        val patchedFeed = patchLikedSongsCount(finalFeed)
+        cachedFeed = patchedFeed
+        cachedAt = System.currentTimeMillis()
+        saveToDisk(patchedFeed)
+        patchedFeed
     }
 
     /**
@@ -138,10 +157,11 @@ class HomeFeedEngine @Inject constructor(
             } else {
                 buildOrchestratedFeed()
             }
-            cachedFeed = updated
+            val patched = patchLikedSongsCount(updated)
+            cachedFeed = patched
             cachedAt = System.currentTimeMillis()
-            saveToDisk(updated)
-            updated
+            saveToDisk(patched)
+            patched
         }
     }
 

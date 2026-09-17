@@ -2,10 +2,20 @@ package com.music.spotui.data.preferences
 
 import android.content.Context
 import com.music.spotui.data.entity.SongsModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import org.json.JSONObject
 
 private const val PREF_LEGACY = "LikedSongs"
 private const val PREF_DATA = "LikedSongs_Data"
+
+private val _likedSongsRevision = MutableStateFlow(0L)
+val likedSongsRevision: StateFlow<Long> = _likedSongsRevision.asStateFlow()
+
+fun notifyLikedSongsChanged() {
+    _likedSongsRevision.value = System.currentTimeMillis()
+}
 
 fun canonicalKey(song: SongsModel): String {
     if (song.spotifyTrackId.isNotBlank()) return "spotify:${song.spotifyTrackId}"
@@ -64,6 +74,8 @@ fun addLikedSong(context: Context, song: SongsModel) {
     val dataPrefs = context.getSharedPreferences(PREF_DATA, Context.MODE_PRIVATE)
     val key = canonicalKey(song)
     dataPrefs.edit().putString(key, song.toJson()).apply()
+
+    notifyLikedSongsChanged()
 }
 
 fun removeLikedSong(context: Context, song: SongsModel) {
@@ -96,6 +108,8 @@ fun removeLikedSong(context: Context, song: SongsModel) {
         }
     }
     editor.apply()
+
+    notifyLikedSongsChanged()
 }
 
 fun saveLocalLikedSongs(context: Context, songs: List<SongsModel>) {
@@ -117,6 +131,8 @@ fun saveLocalLikedSongs(context: Context, songs: List<SongsModel>) {
     }
     dataEditor.apply()
     legEditor.apply()
+
+    notifyLikedSongsChanged()
 }
 
 fun getLocallyLikedSongs(context: Context): List<SongsModel> {
@@ -124,7 +140,19 @@ fun getLocallyLikedSongs(context: Context): List<SongsModel> {
     val parsed = dataPrefs.all.values.mapNotNull { v ->
         (v as? String)?.let(::parseLikedSongWithTime)
     }
-    return parsed.sortedByDescending { it.second }.map { it.first }
+    return parsed
+        .sortedByDescending { it.second }
+        .map { it.first }
+        .distinctBy { canonicalKey(it) }
+}
+
+fun getLikedSongsCount(context: Context): Int {
+    val local = getLocallyLikedSongs(context)
+    if (local.isNotEmpty()) {
+        return local.size
+    }
+    val legacy = context.getSharedPreferences(PREF_LEGACY, Context.MODE_PRIVATE)
+    return legacy.all.keys.mapNotNull { it.toIntOrNull() }.toSet().size
 }
 
 fun isSongLiked(
@@ -173,6 +201,7 @@ fun isSongLiked(context: Context, songId: String): Boolean =
 fun addLikedSongId(context: Context, songId: String) {
     val sharedPreferences = context.getSharedPreferences(PREF_LEGACY, Context.MODE_PRIVATE)
     sharedPreferences.edit().putString(songId, songId).apply()
+    notifyLikedSongsChanged()
 }
 
 fun removeLikedSongId(context: Context, songId: String) {
@@ -190,6 +219,7 @@ fun removeLikedSongId(context: Context, songId: String) {
         }
     }
     editor.apply()
+    notifyLikedSongsChanged()
 }
 
 fun getLikedSongIds(context: Context): Set<Int> {

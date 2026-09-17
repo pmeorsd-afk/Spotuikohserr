@@ -65,6 +65,17 @@ class HomeViewModel @Inject constructor(
                 refreshHome(force = true)
             }
         }
+        viewModelScope.launch {
+            com.music.spotui.data.preferences.likedSongsRevision.drop(1).collect {
+                syncLikedSongsCount()
+            }
+        }
+    }
+
+    fun syncLikedSongsCount() {
+        val current = (_home.value as? Response.Success)?.data ?: return
+        val patched = homeFeedEngine.patchLikedSongsCount(current)
+        _home.value = Response.Success(patched)
     }
 
     fun refreshHome(force: Boolean = false) = viewModelScope.launch(Dispatchers.IO) {
