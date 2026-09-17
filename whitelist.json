@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 160,
-  "last_updated": "2026-09-17T08:36:58.446Z",
+  "version": 161,
+  "last_updated": "2026-09-17T18:56:40.869Z",
   "artists": [
     {
       "id": "6hZQpZhZfZJuyAVkPZ1W7n",
@@ -467,14 +467,15 @@
       "notes": "approved"
     },
     {
-      "id": "",
+      "id": "3VTm1513t2LL1mSKzzyQuj",
       "canonical_name": "Ishay Ribo",
       "aliases": [
         "Ishay Ribo",
         "ישי ריבו"
       ],
-      "status": "approved",
-      "notes": "approved"
+      "status": "blocked",
+      "notes": "blocked via telegram",
+      "updated_at": "2026-09-17T18:56:40.869Z"
     },
     {
       "id": "",
