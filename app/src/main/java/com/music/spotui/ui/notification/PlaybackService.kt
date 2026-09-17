@@ -30,6 +30,9 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import android.util.Log
+import com.music.spotui.di.RepeatMode
 import javax.inject.Inject
 
 /**
@@ -76,7 +79,7 @@ class PlaybackService : MediaLibraryService() {
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
 
-        webPlayer = WebMediaPlayer(mainLooper, currentSongState) { forward -> advance(forward) }
+        webPlayer = WebMediaPlayer(mainLooper, currentSongState) { forward -> advanceManually(forward) }
 
         mediaSession = MediaLibrarySession.Builder(this, wrap(base), LibraryCallback())
             .setSessionActivity(sessionActivity)
@@ -91,7 +94,12 @@ class PlaybackService : MediaLibraryService() {
         // When stream resolution fails for a track, skip it automatically so the
         // queue keeps moving instead of going silent (issues 2 + 3).
         SongPlayer.onStreamFailed = { _ ->
-            advance(forward = true)
+            advanceManually(forward = true)
+        }
+
+        // Single Owner: Listen to ExoPlayer STATE_ENDED via token-guarded callback
+        SongPlayer.setOnTrackEndedListener { token ->
+            handleTrackEnded(token)
         }
 
         // As the hidden web player streams, keep the notification in sync and swap
@@ -142,31 +150,221 @@ class PlaybackService : MediaLibraryService() {
 
         override fun hasNextMediaItem() = true
         override fun hasPreviousMediaItem() = true
-        override fun seekToNext() = advance(forward = true)
-        override fun seekToNextMediaItem() = advance(forward = true)
-        override fun seekToPrevious() = advance(forward = false)
-        override fun seekToPreviousMediaItem() = advance(forward = false)
+        override fun seekToNext() = advanceManually(forward = true)
+        override fun seekToNextMediaItem() = advanceManually(forward = true)
+        override fun seekToPrevious() = advanceManually(forward = false)
+        override fun seekToPreviousMediaItem() = advanceManually(forward = false)
     }
 
-    /** Advance the in-app queue one step in the given direction and start it. */
-    private fun advance(forward: Boolean) {
+    /** Manual user skip from notification / lock screen / Android Auto */
+    private fun advanceManually(forward: Boolean) {
         val queue = currentSongState.queue.value
         if (queue.isEmpty()) return
         val curId = currentSongState.songId.value
         val cur = queue.indexOfFirst { it.id == curId }
             .let { if (it >= 0) it else currentSongState.songIndex.value }
             .coerceIn(0, queue.size - 1)
-        val nextIdx = if (forward) {
-            if (cur < queue.size - 1) cur + 1 else 0
+        val repeatMode = currentSongState.repeatMode.value
+        if (forward) {
+            if (cur < queue.size - 1) {
+                playQueueIndex(queue, cur + 1)
+            } else if (repeatMode == RepeatMode.ALL) {
+                playQueueIndex(queue, 0)
+            } else {
+                serviceScope.launch(Dispatchers.IO) {
+                    val fresh = fetchKosherRadioOrArtistFallback(queue, cur)
+                    if (fresh.isNotEmpty()) {
+                        val newQueue = currentSongState.queue.value + fresh
+                        currentSongState.updateQueue(newQueue)
+                        withContext(Dispatchers.Main) {
+                            playQueueIndex(newQueue, queue.size)
+                        }
+                    } else {
+                        withContext(Dispatchers.Main) {
+                            stopPlaybackCleanly()
+                        }
+                    }
+                }
+            }
         } else {
-            if (cur > 0) cur - 1 else queue.size - 1
+            if (cur > 0) {
+                playQueueIndex(queue, cur - 1)
+            } else if (repeatMode == RepeatMode.ALL) {
+                playQueueIndex(queue, queue.size - 1)
+            } else {
+                SongPlayer.seekTo(0)
+            }
         }
-        val song = queue[nextIdx]
+    }
+
+    @Volatile private var transitionInProgress = false
+
+    /**
+     * SINGLE OWNER: The ONLY place in the app that decides what happens when a track finishes naturally.
+     * Guarded against duplicate events and stale tokens from manual user skips.
+     */
+    private fun handleTrackEnded(token: String) {
+        // Guard 1: Drop event if token is stale (user manually skipped or new track already started)
+        if (token != SongPlayer.currentPlaybackToken) return
+
+        // Guard 2: Drop if another transition is already in progress
+        if (transitionInProgress) return
+        transitionInProgress = true
+
+        val queue = currentSongState.queue.value
+        if (queue.isEmpty()) {
+            stopPlaybackCleanly()
+            transitionInProgress = false
+            return
+        }
+
+        val curId = currentSongState.songId.value
+        val curIdx = queue.indexOfFirst { it.id == curId }
+            .let { if (it >= 0) it else currentSongState.songIndex.value }
+            .coerceIn(0, queue.size - 1)
+
+        val repeatMode = currentSongState.repeatMode.value
+
+        // 1. Repeat ONE (Top priority - overrides all other rules)
+        if (repeatMode == RepeatMode.ONE) {
+            SongPlayer.seekTo(0)
+            SongPlayer.play()
+            currentSongState.updatePlayingState(true)
+            transitionInProgress = false
+            return
+        }
+
+        // 2. Next track exists in queue
+        if (curIdx < queue.size - 1) {
+            playQueueIndex(queue, curIdx + 1)
+            transitionInProgress = false
+            return
+        }
+
+        // 3. Repeat ALL at the end of queue -> loop back to index 0
+        if (repeatMode == RepeatMode.ALL) {
+            playQueueIndex(queue, 0)
+            transitionInProgress = false
+            return
+        }
+
+        // 4. End of queue and Repeat is OFF -> Try Autoplay (Kosher Radio -> Same-Artist Fallback)
+        serviceScope.launch(Dispatchers.IO) {
+            try {
+                val fresh = fetchKosherRadioOrArtistFallback(queue, curIdx)
+                if (fresh.isNotEmpty()) {
+                    // Check token once more before modifying queue in case user acted during network call
+                    if (token != SongPlayer.currentPlaybackToken) return@launch
+                    val newQueue = currentSongState.queue.value + fresh
+                    currentSongState.updateQueue(newQueue)
+                    withContext(Dispatchers.Main) {
+                        playQueueIndex(newQueue, queue.size)
+                    }
+                } else {
+                    // No kosher tracks available -> STOP cleanly! Do NOT replay track 0!
+                    withContext(Dispatchers.Main) {
+                        stopPlaybackCleanly()
+                    }
+                }
+            } catch (e: Exception) {
+                Log.e("PlaybackService", "Autoplay failed after track ended", e)
+                withContext(Dispatchers.Main) {
+                    stopPlaybackCleanly()
+                }
+            } finally {
+                transitionInProgress = false
+            }
+        }
+    }
+
+    private fun playQueueIndex(queue: List<SongsModel>, index: Int) {
+        if (index !in queue.indices) return
+        val song = queue[index]
         currentSongState.updateSongState(
             song.coverUri, song.title, song.singer, true,
-            song.id, nextIdx, currentSongState.album.value
+            song.id, index, currentSongState.album.value
         )
         SongPlayer.playSong(song.url, applicationContext)
+    }
+
+    private fun stopPlaybackCleanly() {
+        SongPlayer.seekTo(0)
+        SongPlayer.pause()
+        currentSongState.updatePlayingState(false)
+    }
+
+    /**
+     * Fetches kosher-approved radio recommendations seeded from the queue.
+     * If empty, falls back to other tracks by the same artist.
+     * Strictly filters out the current track and any tracks already present in the queue.
+     */
+    private suspend fun fetchKosherRadioOrArtistFallback(
+        queue: List<SongsModel>,
+        curIdx: Int
+    ): List<SongsModel> {
+        val currentSong = queue.getOrNull(curIdx) ?: return emptyList()
+        val currentSpotifyId = currentSong.spotifyTrackId.ifBlank { null }
+        val currentTitle = currentSong.title.trim().lowercase()
+
+        val existingSpotifyIds = queue.mapNotNull { it.spotifyTrackId.ifBlank { null } }.toSet()
+        val existingTitles = queue.map { it.title.trim().lowercase() }.toSet()
+
+        fun filterValidNewTracks(candidates: List<SongsModel>): List<SongsModel> {
+            return candidates.filter { candidate ->
+                val candSpotifyId = candidate.spotifyTrackId.ifBlank { null }
+                val candTitle = candidate.title.trim().lowercase()
+
+                // Must not be the current track
+                val isCurrent = (currentSpotifyId != null && candSpotifyId == currentSpotifyId) ||
+                        (candTitle.isNotBlank() && candTitle == currentTitle)
+                if (isCurrent) return@filter false
+
+                // Must not already be in the queue
+                val inQueue = (candSpotifyId != null && candSpotifyId in existingSpotifyIds) ||
+                        (candTitle.isNotBlank() && candTitle in existingTitles)
+                if (inQueue) return@filter false
+
+                true
+            }
+        }
+
+        // Step 1: Spotify Radio recommendations from seed track IDs
+        val seeds = queue.takeLast(5)
+            .mapNotNull { it.spotifyTrackId.ifBlank { null } }
+            .distinct()
+
+        if (seeds.isNotEmpty()) {
+            try {
+                val recs = repository.provideRecommendations(seeds)
+                val freshRecs = filterValidNewTracks(recs)
+                if (freshRecs.isNotEmpty()) {
+                    return freshRecs
+                }
+            } catch (e: Exception) {
+                Log.w("PlaybackService", "Radio recommendations fetch failed: ${e.message}")
+            }
+        }
+
+        // Step 2: Same-Artist fallback (retrieves other approved songs by this artist)
+        val artistName = currentSong.singer.trim()
+        if (artistName.isNotBlank()) {
+            try {
+                var artistSongs = emptyList<SongsModel>()
+                repository.provideArtistSongs(artistName).collect { response ->
+                    if (response is Response.Success) {
+                        artistSongs = response.data.orEmpty()
+                    }
+                }
+                val freshArtistSongs = filterValidNewTracks(artistSongs)
+                if (freshArtistSongs.isNotEmpty()) {
+                    return freshArtistSongs.shuffled().take(10)
+                }
+            } catch (e: Exception) {
+                Log.w("PlaybackService", "Same-artist fallback fetch failed: ${e.message}")
+            }
+        }
+
+        return emptyList()
     }
 
     override fun onGetSession(controllerInfo: MediaSession.ControllerInfo): MediaLibrarySession? = mediaSession
@@ -339,6 +537,7 @@ class PlaybackService : MediaLibraryService() {
     }
 
     override fun onDestroy() {
+        SongPlayer.setOnTrackEndedListener(null)
         serviceScope.cancel()
         SongPlayer.onPlayerSwapped = null
         SongPlayer.onStreamFailed = null

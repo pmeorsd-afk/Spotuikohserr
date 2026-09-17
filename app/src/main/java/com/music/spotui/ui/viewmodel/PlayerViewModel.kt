@@ -1,6 +1,7 @@
 package com.music.spotui.ui.viewmodel
 
 import android.content.Context
+import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -80,6 +81,7 @@ class PlayerViewModel @Inject constructor(
 
     val shuffleState = currentSongState.shuffle
     val repeatState = currentSongState.repeat
+    val repeatMode = currentSongState.repeatMode
     val likeState = currentSongState.likeState
 
 
@@ -155,35 +157,30 @@ class PlayerViewModel @Inject constructor(
         }
     }
 
-    // End-of-track autoplay fires from the UI on every recomposition while the
-    // finished track's position still equals its duration (the next stream takes
-    // seconds to resolve), so without a debounce it advances 30+ tracks in a
-    // burst. Allow ONE auto-advance, then hold until the new track takes over.
-    @Volatile private var lastAutoAdvanceMs = 0L
-
-    fun autoAdvance(queueSongs: List<SongsModel>, context: Context) {
-        val now = System.currentTimeMillis()
-        if (now - lastAutoAdvanceMs < 4000) return
-        lastAutoAdvanceMs = now
-        playNextSongs(queueSongs, context)
-    }
-
-    // Function to play the next song in the album
+    // Function to play the next song in the album (Manual user skip)
     fun playNextSongs(queueSongs : List<SongsModel>, context: Context) {
         if (queueSongs.isEmpty()) return
         // A crossfade is already advancing the queue itself — don't double-skip.
         if (SongPlayer.isCrossfadeActive()) return
         val cur = currentPositionIn(queueSongs)
+        val mode = repeatMode.value
         // Top up the queue with Spotify recommendations as we approach the end.
         maybeExtendRadio(queueSongs, cur)
-        if (cur >= queueSongs.size - 1 && autoplayRadioEnabled) {
-            // End of the queue (e.g. a single). Don't loop back to the start —
-            // wait for the radio fetch kicked off above to append tracks and
-            // continue into them, like Spotify's autoplay.
-            continueIntoRadio(queueSongs, context)
+        if (cur >= queueSongs.size - 1) {
+            if (mode == com.music.spotui.di.RepeatMode.ALL) {
+                val nextSong = queueSongs[0]
+                updateSongState(nextSong.coverUri, nextSong.title, nextSong.singer, true, nextSong.id, 0, nextSong.album)
+                SongPlayer.playSong(nextSong.url, context)
+            } else if (autoplayRadioEnabled) {
+                continueIntoRadio(queueSongs, context)
+            } else {
+                SongPlayer.seekTo(0)
+                SongPlayer.pause()
+                updateSongState(queueSongs[cur].coverUri, queueSongs[cur].title, queueSongs[cur].singer, false, queueSongs[cur].id, cur, queueSongs[cur].album)
+            }
             return
         }
-        val nextIdx = if (cur < queueSongs.size - 1) cur + 1 else 0
+        val nextIdx = cur + 1
         val nextSong = queueSongs[nextIdx]
         updateSongState(
             nextSong.coverUri,
@@ -229,31 +226,94 @@ class PlayerViewModel @Inject constructor(
 
     @Volatile private var awaitingRadioContinue = false
 
-    /** Waits (max ~10s) for the autoplay radio to extend the queue past
-     *  [queueSongs] and plays the first appended track; falls back to looping
-     *  the queue if no radio tracks arrive. */
+    /** Attempts to fetch kosher radio recommendations or same-artist tracks to extend the queue.
+     *  If none are available and Repeat is OFF, stops cleanly instead of infinitely looping. */
     private fun continueIntoRadio(queueSongs: List<SongsModel>, context: Context) {
         if (awaitingRadioContinue) return
         awaitingRadioContinue = true
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                repeat(40) {
-                    val q = currentSongState.queue.value
-                    if (q.size > queueSongs.size) {
-                        val next = q[queueSongs.size]
-                        withContext(Dispatchers.Main) {
-                            updateSongState(next.coverUri, next.title, next.singer, true, next.id, queueSongs.size, next.album)
-                            SongPlayer.playSong(next.url, context)
-                        }
-                        return@launch
+                val cur = currentPositionIn(queueSongs)
+                val currentSong = queueSongs.getOrNull(cur) ?: queueSongs.firstOrNull() ?: return@launch
+                val currentSpotifyId = currentSong.spotifyTrackId.ifBlank { null }
+                val currentTitle = currentSong.title.trim().lowercase()
+
+                val existingSpotifyIds = queueSongs.mapNotNull { it.spotifyTrackId.ifBlank { null } }.toSet()
+                val existingTitles = queueSongs.map { it.title.trim().lowercase() }.toSet()
+
+                fun filterValidNewTracks(candidates: List<SongsModel>): List<SongsModel> {
+                    return candidates.filter { candidate ->
+                        val candSpotifyId = candidate.spotifyTrackId.ifBlank { null }
+                        val candTitle = candidate.title.trim().lowercase()
+
+                        // Must not be current track
+                        val isCurrent = (currentSpotifyId != null && candSpotifyId == currentSpotifyId) ||
+                                (candTitle.isNotBlank() && candTitle == currentTitle)
+                        if (isCurrent) return@filter false
+
+                        // Must not already be in queue
+                        val inQueue = (candSpotifyId != null && candSpotifyId in existingSpotifyIds) ||
+                                (candTitle.isNotBlank() && candTitle in existingTitles)
+                        if (inQueue) return@filter false
+
+                        true
                     }
-                    delay(250L)
                 }
-                // Radio never arrived — stop cleanly instead of looping the same
-                // track again (issue 1: song replayed itself when repeat was off).
-                withContext(Dispatchers.Main) {
-                    SongPlayer.stop()
-                    currentSongState.updatePlayingState(false)
+
+                // Step 1: Spotify Radio recommendations from seed track IDs
+                val seeds = queueSongs.takeLast(5)
+                    .mapNotNull { it.spotifyTrackId.ifBlank { null } }
+                    .distinct()
+
+                var freshTracks = emptyList<SongsModel>()
+                if (seeds.isNotEmpty()) {
+                    try {
+                        val recs = repository.provideRecommendations(seeds)
+                        freshTracks = filterValidNewTracks(recs)
+                    } catch (e: Exception) {
+                        Log.w("PlayerViewModel", "Radio recommendations fetch failed", e)
+                    }
+                }
+
+                // Step 2: Same-Artist fallback
+                if (freshTracks.isEmpty() && currentSong.singer.isNotBlank()) {
+                    try {
+                        var artistSongs = emptyList<SongsModel>()
+                        repository.provideArtistSongs(currentSong.singer.trim()).collect { response ->
+                            if (response is Response.Success) {
+                                artistSongs = response.data.orEmpty()
+                            }
+                        }
+                        freshTracks = filterValidNewTracks(artistSongs).shuffled().take(10)
+                    } catch (e: Exception) {
+                        Log.w("PlayerViewModel", "Same-artist fallback fetch failed", e)
+                    }
+                }
+
+                if (freshTracks.isNotEmpty()) {
+                    val newQueue = currentSongState.queue.value + freshTracks
+                    currentSongState.updateQueue(newQueue)
+                    val next = newQueue[queueSongs.size]
+                    withContext(Dispatchers.Main) {
+                        updateSongState(next.coverUri, next.title, next.singer, true, next.id, queueSongs.size, next.album)
+                        SongPlayer.playSong(next.url, context)
+                    }
+                } else {
+                    // No kosher tracks available: if repeat is on, loop, else STOP cleanly!
+                    val mode = repeatMode.value
+                    if (mode == com.music.spotui.di.RepeatMode.ALL || mode == com.music.spotui.di.RepeatMode.ONE) {
+                        val first = queueSongs.first()
+                        withContext(Dispatchers.Main) {
+                            updateSongState(first.coverUri, first.title, first.singer, true, first.id, 0, first.album)
+                            SongPlayer.playSong(first.url, context)
+                        }
+                    } else {
+                        withContext(Dispatchers.Main) {
+                            SongPlayer.seekTo(0)
+                            SongPlayer.pause()
+                            updateSongState(currentSong.coverUri, currentSong.title, currentSong.singer, false, currentSong.id, cur, currentSong.album)
+                        }
+                    }
                 }
             } finally {
                 awaitingRadioContinue = false
@@ -280,7 +340,14 @@ class PlayerViewModel @Inject constructor(
     fun playPreviousSong(queueSongs : List<SongsModel>, context: Context) {
         if (queueSongs.isEmpty()) return
         val cur = currentPositionIn(queueSongs)
-        val prevIdx = if (cur > 0) cur - 1 else queueSongs.size - 1
+        val mode = repeatMode.value
+        val prevIdx = if (cur > 0) {
+            cur - 1
+        } else if (mode == com.music.spotui.di.RepeatMode.ALL) {
+            queueSongs.size - 1
+        } else {
+            0
+        }
         val previousSong = queueSongs[prevIdx]
         updateSongState(previousSong.coverUri, previousSong.title, previousSong.singer, true, previousSong.id, prevIdx, previousSong.album)
         SongPlayer.playSong(previousSong.url, context)
@@ -307,6 +374,9 @@ class PlayerViewModel @Inject constructor(
     }
     fun updateRepeatState(repeatState : Boolean){
         currentSongState.updateRepeatState(repeatState)
+    }
+    fun toggleRepeatMode(): com.music.spotui.di.RepeatMode {
+        return currentSongState.toggleRepeatMode()
     }
     fun updateLikeState(likeState : Boolean){
         currentSongState.updateLikeState(likeState)

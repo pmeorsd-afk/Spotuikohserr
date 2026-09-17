@@ -377,29 +377,13 @@ fun SumUpSearchScreen(
                                         onClick = {
                                             when (item.type) {
                                                 "song" -> {
-                                                    val songUrl = item.songUrl.ifBlank {
-                                                        SongPlayer.buildSpotifyPlayQuery(item.spotifyTrackId, item.name, item.singer)
-                                                    }.let { savedUrl ->
-                                                        if (
-                                                            item.spotifyTrackId.isNotBlank() &&
-                                                            !savedUrl.startsWith("spotify:track:") &&
-                                                            !savedUrl.startsWith("youtube:")
-                                                        ) {
-                                                            SongPlayer.buildSpotifyPlayQuery(item.spotifyTrackId, item.name, item.singer)
-                                                        } else {
-                                                            savedUrl
-                                                        }
-                                                    }
-                                                    val song = SongsModel(
-                                                        item.songId, item.name, item.songAlbum, item.singer,
-                                                        item.image, songUrl, item.spotifyTrackId,
-                                                        explicit = item.explicit,
-                                                        durationMs = item.durationMs,
+                                                    navController.navigate(
+                                                        albumRoute(
+                                                            name = item.songAlbum.ifBlank { item.name },
+                                                            artist = item.singer,
+                                                            cover = item.image
+                                                        )
                                                     )
-                                                    searchViewModel.startRadioFromSong(song)
-                                                    SongPlayer.playSong(song.url, context)
-                                                    searchViewModel.updateSongState(
-                                                        song.coverUri, song.title, song.singer, true, song.id, 0, song.album)
                                                 }
                                                 "artist" -> navController.navigate(artistRoute(item.name, item.key.takeIf { it != item.name }.orEmpty()))
                                                 "album" -> navController.navigate(albumRoute(item.name, item.singer))

@@ -65,6 +65,7 @@ class CurrentSongState @Inject constructor() {
 
     val shuffle = mutableStateOf(false)
     val repeat = mutableStateOf(false)
+    val repeatMode = mutableStateOf(RepeatMode.OFF)
     val likeState = mutableStateOf(false)
 
     // Original queue order, kept while shuffle is on so turning it off restores
@@ -118,8 +119,23 @@ class CurrentSongState @Inject constructor() {
         shuffle.value = true
         return _queue.value.firstOrNull()
     }
-    fun updateRepeatState(newRepeatState : Boolean){
-        repeat.value = newRepeatState
+    fun updateRepeatState(newRepeatState: Boolean) {
+        setRepeatMode(if (newRepeatState) RepeatMode.ALL else RepeatMode.OFF)
+    }
+
+    fun setRepeatMode(mode: RepeatMode) {
+        repeatMode.value = mode
+        repeat.value = mode != RepeatMode.OFF
+    }
+
+    fun toggleRepeatMode(): RepeatMode {
+        val next = when (repeatMode.value) {
+            RepeatMode.OFF -> RepeatMode.ALL
+            RepeatMode.ALL -> RepeatMode.ONE
+            RepeatMode.ONE -> RepeatMode.OFF
+        }
+        setRepeatMode(next)
+        return next
     }
 
     /** Sync the play/pause state without touching the rest of the now-playing
@@ -182,3 +198,10 @@ class CurrentSongState @Inject constructor() {
         }
     }
 }
+
+enum class RepeatMode {
+    OFF,
+    ALL,
+    ONE
+}
+

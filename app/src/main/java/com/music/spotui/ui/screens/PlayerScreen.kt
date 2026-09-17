@@ -195,7 +195,8 @@ fun PlayerScreen(navController: NavController) {
 
     val songsResponse by playerViewModel.songs.collectAsState()
     val shuffle = playerViewModel.shuffleState.value
-    val repeat = playerViewModel.repeatState.value
+    val repeatMode = playerViewModel.repeatMode.value
+    val repeat = repeatMode != com.music.spotui.di.RepeatMode.OFF
 
     val songs = if (songsResponse is Response.Success){
         (songsResponse as Response.Success).data
@@ -451,16 +452,7 @@ fun PlayerScreen(navController: NavController) {
 
 
 
-    if((songProgressText != "0:00") && (songDurationText == songProgressText)){
-        if(repeat){
-            SongPlayer.seekTo(0)
-        }
-        else{
-            // Debounced: this block re-runs every recomposition until the next
-            // track's stream actually starts, so it must not skip repeatedly.
-            playerViewModel.autoAdvance(queueSongs, context)
-        }
-    }
+
 
     Log.d("queueSongaa", songs.toString())
     Log.d("queueSongc", playerViewModel.currentSongAlbum.value.toString())
@@ -724,7 +716,7 @@ fun PlayerScreen(navController: NavController) {
 
 
                 Spacer(modifier = Modifier.padding(5.dp))
-                PlayerFull(songPlayingState, playerViewModel, context, isLiked, shuffle, repeat, queueSongs)
+                PlayerFull(songPlayingState, playerViewModel, context, isLiked, shuffle, repeatMode, queueSongs)
             }
 
             // Spotify-style bottom row: current audio device (Connect) on the left,
@@ -1043,7 +1035,7 @@ fun PlayerFull(
     context: Context,
     isLiked: MutableState<Boolean>,
     shuffle: Boolean,
-    repeat: Boolean,
+    repeatMode: com.music.spotui.di.RepeatMode,
     queueSongs: List<SongsModel>
 ) {
 
@@ -1161,30 +1153,47 @@ fun PlayerFull(
             tint = Color.White,
             painter = painterResource(id = R.drawable.ic_player_skip),
             contentDescription = "")
-        Icon(
+        Box(
+            contentAlignment = Alignment.Center,
             modifier = Modifier
-                .size(20.dp)
+                .size(26.dp)
                 .clickable(
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null
                 ) {
-                    if (repeat) {
-                        playerViewModel.updateRepeatState(false)
-                    } else {
-                        playerViewModel.updateRepeatState(true)
-                    }
-
-
+                    playerViewModel.toggleRepeatMode()
                 }
-            ,
-            tint = if (repeat){
-                Color(AppPalette.toArgb())
+        ) {
+            val isRepeatActive = repeatMode != com.music.spotui.di.RepeatMode.OFF
+            Icon(
+                modifier = Modifier.size(20.dp),
+                tint = if (isRepeatActive) Color(AppPalette.toArgb()) else Color.White,
+                painter = painterResource(id = R.drawable.ic_repeat),
+                contentDescription = when (repeatMode) {
+                    com.music.spotui.di.RepeatMode.OFF -> "Repeat off"
+                    com.music.spotui.di.RepeatMode.ALL -> "Repeat all"
+                    com.music.spotui.di.RepeatMode.ONE -> "Repeat one"
+                }
+            )
+            if (repeatMode == com.music.spotui.di.RepeatMode.ONE) {
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.TopEnd)
+                        .size(10.dp)
+                        .clip(CircleShape)
+                        .background(Color(AppPalette.toArgb())),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "1",
+                        color = Color.Black,
+                        fontSize = 7.sp,
+                        fontWeight = FontWeight.Bold,
+                        lineHeight = 7.sp
+                    )
+                }
             }
-            else{
-                Color.White
-            },
-            painter = painterResource(id = R.drawable.ic_repeat),
-            contentDescription = "")
+        }
     }
 }
 

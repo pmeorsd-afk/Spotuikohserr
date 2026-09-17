@@ -39,6 +39,14 @@ object SongPlayer {
     private var player: ExoPlayer? = null
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
+    @Volatile var currentPlaybackToken: String = java.util.UUID.randomUUID().toString()
+        private set
+    @Volatile private var onTrackEndedListener: ((token: String) -> Unit)? = null
+
+    fun setOnTrackEndedListener(listener: ((token: String) -> Unit)?) {
+        onTrackEndedListener = listener
+    }
+
     // Cache of resolved stream URLs keyed by the "title artist" query, so replays
     // and prefetched neighbours start instantly instead of re-hitting the network.
     private val streamCache = java.util.concurrent.ConcurrentHashMap<String, String>()
@@ -202,6 +210,7 @@ object SongPlayer {
         val appContext = context.applicationContext
         appCtx = appContext
         currentRequest = song
+        currentPlaybackToken = java.util.UUID.randomUUID().toString()
         // A manual play (tap / next / prev) supersedes any in-flight crossfade.
         cancelCrossfade()
         // Do not keep the previous track audible while this request resolves.
@@ -1454,7 +1463,19 @@ object SongPlayer {
             .setAudioAttributes(buildAudioAttributes(), handleAudioFocus)
             .setHandleAudioBecomingNoisy(handleAudioFocus)
             .build()
+        attachListener(p)
         return p to filter
+    }
+
+    private fun attachListener(p: ExoPlayer) {
+        p.addListener(object : androidx.media3.common.Player.Listener {
+            override fun onPlaybackStateChanged(playbackState: Int) {
+                if (playbackState == androidx.media3.common.Player.STATE_ENDED) {
+                    val token = currentPlaybackToken
+                    onTrackEndedListener?.invoke(token)
+                }
+            }
+        })
     }
 
     private fun ensurePlayer(context: Context) {
@@ -1816,6 +1837,7 @@ object SongPlayer {
             // (cover art, canvas, title) and update the playback identity for error recovery.
             pendingNextSong?.let { next ->
                 currentRequest = next.url
+                currentPlaybackToken = java.util.UUID.randomUUID().toString()
                 boundState?.updateSongState(
                     next.coverUri, next.title, next.singer, true,
                     next.id, pendingNextSongIdx, next.album,
