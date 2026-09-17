@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 171,
-  "last_updated": "2026-09-17T19:16:19.212Z",
+  "version": 172,
+  "last_updated": "2026-09-17T19:17:11.965Z",
   "artists": [
+    {
+      "id": "5muJpQsbEN7NzhHyFpbjnM",
+      "canonical_name": "ביני לנדאו",
+      "aliases": [
+        "ביני לנדאו"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-17T19:17:11.965Z"
+    },
     {
       "id": "6hZQpZhZfZJuyAVkPZ1W7n",
       "canonical_name": "צמאה",
