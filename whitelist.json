@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 168,
-  "last_updated": "2026-09-17T19:11:30.647Z",
+  "version": 169,
+  "last_updated": "2026-09-17T19:13:11.454Z",
   "artists": [
     {
       "id": "6hZQpZhZfZJuyAVkPZ1W7n",
@@ -473,9 +473,9 @@
         "Ishay Ribo",
         "ישי ריבו"
       ],
-      "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-17T19:05:23.293Z"
+      "status": "blocked",
+      "notes": "blocked via telegram",
+      "updated_at": "2026-09-17T19:13:11.454Z"
     },
     {
       "id": "",
