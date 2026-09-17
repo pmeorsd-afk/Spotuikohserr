@@ -200,7 +200,6 @@ fun LikedSongsScreen(
                                     indication = null
                                 ) {
                                     albumViewModel.updateQueue(likedSongs)
-                                    SongPlayer.playSong(likedSongs[0].url, context)
                                     albumViewModel.updateSongState(
                                         likedSongs[0].coverUri,
                                         likedSongs[0].title,
@@ -210,6 +209,7 @@ fun LikedSongsScreen(
                                         0,
                                         "Liked Songs"
                                     )
+                                    SongPlayer.playSong(likedSongs[0].url, context)
                                 }
                         ) {
                             Icon(
@@ -249,7 +249,6 @@ fun LikedSongsScreen(
                                 indication = null
                             ) {
                                 albumViewModel.updateQueue(likedSongs)
-                                SongPlayer.playSong(likedSongs[song].url, context)
                                 albumViewModel.updateSongState(
                                     likedSongs[song].coverUri,
                                     likedSongs[song].title,
@@ -259,6 +258,7 @@ fun LikedSongsScreen(
                                     song,
                                     "Liked Songs"
                                 )
+                                SongPlayer.playSong(likedSongs[song].url, context)
                             }
                     ) {
 

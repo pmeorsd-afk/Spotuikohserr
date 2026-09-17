@@ -383,7 +383,6 @@ fun PlaylistScreen(navController: NavController, playlistId: String, playlistNam
                                 onLongClick = { menuSong = song },
                                 onClick = {
                                     playlistViewModel.updateQueue(displaySongs)
-                                    SongPlayer.playSong(song.url, context)
                                     playlistViewModel.updateSongState(
                                         song.coverUri,
                                         song.title,
@@ -393,6 +392,7 @@ fun PlaylistScreen(navController: NavController, playlistId: String, playlistNam
                                         index,
                                         playlist.name
                                     )
+                                    SongPlayer.playSong(song.url, context)
                                 },
                             )
                     ) {

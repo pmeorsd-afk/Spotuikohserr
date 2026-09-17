@@ -41,6 +41,8 @@ object SongPlayer {
 
     @Volatile var currentPlaybackToken: String = java.util.UUID.randomUUID().toString()
         private set
+    @Volatile var activePlaybackToken: String? = null
+        private set
     @Volatile private var onTrackEndedListener: ((token: String) -> Unit)? = null
 
     fun setOnTrackEndedListener(listener: ((token: String) -> Unit)?) {
@@ -210,7 +212,10 @@ object SongPlayer {
         val appContext = context.applicationContext
         appCtx = appContext
         currentRequest = song
-        currentPlaybackToken = java.util.UUID.randomUUID().toString()
+        // Invalidate active playback token so cleanup of the previous track cannot fire track-ended callbacks
+        activePlaybackToken = null
+        val preparedToken = java.util.UUID.randomUUID().toString()
+        currentPlaybackToken = preparedToken
         // A manual play (tap / next / prev) supersedes any in-flight crossfade.
         cancelCrossfade()
         // Do not keep the previous track audible while this request resolves.
@@ -282,6 +287,8 @@ object SongPlayer {
                     }
                     restoreQuery = null
                     player!!.playWhenReady = true
+                    // Playback has officially started for this token!
+                    activePlaybackToken = preparedToken
                 }
                 startPositionWatch()
             } catch (e: Exception) {
@@ -1471,8 +1478,23 @@ object SongPlayer {
         p.addListener(object : androidx.media3.common.Player.Listener {
             override fun onPlaybackStateChanged(playbackState: Int) {
                 if (playbackState == androidx.media3.common.Player.STATE_ENDED) {
-                    val token = currentPlaybackToken
-                    onTrackEndedListener?.invoke(token)
+                    val token = activePlaybackToken
+                    // CRITICAL: Only fire if there is an active playing token, matching the current token,
+                    // the player actually has media items, and playback reached near the duration end.
+                    // This protects against spurious STATE_ENDED from clearMediaItems() or empty timeline.
+                    if (token != null &&
+                        token == currentPlaybackToken &&
+                        p.mediaItemCount > 0 &&
+                        p.currentMediaItem != null
+                    ) {
+                        val dur = runCatching { p.duration }.getOrDefault(0L)
+                        val pos = runCatching { p.currentPosition }.getOrDefault(0L)
+                        val reachedEnd = dur <= 0L || pos >= (dur - 2_000L).coerceAtLeast(0L)
+                        if (reachedEnd) {
+                            activePlaybackToken = null
+                            onTrackEndedListener?.invoke(token)
+                        }
+                    }
                 }
             }
         })
@@ -1594,6 +1616,7 @@ object SongPlayer {
     }
 
     fun stop() {
+        activePlaybackToken = null
         cancelCrossfade()
         player?.stop()
     }
@@ -1856,7 +1879,9 @@ object SongPlayer {
             // (cover art, canvas, title) and update the playback identity for error recovery.
             pendingNextSong?.let { next ->
                 currentRequest = next.url
-                currentPlaybackToken = java.util.UUID.randomUUID().toString()
+                val newToken = java.util.UUID.randomUUID().toString()
+                currentPlaybackToken = newToken
+                activePlaybackToken = newToken
                 boundState?.updateSongState(
                     next.coverUri, next.title, next.singer, true,
                     next.id, pendingNextSongIdx, next.album,

@@ -425,7 +425,6 @@ fun SumUpAlbumScreen(
                                         indication = null,
                                     ) {
                                         albumViewModel.startShuffled(albumSongs)?.let { first ->
-                                            SongPlayer.playSong(first.url, context)
                                             albumViewModel.updateSongState(
                                                 first.coverUri,
                                                 first.title,
@@ -435,6 +434,7 @@ fun SumUpAlbumScreen(
                                                 0,
                                                 albumName,
                                             )
+                                            SongPlayer.playSong(first.url, context)
                                         }
                                     },
                                 contentDescription = "Shuffle play",
@@ -462,7 +462,6 @@ fun SumUpAlbumScreen(
                                                 albumViewModel.setPlaying(true)
                                             else -> {
                                                 albumViewModel.updateQueue(albumSongs)
-                                                SongPlayer.playSong(albumSongs[0].url, context)
                                                 albumViewModel.updateSongState(
                                                     albumSongs[0].coverUri,
                                                     albumSongs[0].title,
@@ -472,6 +471,7 @@ fun SumUpAlbumScreen(
                                                     0,
                                                     albumName
                                                 )
+                                                SongPlayer.playSong(albumSongs[0].url, context)
                                             }
                                         }
                                     }
@@ -524,7 +524,6 @@ fun SumUpAlbumScreen(
                                 onLongClick = { menuSong = albumSongs[song] },
                                 onClick = {
                                     albumViewModel.updateQueue(albumSongs)
-                                    SongPlayer.playSong(albumSongs[song].url, context)
                                     albumViewModel.updateSongState(
                                         albumSongs[song].coverUri,
                                         albumSongs[song].title,
@@ -534,6 +533,7 @@ fun SumUpAlbumScreen(
                                         song,
                                         albumName
                                     )
+                                    SongPlayer.playSong(albumSongs[song].url, context)
                                 },
                             )
                     ) {
