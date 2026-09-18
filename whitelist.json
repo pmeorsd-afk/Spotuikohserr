@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 180,
-  "last_updated": "2026-09-18T09:02:46.734Z",
+  "version": 181,
+  "last_updated": "2026-09-18T09:09:14.053Z",
   "artists": [
     {
       "id": "5muJpQsbEN7NzhHyFpbjnM",
@@ -484,8 +484,8 @@
         "ישי ריבו"
       ],
       "status": "approved",
-      "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-09-18T09:02:46.734Z"
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-18T09:09:14.053Z"
     },
     {
       "id": "",
