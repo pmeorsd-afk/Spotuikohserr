@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 187,
-  "last_updated": "2026-09-18T10:12:06.165Z",
+  "version": 188,
+  "last_updated": "2026-09-18T10:13:28.699Z",
   "artists": [
     {
       "id": "77rd7QGr3f2DAllOA9wNvm",
@@ -592,6 +592,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3sd2rctqSE2SpOXoGCvekr",
+      "title": "ניגון של צדיק",
+      "artist": "ארי גולד, אלחנן אלחדד",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-18T10:13:28.699Z"
+    },
     {
       "id": "0nuHYqVjSf2BkpBrRxlXp1",
       "title": "אהבת תורה",
