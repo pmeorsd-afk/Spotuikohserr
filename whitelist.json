@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 179,
-  "last_updated": "2026-09-18T09:02:13.342Z",
+  "version": 180,
+  "last_updated": "2026-09-18T09:02:46.734Z",
   "artists": [
     {
       "id": "5muJpQsbEN7NzhHyFpbjnM",
@@ -485,7 +485,7 @@
       ],
       "status": "approved",
       "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-09-18T09:02:13.342Z"
+      "updated_at": "2026-09-18T09:02:46.734Z"
     },
     {
       "id": "",
