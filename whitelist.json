@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 181,
-  "last_updated": "2026-09-18T09:09:14.053Z",
+  "version": 182,
+  "last_updated": "2026-09-18T09:09:54.946Z",
   "artists": [
     {
       "id": "5muJpQsbEN7NzhHyFpbjnM",
@@ -582,6 +582,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0ruRGo21nANcCppCWki4ko",
+      "title": "אני שומע את קולכם",
+      "artist": "Ishay Ribo, גלגלצ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-18T09:09:54.946Z"
+    },
     {
       "id": "4A5lRH29TyKxllsl94BWex",
       "title": "סדר העבודה",
