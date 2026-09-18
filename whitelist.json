@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 184,
-  "last_updated": "2026-09-18T09:13:58.946Z",
+  "version": 185,
+  "last_updated": "2026-09-18T09:59:06.411Z",
   "artists": [
     {
       "id": "5muJpQsbEN7NzhHyFpbjnM",
@@ -582,6 +582,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0nuHYqVjSf2BkpBrRxlXp1",
+      "title": "אהבת תורה",
+      "artist": "ארי גולד, מוטי וייס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-18T09:59:06.411Z"
+    },
     {
       "id": "0ruRGo21nANcCppCWki4ko",
       "title": "אני שומע את קולכם",
