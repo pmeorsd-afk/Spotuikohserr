@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 190,
-  "last_updated": "2026-09-18T10:36:06.938Z",
+  "version": 191,
+  "last_updated": "2026-09-18T10:36:09.724Z",
   "artists": [
     {
       "id": "03OYYbDXTs2oyNyR3q6pn1",
@@ -607,8 +607,8 @@
       "title": "מעיד אני",
       "artist": "Ari Hill, מקהלת נשמה",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-18T10:36:06.938Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-18T10:36:09.724Z"
     },
     {
       "id": "3sd2rctqSE2SpOXoGCvekr",
