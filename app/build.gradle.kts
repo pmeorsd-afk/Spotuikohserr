@@ -33,21 +33,21 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-        manifestPlaceholders["appLabel"] = "SpotUI כשר"
+        manifestPlaceholders["appLabel"] = "Spotify"
     }
 
     flavorDimensions += "mode"
     productFlavors {
         create("user") {
             dimension = "mode"
-            manifestPlaceholders["appLabel"] = "SpotUI כשר"
+            manifestPlaceholders["appLabel"] = "Spotify"
             buildConfigField("boolean", "IS_ADMIN", "false")
             buildConfigField("String", "GITHUB_ADMIN_TOKEN", "\"\"")
         }
         create("admin") {
             dimension = "mode"
             applicationIdSuffix = ".admin"
-            manifestPlaceholders["appLabel"] = "SpotUI מנהל"
+            manifestPlaceholders["appLabel"] = "Spotify מנהל"
             buildConfigField("boolean", "IS_ADMIN", "true")
             buildConfigField("String", "GITHUB_ADMIN_TOKEN", "\"$githubAdminToken\"")
         }
