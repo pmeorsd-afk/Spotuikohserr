@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 183,
-  "last_updated": "2026-09-18T09:10:53.956Z",
+  "version": 184,
+  "last_updated": "2026-09-18T09:13:58.946Z",
   "artists": [
     {
       "id": "5muJpQsbEN7NzhHyFpbjnM",
@@ -587,8 +587,8 @@
       "title": "אני שומע את קולכם",
       "artist": "Ishay Ribo, גלגלצ",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-18T09:10:53.956Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-18T09:13:58.946Z"
     },
     {
       "id": "4A5lRH29TyKxllsl94BWex",
