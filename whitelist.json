@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 188,
-  "last_updated": "2026-09-18T10:13:28.699Z",
+  "version": 189,
+  "last_updated": "2026-09-18T10:14:00.993Z",
   "artists": [
+    {
+      "id": "03OYYbDXTs2oyNyR3q6pn1",
+      "canonical_name": "Ari Hill",
+      "aliases": [
+        "Ari Hill"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-18T10:14:00.993Z"
+    },
     {
       "id": "77rd7QGr3f2DAllOA9wNvm",
       "canonical_name": "ארי גולד",
