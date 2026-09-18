@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 192,
-  "last_updated": "2026-09-18T10:36:38.203Z",
+  "version": 193,
+  "last_updated": "2026-09-18T10:36:41.666Z",
   "artists": [
     {
       "id": "03OYYbDXTs2oyNyR3q6pn1",
@@ -607,8 +607,8 @@
       "title": "ויאמר סלחתי",
       "artist": "Ari Hill, Motty Vizel, שייע גרוס, איציק פילמר",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-18T10:36:38.203Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-18T10:36:41.666Z"
     },
     {
       "id": "1Qbp0MnCEAaxfm0cWhgVNm",
