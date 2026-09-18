@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 186,
-  "last_updated": "2026-09-18T10:02:23.070Z",
+  "version": 187,
+  "last_updated": "2026-09-18T10:12:06.165Z",
   "artists": [
+    {
+      "id": "77rd7QGr3f2DAllOA9wNvm",
+      "canonical_name": "ארי גולד",
+      "aliases": [
+        "ארי גולד"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-18T10:12:06.165Z"
+    },
     {
       "id": "5muJpQsbEN7NzhHyFpbjnM",
       "canonical_name": "ביני לנדאו",
