@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 175,
-  "last_updated": "2026-09-17T19:22:01.467Z",
+  "version": 176,
+  "last_updated": "2026-09-18T08:31:56.676Z",
   "artists": [
     {
       "id": "5muJpQsbEN7NzhHyFpbjnM",
@@ -588,7 +588,7 @@
       "artist": "Ishay Ribo",
       "status": "approved",
       "notes": "approved via telegram",
-      "updated_at": "2026-09-17T19:22:01.467Z"
+      "updated_at": "2026-09-18T08:31:56.676Z"
     },
     {
       "id": "4YhIleZHWSFNUI3zVj1VQx",
