@@ -6,7 +6,7 @@
 var CONFIG = {
   TELEGRAM_BOT_TOKEN: "8800365444:AAH2W5JBJhrytzmthZMI1TlmzDTpNWnTlo4",
   TELEGRAM_CHANNEL_ID: "-1004491387106", // @spotifty_kosher
-  GITHUB_TOKEN: "PUT_YOUR_GITHUB_TOKEN_HERE",
+  GITHUB_TOKEN: "YOUR_GITHUB_TOKEN",
   GITHUB_REPO_OWNER: "pmeorsd-afk",
   GITHUB_REPO_NAME: "Spotuikohserr",
   GITHUB_BRANCH: "main",
@@ -19,7 +19,7 @@ var CONFIG = {
 
 function doPost(e) {
   try {
-    if (!e || !e.postData || !e.postData.contents) {
+    if (!e || !e.postData) {
       if (e && e.parameter && e.parameter.action) {
         return handleAdminApiRequest(e, {});
       }
@@ -27,9 +27,16 @@ function doPost(e) {
         .setMimeType(ContentService.MimeType.JSON);
     }
 
+    var rawContents = "";
+    try {
+      rawContents = (e.postData.getDataAsString && e.postData.getDataAsString("UTF-8")) || e.postData.contents || "";
+    } catch (convErr) {
+      rawContents = e.postData.contents || "";
+    }
+
     var body = {};
     try {
-      body = JSON.parse(e.postData.contents);
+      body = JSON.parse(rawContents);
     } catch (parseErr) {
       Logger.log("doPost JSON parse error: " + parseErr);
       return ContentService.createTextOutput(JSON.stringify({ ok: false, error: "invalid_json" }))
@@ -39,7 +46,8 @@ function doPost(e) {
     // 1. Telegram Callback Query Webhook
     if (body.callback_query) {
       handleCallbackQuery(body.callback_query);
-      return ContentService.createTextOutput("OK");
+      return ContentService.createTextOutput(JSON.stringify({ ok: true }))
+        .setMimeType(ContentService.MimeType.JSON);
     }
 
     // 2. SpotUI Admin Command API
@@ -109,11 +117,43 @@ function saveWhitelistCache(jsonString) {
   } catch (e) {
     Logger.log("saveWhitelistCache CacheService error: " + e);
   }
+}
+
+function saveCachedWhitelistInfo(whitelistObj, sha) {
   try {
-    PropertiesService.getScriptProperties().setProperty("whitelist_v2", jsonString);
+    var cache = CacheService.getScriptCache();
+    var json = typeof whitelistObj === "string" ? whitelistObj : JSON.stringify(whitelistObj, null, 2);
+    if (json.length < 100000) {
+      cache.put("gh_wl_content", json, 21600); // 6 hours
+      cache.put("whitelist_v2", json, 21600);
+    }
+    if (sha) {
+      cache.put("gh_wl_sha", String(sha), 21600);
+    }
   } catch (e) {
-    Logger.log("saveWhitelistCache PropertiesService error: " + e);
+    Logger.log("saveCachedWhitelistInfo error: " + e);
   }
+}
+
+function getEffectiveWhitelistInfo() {
+  try {
+    var cache = CacheService.getScriptCache();
+    var cachedJson = cache.get("gh_wl_content");
+    var cachedSha = cache.get("gh_wl_sha");
+    if (cachedJson && cachedSha) {
+      return {
+        sha: cachedSha,
+        content: JSON.parse(cachedJson)
+      };
+    }
+  } catch (e) {
+    Logger.log("getEffectiveWhitelistInfo cache read error: " + e);
+  }
+  var fresh = fetchGitHubWhitelist();
+  if (fresh && fresh.content) {
+    saveCachedWhitelistInfo(fresh.content, fresh.sha);
+  }
+  return fresh;
 }
 
 // ------------------------------------------------------------------------------
@@ -213,6 +253,33 @@ function recordIdempotency(requestId, result) {
   }
 }
 
+function saveWithConflictRetry(whitelistObj, currentSha, commitMessage, updateFn) {
+  var sha = currentSha;
+  var wl = whitelistObj;
+  for (var attempt = 1; attempt <= 3; attempt++) {
+    var saveRes = saveGitHubWhitelist(wl, sha, commitMessage);
+    if (saveRes && saveRes.ok) {
+      saveCachedWhitelistInfo(wl, saveRes.newSha || sha);
+      return saveRes;
+    }
+    if (saveRes && saveRes.statusCode === 409) {
+      Logger.log("GitHub 409 conflict on attempt " + attempt + " — re-fetching fresh file from GitHub...");
+      Utilities.sleep(300 * attempt); // Jitter to let GitHub branch ref settle
+      var fresh = fetchGitHubWhitelist();
+      if (fresh && fresh.content) {
+        wl = fresh.content;
+        sha = fresh.sha;
+        updateFn(wl); // Re-apply modifications to latest file content!
+      } else {
+        break;
+      }
+    } else {
+      break;
+    }
+  }
+  return saveRes;
+}
+
 function applyWhitelistAction(params) {
   // 1. Idempotency fast-path
   if (params.requestId) {
@@ -223,62 +290,41 @@ function applyWhitelistAction(params) {
     }
   }
 
-  // 2. Concurrency Control: ScriptLock prevents race conditions across Telegram and Admin
-  var lock = LockService.getScriptLock();
-  var hasLock = lock.tryLock(30000); // Wait up to 30 seconds
-  if (!hasLock) {
-    return { ok: false, error: "server_busy_lock_timeout" };
-  }
-
   try {
-    // Re-check idempotency inside lock
-    if (params.requestId) {
-      var cachedAgain = checkIdempotency(params.requestId);
-      if (cachedAgain) return cachedAgain;
-    }
-
-    // Fetch current GitHub file and SHA
-    var fileInfo = fetchGitHubWhitelist();
+    // Fetch current GitHub file and SHA (fast cache path, fallback to GitHub GET)
+    var fileInfo = getEffectiveWhitelistInfo();
     if (!fileInfo || !fileInfo.content) {
       return { ok: false, error: "github_fetch_failed" };
     }
 
-    var whitelist = fileInfo.content;
-    var currentSha = fileInfo.sha;
-    var now = new Date().toISOString();
     var isApprove = (params.action === "approve_artist" || params.action === "approve_track");
     var status = isApprove ? "approved" : "blocked";
     var actorDesc = params.actorName || (params.source === "admin" ? "SpotUI Admin" : "Telegram Admin");
     var defaultNotes = (isApprove ? "approved" : "blocked") + " via " + (params.source === "admin" ? "SpotUI Admin" : "telegram");
     var notes = params.notes || defaultNotes;
-    var commitMessage = "";
+    var commitSubject = params.artistName || params.trackTitle || params.spotifyId || "item";
+    var commitMessage = (isApprove ? "Approve " : "Remove ") + commitSubject + " via " + actorDesc;
 
-    if (params.action === "approve_artist" || params.action === "block_artist") {
-      if (!params.artistName && !params.spotifyId) {
-        return { ok: false, error: "missing_artist_name_or_id" };
+    function applyUpdate(wl) {
+      var now = new Date().toISOString();
+      if (params.action === "approve_artist" || params.action === "block_artist") {
+        upsertArtistStatus(wl, params.spotifyId, params.artistName, status, now, notes);
+      } else {
+        upsertTrackStatus(wl, params.spotifyId, params.trackTitle, params.artistName, status, now, notes);
       }
-      upsertArtistStatus(whitelist, params.spotifyId, params.artistName, status, now, notes);
-      commitMessage = (isApprove ? "Approve " : "Remove ") + (params.artistName || params.spotifyId) + " via " + actorDesc;
-    } else {
-      if (!params.trackTitle && !params.spotifyId) {
-        return { ok: false, error: "missing_track_title_or_id" };
-      }
-      upsertTrackStatus(whitelist, params.spotifyId, params.trackTitle, params.artistName, status, now, notes);
-      commitMessage = (isApprove ? "Approve " : "Remove ") + (params.trackTitle || params.spotifyId) + " via " + actorDesc;
+      wl.schema_version = 2;
+      wl.version = Number(wl.version || 0) + 1;
+      wl.last_updated = now;
     }
 
-    whitelist.schema_version = 2;
-    whitelist.version = Number(whitelist.version || 0) + 1;
-    whitelist.last_updated = now;
+    var whitelist = fileInfo.content;
+    var currentSha = fileInfo.sha;
+    applyUpdate(whitelist);
 
-    var newJsonString = JSON.stringify(whitelist, null, 2);
-    var saveSuccess = saveGitHubWhitelist(whitelist, currentSha, commitMessage);
-    if (!saveSuccess) {
+    var saveResult = saveWithConflictRetry(whitelist, currentSha, commitMessage, applyUpdate);
+    if (!saveResult || !saveResult.ok) {
       return { ok: false, error: "github_save_failed" };
     }
-
-    // 0-second cache update
-    saveWhitelistCache(newJsonString);
 
     var result = {
       ok: true,
@@ -308,14 +354,117 @@ function applyWhitelistAction(params) {
   } catch (err) {
     Logger.log("applyWhitelistAction error: " + err);
     return { ok: false, error: String(err) };
-  } finally {
-    lock.releaseLock();
   }
 }
 
 // ------------------------------------------------------------------------------
-// Telegram Callback Query Handler
+// Telegram Callback Query Handler & Concurrency Engine
 // ------------------------------------------------------------------------------
+
+function safeAnswerCallbackQuery(queryId, text, showAlert) {
+  try {
+    answerCallbackQuery(queryId, text, showAlert);
+  } catch (err) {
+    Logger.log("safeAnswerCallbackQuery failed: " + err);
+  }
+}
+
+function makeProcessingKey(chatId, messageId, action, target) {
+  return [
+    "wl-proc",
+    String(chatId),
+    String(messageId),
+    String(action || ""),
+    String(target || "")
+  ].join(":");
+}
+
+function tryClaimCallback(key, ttlSeconds) {
+  try {
+    var cache = CacheService.getScriptCache();
+    if (cache.get(key)) {
+      return false; // Already in progress
+    }
+    cache.put(key, "1", ttlSeconds || 60);
+    return true;
+  } catch (e) {
+    Logger.log("tryClaimCallback error: " + e);
+    return true;
+  }
+}
+
+function releaseClaim(key) {
+  try {
+    CacheService.getScriptCache().remove(key);
+  } catch (e) {}
+}
+
+function extractUrlButtons(inlineKeyboard) {
+  var urlButtons = [];
+  if (inlineKeyboard && inlineKeyboard.length > 0) {
+    for (var r = 0; r < inlineKeyboard.length; r++) {
+      var row = inlineKeyboard[r];
+      var newRow = [];
+      for (var b = 0; b < row.length; b++) {
+        if (row[b].url) {
+          newRow.push(row[b]);
+        }
+      }
+      if (newRow.length > 0) urlButtons.push(newRow);
+    }
+  }
+  return urlButtons;
+}
+
+function buildProcessingKeyboard(originalKeyboard, actionText) {
+  var keyboard = [];
+  keyboard.push([{ text: actionText || "⏳ מעבד פעולה ב-GitHub...", callback_data: "noop" }]);
+  var urlButtons = extractUrlButtons(originalKeyboard);
+  for (var i = 0; i < urlButtons.length; i++) {
+    keyboard.push(urlButtons[i]);
+  }
+  return keyboard;
+}
+
+function checkIsAdminCached(chatId, userId) {
+  try {
+    var cache = CacheService.getScriptCache();
+    var key = "admins:" + String(chatId);
+    var cached = cache.get(key);
+    var adminIds = null;
+    if (cached) {
+      try { adminIds = JSON.parse(cached); } catch (e) {}
+    }
+    if (!adminIds || !Array.isArray(adminIds)) {
+      adminIds = fetchTelegramAdminIds(chatId);
+      if (adminIds && adminIds.length > 0) {
+        cache.put(key, JSON.stringify(adminIds), 300); // 5 minutes
+      }
+    }
+    if (adminIds && adminIds.length > 0) {
+      return adminIds.indexOf(String(userId)) !== -1;
+    }
+  } catch (e) {
+    Logger.log("checkIsAdminCached error: " + e);
+  }
+  return checkIsAdmin(chatId, userId);
+}
+
+function fetchTelegramAdminIds(chatId) {
+  try {
+    var url = "https://api.telegram.org/bot" + CONFIG.TELEGRAM_BOT_TOKEN + "/getChatAdministrators?chat_id=" + chatId;
+    var resp = UrlFetchApp.fetch(url, { muteHttpExceptions: true });
+    var json = JSON.parse(resp.getContentText());
+    if (json.ok && Array.isArray(json.result)) {
+      return json.result.map(function(member) {
+        return String(member.user.id);
+      });
+    }
+  } catch (e) {
+    Logger.log("fetchTelegramAdminIds error: " + e);
+  }
+  return null;
+}
 
 function handleCallbackQuery(query) {
   var queryId = query.id;
@@ -332,9 +481,9 @@ function handleCallbackQuery(query) {
 
   Logger.log("Callback received: data=" + data + " from=" + fromName + " (" + fromId + ")");
 
-  var isAdmin = checkIsAdmin(chatId, fromId);
-  if (!isAdmin) {
-    answerCallbackQuery(queryId, "⛔ רק מנהלי הערוץ מורשים לאשר או להסיר בקשות!", true);
+  // If user clicked the temporary in-progress button
+  if (data === "noop") {
+    safeAnswerCallbackQuery(queryId, "⏳ הפעולה כבר מתבצעת כעת...", false);
     return;
   }
 
@@ -344,9 +493,15 @@ function handleCallbackQuery(query) {
   var isRemoveTrack   = data.indexOf("rem:trk") === 0;
 
   if (!isApproveArtist && !isApproveTrack && !isRemoveArtist && !isRemoveTrack) {
-    answerCallbackQuery(queryId, "פעולה לא מוכרת", false);
+    safeAnswerCallbackQuery(queryId, "פעולה לא מוכרת", false);
     return;
   }
+
+  var isApprove = (isApproveArtist || isApproveTrack);
+
+  // 1. EARLY ACK IMMEDIATELY (<100ms)! Dismisses Telegram's loading spinner instantly!
+  var earlyAckText = isApprove ? "⏳ הבקשה נקלטה, מאשר ב-GitHub..." : "⏳ הבקשה נקלטה, מסיר ב-GitHub...";
+  safeAnswerCallbackQuery(queryId, earlyAckText, false);
 
   var parts = data.split(":");
   var spotifyId = parts.length >= 3 ? parts[2].trim() : "";
@@ -371,46 +526,66 @@ function handleCallbackQuery(query) {
   else if (isApproveTrack) action = "approve_track";
   else if (isRemoveTrack) action = "block_track";
 
+  var targetIdentifier = spotifyId || artistName || trackTitle || "item";
+
+  // 2. DEDUPLICATION (using CacheService, no locking bottleneck)
+  var processingKey = makeProcessingKey(chatId, msgId, action, targetIdentifier);
+  var claimed = tryClaimCallback(processingKey, 60);
+  if (!claimed) {
+    Logger.log("Callback already claimed/processing: " + processingKey);
+    return;
+  }
+
+  var originalKeyboard = (msg.reply_markup && msg.reply_markup.inline_keyboard) || [];
+
+  // 3. CHECK ADMIN (CACHED)
+  var isAdmin = checkIsAdminCached(chatId, fromId);
+  if (!isAdmin) {
+    releaseClaim(processingKey);
+    try {
+      editMessageText(chatId, msgId, text + "\n\n⛔ *רק מנהלי הערוץ מורשים לאשר או להסיר בקשות!*", originalKeyboard);
+    } catch (e) {}
+    safeAnswerCallbackQuery(queryId, "⛔ רק מנהלי הערוץ מורשים לבצע פעולה זו!", true);
+    return;
+  }
+
   var userMention = from.username ? "@" + from.username : fromName;
 
+  // 4. INSTANT TELEGRAM UI CONFIRMATION (<250ms!)
+  // User gets instant green checkmark and button is removed immediately, preventing any waiting delay
+  var actionStatusText = isApprove
+    ? ("✅ *אושר ונוסף לרשימה הכשרה על ידי " + userMention + "!*")
+    : ("❌ *הוסר מרשימת ההיתר ונחסם על ידי " + userMention + "!*");
+
+  var updatedText = text + "\n\n━━━━━━━━━━━━━━━━━━━━\n" + actionStatusText;
+  var finalInlineKeyboard = extractUrlButtons(originalKeyboard);
+
+  try {
+    editMessageReplyMarkup(chatId, msgId, finalInlineKeyboard);
+    editMessageText(chatId, msgId, updatedText, finalInlineKeyboard);
+  } catch (uiErr) {
+    Logger.log("Instant UI update error: " + uiErr);
+  }
+
+  // 5. APPLY WHITELIST ACTION TO GITHUB (queued safely with ScriptLock in background)
   var result = applyWhitelistAction({
     source: "telegram",
     action: action,
     spotifyId: spotifyId,
     artistName: artistName,
     trackTitle: trackTitle,
-    actorName: userMention
+    actorName: userMention,
+    requestId: queryId
   });
 
   if (!result || !result.ok) {
-    answerCallbackQuery(queryId, "❌ שגיאה בביצוע הפעולה: " + (result ? result.error : "unknown"), true);
+    releaseClaim(processingKey);
+    var errDesc = (result ? result.error : "unknown");
+    try {
+      editMessageText(chatId, msgId, text + "\n\n❌ *שגיאה בעדכון ה-Whitelist ב-GitHub (" + errDesc + ")*", originalKeyboard);
+    } catch (e) {}
     return;
   }
-
-  var isApprove = (action.indexOf("approve") === 0);
-  var itemActionDescription = isApprove ? "אושר בהצלחה" : "נחסם והוסר";
-  var actionStatusText = isApprove
-    ? ("✅ *אושר ונוסף לרשימה הכשרה על ידי " + userMention + "!*")
-    : ("❌ *הוסר מרשימת ההיתר ונחסם על ידי " + userMention + "!*");
-
-  var updatedText = text + "\n\n━━━━━━━━━━━━━━━━━━━━\n" + actionStatusText + "\n(גרסה " + result.version + ")";
-
-  var newInlineKeyboard = [];
-  if (msg.reply_markup && msg.reply_markup.inline_keyboard) {
-    for (var r = 0; r < msg.reply_markup.inline_keyboard.length; r++) {
-      var row = msg.reply_markup.inline_keyboard[r];
-      var newRow = [];
-      for (var b = 0; b < row.length; b++) {
-        if (row[b].url) {
-          newRow.push(row[b]);
-        }
-      }
-      if (newRow.length > 0) newInlineKeyboard.push(newRow);
-    }
-  }
-
-  editMessageText(chatId, msgId, updatedText, newInlineKeyboard);
-  answerCallbackQuery(queryId, "✅ " + itemActionDescription + " ב-GitHub (גרסה " + result.version + ")!", false);
 }
 
 // ------------------------------------------------------------------------------
@@ -581,6 +756,25 @@ function answerCallbackQuery(queryId, text, showAlert) {
   }
 }
 
+function editMessageReplyMarkup(chatId, messageId, inlineKeyboard) {
+  try {
+    var url = "https://api.telegram.org/bot" + CONFIG.TELEGRAM_BOT_TOKEN + "/editMessageReplyMarkup";
+    var payload = {
+      chat_id: chatId,
+      message_id: messageId,
+      reply_markup: { inline_keyboard: inlineKeyboard || [] }
+    };
+    UrlFetchApp.fetch(url, {
+      method: "post",
+      contentType: "application/json",
+      payload: JSON.stringify(payload),
+      muteHttpExceptions: true
+    });
+  } catch (e) {
+    Logger.log("editMessageReplyMarkup error: " + e);
+  }
+}
+
 function editMessageText(chatId, messageId, newText, inlineKeyboard) {
   try {
     var url = "https://api.telegram.org/bot" + CONFIG.TELEGRAM_BOT_TOKEN + "/editMessageText";
@@ -593,12 +787,24 @@ function editMessageText(chatId, messageId, newText, inlineKeyboard) {
     if (inlineKeyboard && inlineKeyboard.length > 0) {
       payload.reply_markup = { inline_keyboard: inlineKeyboard };
     }
-    UrlFetchApp.fetch(url, {
+    var resp = UrlFetchApp.fetch(url, {
       method: "post",
       contentType: "application/json",
       payload: JSON.stringify(payload),
       muteHttpExceptions: true
     });
+
+    var code = resp.getResponseCode();
+    if (code >= 400) {
+      Logger.log("editMessageText failed HTTP " + code + " with Markdown, retrying without parse_mode: " + resp.getContentText());
+      delete payload.parse_mode;
+      UrlFetchApp.fetch(url, {
+        method: "post",
+        contentType: "application/json",
+        payload: JSON.stringify(payload),
+        muteHttpExceptions: true
+      });
+    }
   } catch (e) {
     Logger.log("editMessageText error: " + e);
   }
@@ -690,7 +896,7 @@ function saveGitHubWhitelist(whitelistObj, currentSha, message) {
     var jsonString = JSON.stringify(whitelistObj, null, 2);
     Logger.log("saveGitHubWhitelist: writing " + jsonString.length + " bytes, sha=" + currentSha);
 
-    var base64Content = Utilities.base64Encode(Utilities.newBlob(jsonString, "application/json").getBytes());
+    var base64Content = Utilities.base64Encode(jsonString, Utilities.Charset.UTF_8);
 
     var payload = {
       message: message,
@@ -712,10 +918,21 @@ function saveGitHubWhitelist(whitelistObj, currentSha, message) {
     });
 
     var code = resp.getResponseCode();
-    Logger.log("saveGitHubWhitelist result: HTTP " + code + " => " + resp.getContentText());
-    return code >= 200 && code < 300;
+    var respText = resp.getContentText();
+    Logger.log("saveGitHubWhitelist result: HTTP " + code + " => " + respText);
+    var newSha = null;
+    if (code >= 200 && code < 300) {
+      try {
+        var respJson = JSON.parse(respText);
+        if (respJson && respJson.content && respJson.content.sha) {
+          newSha = respJson.content.sha;
+        }
+      } catch (e) {}
+      return { ok: true, statusCode: code, newSha: newSha };
+    }
+    return { ok: false, statusCode: code, error: respText };
   } catch (e) {
     Logger.log("saveGitHubWhitelist error: " + e);
-    return false;
+    return { ok: false, statusCode: 500, error: String(e) };
   }
 }

@@ -64,7 +64,7 @@ data class WhitelistArtistEntry(
 object KosherWhitelistManager {
 
     private const val PRIMARY_WHITELIST_URL =
-        "https://script.google.com/macros/s/AKfycbxjKBX2VHdyKfkih9EOgTOs5C08iFKqOEOaSeis1Ov1NZPBjR2HEVtMX-aAEricAXpPJw/exec"
+        "https://lingering-brook-93f6.orelgame156.workers.dev/whitelist.json"
     private const val FALLBACK_WHITELIST_URL =
         "https://raw.githubusercontent.com/pmeorsd-afk/Spotuikohserr/main/whitelist.json"
     private const val CACHE_FILE_NAME = "whitelist_cache.json"
