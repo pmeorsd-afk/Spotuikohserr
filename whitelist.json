@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 177,
-  "last_updated": "2026-09-18T08:37:25.952Z",
+  "version": 178,
+  "last_updated": "2026-09-18T08:51:26.560Z",
   "artists": [
     {
       "id": "5muJpQsbEN7NzhHyFpbjnM",
@@ -587,8 +587,8 @@
       "title": "סדר העבודה",
       "artist": "Ishay Ribo",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-18T08:31:56.676Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-18T08:51:26.560Z"
     },
     {
       "id": "4YhIleZHWSFNUI3zVj1VQx",
