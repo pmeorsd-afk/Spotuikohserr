@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 199,
-  "last_updated": "2026-09-22T16:20:32.263Z",
+  "version": 200,
+  "last_updated": "2026-09-22T16:20:35.766Z",
   "artists": [
     {
       "id": "",
@@ -10,8 +10,8 @@
         "בצלאל שמיר"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-22T16:20:32.263Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-22T16:20:35.766Z"
     },
     {
       "id": "03OYYbDXTs2oyNyR3q6pn1",
