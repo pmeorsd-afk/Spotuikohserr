@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 193,
-  "last_updated": "2026-09-18T10:36:41.666Z",
+  "version": 194,
+  "last_updated": "2026-09-22T13:07:31.487Z",
   "artists": [
     {
       "id": "03OYYbDXTs2oyNyR3q6pn1",
@@ -602,6 +602,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "60a0Rd6pjrkxjPbaKzXjfq",
+      "title": "In the End",
+      "artist": "Linkin Park",
+      "status": "approved",
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-22T13:07:31.487Z"
+    },
     {
       "id": "3mwDGA7KdU3Ag4SxnAY5yR",
       "title": "ויאמר סלחתי",
