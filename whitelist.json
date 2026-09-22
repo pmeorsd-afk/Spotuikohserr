@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 197,
-  "last_updated": "2026-09-22T13:36:37.785Z",
+  "version": 198,
+  "last_updated": "2026-09-22T13:36:39.537Z",
   "artists": [
     {
       "id": "03OYYbDXTs2oyNyR3q6pn1",
@@ -615,8 +615,8 @@
       "title": "In the End",
       "artist": "Linkin Park",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-22T13:36:35.913Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-22T13:36:39.537Z"
     },
     {
       "id": "3mwDGA7KdU3Ag4SxnAY5yR",
