@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 198,
-  "last_updated": "2026-09-22T13:36:39.537Z",
+  "version": 199,
+  "last_updated": "2026-09-22T16:20:32.263Z",
   "artists": [
+    {
+      "id": "",
+      "canonical_name": "בצלאל שמיר",
+      "aliases": [
+        "בצלאל שמיר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-22T16:20:32.263Z"
+    },
     {
       "id": "03OYYbDXTs2oyNyR3q6pn1",
       "canonical_name": "Ari Hill",
