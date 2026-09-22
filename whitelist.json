@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 201,
-  "last_updated": "2026-09-22T16:20:37.258Z",
+  "version": 202,
+  "last_updated": "2026-09-22T16:20:39.995Z",
   "artists": [
     {
       "id": "",
@@ -617,8 +617,8 @@
       "title": "סוכות 2026 דיג'י מאוריקו & בצלאל שמיר ויוסף חיים של'שמחות | מחרוזת סוכות",
       "artist": "בצלאל שמיר",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-22T16:20:37.258Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-22T16:20:39.995Z"
     },
     {
       "id": "6JbeC1dTbd3rJnEKJZRz3o",
