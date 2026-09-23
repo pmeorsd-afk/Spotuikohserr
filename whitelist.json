@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 204,
-  "last_updated": "2026-09-22T20:22:27.706Z",
+  "version": 205,
+  "last_updated": "2026-09-23T10:35:15.886Z",
   "artists": [
+    {
+      "id": "5H64fYkQmqjX0bS4bplq8F",
+      "canonical_name": "Haim Israel",
+      "aliases": [
+        "Haim Israel"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-23T10:35:15.886Z"
+    },
     {
       "id": "",
       "canonical_name": "בצלאל שמיר",
