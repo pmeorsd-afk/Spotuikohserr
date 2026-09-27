@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 212,
-  "last_updated": "2026-09-27T05:22:12.180Z",
+  "version": 213,
+  "last_updated": "2026-09-27T08:45:46.311Z",
   "artists": [
     {
       "id": "0zzoB1YCAFamA4SL7VEhxy",
@@ -650,6 +650,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5fiSYJVSI2kyQ7qUuGW2xS",
+      "title": "סוכות 2026",
+      "artist": "בצלאל שמיר, דיג'י מאוריקו, יוסף חיים של'שמחות",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-27T08:45:46.311Z"
+    },
     {
       "id": "",
       "title": "יהורם גאון- על כפיו יביא 2007",
