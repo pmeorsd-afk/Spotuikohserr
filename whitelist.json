@@ -1,15 +1,15 @@
 {
   "schema_version": 2,
-  "version": 209,
-  "last_updated": "2026-09-27T05:18:58.567Z",
+  "version": 210,
+  "last_updated": "2026-09-27T05:19:01.483Z",
   "artists": [
     {
       "id": "test_dummy",
       "canonical_name": "",
       "aliases": [],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-27T05:18:58.567Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-27T05:19:01.483Z"
     },
     {
       "id": "2zl95Ek1yTC1ZBpdrzzcLM",
