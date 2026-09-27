@@ -1,8 +1,16 @@
 {
   "schema_version": 2,
-  "version": 208,
-  "last_updated": "2026-09-23T10:54:39.512Z",
+  "version": 209,
+  "last_updated": "2026-09-27T05:18:58.567Z",
   "artists": [
+    {
+      "id": "test_dummy",
+      "canonical_name": "",
+      "aliases": [],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-27T05:18:58.567Z"
+    },
     {
       "id": "2zl95Ek1yTC1ZBpdrzzcLM",
       "canonical_name": "שילה אליה",
