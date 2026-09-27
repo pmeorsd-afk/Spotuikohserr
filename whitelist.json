@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 213,
-  "last_updated": "2026-09-27T08:45:46.311Z",
+  "version": 214,
+  "last_updated": "2026-09-27T08:45:49.549Z",
   "artists": [
     {
       "id": "0zzoB1YCAFamA4SL7VEhxy",
@@ -655,8 +655,8 @@
       "title": "סוכות 2026",
       "artist": "בצלאל שמיר, דיג'י מאוריקו, יוסף חיים של'שמחות",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-27T08:45:46.311Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-27T08:45:49.549Z"
     },
     {
       "id": "",
