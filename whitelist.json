@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 210,
-  "last_updated": "2026-09-27T05:19:01.483Z",
+  "version": 211,
+  "last_updated": "2026-09-27T05:22:09.342Z",
   "artists": [
+    {
+      "id": "0zzoB1YCAFamA4SL7VEhxy",
+      "canonical_name": "דוד בן ארזה",
+      "aliases": [
+        "דוד בן ארזה"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-27T05:22:09.342Z"
+    },
     {
       "id": "test_dummy",
       "canonical_name": "",
