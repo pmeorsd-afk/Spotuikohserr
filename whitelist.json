@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 218,
-  "last_updated": "2026-09-29T14:30:15.338Z",
+  "version": 219,
+  "last_updated": "2026-09-29T14:31:01.251Z",
   "artists": [
+    {
+      "id": "5Z0wTitcN5tieNIhXMBG7s",
+      "canonical_name": "R' Cheskie Weisz",
+      "aliases": [
+        "R' Cheskie Weisz"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-29T14:31:01.251Z"
+    },
     {
       "id": "5aJhDFv07pLIBB7uxVW49Y",
       "canonical_name": "יענקי היל",
