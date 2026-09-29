@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 215,
-  "last_updated": "2026-09-29T09:16:30.688Z",
+  "version": 216,
+  "last_updated": "2026-09-29T09:16:33.364Z",
   "artists": [
     {
       "id": "0zzoB1YCAFamA4SL7VEhxy",
@@ -655,8 +655,8 @@
       "title": "טאטע תטהר - גרסה אקוסטית",
       "artist": "יאיר אלייצור, בן צור",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-29T09:16:30.688Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-29T09:16:33.364Z"
     },
     {
       "id": "5fiSYJVSI2kyQ7qUuGW2xS",
