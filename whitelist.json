@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 216,
-  "last_updated": "2026-09-29T09:16:33.364Z",
+  "version": 217,
+  "last_updated": "2026-09-29T14:30:11.785Z",
   "artists": [
+    {
+      "id": "5aJhDFv07pLIBB7uxVW49Y",
+      "canonical_name": "יענקי היל",
+      "aliases": [
+        "יענקי היל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-09-29T14:30:11.785Z"
+    },
     {
       "id": "0zzoB1YCAFamA4SL7VEhxy",
       "canonical_name": "דוד בן ארזה",
