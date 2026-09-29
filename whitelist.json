@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 219,
-  "last_updated": "2026-09-29T14:31:01.251Z",
+  "version": 220,
+  "last_updated": "2026-09-29T14:31:04.863Z",
   "artists": [
     {
       "id": "5Z0wTitcN5tieNIhXMBG7s",
@@ -10,8 +10,8 @@
         "R' Cheskie Weisz"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-29T14:31:01.251Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-29T14:31:04.863Z"
     },
     {
       "id": "5aJhDFv07pLIBB7uxVW49Y",
