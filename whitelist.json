@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 217,
-  "last_updated": "2026-09-29T14:30:11.785Z",
+  "version": 218,
+  "last_updated": "2026-09-29T14:30:15.338Z",
   "artists": [
     {
       "id": "5aJhDFv07pLIBB7uxVW49Y",
@@ -10,8 +10,8 @@
         "יענקי היל"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-09-29T14:30:11.785Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-09-29T14:30:15.338Z"
     },
     {
       "id": "0zzoB1YCAFamA4SL7VEhxy",
