@@ -74,6 +74,7 @@ fun ArtistOptionsSheet(
                     model = avatarImage,
                     contentScale = ContentScale.Crop,
                     contentDescription = artistName,
+                    isAllowed = com.music.spotui.util.KosherWhitelistManager.isArtistWhitelisted(artistId, artistName)
                 )
                 Spacer(modifier = Modifier.width(14.dp))
                 Column {

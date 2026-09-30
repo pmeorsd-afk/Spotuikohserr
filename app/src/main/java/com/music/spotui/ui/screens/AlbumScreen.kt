@@ -75,7 +75,6 @@ import com.music.spotui.data.preferences.removeLikedSong
 import com.music.spotui.data.preferences.removeLikedSongId
 import com.music.spotui.di.Palette
 import com.music.spotui.di.SongPlayer
-import com.music.spotui.ui.components.LikedSongsScreen
 import com.music.spotui.ui.components.Loader
 import com.music.spotui.ui.components.Snackbar
 import com.music.spotui.ui.theme.AppBackground
@@ -119,11 +118,19 @@ fun AlbumScreen(
         val songsResponse = (songs as? Response.Success)?.data.orEmpty()
         val isSongsLoading = songs is Response.Loading
 
-        if (albumName == "Liked Songs") {
-            if (songs is Response.Loading && albums is Response.Loading) {
+        if (albumName == "Liked Songs" || albumName == "שירים שאהבתם") {
+            LaunchedEffect(Unit) {
+                navController.navigate(com.music.spotui.ui.navigation.Routes.Liked.route) {
+                    popUpTo(com.music.spotui.ui.navigation.Routes.Album.route) { inclusive = true }
+                }
+            }
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(Color(AppBackground.toArgb())),
+                contentAlignment = Alignment.Center
+            ) {
                 Loader()
-            } else {
-                LikedSongsScreen(albumsResponse, songsResponse, navController, context)
             }
         } else {
             SumUpAlbumScreen(

@@ -81,21 +81,25 @@ object SpotifySync {
     }
 
     /** Creates a new playlist on Spotify and adds the track to it. */
-    fun createPlaylistWithTrack(context: Context, name: String, trackId: String, onDone: (Boolean) -> Unit = {}) {
-        if (name.isBlank()) { onDone(false); return }
+    fun createPlaylistWithTrack(
+        context: Context,
+        name: String,
+        trackId: String,
+        onCreated: (com.metrolist.spotify.models.SpotifyPlaylist?) -> Unit = {},
+    ) {
+        if (name.isBlank()) { onCreated(null); return }
         val app = context.applicationContext
         scope.launch {
-            if (!SpotifyTokenProvider.ensureToken(app)) { onDone(false); return@launch }
+            if (!SpotifyTokenProvider.ensureToken(app)) { onCreated(null); return@launch }
             val playlist = Spotify.createPlaylist(name).getOrNull()
             if (playlist == null || playlist.id.isBlank()) {
-                Log.w(TAG, "createPlaylist '$name' failed"); onDone(false); return@launch
+                Log.w(TAG, "createPlaylist '$name' failed"); onCreated(null); return@launch
             }
-            val ok = trackId.isBlank() ||
-                Spotify.addTracksToPlaylist(playlist.id, listOf("spotify:track:$trackId")).isSuccess
-            if (ok && trackId.isNotBlank()) {
+            if (trackId.isNotBlank()) {
+                Spotify.addTracksToPlaylist(playlist.id, listOf("spotify:track:$trackId"))
                 membershipCache[playlist.id] = java.util.concurrent.ConcurrentHashMap.newKeySet<String>().apply { add(trackId) }
             }
-            onDone(ok)
+            onCreated(playlist)
         }
     }
 

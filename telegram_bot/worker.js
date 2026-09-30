@@ -57,8 +57,9 @@ export default {
     // --------------------------------------------------------------------------
     if (url.pathname === "/setWebhook") {
       const workerUrl = `${url.origin}/`;
+      const allowedUpdatesParam = encodeURIComponent(JSON.stringify(["message", "channel_post", "callback_query"]));
       const tgRes = await fetch(
-        `https://api.telegram.org/bot${CONFIG.TELEGRAM_BOT_TOKEN}/setWebhook?url=${encodeURIComponent(workerUrl)}`
+        `https://api.telegram.org/bot${CONFIG.TELEGRAM_BOT_TOKEN}/setWebhook?url=${encodeURIComponent(workerUrl)}&allowed_updates=${allowedUpdatesParam}&drop_pending_updates=true`
       );
       const tgData = await tgRes.json();
       return jsonResponse({ workerUrl, telegramResponse: tgData });

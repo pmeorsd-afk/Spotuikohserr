@@ -40,6 +40,9 @@ fun App() {
         Routes.Album.route -> {
             bottomBarState.value = false
         }
+        Routes.AddToLiked.route -> {
+            bottomBarState.value = false
+        }
     }
 
     Scaffold(

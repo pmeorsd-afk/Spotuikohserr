@@ -18,6 +18,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.music.spotui.ui.screens.AddToLikedSongsScreen
 import com.music.spotui.ui.screens.AlbumScreen
 import com.music.spotui.ui.screens.ArtistReleasesScreen
 import com.music.spotui.ui.screens.ArtistScreen
@@ -218,6 +219,14 @@ fun MyNavHost(
                 bottomBarPlayerState.value = playerState != ""
             }
             com.music.spotui.ui.screens.KosherAdminScreen(navHostController)
+        }
+
+        composable(Routes.AddToLiked.route) {
+            LaunchedEffect(Unit) {
+                bottomBarState.value = false
+                bottomBarPlayerState.value = false
+            }
+            AddToLikedSongsScreen(navHostController)
         }
 
         composable(

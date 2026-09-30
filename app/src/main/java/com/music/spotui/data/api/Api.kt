@@ -596,6 +596,11 @@ class Api @Inject constructor(
         if (playlistId.isBlank()) {
             emit(Response.Success(emptyList())); return@flow
         }
+        if (playlistId.startsWith("custom_")) {
+            val pl = com.music.spotui.data.preferences.CustomPlaylistStore.getPlaylists(context).firstOrNull { it.id == playlistId }
+            emit(Response.Success(pl?.cachedTracks.orEmpty()))
+            return@flow
+        }
         if (playlistId.startsWith("youtube:") || playlistId.startsWith("yt:") || playlistId.startsWith("VL") || playlistId.startsWith("PL") || playlistId.startsWith("RDAMPL") || playlistId.startsWith("MPREb_")) {
             com.metrolist.innertube.YouTube.playlist(playlistId).fold(
                 onSuccess = { items ->
@@ -687,8 +692,18 @@ class Api @Inject constructor(
             isPlaylist = true,
         )
 
+        val customPlaylists = com.music.spotui.data.preferences.CustomPlaylistStore.getPlaylists(context).map { cp ->
+            com.music.spotui.data.entity.LibraryEntry(
+                spotifyId = cp.id,
+                name = cp.name,
+                subtitle = "Playlist • " + com.music.spotui.data.preferences.CustomPlaylistStore.getSubtitle(cp.songKeys.size),
+                coverUri = cp.coverUri,
+                isPlaylist = true
+            )
+        }
+
         if (!SpotifyTokenProvider.ensureToken(context)) {
-            val localOnly = listOf(liked, downloaded)
+            val localOnly = listOf(liked, downloaded) + customPlaylists
             HomeCache.library = localOnly
             emit(Response.Success(localOnly))
             return@flow
@@ -712,7 +727,7 @@ class Api @Inject constructor(
                 isPlaylist = true,
             )
         }
-        val merged = listOf(liked, downloaded) + playlists + albums
+        val merged = listOf(liked, downloaded) + customPlaylists + playlists + albums
         HomeCache.library = merged
         emit(Response.Success(merged))
     }
@@ -751,7 +766,7 @@ class Api @Inject constructor(
             return@flow
         }
 
-        // 3. Spotify is authenticated: fetch library and merge with local non-Spotify tracks
+        // 3. Online: Fetch full list from Spotify using paging (50 items per page)
         val nonSpotifyLocal = localLiked.filter { it.spotifyTrackId.isBlank() }
 
         Spotify.likedSongs(limit = 50).fold(
@@ -828,6 +843,21 @@ class Api @Inject constructor(
         emit(Response.Loading())
         if (playlistId.isBlank()) {
             emit(Response.Error("missing playlist id")); return@flow
+        }
+        if (playlistId.startsWith("custom_")) {
+            val pl = com.music.spotui.data.preferences.CustomPlaylistStore.getPlaylists(context).firstOrNull { it.id == playlistId }
+            if (pl != null) {
+                emit(Response.Success(AlbumsModel(
+                    id = stableId(pl.id),
+                    artists = "Playlist",
+                    coverUri = pl.coverUri,
+                    name = pl.name,
+                    time = com.music.spotui.data.preferences.CustomPlaylistStore.getSubtitle(pl.songKeys.size)
+                )))
+            } else {
+                emit(Response.Error("Playlist not found"))
+            }
+            return@flow
         }
         if (playlistId.startsWith("youtube:") || playlistId.startsWith("yt:") || playlistId.startsWith("VL") || playlistId.startsWith("PL") || playlistId.startsWith("RDAMPL") || playlistId.startsWith("MPREb_")) {
             com.metrolist.innertube.YouTube.playlistDetails(playlistId).fold(

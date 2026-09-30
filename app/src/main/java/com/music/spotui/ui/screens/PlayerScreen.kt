@@ -9,10 +9,17 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.sizeIn
@@ -58,9 +65,12 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderColors
 import androidx.compose.material3.SliderDefaults
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.runtime.LaunchedEffect
@@ -84,6 +94,7 @@ import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.snapshotFlow
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.launch
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -94,6 +105,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
+import com.bumptech.glide.integration.compose.placeholder
 import com.music.spotui.ui.components.GlideImage
 import com.music.spotui.R
 import com.music.spotui.data.api.Response
@@ -154,14 +166,22 @@ fun PlayerScreen(navController: NavController) {
     }
 
     if (showSavedIn) {
-        playerViewModel.queue.value.firstOrNull { it.id == songId }?.let { track ->
-            com.music.spotui.ui.components.SavedInSheet(
-                song = track,
-                context = context,
-                onDismiss = { showSavedIn = false },
-                onLikedChanged = { isLiked.value = it },
-            )
-        } ?: run { showSavedIn = false }
+        val currentTrack = playerViewModel.queue.value.firstOrNull { it.id == songId } ?: SongsModel(
+            id = songId,
+            title = songTitle,
+            album = playerViewModel.currentSongAlbum.value,
+            singer = songSinger,
+            coverUri = songCoverUri,
+            url = "",
+            spotifyTrackId = "",
+            durationMs = SongPlayer.getDuration().toInt().coerceAtLeast(0)
+        )
+        com.music.spotui.ui.components.SavedInSheet(
+            song = currentTrack,
+            context = context,
+            onDismiss = { showSavedIn = false },
+            onLikedChanged = { isLiked.value = it },
+        )
     }
 
 
@@ -191,9 +211,18 @@ fun PlayerScreen(navController: NavController) {
     var dominentColor by remember {
         mutableStateOf(Color(AppBackground.toArgb()))
     }
-    Palette().extractSecondColorFromCoverUrl(context = context, songCoverUri){ color ->
-        dominentColor = color
+    LaunchedEffect(songCoverUri) {
+        if (songCoverUri.isNotBlank()) {
+            Palette().extractSecondColorFromCoverUrl(context = context, songCoverUri) { color ->
+                dominentColor = color
+            }
+        }
     }
+    val animatedBgColor by androidx.compose.animation.animateColorAsState(
+        targetValue = dominentColor,
+        animationSpec = androidx.compose.animation.core.tween(durationMillis = 600),
+        label = "PlayerBackground"
+    )
 
     val songsResponse by playerViewModel.songs.collectAsState()
     val shuffle = playerViewModel.shuffleState.value
@@ -506,8 +535,13 @@ fun PlayerScreen(navController: NavController) {
             .fillMaxSize()
             .background(
                 Brush.verticalGradient(
-                    colors = listOf(dominentColor, Color.Black),
-                    startY = 100f
+                    colors = listOf(
+                        animatedBgColor,
+                        animatedBgColor.copy(alpha = 0.60f),
+                        Color(0xFF141414),
+                        Color(0xFF121212)
+                    ),
+                    startY = 0f
                 )
             )
     ) {
@@ -534,7 +568,11 @@ fun PlayerScreen(navController: NavController) {
                     )
             )
         }
+        val lazyListState = rememberLazyListState()
+        val coroutineScope = rememberCoroutineScope()
+
         androidx.compose.foundation.lazy.LazyColumn(
+            state = lazyListState,
             modifier = Modifier
                 .fillMaxSize()
                 .statusBarsPadding(),
@@ -553,31 +591,24 @@ fun PlayerScreen(navController: NavController) {
                 onMenuClick = { showMenu = true },
                 contextName = playerViewModel.currentSongAlbum.value,
             )
-            //Spacer(modifier = Modifier.padding(16.dp))
-            // Swipe the artwork left/right to skip to the next/previous track. Using a
-            // HorizontalPager makes the artwork follow the finger and snap, syncing the
-            // change with the track (Spotify's now-playing gesture) instead of an abrupt
-            // swipe-then-switch. When the queue is empty fall back to a static image.
-            // When a Canvas is playing it fills the screen behind this column, so the
-            // artwork is hidden (alpha 0) rather than removed — the pager stays in
-            // the layout so the swipe-to-skip gesture keeps working over the video.
-            // The artwork is the FLEXIBLE part of the screen (weight), capped at its
-            // old 385dp size. On short/scaled displays the fixed-size version pushed
-            // the slider and playback buttons off the bottom of the screen; now the
-            // artwork shrinks instead and the controls always fit.
+            // Cover Pager with exact Spotify dimensions: max 456dp x 456dp, 8dp corner radius
             Box(
                 contentAlignment = Alignment.Center,
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxWidth()
+                    .padding(horizontal = 24.dp)
             ) {
+                val coverModifier = Modifier
+                    .widthIn(max = 456.dp)
+                    .fillMaxWidth()
+                    .aspectRatio(1f)
+
                 if (queueSongs.isEmpty()) {
                     val singleCover = songCoverUri.takeIf { it.isNotBlank() }
                     val singleAllowed = com.music.spotui.BuildConfig.IS_ADMIN || isCurrentSongAllowed
                     Box(
-                        modifier = Modifier
-                            .sizeIn(maxWidth = 385.dp, maxHeight = 385.dp)
-                            .aspectRatio(1f)
+                        modifier = coverModifier
                             .clickable(
                                 enabled = com.music.spotui.BuildConfig.IS_ADMIN,
                                 interactionSource = remember { MutableInteractionSource() },
@@ -591,26 +622,25 @@ fun PlayerScreen(navController: NavController) {
                         GlideImage(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .padding(20.dp)
-                                .clip(RoundedCornerShape(10.dp))
+                                .clip(RoundedCornerShape(8.dp))
                                 .alpha(if (canvasUrl != null) 0f else 1f),
                             model = singleCover,
                             contentScale = ContentScale.Crop,
                             isAllowed = singleAllowed,
-                            contentDescription = "")
+                            contentDescription = ""
+                        )
                     }
                 } else {
                     HorizontalPager(
                         state = artworkPagerState,
-                        modifier = Modifier
-                            .sizeIn(maxWidth = 385.dp, maxHeight = 385.dp)
-                            .aspectRatio(1f),
+                        modifier = coverModifier,
                     ) { page ->
                         val pageSong = queueSongs.getOrNull(page)
+                        val isCurrent = pageSong != null && pageSong.id == playerViewModel.currentSongId.value
                         val pageAllowed = com.music.spotui.BuildConfig.IS_ADMIN ||
                                 com.music.spotui.util.KosherWhitelistManager.isTrackAllowed(pageSong) ||
-                                (page == artworkPagerState.currentPage && isCurrentSongAllowed)
-                        val pageCover = pageSong?.coverUri?.takeIf { it.isNotBlank() } ?: songCoverUri.takeIf { it.isNotBlank() }
+                                (isCurrent && isCurrentSongAllowed)
+                        val pageCover = pageSong?.coverUri?.takeIf { it.isNotBlank() } ?: (if (isCurrent) songCoverUri.takeIf { it.isNotBlank() } else null)
                         Box(
                             modifier = Modifier
                                 .fillMaxSize()
@@ -627,27 +657,28 @@ fun PlayerScreen(navController: NavController) {
                             GlideImage(
                                 modifier = Modifier
                                     .fillMaxSize()
-                                    .padding(20.dp)
-                                    .clip(RoundedCornerShape(10.dp))
+                                    .clip(RoundedCornerShape(8.dp))
                                     .alpha(if (canvasUrl != null) 0f else 1f),
                                 model = pageCover,
                                 contentScale = ContentScale.Crop,
                                 isAllowed = pageAllowed,
-                                contentDescription = "")
+                                contentDescription = ""
+                            )
                         }
                     }
                 }
             }
-            //Spacer(modifier = Modifier.padding(30.dp))
 
             Column(
                 verticalArrangement = Arrangement.SpaceBetween,
                 modifier = Modifier
                     .height(300.dp)
-                    .padding(0.dp, 0.dp, 0.dp, 50.dp)
-            ){
-                // Reads each 300ms tick (songProgress recomposition) so it reflects
-                // the current engine — Spotify vs Lossless (SpotiFLAC) vs YouTube.
+                    .padding(bottom = 50.dp)
+                    .padding(horizontal = 24.dp)
+                    .widthIn(max = 456.dp)
+                    .fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                 val currentTrack = queueSongs.firstOrNull { it.id == songId }
                 PlayerInfo(
                     songTitle, songSinger, songId, context, isLiked,
@@ -663,15 +694,21 @@ fun PlayerScreen(navController: NavController) {
                     song = currentTrack,
                 )
 
-                // Smooth scrubbing: while dragging, the thumb follows the finger
-                // locally (no seek per delta — that fired a web seek on every pixel
-                // and fought the polled position, making it jerky). We seek ONCE on
-                // release.
                 var isDragging by remember { mutableStateOf(false) }
                 var dragValue by remember { mutableStateOf(0f) }
                 val liveFraction = SongPlayer.getDuration().toFloat().let { dur ->
                     if (dur > 0f) (SongPlayer.getCurrentPosition().toFloat() / dur).coerceIn(0f, 1f) else 0f
                 }
+                var showRemainingTime by remember { mutableStateOf(true) }
+                val currentPosMs = if (isDragging) (dragValue * SongPlayer.getDuration()).toLong() else songProgress.toLong()
+                val totalDurMs = SongPlayer.getDuration()
+                val remainingMs = (totalDurMs - currentPosMs).coerceAtLeast(0L)
+                val rightTimeText = if (showRemainingTime) {
+                    "-${playerViewModel.formatDuration(remainingMs)}"
+                } else {
+                    songDurationText
+                }
+
                 CustomSlider(
                     value = if (isDragging) dragValue else liveFraction,
                     onValueChange = { newValue ->
@@ -698,64 +735,176 @@ fun PlayerScreen(navController: NavController) {
                     steps = 0,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(16.dp, 20.dp, 16.dp, 0.dp),
+                        .padding(top = 16.dp),
                     colors = SliderDefaults.colors(
                         thumbColor = Color.White,
                         activeTrackColor = Color.White,
-                        inactiveTrackColor = Color.Gray
+                        inactiveTrackColor = Color(0x33FFFFFF)
                     )
                 )
 
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(25.dp, 0.dp)
-                    ,
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-                    Text(
-                        // While scrubbing, show the dragged time so the label tracks the finger.
-                        text = if (isDragging)
-                            playerViewModel.formatDuration((dragValue * SongPlayer.getDuration()).toLong())
-                        else songProgressText,
-                        color = Color.Gray,
-                        fontSize = 11.sp,
-                        fontWeight = FontWeight.Medium
-                    )
-                    Text(
-                        text = songDurationText,
-                        color = Color.Gray,
-                        fontSize = 11.sp,
-                        fontWeight = FontWeight.Medium
-                    )
+                CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 4.5.dp, vertical = 2.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        Text(
+                            text = if (isDragging)
+                                playerViewModel.formatDuration(currentPosMs)
+                            else songProgressText,
+                            color = Color(0xFFB3B3B3),
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.Medium
+                        )
+                        Text(
+                            text = rightTimeText,
+                            color = Color(0xFFB3B3B3),
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.Medium,
+                            modifier = Modifier.clickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null
+                            ) {
+                                showRemainingTime = !showRemainingTime
+                            }
+                        )
+                    }
                 }
-
 
                 Spacer(modifier = Modifier.padding(5.dp))
                 PlayerFull(songPlayingState, playerViewModel, context, isLiked, shuffle, repeatMode, queueSongs)
             }
 
-            // Spotify-style bottom row: current audio device (Connect) on the left,
-            // share + queue on the right.
-            PlayerConnectRow(
-                navController = navController,
-                context = context,
-                currentTrack = queueSongs.firstOrNull { it.id == playerViewModel.currentSongId.value },
-            )
-
-            //PlayerEndInfo()
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 24.dp)
+            ) {
+                Box(
+                    modifier = Modifier
+                        .widthIn(max = 456.dp)
+                        .fillMaxWidth()
+                ) {
+                    PlayerConnectRow(
+                        navController = navController,
+                        context = context,
+                        currentTrack = queueSongs.firstOrNull { it.id == playerViewModel.currentSongId.value },
+                    )
+                }
+            }
         }
         }
         item {
-            InlineLyrics(
-                title = songTitle,
-                artist = songSinger,
-                album = playerViewModel.currentSongAlbum.value,
-                accentColor = dominentColor,
-                onExpand = { showLyrics = true },
-            )
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 24.dp)
+            ) {
+                InlineLyrics(
+                    title = songTitle,
+                    artist = songSinger,
+                    album = playerViewModel.currentSongAlbum.value,
+                    accentColor = animatedBgColor,
+                    onExpand = { showLyrics = true },
+                    modifier = Modifier
+                        .widthIn(max = 456.dp)
+                        .fillMaxWidth()
+                )
+            }
         }
+        item {
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 24.dp)
+            ) {
+                ArtistBioCard(
+                    artistName = songSinger,
+                    navController = navController,
+                    modifier = Modifier
+                        .widthIn(max = 456.dp)
+                        .fillMaxWidth()
+                )
+            }
+        }
+        item {
+            Spacer(modifier = Modifier.height(80.dp))
+        }
+        }
+
+        val showStickyHeader by remember {
+            derivedStateOf {
+                lazyListState.firstVisibleItemIndex > 0 || lazyListState.firstVisibleItemScrollOffset > 350
+            }
+        }
+
+        AnimatedVisibility(
+            visible = showStickyHeader,
+            enter = fadeIn() + slideInVertically { -it },
+            exit = fadeOut() + slideOutVertically { -it },
+            modifier = Modifier.align(Alignment.TopCenter)
+        ) {
+            PlayerStickyHeader(
+                title = songTitle,
+                singer = songSinger,
+                isPlaying = songPlayingState,
+                progressFraction = if (SongPlayer.getDuration() > 0) (songProgress / SongPlayer.getDuration().toFloat()).coerceIn(0f, 1f) else 0f,
+                backgroundColor = dominentColor,
+                isLiked = isLiked.value,
+                onPlayPauseClick = {
+                    if (songPlayingState) {
+                        SongPlayer.pause()
+                        playerViewModel.updateSongState(
+                            playerViewModel.currentSongCoverUri.value,
+                            playerViewModel.currentSongTitle.value,
+                            playerViewModel.currentSongSinger.value,
+                            false,
+                            playerViewModel.currentSongId.value,
+                            playerViewModel.currentSongIndex.value,
+                            playerViewModel.currentSongAlbum.value
+                        )
+                    } else {
+                        SongPlayer.play()
+                        playerViewModel.updateSongState(
+                            playerViewModel.currentSongCoverUri.value,
+                            playerViewModel.currentSongTitle.value,
+                            playerViewModel.currentSongSinger.value,
+                            true,
+                            playerViewModel.currentSongId.value,
+                            playerViewModel.currentSongIndex.value,
+                            playerViewModel.currentSongAlbum.value
+                        )
+                    }
+                },
+                onLikeClick = {
+                    val current = queueSongs.firstOrNull { it.id == songId }
+                    if (current != null) {
+                        if (isLiked.value) {
+                            removeLikedSong(context, current)
+                            if (current.spotifyTrackId.isNotBlank()) {
+                                com.music.spotui.data.api.SpotifySync.setTrackSaved(context, current.spotifyTrackId, false)
+                            }
+                        } else {
+                            addLikedSong(context, current)
+                            if (current.spotifyTrackId.isNotBlank()) {
+                                com.music.spotui.data.api.SpotifySync.setTrackSaved(context, current.spotifyTrackId, true)
+                            }
+                        }
+                        isLiked.value = isSongLiked(context, current)
+                    }
+                },
+                onHeaderClick = {
+                    coroutineScope.launch {
+                        lazyListState.animateScrollToItem(0)
+                    }
+                }
+            )
         }
 
         if (showLyrics) {
@@ -800,22 +949,27 @@ fun PlayerTopBar(
             tint = Color.White,
             contentDescription = "")
 
-        // Spotify shows the source context here (album/playlist), not a generic label.
+        val hasHebrew = contextName.any { it in '\u0590'..'\u05FF' }
+        val subtitle = if (contextName.isBlank()) {
+            if (hasHebrew) "מנגן כעת" else "NOW PLAYING"
+        } else {
+            if (hasHebrew) "מתוך האלבום" else "PLAYING FROM"
+        }
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
-                text = "PLAYING FROM",
+                text = subtitle,
                 color = Color(0xFFB3B3B3),
                 fontSize = 9.sp,
                 fontWeight = FontWeight.Medium,
             )
             Text(
-                text = contextName.ifBlank { "Now Playing" },
+                text = contextName.ifBlank { if (hasHebrew) "מנגן כעת" else "Now Playing" },
                 color = Color.White,
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Bold,
                 maxLines = 1,
                 overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
-                modifier = Modifier.widthIn(max = 200.dp),
+                modifier = Modifier.widthIn(max = 240.dp),
             )
         }
         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -848,32 +1002,13 @@ fun PlayerInfo(
     onShowSavedIn: (() -> Unit)? = null,
     song: SongsModel? = null,
 ) {
-
-    var snackbarMessage by remember {
-        mutableStateOf("")
-    }
-    var snackbarVisible by remember {
-        mutableStateOf(false)
-    }
-
-    LaunchedEffect(snackbarVisible) {
-        delay(1500)
-        snackbarVisible = false
-    }
-
-
     Row(
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(25.dp, 10.dp)
+            .padding(horizontal = 0.dp, vertical = 8.dp)
     ) {
-
-        if (snackbarVisible){
-            Snackbar(showMessage = snackbarMessage)
-        }
-        else{
         Row(
             horizontalArrangement = Arrangement.Start,
             verticalAlignment = Alignment.CenterVertically,
@@ -881,12 +1016,6 @@ fun PlayerInfo(
                 .weight(1f)
                 .padding(end = 12.dp)
         ) {
-//                        GlideImage(
-//                            modifier = Modifier.size(60.dp),
-//                            model = albumSongs[song].coverUri,
-//                            contentScale = ContentScale.Crop,
-//                            contentDescription = ""
-//                        )
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = songTitle,
@@ -963,64 +1092,51 @@ fun PlayerInfo(
             }
         }
 
-        Icon(
-            modifier = Modifier
-                .size(26.dp)
-                .clickable(
-                    interactionSource = remember { MutableInteractionSource() },
-                    indication = null
-                ) {
-                    if (isLiked.value && onShowSavedIn != null) {
-                        // Already saved — second tap opens the Spotify-style
-                        // "Saved in" sheet (Liked Songs + playlists) instead of
-                        // silently unliking.
-                        onShowSavedIn()
-                        return@clickable
+        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                com.music.spotui.ui.components.SpotifyPlusButton(
+                    isLiked = isLiked.value,
+                    onClick = {
+                        val targetSong = song ?: SongsModel(
+                            id = songId,
+                            title = songTitle,
+                            album = "",
+                            singer = songSinger,
+                            coverUri = "",
+                            url = if (spotifyTrackId.isNotBlank()) "spotify:track:$spotifyTrackId" else "youtube:$songTitle $songSinger",
+                            spotifyTrackId = spotifyTrackId,
+                            durationMs = SongPlayer.getDuration().toInt().coerceAtLeast(0)
+                        )
+                        if (!isLiked.value) {
+                            addLikedSong(context, targetSong)
+                            isLiked.value = true
+                            if (targetSong.spotifyTrackId.isNotBlank()) {
+                                com.music.spotui.data.api.SpotifySync.setTrackSaved(context, targetSong.spotifyTrackId, true)
+                            }
+                        }
+                        onShowSavedIn?.invoke()
                     }
-                    val targetSong = song ?: SongsModel(
-                        id = songId,
-                        title = songTitle,
-                        album = "",
-                        singer = songSinger,
-                        coverUri = "",
-                        url = if (spotifyTrackId.isNotBlank()) "spotify:track:$spotifyTrackId" else "youtube:$songTitle $songSinger",
-                        spotifyTrackId = spotifyTrackId,
-                        durationMs = SongPlayer.getDuration().toInt().coerceAtLeast(0)
-                    )
-                    if (isLiked.value) {
-                        removeLikedSong(context, targetSong)
-                        snackbarMessage = "Removed from Liked Songs"
-                    } else {
-                        addLikedSong(context, targetSong)
-                        snackbarMessage = "Added to Liked Songs"
-                    }
-                    snackbarVisible = true
-                    isLiked.value = isSongLiked(context, targetSong)
-                    // Mirror the like to the real Spotify account if Spotify ID exists.
-                    if (targetSong.spotifyTrackId.isNotBlank()) {
-                        com.music.spotui.data.api.SpotifySync.setTrackSaved(context, targetSong.spotifyTrackId, isLiked.value)
-                    }
-                },
-            painter = if (isLiked.value){
-                painterResource(id = R.drawable.added)
+                )
+
+                Icon(
+                    painter = painterResource(id = R.drawable.ic_close_large),
+                    tint = Color(0xFFB3B3B3),
+                    modifier = Modifier
+                        .size(24.dp)
+                        .clickable(
+                            interactionSource = remember { MutableInteractionSource() },
+                            indication = null
+                        ) {
+                            Toast.makeText(context, "השיר הוסתר", Toast.LENGTH_SHORT).show()
+                        },
+                    contentDescription = "Hide"
+                )
             }
-            else{
-                painterResource(id = R.drawable.ic_add)
-            }
-            ,
-            tint = if (isLiked.value){
-                Color(AppPalette.toArgb())
-            }
-            else{
-                Color.White
-            },
-            contentDescription = ""
-        )
+        }
     }
-    }
-
-
-
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -1034,23 +1150,25 @@ fun CustomSlider(
     steps: Int = 0,
     colors: SliderColors = SliderDefaults.colors(),
 ) {
-    Box(modifier = modifier.height(10.dp)) {
-        Slider(
-            value = value,
-            onValueChange = onValueChange,
-            onValueChangeFinished = onValueChangeFinished,
-            valueRange = valueRange,
-            steps = steps,
-            colors = colors,
-            thumb = {
-                SliderDefaults.Thumb( //androidx.compose.material3.SliderDefaults
-                    interactionSource = remember { MutableInteractionSource() },
-                    modifier = Modifier.align(Alignment.Center),
-                    colors = colors,
-                    thumbSize = DpSize(9.dp, 9.dp)
-                )
-            }
-        )
+    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
+        Box(modifier = modifier.height(10.dp)) {
+            Slider(
+                value = value,
+                onValueChange = onValueChange,
+                onValueChangeFinished = onValueChangeFinished,
+                valueRange = valueRange,
+                steps = steps,
+                colors = colors,
+                thumb = {
+                    SliderDefaults.Thumb( //androidx.compose.material3.SliderDefaults
+                        interactionSource = remember { MutableInteractionSource() },
+                        modifier = Modifier.align(Alignment.Center),
+                        colors = colors,
+                        thumbSize = DpSize(9.dp, 9.dp)
+                    )
+                }
+            )
+        }
     }
 }
 
@@ -1090,15 +1208,17 @@ fun PlayerFull(
 
 
 
-    Row(verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceBetween,
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(20.dp)
-    ) {
-        Icon(
+    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
+        Row(verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween,
             modifier = Modifier
-                .size(25.dp)
+                .fillMaxWidth()
+                .padding(horizontal = 8.dp, vertical = 6.dp)
+        ) {
+        Box(
+            contentAlignment = Alignment.Center,
+            modifier = Modifier
+                .size(40.dp)
                 .clickable(
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null
@@ -1108,38 +1228,39 @@ fun PlayerFull(
                     } else {
                         playerViewModel.updateShuffleState(true)
                     }
-
                 }
-            ,
-            tint = if (shuffle){
-                Color(AppPalette.toArgb())
-            }
-            else{
-                Color.White
-            },
-            painter = painterResource(id = R.drawable.ic_player_shuffle),
-            contentDescription = "")
-        Icon(
+        ) {
+            Icon(
+                modifier = Modifier.size(20.dp),
+                tint = if (shuffle) Color(AppPalette.toArgb()) else Color.White,
+                painter = painterResource(id = R.drawable.ic_player_shuffle),
+                contentDescription = "Shuffle"
+            )
+        }
+
+        Box(
+            contentAlignment = Alignment.Center,
             modifier = Modifier
-                .size(35.dp)
+                .size(40.dp)
                 .clickable(
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null
                 ) {
-                    // The queue itself is already in shuffled order when shuffle
-                    // is on (reordered once at toggle) — never re-shuffle per tap.
                     playerViewModel.playPreviousSong(queueSongs, context)
                     isLiked.value =
                         isSongLiked(context, playerViewModel.currentSongId.value.toString())
                 }
-            ,
-            tint = Color.White,
-            painter = painterResource(id = R.drawable.ic_player_back),
-            contentDescription = "")
+        ) {
+            Icon(
+                modifier = Modifier.size(26.dp),
+                tint = Color.White,
+                painter = painterResource(id = R.drawable.ic_player_back),
+                contentDescription = "Previous"
+            )
+        }
+
         androidx.compose.foundation.layout.Box(
             modifier = Modifier
-                // requiredSize forces an exact 64×64 square even if the parent Column
-                // constrains height — .size() alone let it get squished into an ellipse.
                 .requiredSize(64.dp)
                 .clip(CircleShape)
                 .background(Color.White)
@@ -1172,39 +1293,41 @@ fun PlayerFull(
             contentAlignment = Alignment.Center
         ) {
             Icon(
-                modifier = Modifier
-                    .size(30.dp)
-
-                ,
+                modifier = Modifier.size(30.dp),
                 tint = Color.Black,
                 painter = if (songPlayingState)
                     painterResource(id = R.drawable.ic_playing)
                 else
-                    painterResource(id = R.drawable.play_svgrepo_com)
-                ,
-                contentDescription = "")
+                    painterResource(id = R.drawable.play_svgrepo_com),
+                contentDescription = if (songPlayingState) "Pause" else "Play"
+            )
         }
 
-        Icon(
+        Box(
+            contentAlignment = Alignment.Center,
             modifier = Modifier
-                .size(35.dp)
+                .size(40.dp)
                 .clickable(
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null
                 ) {
-
                     playerViewModel.playNextSongs(queueSongs, context)
                     isLiked.value =
                         isSongLiked(context, playerViewModel.currentSongId.value.toString())
                 }
-            ,
-            tint = Color.White,
-            painter = painterResource(id = R.drawable.ic_player_skip),
-            contentDescription = "")
+        ) {
+            Icon(
+                modifier = Modifier.size(26.dp),
+                tint = Color.White,
+                painter = painterResource(id = R.drawable.ic_player_skip),
+                contentDescription = "Next"
+            )
+        }
+
         Box(
             contentAlignment = Alignment.Center,
             modifier = Modifier
-                .size(26.dp)
+                .size(40.dp)
                 .clickable(
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null
@@ -1243,6 +1366,7 @@ fun PlayerFull(
             }
         }
     }
+    }
 }
 
 /** The current audio output route name for the Connect indicator (BT name if
@@ -1280,7 +1404,7 @@ fun PlayerConnectRow(
         horizontalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 25.dp, vertical = 4.dp),
+            .padding(horizontal = 24.dp, vertical = 4.dp),
     ) {
         // Device / Spotify Connect indicator (green, like the official app).
         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -1856,4 +1980,310 @@ private fun CanvasVideo(url: String, modifier: Modifier = Modifier) {
             }
         },
     )
+}
+
+@Composable
+fun PlayerStickyHeader(
+    title: String,
+    singer: String,
+    isPlaying: Boolean,
+    progressFraction: Float,
+    backgroundColor: Color,
+    isLiked: Boolean,
+    onPlayPauseClick: () -> Unit,
+    onLikeClick: () -> Unit,
+    onHeaderClick: () -> Unit,
+) {
+    Surface(
+        color = backgroundColor.copy(alpha = 0.98f),
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                onClick = onHeaderClick
+            )
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .statusBarsPadding()
+        ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(64.dp)
+                    .padding(horizontal = 16.dp)
+            ) {
+                // Track title & artist
+                Column(
+                    modifier = Modifier
+                        .weight(1f)
+                        .padding(end = 16.dp)
+                ) {
+                    Text(
+                        text = title,
+                        color = Color.White,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Bold,
+                        maxLines = 1,
+                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                    )
+                    Text(
+                        text = singer,
+                        color = Color(0xFFB3B3B3),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Normal,
+                        maxLines = 1,
+                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                    )
+                }
+
+                // Controls on the end
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(10.dp)
+                ) {
+                    Box(
+                        contentAlignment = Alignment.Center,
+                        modifier = Modifier
+                            .size(34.dp)
+                            .clickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null,
+                                onClick = onLikeClick
+                            )
+                    ) {
+                        Icon(
+                            painter = if (isLiked) painterResource(id = R.drawable.added)
+                            else painterResource(id = R.drawable.ic_add),
+                            contentDescription = "Save",
+                            tint = if (isLiked) Color(AppPalette.toArgb()) else Color.White,
+                            modifier = Modifier.size(20.dp)
+                        )
+                    }
+
+                    Box(
+                        contentAlignment = Alignment.Center,
+                        modifier = Modifier
+                            .size(34.dp)
+                            .clip(CircleShape)
+                            .background(Color.White)
+                            .clickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null,
+                                onClick = onPlayPauseClick
+                            )
+                    ) {
+                        Icon(
+                            painter = if (isPlaying) painterResource(id = R.drawable.ic_playing)
+                            else painterResource(id = R.drawable.play_svgrepo_com),
+                            contentDescription = if (isPlaying) "Pause" else "Play",
+                            tint = Color.Black,
+                            modifier = Modifier.size(18.dp)
+                        )
+                    }
+                }
+            }
+
+            // 2dp Progress Bar at the bottom of the sticky header
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(2.dp)
+                    .background(Color.White.copy(alpha = 0.2f))
+            ) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth(fraction = progressFraction)
+                        .height(2.dp)
+                        .background(Color.White)
+                )
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalGlideComposeApi::class)
+@Composable
+fun ArtistBioCard(
+    artistName: String,
+    navController: NavController,
+    modifier: Modifier = Modifier,
+) {
+    if (artistName.isBlank()) return
+
+    val artistViewModel: com.music.spotui.ui.viewmodel.ArtistViewModel = androidx.hilt.navigation.compose.hiltViewModel()
+    LaunchedEffect(artistName) {
+        artistViewModel.loadArtistOverview(artistName)
+    }
+    val overviewResponse by artistViewModel.overview.collectAsState()
+    val overview = when (val res = overviewResponse) {
+        is com.music.spotui.data.api.Response.Success -> res.data
+        else -> null
+    } ?: return
+
+    val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
+    val isArtistAllowed = remember(whitelistVersion, overview.name) {
+        com.music.spotui.util.KosherWhitelistManager.isArtistInWhitelist(null, overview.name)
+    }
+
+    val imageUrl = overview.headerImage.ifBlank { overview.avatarImage }
+    val bioText = overview.biography.orEmpty()
+        .replace("&amp;", "&")
+        .replace("&#39;", "'")
+        .replace("&#34;", "\"")
+        .replace("&quot;", "\"")
+        .replace(Regex("<[^>]*>"), "")
+        .trim()
+
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(bottom = 24.dp)
+            .clip(RoundedCornerShape(12.dp))
+            .background(Color(0xFF242424))
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null
+            ) {
+                navController.navigate(com.music.spotui.ui.navigation.artistRoute(overview.name, overview.id))
+            }
+    ) {
+        // ── Top Header Image with Gradient & Title ──
+        if (imageUrl.isNotBlank()) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(260.dp)
+            ) {
+                GlideImage(
+                    modifier = Modifier.fillMaxSize(),
+                    model = imageUrl,
+                    contentScale = ContentScale.Crop,
+                    failure = placeholder(R.drawable.placeholder),
+                    isAllowed = isArtistAllowed,
+                    contentDescription = overview.name,
+                )
+                // Dark gradient overlay
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Black.copy(alpha = 0.6f),
+                                    Color.Transparent,
+                                    Color(0xFF242424).copy(alpha = 0.9f)
+                                ),
+                                startY = 0f,
+                                endY = 800f
+                            )
+                        )
+                )
+                // Title overlay at top: "מידע על האמן או האמנית"
+                Text(
+                    text = "מידע על האמן או האמנית",
+                    color = Color.White,
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier
+                        .align(Alignment.TopStart)
+                        .padding(16.dp)
+                )
+            }
+        } else {
+            Text(
+                text = "מידע על האמן או האמנית",
+                color = Color.White,
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(16.dp, 16.dp, 16.dp, 8.dp)
+            )
+        }
+
+        // ── Info Row & Bio ──
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp)
+        ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Column(modifier = Modifier.weight(1f, fill = false)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(
+                            text = overview.name,
+                            color = Color.White,
+                            fontSize = 18.sp,
+                            fontWeight = FontWeight.Bold,
+                            maxLines = 1,
+                            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                        )
+                        if (overview.verified) {
+                            Spacer(Modifier.width(6.dp))
+                            Icon(
+                                imageVector = Icons.Default.CheckCircle,
+                                contentDescription = "Verified",
+                                tint = Color(0xFF1ED760),
+                                modifier = Modifier.size(16.dp)
+                            )
+                        }
+                    }
+                    overview.monthlyListeners?.let { count ->
+                        Spacer(Modifier.height(2.dp))
+                        Text(
+                            text = "${formatBioListeners(count)} מאזינים חודשיים",
+                            color = Color(0xFFB3B3B3),
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.Normal
+                        )
+                    }
+                }
+                Spacer(Modifier.width(12.dp))
+                // Follow / מעקב button
+                Box(
+                    contentAlignment = Alignment.Center,
+                    modifier = Modifier
+                        .height(32.dp)
+                        .widthIn(min = 64.dp)
+                        .clip(RoundedCornerShape(16.dp))
+                        .border(1.dp, Color(0x66FFFFFF), RoundedCornerShape(16.dp))
+                        .padding(horizontal = 14.dp)
+                ) {
+                    Text(
+                        text = "מעקב",
+                        color = Color.White,
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                }
+            }
+
+            if (bioText.isNotBlank()) {
+                Spacer(Modifier.height(12.dp))
+                Text(
+                    text = bioText,
+                    color = Color(0xFFB3B3B3),
+                    fontSize = 13.sp,
+                    lineHeight = 18.sp,
+                    maxLines = 3,
+                    overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                )
+            }
+        }
+    }
+}
+
+private fun formatBioListeners(count: Long): String {
+    return when {
+        count >= 1_000_000 -> String.format(java.util.Locale.US, "%.1fM", count / 1_000_000.0)
+        count >= 1_000 -> String.format(java.util.Locale.US, "%.1fK", count / 1_000.0)
+        else -> count.toString()
+    }
 }

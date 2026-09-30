@@ -22,6 +22,7 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withTimeoutOrNull
 import android.content.Context
+import com.music.spotui.data.preferences.getCachedPlaylists
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.withContext
@@ -425,9 +426,20 @@ class HomeFeedEngine @Inject constructor(
             )
         }
 
-        // ── 3. לאחרונה (Liked Songs pinned first + recent tracks) ──
+        // ── 3. לאחרונה (Liked Songs pinned first + user playlists + recent tracks) ──
         val recentItems = mutableListOf<HomeItem>()
         recentItems.add(HomeItem.LikedSongs(count = likedSongs.size))
+        val playlists = getCachedPlaylists(context)
+        playlists.forEach { pl ->
+            recentItems.add(
+                HomeItem.Playlist(
+                    name = pl.name,
+                    imageUrl = pl.coverUri,
+                    subtitle = pl.subtitle,
+                    id = pl.spotifyId
+                )
+            )
+        }
         recentTracks.forEach { stat ->
             recentItems.add(HomeItem.Track(stat.toSongModel()))
         }
@@ -705,6 +717,17 @@ class HomeFeedEngine @Inject constructor(
         // 2. Rebuild RECENTLY_PLAYED section
         val recentItems = mutableListOf<HomeItem>()
         recentItems.add(HomeItem.LikedSongs(count = likedSongs.size))
+        val playlists = getCachedPlaylists(context)
+        playlists.forEach { pl ->
+            recentItems.add(
+                HomeItem.Playlist(
+                    name = pl.name,
+                    imageUrl = pl.coverUri,
+                    subtitle = pl.subtitle,
+                    id = pl.spotifyId
+                )
+            )
+        }
         recentTracks.forEach { stat ->
             recentItems.add(HomeItem.Track(stat.toSongModel()))
         }

@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Spotify circular download icon: circle outline + down arrow -->
+    <path
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.6"
+        android:pathData="M12,2.5 A9.5,9.5 0 1,0 21.5,12 A9.5,9.5 0 0,0 12,2.5 Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M11.2,7 h1.6 v6 h2.6 l-3.4,4.2 -3.4,-4.2 h2.6 V7 z" />
+</vector>

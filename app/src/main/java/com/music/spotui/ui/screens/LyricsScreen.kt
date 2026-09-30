@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.navigationBarsPadding
@@ -182,6 +183,7 @@ fun InlineLyrics(
     album: String,
     accentColor: Color,
     onExpand: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     val vm: LyricsViewModel = hiltViewModel()
     LaunchedEffect(title, artist) {
@@ -192,9 +194,9 @@ fun InlineLyrics(
     val positionMs by rememberPlaybackPositionMs()
 
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
-            .padding(16.dp, 8.dp, 16.dp, 40.dp)
+            .padding(vertical = 8.dp)
             .background(
                 Brush.verticalGradient(listOf(accentColor.copy(alpha = 0.55f), accentColor.copy(alpha = 0.18f))),
                 shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp),
@@ -203,16 +205,21 @@ fun InlineLyrics(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
             ) { onExpand() }
-            .padding(20.dp)
+            .padding(16.dp)
     ) {
-        Text("Lyrics preview", color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold)
-        androidx.compose.foundation.layout.Spacer(modifier = Modifier.size(12.dp))
+        Text(
+            text = "תצוגה מקדימה של מילות השיר",
+            color = Color.White,
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Bold
+        )
+        androidx.compose.foundation.layout.Spacer(modifier = Modifier.size(14.dp))
 
         when (val s = state) {
             is LyricsViewModel.State.Loading ->
-                Text("Loading lyrics…", color = Color.White.copy(alpha = 0.7f), fontSize = 15.sp)
+                Text("טוען מילות שיר…", color = Color.White.copy(alpha = 0.7f), fontSize = 15.sp)
             is LyricsViewModel.State.NotFound ->
-                Text("No lyrics found for this track", color = Color.White.copy(alpha = 0.7f), fontSize = 15.sp)
+                Text("לא נמצאו מילות שיר עבור שיר זה", color = Color.White.copy(alpha = 0.7f), fontSize = 15.sp)
             is LyricsViewModel.State.Loaded -> {
                 val lyrics = s.lyrics
                 val activeIndex = activeIndexFor(lyrics, positionMs)
@@ -221,28 +228,35 @@ fun InlineLyrics(
                 val windowStart =
                     if (lyrics.synced) activeIndex.coerceIn(0, (lyrics.lines.size - PREVIEW_LINE_COUNT).coerceAtLeast(0))
                     else 0
-                Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     lyrics.lines.drop(windowStart).take(PREVIEW_LINE_COUNT).forEachIndexed { i, line ->
                         LyricLineText(
                             text = line.text,
                             isActive = windowStart + i == activeIndex,
                             synced = lyrics.synced,
-                            fontSize = 22.sp,
+                            fontSize = 20.sp,
                             onTap = if (lyrics.synced) ({ jumpTo(line.timeMs) }) else null,
                         )
                     }
                 }
-                androidx.compose.foundation.layout.Spacer(modifier = Modifier.size(18.dp))
+                androidx.compose.foundation.layout.Spacer(modifier = Modifier.size(16.dp))
                 Box(
+                    contentAlignment = Alignment.Center,
                     modifier = Modifier
-                        .background(Color.White, shape = androidx.compose.foundation.shape.RoundedCornerShape(50))
+                        .height(32.dp)
+                        .background(Color.White, shape = androidx.compose.foundation.shape.RoundedCornerShape(16.dp))
                         .clickable(
                             interactionSource = remember { MutableInteractionSource() },
                             indication = null,
                         ) { onExpand() }
-                        .padding(16.dp, 8.dp)
+                        .padding(horizontal = 16.dp)
                 ) {
-                    Text("Show lyrics", color = Color.Black, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
+                    Text(
+                        text = "הצגת מילות השיר",
+                        color = Color.Black,
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Bold
+                    )
                 }
             }
         }

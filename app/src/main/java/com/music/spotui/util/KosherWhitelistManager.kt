@@ -635,6 +635,58 @@ object KosherWhitelistManager {
     }
 
     /**
+     * LibraryEntry check: validates album and playlist covers for kosher display.
+     */
+    fun isLibraryEntryWhitelisted(entry: com.music.spotui.data.entity.LibraryEntry?, context: Context? = null): Boolean {
+        if (entry == null) return false
+        if (com.music.spotui.BuildConfig.IS_ADMIN) {
+            if (entry.coverUri.isNotBlank()) allowImageUrl(entry.coverUri)
+            return true
+        }
+
+        // Liked songs and Downloaded shortcuts have vector graphics
+        if (entry.spotifyId == "liked" || entry.spotifyId == "downloaded") return true
+
+        // Albums: must have whitelisted artists or explicitly whitelisted cover URL
+        if (!entry.isPlaylist) {
+            val allowed = if (entry.artists.isNotBlank()) {
+                areAllArtistsInWhitelist(entry.artists) || isUrlAllowed(entry.coverUri)
+            } else {
+                isUrlAllowed(entry.coverUri)
+            }
+            if (allowed && entry.coverUri.isNotBlank()) {
+                allowImageUrl(entry.coverUri)
+            }
+            return allowed
+        }
+
+        // Playlists:
+        // 1. Direct URL check: if the image URL is already in approved whitelist
+        if (isUrlAllowed(entry.coverUri)) return true
+
+        // 2. Custom Playlist: check if any cached track is whitelisted
+        if (context != null && entry.spotifyId.startsWith("custom_")) {
+            val cp = com.music.spotui.data.preferences.CustomPlaylistStore.getPlaylists(context)
+                .find { it.id == entry.spotifyId }
+            if (cp != null) {
+                val matchingTrack = cp.cachedTracks.find { it.coverUri == entry.coverUri }
+                    ?: cp.cachedTracks.firstOrNull()
+                if (matchingTrack != null) {
+                    val trackAllowed = isSongWhitelisted(matchingTrack)
+                    if (trackAllowed) {
+                        allowImageUrl(entry.coverUri)
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+            }
+        }
+
+        return false
+    }
+
+    /**
      * Dynamically registers an image URL as allowed.
      */
     fun allowImageUrl(url: String?) {

@@ -53,6 +53,28 @@ class LibraryViewModel @Inject constructor(
         }
     }
 
+    fun refreshSilently() = viewModelScope.launch(Dispatchers.IO) {
+        repository.provideLibrary().collect { response ->
+            if (response is Response.Success) {
+                _entries.value = response
+                cacheLibraryEntries(context, response.data)
+            }
+        }
+    }
+
+    fun deletePlaylist(playlistId: String) {
+        val current = (_entries.value as? Response.Success)?.data
+        if (current != null) {
+            val updated = current.filterNot { it.spotifyId == playlistId }
+            _entries.value = Response.Success(updated)
+            cacheLibraryEntries(context, updated)
+        }
+        viewModelScope.launch(Dispatchers.IO) {
+            com.music.spotui.data.preferences.CustomPlaylistStore.deletePlaylist(context, playlistId)
+            com.music.spotui.data.api.Api.HomeCache.library = null
+        }
+    }
+
     private fun loadFollowedArtists() = viewModelScope.launch(Dispatchers.IO) {
         val artists = repository.provideFollowedArtists()
         _followedArtists.value = artists

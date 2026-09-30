@@ -31,7 +31,7 @@ fun getCachedLibraryEntries(context: Context): List<LibraryEntry> = runCatching 
     val arr = JSONArray(raw)
     (0 until arr.length()).map { i ->
         arr.getJSONObject(i).let { o ->
-            LibraryEntry(
+            val entry = LibraryEntry(
                 spotifyId = o.getString("spotifyId"),
                 name = o.getString("name"),
                 subtitle = o.getString("subtitle"),
@@ -39,6 +39,11 @@ fun getCachedLibraryEntries(context: Context): List<LibraryEntry> = runCatching 
                 isPlaylist = o.getBoolean("isPlaylist"),
                 artists = o.optString("artists", ""),
             )
+            if (!com.music.spotui.util.KosherWhitelistManager.isLibraryEntryWhitelisted(entry, context)) {
+                entry.copy(coverUri = "")
+            } else {
+                entry
+            }
         }
     }
 }.getOrDefault(emptyList())
@@ -71,3 +76,48 @@ fun getCachedFollowedArtists(context: Context): List<ArtistsModel> = runCatching
         }
     }
 }.getOrDefault(emptyList())
+
+fun addCustomPlaylist(context: Context, entry: LibraryEntry) {
+    val isAllowed = com.music.spotui.util.KosherWhitelistManager.isLibraryEntryWhitelisted(entry, context)
+    val sanitizedEntry = if (!isAllowed) entry.copy(coverUri = "") else entry
+    val current = getCachedLibraryEntries(context).toMutableList()
+    current.removeAll { it.spotifyId == sanitizedEntry.spotifyId || (it.name.equals(sanitizedEntry.name, ignoreCase = true) && it.isPlaylist) }
+    current.add(0, sanitizedEntry)
+    cacheLibraryEntries(context, current)
+}
+
+fun getCachedPlaylists(context: Context): List<LibraryEntry> {
+    // 1. Local custom playlists from CustomPlaylistStore
+    val local = CustomPlaylistStore.getPlaylists(context).map {
+        val entry = LibraryEntry(
+            spotifyId = it.id,
+            name = it.name,
+            subtitle = "Playlist • " + CustomPlaylistStore.getSubtitle(it.songKeys.size),
+            coverUri = it.coverUri,
+            isPlaylist = true
+        )
+        if (!com.music.spotui.util.KosherWhitelistManager.isLibraryEntryWhitelisted(entry, context)) {
+            entry.copy(coverUri = "")
+        } else {
+            entry
+        }
+    }
+    // 2. Real Spotify playlists from server cache (strictly filtering out system shortcuts and duplicates)
+    val server = getCachedLibraryEntries(context).filter { entry ->
+        entry.isPlaylist &&
+        entry.spotifyId != "liked" &&
+        entry.spotifyId != "downloaded" &&
+        !entry.name.equals("Liked Songs", ignoreCase = true) &&
+        !entry.name.equals("Downloaded", ignoreCase = true) &&
+        !entry.name.equals("שירים שאהבתם", ignoreCase = true)
+    }.map { entry ->
+        if (!com.music.spotui.util.KosherWhitelistManager.isLibraryEntryWhitelisted(entry, context)) {
+            entry.copy(coverUri = "")
+        } else {
+            entry
+        }
+    }
+    val localNames = local.map { it.name.trim().lowercase() }.toSet()
+    return local + server.filter { it.name.trim().lowercase() !in localNames }
+}
+

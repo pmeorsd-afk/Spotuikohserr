@@ -20,6 +20,7 @@ sealed class Routes(
     object Show : Routes(0, "Show", "show")
     object Queue : Routes(0, "Queue", "queue")
     object Liked : Routes(0, "Liked", "liked")
+    object AddToLiked : Routes(0, "AddToLiked", "add_to_liked")
     object Downloads : Routes(0, "Downloads", "downloads")
     object Category : Routes(0, "Category", "category")
     object Login : Routes(0, "Login", "login")
