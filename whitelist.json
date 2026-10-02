@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 231,
-  "last_updated": "2026-10-02T11:51:49.540Z",
+  "version": 232,
+  "last_updated": "2026-10-02T11:51:56.339Z",
   "artists": [
+    {
+      "id": "13Bny64Z0lG2BQFHhrMTPb",
+      "canonical_name": "בן צור",
+      "aliases": [
+        "בן צור"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-02T11:51:56.339Z"
+    },
     {
       "id": "5Z0wTitcN5tieNIhXMBG7s",
       "canonical_name": "R' Cheskie Weisz",
