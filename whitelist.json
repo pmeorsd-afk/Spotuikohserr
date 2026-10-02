@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 223,
-  "last_updated": "2026-10-02T09:31:12.655Z",
+  "version": 224,
+  "last_updated": "2026-10-02T09:31:15.314Z",
   "artists": [
     {
       "id": "5Z0wTitcN5tieNIhXMBG7s",
@@ -675,8 +675,8 @@
       "title": "שמע ישראל",
       "artist": "עופר לוי, יובל טייב",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-02T09:31:12.655Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-02T09:31:15.314Z"
     },
     {
       "id": "4Ac9EyrsgTY1FAnSN8MkWK",
