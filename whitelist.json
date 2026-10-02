@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 226,
-  "last_updated": "2026-10-02T10:26:04.255Z",
+  "version": 227,
+  "last_updated": "2026-10-02T11:51:17.392Z",
   "artists": [
     {
       "id": "5Z0wTitcN5tieNIhXMBG7s",
@@ -670,6 +670,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3DTHsQnfuQVESYAYv0fybQ",
+      "title": "אבא",
+      "artist": "בן צור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-02T11:51:17.392Z"
+    },
     {
       "id": "",
       "title": "שערי שמים פתח",
