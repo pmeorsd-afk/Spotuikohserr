@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 225,
-  "last_updated": "2026-10-02T10:26:00.359Z",
+  "version": 226,
+  "last_updated": "2026-10-02T10:26:04.255Z",
   "artists": [
     {
       "id": "5Z0wTitcN5tieNIhXMBG7s",
@@ -675,8 +675,8 @@
       "title": "שערי שמים פתח",
       "artist": "aranen creative productions",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-02T10:26:00.359Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-02T10:26:04.255Z"
     },
     {
       "id": "",
