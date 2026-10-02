@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 224,
-  "last_updated": "2026-10-02T09:31:15.314Z",
+  "version": 225,
+  "last_updated": "2026-10-02T10:26:00.359Z",
   "artists": [
     {
       "id": "5Z0wTitcN5tieNIhXMBG7s",
@@ -670,6 +670,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "",
+      "title": "שערי שמים פתח",
+      "artist": "aranen creative productions",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-02T10:26:00.359Z"
+    },
     {
       "id": "",
       "title": "שמע ישראל",
