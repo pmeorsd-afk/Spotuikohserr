@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 221,
-  "last_updated": "2026-10-02T09:31:00.972Z",
+  "version": 222,
+  "last_updated": "2026-10-02T09:31:03.590Z",
   "artists": [
     {
       "id": "5Z0wTitcN5tieNIhXMBG7s",
@@ -675,8 +675,8 @@
       "title": "שערי שמים פתח- ישיבת נחלת יוסף שבי שומרון",
       "artist": "Kahme Zub",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-02T09:31:00.972Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-02T09:31:03.590Z"
     },
     {
       "id": "5bFrsEk5efTVlOTwtLBLn2",
