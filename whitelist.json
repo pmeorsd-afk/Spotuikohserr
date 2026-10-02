@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 232,
-  "last_updated": "2026-10-02T11:51:56.339Z",
+  "version": 233,
+  "last_updated": "2026-10-02T11:51:59.415Z",
   "artists": [
     {
       "id": "13Bny64Z0lG2BQFHhrMTPb",
@@ -10,8 +10,8 @@
         "בן צור"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-02T11:51:56.339Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-02T11:51:59.415Z"
     },
     {
       "id": "5Z0wTitcN5tieNIhXMBG7s",
