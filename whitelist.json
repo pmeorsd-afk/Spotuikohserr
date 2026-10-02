@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 229,
-  "last_updated": "2026-10-02T11:51:32.122Z",
+  "version": 230,
+  "last_updated": "2026-10-02T11:51:46.527Z",
   "artists": [
     {
       "id": "5Z0wTitcN5tieNIhXMBG7s",
@@ -670,6 +670,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0rNhXjwIf1748jqeHo3n6z",
+      "title": "אהבת השם",
+      "artist": "בן צור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-02T11:51:46.527Z"
+    },
     {
       "id": "3DTHsQnfuQVESYAYv0fybQ",
       "title": "אבא",
