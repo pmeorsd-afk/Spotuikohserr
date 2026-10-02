@@ -143,6 +143,7 @@ dependencies {
     implementation("androidx.media3:media3-ui:1.3.1")
     // media session + system media notification (lock screen / notification center)
     implementation("androidx.media3:media3-session:1.3.1")
+    implementation("androidx.media3:media3-datasource-okhttp:1.3.1")
 
     //Storage Access Framework folder enumeration (local music import)
     implementation("androidx.documentfile:documentfile:1.0.1")

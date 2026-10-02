@@ -36,6 +36,9 @@ class NewPipeDownloaderImpl(
 
     @Throws(IOException::class, ReCaptchaException::class)
     override fun execute(request: Request): Response {
+        if ("/youtubei/v1/next" in request.url()) {
+            return Response(200, "OK", emptyMap(), """{"responseContext":{},"contents":{},"currentVideoEndpoint":{},"trackingParams":""}""", request.url())
+        }
         val httpMethod = request.httpMethod()
         val url = request.url()
         val headers = request.headers()
@@ -198,16 +201,15 @@ object NewPipeExtractor {
     fun newPipePlayer(videoId: String): List<Pair<Int, String>> {
         init()
         return try {
-            val streamInfo = StreamInfo.getInfo(
-                NewPipe.getService(0),
-                "https://www.youtube.com/watch?v=$videoId"
-            )
-            val streamsList = streamInfo.audioStreams + streamInfo.videoStreams + streamInfo.videoOnlyStreams
-            streamsList.mapNotNull {
-                (it.itagItem?.id ?: return@mapNotNull null) to it.content
-            }
+            val extractor = NewPipe.getService(0).getStreamExtractor("https://www.youtube.com/watch?v=$videoId")
+            extractor.fetchPage()
+            extractor.audioStreams
+                .filter { !it.content.isNullOrBlank() && it.deliveryMethod == org.schabi.newpipe.extractor.stream.DeliveryMethod.PROGRESSIVE_HTTP }
+                .mapNotNull { stream ->
+                    (stream.itagItem?.id ?: return@mapNotNull null) to stream.content
+                }
         } catch (e: Exception) {
-            // Don't print stack trace - caller handles errors
+            timber.log.Timber.tag("NewPipe").w(e, "newPipePlayer failed for $videoId")
             emptyList()
         }
     }

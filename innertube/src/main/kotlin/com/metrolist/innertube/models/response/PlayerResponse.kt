@@ -43,26 +43,26 @@ data class PlayerResponse(
     ) {
         @Serializable
         data class Format(
-            val itag: Int,
-            val url: String?,
-            val mimeType: String,
-            val bitrate: Int,
-            val width: Int?,
-            val height: Int?,
-            val contentLength: Long?,
-            val quality: String,
-            val fps: Int?,
-            val qualityLabel: String?,
-            val averageBitrate: Int?,
-            val audioQuality: String?,
-            val approxDurationMs: String?,
-            val audioSampleRate: Int?,
-            val audioChannels: Int?,
-            val loudnessDb: Double?,
-            val lastModified: Long?,
-            val signatureCipher: String?,
-            val cipher: String?,
-            val audioTrack: AudioTrack?
+            val itag: Int = 0,
+            val url: String? = null,
+            val mimeType: String = "",
+            val bitrate: Int = 0,
+            val width: Int? = null,
+            val height: Int? = null,
+            val contentLength: Long? = null,
+            val quality: String = "",
+            val fps: Int? = null,
+            val qualityLabel: String? = null,
+            val averageBitrate: Int? = null,
+            val audioQuality: String? = null,
+            val approxDurationMs: String? = null,
+            val audioSampleRate: Int? = null,
+            val audioChannels: Int? = null,
+            val loudnessDb: Double? = null,
+            val lastModified: Long? = null,
+            val signatureCipher: String? = null,
+            val cipher: String? = null,
+            val audioTrack: AudioTrack? = null
         ) {
             val isAudio: Boolean
                 get() = width == null
