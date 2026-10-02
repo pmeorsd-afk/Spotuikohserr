@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 220,
-  "last_updated": "2026-09-29T14:31:04.863Z",
+  "version": 221,
+  "last_updated": "2026-10-02T09:31:00.972Z",
   "artists": [
     {
       "id": "5Z0wTitcN5tieNIhXMBG7s",
@@ -670,6 +670,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Ac9EyrsgTY1FAnSN8MkWK",
+      "title": "שערי שמים פתח- ישיבת נחלת יוסף שבי שומרון",
+      "artist": "Kahme Zub",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-02T09:31:00.972Z"
+    },
     {
       "id": "5bFrsEk5efTVlOTwtLBLn2",
       "title": "טאטע תטהר - גרסה אקוסטית",
