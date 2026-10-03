@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 234,
-  "last_updated": "2026-10-03T20:03:48.410Z",
+  "version": 235,
+  "last_updated": "2026-10-03T20:03:51.559Z",
   "artists": [
     {
       "id": "13Bny64Z0lG2BQFHhrMTPb",
@@ -685,8 +685,8 @@
       "title": "לעורר ליבי",
       "artist": "ישיבת רמת גן",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-03T20:03:48.410Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-03T20:03:51.559Z"
     },
     {
       "id": "0rNhXjwIf1748jqeHo3n6z",
