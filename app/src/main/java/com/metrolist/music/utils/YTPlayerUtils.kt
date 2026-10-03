@@ -58,7 +58,7 @@ object YTPlayerUtils {
     // Fast anonymous streaming path like BitChord:
     // ANDROID_VR_1_65_10 returns direct unthrottled audio streams (format.url present) in ~150-200ms
     // without requiring login, PoTokens, or NewPipe watch-page HTML scraping.
-    private val MAIN_CLIENT: YouTubeClient = ANDROID_VR_1_65_10
+    private val MAIN_CLIENT: YouTubeClient = YouTubeClient.VISIONOS
 
     private val STREAM_FALLBACK_CLIENTS: Array<YouTubeClient> = arrayOf(
         ANDROID_VR_1_43_32,

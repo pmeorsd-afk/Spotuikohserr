@@ -167,6 +167,7 @@ data class YouTubeClient(
             val name = params["c"]?.uppercase().orEmpty()
             val version = params["cver"]
             return when {
+                name == "VISIONOS" -> VISIONOS
                 name == "ANDROID_MUSIC" -> ANDROID_MUSIC
                 name == "ANDROID_VR" -> if (version == ANDROID_VR_1_43_32.clientVersion) ANDROID_VR_1_43_32 else ANDROID_VR_1_65_10
                 name.startsWith("ANDROID") -> MOBILE
