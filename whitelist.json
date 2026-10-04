@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 235,
-  "last_updated": "2026-10-03T20:03:51.559Z",
+  "version": 236,
+  "last_updated": "2026-10-04T19:43:28.278Z",
   "artists": [
     {
       "id": "13Bny64Z0lG2BQFHhrMTPb",
@@ -680,6 +680,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "",
+      "title": "פודקאסט המוג׳ו של בן בן ברוך - הרב יוסף דלויה #374",
+      "artist": "בן בן ברוך",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-04T19:43:28.278Z"
+    },
     {
       "id": "4xQUHntnQbnMVHzQDNLcMb",
       "title": "לעורר ליבי",
