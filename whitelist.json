@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 242,
-  "last_updated": "2026-10-05T16:13:05.514Z",
+  "version": 243,
+  "last_updated": "2026-10-05T16:13:09.892Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -10,8 +10,8 @@
         "הרשי אייזנבך"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-05T16:13:05.514Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-05T16:13:09.892Z"
     },
     {
       "id": "343YYaA5MSjiZZ5cGyTr4u",
