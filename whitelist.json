@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 238,
-  "last_updated": "2026-10-05T10:28:33.848Z",
+  "version": 239,
+  "last_updated": "2026-10-05T10:28:37.169Z",
   "artists": [
     {
       "id": "13Bny64Z0lG2BQFHhrMTPb",
@@ -685,8 +685,8 @@
       "title": "השיבנו - לייב מופע הינדיקים 360",
       "artist": "חנן בן ארי",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-05T10:28:33.848Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-05T10:28:37.169Z"
     },
     {
       "id": "",
