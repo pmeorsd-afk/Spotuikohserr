@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 240,
-  "last_updated": "2026-10-05T16:05:33.599Z",
+  "version": 241,
+  "last_updated": "2026-10-05T16:05:38.624Z",
   "artists": [
     {
       "id": "343YYaA5MSjiZZ5cGyTr4u",
@@ -10,8 +10,8 @@
         "חנן בן ארי"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-05T16:05:33.599Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-05T16:05:38.624Z"
     },
     {
       "id": "13Bny64Z0lG2BQFHhrMTPb",
