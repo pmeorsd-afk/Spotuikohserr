@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 241,
-  "last_updated": "2026-10-05T16:05:38.624Z",
+  "version": 242,
+  "last_updated": "2026-10-05T16:13:05.514Z",
   "artists": [
+    {
+      "id": "2zHEEACExzMmffxmf1pn6H",
+      "canonical_name": "הרשי אייזנבך",
+      "aliases": [
+        "הרשי אייזנבך"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-05T16:13:05.514Z"
+    },
     {
       "id": "343YYaA5MSjiZZ5cGyTr4u",
       "canonical_name": "חנן בן ארי",
