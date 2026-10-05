@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 239,
-  "last_updated": "2026-10-05T10:28:37.169Z",
+  "version": 240,
+  "last_updated": "2026-10-05T16:05:33.599Z",
   "artists": [
+    {
+      "id": "343YYaA5MSjiZZ5cGyTr4u",
+      "canonical_name": "חנן בן ארי",
+      "aliases": [
+        "חנן בן ארי"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-05T16:05:33.599Z"
+    },
     {
       "id": "13Bny64Z0lG2BQFHhrMTPb",
       "canonical_name": "בן צור",
