@@ -128,6 +128,19 @@ fun PlaylistScreen(navController: NavController, playlistId: String, playlistNam
         }
 
         var dominentColor by remember { mutableStateOf(Color(AppBackground.toArgb())) }
+        val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
+        val isPlaylistAllowed = remember(whitelistVersion, playlist, songs) {
+            com.music.spotui.util.KosherWhitelistManager.isPlaylistWhitelisted(
+                playlistId = playlistId,
+                coverUri = playlist.coverUri,
+                subtitleOrArtists = playlist.artists
+            ) || songs.any { s -> s.coverUri == playlist.coverUri && com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(s) }
+        }
+        LaunchedEffect(isPlaylistAllowed, playlist.coverUri) {
+            if (isPlaylistAllowed && playlist.coverUri.isNotBlank()) {
+                com.music.spotui.util.KosherWhitelistManager.allowImageUrl(playlist.coverUri)
+            }
+        }
         LaunchedEffect(playlist.coverUri) {
             if (playlist.coverUri.isNotBlank()) {
                 runCatching {
@@ -192,6 +205,7 @@ fun PlaylistScreen(navController: NavController, playlistId: String, playlistNam
                                 modifier = Modifier.size(230.dp),
                                 model = playlist.coverUri,
                                 failure = placeholder(R.drawable.placeholder),
+                                isAllowed = isPlaylistAllowed,
                                 contentDescription = "",
                             )
                         }

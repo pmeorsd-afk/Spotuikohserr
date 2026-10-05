@@ -586,10 +586,20 @@ fun PlayerScreen(navController: NavController) {
                 .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            val currentTrack = queueSongs.firstOrNull { it.id == songId }
+            val isPodcast = currentTrack?.mediaType == com.music.spotui.data.entity.MediaType.PODCAST_EPISODE
             PlayerTopBar(
-                navController,
+                navController = navController,
                 onMenuClick = { showMenu = true },
                 contextName = playerViewModel.currentSongAlbum.value,
+                isPodcast = isPodcast,
+                onContextClick = {
+                    if (isPodcast && currentTrack != null) {
+                        val targetShowId = currentTrack.resolvePodcastShowId()
+                        val targetShowName = currentTrack.album.ifBlank { currentTrack.singer }
+                        navController.navigate(com.music.spotui.ui.navigation.showRoute(targetShowId, targetShowName))
+                    }
+                }
             )
             // Cover Pager with exact Spotify dimensions: max 456dp x 456dp, 8dp corner radius
             Box(
@@ -685,8 +695,14 @@ fun PlayerScreen(navController: NavController) {
                     source = SongPlayer.currentSource,
                     quality = SongPlayer.currentQuality,
                     onArtistClick = {
-                        playerViewModel.goToArtist(currentTrack?.spotifyTrackId.orEmpty(), songSinger) { route ->
-                            navController.navigate(route)
+                        if (currentTrack?.mediaType == com.music.spotui.data.entity.MediaType.PODCAST_EPISODE) {
+                            val targetShowId = currentTrack.resolvePodcastShowId()
+                            val targetShowName = currentTrack.album.ifBlank { currentTrack.singer }
+                            navController.navigate(com.music.spotui.ui.navigation.showRoute(targetShowId, targetShowName))
+                        } else {
+                            playerViewModel.goToArtist(currentTrack?.spotifyTrackId.orEmpty(), songSinger) { route ->
+                                navController.navigate(route)
+                            }
                         }
                     },
                     spotifyTrackId = currentTrack?.spotifyTrackId.orEmpty(),
@@ -932,6 +948,8 @@ fun PlayerTopBar(
     navController: NavController,
     onMenuClick: () -> Unit,
     contextName: String = "",
+    isPodcast: Boolean = false,
+    onContextClick: (() -> Unit)? = null,
 ) {
     Row(verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween, modifier = Modifier
@@ -952,10 +970,21 @@ fun PlayerTopBar(
         val hasHebrew = contextName.any { it in '\u0590'..'\u05FF' }
         val subtitle = if (contextName.isBlank()) {
             if (hasHebrew) "מנגן כעת" else "NOW PLAYING"
+        } else if (isPodcast) {
+            if (hasHebrew) "מתוך הפודקאסט" else "PLAYING FROM PODCAST"
         } else {
             if (hasHebrew) "מתוך האלבום" else "PLAYING FROM"
         }
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.then(
+                if (onContextClick != null) Modifier.clickable(
+                    interactionSource = remember { MutableInteractionSource() },
+                    indication = null,
+                    onClick = onContextClick,
+                ) else Modifier
+            )
+        ) {
             Text(
                 text = subtitle,
                 color = Color(0xFFB3B3B3),
@@ -1766,25 +1795,40 @@ fun PlayerOptionsSheet(
                     onDismiss()
                     navController.navigate(Routes.Queue.route)
                 }
-                // Use the track's REAL album (currentSongAlbum is the playing
-                // context — a playlist name would resolve to garbage).
-                val realAlbum = currentSong?.album?.ifBlank { null } ?: album
-                PlayerMenuRow(
-                    icon = Icons.Default.PlayArrow,
-                    label = "Go to album",
-                    enabled = realAlbum.isNotBlank()
-                ) {
-                    onDismiss()
-                    navController.navigate(albumRoute(realAlbum, singer))
-                }
-                PlayerMenuRow(
-                    icon = Icons.Default.Person,
-                    label = "Go to artist",
-                    enabled = singer.isNotBlank()
-                ) {
-                    onDismiss()
-                    playerViewModel.goToArtist(currentSong?.spotifyTrackId.orEmpty(), singer) { route ->
-                        navController.navigate(route)
+                val isPodcastEp = currentSong?.mediaType == com.music.spotui.data.entity.MediaType.PODCAST_EPISODE
+                if (isPodcastEp && currentSong != null) {
+                    val hasHebrew = singer.any { it in '\u0590'..'\u05FF' } || album.any { it in '\u0590'..'\u05FF' }
+                    PlayerMenuRow(
+                        icon = Icons.Default.PlayArrow,
+                        label = if (hasHebrew) "עבור לפודקאסט" else "Go to podcast",
+                        enabled = true,
+                    ) {
+                        onDismiss()
+                        val targetShowId = currentSong.resolvePodcastShowId()
+                        val targetShowName = currentSong.album.ifBlank { currentSong.singer }
+                        navController.navigate(com.music.spotui.ui.navigation.showRoute(targetShowId, targetShowName))
+                    }
+                } else {
+                    // Use the track's REAL album (currentSongAlbum is the playing
+                    // context — a playlist name would resolve to garbage).
+                    val realAlbum = currentSong?.album?.ifBlank { null } ?: album
+                    PlayerMenuRow(
+                        icon = Icons.Default.PlayArrow,
+                        label = "Go to album",
+                        enabled = realAlbum.isNotBlank()
+                    ) {
+                        onDismiss()
+                        navController.navigate(albumRoute(realAlbum, singer))
+                    }
+                    PlayerMenuRow(
+                        icon = Icons.Default.Person,
+                        label = "Go to artist",
+                        enabled = singer.isNotBlank()
+                    ) {
+                        onDismiss()
+                        playerViewModel.goToArtist(currentSong?.spotifyTrackId.orEmpty(), singer) { route ->
+                            navController.navigate(route)
+                        }
                     }
                 }
                 PlayerMenuRow(

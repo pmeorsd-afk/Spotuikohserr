@@ -426,9 +426,12 @@ class HomeFeedEngine @Inject constructor(
             )
         }
 
-        // ── 3. לאחרונה (Liked Songs pinned first + user playlists + recent tracks) ──
+        // ── 3. לאחרונה (Liked Songs pinned first + recent tracks + user playlists) ──
         val recentItems = mutableListOf<HomeItem>()
         recentItems.add(HomeItem.LikedSongs(count = likedSongs.size))
+        recentTracks.forEach { stat ->
+            recentItems.add(HomeItem.Track(stat.toSongModel()))
+        }
         val playlists = getCachedPlaylists(context)
         playlists.forEach { pl ->
             recentItems.add(
@@ -439,9 +442,6 @@ class HomeFeedEngine @Inject constructor(
                     id = pl.spotifyId
                 )
             )
-        }
-        recentTracks.forEach { stat ->
-            recentItems.add(HomeItem.Track(stat.toSongModel()))
         }
         sections.add(
             HomeSection(
@@ -717,6 +717,9 @@ class HomeFeedEngine @Inject constructor(
         // 2. Rebuild RECENTLY_PLAYED section
         val recentItems = mutableListOf<HomeItem>()
         recentItems.add(HomeItem.LikedSongs(count = likedSongs.size))
+        recentTracks.forEach { stat ->
+            recentItems.add(HomeItem.Track(stat.toSongModel()))
+        }
         val playlists = getCachedPlaylists(context)
         playlists.forEach { pl ->
             recentItems.add(
@@ -727,9 +730,6 @@ class HomeFeedEngine @Inject constructor(
                     id = pl.spotifyId
                 )
             )
-        }
-        recentTracks.forEach { stat ->
-            recentItems.add(HomeItem.Track(stat.toSongModel()))
         }
         val recentSection = HomeSection(
             id = HomeSectionIds.RECENTLY_PLAYED,

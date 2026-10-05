@@ -98,6 +98,8 @@ object KosherWhitelistManager {
     val currentWhitelistVersion: Long get() = currentVersion
 
     private var initialized = false
+    @Volatile
+    private var appContext: Context? = null
 
     /**
      * Initializes the manager:
@@ -106,10 +108,10 @@ object KosherWhitelistManager {
      * 3. Fetches the latest authoritative whitelist from Apps Script / GitHub.
      */
     fun init(context: Context) {
+        val app = context.applicationContext
+        appContext = app
         if (initialized) return
         initialized = true
-
-        val app = context.applicationContext
         CoroutineScope(Dispatchers.IO).launch {
             val cacheFile = File(app.filesDir, CACHE_FILE_NAME)
             if (cacheFile.exists()) {
@@ -591,6 +593,56 @@ object KosherWhitelistManager {
     /**
      * Checks if a [HomeItem] is allowed for display.
      */
+    /**
+     * Playlist check: validates playlist cover by URL, custom playlist track contents, or artists.
+     */
+    fun isPlaylistWhitelisted(
+        playlistId: String? = null,
+        coverUri: String? = null,
+        subtitleOrArtists: String? = null,
+        context: Context? = null
+    ): Boolean {
+        if (com.music.spotui.BuildConfig.IS_ADMIN) {
+            if (!coverUri.isNullOrBlank()) allowImageUrl(coverUri)
+            return true
+        }
+        val cleanCover = coverUri?.trim() ?: ""
+        if (cleanCover.isNotBlank() && isUrlAllowed(cleanCover)) return true
+
+        val ctx = context ?: appContext
+        val cleanId = playlistId?.trim() ?: ""
+
+        if (ctx != null && cleanId.startsWith("custom_")) {
+            val cp = com.music.spotui.data.preferences.CustomPlaylistStore.getPlaylists(ctx)
+                .find { it.id == cleanId }
+            if (cp != null) {
+                val matchingTrack = if (cleanCover.isNotBlank()) {
+                    cp.cachedTracks.find { it.coverUri == cleanCover } ?: cp.cachedTracks.firstOrNull()
+                } else {
+                    cp.cachedTracks.firstOrNull()
+                }
+                if (matchingTrack != null && isSongWhitelisted(matchingTrack)) {
+                    if (cleanCover.isNotBlank()) allowImageUrl(cleanCover)
+                    return true
+                }
+            }
+        }
+
+        val artists = subtitleOrArtists?.trim() ?: ""
+        if (artists.isNotBlank()) {
+            val allowed = areAllArtistsInWhitelist(artists) || isArtistInWhitelist(null, artists)
+            if (allowed) {
+                if (cleanCover.isNotBlank()) allowImageUrl(cleanCover)
+                return true
+            }
+        }
+
+        return false
+    }
+
+    /**
+     * Checks if a [HomeItem] is allowed for display.
+     */
     fun isHomeItemWhitelisted(item: HomeItem?): Boolean {
         if (item == null) return false
         if (com.music.spotui.BuildConfig.IS_ADMIN) {
@@ -600,7 +652,7 @@ object KosherWhitelistManager {
         val allowed = when (item) {
             is HomeItem.Artist -> isArtistInWhitelist(null, item.name)
             is HomeItem.Album -> areAllArtistsInWhitelist(item.subtitle)
-            is HomeItem.Playlist -> false
+            is HomeItem.Playlist -> isPlaylistWhitelisted(item.id, item.imageUrl, item.subtitle)
             is HomeItem.Track -> isSongWhitelisted(item.song)
             is HomeItem.LikedSongs -> true
         }
@@ -619,17 +671,37 @@ object KosherWhitelistManager {
             if (recent.image.isNotBlank()) allowImageUrl(recent.image)
             return true
         }
-        val allowed = if (recent.type == "song") {
-            isTrackInWhitelist(
+        val allowed = when (recent.type) {
+            "song", "episode" -> isTrackInWhitelist(
                 trackId = recent.spotifyTrackId.ifBlank { recent.key },
                 trackTitle = recent.name,
                 artistName = recent.singer
             )
-        } else {
-            false
+            "artist" -> isArtistInWhitelist(artistId = recent.key, artistName = recent.name)
+            "album" -> if (recent.singer.isNotBlank()) areAllArtistsInWhitelist(recent.singer) || isUrlAllowed(recent.image) else isUrlAllowed(recent.image)
+            "playlist" -> isPlaylistWhitelisted(recent.key, recent.image, recent.singer)
+            "show" -> isUrlAllowed(recent.image) || (recent.singer.isNotBlank() && isArtistInWhitelist(null, recent.singer)) || isArtistInWhitelist(null, recent.name)
+            else -> false
         }
         if (allowed && recent.image.isNotBlank()) {
             allowImageUrl(recent.image)
+        }
+        return allowed
+    }
+
+    /**
+     * Checks if a podcast show is whitelisted for display.
+     */
+    fun isPodcastShowWhitelisted(show: com.music.spotui.data.entity.PodcastModel?): Boolean {
+        if (show == null) return false
+        if (com.music.spotui.BuildConfig.IS_ADMIN) {
+            if (show.coverUri.isNotBlank()) allowImageUrl(show.coverUri)
+            return true
+        }
+        val allowed = isUrlAllowed(show.coverUri) ||
+            isArtistInWhitelist(show.id.takeIf { it.isNotBlank() }, show.publisher.ifBlank { show.name })
+        if (allowed && show.coverUri.isNotBlank()) {
+            allowImageUrl(show.coverUri)
         }
         return allowed
     }
@@ -660,30 +732,13 @@ object KosherWhitelistManager {
             return allowed
         }
 
-        // Playlists:
-        // 1. Direct URL check: if the image URL is already in approved whitelist
-        if (isUrlAllowed(entry.coverUri)) return true
-
-        // 2. Custom Playlist: check if any cached track is whitelisted
-        if (context != null && entry.spotifyId.startsWith("custom_")) {
-            val cp = com.music.spotui.data.preferences.CustomPlaylistStore.getPlaylists(context)
-                .find { it.id == entry.spotifyId }
-            if (cp != null) {
-                val matchingTrack = cp.cachedTracks.find { it.coverUri == entry.coverUri }
-                    ?: cp.cachedTracks.firstOrNull()
-                if (matchingTrack != null) {
-                    val trackAllowed = isSongWhitelisted(matchingTrack)
-                    if (trackAllowed) {
-                        allowImageUrl(entry.coverUri)
-                        return true
-                    } else {
-                        return false
-                    }
-                }
-            }
-        }
-
-        return false
+        // Playlists: delegate to unified isPlaylistWhitelisted
+        return isPlaylistWhitelisted(
+            playlistId = entry.spotifyId,
+            coverUri = entry.coverUri,
+            subtitleOrArtists = entry.artists.ifBlank { entry.subtitle },
+            context = context
+        )
     }
 
     /**

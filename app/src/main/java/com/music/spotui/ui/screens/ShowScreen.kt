@@ -1,4 +1,4 @@
-﻿package com.music.spotui.ui.screens
+package com.music.spotui.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -6,6 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -19,6 +20,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -55,14 +57,31 @@ import com.music.spotui.ui.viewmodel.ShowViewModel
 
 @OptIn(ExperimentalGlideComposeApi::class, ExperimentalFoundationApi::class)
 @Composable
-fun ShowScreen(navController: NavController, showId: String, showName: String = "") {
+fun ShowScreen(
+    navController: NavController,
+    showId: String,
+    showName: String = "",
+    singleEpisodeId: String = ""
+) {
+    val singleEpisode = remember(singleEpisodeId) {
+        if (singleEpisodeId.isNotBlank()) com.music.spotui.ui.navigation.ItemDetailRegistry.get(singleEpisodeId) else null
+    }
+
     val vm: ShowViewModel = hiltViewModel()
     val context = LocalContext.current
-    LaunchedEffect(showId) { vm.loadShow(showId) }
+    LaunchedEffect(showId, showName, singleEpisode) {
+        if (singleEpisode == null) {
+            vm.loadShow(showId, showName)
+        }
+    }
 
     val episodesState by vm.episodes.collectAsState()
     val show by vm.show.collectAsState()
-    val episodes = (episodesState as? Response.Success)?.data.orEmpty()
+    val episodes = if (singleEpisode != null) {
+        listOf(singleEpisode)
+    } else {
+        (episodesState as? Response.Success)?.data.orEmpty()
+    }
 
     var menuSong by remember { mutableStateOf<SongsModel?>(null) }
     menuSong?.let { sel ->
@@ -101,29 +120,77 @@ fun ShowScreen(navController: NavController, showId: String, showName: String = 
                 modifier = Modifier.fillMaxWidth().padding(16.dp),
             ) {
                 GlideImage(
-                    model = show?.coverUri ?: episodes.firstOrNull()?.coverUri,
+                    model = singleEpisode?.coverUri ?: show?.coverUri ?: episodes.firstOrNull()?.coverUri,
                     contentScale = ContentScale.Crop,
                     failure = placeholder(R.drawable.placeholder),
                     modifier = Modifier.size(180.dp).clip(RoundedCornerShape(8.dp)),
+                    isAllowed = if (singleEpisode != null) com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(singleEpisode) else com.music.spotui.util.KosherWhitelistManager.isPodcastShowWhitelisted(show),
                     contentDescription = null,
                 )
                 Spacer(Modifier.height(12.dp))
                 Text(
-                    text = show?.name ?: showName,
+                    text = if (singleEpisode != null) singleEpisode.album.ifBlank { singleEpisode.singer } else (show?.name ?: showName),
                     color = Color.White,
                     fontSize = 22.sp,
                     fontWeight = FontWeight.Bold,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                 )
-                show?.publisher?.takeIf { it.isNotBlank() }?.let {
+                val publisherText = if (singleEpisode != null) singleEpisode.singer else show?.publisher
+                publisherText?.takeIf { it.isNotBlank() }?.let {
                     Text(it, color = Color(0xFFB3B3B3), fontSize = 13.sp)
                 }
             }
         }
 
-        if (episodesState is Response.Loading) {
-            item { Loader() }
+        if (singleEpisode == null && episodesState is Response.Loading) {
+            item {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 48.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(40.dp),
+                        color = Color(0xFF1ED760)
+                    )
+                }
+            }
+        }
+
+        if (episodesState is Response.Error) {
+            item {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(24.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = (episodesState as Response.Error).error.ifBlank { "לא ניתן לטעון פרקים" },
+                        color = Color.Gray,
+                        fontSize = 14.sp
+                    )
+                }
+            }
+        }
+
+        if (episodesState is Response.Success && episodes.isEmpty()) {
+            item {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(24.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "אין פרקים זמינים",
+                        color = Color.Gray,
+                        fontSize = 14.sp
+                    )
+                }
+            }
         }
 
         items(episodes.size) { i ->
@@ -137,9 +204,9 @@ fun ShowScreen(navController: NavController, showId: String, showName: String = 
                         indication = null,
                         onLongClick = { menuSong = ep },
                         onClick = {
-                            vm.updateQueue(listOf(ep))
+                            vm.updateQueue(episodes)
                             SongPlayer.playSong(ep.url, context)
-                            vm.updateSongState(ep.coverUri, ep.title, ep.singer, true, ep.id, 0, ep.album)
+                            vm.updateSongState(ep.coverUri, ep.title, ep.singer, true, ep.id, i, ep.album)
                         },
                     )
                     .padding(16.dp, 10.dp),
@@ -149,6 +216,7 @@ fun ShowScreen(navController: NavController, showId: String, showName: String = 
                     contentScale = ContentScale.Crop,
                     failure = placeholder(R.drawable.placeholder),
                     modifier = Modifier.size(48.dp).clip(RoundedCornerShape(4.dp)),
+                    isAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(ep),
                     contentDescription = null,
                 )
                 Column(modifier = Modifier.padding(start = 12.dp).weight(1f)) {

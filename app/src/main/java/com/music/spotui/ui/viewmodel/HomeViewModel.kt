@@ -15,13 +15,19 @@ import kotlinx.coroutines.flow.StateFlow
 import com.music.spotui.data.local.LocalListeningTracker
 import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.launch
+import android.content.Context
+import com.music.spotui.data.entity.MediaType
+import com.music.spotui.data.entity.SongsModel
+import com.music.spotui.di.CurrentSongState
+import com.music.spotui.di.SongPlayer
 import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val repository: AppRepository,
     private val homeFeedEngine: HomeFeedEngine,
-    private val listeningTracker: LocalListeningTracker
+    private val listeningTracker: LocalListeningTracker,
+    private val currentSongState: CurrentSongState
 ) : ViewModel() {
 
     private val _home : MutableStateFlow<Response<HomeFeedModel>> = MutableStateFlow(Response.Loading())
@@ -76,6 +82,58 @@ class HomeViewModel @Inject constructor(
         val current = (_home.value as? Response.Success)?.data ?: return
         val patched = homeFeedEngine.patchLikedSongsCount(current)
         _home.value = Response.Success(patched)
+    }
+
+    /**
+     * Safety net on ON_RESUME: refreshes recent listening from local cache (<5ms) without network calls.
+     */
+    fun syncRecentListening() = viewModelScope.launch(Dispatchers.IO) {
+        try {
+            val fastFeed = homeFeedEngine.updateRecentListeningOnly()
+            if (fastFeed.sections.isNotEmpty()) {
+                _home.value = Response.Success(fastFeed)
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    /**
+     * Direct Play-on-Tap contract for listening items (G2):
+     * Directly plays the exact track or podcast episode via SongPlayer.
+     * Sets queue, registers podcast episode if needed, and starts playback without opening Album/Show catalog.
+     */
+    fun playTrack(song: SongsModel, context: Context) {
+        if (song.mediaType == MediaType.PODCAST_EPISODE) {
+            SongPlayer.registerMediaType(song.url, MediaType.PODCAST_EPISODE)
+            SongPlayer.registerEpisodeModel(song.url, song)
+        }
+        currentSongState.updateQueue(listOf(song))
+        SongPlayer.playSong(song.url, context)
+        currentSongState.updateSongState(
+            song.coverUri,
+            song.title,
+            song.singer,
+            true,
+            song.id,
+            0,
+            song.album
+        )
+        val seed = song.spotifyTrackId
+        if (song.mediaType != MediaType.PODCAST_EPISODE && seed.isNotBlank()) {
+            viewModelScope.launch(Dispatchers.IO) {
+                try {
+                    val recs = repository.provideRecommendations(listOf(seed))
+                    val current = currentSongState.queue.value
+                    if (current.size == 1 && current.first().id == song.id) {
+                        val fresh = recs.filter { it.id != song.id }
+                        if (fresh.isNotEmpty()) currentSongState.updateQueue(current + fresh)
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+        }
     }
 
     fun refreshHome(force: Boolean = false) = viewModelScope.launch(Dispatchers.IO) {

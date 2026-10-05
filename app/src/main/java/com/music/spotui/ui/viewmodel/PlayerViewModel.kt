@@ -91,6 +91,7 @@ class PlayerViewModel @Inject constructor(
     val playingArtist by mutableStateOf(currentSongSinger.value)
 
     private var listeningSongKey: String = ""
+    private var recentReported = false
     private var thirtySecondReported = false
     private var completionReported = false
 
@@ -104,9 +105,16 @@ class PlayerViewModel @Inject constructor(
 
             if (listeningSongKey != key) {
                 listeningSongKey = key
+                recentReported = false
                 thirtySecondReported = false
                 completionReported = false
                 listeningTracker.onSongStarted(song)
+            }
+
+            // G4: Record immediate recent history when playback actually starts successfully (1s guard)
+            if (!recentReported && positionMs >= 1_000L) {
+                recentReported = true
+                listeningTracker.recordRecent(song)
             }
 
             if (!thirtySecondReported && positionMs >= 30_000L) {
@@ -214,6 +222,7 @@ class PlayerViewModel @Inject constructor(
     }
 
     fun goToArtist(trackId: String, fallbackName: String, navigate: (route: String) -> Unit) {
+        if (trackId.startsWith("episode:")) return
         viewModelScope.launch {
             val route = withContext(Dispatchers.IO) {
                 val artist = if (trackId.isNotBlank())

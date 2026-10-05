@@ -36,6 +36,7 @@ import com.music.spotui.ui.screens.LibraryScreen
 import com.music.spotui.ui.screens.LikedSongsScreen
 import com.music.spotui.ui.screens.PlayerScreen
 import com.music.spotui.ui.screens.PlaylistScreen
+import com.music.spotui.ui.screens.PodcastHubScreen
 import com.music.spotui.ui.screens.ShowScreen
 import com.music.spotui.ui.screens.QueueScreen
 import com.music.spotui.ui.screens.SearchScreen
@@ -256,12 +257,21 @@ fun MyNavHost(
             CategoryScreen(navHostController, genre = genre, title = title.ifBlank { genre })
         }
 
+        composable(Routes.PodcastHub.route) {
+            LaunchedEffect(playerState) {
+                bottomBarState.value = true
+                bottomBarPlayerState.value = playerState != ""
+            }
+            PodcastHubScreen(navHostController)
+        }
+
         composable(
-            "${Routes.Album.route}/{uString}?artist={artist}&cover={cover}&albumId={albumId}",
+            "${Routes.Album.route}/{uString}?artist={artist}&cover={cover}&albumId={albumId}&singleTrackId={singleTrackId}",
             arguments = listOf(
                 navArgument("artist") { defaultValue = "" },
                 navArgument("cover") { defaultValue = "" },
                 navArgument("albumId") { defaultValue = "" },
+                navArgument("singleTrackId") { defaultValue = "" },
             ),
         ) { navBackStackEntry ->
             LaunchedEffect(playerState) {
@@ -274,6 +284,7 @@ fun MyNavHost(
             val artist = navBackStackEntry.arguments?.getString("artist").orEmpty()
             val cover = navBackStackEntry.arguments?.getString("cover").orEmpty()
             val albumId = navBackStackEntry.arguments?.getString("albumId").orEmpty()
+            val singleTrackId = navBackStackEntry.arguments?.getString("singleTrackId").orEmpty()
             /* We check if it's not null */
             uId?.let { id ->
                 AlbumScreen(
@@ -281,7 +292,8 @@ fun MyNavHost(
                     albumName = id,
                     artist = artist,
                     coverUrl = cover,
-                    albumId = albumId
+                    albumId = albumId,
+                    singleTrackId = singleTrackId
                 )
             }
         }
@@ -300,8 +312,11 @@ fun MyNavHost(
         }
 
         composable(
-            "${Routes.Show.route}/{sId}?name={name}",
-            arguments = listOf(navArgument("name") { defaultValue = "" }),
+            "${Routes.Show.route}/{sId}?name={name}&singleEpisodeId={singleEpisodeId}",
+            arguments = listOf(
+                navArgument("name") { defaultValue = "" },
+                navArgument("singleEpisodeId") { defaultValue = "" },
+            ),
         ) { navBackStackEntry ->
             LaunchedEffect(playerState) {
                 bottomBarState.value = true
@@ -309,7 +324,8 @@ fun MyNavHost(
             }
             val sId = navBackStackEntry.arguments?.getString("sId")
             val name = navBackStackEntry.arguments?.getString("name").orEmpty()
-            sId?.let { ShowScreen(navHostController, showId = it, showName = name) }
+            val singleEpisodeId = navBackStackEntry.arguments?.getString("singleEpisodeId").orEmpty()
+            sId?.let { ShowScreen(navHostController, showId = it, showName = name, singleEpisodeId = singleEpisodeId) }
         }
 
         composable("${Routes.ArtistReleases.route}/{aString}") { navBackStackEntry ->

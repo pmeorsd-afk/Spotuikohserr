@@ -33,7 +33,11 @@ sealed class Routes(
     object LocalFiles : Routes(0, "LocalFiles", "localfiles")
     object SpotiflacVerify : Routes(0, "SpotiflacVerify", "spotiflacverify")
     object KosherAdmin : Routes(0, "Kosher Admin", "kosher_admin")
+    object PodcastHub : Routes(0, "PodcastHub", "podcast_hub")
 }
+
+/** Builds the route to the Podcast Hub screen. */
+fun podcastHubRoute(): String = Routes.PodcastHub.route
 
 /** Builds a Browse-category route carrying the search genre and a display title. */
 fun categoryRoute(genre: String, title: String): String =
@@ -43,9 +47,14 @@ fun categoryRoute(genre: String, title: String): String =
 fun playlistRoute(id: String, name: String = ""): String =
     "${Routes.Playlist.route}/${android.net.Uri.encode(id)}?name=${android.net.Uri.encode(name)}"
 
-/** Builds a podcast-show route carrying the Spotify show id (and a display name). */
-fun showRoute(id: String, name: String = ""): String =
-    "${Routes.Show.route}/${android.net.Uri.encode(id)}?name=${android.net.Uri.encode(name)}"
+/** Builds a podcast-show route carrying the Spotify show id (and a display name), with optional singleEpisodeId. */
+fun showRoute(id: String, name: String = "", singleEpisodeId: String = ""): String {
+    val safeId = id.ifBlank { "unknown" }
+    val encId = android.net.Uri.encode(safeId) ?: runCatching { java.net.URLEncoder.encode(safeId, "UTF-8") }.getOrDefault(safeId)
+    val encName = android.net.Uri.encode(name) ?: runCatching { java.net.URLEncoder.encode(name, "UTF-8") }.getOrDefault(name)
+    val base = "${Routes.Show.route}/$encId?name=$encName"
+    return if (singleEpisodeId.isNotBlank()) "$base&singleEpisodeId=${android.net.Uri.encode(singleEpisodeId)}" else base
+}
 
 /**
  * Builds an artist route. When the exact Spotify artist id is known it is
@@ -59,15 +68,22 @@ fun artistRoute(name: String, id: String = ""): String {
 }
 
 /**
- * Builds an album route, optionally carrying the artist so same-named albums by
- * different artists resolve to the right one. The artist value is URL-encoded.
+ * Builds an album route, optionally carrying the artist and singleTrackId.
+ * When singleTrackId is provided, AlbumScreen displays only that exact track.
  */
-fun albumRoute(name: String, artist: String = "", cover: String = "", albumId: String = ""): String {
+fun albumRoute(
+    name: String,
+    artist: String = "",
+    cover: String = "",
+    albumId: String = "",
+    singleTrackId: String = ""
+): String {
     val base = "${Routes.Album.route}/${android.net.Uri.encode(name)}"
     val params = mutableListOf<String>()
     if (artist.isNotBlank()) params.add("artist=${android.net.Uri.encode(artist)}")
     if (cover.isNotBlank()) params.add("cover=${android.net.Uri.encode(cover)}")
     if (albumId.isNotBlank()) params.add("albumId=${android.net.Uri.encode(albumId)}")
+    if (singleTrackId.isNotBlank()) params.add("singleTrackId=${android.net.Uri.encode(singleTrackId)}")
     return if (params.isEmpty()) base else "$base?${params.joinToString("&")}"
 }
 

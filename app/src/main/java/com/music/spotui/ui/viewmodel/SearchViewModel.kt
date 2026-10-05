@@ -105,7 +105,7 @@ class SearchViewModel @Inject constructor(
     fun startRadioFromSong(song: SongsModel) {
         currentSongState.updateQueue(listOf(song))
         val seed = song.spotifyTrackId
-        if (seed.isBlank()) return
+        if (song.mediaType == com.music.spotui.data.entity.MediaType.PODCAST_EPISODE || seed.isBlank()) return
         viewModelScope.launch(Dispatchers.IO) {
             val recs = repository.provideRecommendations(listOf(seed))
             val current = currentSongState.queue.value
@@ -233,6 +233,8 @@ class SearchViewModel @Inject constructor(
                 shows = spotifyRes.shows,
                 episodes = spotifyRes.episodes,
             )
+
+            android.util.Log.d("SearchViewModel", "searchUnified: query='$query' -> shows=${unified.shows.size}, episodes=${unified.episodes.size}, songs=${unified.songs.size}")
 
             _unifiedResults.value = Response.Success(unified)
             _songs.value = Response.Success(combinedSongs)

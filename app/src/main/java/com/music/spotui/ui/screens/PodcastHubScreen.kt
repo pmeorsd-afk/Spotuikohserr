@@ -23,7 +23,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -39,21 +38,22 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
-import com.music.spotui.ui.components.GlideImage
 import com.bumptech.glide.integration.compose.placeholder
 import com.music.spotui.R
 import com.music.spotui.data.api.Response
-import com.music.spotui.data.entity.LibraryEntry
+import com.music.spotui.data.entity.PodcastModel
+import com.music.spotui.ui.components.GlideImage
 import com.music.spotui.ui.components.Loader
 import com.music.spotui.ui.components.Snackbar
-import com.music.spotui.ui.navigation.playlistRoute
-import com.music.spotui.ui.viewmodel.CategoryViewModel
+import com.music.spotui.ui.navigation.showRoute
+import com.music.spotui.ui.viewmodel.PodcastHubViewModel
 
 @Composable
-fun CategoryScreen(navController: NavController, genre: String, title: String) {
-    val viewModel: CategoryViewModel = hiltViewModel()
-    LaunchedEffect(genre) { viewModel.load(genre) }
-    val playlists by viewModel.playlists.collectAsState()
+fun PodcastHubScreen(
+    navController: NavController,
+    viewModel: PodcastHubViewModel = hiltViewModel()
+) {
+    val showsState by viewModel.shows.collectAsState()
 
     Column(
         modifier = Modifier
@@ -78,7 +78,7 @@ fun CategoryScreen(navController: NavController, genre: String, title: String) {
                     .padding(8.dp)
             )
             Text(
-                text = title,
+                text = "פודקאסטים",
                 fontWeight = FontWeight.Bold,
                 color = Color.White,
                 fontSize = 22.sp,
@@ -88,21 +88,38 @@ fun CategoryScreen(navController: NavController, genre: String, title: String) {
             )
         }
 
-        when (playlists) {
-            is Response.Loading -> Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { Loader() }
-            is Response.Success -> CategoryGrid((playlists as Response.Success).data, navController)
-            else -> Box(modifier = Modifier.padding(20.dp, 60.dp)) { Snackbar(showMessage = "Couldn't load $title") }
+        when (showsState) {
+            is Response.Loading -> {
+                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                    Loader()
+                }
+            }
+            is Response.Success -> {
+                val shows = (showsState as Response.Success<List<PodcastModel>>).data
+                PodcastHubGrid(shows = shows, navController = navController)
+            }
+            is Response.Error -> {
+                Box(modifier = Modifier.padding(20.dp, 60.dp)) {
+                    Snackbar(showMessage = "לא ניתן לטעון פודקאסטים")
+                }
+            }
         }
     }
 }
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-private fun CategoryGrid(entries: List<LibraryEntry>, navController: NavController) {
-    if (entries.isEmpty()) {
-        Box(modifier = Modifier.padding(20.dp, 40.dp)) { Snackbar(showMessage = "Nothing here yet") }
+private fun PodcastHubGrid(
+    shows: List<PodcastModel>,
+    navController: NavController
+) {
+    if (shows.isEmpty()) {
+        Box(modifier = Modifier.padding(20.dp, 40.dp)) {
+            Snackbar(showMessage = "לא נמצאו פודקאסטים כרגע")
+        }
         return
     }
+
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         contentPadding = PaddingValues(12.dp, 8.dp, 12.dp, 130.dp),
@@ -110,28 +127,31 @@ private fun CategoryGrid(entries: List<LibraryEntry>, navController: NavControll
         verticalArrangement = Arrangement.spacedBy(16.dp),
         modifier = Modifier.fillMaxSize(),
     ) {
-        items(entries) { entry ->
+        items(shows, key = { it.id }) { show ->
             Column(
                 modifier = Modifier
+                    .clip(RoundedCornerShape(8.dp))
                     .clickable(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = null,
-                    ) { navController.navigate(playlistRoute(entry.spotifyId, entry.name)) }
+                    ) {
+                        navController.navigate(showRoute(show.id, show.name))
+                    }
             ) {
                 GlideImage(
                     modifier = Modifier
                         .fillMaxWidth()
                         .aspectRatio(1f)
-                        .clip(RoundedCornerShape(6.dp)),
-                    model = entry.coverUri,
+                        .clip(RoundedCornerShape(8.dp)),
+                    model = show.coverUri,
                     contentScale = ContentScale.Crop,
                     failure = placeholder(R.drawable.placeholder),
                     loading = placeholder(R.drawable.placeholder),
-                    isAllowed = com.music.spotui.util.KosherWhitelistManager.isLibraryEntryWhitelisted(entry),
-                    contentDescription = "",
+                    isAllowed = com.music.spotui.util.KosherWhitelistManager.isPodcastShowWhitelisted(show),
+                    contentDescription = show.name,
                 )
                 Text(
-                    text = entry.name,
+                    text = show.name,
                     color = Color.White,
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
@@ -139,13 +159,15 @@ private fun CategoryGrid(entries: List<LibraryEntry>, navController: NavControll
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.padding(top = 6.dp),
                 )
-                Text(
-                    text = entry.subtitle,
-                    color = Color.Gray,
-                    fontSize = 11.sp,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
+                if (show.publisher.isNotBlank()) {
+                    Text(
+                        text = show.publisher,
+                        color = Color.Gray,
+                        fontSize = 11.sp,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
             }
         }
     }

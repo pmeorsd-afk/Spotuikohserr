@@ -89,23 +89,25 @@ fun AlbumScreen(
     albumName: String,
     artist: String = "",
     coverUrl: String = "",
-    albumId: String = ""
+    albumId: String = "",
+    singleTrackId: String = ""
 ) {
-
+    val singleSong = remember(singleTrackId) {
+        if (singleTrackId.isNotBlank()) com.music.spotui.ui.navigation.ItemDetailRegistry.get(singleTrackId) else null
+    }
 
     val albumViewModel : AlbumViewModel = hiltViewModel()
     val songs by albumViewModel.songs.collectAsState()
     val albums by albumViewModel.albums.collectAsState()
 
-    // Load this album's actual tracks from Spotify (by name/id, disambiguated by artist).
-    LaunchedEffect(albumName, artist, albumId) {
-        albumViewModel.loadAlbumSongs(albumName, artist, albumId)
+    // Load this album's actual tracks from Spotify (only if not viewing a single song).
+    LaunchedEffect(albumName, artist, albumId, singleSong) {
+        if (singleSong == null) {
+            albumViewModel.loadAlbumSongs(albumName, artist, albumId)
+        }
     }
 
     val context = LocalContext.current
-
-
-
 
     Log.d("check", albumName.toString())
 
@@ -115,8 +117,12 @@ fun AlbumScreen(
             .background(Color(AppBackground.toArgb()))
     ) {
         val albumsResponse = (albums as? Response.Success)?.data.orEmpty()
-        val songsResponse = (songs as? Response.Success)?.data.orEmpty()
-        val isSongsLoading = songs is Response.Loading
+        val songsResponse = if (singleSong != null) {
+            listOf(singleSong)
+        } else {
+            (songs as? Response.Success)?.data.orEmpty()
+        }
+        val isSongsLoading = if (singleSong != null) false else songs is Response.Loading
 
         if (albumName == "Liked Songs" || albumName == "שירים שאהבתם") {
             LaunchedEffect(Unit) {
@@ -139,9 +145,10 @@ fun AlbumScreen(
                 albums = albumsResponse,
                 songs = songsResponse,
                 isSongsLoading = isSongsLoading,
-                albumName = albumName,
-                initialArtist = artist,
-                initialCover = coverUrl,
+                albumName = singleSong?.title ?: albumName,
+                initialArtist = singleSong?.singer ?: artist,
+                initialCover = singleSong?.coverUri ?: coverUrl,
+                singleSong = singleSong,
                 context = context
             )
         }
@@ -159,9 +166,10 @@ fun SumUpAlbumScreen(
     albumName: String,
     initialArtist: String = "",
     initialCover: String = "",
+    singleSong: SongsModel? = null,
     context: Context
 ) {
-    // `songs` is already this album's track list (loaded by AlbumViewModel).
+    // `songs` is already this album's track list (or the single song).
     val albumSongs: List<SongsModel> = songs
 
     // Warm the stream cache for the first few tracks so the first tap plays
@@ -175,8 +183,18 @@ fun SumUpAlbumScreen(
     val albumByName : Map<String, List<AlbumsModel>> = albums.groupBy { it.name }
     // The album may not be in the cached new-releases list (e.g. opened from
     // search) — fall back to a model built from navigation args or the album's first track.
-    val album : List<AlbumsModel> = albumByName[albumName]
-        ?: listOf(
+    val album : List<AlbumsModel> = if (singleSong != null) {
+        listOf(
+            AlbumsModel(
+                id = singleSong.id,
+                artists = singleSong.singer,
+                coverUri = singleSong.coverUri.ifBlank { initialCover },
+                name = singleSong.title,
+                time = singleSong.album.ifBlank { "Single" },
+            )
+        )
+    } else {
+        albumByName[albumName] ?: listOf(
             AlbumsModel(
                 id = albumName.hashCode() and 0x7fffffff,
                 artists = initialArtist.ifBlank { albumSongs.firstOrNull()?.singer ?: "" },
@@ -185,6 +203,7 @@ fun SumUpAlbumScreen(
                 time = "",
             )
         )
+    }
     var dominentColor by remember {
         mutableStateOf(Color(AppBackground.toArgb()))
     }
@@ -193,6 +212,7 @@ fun SumUpAlbumScreen(
         Palette().extractSecondColorFromCoverUrl(context = context, coverToExtract) { color ->
             dominentColor = color
         }
+
     }
 
     var isAlbumLiked by remember { mutableStateOf( isAlbumLiked(context, album[0].id.toString())) }
@@ -255,7 +275,8 @@ fun SumUpAlbumScreen(
         } ?: initialArtist
 
         val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
-        val isAlbumAllowed = remember(whitelistVersion, albumModel, albumArtist) {
+        val isAlbumAllowed = remember(whitelistVersion, albumModel, albumArtist, singleSong) {
+            (singleSong != null && com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(singleSong)) ||
             com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(albumModel) ||
             (albumArtist.isNotBlank() && (
                 com.music.spotui.util.KosherWhitelistManager.areAllArtistsInWhitelist(albumArtist) ||

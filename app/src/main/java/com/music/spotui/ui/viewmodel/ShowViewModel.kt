@@ -40,14 +40,23 @@ class ShowViewModel @Inject constructor(
 
     private var showKey: String? = null
 
-    fun loadShow(showId: String) {
-        if (showKey == showId) return
+    fun loadShow(showId: String, showName: String = "") {
+        if (showKey == showId && _episodes.value is Response.Success) return
         showKey = showId
+        _episodes.value = Response.Loading()
         viewModelScope.launch(Dispatchers.IO) {
-            _show.value = repository.provideShow(showId)
+            _show.value = repository.provideShow(showId, showName)
         }
         viewModelScope.launch(Dispatchers.IO) {
-            repository.provideShowEpisodes(showId).collect { _episodes.value = it }
+            repository.provideShowEpisodes(showId, showName).collect { res ->
+                _episodes.value = res
+                if (res is Response.Success) {
+                    val updated = repository.provideShow(showId, showName)
+                    if (updated != null) {
+                        _show.value = updated
+                    }
+                }
+            }
         }
     }
 }

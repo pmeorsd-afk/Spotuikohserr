@@ -204,7 +204,8 @@ private fun HistoryRow(entry: HistoryEntry, onRemove: () -> Unit) {
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
-            isAllowed = com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(null, entry.title, entry.singer),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isUrlAllowed(entry.image) ||
+                com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(null, entry.title, entry.singer),
             contentDescription = "",
         )
         Column(

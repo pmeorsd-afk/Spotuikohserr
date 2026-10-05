@@ -162,7 +162,8 @@ fun PlaylistEditDetailsSheet(
                                 contentScale = ContentScale.Crop,
                                 modifier = Modifier.size(104.dp),
                                 failure = placeholder(R.drawable.placeholder),
-                                loading = placeholder(R.drawable.placeholder)
+                                loading = placeholder(R.drawable.placeholder),
+                                isAllowed = com.music.spotui.util.KosherWhitelistManager.isLibraryEntryWhitelisted(entry)
                             )
                         } else {
                             Icon(

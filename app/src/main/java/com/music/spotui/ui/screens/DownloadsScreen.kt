@@ -309,11 +309,12 @@ fun DownloadsScreen(navController: NavController) {
                         ) {
                             GlideImage(
                                 modifier = Modifier
-                                    .size(48.dp)
-                                    .clip(RoundedCornerShape(4.dp)),
+                                .size(48.dp)
+                                .clip(RoundedCornerShape(4.dp)),
                                 model = song.coverUri,
                                 failure = placeholder(R.drawable.placeholder),
                                 contentScale = ContentScale.Crop,
+                                isAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(song),
                                 contentDescription = ""
                             )
                             Column(modifier = Modifier.padding(start = 12.dp).weight(1f)) {

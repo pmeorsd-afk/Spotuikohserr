@@ -12,6 +12,10 @@ import com.metrolist.innertube.models.SongItem
 import com.metrolist.innertube.utils.YouTubeUrlParser
 import com.metrolist.music.constants.AudioQuality
 import com.metrolist.music.utils.YTPlayerUtils
+import com.music.spotui.data.entity.MediaType
+import com.music.spotui.playback.DefaultEpisodePlaybackResolver
+import com.music.spotui.playback.EpisodePlaybackResolver
+import com.music.spotui.playback.PlaybackSource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -149,6 +153,39 @@ object SongPlayer {
             if (query.isNotBlank() && meta.title.isNotBlank()) metadataRegistry[query] = meta
         }
     }
+
+    // ── Media Type & Episode Registry ──
+    private val mediaTypeRegistry = java.util.concurrent.ConcurrentHashMap<String, MediaType>()
+    private val episodeModelRegistry =
+        java.util.concurrent.ConcurrentHashMap<String, com.music.spotui.data.entity.SongsModel>()
+
+    @Volatile var episodeResolver: EpisodePlaybackResolver = DefaultEpisodePlaybackResolver()
+
+    fun setEpisodePlaybackResolver(resolver: EpisodePlaybackResolver) {
+        episodeResolver = resolver
+    }
+
+    /** Register query→MediaType pairs (populated whenever the queue changes). */
+    fun registerMediaType(pairs: List<Pair<String, MediaType>>) {
+        pairs.forEach { (query, type) ->
+            if (query.isNotBlank()) mediaTypeRegistry[query] = type
+        }
+    }
+
+    fun registerMediaType(query: String, type: MediaType) {
+        if (query.isNotBlank()) mediaTypeRegistry[query] = type
+    }
+
+    /** Register query→SongsModel pairs for podcast episodes. */
+    fun registerEpisodeModel(pairs: List<Pair<String, com.music.spotui.data.entity.SongsModel>>) {
+        pairs.forEach { (query, model) ->
+            if (query.isNotBlank()) episodeModelRegistry[query] = model
+        }
+    }
+
+    fun registerEpisodeModel(query: String, model: com.music.spotui.data.entity.SongsModel) {
+        if (query.isNotBlank()) episodeModelRegistry[query] = model
+    }
     // Tracks which query is the latest play request so a slow resolve for an old
     // tap doesn't clobber a newer one (fast switching).
     @Volatile private var currentRequest: String = ""
@@ -226,15 +263,70 @@ object SongPlayer {
             player?.pause()
         }
 
-        // Podcast episodes are encoded as "episode:<id>" queries — play them via the
-        // Spotify web player's episode page (same engine as tracks).
-        if (song.startsWith("episode:") && webPlayerEnabled && SpotifyWebPlayer.canPlay &&
-            com.music.spotui.data.preferences.isWebPlaybackEnabled(appContext)
-        ) {
-            runCatching { player?.pause() }
-            currentSource = "Spotify"
-            currentQuality = ""
-            SpotifyWebPlayer.playEpisode(song.removePrefix("episode:"))
+        // Podcast episodes are routed directly to the EpisodePlaybackResolver (RSS / direct audio engine),
+        // completely bypassing music track matching and YouTube search.
+        val isPodcast = mediaTypeRegistry[song] == MediaType.PODCAST_EPISODE || song.startsWith("episode:")
+
+        if (isPodcast) {
+            val startTimeMs = System.currentTimeMillis()
+            scope.launch {
+                try {
+                    val episodeModel = episodeModelRegistry[song] ?: run {
+                        val meta = metadataRegistry[song]
+                        val epId = if (song.startsWith("episode:")) song.removePrefix("episode:") else ""
+                        com.music.spotui.data.entity.SongsModel(
+                            id = epId.hashCode(),
+                            title = meta?.title ?: metaTitle,
+                            album = meta?.album ?: metaArtist,
+                            singer = meta?.artist ?: metaArtist,
+                            coverUri = metaCover,
+                            url = song,
+                            spotifyTrackId = epId,
+                            durationMs = durationRegistry[song] ?: 0,
+                            mediaType = MediaType.PODCAST_EPISODE,
+                        )
+                    }
+                    Log.i(TAG, "playSong: routing podcast episode to EpisodePlaybackResolver: title='${episodeModel.title}', id='${episodeModel.spotifyTrackId}'")
+                    val source = episodeResolver.resolve(episodeModel, appContext)
+                    if (source == null) {
+                        Log.w(TAG, "playSong: episodeResolver returned null for podcast episode '${episodeModel.title}'")
+                        if (currentRequest == song) withContext(Dispatchers.Main) {
+                            android.widget.Toast.makeText(
+                                appContext,
+                                "Could not resolve podcast audio stream",
+                                android.widget.Toast.LENGTH_SHORT
+                            ).show()
+                            onStreamFailed?.invoke(song)
+                        }
+                        return@launch
+                    }
+
+                    when (source) {
+                        is PlaybackSource.DirectAudio -> {
+                            Log.i(TAG, "playSong: resolved DirectAudio podcast stream: ${source.url}")
+                            if (currentRequest != song) return@launch
+                            withContext(Dispatchers.Main) {
+                                if (currentRequest != song) return@withContext
+                                currentSource = "Podcast"
+                                currentQuality = source.mimeType
+                                ensurePlayer(appContext)
+                                player!!.setMediaItem(buildMediaItem(source.url, source.mimeType))
+                                player!!.prepare()
+                                player!!.playWhenReady = true
+                                activePlaybackToken = preparedToken
+                                val elapsed = System.currentTimeMillis() - startTimeMs
+                                Log.i(TAG, "[PLAY_SPEED] Podcast episode '${episodeModel.title}' took $elapsed ms to start audio!")
+                            }
+                            startPositionWatch()
+                        }
+                        is PlaybackSource.YouTube -> {
+                            Log.i(TAG, "playSong: resolved YouTube podcast stream videoId: ${source.videoId}")
+                        }
+                    }
+                } catch (e: Exception) {
+                    Log.e(TAG, "playSong failed for podcast episode: $song", e)
+                }
+            }
             return
         }
 
@@ -346,6 +438,7 @@ object SongPlayer {
     /** Warm the cache for an upcoming track (e.g. the next/previous queue item). */
     fun prefetch(song: String, context: Context) {
         if (song.isBlank() || streamCache.containsKey(song)) return
+        if (song.startsWith("episode:") || mediaTypeRegistry[song] == MediaType.PODCAST_EPISODE) return
         val appContext = context.applicationContext
         if (webPlaybackActive()) return
         scope.launch {
@@ -360,11 +453,12 @@ object SongPlayer {
      * taps start instantly without latency.
      */
     fun prefetchList(songs: List<String>, context: Context, count: Int = 4) {
-        if (songs.isEmpty()) return
+        val eligibleSongs = songs.filterNot { it.startsWith("episode:") || mediaTypeRegistry[it] == MediaType.PODCAST_EPISODE }
+        if (eligibleSongs.isEmpty()) return
         val appContext = context.applicationContext
         if (webPlaybackActive()) return
         scope.launch {
-            songs.take(count).forEach { song ->
+            eligibleSongs.take(count).forEach { song ->
                 if (song.isNotBlank() && !streamCache.containsKey(song)) {
                     runCatching {
                         resolveVideoCandidates(song).firstOrNull()?.let { vid ->
@@ -446,6 +540,11 @@ object SongPlayer {
     // prefetch resolving the NEXT track via YouTube was flipping the badge to
     // "YouTube" while the current track streamed from Spotify).
     private suspend fun resolveStreamUrl(song: String, appContext: Context, forPlayback: Boolean = false): String? {
+        // Podcast episodes are handled by EpisodePlaybackResolver and must never enter the music pipeline
+        if (song.startsWith("episode:") || mediaTypeRegistry[song] == MediaType.PODCAST_EPISODE) {
+            Log.d(TAG, "resolveStreamUrl: skipping music stream resolution for podcast episode '$song'")
+            return null
+        }
         // Imported local files: the play query IS the file's content:// / file:// URI.
         // ExoPlayer plays it directly (FLAC/MP3/WAV/… via its built-in extractors).
         if (song.startsWith("content://") || song.startsWith("file://")) {
@@ -1131,7 +1230,7 @@ object SongPlayer {
         }
     }
 
-    private fun bigramSimilarity(a: String, b: String): Double {
+    internal fun bigramSimilarity(a: String, b: String): Double {
         fun variants(value: String): List<String> =
             listOfNotNull(
                 value,
@@ -1152,9 +1251,9 @@ object SongPlayer {
             val intersection = aBigrams.count { it in bBigrams }
             return (2.0 * intersection) / (aBigrams.size + bBigrams.size)
         }
-        return variants(a).maxOf { aa ->
-            variants(b).maxOf { bb -> score(aa, bb) }
-        }
+        return variants(a).maxOfOrNull { aa ->
+            variants(b).maxOfOrNull { bb -> score(aa, bb) } ?: 0.0
+        } ?: 0.0
     }
 
     private data class VersionMarker(

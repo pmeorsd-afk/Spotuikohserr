@@ -289,18 +289,31 @@ fun SongOptionsSheet(
                         )
                     }
 
-                    // 6. מעבר לאמנים
+                    // 6. מעבר לאמנים / לפודקאסט
                     item {
-                        ContextMenuItem(
-                            title = "מעבר לאמנים",
-                            customIcon = { ArtistIcon() },
-                            onClick = {
-                                playerViewModel.goToArtist(song.spotifyTrackId, song.singer) { route ->
-                                    navController.navigate(route)
+                        if (song.mediaType == com.music.spotui.data.entity.MediaType.PODCAST_EPISODE) {
+                            ContextMenuItem(
+                                title = "מעבר לפודקאסט",
+                                customIcon = { ArtistIcon() },
+                                onClick = {
+                                    val targetShowId = song.resolvePodcastShowId()
+                                    val targetShowName = song.album.ifBlank { song.singer }
+                                    navController.navigate(com.music.spotui.ui.navigation.showRoute(targetShowId, targetShowName))
+                                    onDismiss()
                                 }
-                                onDismiss()
-                            }
-                        )
+                            )
+                        } else {
+                            ContextMenuItem(
+                                title = "מעבר לאמנים",
+                                customIcon = { ArtistIcon() },
+                                onClick = {
+                                    playerViewModel.goToArtist(song.spotifyTrackId, song.singer) { route ->
+                                        navController.navigate(route)
+                                    }
+                                    onDismiss()
+                                }
+                            )
+                        }
                     }
 
                     // 7. לפתיחת Jam (עם תגית Premium)

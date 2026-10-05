@@ -85,6 +85,7 @@ import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.placeholder
 import com.music.spotui.R
 import com.music.spotui.data.api.Response
+import com.music.spotui.data.entity.MediaType
 import com.music.spotui.data.entity.SongsModel
 import com.music.spotui.data.preferences.addLikedSong
 import com.music.spotui.data.preferences.addLikedSongId
@@ -99,6 +100,7 @@ import com.music.spotui.ui.navigation.albumRoute
 import com.music.spotui.ui.navigation.artistRoute
 import com.music.spotui.ui.navigation.categoryRoute
 import com.music.spotui.ui.navigation.playlistRoute
+import com.music.spotui.ui.navigation.podcastHubRoute
 import com.music.spotui.ui.navigation.showRoute
 import com.music.spotui.ui.theme.AppBackground
 import com.music.spotui.ui.theme.AppPalette
@@ -332,7 +334,11 @@ fun SumUpSearchScreen(
                     ) {
                         item {
                             CategoryGridSection { genre, title ->
-                                navController.navigate(categoryRoute(genre, title))
+                                if (genre == "פודקאסטים" || title == "פודקאסטים") {
+                                    navController.navigate(podcastHubRoute())
+                                } else {
+                                    navController.navigate(categoryRoute(genre, title))
+                                }
                             }
                         }
                     }
@@ -377,14 +383,21 @@ fun SumUpSearchScreen(
                                     RecentItemRow(
                                         item = item,
                                         onClick = {
-                                            when (item.type) {
-                                                "song" -> {
-                                                    navController.navigate(
-                                                        albumRoute(
-                                                            name = item.songAlbum.ifBlank { item.name },
-                                                            artist = item.singer,
-                                                            cover = item.image
-                                                        )
+                                            val isOldEpisode = item.type == "song" && (item.songUrl.startsWith("episode:") || item.key.startsWith("episode:"))
+                                            val effectiveType = if (isOldEpisode) "episode" else item.type
+                                            when (effectiveType) {
+                                                "song", "episode" -> {
+                                                    val song = item.toSongModel()
+                                                    searchViewModel.startRadioFromSong(song)
+                                                    SongPlayer.playSong(song.url, context)
+                                                    searchViewModel.updateSongState(
+                                                        coverUri = song.coverUri,
+                                                        title = song.title,
+                                                        singer = song.singer,
+                                                        playingState = true,
+                                                        songId = song.id,
+                                                        songIndex = 0,
+                                                        album = song.album,
                                                     )
                                                 }
                                                 "artist" -> navController.navigate(artistRoute(item.name, item.key.takeIf { it != item.name }.orEmpty()))
@@ -480,6 +493,23 @@ fun SumUpSearchScreen(
                                             ))
                                             navController.navigate(albumRoute(row.album.name, row.album.artists))
                                         }
+                                        is SearchRow.Show -> SearchShowRow(row.show) {
+                                            recordRecent(com.music.spotui.data.preferences.RecentItem(
+                                                type = "show",
+                                                key = row.show.id,
+                                                name = row.show.name,
+                                                singer = row.show.publisher,
+                                                image = row.show.coverUri,
+                                            ))
+                                            navController.navigate(showRoute(row.show.id, row.show.name))
+                                        }
+                                        is SearchRow.Episode -> SearchSongRow(
+                                            song = row.episode,
+                                            songList = unifiedResults.episodes,
+                                            searchViewModel = searchViewModel,
+                                            onPlayed = { recordRecent(row.episode.toRecentItem()) },
+                                            onLongClick = { menuSong = row.episode }
+                                        )
                                     }
                                 }
                             }
@@ -651,27 +681,6 @@ fun SumUpSearchScreen(
                                             if (isEmpty) {
                                                 item { SearchEmptyMessage("לא נמצאו תוצאות עבור \"$text\"") }
                                             } else {
-                                                if (unifiedResults.playlists.isNotEmpty()) {
-                                                    item { SearchSectionHeader("פלייליסטים") }
-                                                    items(unifiedResults.playlists.size) { i ->
-                                                        val playlistItem = unifiedResults.playlists[i]
-                                                        SearchYTPlaylistRow(
-                                                            item = playlistItem,
-                                                            onClick = {
-                                                                recordRecent(
-                                                                    com.music.spotui.data.preferences.RecentItem(
-                                                                        type = "playlist",
-                                                                        key = "youtube:${playlistItem.id}",
-                                                                        name = playlistItem.title,
-                                                                        singer = playlistItem.author?.name.orEmpty(),
-                                                                        image = playlistItem.thumbnail ?: "",
-                                                                    )
-                                                                )
-                                                                navController.navigate(playlistRoute("youtube:${playlistItem.id}", playlistItem.title))
-                                                            }
-                                                        )
-                                                    }
-                                                }
                                                 items(mixed.size) { i ->
                                                     when (val row = mixed[i]) {
                                                         is SearchRow.Song -> SearchSongRow(
@@ -700,6 +709,23 @@ fun SumUpSearchScreen(
                                                             ))
                                                             navController.navigate(albumRoute(row.album.name, row.album.artists))
                                                         }
+                                                        is SearchRow.Show -> SearchShowRow(row.show) {
+                                                            recordRecent(com.music.spotui.data.preferences.RecentItem(
+                                                                type = "show",
+                                                                key = row.show.id,
+                                                                name = row.show.name,
+                                                                singer = row.show.publisher,
+                                                                image = row.show.coverUri,
+                                                            ))
+                                                            navController.navigate(showRoute(row.show.id, row.show.name))
+                                                        }
+                                                        is SearchRow.Episode -> SearchSongRow(
+                                                            song = row.episode,
+                                                            songList = unifiedResults.episodes,
+                                                            searchViewModel = searchViewModel,
+                                                            onPlayed = { recordRecent(row.episode.toRecentItem()) },
+                                                            onLongClick = { menuSong = row.episode }
+                                                        )
                                                     }
                                                 }
                                                 if (unifiedResults.shows.isNotEmpty()) {
@@ -730,6 +756,27 @@ fun SumUpSearchScreen(
                                                                 recordRecent(ep.toRecentItem())
                                                             },
                                                             onLongClick = { menuSong = ep }
+                                                        )
+                                                    }
+                                                }
+                                                if (unifiedResults.playlists.isNotEmpty()) {
+                                                    item { SearchSectionHeader("פלייליסטים") }
+                                                    items(unifiedResults.playlists.size) { i ->
+                                                        val playlistItem = unifiedResults.playlists[i]
+                                                        SearchYTPlaylistRow(
+                                                            item = playlistItem,
+                                                            onClick = {
+                                                                recordRecent(
+                                                                    com.music.spotui.data.preferences.RecentItem(
+                                                                        type = "playlist",
+                                                                        key = "youtube:${playlistItem.id}",
+                                                                        name = playlistItem.title,
+                                                                        singer = playlistItem.author?.name.orEmpty(),
+                                                                        image = playlistItem.thumbnail ?: "",
+                                                                    )
+                                                                )
+                                                                navController.navigate(playlistRoute("youtube:${playlistItem.id}", playlistItem.title))
+                                                            }
                                                         )
                                                     }
                                                 }
@@ -1082,23 +1129,29 @@ sealed class SearchRow {
     data class Song(val song: SongsModel) : SearchRow()
     data class Artist(val artist: com.music.spotui.data.entity.ArtistsModel) : SearchRow()
     data class Album(val album: com.music.spotui.data.entity.AlbumsModel) : SearchRow()
+    data class Show(val show: com.music.spotui.data.entity.PodcastModel) : SearchRow()
+    data class Episode(val episode: SongsModel) : SearchRow()
 }
 
 private fun mixSearchResults(results: UnifiedSearchResults): List<SearchRow> {
     val songs = results.songs.iterator()
     val artists = results.artists.iterator()
     val albums = results.albums.iterator()
+    val shows = results.shows.iterator()
+    val episodes = results.episodes.iterator()
     val out = ArrayList<SearchRow>()
-    while (songs.hasNext() || artists.hasNext() || albums.hasNext()) {
+    while (songs.hasNext() || artists.hasNext() || albums.hasNext() || shows.hasNext() || episodes.hasNext()) {
+        if (shows.hasNext()) out += SearchRow.Show(shows.next())
         repeat(2) { if (songs.hasNext()) out += SearchRow.Song(songs.next()) }
         if (artists.hasNext()) out += SearchRow.Artist(artists.next())
         if (albums.hasNext()) out += SearchRow.Album(albums.next())
+        if (episodes.hasNext()) out += SearchRow.Episode(episodes.next())
     }
     return out
 }
 
 private fun SongsModel.toRecentItem() = com.music.spotui.data.preferences.RecentItem(
-    type = "song",
+    type = if (mediaType == MediaType.PODCAST_EPISODE) "episode" else "song",
     key = spotifyTrackId.ifBlank { url },
     name = title,
     singer = singer,
@@ -1109,7 +1162,35 @@ private fun SongsModel.toRecentItem() = com.music.spotui.data.preferences.Recent
     spotifyTrackId = spotifyTrackId,
     explicit = explicit,
     durationMs = durationMs,
+    podcastShowId = resolvePodcastShowId(),
 )
+
+private fun com.music.spotui.data.preferences.RecentItem.toSongModel(): SongsModel {
+    val isEpisode = type == "episode" || songUrl.startsWith("episode:") || key.startsWith("episode:")
+    val playUrl = when {
+        songUrl.isNotBlank() -> songUrl
+        isEpisode -> {
+            val show = podcastShowId.ifBlank { "unknown" }
+            "episode:$show:$key"
+        }
+        spotifyTrackId.isNotBlank() -> com.music.spotui.di.SongPlayer.buildSpotifyPlayQuery(spotifyTrackId, name, singer)
+        else -> key.ifBlank { name }
+    }
+    val fallbackId = if (songId > 0) songId else (key.ifBlank { name }.hashCode() and 0x7fffffff)
+    return SongsModel(
+        id = fallbackId,
+        title = name,
+        album = songAlbum,
+        singer = singer,
+        coverUri = image,
+        url = playUrl,
+        spotifyTrackId = spotifyTrackId,
+        explicit = explicit,
+        durationMs = durationMs,
+        mediaType = if (isEpisode) MediaType.PODCAST_EPISODE else MediaType.TRACK,
+        podcastShowId = podcastShowId,
+    )
+}
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
@@ -1145,12 +1226,14 @@ fun RecentItemRow(
                 .padding(start = 10.dp, end = 8.dp),
         ) {
             Text(text = item.name, color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.Medium, maxLines = 1)
-            val subtitle = when (item.type) {
-                "song" -> "שיר • ${item.singer}"
-                "artist" -> "אמן"
-                "album" -> "אלבום • ${item.singer}"
-                "show" -> "פודקאסט" + (if (item.singer.isNotBlank()) " • ${item.singer}" else "")
-                "playlist" -> "פלייליסט" + (if (item.singer.isNotBlank()) " • ${item.singer}" else "")
+            val isOldEpisode = item.type == "song" && (item.songUrl.startsWith("episode:") || item.key.startsWith("episode:"))
+            val subtitle = when {
+                isOldEpisode || item.type == "episode" -> "פרק" + (if (item.singer.isNotBlank()) " • ${item.singer}" else "")
+                item.type == "song" -> "שיר • ${item.singer}"
+                item.type == "artist" -> "אמן"
+                item.type == "album" -> "אלבום • ${item.singer}"
+                item.type == "show" -> "פודקאסט" + (if (item.singer.isNotBlank()) " • ${item.singer}" else "")
+                item.type == "playlist" -> "פלייליסט" + (if (item.singer.isNotBlank()) " • ${item.singer}" else "")
                 else -> ""
             }
             Text(text = subtitle, color = Color.Gray, fontSize = 12.sp, fontWeight = FontWeight.Medium, maxLines = 1)
@@ -1296,6 +1379,7 @@ fun SearchShowRow(show: com.music.spotui.data.entity.PodcastModel, onClick: () -
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
+            isAllowed = com.music.spotui.util.KosherWhitelistManager.isPodcastShowWhitelisted(show),
             contentDescription = "",
         )
         Column {
@@ -1394,6 +1478,7 @@ fun SearchYTPlaylistRow(
             contentScale = ContentScale.Crop,
             failure = placeholder(R.drawable.placeholder),
             loading = placeholder(R.drawable.placeholder),
+            isAllowed = false,
             contentDescription = "",
         )
         Column(modifier = Modifier.weight(1f)) {

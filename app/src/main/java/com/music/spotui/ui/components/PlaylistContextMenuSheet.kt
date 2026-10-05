@@ -148,7 +148,8 @@ fun PlaylistContextMenuSheet(
                                 .size(56.dp)
                                 .clip(RoundedCornerShape(4.dp)),
                             failure = placeholder(R.drawable.placeholder),
-                            loading = placeholder(R.drawable.placeholder)
+                            loading = placeholder(R.drawable.placeholder),
+                            isAllowed = com.music.spotui.util.KosherWhitelistManager.isLibraryEntryWhitelisted(entry)
                         )
                     } else {
                         Box(

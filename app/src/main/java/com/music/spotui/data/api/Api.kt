@@ -18,8 +18,12 @@ import com.music.spotui.data.entity.HomeSection
 import com.music.spotui.data.entity.SearchResults
 import com.music.spotui.data.entity.SongsModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.sync.Semaphore
 import javax.inject.Inject
 
 /**
@@ -36,6 +40,9 @@ class Api @Inject constructor(
     @ApplicationContext private val context: Context,
 ) {
     private fun stableId(key: String): Int = key.hashCode() and 0x7fffffff
+
+    private val podcastFeedResolver: com.music.spotui.playback.PodcastFeedResolver =
+        com.music.spotui.playback.DefaultPodcastFeedResolver()
 
     /**
      * Process-level cache for the Home feeds. The Home ViewModel is recreated on
@@ -54,9 +61,15 @@ class Api @Inject constructor(
         @Volatile var home: HomeFeedModel? = null
         @Volatile var library: List<com.music.spotui.data.entity.LibraryEntry>? = null
 
+        @Volatile var podcastHubShows: List<PodcastModel>? = null
+        @Volatile var podcastHubTimestamp: Long = 0L
+        val podcastShowCache = java.util.concurrent.ConcurrentHashMap<String, PodcastModel>()
+
         /** Drop all cached feeds (e.g. on logout / account switch). */
         fun clear() {
             albums = null; artists = null; home = null; library = null
+            podcastHubShows = null; podcastHubTimestamp = 0L
+            podcastShowCache.clear()
         }
     }
 
@@ -260,43 +273,139 @@ class Api @Inject constructor(
         }
         Spotify.search(query, types = listOf("track", "album", "artist"), limit = 20).fold(
             onSuccess = { res ->
-                // Podcasts come from the REST catalog search (best-effort — a failure
-                // there must not blank out the music results).
-                val podcasts = Spotify.searchPodcasts(query, limit = 12)
-                    .onFailure { Log.e("Api", "searchPodcasts FAILED: ${it.message}", it) }
-                    .getOrNull()
-                Log.d("Api", "podcasts: shows=${podcasts?.shows?.items?.size ?: -1} episodes=${podcasts?.episodes?.items?.size ?: -1}")
+                // Podcasts come primarily from GraphQL searchDesktop (not rate-limited).
+                // Fall back to REST catalog search only if GraphQL returned neither shows nor episodes.
+                val gqlShows = res.shows?.items.orEmpty()
+                val gqlEpisodes = res.episodes?.items.orEmpty()
+
+                val shows = gqlShows.ifEmpty {
+                    Spotify.searchPodcasts(query, limit = 12)
+                        .onFailure { Log.d("Api", "searchPodcasts REST fallback skipped or failed: ${it.message}") }
+                        .getOrNull()?.shows?.items.orEmpty()
+                }
+                val episodes = gqlEpisodes.ifEmpty {
+                    Spotify.searchPodcasts(query, limit = 12)
+                        .getOrNull()?.episodes?.items.orEmpty()
+                }
+
+                Log.d("Api", "searchEverything query='$query' -> tracks=${res.tracks?.items?.size ?: 0} shows=${shows.size} episodes=${episodes.size}")
+                val showModels = shows.map { it.toPodcastModel() }
+                showModels.forEach { podcastShowCache[it.id] = it }
                 emit(Response.Success(SearchResults(
                     songs = res.tracks?.items.orEmpty().map { it.toSongModel() },
                     albums = res.albums?.items.orEmpty().map { it.toAlbumModel() },
                     artists = res.artists?.items.orEmpty().map { it.toArtistModel() },
-                    shows = podcasts?.shows?.items.orEmpty().map { it.toPodcastModel() },
-                    episodes = podcasts?.episodes?.items.orEmpty().map { it.toEpisodeSongModel(null) },
+                    shows = showModels,
+                    episodes = episodes.map { it.toEpisodeSongModel(null) },
                 )))
             },
             onFailure = { Log.e("Api", "searchEverything failed", it); emit(Response.Error(it.message ?: "error")) },
         )
     }
 
-    /** A podcast show's episodes, as playable [SongsModel] (url = "episode:<id>"). */
-    suspend fun getShowEpisodes(showId: String): Flow<Response<List<SongsModel>>> = flow {
+    /**
+     * Resolves a podcast show's episodes via public RSS feed discovery and parsing.
+     * Bypasses the rate-limited Spotify REST endpoint (/v1/shows/{id}/episodes) entirely.
+     */
+    suspend fun getShowEpisodes(showId: String, showName: String = ""): Flow<Response<List<SongsModel>>> = flow {
         emit(Response.Loading())
-        if (!SpotifyTokenProvider.ensureToken(context)) {
-            emit(Response.Error("Spotify not authenticated — set sp_dc cookie")); return@flow
+
+        val effectiveShowName = showName.ifBlank { podcastShowCache[showId]?.name.orEmpty() }.trim()
+        if (effectiveShowName.isBlank()) {
+            Log.w("Api", "getShowEpisodes: neither showName nor cached show found for showId '$showId'")
+            emit(Response.Error("Show name not found"))
+            return@flow
         }
-        val show = Spotify.show(showId).getOrNull()
-        Spotify.showEpisodes(showId, limit = 50).fold(
-            onSuccess = { paging ->
-                emit(Response.Success(paging.items.map { it.toEpisodeSongModel(show?.name) }))
-            },
-            onFailure = { Log.e("Api", "getShowEpisodes failed", it); emit(Response.Error(it.message ?: "error")) },
+
+        Log.i("Api", "getShowEpisodes: resolving RSS feed for show '$effectiveShowName' (showId='$showId')")
+        val feedUrl = podcastFeedResolver.resolveFeedUrlForShow(effectiveShowName, context)
+        if (feedUrl.isNullOrBlank()) {
+            Log.w("Api", "getShowEpisodes: could not discover RSS feed for show '$effectiveShowName'")
+            emit(Response.Error("Could not find podcast feed"))
+            return@flow
+        }
+
+        Log.i("Api", "getShowEpisodes: fetching RSS feed XML from $feedUrl")
+        val xml = podcastFeedResolver.fetchFeedXml(feedUrl)
+        if (xml.isNullOrBlank()) {
+            Log.w("Api", "getShowEpisodes: failed to download RSS XML from $feedUrl")
+            emit(Response.Error("Could not download podcast feed"))
+            return@flow
+        }
+
+        val parsedFeed = com.music.spotui.playback.PodcastRssParser.parseFeed(xml)
+        val rssEpisodes = parsedFeed.episodes
+        if (rssEpisodes.isEmpty()) {
+            Log.w("Api", "getShowEpisodes: parsed 0 episodes from $feedUrl")
+            emit(Response.Error("No episodes found in podcast feed"))
+            return@flow
+        }
+
+        // Enrich show metadata in cache
+        val cachedShow = podcastShowCache[showId]
+        val enrichedPublisher = parsedFeed.author ?: cachedShow?.publisher.orEmpty()
+        val enrichedCover = cachedShow?.coverUri?.ifBlank { null } ?: parsedFeed.imageUrl.orEmpty()
+        val enrichedName = cachedShow?.name?.ifBlank { null } ?: parsedFeed.title ?: effectiveShowName
+
+        val enrichedShow = PodcastModel(
+            id = showId,
+            name = enrichedName,
+            publisher = enrichedPublisher,
+            coverUri = enrichedCover
         )
+        podcastShowCache[showId] = enrichedShow
+
+        val episodeSongModels = rssEpisodes.mapIndexed { index, ep ->
+            val epKey = ep.guid ?: "${ep.title}_$index"
+            val epId = stableId("episode:${showId}:$epKey")
+            val playUrl = "episode:${showId}:$epKey"
+            val model = SongsModel(
+                id = epId,
+                title = ep.title.ifBlank { "Episode ${index + 1}" },
+                album = enrichedName,
+                singer = enrichedPublisher.ifBlank { enrichedName },
+                coverUri = enrichedCover,
+                url = playUrl,
+                spotifyTrackId = "",
+                explicit = false,
+                durationMs = (ep.durationMs ?: 0L).toInt(),
+                mediaType = com.music.spotui.data.entity.MediaType.PODCAST_EPISODE,
+                podcastShowId = showId,
+            )
+            com.music.spotui.di.SongPlayer.registerMediaType(playUrl, com.music.spotui.data.entity.MediaType.PODCAST_EPISODE)
+            com.music.spotui.di.SongPlayer.registerEpisodeModel(playUrl, model)
+            model
+        }
+
+        Log.i("Api", "getShowEpisodes: successfully resolved ${episodeSongModels.size} episodes from RSS for '$enrichedName'")
+        emit(Response.Success(episodeSongModels))
     }
 
     /** Show header (name/publisher/cover) for the detail screen. */
-    suspend fun getShow(showId: String): PodcastModel? {
-        if (!SpotifyTokenProvider.ensureToken(context)) return null
-        return Spotify.show(showId).getOrNull()?.toPodcastModel()
+    suspend fun getShow(showId: String, showName: String = ""): PodcastModel? {
+        val cached = podcastShowCache[showId]
+        if (cached != null && cached.name.isNotBlank()) return cached
+
+        if (showName.isNotBlank()) {
+            val fallback = PodcastModel(
+                id = showId,
+                name = showName,
+                publisher = cached?.publisher.orEmpty(),
+                coverUri = cached?.coverUri.orEmpty(),
+            )
+            podcastShowCache[showId] = fallback
+            return fallback
+        }
+
+        // Try Spotify web API if authenticated, but gracefully fall back
+        if (SpotifyTokenProvider.ensureToken(context)) {
+            val spShow = Spotify.show(showId).getOrNull()?.toPodcastModel()
+            if (spShow != null) {
+                podcastShowCache[showId] = spShow
+                return spShow
+            }
+        }
+        return cached
     }
 
     private fun com.metrolist.spotify.models.SpotifyShow.toPodcastModel() = PodcastModel(
@@ -315,6 +424,11 @@ class Api @Inject constructor(
             singer = subtitle,
             coverUri = images.firstOrNull()?.url ?: (show?.images?.firstOrNull()?.url ?: ""),
             url = "episode:$id",
+            spotifyTrackId = id,
+            explicit = false,
+            durationMs = durationMs,
+            mediaType = com.music.spotui.data.entity.MediaType.PODCAST_EPISODE,
+            podcastShowId = show?.id.orEmpty(),
         )
     }
 
@@ -388,6 +502,97 @@ class Api @Inject constructor(
         return out.shuffled().take(30)
     }
 
+    fun peekCachedPodcastHubShows(): List<PodcastModel>? {
+        val now = System.currentTimeMillis()
+        val mem = podcastHubShows
+        if (mem != null && (now - podcastHubTimestamp) < 3600_000L) {
+            return mem
+        }
+        val disk = com.music.spotui.data.preferences.getCachedPodcastHubShows(context)
+        if (disk != null && (now - disk.first) < 3600_000L) {
+            podcastHubShows = disk.second
+            podcastHubTimestamp = disk.first
+            disk.second.forEach { podcastShowCache[it.id] = it }
+            return disk.second
+        }
+        return null
+    }
+
+    /**
+     * Loads curated podcast shows for the Podcast Hub using GraphQL searchDesktop.
+     * Bypasses REST API completely and returns real PodcastModel items.
+     * Uses in-memory (1h TTL) and persistent disk cache, and queries with controlled concurrency
+     * (Semaphore(2)) over essential queries to avoid 429 rate-limiting while providing fast load times.
+     */
+    suspend fun getPodcastHubShows(forceRefresh: Boolean = false): Flow<Response<List<PodcastModel>>> = flow {
+        val cached = if (!forceRefresh) peekCachedPodcastHubShows() else null
+        if (cached != null && cached.isNotEmpty()) {
+            emit(Response.Success(cached))
+            return@flow
+        }
+
+        emit(Response.Loading())
+        if (!SpotifyTokenProvider.ensureToken(context)) {
+            val diskFallback = com.music.spotui.data.preferences.getCachedPodcastHubShows(context)?.second
+            if (!diskFallback.isNullOrEmpty()) {
+                emit(Response.Success(diskFallback))
+            } else {
+                emit(Response.Error("Spotify not authenticated — set sp_dc cookie"))
+            }
+            return@flow
+        }
+
+        val startTotal = System.currentTimeMillis()
+        val queries = listOf("פודקאסטים", "בן בן ברוך", "הסכת")
+        val semaphore = Semaphore(2)
+        val allShows = java.util.concurrent.CopyOnWriteArrayList<PodcastModel>()
+
+        coroutineScope {
+            queries.map { q ->
+                async {
+                    semaphore.acquire()
+                    val qStart = System.currentTimeMillis()
+                    try {
+                        Spotify.search(q, limit = 25).fold(
+                            onSuccess = { res ->
+                                val shows = res.shows?.items.orEmpty().map { it.toPodcastModel() }
+                                val qDuration = System.currentTimeMillis() - qStart
+                                Log.d("Api", "getPodcastHubShows query='$q' took ${qDuration}ms returned ${shows.size} shows")
+                                allShows.addAll(shows)
+                            },
+                            onFailure = { err ->
+                                val qDuration = System.currentTimeMillis() - qStart
+                                Log.e("Api", "getPodcastHubShows query='$q' took ${qDuration}ms failed: ${err.message}")
+                            }
+                        )
+                    } finally {
+                        semaphore.release()
+                    }
+                }
+            }.awaitAll()
+        }
+
+        val totalDuration = System.currentTimeMillis() - startTotal
+        val distinctShows = allShows.distinctBy { it.id }.filter { it.name.isNotBlank() }
+        Log.d("Api", "getPodcastHubShows finished in ${totalDuration}ms with ${distinctShows.size} distinct shows")
+
+        if (distinctShows.isNotEmpty()) {
+            val now = System.currentTimeMillis()
+            podcastHubShows = distinctShows
+            podcastHubTimestamp = now
+            distinctShows.forEach { podcastShowCache[it.id] = it }
+            com.music.spotui.data.preferences.saveCachedPodcastHubShows(context, distinctShows, now)
+            emit(Response.Success(distinctShows))
+        } else {
+            val diskFallback = com.music.spotui.data.preferences.getCachedPodcastHubShows(context)?.second
+            if (!diskFallback.isNullOrEmpty()) {
+                emit(Response.Success(diskFallback))
+            } else {
+                emit(Response.Error("No podcasts found"))
+            }
+        }
+    }
+
     /**
      * Loads the curated playlists for a Browse category/genre. Real Spotify opens
      * a genre catalogue (a page of playlists) rather than running a keyword song
@@ -397,7 +602,7 @@ class Api @Inject constructor(
      */
     suspend fun getCategoryPlaylists(genre: String): Flow<Response<List<com.music.spotui.data.entity.LibraryEntry>>> = flow {
         emit(Response.Loading())
-        if (genre.isBlank()) {
+        if (genre.isBlank() || genre == "פודקאסטים") {
             emit(Response.Success(emptyList())); return@flow
         }
         if (!SpotifyTokenProvider.ensureToken(context)) {
@@ -562,7 +767,18 @@ class Api @Inject constructor(
                     types = listOf("track"),
                     limit = 5,
                 ).getOrNull()?.tracks?.items.orEmpty()
-                picked = trackCandidates.firstOrNull()?.album?.id
+                val matchedTrack = trackCandidates.firstOrNull { track ->
+                    val titleMatch = track.name.equals(albumName, ignoreCase = true) ||
+                            track.name.contains(albumName, ignoreCase = true) ||
+                            albumName.contains(track.name, ignoreCase = true)
+                    val artistMatch = if (cleanArtist.isNotBlank()) {
+                        val trackArtists = track.artists.joinToString(" ") { it.name }.lowercase()
+                        val want = cleanArtist.split(",", "&", "feat.", "ft.").map { it.trim().lowercase() }.filter { it.isNotBlank() }
+                        want.any { it.isNotBlank() && trackArtists.contains(it) }
+                    } else true
+                    titleMatch && artistMatch
+                }
+                picked = matchedTrack?.album?.id
             }
             picked
         }
@@ -908,9 +1124,8 @@ class Api @Inject constructor(
     }
 
     /**
-     * From a list of same/similar-named album candidates, prefer one whose name
-     * matches exactly AND whose artist matches the requested one; fall back to a
-     * name match, then an artist match, then the first result.
+     * From a list of album candidates, safely match the requested album and artist.
+     * Prevents blind fallback to unrelated albums when no valid match exists.
      */
     private fun pickAlbum(
         candidates: List<com.metrolist.spotify.models.SpotifyAlbum>,
@@ -918,19 +1133,30 @@ class Api @Inject constructor(
         artist: String,
     ): com.metrolist.spotify.models.SpotifyAlbum? {
         if (candidates.isEmpty()) return null
+        val cleanAlbum = albumName.trim()
+        if (cleanAlbum.isBlank()) return null
+
         if (artist.isBlank()) {
-            return candidates.firstOrNull { it.name.equals(albumName, ignoreCase = true) }
-                ?: candidates.first()
+            return candidates.firstOrNull { it.name.equals(cleanAlbum, ignoreCase = true) }
+                ?: candidates.firstOrNull { it.name.contains(cleanAlbum, ignoreCase = true) || cleanAlbum.contains(it.name, ignoreCase = true) }
         }
-        val wantArtists = artist.split(",").map { it.trim().lowercase() }.filter { it.isNotBlank() }
+
+        val wantArtists = artist.split(",", "&", "feat.", "ft.").map { it.trim().lowercase() }.filter { it.isNotBlank() }
         fun artistMatches(a: com.metrolist.spotify.models.SpotifyAlbum): Boolean {
             val names = a.artists.joinToString(" ") { it.name }.lowercase()
             return wantArtists.any { it.isNotBlank() && names.contains(it) }
         }
-        val nameMatches = candidates.filter { it.name.equals(albumName, ignoreCase = true) }
-        return nameMatches.firstOrNull { artistMatches(it) }
-            ?: candidates.firstOrNull { artistMatches(it) }
-            ?: nameMatches.firstOrNull()
-            ?: candidates.first()
+
+        fun nameMatches(a: com.metrolist.spotify.models.SpotifyAlbum): Boolean {
+            val aName = a.name.trim()
+            return aName.equals(cleanAlbum, ignoreCase = true) ||
+                    aName.contains(cleanAlbum, ignoreCase = true) ||
+                    cleanAlbum.contains(aName, ignoreCase = true)
+        }
+
+        val exactNameMatches = candidates.filter { it.name.equals(cleanAlbum, ignoreCase = true) }
+        return exactNameMatches.firstOrNull { artistMatches(it) }
+            ?: candidates.firstOrNull { artistMatches(it) && nameMatches(it) }
+            ?: exactNameMatches.firstOrNull()
     }
 }

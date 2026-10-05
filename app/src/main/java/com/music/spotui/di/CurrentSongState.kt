@@ -58,6 +58,9 @@ class CurrentSongState @Inject constructor() {
                 album = it.album,
             )
         })
+        // Seed media type and episode models so SongPlayer routes podcasts cleanly
+        SongPlayer.registerMediaType(songs.map { it.url to it.mediaType })
+        SongPlayer.registerEpisodeModel(songs.filter { it.mediaType == com.music.spotui.data.entity.MediaType.PODCAST_EPISODE }.map { it.url to it })
         // Seed the lyrics resolver with track ids so it can use Spotify's own
         // color-lyrics endpoint (exact synced lyrics) instead of LRCLIB matching.
         com.music.spotui.data.api.LyricsApi.registerTracks(songs)

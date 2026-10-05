@@ -2,6 +2,7 @@ package com.metrolist.spotify
 
 import com.metrolist.spotify.models.SpotifyAlbum
 import com.metrolist.spotify.models.SpotifyArtist
+import com.metrolist.spotify.models.SpotifyEpisode
 import com.metrolist.spotify.models.SpotifyImage
 import com.metrolist.spotify.models.SpotifyPaging
 import com.metrolist.spotify.models.SpotifyPlaylist
@@ -11,7 +12,9 @@ import com.metrolist.spotify.models.SpotifyPlaylistTracksRef
 import com.metrolist.spotify.models.SpotifyRecommendations
 import com.metrolist.spotify.models.SpotifySavedTrack
 import com.metrolist.spotify.models.SpotifySearchResult
+import com.metrolist.spotify.models.SpotifyShow
 import com.metrolist.spotify.models.SpotifySimpleAlbum
+
 import com.metrolist.spotify.models.SpotifySimpleArtist
 import com.metrolist.spotify.models.SpotifyTrack
 import com.metrolist.spotify.models.SpotifyUser
@@ -1427,6 +1430,28 @@ object Spotify {
                     parseGqlSearchPlaylist(data)
                 } ?: emptyList()
 
+            val podcastsSection = searchData.obj("podcasts")
+            val podcastItems =
+                podcastsSection?.arr("items")?.mapNotNull { elem ->
+                    val wrapper = elem.jsonObject
+                    if (wrapper.str("__typename") != "PodcastResponseWrapper") return@mapNotNull null
+                    val data = wrapper.obj("data") ?: return@mapNotNull null
+                    if (data.str("__typename") != "Podcast") return@mapNotNull null
+                    parseGqlSearchPodcast(data)
+                } ?: emptyList()
+
+            val episodesSection = searchData.obj("episodes")
+            val episodeItems =
+                episodesSection?.arr("items")?.mapNotNull { elem ->
+                    val wrapper = elem.jsonObject
+                    if (wrapper.str("__typename") != "EpisodeResponseWrapper") return@mapNotNull null
+                    val data = wrapper.obj("data") ?: return@mapNotNull null
+                    if (data.str("__typename") != "Episode") return@mapNotNull null
+                    parseGqlSearchEpisode(data)
+                } ?: emptyList()
+
+            log("D", "searchDesktop parsed query='$query': podcasts=${podcastItems.size}, episodes=${episodeItems.size}")
+
             SpotifySearchResult(
                 tracks =
                     SpotifyPaging(
@@ -1450,6 +1475,18 @@ object Spotify {
                 playlists =
                     if (playlistItems.isNotEmpty()) {
                         SpotifyPaging(items = playlistItems, total = playlistsSection?.int("totalCount") ?: 0, limit = limit, offset = offset)
+                    } else {
+                        null
+                    },
+                shows =
+                    if (podcastItems.isNotEmpty()) {
+                        SpotifyPaging(items = podcastItems, total = podcastsSection?.int("totalCount") ?: 0, limit = limit, offset = offset)
+                    } else {
+                        null
+                    },
+                episodes =
+                    if (episodeItems.isNotEmpty()) {
+                        SpotifyPaging(items = episodeItems, total = episodesSection?.int("totalCount") ?: 0, limit = limit, offset = offset)
                     } else {
                         null
                     },
@@ -1499,6 +1536,37 @@ object Spotify {
                     uri = ownerUri.ifEmpty { null },
                 ),
             uri = uri.ifEmpty { null },
+        )
+    }
+
+    fun parseGqlSearchPodcast(data: JsonObject): SpotifyShow {
+        val uri = data.str("uri") ?: ""
+        val publisherName = data.obj("publisher")?.str("name") ?: ""
+        return SpotifyShow(
+            id = uri.substringAfterLast(":"),
+            name = data.str("name") ?: "",
+            publisher = publisherName,
+            images = parseGqlImages(data.obj("coverArt")?.arr("sources")),
+            uri = uri.ifEmpty { null },
+        )
+    }
+
+    fun parseGqlSearchEpisode(data: JsonObject): SpotifyEpisode {
+        val uri = data.str("uri") ?: ""
+        val durationMs = data.obj("duration")?.int("totalMilliseconds") ?: data.int("duration_ms") ?: 0
+        val releaseDate = data.obj("releaseDate")?.str("isoString") ?: data.str("release_date") ?: ""
+        val podcastData = data.obj("podcastV2")?.obj("data") ?: data.obj("podcast")?.obj("data")
+        val show = podcastData?.let { parseGqlSearchPodcast(it) }
+
+        return SpotifyEpisode(
+            id = uri.substringAfterLast(":"),
+            name = data.str("name") ?: "",
+            description = data.str("description") ?: "",
+            images = parseGqlImages(data.obj("coverArt")?.arr("sources")),
+            durationMs = durationMs,
+            releaseDate = releaseDate,
+            uri = uri.ifEmpty { null },
+            show = show,
         )
     }
 

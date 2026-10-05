@@ -3,9 +3,11 @@ package com.music.spotui.ui.screens
 import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -34,6 +36,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -66,6 +69,9 @@ import com.music.spotui.ui.navigation.Routes
 import com.music.spotui.ui.navigation.albumRoute
 import com.music.spotui.ui.navigation.artistRoute
 import com.music.spotui.ui.navigation.playlistRoute
+import com.music.spotui.ui.navigation.podcastHubRoute
+import com.music.spotui.ui.navigation.showRoute
+import com.music.spotui.data.entity.MediaType
 import com.music.spotui.ui.theme.AppBackground
 import com.music.spotui.ui.theme.AppPalette
 import com.music.spotui.ui.theme.GridBackground
@@ -93,13 +99,23 @@ fun HomeScreen(navController: NavController){
     val artists by homeViewModel.artists.collectAsState()
     val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
 
+    var menuSong by remember { mutableStateOf<SongsModel?>(null) }
+    menuSong?.let { sel ->
+        com.music.spotui.ui.components.SongOptionsSheet(
+            song = sel,
+            navController = navController,
+            context = context,
+            onDismiss = { menuSong = null },
+        )
+    }
+
     val lifecycleOwner = androidx.compose.ui.platform.LocalLifecycleOwner.current
     androidx.compose.runtime.DisposableEffect(lifecycleOwner) {
         val observer = androidx.lifecycle.LifecycleEventObserver { _, event ->
             if (event == androidx.lifecycle.Lifecycle.Event.ON_RESUME) {
                 com.music.spotui.data.preferences.notifyLikedSongsChanged()
                 homeViewModel.syncLikedSongsCount()
-                homeViewModel.refreshHome(force = false)
+                homeViewModel.syncRecentListening()
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)
@@ -124,10 +140,12 @@ fun HomeScreen(navController: NavController){
         when {
             // Preferred: the real personalized Spotify home feed.
             feed != null && feed.sections.isNotEmpty() -> {
-                HomeFeedContent(navController, feed) { song ->
-                    playerViewModel.updateQueue(listOf(song))
-                    SongPlayer.playSong(song.url, context)
-                }
+                HomeFeedContent(
+                    navController = navController,
+                    feed = feed,
+                    onPlayTrack = { song -> homeViewModel.playTrack(song, context) },
+                    onSongLongClick = { menuSong = it }
+                )
             }
 
             // Still resolving the real personalized home feed. Show the loader even
@@ -156,10 +174,18 @@ fun HomeScreen(navController: NavController){
     }
 }
 
+enum class HomeSurface {
+    TOP_GRID,
+    RECENTS,
+    RECOMMENDED,
+    CATALOG_SECTION
+}
+
 private fun onHomeItemClick(
     navController: NavController,
     item: HomeItem,
-    onPlaySong: ((SongsModel) -> Unit)? = null
+    onPlayTrack: (SongsModel) -> Unit,
+    surface: HomeSurface = HomeSurface.CATALOG_SECTION
 ) {
     when (item) {
         is HomeItem.Album -> navController.navigate(albumRoute(item.name, item.artists.ifBlank { item.subtitle }, item.imageUrl))
@@ -167,11 +193,45 @@ private fun onHomeItemClick(
         is HomeItem.Playlist ->
             if (item.id.isNotBlank()) navController.navigate(playlistRoute(item.id, item.name))
             else navController.navigate(albumRoute(item.name, cover = item.imageUrl))
-        is HomeItem.Track -> {
-            val albumOrTitle = item.song.album.ifBlank { item.song.title }
-            navController.navigate(albumRoute(albumOrTitle, item.song.singer, item.song.coverUri))
-        }
         is HomeItem.LikedSongs -> navController.navigate(Routes.Liked.route)
+        is HomeItem.Track -> {
+            when (surface) {
+                HomeSurface.TOP_GRID, HomeSurface.RECENTS -> {
+                    // History and Top Grid represent specific listening items.
+                    // Tapping them opens AlbumScreen / ShowScreen displaying ONLY that exact item ("לאותו שיר בלבד").
+                    if (item.song.mediaType == MediaType.PODCAST_EPISODE) {
+                        val key = com.music.spotui.ui.navigation.ItemDetailRegistry.register(item.song)
+                        val showId = item.song.resolvePodcastShowId().ifBlank { item.song.podcastShowId }.ifBlank { item.song.singer }
+                        val showTitle = item.song.album.ifBlank { item.song.singer }
+                        navController.navigate(showRoute(id = showId, name = showTitle, singleEpisodeId = key))
+                    } else {
+                        val key = com.music.spotui.ui.navigation.ItemDetailRegistry.register(item.song)
+                        val albumOrTitle = item.song.album.ifBlank { item.song.title }
+                        navController.navigate(
+                            albumRoute(
+                                name = albumOrTitle,
+                                artist = item.song.singer,
+                                cover = item.song.coverUri,
+                                singleTrackId = key
+                            )
+                        )
+                    }
+                }
+                HomeSurface.RECOMMENDED, HomeSurface.CATALOG_SECTION -> {
+                    // Contract C (Phase G.1):
+                    // "מומלץ להיום" and Catalog sections are NOT history.
+                    // Preserve existing navigation behavior to AlbumScreen / ShowScreen.
+                    if (item.song.mediaType == MediaType.PODCAST_EPISODE) {
+                        val showId = item.song.resolvePodcastShowId().ifBlank { item.song.podcastShowId }.ifBlank { item.song.singer }
+                        val showTitle = item.song.album.ifBlank { item.song.singer }
+                        navController.navigate(showRoute(showId, showTitle))
+                    } else {
+                        val albumOrTitle = item.song.album.ifBlank { item.song.title }
+                        navController.navigate(albumRoute(albumOrTitle, item.song.singer, item.song.coverUri))
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -180,7 +240,8 @@ private fun onHomeItemClick(
 fun HomeFeedContent(
     navController: NavController,
     feed: HomeFeedModel,
-    onPlaySong: ((SongsModel) -> Unit)? = null
+    onPlayTrack: (SongsModel) -> Unit,
+    onSongLongClick: (SongsModel) -> Unit
 ) {
     val topGridItems = feed.topGrid.take(4)
     val sections = feed.sections
@@ -196,11 +257,11 @@ fun HomeFeedContent(
         }
         if (topGridItems.isNotEmpty()) {
             item {
-                HomeTopGrid(navController, topGridItems, onPlaySong)
+                HomeTopGrid(navController, topGridItems, onPlayTrack, onSongLongClick)
             }
         }
         items(sections.size, key = { i -> sections[i].id.ifBlank { "sec_$i" } }) { i ->
-            HomeFeedSection(navController, sections[i], onPlaySong)
+            HomeFeedSection(navController, sections[i], onPlayTrack, onSongLongClick)
         }
     }
 }
@@ -267,7 +328,7 @@ private fun HomeHeaderRow(navController: NavController) {
                         .clickable {
                             selected = label
                             if (label == "פודקאסטים") {
-                                navController.navigate(Routes.Search.route)
+                                navController.navigate(podcastHubRoute())
                             }
                         }
                         .padding(horizontal = 14.dp, vertical = 6.dp),
@@ -290,7 +351,8 @@ private fun HomeHeaderRow(navController: NavController) {
 private fun HomeTopGrid(
     navController: NavController,
     items: List<HomeItem>,
-    onPlaySong: ((SongsModel) -> Unit)? = null
+    onPlayTrack: (SongsModel) -> Unit,
+    onSongLongClick: (SongsModel) -> Unit
 ) {
     val four = items.take(4)
     Column(
@@ -309,7 +371,8 @@ private fun HomeTopGrid(
                         navController = navController,
                         item = item,
                         modifier = Modifier.weight(1f),
-                        onPlaySong = onPlaySong
+                        onPlayTrack = onPlayTrack,
+                        onSongLongClick = onSongLongClick
                     )
                 }
                 if (rowItems.size == 1) {
@@ -320,13 +383,14 @@ private fun HomeTopGrid(
     }
 }
 
-@OptIn(ExperimentalGlideComposeApi::class)
+@OptIn(ExperimentalGlideComposeApi::class, ExperimentalFoundationApi::class)
 @Composable
 private fun HomeGridCard(
     navController: NavController,
     item: HomeItem,
     modifier: Modifier = Modifier,
-    onPlaySong: ((SongsModel) -> Unit)? = null
+    onPlayTrack: (SongsModel) -> Unit,
+    onSongLongClick: (SongsModel) -> Unit
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -334,10 +398,16 @@ private fun HomeGridCard(
             .height(56.dp)
             .clip(RoundedCornerShape(6.dp))
             .background(Color(0xFF282828))
-            .clickable(
+            .combinedClickable(
                 interactionSource = remember { MutableInteractionSource() },
-                indication = null
-            ) { onHomeItemClick(navController, item, onPlaySong) }
+                indication = null,
+                onLongClick = {
+                    if (item is HomeItem.Track) {
+                        onSongLongClick(item.song)
+                    }
+                },
+                onClick = { onHomeItemClick(navController, item, onPlayTrack, HomeSurface.TOP_GRID) }
+            )
     ) {
         GlideImage(
             modifier = Modifier.size(56.dp),
@@ -366,8 +436,15 @@ private fun HomeGridCard(
 private fun HomeFeedSection(
     navController: NavController,
     section: HomeSection,
-    onPlaySong: ((SongsModel) -> Unit)? = null
+    onPlayTrack: (SongsModel) -> Unit,
+    onSongLongClick: (SongsModel) -> Unit
 ) {
+    val surface = when (section.id) {
+        HomeSectionIds.RECENTLY_PLAYED -> HomeSurface.RECENTS
+        HomeSectionIds.RECOMMENDED_TODAY -> HomeSurface.RECOMMENDED
+        else -> HomeSurface.CATALOG_SECTION
+    }
+
     if (section.id == HomeSectionIds.SIMILAR_ARTISTS || section.headerArtist != null) {
         ArtistSectionHeader(section) {
             section.headerArtist?.let { artist ->
@@ -393,17 +470,20 @@ private fun HomeFeedSection(
             when {
                 item is HomeItem.LikedSongs -> {
                     LikedSongsCard(count = item.count) {
-                        onHomeItemClick(navController, item, onPlaySong)
+                        onHomeItemClick(navController, item, onPlayTrack, surface)
                     }
                 }
                 section.type == HomeSectionType.ARTISTS && item is HomeItem.Artist -> {
                     HomeArtistCircleCard(artist = item) {
-                        onHomeItemClick(navController, item, onPlaySong)
+                        onHomeItemClick(navController, item, onPlayTrack, surface)
                     }
                 }
                 else -> {
-                    HomeFeedCard(item = item) {
-                        onHomeItemClick(navController, item, onPlaySong)
+                    HomeFeedCard(
+                        item = item,
+                        onSongLongClick = onSongLongClick
+                    ) {
+                        onHomeItemClick(navController, item, onPlayTrack, surface)
                     }
                 }
             }
@@ -577,9 +657,13 @@ private fun HomeArtistCircleCard(artist: HomeItem.Artist, onClick: () -> Unit) {
     }
 }
 
-@OptIn(ExperimentalGlideComposeApi::class)
+@OptIn(ExperimentalGlideComposeApi::class, ExperimentalFoundationApi::class)
 @Composable
-private fun HomeFeedCard(item: HomeItem, onClick: () -> Unit) {
+private fun HomeFeedCard(
+    item: HomeItem,
+    onSongLongClick: ((SongsModel) -> Unit)? = null,
+    onClick: () -> Unit
+) {
     val context = androidx.compose.ui.platform.LocalContext.current
     val revision by com.music.spotui.data.preferences.likedSongsRevision.collectAsState()
     val liveCount = remember(revision) {
@@ -598,10 +682,16 @@ private fun HomeFeedCard(item: HomeItem, onClick: () -> Unit) {
         modifier = Modifier
             .width(148.dp)
             .padding(6.dp)
-            .clickable(
+            .combinedClickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
-            ) { onClick() },
+                onLongClick = {
+                    if (item is HomeItem.Track && onSongLongClick != null) {
+                        onSongLongClick(item.song)
+                    }
+                },
+                onClick = { onClick() },
+            ),
     ) {
         GlideImage(
             modifier = Modifier
