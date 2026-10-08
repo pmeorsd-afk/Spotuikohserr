@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 263,
-  "last_updated": "2026-10-08T19:25:43.645Z",
+  "version": 264,
+  "last_updated": "2026-10-08T19:25:46.893Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "נגמר",
       "artist": "Idan Amedi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-08T19:25:43.645Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-08T19:25:46.893Z"
     },
     {
       "id": "",
