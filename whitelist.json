@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 253,
-  "last_updated": "2026-10-08T14:30:56.784Z",
+  "version": 254,
+  "last_updated": "2026-10-08T16:20:25.315Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube",
+      "title": "אבי הטחול (גרסת ברסלב)-דוד שרר",
+      "artist": "דוד שרר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-08T16:20:25.315Z"
+    },
     {
       "id": "",
       "title": "משה פייגלין: \"חיסונים כמו בארה\"ב. רשות בלבד\"",
