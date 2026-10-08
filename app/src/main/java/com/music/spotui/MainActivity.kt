@@ -97,6 +97,12 @@ class MainActivity : ComponentActivity() {
             com.music.spotui.util.KosherWhitelistManager.syncFromAdminProvider(this)
         }
         com.music.spotui.util.KosherWhitelistManager.syncWithRemote(this)
+        com.music.spotui.util.AppTelemetryManager.onAppForegrounded(this)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        com.music.spotui.util.AppTelemetryManager.onAppBackgrounded(this)
     }
 
     override fun onNewIntent(intent: Intent) {

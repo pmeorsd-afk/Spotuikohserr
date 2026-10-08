@@ -32,10 +32,13 @@ object AppTelemetryManager {
     // Primary Cloudflare Worker backend with fallback to Google Apps Script
     private const val PRIMARY_TELEMETRY_URL = "https://lingering-brook-93f6.orelgame156.workers.dev/api/telemetry"
     private const val FALLBACK_TELEMETRY_URL = "https://script.google.com/macros/s/AKfycbxjKBX2VHdyKfkih9EOgTOs5C08iFKqOEOaSeis1Ov1NZPBjR2HEVtMX-aAEricAXpPJw/exec"
+    private const val LOCAL_DEBUG_URL = "http://127.0.0.1:8787/api/telemetry"
 
     private const val HEARTBEAT_INTERVAL_MS = 60_000L // 60 seconds
 
     private var heartbeatJob: Job? = null
+    private var foregroundPresenceJob: Job? = null
+    private var isAppInForeground = false
     private var lastHeartbeatTimeMs = 0L
     private var currentSong: SongsModel? = null
     private var isPlayingCurrent = false
@@ -156,6 +159,80 @@ object AppTelemetryManager {
         heartbeatJob = null
     }
 
+    /**
+     * Called when the app enters the foreground (e.g. MainActivity onResume).
+     * Immediately signals active user presence to the live dashboard.
+     */
+    fun onAppForegrounded(context: Context?) {
+        if (context == null) return
+        val appContext = context.applicationContext
+        isAppInForeground = true
+
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                sendTelemetryPayload(
+                    context = appContext,
+                    event = "app_open",
+                    song = currentSong,
+                    isPlaying = isPlayingCurrent,
+                    secondsDelta = 0
+                )
+                startForegroundPresenceLoop(appContext)
+            } catch (e: Exception) {
+                Log.e(TAG, "Error handling app foregrounded", e)
+            }
+        }
+    }
+
+    /**
+     * Called when the app leaves the foreground (e.g. MainActivity onPause).
+     */
+    fun onAppBackgrounded(context: Context?) {
+        if (context == null) return
+        isAppInForeground = false
+        foregroundPresenceJob?.cancel()
+        foregroundPresenceJob = null
+
+        // If not playing, report background transition
+        if (!isPlayingCurrent) {
+            val appContext = context.applicationContext
+            CoroutineScope(Dispatchers.IO).launch {
+                try {
+                    sendTelemetryPayload(
+                        context = appContext,
+                        event = "app_background",
+                        song = null,
+                        isPlaying = false,
+                        secondsDelta = 0
+                    )
+                } catch (e: Exception) {
+                    Log.e(TAG, "Error handling app backgrounded", e)
+                }
+            }
+        }
+    }
+
+    private fun startForegroundPresenceLoop(context: Context) {
+        foregroundPresenceJob?.cancel()
+        foregroundPresenceJob = CoroutineScope(Dispatchers.IO).launch {
+            while (isActive && isAppInForeground) {
+                delay(HEARTBEAT_INTERVAL_MS)
+                if (!isActive || !isAppInForeground) break
+                // Send presence heartbeat if playback is not currently running
+                // (playback already has its own startHeartbeatLoop)
+                if (!isPlayingCurrent) {
+                    sendTelemetryPayload(
+                        context = context,
+                        event = "heartbeat_idle",
+                        song = currentSong,
+                        isPlaying = false,
+                        secondsDelta = 0
+                    )
+                }
+            }
+        }
+    }
+
     private fun sendTelemetryPayload(
         context: Context,
         event: String,
@@ -198,6 +275,10 @@ object AppTelemetryManager {
             // 2. Fallback to Google Apps Script if primary failed
             postJson(FALLBACK_TELEMETRY_URL, jsonString)
         }
+        // 3. Optional local debug server (active when server.js runs on port 8787)
+        if (BuildConfig.DEBUG) {
+            postJson(LOCAL_DEBUG_URL, jsonString)
+        }
     }
 
     private fun postJson(endpointUrl: String, jsonPayload: String): Boolean {
@@ -217,6 +298,13 @@ object AppTelemetryManager {
             }
 
             val code = conn.responseCode
+            if (code in 200..299) {
+                conn.inputStream.bufferedReader().use { it.readText() }
+                Log.d(TAG, "Telemetry post to $endpointUrl succeeded ($code)")
+            } else {
+                val err = conn.errorStream?.bufferedReader()?.use { it.readText() } ?: ""
+                Log.w(TAG, "Telemetry post to $endpointUrl responded with $code: $err")
+            }
             conn.disconnect()
             code in 200..299
         } catch (e: Exception) {

@@ -7,7 +7,7 @@ const http = require('http');
 const url = require('url');
 
 const PORT = process.env.PORT || 8787;
-const ONLINE_WINDOW_MS = 120 * 1000; // 2 minutes
+const ONLINE_WINDOW_MS = 180 * 1000; // 3 minutes
 
 const telemetrySessions = new Map();
 const telemetryStats = {

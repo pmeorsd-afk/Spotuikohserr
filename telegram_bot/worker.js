@@ -83,7 +83,7 @@ export default {
     }
 
     if (request.method === "GET" && (url.pathname === "/api/analytics" || url.pathname === "/analytics")) {
-      return handleGetAnalytics();
+      return handleGetAnalytics(env);
     }
 
     // --------------------------------------------------------------------------
@@ -617,7 +617,7 @@ function escapeMarkdown(value) {
 // TELEMETRY & LIVE ANALYTICS ENGINE
 // ==============================================================================
 
-const ONLINE_WINDOW_MS = 120 * 1000; // 2 minutes window for active listeners
+const ONLINE_WINDOW_MS = 180 * 1000; // 3 minutes window for active listeners/app presence
 
 async function handleTelemetryPost(request, env, ctx) {
   try {
@@ -636,6 +636,11 @@ async function handleTelemetryPost(request, env, ctx) {
     const totalSeconds = Number(data.totalSecondsListened) || 0;
     const appVersion = String(data.appVersion || "1.0");
 
+    if (data.event === "app_background" && !isPlaying) {
+      telemetrySessions.delete(userId);
+      return jsonResponse({ ok: true, activeUsers: getActiveUsersCount() }, 200);
+    }
+
     let session = telemetrySessions.get(userId);
     if (!session) {
       session = {
@@ -651,7 +656,7 @@ async function handleTelemetryPost(request, env, ctx) {
     } else {
       session.lastSeen = now;
       session.isPlaying = isPlaying;
-      if (track.title) session.track = track;
+      if (track && track.title) session.track = track;
       if (totalSeconds > session.totalSeconds) session.totalSeconds = totalSeconds;
       session.appVersion = appVersion;
     }
@@ -685,6 +690,15 @@ async function handleTelemetryPost(request, env, ctx) {
             timestamp: now
           })
         }).catch(err => console.log("GAS sync error:", err))
+      );
+    }
+
+    // Global multi-datacenter synchronization via Cloudflare KV (if bound)
+    if (env && env.TELEMETRY_KV && ctx && ctx.waitUntil) {
+      const snap = computeAnalytics();
+      ctx.waitUntil(
+        env.TELEMETRY_KV.put("live_analytics_snapshot", JSON.stringify(snap), { expirationTtl: 300 })
+          .catch(err => console.error("KV put error:", err))
       );
     }
 
@@ -750,9 +764,26 @@ function computeAnalytics() {
   };
 }
 
-function handleGetAnalytics() {
+async function handleGetAnalytics(env) {
+  // 1. Try reading from globally synced Cloudflare KV
+  if (env && env.TELEMETRY_KV) {
+    try {
+      const kvData = await env.TELEMETRY_KV.get("live_analytics_snapshot", "json");
+      if (kvData) {
+        return jsonResponse(kvData, 200, {
+          "Cache-Control": "no-cache, no-store, must-revalidate",
+          "X-Sync-Source": "cloudflare-kv"
+        });
+      }
+    } catch (err) {
+      console.error("KV get error:", err);
+    }
+  }
+
+  // 2. Isolate memory fallback
   return jsonResponse(computeAnalytics(), 200, {
-    "Cache-Control": "no-cache, no-store, must-revalidate"
+    "Cache-Control": "no-cache, no-store, must-revalidate",
+    "X-Sync-Source": "isolate-memory"
   });
 }
 
@@ -1154,8 +1185,13 @@ function getDashboardHtml() {
 
       const feed = document.getElementById('nowPlayingFeed');
       const playing = data.currentlyPlaying || [];
+      const online = data.onlineUsers || 0;
       if (playing.length === 0) {
-        feed.innerHTML = '<div class="empty-state">אין כרגע שירים מתנגנים בשידור חי ברגע זה</div>';
+        if (online > 0) {
+          feed.innerHTML = '<div class="empty-state" style="color: #1ed760; border-color: rgba(30, 215, 96, 0.4); background: rgba(30, 215, 96, 0.05); font-weight: bold;">🟢 ' + online + ' משתמש/ים מחוברים כעת לאפליקציה (מדפדפים / הנגן מושהה) &bull; ממתין להשמעה</div>';
+        } else {
+          feed.innerHTML = '<div class="empty-state">אין כרגע שירים מתנגנים בשידור חי ברגע זה</div>';
+        }
       } else {
         feed.innerHTML = playing.map(function(p) {
           return '<div class="now-playing-card">' +
