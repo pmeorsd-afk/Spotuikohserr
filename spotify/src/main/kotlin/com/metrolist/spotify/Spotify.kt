@@ -1265,6 +1265,13 @@ object Spotify {
             }
         }
 
+    suspend fun episode(episodeId: String): Result<com.metrolist.spotify.models.SpotifyEpisode> =
+        runCatching {
+            authenticatedGet<com.metrolist.spotify.models.SpotifyEpisode>("episodes/$episodeId") {
+                parameter("market", "from_token")
+            }
+        }
+
     // ── Track radio (spclient inspiredby-mix — the web player's autoplay queue) ──
 
     /**

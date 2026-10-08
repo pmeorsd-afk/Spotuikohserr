@@ -22,6 +22,7 @@ fun saveLastPlayback(context: Context, song: SongsModel) {
         put("singer", song.singer); put("coverUri", song.coverUri)
         put("url", song.url); put("spotifyTrackId", song.spotifyTrackId)
         put("explicit", song.explicit); put("durationMs", song.durationMs)
+        put("mediaType", song.mediaType.name); put("podcastShowId", song.podcastShowId)
     }
     p.edit().apply {
         putString(KEY_SONG, json.toString())
@@ -42,16 +43,25 @@ fun loadLastPlayback(context: Context): Pair<SongsModel, Long>? {
     val raw = p.getString(KEY_SONG, null) ?: return null
     return runCatching {
         val o = JSONObject(raw)
+        val rawMediaType = o.optString("mediaType", "")
+        val rawUrl = o.optString("url")
+        val mediaType = if (rawMediaType == com.music.spotui.data.entity.MediaType.PODCAST_EPISODE.name || rawUrl.startsWith("episode:")) {
+            com.music.spotui.data.entity.MediaType.PODCAST_EPISODE
+        } else {
+            com.music.spotui.data.entity.MediaType.TRACK
+        }
         val song = SongsModel(
             id = o.optInt("id", -1),
             title = o.optString("title"),
             album = o.optString("album"),
             singer = o.optString("singer"),
             coverUri = o.optString("coverUri"),
-            url = o.optString("url"),
+            url = rawUrl,
             spotifyTrackId = o.optString("spotifyTrackId"),
             explicit = o.optBoolean("explicit", false),
             durationMs = o.optInt("durationMs", 0),
+            mediaType = mediaType,
+            podcastShowId = o.optString("podcastShowId", ""),
         )
         if (song.title.isBlank() || song.url.isBlank()) null
         else song to p.getLong(KEY_POSITION, 0L)

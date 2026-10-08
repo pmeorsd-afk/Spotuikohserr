@@ -86,7 +86,7 @@ object SongPlayer {
     // "Lossless" (SpotiFLAC: Tidal/Qobuz/Amazon) is NOT Spotify — surfaced so the
     // user knows real Spotify vs a lossless mirror vs the YouTube fallback.
     @Volatile var currentSource: String = "YouTube"
-        private set
+        internal set
     // Human-readable quality of the CURRENT stream (e.g. "FLAC 16-bit",
     // "OPUS 141 kbps"), shown next to the source badge.
     @Volatile var currentQuality: String = ""

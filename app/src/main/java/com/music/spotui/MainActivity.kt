@@ -134,9 +134,24 @@ class MainActivity : ComponentActivity() {
         // 1. If player already has a track loaded (paused mid-song), simply resume playback
         // exactly from the paused second (do NOT restart the song from 0:00).
         val player = SongPlayer.exoPlayer
-        if (player != null && player.mediaItemCount > 0) {
+        val requestedNewSong = songId > 0 && !title.isNullOrBlank()
+        val isSameTrack = !requestedNewSong || songId == currentSongState.songId.value
+
+        if (player != null && player.mediaItemCount > 0 && isSameTrack) {
             SongPlayer.play()
             currentSongState.updatePlayingState(true)
+        } else if (requestedNewSong && songId != currentSongState.songId.value) {
+            val url = SongPlayer.buildSpotifyPlayQuery(songId.toString(), title!!, singer)
+            currentSongState.updateSongState(
+                coverUri = coverUri,
+                title = title,
+                singer = singer,
+                playingState = true,
+                songId = songId,
+                songIndex = -1,
+                album = album,
+            )
+            SongPlayer.playSong(url, this)
         } else {
             // 2. Fresh launch / killed in background: restore the last saved session (track + position)
             val lastPlayback = com.music.spotui.data.preferences.loadLastPlayback(this)

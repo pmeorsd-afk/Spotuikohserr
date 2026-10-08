@@ -18,6 +18,11 @@ import com.music.spotui.MainActivity
 import com.music.spotui.data.api.Api
 import com.music.spotui.data.api.Response
 import com.music.spotui.data.entity.SongsModel
+import com.music.spotui.data.entity.MediaType
+import com.music.spotui.playback.PlaybackSource
+import com.metrolist.spotify.Spotify
+import com.music.spotui.data.local.LocalListeningTracker
+import android.net.Uri
 import com.music.spotui.di.CurrentSongState
 import com.music.spotui.di.SongPlayer
 import com.music.spotui.di.SpotifyWebPlayer
@@ -52,6 +57,7 @@ class PlaybackService : MediaLibraryService() {
 
     @Inject lateinit var currentSongState: CurrentSongState
     @Inject lateinit var repository: AppRepository
+    @Inject lateinit var listeningTracker: LocalListeningTracker
 
     private var mediaSession: MediaLibrarySession? = null
     private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
@@ -60,8 +66,38 @@ class PlaybackService : MediaLibraryService() {
     // browsed from (so playing a track queues its whole playlist/album).
     private val trackById = java.util.concurrent.ConcurrentHashMap<String, SongsModel>()
     private val queueByTrackId = java.util.concurrent.ConcurrentHashMap<String, List<SongsModel>>()
+    private val pendingResolvedTracks = java.util.concurrent.ConcurrentHashMap<String, SongsModel>()
     private var webPlayer: WebMediaPlayer? = null
     private var showingWeb = false
+
+    private val mediaItemListener = object : Player.Listener {
+        override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
+            mediaItem ?: return
+            val mediaId = mediaItem.mediaId
+            val uriStr = mediaItem.localConfiguration?.uri?.toString()
+            val song = pendingResolvedTracks.remove(mediaId)
+                ?: (if (uriStr != null) pendingResolvedTracks.remove(uriStr) else null)
+            if (song != null) {
+                val queue = listOf(song)
+                currentSongState.updateQueue(queue)
+                val idx = 0
+                currentSongState.updateSongState(
+                    song.coverUri, song.title, song.singer, true,
+                    song.id, idx, song.album,
+                )
+                SongPlayer.currentSource = if (song.isPodcast()) "Podcast" else "MediaSession"
+                SongPlayer.setNowPlayingMeta(song.title, song.singer, song.coverUri)
+                listeningTracker.onSongStarted(song)
+                listeningTracker.recordRecent(song)
+                com.music.spotui.data.preferences.saveLastPlayback(applicationContext, song)
+            }
+        }
+    }
+
+    private fun attachMediaItemListener(p: Player) {
+        p.removeListener(mediaItemListener)
+        p.addListener(mediaItemListener)
+    }
 
     override fun onCreate() {
         super.onCreate()
@@ -69,6 +105,8 @@ class PlaybackService : MediaLibraryService() {
         // Let the player advance the in-app queue itself during a crossfade.
         SongPlayer.bindState(currentSongState)
         val base = SongPlayer.exoPlayer ?: return
+
+        attachMediaItemListener(base)
 
         // Tapping the notification opens the app (back on the Now Playing screen).
         val activityIntent = Intent(this, MainActivity::class.java).apply {
@@ -88,6 +126,7 @@ class PlaybackService : MediaLibraryService() {
         // When a crossfade promotes a new ExoPlayer instance, re-bind the session to it
         // (runs on the main thread; setPlayer is the supported way to swap a session's player).
         SongPlayer.onPlayerSwapped = { newPlayer ->
+            attachMediaItemListener(newPlayer)
             if (!showingWeb) mediaSession?.player = wrap(newPlayer)
         }
 
@@ -420,21 +459,243 @@ class PlaybackService : MediaLibraryService() {
             startPositionMs: Long,
         ): ListenableFuture<MediaSession.MediaItemsWithStartPosition> {
             val requested = mediaItems.getOrNull(startIndex) ?: mediaItems.firstOrNull()
-            val song = requested?.let { trackById[it.mediaId] }
-            if (song != null) {
-                val queue = queueByTrackId[requested.mediaId] ?: listOf(song)
+                ?: return Futures.immediateFailedFuture(IllegalArgumentException("Empty media items"))
+
+            // 1. Browsed music track in trackById (preserve exact existing music engine flow)
+            val knownMusicSong = trackById[requested.mediaId]
+            if (knownMusicSong != null && !knownMusicSong.isPodcast()) {
+                val queue = queueByTrackId[requested.mediaId] ?: listOf(knownMusicSong)
                 currentSongState.updateQueue(queue)
-                val idx = queue.indexOfFirst { it.id == song.id }.coerceAtLeast(0)
+                val idx = queue.indexOfFirst { it.id == knownMusicSong.id }.coerceAtLeast(0)
                 currentSongState.updateSongState(
-                    song.coverUri, song.title, song.singer, true,
-                    song.id, idx, song.album,
+                    knownMusicSong.coverUri, knownMusicSong.title, knownMusicSong.singer, true,
+                    knownMusicSong.id, idx, knownMusicSong.album,
                 )
-                SongPlayer.playSong(song.url, applicationContext)
+                SongPlayer.playSong(knownMusicSong.url, applicationContext)
+                return Futures.immediateFuture(
+                    MediaSession.MediaItemsWithStartPosition(emptyList(), C.INDEX_UNSET, C.TIME_UNSET),
+                )
             }
-            return Futures.immediateFuture(
-                MediaSession.MediaItemsWithStartPosition(emptyList(), C.INDEX_UNSET, C.TIME_UNSET),
-            )
+
+            // 2. Canonical resolution for Podcasts and external requests (Media3 contract compliant)
+            return future {
+                val resolvedSong = resolveExternalMediaItem(requested)
+                    ?: throw IllegalArgumentException("Could not resolve media item: ${requested.mediaId}")
+
+                if (resolvedSong.isPodcast()) {
+                    // Resolve actual PlaybackSource via EpisodePlaybackResolver
+                    val source = SongPlayer.episodeResolver.resolve(resolvedSong, applicationContext)
+                    if (source !is PlaybackSource.DirectAudio) {
+                        throw IllegalStateException("Failed to resolve podcast stream for: ${resolvedSong.title}")
+                    }
+
+                    val playableItem = MediaItem.Builder()
+                        .setMediaId("episode/${resolvedSong.spotifyTrackId.ifBlank { resolvedSong.id.toString() }}")
+                        .setUri(source.url)
+                        .setMimeType(source.mimeType)
+                        .setMediaMetadata(
+                            MediaMetadata.Builder()
+                                .setTitle(resolvedSong.title)
+                                .setArtist(resolvedSong.singer)
+                                .setAlbumTitle(resolvedSong.album)
+                                .setArtworkUri(if (resolvedSong.coverUri.isNotBlank()) Uri.parse(resolvedSong.coverUri) else null)
+                                .setIsPlayable(true)
+                                .setIsBrowsable(false)
+                                .build()
+                        )
+                        .build()
+
+                    // Stash for onMediaItemTransition atomic commit
+                    pendingResolvedTracks[playableItem.mediaId] = resolvedSong
+                    pendingResolvedTracks[source.url] = resolvedSong
+
+                    MediaSession.MediaItemsWithStartPosition(
+                        ImmutableList.of(playableItem),
+                        0,
+                        if (startPositionMs >= 0) startPositionMs else C.TIME_UNSET
+                    )
+                } else {
+                    // External music track
+                    withContext(Dispatchers.Main) {
+                        val queue = listOf(resolvedSong)
+                        currentSongState.updateQueue(queue)
+                        currentSongState.updateSongState(
+                            resolvedSong.coverUri, resolvedSong.title, resolvedSong.singer, true,
+                            resolvedSong.id, 0, resolvedSong.album,
+                        )
+                        SongPlayer.playSong(resolvedSong.url, applicationContext)
+                    }
+                    MediaSession.MediaItemsWithStartPosition(emptyList(), C.INDEX_UNSET, C.TIME_UNSET)
+                }
+            }
         }
+
+        override fun onPlaybackResumption(
+            mediaSession: MediaSession,
+            controller: MediaSession.ControllerInfo,
+        ): ListenableFuture<MediaSession.MediaItemsWithStartPosition> {
+            val last = com.music.spotui.data.preferences.loadLastPlayback(applicationContext)
+                ?: return Futures.immediateFailedFuture(IllegalStateException("No previous playback to resume"))
+            val (song, positionMs) = last
+
+            return future {
+                if (song.isPodcast()) {
+                    val source = SongPlayer.episodeResolver.resolve(song, applicationContext)
+                    if (source !is PlaybackSource.DirectAudio) {
+                        throw IllegalStateException("Failed to resolve podcast stream on resumption")
+                    }
+                    val playableItem = MediaItem.Builder()
+                        .setMediaId("episode/${song.spotifyTrackId.ifBlank { song.id.toString() }}")
+                        .setUri(source.url)
+                        .setMimeType(source.mimeType)
+                        .setMediaMetadata(
+                            MediaMetadata.Builder()
+                                .setTitle(song.title)
+                                .setArtist(song.singer)
+                                .setAlbumTitle(song.album)
+                                .setArtworkUri(if (song.coverUri.isNotBlank()) Uri.parse(song.coverUri) else null)
+                                .setIsPlayable(true)
+                                .setIsBrowsable(false)
+                                .build()
+                        )
+                        .build()
+                    pendingResolvedTracks[playableItem.mediaId] = song
+                    pendingResolvedTracks[source.url] = song
+                    MediaSession.MediaItemsWithStartPosition(ImmutableList.of(playableItem), 0, positionMs)
+                } else {
+                    withContext(Dispatchers.Main) {
+                        currentSongState.updateQueue(listOf(song))
+                        currentSongState.updateSongState(
+                            song.coverUri, song.title, song.singer, true,
+                            song.id, 0, song.album
+                        )
+                        SongPlayer.setRestorePoint(song.url, positionMs)
+                        SongPlayer.playSong(song.url, applicationContext)
+                    }
+                    MediaSession.MediaItemsWithStartPosition(emptyList(), C.INDEX_UNSET, C.TIME_UNSET)
+                }
+            }
+        }
+    }
+
+    private fun extractSpotifyEpisodeId(item: MediaItem): String? {
+        val candidates = listOfNotNull(
+            item.mediaId,
+            item.requestMetadata.mediaUri?.toString()
+        )
+        for (s in candidates) {
+            if (s.startsWith("spotify:episode:")) {
+                return s.removePrefix("spotify:episode:").substringBefore("?").substringBefore("/")
+            }
+            if (s.startsWith("episode/")) {
+                return s.removePrefix("episode/").substringBefore("?").substringBefore("/")
+            }
+            if (s.startsWith("episode:")) {
+                return s.removePrefix("episode:").substringBefore("?").substringBefore("/")
+            }
+            if (s.contains("open.spotify.com/episode/")) {
+                return s.substringAfter("open.spotify.com/episode/").substringBefore("?").substringBefore("/")
+            }
+        }
+        return null
+    }
+
+    private suspend fun resolveExternalMediaItem(requested: MediaItem): SongsModel? {
+        val mediaId = requested.mediaId
+
+        // 1. In-memory browse cache (trackById)
+        trackById[mediaId]?.let { return it }
+
+        // 2. Local listening history fast path (LocalListeningTracker)
+        val recentStats = listeningTracker.recentTracks(50)
+        val epId = extractSpotifyEpisodeId(requested)
+        val matchedStat = recentStats.firstOrNull { stat ->
+            val isPodcastStat = stat.mediaType == MediaType.PODCAST_EPISODE || stat.originalUrl.startsWith("episode:") || stat.trackId.startsWith("episode:")
+            if (!isPodcastStat) return@firstOrNull false
+            val cleanStatId = stat.trackId.removePrefix("episode:").substringBefore(":")
+            val cleanStatUrl = stat.originalUrl.removePrefix("episode:").substringBefore(":")
+            (epId != null && (cleanStatId == epId || cleanStatUrl == epId)) ||
+                (mediaId.isNotBlank() && (stat.trackId == mediaId || stat.originalUrl == mediaId)) ||
+                (!requested.mediaMetadata.title.isNullOrBlank() && stat.title.equals(requested.mediaMetadata.title.toString(), ignoreCase = true))
+        }
+        if (matchedStat != null) {
+            return matchedStat.toSongModel()
+        }
+
+        // 3. Persisted last playback state
+        val lastPlayback = com.music.spotui.data.preferences.loadLastPlayback(applicationContext)?.first
+        if (lastPlayback != null && lastPlayback.isPodcast()) {
+            val cleanLastId = lastPlayback.spotifyTrackId.ifBlank { lastPlayback.url.removePrefix("episode:").substringBefore(":") }
+            if ((epId != null && cleanLastId == epId) ||
+                (mediaId.isNotBlank() && (lastPlayback.url == mediaId || lastPlayback.spotifyTrackId == mediaId)) ||
+                (!requested.mediaMetadata.title.isNullOrBlank() && lastPlayback.title.equals(requested.mediaMetadata.title.toString(), ignoreCase = true))
+            ) {
+                return lastPlayback
+            }
+        }
+
+        // 4. Remote Spotify Episode resolution (by Episode ID / URI)
+        if (epId != null && epId.isNotBlank()) {
+            val metaTitle = requested.mediaMetadata.title?.toString()
+            val metaShow = requested.mediaMetadata.albumTitle?.toString() ?: requested.mediaMetadata.artist?.toString()
+            if (!metaTitle.isNullOrBlank() && !metaShow.isNullOrBlank()) {
+                val cover = requested.mediaMetadata.artworkUri?.toString().orEmpty()
+                return SongsModel(
+                    id = "episode:$epId".hashCode() and 0x7fffffff,
+                    title = metaTitle,
+                    album = metaShow,
+                    singer = metaShow,
+                    coverUri = cover,
+                    url = "episode:$epId",
+                    spotifyTrackId = epId,
+                    explicit = false,
+                    durationMs = 0,
+                    mediaType = MediaType.PODCAST_EPISODE,
+                )
+            }
+
+            val spEpisode = Spotify.episode(epId).getOrNull()
+            if (spEpisode != null) {
+                val subtitle = spEpisode.show?.name ?: "Podcast"
+                return SongsModel(
+                    id = "episode:$epId".hashCode() and 0x7fffffff,
+                    title = spEpisode.name,
+                    album = subtitle,
+                    singer = subtitle,
+                    coverUri = spEpisode.images.firstOrNull()?.url ?: (spEpisode.show?.images?.firstOrNull()?.url ?: ""),
+                    url = "episode:$epId",
+                    spotifyTrackId = epId,
+                    explicit = false,
+                    durationMs = spEpisode.durationMs,
+                    mediaType = MediaType.PODCAST_EPISODE,
+                    podcastShowId = spEpisode.show?.id.orEmpty(),
+                )
+            }
+        }
+
+        // 5. Exact Metadata Fallback
+        val reqTitle = requested.mediaMetadata.title?.toString()?.trim()
+        val reqArtist = (requested.mediaMetadata.albumTitle ?: requested.mediaMetadata.artist)?.toString()?.trim()
+        if (!reqTitle.isNullOrBlank() && !reqArtist.isNullOrBlank()) {
+            val cachedShow = Api.podcastShowCache.values.firstOrNull { it.name.equals(reqArtist, ignoreCase = true) }
+            if (cachedShow != null) {
+                return SongsModel(
+                    id = "episode:$reqTitle".hashCode() and 0x7fffffff,
+                    title = reqTitle,
+                    album = cachedShow.name,
+                    singer = cachedShow.name,
+                    coverUri = cachedShow.coverUri,
+                    url = "episode:${cachedShow.id}:$reqTitle",
+                    spotifyTrackId = "",
+                    explicit = false,
+                    durationMs = 0,
+                    mediaType = MediaType.PODCAST_EPISODE,
+                    podcastShowId = cachedShow.id,
+                )
+            }
+        }
+
+        return null
     }
 
     private suspend fun childrenOf(parentId: String): List<MediaItem> = when {
@@ -540,6 +801,8 @@ class PlaybackService : MediaLibraryService() {
     override fun onDestroy() {
         com.music.spotui.util.PresenceCoordinator.onPlaybackServiceDestroyed()
         SongPlayer.setOnTrackEndedListener(null)
+        SongPlayer.exoPlayer?.removeListener(mediaItemListener)
+        pendingResolvedTracks.clear()
         serviceScope.cancel()
         SongPlayer.onPlayerSwapped = null
         SongPlayer.onStreamFailed = null
