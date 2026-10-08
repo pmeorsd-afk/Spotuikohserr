@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 269,
-  "last_updated": "2026-10-08T19:38:01.337Z",
+  "version": 270,
+  "last_updated": "2026-10-08T19:38:02.486Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "שיר בעפרון",
       "artist": "Beit Habubot, אמיר אטיאס",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-08T19:37:59.116Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-08T19:38:02.486Z"
     },
     {
       "id": "4kZ0qv0CBrq7KRhhNxz8UG",
