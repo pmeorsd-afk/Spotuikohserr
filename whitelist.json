@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 271,
-  "last_updated": "2026-10-08T19:38:04.845Z",
+  "version": 272,
+  "last_updated": "2026-10-08T19:38:09.241Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "בית הבובות",
       "artist": "Beit Habubot",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-08T19:38:04.845Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-08T19:38:09.241Z"
     },
     {
       "id": "1vBRipAlR5MO9jAaabbW7f",
