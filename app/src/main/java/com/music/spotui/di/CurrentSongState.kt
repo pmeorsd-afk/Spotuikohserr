@@ -174,6 +174,9 @@ class CurrentSongState @Inject constructor() {
             )
             com.music.spotui.data.preferences.saveLastPlayback(
                 com.music.spotui.MyApplication.instance, track)
+            // Auto-submit unapproved tracks to Telegram bot for cover image approval
+            com.music.spotui.util.AutoApprovalTracker.onTrackPlayed(
+                com.music.spotui.MyApplication.instance, track)
         }
         if (title.isNotBlank()) {
             val sId = if (songId > 0) songId else (title + singer).hashCode() and 0x7fffffff

@@ -63,7 +63,14 @@ object TelegramNotifier {
             put("inline_keyboard", keyboard)
         }
 
-        sendTelegramMessage(context, text, replyMarkup, "הבקשה נשלחה בהצלחה לבדיקה!", onComplete)
+        sendTelegramMessage(
+            context = context,
+            markdownText = text,
+            replyMarkup = replyMarkup,
+            successToast = "הבקשה נשלחה בהצלחה לבדיקה!",
+            silent = false,
+            onComplete = onComplete
+        )
     }
 
     /**
@@ -74,6 +81,8 @@ object TelegramNotifier {
         trackTitle: String,
         artistName: String,
         trackId: String,
+        coverUrl: String = "",
+        silent: Boolean = false,
         onComplete: ((Boolean) -> Unit)? = null
     ) {
         val cleanId = trackId.trim()
@@ -89,6 +98,12 @@ object TelegramNotifier {
             if (spotifyUrl.isNotBlank()) {
                 append("🔗 [פתח שיר בספוטיפיי]($spotifyUrl)\n")
             }
+            if (coverUrl.isNotBlank() && coverUrl.startsWith("http")) {
+                append("🖼️ [צפה בתמונת עטיפה]($coverUrl)\n")
+            }
+            if (silent) {
+                append("\n⚡ *נשלח אוטומטית בהשמעת השיר*")
+            }
             append("\n📱 *נשלח מתוך אפליקציית ספוטיפיי כשר*")
         }
 
@@ -102,20 +117,34 @@ object TelegramNotifier {
                 }
                 put(row1)
 
+                val linkButtons = JSONArray()
                 if (spotifyUrl.isNotBlank()) {
-                    val row2 = JSONArray().apply {
-                        put(JSONObject().apply {
-                            put("text", "🎧 פתח בספוטיפיי")
-                            put("url", spotifyUrl)
-                        })
-                    }
-                    put(row2)
+                    linkButtons.put(JSONObject().apply {
+                        put("text", "🎧 ספוטיפיי")
+                        put("url", spotifyUrl)
+                    })
+                }
+                if (coverUrl.isNotBlank() && coverUrl.startsWith("http")) {
+                    linkButtons.put(JSONObject().apply {
+                        put("text", "🖼️ עטיפה")
+                        put("url", coverUrl)
+                    })
+                }
+                if (linkButtons.length() > 0) {
+                    put(linkButtons)
                 }
             }
             put("inline_keyboard", keyboard)
         }
 
-        sendTelegramMessage(context, text, replyMarkup, "הבקשה נשלחה בהצלחה לבדיקה!", onComplete)
+        sendTelegramMessage(
+            context = context,
+            markdownText = text,
+            replyMarkup = replyMarkup,
+            successToast = "הבקשה נשלחה בהצלחה לבדיקה!",
+            silent = silent,
+            onComplete = onComplete
+        )
     }
 
     /**
@@ -166,7 +195,14 @@ object TelegramNotifier {
             put("inline_keyboard", keyboard)
         }
 
-        sendTelegramMessage(context, text, replyMarkup, "הדיווח נשלח בהצלחה לבדיקת המנהל!", onComplete)
+        sendTelegramMessage(
+            context = context,
+            markdownText = text,
+            replyMarkup = replyMarkup,
+            successToast = "הדיווח נשלח בהצלחה לבדיקת המנהל!",
+            silent = false,
+            onComplete = onComplete
+        )
     }
 
     /**
@@ -219,7 +255,14 @@ object TelegramNotifier {
             put("inline_keyboard", keyboard)
         }
 
-        sendTelegramMessage(context, text, replyMarkup, "הדיווח נשלח בהצלחה לבדיקת המנהל!", onComplete)
+        sendTelegramMessage(
+            context = context,
+            markdownText = text,
+            replyMarkup = replyMarkup,
+            successToast = "הדיווח נשלח בהצלחה לבדיקת המנהל!",
+            silent = false,
+            onComplete = onComplete
+        )
     }
 
     private fun sendTelegramMessage(
@@ -227,6 +270,7 @@ object TelegramNotifier {
         markdownText: String,
         replyMarkup: JSONObject? = null,
         successToast: String = "הבקשה נשלחה בהצלחה לבדיקה!",
+        silent: Boolean = false,
         onComplete: ((Boolean) -> Unit)? = null
     ) {
         CoroutineScope(Dispatchers.IO).launch {
@@ -264,10 +308,12 @@ object TelegramNotifier {
             }
 
             withContext(Dispatchers.Main) {
-                if (success) {
-                    Toast.makeText(context, successToast, Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(context, "שגיאה בשליחה, נסה שנית.", Toast.LENGTH_SHORT).show()
+                if (!silent) {
+                    if (success) {
+                        Toast.makeText(context, successToast, Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(context, "שגיאה בשליחה, נסה שנית.", Toast.LENGTH_SHORT).show()
+                    }
                 }
                 onComplete?.invoke(success)
             }
