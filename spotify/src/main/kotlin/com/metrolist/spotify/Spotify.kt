@@ -1542,12 +1542,16 @@ object Spotify {
     fun parseGqlSearchPodcast(data: JsonObject): SpotifyShow {
         val uri = data.str("uri") ?: ""
         val publisherName = data.obj("publisher")?.str("name") ?: ""
+        val topicsList = data.obj("topics")?.arr("items")?.mapNotNull {
+            it.jsonObject.str("title")
+        } ?: emptyList()
         return SpotifyShow(
             id = uri.substringAfterLast(":"),
             name = data.str("name") ?: "",
             publisher = publisherName,
             images = parseGqlImages(data.obj("coverArt")?.arr("sources")),
             uri = uri.ifEmpty { null },
+            topics = topicsList,
         )
     }
 

@@ -18,6 +18,7 @@ data class SpotifyShow(
     val images: List<SpotifyImage> = emptyList(),
     @SerialName("total_episodes") val totalEpisodes: Int = 0,
     val uri: String? = null,
+    val topics: List<String> = emptyList(),
 )
 
 @Serializable

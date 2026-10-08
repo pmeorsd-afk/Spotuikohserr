@@ -35,7 +35,9 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -95,6 +97,7 @@ import com.music.spotui.data.preferences.removeLikedSongId
 import com.music.spotui.di.SongPlayer
 import com.music.spotui.ui.components.GlideImage
 import com.music.spotui.ui.components.Loader
+import com.music.spotui.ui.components.NoImagePlaceholder
 import com.music.spotui.ui.components.SongOptionsSheet
 import com.music.spotui.ui.navigation.albumRoute
 import com.music.spotui.ui.navigation.artistRoute
@@ -248,9 +251,16 @@ fun SumUpSearchScreen(
                 label = "SearchBarTransition"
             ) { isSearching ->
                 if (!isSearching) {
-                    SearchIdleBar(
-                        onClick = { searchActive = true }
-                    )
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 4.dp)
+                    ) {
+                        SearchHeaderRow()
+                        SearchIdleBar(
+                            onClick = { searchActive = true }
+                        )
+                    }
                 } else {
                     SearchActiveBar(
                         text = text,
@@ -332,6 +342,9 @@ fun SumUpSearchScreen(
                         contentPadding = PaddingValues(bottom = 130.dp),
                         modifier = Modifier.fillMaxSize()
                     ) {
+                        item {
+                            SearchDiscoverySection()
+                        }
                         item {
                             CategoryGridSection { genre, title ->
                                 if (genre == "פודקאסטים" || title == "פודקאסטים") {
@@ -794,12 +807,75 @@ fun SumUpSearchScreen(
 }
 
 @Composable
+fun SearchHeaderRow() {
+    val context = LocalContext.current
+    LaunchedEffect(Unit) {
+        com.music.spotui.data.api.ProfileCache.ensure(context)
+    }
+    val avatarUrl = com.music.spotui.data.api.ProfileCache.imageUrl
+    val initial = com.music.spotui.data.api.ProfileCache.name
+        ?.trim()?.firstOrNull()?.uppercase()?.takeIf { it != "•" } ?: "D"
+
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 6.dp)
+    ) {
+        // User avatar (Right side in RTL) - non-clickable for now
+        Box(
+            contentAlignment = Alignment.Center,
+            modifier = Modifier
+                .size(32.dp)
+                .clip(CircleShape)
+                .background(Color(0xFFE8622C))
+        ) {
+            if (avatarUrl != null && avatarUrl.isNotBlank()) {
+                GlideImage(
+                    model = avatarUrl,
+                    contentScale = ContentScale.Crop,
+                    contentDescription = "Profile",
+                    modifier = Modifier.size(32.dp),
+                )
+            } else {
+                Text(
+                    text = initial,
+                    color = Color.White,
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                )
+            }
+        }
+
+        Spacer(modifier = Modifier.width(12.dp))
+
+        // Title "חיפוש"
+        Text(
+            text = "חיפוש",
+            color = Color.White,
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Bold,
+        )
+
+        Spacer(modifier = Modifier.weight(1f))
+
+        // Camera / image icon (Left side in RTL) - non-clickable for now
+        Icon(
+            painter = painterResource(id = R.drawable.ic_camera),
+            contentDescription = "מצלמה",
+            tint = Color.White,
+            modifier = Modifier.size(24.dp)
+        )
+    }
+}
+
+@Composable
 fun SearchIdleBar(onClick: () -> Unit) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 14.dp, vertical = 10.dp)
+            .padding(horizontal = 16.dp, vertical = 6.dp)
             .clip(RoundedCornerShape(8.dp))
             .height(48.dp)
             .background(Color.White)
@@ -807,20 +883,20 @@ fun SearchIdleBar(onClick: () -> Unit) {
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
             ) { onClick() }
-            .padding(horizontal = 12.dp)
+            .padding(horizontal = 14.dp)
     ) {
         Icon(
             painter = painterResource(id = R.drawable.ic_search_big),
             tint = Color(0xFF121212),
             contentDescription = "חיפוש",
-            modifier = Modifier.size(20.dp)
+            modifier = Modifier.size(22.dp)
         )
         Spacer(modifier = Modifier.width(10.dp))
         Text(
             text = "לאיזה תוכן תרצו להאזין?",
-            color = Color(0xFF242424),
+            color = Color(0xFF535353),
             fontSize = 15.sp,
-            fontWeight = FontWeight.Bold,
+            fontWeight = FontWeight.Medium,
         )
     }
 }
@@ -914,14 +990,94 @@ fun SearchActiveBar(
     }
 }
 
+data class DiscoveryCardItem(
+    val tag: String,
+)
+
+private val sampleDiscoveryCards: List<DiscoveryCardItem> = listOf(
+    DiscoveryCardItem("#פופ ישראלי"),
+    DiscoveryCardItem("#hebrew pop"),
+    DiscoveryCardItem("#פופ אקוסטי"),
+    DiscoveryCardItem("#מוזיקה יהודית"),
+    DiscoveryCardItem("#להיטים"),
+)
+
+@Composable
+fun SearchDiscoverySection() {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 16.dp, bottom = 8.dp)
+    ) {
+        Text(
+            text = "רוצים לגלות משהו חדש?",
+            color = Color.White,
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 12.dp)
+        )
+
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            items(sampleDiscoveryCards.size) { index ->
+                val card = sampleDiscoveryCards[index]
+                DiscoveryCard(card = card)
+            }
+        }
+    }
+}
+
+@Composable
+fun DiscoveryCard(card: DiscoveryCardItem) {
+    Box(
+        modifier = Modifier
+            .width(164.dp)
+            .height(246.dp)
+            .clip(RoundedCornerShape(8.dp))
+            .background(Color(0xFF242424))
+    ) {
+        // Kosher placeholder image (clean green stripes, no network)
+        NoImagePlaceholder(
+            modifier = Modifier.fillMaxSize()
+        )
+
+        // Bottom gradient overlay
+        Box(
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+                .height(80.dp)
+                .background(
+                    Brush.verticalGradient(
+                        colors = listOf(Color.Transparent, Color(0xCC000000))
+                    )
+                )
+        )
+
+        // Bottom hashtag label
+        Text(
+            text = card.tag,
+            color = Color.White,
+            fontSize = 13.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier
+                .align(Alignment.BottomStart)
+                .padding(horizontal = 12.dp, vertical = 10.dp)
+        )
+    }
+}
+
 @Composable
 fun CategoryGridSection(onCategoryClick: (genre: String, title: String) -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 10.dp, vertical = 6.dp)
+            .padding(horizontal = 16.dp, vertical = 8.dp)
     ) {
-        browseCategories.chunked(2).forEach { rowItems ->
+        browseCategories.chunked(3).forEach { rowItems ->
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -938,7 +1094,9 @@ fun CategoryGridSection(onCategoryClick: (genre: String, title: String) -> Unit)
                         onCategoryClick(cat.query, cat.title)
                     }
                 }
-                if (rowItems.size == 1) Spacer(modifier = Modifier.weight(1f))
+                repeat(3 - rowItems.size) {
+                    Spacer(modifier = Modifier.weight(1f))
+                }
             }
         }
     }
@@ -956,7 +1114,7 @@ private fun BrowseCategoryTile(
     Box(
         modifier = modifier
             .height(100.dp)
-            .clip(RoundedCornerShape(8.dp))
+            .clip(RoundedCornerShape(6.dp))
             .background(color)
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
@@ -966,16 +1124,17 @@ private fun BrowseCategoryTile(
         if (coverUrl.isNotBlank()) {
             Box(
                 modifier = Modifier
-                    .align(Alignment.BottomStart)
-                    .offset(x = (-10).dp, y = 10.dp)
-                    .rotate(-22f)
+                    .align(Alignment.BottomEnd)
+                    .offset(x = (-6).dp, y = 6.dp)
+                    .rotate(25f)
             ) {
                 GlideImage(
                     model = coverUrl,
                     contentScale = ContentScale.Crop,
                     contentDescription = null,
+                    isAllowed = com.music.spotui.util.KosherWhitelistManager.isImageAllowed(coverUrl),
                     modifier = Modifier
-                        .size(68.dp)
+                        .size(54.dp)
                         .clip(RoundedCornerShape(4.dp)),
                 )
             }
@@ -983,12 +1142,13 @@ private fun BrowseCategoryTile(
         Text(
             text = name,
             color = Color.White,
-            fontSize = 15.sp,
+            fontSize = 13.sp,
+            lineHeight = 16.sp,
             fontWeight = FontWeight.Bold,
             maxLines = 2,
             modifier = Modifier
-                .align(Alignment.TopEnd)
-                .padding(12.dp),
+                .align(Alignment.TopStart)
+                .padding(8.dp),
         )
     }
 }

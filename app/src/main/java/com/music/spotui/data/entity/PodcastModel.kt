@@ -11,6 +11,8 @@ data class PodcastModel(
     val name: String,
     val publisher: String,
     val coverUri: String,
+    val description: String = "",
+    val topics: List<String> = emptyList(),
 ) {
-    constructor() : this("", "", "", "")
+    constructor() : this("", "", "", "", "", emptyList())
 }

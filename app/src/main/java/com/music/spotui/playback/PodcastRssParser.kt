@@ -115,6 +115,18 @@ object PodcastRssParser {
         return result
     }
 
+    /**
+     * Strips HTML tags, removes invisible bidi marks, unescapes entities,
+     * and normalizes whitespace for clean UI presentation.
+     */
+    fun cleanHtmlText(input: String): String {
+        if (input.isBlank()) return ""
+        val noTags = input.replace(Regex("""<[^>]*>"""), " ")
+        val noBidi = noTags.replace(Regex("""[\u200e\u200f\u202a-\u202e]"""), "")
+        val decoded = decodeHtmlEntities(noBidi)
+        return decoded.replace(Regex("""\s+"""), " ").trim()
+    }
+
     private class RssHandler(
         private val episodes: MutableList<PodcastRssEpisode>
     ) : DefaultHandler() {
@@ -134,6 +146,8 @@ object PodcastRssParser {
         private var currentTitle: StringBuilder = StringBuilder()
         private var currentPubDate: StringBuilder = StringBuilder()
         private var currentDuration: StringBuilder = StringBuilder()
+        private var currentDescription: StringBuilder = StringBuilder()
+        private var currentItemImageUrl: String? = null
 
         private var currentEnclosureUrl: String? = null
         private var currentEnclosureType: String? = null
@@ -144,7 +158,7 @@ object PodcastRssParser {
                 title = channelTitle.toString().trim().ifBlank { null }?.let { decodeHtmlEntities(it) },
                 author = channelAuthor.toString().trim().ifBlank { null }?.let { decodeHtmlEntities(it) },
                 imageUrl = channelImageUrl?.trim()?.ifBlank { null },
-                description = channelDescription.toString().trim().ifBlank { null }?.let { decodeHtmlEntities(it) },
+                description = channelDescription.toString().trim().ifBlank { null }?.let { cleanHtmlText(it) },
                 episodes = episodes
             )
         }
@@ -166,6 +180,8 @@ object PodcastRssParser {
                 currentTitle.setLength(0)
                 currentPubDate.setLength(0)
                 currentDuration.setLength(0)
+                currentDescription.setLength(0)
+                currentItemImageUrl = null
                 currentEnclosureUrl = null
                 currentEnclosureType = null
                 currentEnclosureLength = null
@@ -195,11 +211,31 @@ object PodcastRssParser {
             }
 
             val isDuration = tag == "duration" || rawQ.endsWith(":duration")
+            val isDescription = tag == "description" || rawQ.endsWith(":description") || tag == "summary" || rawQ.endsWith(":summary") || tag == "encoded" || rawQ.endsWith(":encoded")
+            val isImage = tag == "image" || rawQ.endsWith(":image")
+
             when {
-                tag == "title" -> currentTag = "title"
-                tag == "guid" -> currentTag = "guid"
-                tag == "pubdate" || rawQ.endsWith(":pubdate") -> currentTag = "pubdate"
-                isDuration -> currentTag = "duration"
+                tag == "title" -> {
+                    if (currentTitle.isEmpty()) currentTag = "title"
+                }
+                tag == "guid" -> {
+                    if (currentGuid.isEmpty()) currentTag = "guid"
+                }
+                tag == "pubdate" || rawQ.endsWith(":pubdate") -> {
+                    if (currentPubDate.isEmpty()) currentTag = "pubdate"
+                }
+                isDuration -> {
+                    if (currentDuration.isEmpty()) currentTag = "duration"
+                }
+                isDescription -> {
+                    if (currentDescription.isEmpty()) currentTag = "description"
+                }
+                isImage -> {
+                    val href = attributes?.getValue("href") ?: attributes?.getValue("url")
+                    if (!href.isNullOrBlank()) {
+                        currentItemImageUrl = href.trim()
+                    }
+                }
                 tag == "enclosure" || rawQ.endsWith(":enclosure") -> {
                     currentEnclosureUrl = attributes?.getValue("url")
                     currentEnclosureType = attributes?.getValue("type")
@@ -229,6 +265,7 @@ object PodcastRssParser {
                 "guid" -> currentGuid.append(ch, start, length)
                 "pubdate" -> currentPubDate.append(ch, start, length)
                 "duration" -> currentDuration.append(ch, start, length)
+                "description" -> currentDescription.append(ch, start, length)
             }
         }
 
@@ -244,6 +281,8 @@ object PodcastRssParser {
                 val guid = currentGuid.toString().trim().ifBlank { null }
                 val pubDate = currentPubDate.toString().trim().ifBlank { null }
                 val duration = parseDurationToMs(currentDuration.toString().trim())
+                val rawDesc = currentDescription.toString().trim()
+                val cleanDesc = if (rawDesc.isNotBlank()) cleanHtmlText(rawDesc) else null
 
                 episodes.add(
                     PodcastRssEpisode(
@@ -253,7 +292,9 @@ object PodcastRssParser {
                         durationMs = duration,
                         enclosureUrl = currentEnclosureUrl?.trim()?.ifBlank { null },
                         enclosureType = currentEnclosureType?.trim()?.ifBlank { null },
-                        enclosureLength = currentEnclosureLength
+                        enclosureLength = currentEnclosureLength,
+                        description = cleanDesc,
+                        imageUrl = currentItemImageUrl?.trim()?.ifBlank { null }
                     )
                 )
                 currentTag = null

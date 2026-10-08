@@ -15,6 +15,7 @@ import com.music.spotui.data.entity.ArtistsModel
 import com.music.spotui.data.entity.HomeFeedModel
 import com.music.spotui.data.entity.HomeItem
 import com.music.spotui.data.entity.HomeSection
+import com.music.spotui.data.entity.PodcastEpisodeUiModel
 import com.music.spotui.data.entity.SearchResults
 import com.music.spotui.data.entity.SongsModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -64,12 +65,14 @@ class Api @Inject constructor(
         @Volatile var podcastHubShows: List<PodcastModel>? = null
         @Volatile var podcastHubTimestamp: Long = 0L
         val podcastShowCache = java.util.concurrent.ConcurrentHashMap<String, PodcastModel>()
+        val podcastCategoryCache = java.util.concurrent.ConcurrentHashMap<String, List<PodcastModel>>()
 
         /** Drop all cached feeds (e.g. on logout / account switch). */
         fun clear() {
             albums = null; artists = null; home = null; library = null
             podcastHubShows = null; podcastHubTimestamp = 0L
             podcastShowCache.clear()
+            podcastCategoryCache.clear()
         }
     }
 
@@ -304,31 +307,31 @@ class Api @Inject constructor(
     }
 
     /**
-     * Resolves a podcast show's episodes via public RSS feed discovery and parsing.
-     * Bypasses the rate-limited Spotify REST endpoint (/v1/shows/{id}/episodes) entirely.
+     * Resolves rich podcast episode models via public RSS feed discovery and parsing.
+     * Extracts full episode descriptions, published dates, and duration formatted in Hebrew.
      */
-    suspend fun getShowEpisodes(showId: String, showName: String = ""): Flow<Response<List<SongsModel>>> = flow {
+    suspend fun getPodcastEpisodes(showId: String, showName: String = ""): Flow<Response<List<PodcastEpisodeUiModel>>> = flow {
         emit(Response.Loading())
 
         val effectiveShowName = showName.ifBlank { podcastShowCache[showId]?.name.orEmpty() }.trim()
         if (effectiveShowName.isBlank()) {
-            Log.w("Api", "getShowEpisodes: neither showName nor cached show found for showId '$showId'")
+            Log.w("Api", "getPodcastEpisodes: neither showName nor cached show found for showId '$showId'")
             emit(Response.Error("Show name not found"))
             return@flow
         }
 
-        Log.i("Api", "getShowEpisodes: resolving RSS feed for show '$effectiveShowName' (showId='$showId')")
+        Log.i("Api", "getPodcastEpisodes: resolving RSS feed for show '$effectiveShowName' (showId='$showId')")
         val feedUrl = podcastFeedResolver.resolveFeedUrlForShow(effectiveShowName, context)
         if (feedUrl.isNullOrBlank()) {
-            Log.w("Api", "getShowEpisodes: could not discover RSS feed for show '$effectiveShowName'")
+            Log.w("Api", "getPodcastEpisodes: could not discover RSS feed for show '$effectiveShowName'")
             emit(Response.Error("Could not find podcast feed"))
             return@flow
         }
 
-        Log.i("Api", "getShowEpisodes: fetching RSS feed XML from $feedUrl")
+        Log.i("Api", "getPodcastEpisodes: fetching RSS feed XML from $feedUrl")
         val xml = podcastFeedResolver.fetchFeedXml(feedUrl)
         if (xml.isNullOrBlank()) {
-            Log.w("Api", "getShowEpisodes: failed to download RSS XML from $feedUrl")
+            Log.w("Api", "getPodcastEpisodes: failed to download RSS XML from $feedUrl")
             emit(Response.Error("Could not download podcast feed"))
             return@flow
         }
@@ -336,7 +339,7 @@ class Api @Inject constructor(
         val parsedFeed = com.music.spotui.playback.PodcastRssParser.parseFeed(xml)
         val rssEpisodes = parsedFeed.episodes
         if (rssEpisodes.isEmpty()) {
-            Log.w("Api", "getShowEpisodes: parsed 0 episodes from $feedUrl")
+            Log.w("Api", "getPodcastEpisodes: parsed 0 episodes from $feedUrl")
             emit(Response.Error("No episodes found in podcast feed"))
             return@flow
         }
@@ -346,39 +349,67 @@ class Api @Inject constructor(
         val enrichedPublisher = parsedFeed.author ?: cachedShow?.publisher.orEmpty()
         val enrichedCover = cachedShow?.coverUri?.ifBlank { null } ?: parsedFeed.imageUrl.orEmpty()
         val enrichedName = cachedShow?.name?.ifBlank { null } ?: parsedFeed.title ?: effectiveShowName
+        val enrichedDescription = parsedFeed.description ?: cachedShow?.description
 
         val enrichedShow = PodcastModel(
             id = showId,
             name = enrichedName,
             publisher = enrichedPublisher,
-            coverUri = enrichedCover
+            coverUri = enrichedCover,
+            description = enrichedDescription.orEmpty(),
+            topics = cachedShow?.topics.orEmpty()
         )
         podcastShowCache[showId] = enrichedShow
 
-        val episodeSongModels = rssEpisodes.mapIndexed { index, ep ->
+        val episodeUiModels = rssEpisodes.mapIndexed { index, ep ->
             val epKey = ep.guid ?: "${ep.title}_$index"
             val epId = stableId("episode:${showId}:$epKey")
             val playUrl = "episode:${showId}:$epKey"
-            val model = SongsModel(
-                id = epId,
-                title = ep.title.ifBlank { "Episode ${index + 1}" },
-                album = enrichedName,
-                singer = enrichedPublisher.ifBlank { enrichedName },
-                coverUri = enrichedCover,
-                url = playUrl,
-                spotifyTrackId = "",
-                explicit = false,
-                durationMs = (ep.durationMs ?: 0L).toInt(),
-                mediaType = com.music.spotui.data.entity.MediaType.PODCAST_EPISODE,
-                podcastShowId = showId,
+            val epCover = ep.imageUrl?.ifBlank { null } ?: enrichedCover
+            val durationMs = ep.durationMs ?: 0L
+            val pubDateFormatted = com.music.spotui.util.PodcastDateFormatter.formatPubDate(ep.pubDate)
+            val durationFormatted = com.music.spotui.util.PodcastDateFormatter.formatDuration(durationMs)
+            val metadata = com.music.spotui.util.PodcastDateFormatter.formatMetadata(ep.pubDate, durationMs)
+
+            val uiModel = PodcastEpisodeUiModel(
+                id = playUrl,
+                numericId = epId,
+                title = ep.title.ifBlank { "פרק ${index + 1}" },
+                description = ep.description,
+                pubDate = ep.pubDate,
+                pubDateFormatted = pubDateFormatted,
+                durationMs = durationMs,
+                durationFormatted = durationFormatted,
+                formattedMetadata = metadata,
+                coverUri = epCover,
+                playUrl = playUrl,
+                showId = showId,
+                showName = enrichedName,
+                publisher = enrichedPublisher.ifBlank { enrichedName }
             )
+
+            val songModel = uiModel.toSongModel()
             com.music.spotui.di.SongPlayer.registerMediaType(playUrl, com.music.spotui.data.entity.MediaType.PODCAST_EPISODE)
-            com.music.spotui.di.SongPlayer.registerEpisodeModel(playUrl, model)
-            model
+            com.music.spotui.di.SongPlayer.registerEpisodeModel(playUrl, songModel)
+            uiModel
         }
 
-        Log.i("Api", "getShowEpisodes: successfully resolved ${episodeSongModels.size} episodes from RSS for '$enrichedName'")
-        emit(Response.Success(episodeSongModels))
+        Log.i("Api", "getPodcastEpisodes: successfully resolved ${episodeUiModels.size} episodes from RSS for '$enrichedName'")
+        emit(Response.Success(episodeUiModels))
+    }
+
+    /**
+     * Resolves a podcast show's episodes via public RSS feed discovery and parsing.
+     * Backwards compatible with legacy callers expecting List<SongsModel>.
+     */
+    suspend fun getShowEpisodes(showId: String, showName: String = ""): Flow<Response<List<SongsModel>>> = flow {
+        getPodcastEpisodes(showId, showName).collect { res ->
+            when (res) {
+                is Response.Loading -> emit(Response.Loading())
+                is Response.Error -> emit(Response.Error(res.error))
+                is Response.Success -> emit(Response.Success(res.data.map { it.toSongModel() }))
+            }
+        }
     }
 
     /** Show header (name/publisher/cover) for the detail screen. */
@@ -413,6 +444,8 @@ class Api @Inject constructor(
         name = name,
         publisher = publisher,
         coverUri = images.firstOrNull()?.url ?: "",
+        description = description,
+        topics = topics,
     )
 
     private fun com.metrolist.spotify.models.SpotifyEpisode.toEpisodeSongModel(showName: String?): SongsModel {
@@ -589,6 +622,152 @@ class Api @Inject constructor(
                 emit(Response.Success(diskFallback))
             } else {
                 emit(Response.Error("No podcasts found"))
+            }
+        }
+    }
+
+    /**
+     * Loads podcast shows for a specific category using Multi-Query discovery,
+     * Progressive streaming emission, Stale-While-Revalidate caching,
+     * Spotify search relevance order, topic verification, and offset pagination.
+     */
+    suspend fun getPodcastCategoryShows(
+        categoryIdOrQuery: String,
+        offset: Int = 0,
+        forceRefresh: Boolean = false,
+    ): Flow<Response<List<PodcastModel>>> = flow {
+        val category = com.music.spotui.data.entity.PodcastCategoriesData.findCategoryById(categoryIdOrQuery)
+
+        // 1. Stale-While-Revalidate: Check in-memory and disk cache
+        var emittedFromCache = false
+        if (!forceRefresh && offset == 0) {
+            val memoryCached = podcastCategoryCache[category.id]
+            val diskCached = if (memoryCached.isNullOrEmpty()) {
+                com.music.spotui.data.preferences.getCachedPodcastCategoryShows(context, category.id)
+            } else null
+
+            val cached = memoryCached ?: diskCached
+            if (!cached.isNullOrEmpty()) {
+                podcastCategoryCache[category.id] = cached
+                emit(Response.Success(cached))
+                emittedFromCache = true
+            }
+        }
+
+        // If nothing was emitted from cache, show skeleton loader
+        if (!emittedFromCache && offset == 0) {
+            emit(Response.Loading())
+        }
+
+        // Check authentication
+        if (!SpotifyTokenProvider.ensureToken(context)) {
+            val fallback = podcastCategoryCache[category.id]
+                ?: com.music.spotui.data.preferences.getCachedPodcastCategoryShows(context, category.id)
+            if (!fallback.isNullOrEmpty()) {
+                if (!emittedFromCache) emit(Response.Success(fallback))
+            } else {
+                emit(Response.Error("Spotify not authenticated"))
+            }
+            return@flow
+        }
+
+        val queries = category.discoveryQueries.ifEmpty { listOf(category.query.ifBlank { categoryIdOrQuery }) }
+        val matchingTopics = category.matchingTopics
+        val primaryQuery = queries.first()
+        val secondaryQueries = queries.drop(1)
+
+        val collectedShows = java.util.concurrent.CopyOnWriteArrayList<PodcastModel>()
+        val startTotal = System.currentTimeMillis()
+
+        // Helper to sort shows by topic verification while keeping Spotify relevance
+        fun sortAndVerify(shows: List<PodcastModel>): List<PodcastModel> {
+            val distinct = shows.distinctBy { it.id }.filter { it.name.isNotBlank() }
+            return if (matchingTopics.isNotEmpty()) {
+                distinct.sortedWith(
+                    compareByDescending { show ->
+                        show.topics.any { showTopic ->
+                            matchingTopics.any { it.equals(showTopic, ignoreCase = true) }
+                        }
+                    }
+                )
+            } else {
+                distinct
+            }
+        }
+
+        coroutineScope {
+            val semaphore = Semaphore(2)
+
+            // Step 2: Launch primary query immediately
+            val primaryJob = async {
+                semaphore.acquire()
+                val qStart = System.currentTimeMillis()
+                try {
+                    val res = Spotify.search(primaryQuery, limit = 25, offset = offset).getOrNull()
+                    val shows = res?.shows?.items.orEmpty().map { it.toPodcastModel() }
+                    Log.d("Api", "Primary query='$primaryQuery' offset=$offset took ${System.currentTimeMillis() - qStart}ms returned ${shows.size} shows")
+                    shows
+                } finally {
+                    semaphore.release()
+                }
+            }
+
+            // Step 3: Launch secondary queries concurrently
+            val secondaryJobs = secondaryQueries.map { q ->
+                async {
+                    semaphore.acquire()
+                    val qStart = System.currentTimeMillis()
+                    try {
+                        val res = Spotify.search(q, limit = 25, offset = offset).getOrNull()
+                        val shows = res?.shows?.items.orEmpty().map { it.toPodcastModel() }
+                        Log.d("Api", "Secondary query='$q' offset=$offset took ${System.currentTimeMillis() - qStart}ms returned ${shows.size} shows")
+                        shows
+                    } finally {
+                        semaphore.release()
+                    }
+                }
+            }
+
+            // Step 4: Progressive emission — Await primary query results first!
+            val primaryResults = primaryJob.await()
+            if (primaryResults.isNotEmpty()) {
+                collectedShows.addAll(primaryResults)
+                val primarySorted = sortAndVerify(collectedShows)
+                // Cache individual shows
+                primarySorted.forEach { podcastShowCache[it.id] = it }
+
+                // If we didn't already have a full cache rendered, emit primary results immediately!
+                // This unblocks the UI in ~350ms!
+                if (!emittedFromCache) {
+                    emit(Response.Success(primarySorted))
+                }
+            }
+
+            // Step 5: Await secondary queries and combine with primary results
+            val secondaryResults = secondaryJobs.awaitAll()
+            secondaryResults.forEach { shows ->
+                collectedShows.addAll(shows)
+            }
+        }
+
+        val totalDuration = System.currentTimeMillis() - startTotal
+        val finalSortedShows = sortAndVerify(collectedShows)
+        Log.d("Api", "getPodcastCategoryShows category='${category.title}' finished in ${totalDuration}ms with ${finalSortedShows.size} shows")
+
+        if (finalSortedShows.isNotEmpty()) {
+            if (offset == 0) {
+                podcastCategoryCache[category.id] = finalSortedShows
+                com.music.spotui.data.preferences.saveCachedPodcastCategoryShows(context, category.id, finalSortedShows)
+            }
+            finalSortedShows.forEach { podcastShowCache[it.id] = it }
+            emit(Response.Success(finalSortedShows))
+        } else {
+            val fallback = podcastCategoryCache[category.id]
+                ?: com.music.spotui.data.preferences.getCachedPodcastCategoryShows(context, category.id)
+            if (!fallback.isNullOrEmpty()) {
+                if (!emittedFromCache) emit(Response.Success(fallback))
+            } else {
+                emit(Response.Error("לא נמצאו פודקאסטים עבור קטגוריית ${category.title}"))
             }
         }
     }

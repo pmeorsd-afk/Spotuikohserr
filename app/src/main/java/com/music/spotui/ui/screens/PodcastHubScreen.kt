@@ -1,6 +1,7 @@
 package com.music.spotui.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -8,167 +9,225 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
-import com.bumptech.glide.integration.compose.placeholder
-import com.music.spotui.R
-import com.music.spotui.data.api.Response
-import com.music.spotui.data.entity.PodcastModel
-import com.music.spotui.ui.components.GlideImage
-import com.music.spotui.ui.components.Loader
-import com.music.spotui.ui.components.Snackbar
-import com.music.spotui.ui.navigation.showRoute
-import com.music.spotui.ui.viewmodel.PodcastHubViewModel
+import com.music.spotui.data.entity.PodcastCategoriesData
+import com.music.spotui.data.entity.PodcastCategory
+import com.music.spotui.ui.navigation.podcastAllCategoriesRoute
+import com.music.spotui.ui.navigation.podcastCategoryRoute
 
 @Composable
 fun PodcastHubScreen(
     navController: NavController,
-    viewModel: PodcastHubViewModel = hiltViewModel()
 ) {
-    val showsState by viewModel.shows.collectAsState()
+    val categories = remember { PodcastCategoriesData.curatedCategories }
+    val baseBg = Color(0xFF121212)
+    val portalGradient = Color(0xFF1E5545)
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color(0xFF0E0E13))
-            .statusBarsPadding()
-    ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
+    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+        Box(
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(8.dp, 12.dp, 16.dp, 8.dp)
+                .fillMaxSize()
+                .background(baseBg)
         ) {
-            Icon(
-                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                contentDescription = "Back",
-                tint = Color.White,
+            // Subtle top green gradient fading to dark background
+            Box(
                 modifier = Modifier
-                    .size(40.dp)
-                    .clip(RoundedCornerShape(20.dp))
-                    .clickable { navController.popBackStack() }
-                    .padding(8.dp)
+                    .fillMaxWidth()
+                    .height(260.dp)
+                    .background(
+                        Brush.verticalGradient(
+                            colors = listOf(
+                                portalGradient.copy(alpha = 0.75f),
+                                portalGradient.copy(alpha = 0.25f),
+                                baseBg
+                            )
+                        )
+                    )
             )
-            Text(
-                text = "פודקאסטים",
-                fontWeight = FontWeight.Bold,
-                color = Color.White,
-                fontSize = 22.sp,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.padding(start = 6.dp),
-            )
-        }
 
-        when (showsState) {
-            is Response.Loading -> {
-                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Loader()
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .statusBarsPadding()
+            ) {
+                // Top Action Bar
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 8.dp, vertical = 4.dp)
+                ) {
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                        contentDescription = "Back",
+                        tint = Color.White,
+                        modifier = Modifier
+                            .size(48.dp)
+                            .clip(RoundedCornerShape(24.dp))
+                            .clickable { navController.popBackStack() }
+                            .padding(12.dp)
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Share,
+                        contentDescription = "Share",
+                        tint = Color.White,
+                        modifier = Modifier
+                            .size(48.dp)
+                            .clip(RoundedCornerShape(24.dp))
+                            .clickable { /* Share podcasts hub */ }
+                            .padding(12.dp)
+                    )
                 }
-            }
-            is Response.Success -> {
-                val shows = (showsState as Response.Success<List<PodcastModel>>).data
-                PodcastHubGrid(shows = shows, navController = navController)
-            }
-            is Response.Error -> {
-                Box(modifier = Modifier.padding(20.dp, 60.dp)) {
-                    Snackbar(showMessage = "לא ניתן לטעון פודקאסטים")
+
+                // Grid of 9 Categories + "All Categories" button
+                LazyVerticalGrid(
+                    columns = GridCells.Fixed(2),
+                    contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 4.dp, bottom = 140.dp),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    verticalArrangement = Arrangement.spacedBy(14.dp),
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    item(span = { GridItemSpan(2) }) {
+                        Column(modifier = Modifier.padding(bottom = 12.dp, top = 2.dp)) {
+                            Text(
+                                text = "פודקאסטים",
+                                fontWeight = FontWeight.Bold,
+                                color = Color.White,
+                                fontSize = 28.sp,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                            Spacer(modifier = Modifier.height(14.dp))
+                            Text(
+                                text = "קטגוריות",
+                                fontWeight = FontWeight.Bold,
+                                color = Color.White,
+                                fontSize = 18.sp,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                        }
+                    }
+
+                    items(categories, key = { it.id }) { cat ->
+                        PodcastCategoryTile(
+                            category = cat,
+                            onClick = {
+                                navController.navigate(podcastCategoryRoute(cat.id, cat.title))
+                            }
+                        )
+                    }
+
+                    // "All Categories" Pill Button at bottom
+                    item(span = { GridItemSpan(2) }) {
+                        Box(
+                            contentAlignment = Alignment.Center,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 18.dp, bottom = 20.dp)
+                        ) {
+                            Box(
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(20.dp))
+                                    .background(Color(0xFF2A2A2A))
+                                    .border(1.dp, Color(0xFF3E3E3E), RoundedCornerShape(20.dp))
+                                    .clickable {
+                                        navController.navigate(podcastAllCategoriesRoute())
+                                    }
+                                    .padding(horizontal = 24.dp, vertical = 10.dp)
+                            ) {
+                                Text(
+                                    text = "כל הקטגוריות",
+                                    color = Color.White,
+                                    fontSize = 14.sp,
+                                    fontWeight = FontWeight.SemiBold,
+                                    textAlign = TextAlign.Center
+                                )
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 }
 
-@OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-private fun PodcastHubGrid(
-    shows: List<PodcastModel>,
-    navController: NavController
+private fun PodcastCategoryTile(
+    category: PodcastCategory,
+    onClick: () -> Unit
 ) {
-    if (shows.isEmpty()) {
-        Box(modifier = Modifier.padding(20.dp, 40.dp)) {
-            Snackbar(showMessage = "לא נמצאו פודקאסטים כרגע")
-        }
-        return
-    }
+    val tileColor = Color(category.colorHex)
 
-    LazyVerticalGrid(
-        columns = GridCells.Fixed(2),
-        contentPadding = PaddingValues(12.dp, 8.dp, 12.dp, 130.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp),
-        modifier = Modifier.fillMaxSize(),
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(102.dp)
+            .clip(RoundedCornerShape(8.dp))
+            .background(tileColor)
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                onClick = onClick
+            )
     ) {
-        items(shows, key = { it.id }) { show ->
-            Column(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(8.dp))
-                    .clickable(
-                        interactionSource = remember { MutableInteractionSource() },
-                        indication = null,
-                    ) {
-                        navController.navigate(showRoute(show.id, show.name))
-                    }
-            ) {
-                GlideImage(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .aspectRatio(1f)
-                        .clip(RoundedCornerShape(8.dp)),
-                    model = show.coverUri,
-                    contentScale = ContentScale.Crop,
-                    failure = placeholder(R.drawable.placeholder),
-                    loading = placeholder(R.drawable.placeholder),
-                    isAllowed = com.music.spotui.util.KosherWhitelistManager.isPodcastShowWhitelisted(show),
-                    contentDescription = show.name,
-                )
-                Text(
-                    text = show.name,
-                    color = Color.White,
-                    fontSize = 13.sp,
-                    fontWeight = FontWeight.Bold,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.padding(top = 6.dp),
-                )
-                if (show.publisher.isNotBlank()) {
-                    Text(
-                        text = show.publisher,
-                        color = Color.Gray,
-                        fontSize = 11.sp,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                    )
-                }
-            }
-        }
+        // Rotated decorative artwork thumbnail in bottom-end (bottom-left in RTL)
+        Box(
+            modifier = Modifier
+                .align(Alignment.BottomEnd)
+                .offset(x = (-8).dp, y = 8.dp)
+                .size(64.dp)
+                .rotate(24f)
+                .clip(RoundedCornerShape(6.dp))
+                .background(Color.Black.copy(alpha = 0.28f))
+        )
+
+        // Title text in top-start (top-right in RTL)
+        Text(
+            text = category.title,
+            color = Color.White,
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Bold,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier
+                .align(Alignment.TopStart)
+                .padding(top = 12.dp, start = 12.dp, end = 8.dp)
+        )
     }
 }

@@ -22,6 +22,13 @@ import com.music.spotui.di.CurrentSongState
 import com.music.spotui.di.SongPlayer
 import javax.inject.Inject
 
+enum class HomeTabFilter {
+    ALL,
+    MUSIC,
+    PODCASTS,
+    FOLLOWING
+}
+
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val repository: AppRepository,
@@ -29,6 +36,16 @@ class HomeViewModel @Inject constructor(
     private val listeningTracker: LocalListeningTracker,
     private val currentSongState: CurrentSongState
 ) : ViewModel() {
+
+    private val _currentFilter = MutableStateFlow(HomeTabFilter.ALL)
+    val currentFilter: StateFlow<HomeTabFilter> = _currentFilter
+
+    fun setFilter(filter: HomeTabFilter) {
+        _currentFilter.value = filter
+    }
+
+    private val _followedPodcasts = MutableStateFlow<List<com.music.spotui.data.preferences.FollowedPodcastShow>>(emptyList())
+    val followedPodcasts: StateFlow<List<com.music.spotui.data.preferences.FollowedPodcastShow>> = _followedPodcasts
 
     private val _home : MutableStateFlow<Response<HomeFeedModel>> = MutableStateFlow(Response.Loading())
     val home : StateFlow<Response<HomeFeedModel>> = _home
@@ -74,6 +91,12 @@ class HomeViewModel @Inject constructor(
         viewModelScope.launch {
             com.music.spotui.data.preferences.likedSongsRevision.drop(1).collect {
                 syncLikedSongsCount()
+            }
+        }
+        _followedPodcasts.value = repository.getFollowedPodcasts()
+        viewModelScope.launch {
+            com.music.spotui.data.preferences.podcastFollowRevision.collect {
+                _followedPodcasts.value = repository.getFollowedPodcasts()
             }
         }
     }

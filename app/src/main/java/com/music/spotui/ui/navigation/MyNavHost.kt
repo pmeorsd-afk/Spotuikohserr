@@ -37,6 +37,8 @@ import com.music.spotui.ui.screens.LikedSongsScreen
 import com.music.spotui.ui.screens.PlayerScreen
 import com.music.spotui.ui.screens.PlaylistScreen
 import com.music.spotui.ui.screens.PodcastHubScreen
+import com.music.spotui.ui.screens.PodcastCategoryScreen
+import com.music.spotui.ui.screens.PodcastAllCategoriesScreen
 import com.music.spotui.ui.screens.ShowScreen
 import com.music.spotui.ui.screens.QueueScreen
 import com.music.spotui.ui.screens.SearchScreen
@@ -263,6 +265,29 @@ fun MyNavHost(
                 bottomBarPlayerState.value = playerState != ""
             }
             PodcastHubScreen(navHostController)
+        }
+
+        composable(
+            "${Routes.PodcastCategory.route}/{categoryId}?title={title}",
+            arguments = listOf(
+                navArgument("title") { defaultValue = "" }
+            )
+        ) { navBackStackEntry ->
+            LaunchedEffect(playerState) {
+                bottomBarState.value = true
+                bottomBarPlayerState.value = playerState != ""
+            }
+            val categoryId = navBackStackEntry.arguments?.getString("categoryId").orEmpty()
+            val title = navBackStackEntry.arguments?.getString("title").orEmpty()
+            PodcastCategoryScreen(navHostController, categoryId = categoryId, categoryTitle = title)
+        }
+
+        composable(Routes.PodcastAllCategories.route) {
+            LaunchedEffect(playerState) {
+                bottomBarState.value = true
+                bottomBarPlayerState.value = playerState != ""
+            }
+            PodcastAllCategoriesScreen(navHostController)
         }
 
         composable(

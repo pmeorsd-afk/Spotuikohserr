@@ -94,4 +94,38 @@ class Palette {
             onColorExtracted(Color(0xFF141414))
         }
     }
+
+    fun extractDominantColorForGradient(context: Context, imageUrl: String, onColorExtracted: (Color) -> Unit) {
+        if (imageUrl.isBlank()) {
+            onColorExtracted(Color(0xFF141414))
+            return
+        }
+        try {
+            Glide.with(context)
+                .asBitmap()
+                .load(imageUrl)
+                .override(96, 96)
+                .into(object : CustomTarget<Bitmap>() {
+                    override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
+                        AndroidXPalette.from(resource).generate { palette ->
+                            val swatch = palette?.vibrantSwatch
+                                ?: palette?.dominantSwatch
+                                ?: palette?.darkVibrantSwatch
+                                ?: palette?.mutedSwatch
+                                ?: palette?.darkMutedSwatch
+                            val color = swatch?.let { normalizeForBackground(it.rgb) } ?: Color(0xFF141414)
+                            mainHandler.post { onColorExtracted(color) }
+                        }
+                    }
+
+                    override fun onLoadCleared(placeholder: Drawable?) {}
+
+                    override fun onLoadFailed(errorDrawable: Drawable?) {
+                        mainHandler.post { onColorExtracted(Color(0xFF141414)) }
+                    }
+                })
+        } catch (e: Exception) {
+            onColorExtracted(Color(0xFF141414))
+        }
+    }
 }

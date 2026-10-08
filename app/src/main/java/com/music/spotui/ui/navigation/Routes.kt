@@ -34,10 +34,20 @@ sealed class Routes(
     object SpotiflacVerify : Routes(0, "SpotiflacVerify", "spotiflacverify")
     object KosherAdmin : Routes(0, "Kosher Admin", "kosher_admin")
     object PodcastHub : Routes(0, "PodcastHub", "podcast_hub")
+    object PodcastCategory : Routes(0, "PodcastCategory", "podcast_category")
+    object PodcastAllCategories : Routes(0, "PodcastAllCategories", "podcast_all_categories")
 }
 
 /** Builds the route to the Podcast Hub screen. */
 fun podcastHubRoute(): String = Routes.PodcastHub.route
+
+/** Builds the route to an individual podcast category screen. */
+fun podcastCategoryRoute(categoryId: String, title: String): String =
+    "${Routes.PodcastCategory.route}/${android.net.Uri.encode(categoryId)}?title=${android.net.Uri.encode(title)}"
+
+/** Builds the route to the full all-categories screen. */
+fun podcastAllCategoriesRoute(): String = Routes.PodcastAllCategories.route
+
 
 /** Builds a Browse-category route carrying the search genre and a display title. */
 fun categoryRoute(genre: String, title: String): String =

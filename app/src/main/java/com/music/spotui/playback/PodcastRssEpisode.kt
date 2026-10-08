@@ -10,5 +10,7 @@ data class PodcastRssEpisode(
     val durationMs: Long?,
     val enclosureUrl: String?,
     val enclosureType: String?,
-    val enclosureLength: Long?
+    val enclosureLength: Long?,
+    val description: String? = null,
+    val imageUrl: String? = null
 )

@@ -79,12 +79,33 @@ import com.music.spotui.ui.viewmodel.HomeViewModel
 import com.music.spotui.ui.viewmodel.PlayerViewModel
 import com.music.spotui.data.entity.SongsModel
 import com.music.spotui.di.SongPlayer
+import androidx.compose.foundation.border
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.style.TextOverflow
 import com.music.spotui.data.entity.HomeSectionIds
 import com.music.spotui.data.entity.HomeSectionType
 import java.time.LocalTime
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.expandHorizontally
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.shrinkHorizontally
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.offset
+import androidx.compose.ui.draw.rotate
+
 
 
 @RequiresApi(Build.VERSION_CODES.O)
@@ -97,6 +118,8 @@ fun HomeScreen(navController: NavController){
     val home by homeViewModel.home.collectAsState()
     val albums by homeViewModel.albums.collectAsState()
     val artists by homeViewModel.artists.collectAsState()
+    val currentFilter by homeViewModel.currentFilter.collectAsState()
+    val followedPodcasts by homeViewModel.followedPodcasts.collectAsState()
     val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
 
     var menuSong by remember { mutableStateOf<SongsModel?>(null) }
@@ -137,12 +160,30 @@ fun HomeScreen(navController: NavController){
         val albumsList = (albums as? Response.Success)?.data.orEmpty()
         val artistsList = (artists as? Response.Success)?.data.orEmpty()
 
+        val inPodcastModes = currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS ||
+            currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING
+
         when {
+            inPodcastModes -> {
+                HomeFeedContent(
+                    navController = navController,
+                    feed = feed ?: com.music.spotui.data.entity.HomeFeedModel(topGrid = emptyList(), sections = emptyList()),
+                    currentFilter = currentFilter,
+                    onFilterSelected = { homeViewModel.setFilter(it) },
+                    followedPodcasts = followedPodcasts,
+                    onPlayTrack = { song -> homeViewModel.playTrack(song, context) },
+                    onSongLongClick = { menuSong = it }
+                )
+            }
+
             // Preferred: the real personalized Spotify home feed.
             feed != null && feed.sections.isNotEmpty() -> {
                 HomeFeedContent(
                     navController = navController,
                     feed = feed,
+                    currentFilter = currentFilter,
+                    onFilterSelected = { homeViewModel.setFilter(it) },
+                    followedPodcasts = followedPodcasts,
                     onPlayTrack = { song -> homeViewModel.playTrack(song, context) },
                     onSongLongClick = { menuSong = it }
                 )
@@ -235,11 +276,15 @@ private fun onHomeItemClick(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun HomeFeedContent(
     navController: NavController,
     feed: HomeFeedModel,
+    currentFilter: com.music.spotui.ui.viewmodel.HomeTabFilter,
+    onFilterSelected: (com.music.spotui.ui.viewmodel.HomeTabFilter) -> Unit,
+    followedPodcasts: List<com.music.spotui.data.preferences.FollowedPodcastShow>,
     onPlayTrack: (SongsModel) -> Unit,
     onSongLongClick: (SongsModel) -> Unit
 ) {
@@ -252,16 +297,78 @@ fun HomeFeedContent(
             .fillMaxSize()
             .background(Color(AppBackground.toArgb()))
     ) {
-        item {
-            HomeHeaderRow(navController)
-        }
-        if (topGridItems.isNotEmpty()) {
-            item {
-                HomeTopGrid(navController, topGridItems, onPlayTrack, onSongLongClick)
+        stickyHeader {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Color(AppBackground.toArgb()))
+            ) {
+                HomeHeaderRow(
+                    navController = navController,
+                    currentFilter = currentFilter,
+                    onFilterSelected = onFilterSelected
+                )
             }
         }
-        items(sections.size, key = { i -> sections[i].id.ifBlank { "sec_$i" } }) { i ->
-            HomeFeedSection(navController, sections[i], onPlayTrack, onSongLongClick)
+
+        when (currentFilter) {
+            com.music.spotui.ui.viewmodel.HomeTabFilter.ALL,
+            com.music.spotui.ui.viewmodel.HomeTabFilter.MUSIC -> {
+                if (topGridItems.isNotEmpty()) {
+                    item(key = "top_grid") {
+                        HomeTopGrid(navController, topGridItems, onPlayTrack, onSongLongClick)
+                    }
+                }
+                items(sections.size, key = { i -> sections[i].id.ifBlank { "sec_$i" } }) { i ->
+                    HomeFeedSection(navController, sections[i], onPlayTrack, onSongLongClick)
+                }
+            }
+            com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS -> {
+                if (followedPodcasts.isNotEmpty()) {
+                    item(key = "podcast_shortcuts") {
+                        FollowedShowsShortcutsRow(
+                            shows = followedPodcasts,
+                            onShowClick = { show ->
+                                navController.navigate(showRoute(show.showId, show.name))
+                            },
+                            onAddClick = {
+                                navController.navigate(podcastHubRoute())
+                            }
+                        )
+                    }
+                }
+                item(key = "podcast_mode_content") {
+                    PodcastModeContent(
+                        followedPodcasts = followedPodcasts,
+                        onShowClick = { show ->
+                            navController.navigate(showRoute(show.showId, show.name))
+                        },
+                        onBrowsePodcasts = {
+                            navController.navigate(podcastHubRoute())
+                        }
+                    )
+                }
+            }
+            com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING -> {
+                if (followedPodcasts.isEmpty()) {
+                    item(key = "following_empty_state") {
+                        FollowingEmptyState(
+                            onBrowsePodcasts = {
+                                navController.navigate(podcastHubRoute())
+                            }
+                        )
+                    }
+                } else {
+                    item(key = "following_shows_header") {
+                        FollowedShowsListContent(
+                            shows = followedPodcasts,
+                            onShowClick = { show ->
+                                navController.navigate(showRoute(show.showId, show.name))
+                            }
+                        )
+                    }
+                }
+            }
         }
     }
 }
@@ -269,7 +376,11 @@ fun HomeFeedContent(
 /** Spotify-style top row: profile avatar on the left, filter pills on the right. */
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-private fun HomeHeaderRow(navController: NavController) {
+private fun HomeHeaderRow(
+    navController: NavController,
+    currentFilter: com.music.spotui.ui.viewmodel.HomeTabFilter,
+    onFilterSelected: (com.music.spotui.ui.viewmodel.HomeTabFilter) -> Unit,
+) {
     val context = androidx.compose.ui.platform.LocalContext.current
     androidx.compose.runtime.LaunchedEffect(Unit) {
         com.music.spotui.data.api.ProfileCache.ensure(context)
@@ -278,7 +389,7 @@ private fun HomeHeaderRow(navController: NavController) {
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 26.dp, bottom = 8.dp),
+            .padding(top = 10.dp, bottom = 10.dp),
     ) {
         val avatarUrl = com.music.spotui.data.api.ProfileCache.imageUrl
         val initial = com.music.spotui.data.api.ProfileCache.name
@@ -311,36 +422,624 @@ private fun HomeHeaderRow(navController: NavController) {
                 )
             }
         }
-        val filters = listOf("הכול", "מוזיקה", "פודקאסטים")
-        var selected by remember { androidx.compose.runtime.mutableStateOf("הכול") }
-        LazyRow(
-            contentPadding = PaddingValues(horizontal = 12.dp),
+
+        val inPodcastModes = currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS ||
+                currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING
+
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(8.dp),
-            modifier = Modifier.weight(1f),
+            modifier = Modifier
+                .weight(1f)
+                .padding(horizontal = 12.dp)
+                .horizontalScroll(rememberScrollState()),
         ) {
-            items(filters.size) { i ->
-                val label = filters[i]
-                val isSel = label == selected
+            FilterPill(
+                label = "הכול",
+                isSelected = currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.ALL,
+                onClick = { onFilterSelected(com.music.spotui.ui.viewmodel.HomeTabFilter.ALL) }
+            )
+
+            FilterPill(
+                label = "מוזיקה",
+                isSelected = currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.MUSIC,
+                onClick = { onFilterSelected(com.music.spotui.ui.viewmodel.HomeTabFilter.MUSIC) }
+            )
+
+            PodcastFilterGroup(
+                currentFilter = currentFilter,
+                inPodcastModes = inPodcastModes,
+                onFilterSelected = onFilterSelected
+            )
+        }
+    }
+}
+
+@Composable
+private fun FilterPill(
+    label: String,
+    isSelected: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Box(
+        modifier = modifier
+            .clip(RoundedCornerShape(50))
+            .background(if (isSelected) Color(0xFF1ED760) else Color(0xFF2A2A2A))
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                onClick = onClick
+            )
+            .padding(horizontal = 14.dp, vertical = 6.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = label,
+            color = if (isSelected) Color.Black else Color.White,
+            fontSize = 14.sp,
+            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+        )
+    }
+}
+
+@Composable
+private fun PodcastFilterGroup(
+    currentFilter: com.music.spotui.ui.viewmodel.HomeTabFilter,
+    inPodcastModes: Boolean,
+    onFilterSelected: (com.music.spotui.ui.viewmodel.HomeTabFilter) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val isPodcastsActive = currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS
+    val isFollowingActive = currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING
+
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = modifier
+    ) {
+        // Primary Podcast Pill: stays stable in place
+        Box(
+            modifier = Modifier
+                .clip(
+                    if (inPodcastModes) {
+                        RoundedCornerShape(
+                            topStart = 16.dp,
+                            bottomStart = 16.dp,
+                            topEnd = 0.dp,
+                            bottomEnd = 0.dp
+                        )
+                    } else {
+                        RoundedCornerShape(16.dp)
+                    }
+                )
+                .background(
+                    when {
+                        isPodcastsActive -> Color(0xFF1ED760)
+                        isFollowingActive -> Color(0xFF1AB252)
+                        else -> Color(0xFF2A2A2A)
+                    }
+                )
+                .clickable(
+                    interactionSource = remember { MutableInteractionSource() },
+                    indication = null,
+                    onClick = { onFilterSelected(com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS) }
+                )
+                .padding(horizontal = 14.dp, vertical = 6.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = "פודקאסטים",
+                color = if (inPodcastModes) Color.Black else Color.White,
+                fontSize = 14.sp,
+                fontWeight = if (inPodcastModes) FontWeight.Bold else FontWeight.Medium,
+            )
+        }
+
+        // Animated Sub-Pill "במעקב": Slides in smoothly from Right to Left adjacent to "פודקאסטים"
+        AnimatedVisibility(
+            visible = inPodcastModes,
+            enter = fadeIn(animationSpec = tween(200)) +
+                    expandHorizontally(
+                        expandFrom = Alignment.Start,
+                        animationSpec = tween(220, easing = FastOutSlowInEasing)
+                    ) +
+                    slideInHorizontally(
+                        initialOffsetX = { fullWidth -> fullWidth },
+                        animationSpec = tween(220, easing = FastOutSlowInEasing)
+                    ),
+            exit = fadeOut(animationSpec = tween(150)) +
+                    shrinkHorizontally(
+                        shrinkTowards = Alignment.Start,
+                        animationSpec = tween(180, easing = FastOutSlowInEasing)
+                    ) +
+                    slideOutHorizontally(
+                        targetOffsetX = { fullWidth -> fullWidth },
+                        animationSpec = tween(180, easing = FastOutSlowInEasing)
+                    )
+        ) {
+            Box(
+                modifier = Modifier
+                    .clip(
+                        RoundedCornerShape(
+                            topEnd = 16.dp,
+                            bottomEnd = 16.dp,
+                            topStart = 0.dp,
+                            bottomStart = 0.dp
+                        )
+                    )
+                    .background(
+                        if (isFollowingActive) Color(0xFF1ED760)
+                        else Color(0xFF333333)
+                    )
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null,
+                        onClick = { onFilterSelected(com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING) }
+                    )
+                    .padding(horizontal = 14.dp, vertical = 6.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = "במעקב",
+                    color = if (isFollowingActive) Color.Black else Color.White,
+                    fontSize = 14.sp,
+                    fontWeight = if (isFollowingActive) FontWeight.Bold else FontWeight.Medium,
+                )
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalGlideComposeApi::class)
+@Composable
+private fun FollowedShowsShortcutsRow(
+    shows: List<com.music.spotui.data.preferences.FollowedPodcastShow>,
+    onShowClick: (com.music.spotui.data.preferences.FollowedPodcastShow) -> Unit,
+    onAddClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    LazyRow(
+        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 10.dp),
+        horizontalArrangement = Arrangement.spacedBy(14.dp),
+        verticalAlignment = Alignment.Top,
+        modifier = modifier.fillMaxWidth()
+    ) {
+        item {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier
+                    .width(58.dp)
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null,
+                        onClick = onAddClick
+                    )
+            ) {
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(50))
-                        .background(if (isSel) Color(0xFF1ED760) else Color(0xFF2A2A2A))
-                        .clickable {
-                            selected = label
-                            if (label == "פודקאסטים") {
-                                navController.navigate(podcastHubRoute())
-                            }
-                        }
-                        .padding(horizontal = 14.dp, vertical = 6.dp),
+                        .size(56.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(Color(0xFF1F1F1F))
+                        .border(1.dp, Color(0xFF2A2A2A), RoundedCornerShape(8.dp)),
+                    contentAlignment = Alignment.Center
                 ) {
+                    Icon(
+                        imageVector = Icons.Default.Add,
+                        contentDescription = "הוסף פודקאסטים",
+                        tint = Color.White,
+                        modifier = Modifier.size(24.dp)
+                    )
+                }
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = "הוספה",
+                    color = Color(0xFFB3B3B3),
+                    fontSize = 11.sp,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    textAlign = TextAlign.Center
+                )
+            }
+        }
+
+        items(shows.size, key = { i -> shows[i].showId }) { i ->
+            val show = shows[i]
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier
+                    .width(58.dp)
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null,
+                        onClick = { onShowClick(show) }
+                    )
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(56.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(Color(0xFF282828))
+                ) {
+                    if (show.imageUrl.isNotBlank()) {
+                        GlideImage(
+                            model = show.imageUrl,
+                            contentDescription = show.name,
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier.fillMaxSize()
+                        )
+                    } else {
+                        Box(
+                            modifier = Modifier.fillMaxSize(),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = show.name.take(1).uppercase(),
+                                color = Color.White,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 16.sp
+                            )
+                        }
+                    }
+                }
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = show.name,
+                    color = Color.White,
+                    fontSize = 11.sp,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    textAlign = TextAlign.Center
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun PodcastModeContent(
+    followedPodcasts: List<com.music.spotui.data.preferences.FollowedPodcastShow>,
+    onShowClick: (com.music.spotui.data.preferences.FollowedPodcastShow) -> Unit,
+    onBrowsePodcasts: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 20.dp)
+    ) {
+        if (followedPodcasts.isEmpty()) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(Color(0xFF1E1E1E))
+                    .border(1.dp, Color(0xFF2C2C2C), RoundedCornerShape(12.dp))
+                    .padding(20.dp)
+            ) {
+                Column(horizontalAlignment = Alignment.Start) {
                     Text(
-                        text = label,
-                        color = if (isSel) Color.Black else Color.White,
-                        fontSize = 14.sp,
-                        fontWeight = FontWeight.Medium,
+                        text = "פודקאסטים עבורכם",
+                        color = Color.White,
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = "עקבו אחרי הפודקאסטים המועדפים עליכם כדי לקבל גישה מהירה ועדכונים שוטפים ישירות לכאן.",
+                        color = Color(0xFFB3B3B3),
+                        fontSize = 13.sp,
+                        lineHeight = 18.sp
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Button(
+                        onClick = onBrowsePodcasts,
+                        shape = RoundedCornerShape(20.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color.White,
+                            contentColor = Color.Black
+                        ),
+                        contentPadding = PaddingValues(horizontal = 20.dp, vertical = 8.dp)
+                    ) {
+                        Text(
+                            text = "עיון בפודקאסטים",
+                            color = Color.Black,
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+                }
+            }
+        } else {
+            Text(
+                text = "הפודקאסטים שלכם",
+                color = Color.White,
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(bottom = 12.dp)
+            )
+            Column(
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                followedPodcasts.forEach { show ->
+                    FollowedShowCardRow(
+                        show = show,
+                        onClick = { onShowClick(show) }
                     )
                 }
             }
+        }
+    }
+}
+
+@Composable
+private fun FollowedShowsListContent(
+    shows: List<com.music.spotui.data.preferences.FollowedPodcastShow>,
+    onShowClick: (com.music.spotui.data.preferences.FollowedPodcastShow) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 16.dp)
+    ) {
+        Text(
+            text = "הפרקים האחרונים",
+            color = Color.White,
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(bottom = 6.dp)
+        )
+        Text(
+            text = "פודקאסטים במעקב (${shows.size})",
+            color = Color(0xFFB3B3B3),
+            fontSize = 13.sp,
+            modifier = Modifier.padding(bottom = 16.dp)
+        )
+
+        Column(
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            shows.forEach { show ->
+                FollowedShowCardRow(
+                    show = show,
+                    onClick = { onShowClick(show) }
+                )
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalGlideComposeApi::class)
+@Composable
+private fun FollowedShowCardRow(
+    show: com.music.spotui.data.preferences.FollowedPodcastShow,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(8.dp))
+            .background(Color(0xFF181818))
+            .clickable(onClick = onClick)
+            .padding(10.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .size(48.dp)
+                .clip(RoundedCornerShape(6.dp))
+                .background(Color(0xFF282828))
+        ) {
+            if (show.imageUrl.isNotBlank()) {
+                GlideImage(
+                    model = show.imageUrl,
+                    contentDescription = show.name,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.fillMaxSize()
+                )
+            }
+        }
+        Spacer(modifier = Modifier.width(12.dp))
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = show.name,
+                color = Color.White,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.SemiBold,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+            Spacer(modifier = Modifier.height(2.dp))
+            Text(
+                text = "פודקאסט • במעקב",
+                color = Color(0xFF1ED760),
+                fontSize = 12.sp
+            )
+        }
+    }
+}
+
+@Composable
+fun FollowingEmptyState(
+    modifier: Modifier = Modifier,
+    onBrowsePodcasts: () -> Unit
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        // Spotify XML: android.widget.TextView txt="הפרקים האחרונים" bounds=[654,121][876,162]
+        Text(
+            text = "הפרקים האחרונים",
+            color = Color.White,
+            fontSize = 28.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 14.dp),
+            textAlign = TextAlign.Start
+        )
+
+        // Spotify XML: android.view.ViewGroup id=com.spotify.music:id/onboarding_card_root bounds=[24,174][876,547]
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(12.dp))
+                .background(Color(0xFF181818))
+                .border(1.dp, Color(0xFF262626), RoundedCornerShape(12.dp))
+                .padding(horizontal = 20.dp, vertical = 26.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                // Spotify XML: android.view.ViewGroup id=com.spotify.music:id/graphic bounds=[291,186][609,342]
+                FollowingFannedStackGraphic(
+                    modifier = Modifier
+                        .size(width = 180.dp, height = 90.dp)
+                        .padding(bottom = 4.dp)
+                )
+
+                Spacer(modifier = Modifier.height(18.dp))
+
+                // Spotify XML: android.widget.TextView id=com.spotify.music:id/title txt="עוד לא הוספתם פודקאסטים למעקב" bounds=[231,342][669,383]
+                Text(
+                    text = "עוד לא הוספתם פודקאסטים למעקב",
+                    color = Color.White,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center
+                )
+
+                Spacer(modifier = Modifier.height(8.dp))
+
+                // Spotify XML: android.widget.TextView id=com.spotify.music:id/explanation txt="עקבו אחרי הפודקאסטים המועדפים עליכם כדי להישאר מעודכנים." bounds=[194,389][706,417]
+                Text(
+                    text = "עקבו אחרי הפודקאסטים המועדפים עליכם כדי להישאר מעודכנים.",
+                    color = Color(0xFFB3B3B3),
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Normal,
+                    textAlign = TextAlign.Center,
+                    lineHeight = 20.sp,
+                    modifier = Modifier.padding(horizontal = 8.dp)
+                )
+
+                Spacer(modifier = Modifier.height(22.dp))
+
+                // Spotify XML: android.widget.Button id=com.spotify.music:id/positive_inverted txt="עיון בפודקסטים" bounds=[360,435][539,511]
+                Button(
+                    onClick = onBrowsePodcasts,
+                    shape = RoundedCornerShape(24.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.White,
+                        contentColor = Color.Black
+                    ),
+                    contentPadding = PaddingValues(horizontal = 24.dp, vertical = 0.dp),
+                    modifier = Modifier.height(48.dp)
+                ) {
+                    Text(
+                        text = "עיון בפודקאסטים",
+                        color = Color.Black,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+            }
+        }
+    }
+}
+
+/** Fanned stack of 5 podcast album covers matching Spotify's empirical graphic in Following Empty State */
+@Composable
+private fun FollowingFannedStackGraphic(
+    modifier: Modifier = Modifier
+) {
+    Box(
+        modifier = modifier,
+        contentAlignment = Alignment.Center
+    ) {
+        // 1. Far Left (Outer teal cover)
+        Box(
+            modifier = Modifier
+                .offset(x = (-46).dp, y = 4.dp)
+                .rotate(-14f)
+                .size(50.dp)
+                .clip(RoundedCornerShape(6.dp))
+                .background(Brush.linearGradient(listOf(Color(0xFF005F73), Color(0xFF0A9396))))
+                .border(0.5.dp, Color(0x33FFFFFF), RoundedCornerShape(6.dp))
+        )
+
+        // 2. Mid Left (Portrait coral cover)
+        Box(
+            modifier = Modifier
+                .offset(x = (-24).dp, y = 2.dp)
+                .rotate(-7f)
+                .size(58.dp)
+                .clip(RoundedCornerShape(6.dp))
+                .background(Brush.linearGradient(listOf(Color(0xFF9B2226), Color(0xFFAE2012))))
+                .border(0.5.dp, Color(0x33FFFFFF), RoundedCornerShape(6.dp))
+        )
+
+        // 3. Far Right (Dark noir cover)
+        Box(
+            modifier = Modifier
+                .offset(x = 46.dp, y = 4.dp)
+                .rotate(14f)
+                .size(50.dp)
+                .clip(RoundedCornerShape(6.dp))
+                .background(Brush.linearGradient(listOf(Color(0xFF262626), Color(0xFF171717))))
+                .border(0.5.dp, Color(0x33FFFFFF), RoundedCornerShape(6.dp))
+        )
+
+        // 4. Mid Right (Warm amber cover)
+        Box(
+            modifier = Modifier
+                .offset(x = 24.dp, y = 2.dp)
+                .rotate(7f)
+                .size(58.dp)
+                .clip(RoundedCornerShape(6.dp))
+                .background(Brush.linearGradient(listOf(Color(0xFFCA6702), Color(0xFFBB3E03))))
+                .border(0.5.dp, Color(0x33FFFFFF), RoundedCornerShape(6.dp))
+        )
+
+        // 5. Center (Foreground - Dissect vibrant purple / magenta cover)
+        Box(
+            modifier = Modifier
+                .size(68.dp)
+                .clip(RoundedCornerShape(8.dp))
+                .background(
+                    Brush.radialGradient(
+                        colors = listOf(Color(0xFFE056FD), Color(0xFF6807F9), Color(0xFF130F40))
+                    )
+                )
+                .border(1.dp, Color(0x55FFFFFF), RoundedCornerShape(8.dp)),
+            contentAlignment = Alignment.Center
+        ) {
+            Canvas(modifier = Modifier.fillMaxSize()) {
+                val centerPt = this.center
+                drawCircle(
+                    color = Color(0x44FFAA00),
+                    radius = size.minDimension * 0.38f,
+                    style = androidx.compose.ui.graphics.drawscope.Stroke(width = 2.5f)
+                )
+                drawCircle(
+                    color = Color(0x5500FFFF),
+                    radius = size.minDimension * 0.26f,
+                    style = androidx.compose.ui.graphics.drawscope.Stroke(width = 2f)
+                )
+            }
+            Text(
+                text = "DISSECT",
+                color = Color.White,
+                fontSize = 8.sp,
+                fontWeight = FontWeight.Black,
+                letterSpacing = 0.5.sp
+            )
         }
     }
 }
