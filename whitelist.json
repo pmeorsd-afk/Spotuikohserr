@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 266,
-  "last_updated": "2026-10-08T19:37:34.286Z",
+  "version": 267,
+  "last_updated": "2026-10-08T19:37:57.007Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4kZ0qv0CBrq7KRhhNxz8UG",
+      "title": "יסמין",
+      "artist": "הפיל הכחול",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-08T19:37:57.007Z"
+    },
     {
       "id": "201btQ2Q0QqOqKuIHy2LWv",
       "title": "משהו חדש מתחיל",
