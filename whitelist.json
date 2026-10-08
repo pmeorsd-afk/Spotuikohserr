@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 245,
-  "last_updated": "2026-10-08T10:09:37.467Z",
+  "version": 246,
+  "last_updated": "2026-10-08T13:35:48.849Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7hRk7RQ4Xhhu3i2hiYQ7VP",
+      "title": "ותן בלבנו",
+      "artist": "Amir Dadon, בן צור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-08T13:35:48.849Z"
+    },
     {
       "id": "",
       "title": "ברוך השם הכל מעולה (Live)",
