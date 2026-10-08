@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 275,
-  "last_updated": "2026-10-08T19:55:41.499Z",
+  "version": 276,
+  "last_updated": "2026-10-08T19:55:45.237Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "שאריות של החיים",
       "artist": "Idan Raichel",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-08T19:55:41.499Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-08T19:55:45.237Z"
     },
     {
       "id": "4qSauJzB88rkLHr7pt1Bl7",
