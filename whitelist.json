@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 259,
-  "last_updated": "2026-10-08T18:21:57.566Z",
+  "version": 260,
+  "last_updated": "2026-10-08T18:22:00.939Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "סיגפו",
       "artist": "Beit Habubot, אמיר אטיאס",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-08T18:21:57.566Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-08T18:22:00.939Z"
     },
     {
       "id": "7C7dkdsNmKgvWS7rYfVK92",
