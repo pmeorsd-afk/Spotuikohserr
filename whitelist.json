@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 264,
-  "last_updated": "2026-10-08T19:25:46.893Z",
+  "version": 265,
+  "last_updated": "2026-10-08T19:37:31.060Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "201btQ2Q0QqOqKuIHy2LWv",
+      "title": "משהו חדש מתחיל",
+      "artist": "Danny Robas",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-08T19:37:31.060Z"
+    },
     {
       "id": "2Yfd4lEjv3Ah7lLHEAYX50",
       "title": "נגמר",
