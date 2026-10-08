@@ -421,7 +421,10 @@
   <script>
     async function fetchAnalytics() {
       try {
-        const res = await fetch('https://lingering-brook-93f6.orelgame156.workers.dev/api/analytics', { cache: 'no-store' });
+        const endpoint = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.endsWith('.loca.lt'))
+          ? '/api/analytics'
+          : 'https://lingering-brook-93f6.orelgame156.workers.dev/api/analytics';
+        const res = await fetch(endpoint, { cache: 'no-store' });
         if (!res.ok) return;
         const data = await res.json();
         if (data && data.totalUsers !== undefined) {
