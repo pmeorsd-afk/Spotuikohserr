@@ -1157,20 +1157,20 @@ function getDashboardHtml() {
       if (playing.length === 0) {
         feed.innerHTML = '<div class="empty-state">אין כרגע שירים מתנגנים בשידור חי ברגע זה</div>';
       } else {
-        feed.innerHTML = playing.map(p => \`
-          <div class="now-playing-card">
-            <div class="equalizer">
-              <div class="eq-bar"></div>
-              <div class="eq-bar"></div>
-              <div class="eq-bar"></div>
-            </div>
-            <div class="track-info">
-              <div class="track-title">\${escapeHtml(p.trackTitle)}</div>
-              <div class="track-artist">\${escapeHtml(p.artistName)}</div>
-              <div class="user-tag">\${escapeHtml(p.userId)} &bull; לפני \${p.lastSeenSecondsAgo} שניות &bull; צבר \${p.totalHoursListened} שעות</div>
-            </div>
-          </div>
-        \`).join('');
+        feed.innerHTML = playing.map(function(p) {
+          return '<div class="now-playing-card">' +
+            '<div class="equalizer">' +
+              '<div class="eq-bar"></div>' +
+              '<div class="eq-bar"></div>' +
+              '<div class="eq-bar"></div>' +
+            '</div>' +
+            '<div class="track-info">' +
+              '<div class="track-title">' + escapeHtml(p.trackTitle) + '</div>' +
+              '<div class="track-artist">' + escapeHtml(p.artistName) + '</div>' +
+              '<div class="user-tag">' + escapeHtml(p.userId) + ' &bull; לפני ' + p.lastSeenSecondsAgo + ' שניות &bull; צבר ' + p.totalHoursListened + ' שעות</div>' +
+            '</div>' +
+          '</div>';
+        }).join('');
       }
 
       const topTracks = data.topTracks || [];
@@ -1178,18 +1178,16 @@ function getDashboardHtml() {
       if (topTracks.length === 0) {
         tracksList.innerHTML = '<li class="empty-state">אין עדיין נתוני השמעות</li>';
       } else {
-        tracksList.innerHTML = topTracks.map((t, idx) => {
+        tracksList.innerHTML = topTracks.map(function(t, idx) {
           const rankClass = idx === 0 ? 'top1' : idx === 1 ? 'top2' : idx === 2 ? 'top3' : '';
-          return \`
-            <li class="chart-item">
-              <span class="chart-rank \${rankClass}">#\${idx + 1}</span>
-              <div class="chart-details">
-                <div class="chart-title">\${escapeHtml(t.title)}</div>
-                <div class="chart-sub">\${escapeHtml(t.artist)}</div>
-              </div>
-              <span class="chart-plays">\${t.count} השמעות</span>
-            </li>
-          \`;
+          return '<li class="chart-item">' +
+            '<span class="chart-rank ' + rankClass + '">#' + (idx + 1) + '</span>' +
+            '<div class="chart-details">' +
+              '<div class="chart-title">' + escapeHtml(t.title) + '</div>' +
+              '<div class="chart-sub">' + escapeHtml(t.artist) + '</div>' +
+            '</div>' +
+            '<span class="chart-plays">' + t.count + ' השמעות</span>' +
+          '</li>';
         }).join('');
       }
 
@@ -1198,17 +1196,15 @@ function getDashboardHtml() {
       if (topArtists.length === 0) {
         artistsList.innerHTML = '<li class="empty-state">אין עדיין נתוני אמנים</li>';
       } else {
-        artistsList.innerHTML = topArtists.map((a, idx) => {
+        artistsList.innerHTML = topArtists.map(function(a, idx) {
           const rankClass = idx === 0 ? 'top1' : idx === 1 ? 'top2' : idx === 2 ? 'top3' : '';
-          return \`
-            <li class="chart-item">
-              <span class="chart-rank \${rankClass}">#\${idx + 1}</span>
-              <div class="chart-details">
-                <div class="chart-title">\${escapeHtml(a.name)}</div>
-              </div>
-              <span class="chart-plays">\${a.count} השמעות</span>
-            </li>
-          \`;
+          return '<li class="chart-item">' +
+            '<span class="chart-rank ' + rankClass + '">#' + (idx + 1) + '</span>' +
+            '<div class="chart-details">' +
+              '<div class="chart-title">' + escapeHtml(a.name) + '</div>' +
+            '</div>' +
+            '<span class="chart-plays">' + a.count + ' השמעות</span>' +
+          '</li>';
         }).join('');
       }
     }
@@ -1227,6 +1223,6 @@ function getDashboardHtml() {
     setInterval(fetchAnalytics, 5000);
   </script>
 </body>
-</html>\`;
+</html>`;
 }
 
