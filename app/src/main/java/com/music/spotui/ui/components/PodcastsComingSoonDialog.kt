@@ -192,7 +192,7 @@ fun PodcastsComingSoonDialog(
 
                             // Title: Bold modern Spotify typography in Hebrew
                             Text(
-                                text = "פודקאסטים כשרים בקרוב",
+                                text = "מסך פודקאסט חדשני בקרוב",
                                 color = DialogTextWhite,
                                 fontSize = 22.sp,
                                 fontWeight = FontWeight.Bold,
@@ -215,7 +215,7 @@ fun PodcastsComingSoonDialog(
                             Spacer(modifier = Modifier.height(8.dp))
 
                             Text(
-                                text = "אלפי שיעורים תורניים, הרצאות מרתקות, סיפורים ותכנים איכותיים יחכו לכם ממש כאן בעדכון הקרוב של האפליקציה.",
+                                text = "אלפי שיעורים, הרצאות מרתקות, סיפורים ותכנים איכותיים יחכו לכם ממש כאן בעדכון הקרוב של האפליקציה.",
                                 color = DialogTextSecondary,
                                 fontSize = 13.5.sp,
                                 fontWeight = FontWeight.Normal,
@@ -456,11 +456,10 @@ private fun ComingSoonPillBadge() {
 private fun FeaturesRow() {
     Row(
         modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceEvenly,
+        horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterHorizontally),
         verticalAlignment = Alignment.CenterVertically
     ) {
         FeatureMiniChip(title = "שיעורים והרצאות")
-        FeatureMiniChip(title = "סינון מלא")
         FeatureMiniChip(title = "האזנה רציפה")
     }
 }

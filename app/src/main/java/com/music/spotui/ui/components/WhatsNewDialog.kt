@@ -222,7 +222,7 @@ fun WhatsNewDialog(
 
                                 WhatsNewItemRow(
                                     emoji = "🎙️",
-                                    title = "פודקאסטים כשרים",
+                                    title = "מסך פודקאסט חדשני",
                                     subtitle = "בקרוב באפליקציה!"
                                 )
 
