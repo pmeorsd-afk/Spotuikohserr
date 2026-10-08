@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 277,
-  "last_updated": "2026-10-08T19:59:15.418Z",
+  "version": 278,
+  "last_updated": "2026-10-08T19:59:18.833Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "נגד הרוח",
       "artist": "Amir Dadon",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-08T19:59:15.418Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-08T19:59:18.833Z"
     },
     {
       "id": "1VGHtOfjicgALZGihsjfs0",
