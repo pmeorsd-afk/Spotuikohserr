@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 272,
-  "last_updated": "2026-10-08T19:38:09.241Z",
+  "version": 273,
+  "last_updated": "2026-10-08T19:39:41.345Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4qSauJzB88rkLHr7pt1Bl7",
+      "title": "ילד של אבא",
+      "artist": "Mooki",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-08T19:39:41.345Z"
+    },
     {
       "id": "5w5QMf4ZqjDpL2HOgUyoJa",
       "title": "בית הבובות",
