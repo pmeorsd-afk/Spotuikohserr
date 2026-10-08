@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 267,
-  "last_updated": "2026-10-08T19:37:57.007Z",
+  "version": 268,
+  "last_updated": "2026-10-08T19:37:59.116Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1vBRipAlR5MO9jAaabbW7f",
+      "title": "שיר בעפרון",
+      "artist": "Beit Habubot, אמיר אטיאס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-08T19:37:59.116Z"
+    },
     {
       "id": "4kZ0qv0CBrq7KRhhNxz8UG",
       "title": "יסמין",
