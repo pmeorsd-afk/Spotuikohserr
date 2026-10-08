@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 261,
-  "last_updated": "2026-10-08T19:25:08.479Z",
+  "version": 262,
+  "last_updated": "2026-10-08T19:25:12.454Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "https://did.li/ikCaa\" שיעורי תורה אורן 2\" https://did.li/zv5Nf",
       "artist": "אורןאורן",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-08T19:25:08.479Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-08T19:25:12.454Z"
     },
     {
       "id": "6NMXueYXvUAKmDYISUehwy",
