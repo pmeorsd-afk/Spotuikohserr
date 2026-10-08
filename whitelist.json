@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 280,
-  "last_updated": "2026-10-08T20:14:27.829Z",
+  "version": 281,
+  "last_updated": "2026-10-08T20:33:16.446Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4UXS0LHX5tZFOBzmbmXGQm",
+      "title": "הימים עוברים",
+      "artist": "Avraham Tal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-08T20:33:16.446Z"
+    },
     {
       "id": "27Sd1OtzjDaGURaArp3ssz",
       "title": "לך אלי",
