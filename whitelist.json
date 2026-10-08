@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 281,
-  "last_updated": "2026-10-08T20:33:16.446Z",
+  "version": 282,
+  "last_updated": "2026-10-08T20:33:20.240Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "הימים עוברים",
       "artist": "Avraham Tal",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-08T20:33:16.446Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-08T20:33:20.240Z"
     },
     {
       "id": "27Sd1OtzjDaGURaArp3ssz",
