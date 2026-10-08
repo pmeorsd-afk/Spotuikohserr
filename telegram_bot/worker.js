@@ -1,3 +1,5 @@
+import { DurableObject } from "cloudflare:workers";
+
 // ==============================================================================
 // SpotUI Kosher - Cloudflare Worker (Production v3.1)
 // Real-time Telegram Webhook + GitHub Whitelist API
@@ -27,7 +29,7 @@
 // ==============================================================================
 
 const CONFIG = {
-  TELEGRAM_BOT_TOKEN: "YOUR_TELEGRAM_BOT_TOKEN",
+  TELEGRAM_BOT_TOKEN: "8800365444:AAH2W5JBJhrytzmthZMI1TlmzDTpNWnTlo4",
   TELEGRAM_CHANNEL_ID: "-1004491387106", // @spotifty_kosher
   GITHUB_TOKEN: "YOUR_GITHUB_TOKEN",
   GITHUB_REPO_OWNER: "pmeorsd-afk",
@@ -54,11 +56,603 @@ const telemetryStats = {
 };
 
 // ==============================================================================
+// PresenceDO — Durable Object for Live Presence & Hibernation-Safe Analytics
+// ==============================================================================
+export class PresenceDO extends DurableObject {
+  constructor(ctx, env) {
+    super(ctx, env);
+    this.sessions = new Map(); // sessionId -> { ws, ...attachment }
+    this.schemaInitialized = false;
+
+    // Reconstruction: Restore state from hibernated WebSockets
+    const appSockets = this.ctx.getWebSockets("app_client");
+    for (const ws of appSockets) {
+      try {
+        const session = ws.deserializeAttachment();
+        if (session && session.sessionId) {
+          this.sessions.set(session.sessionId, { ws, ...session });
+        }
+      } catch (e) {
+        console.error("PresenceDO: Failed deserializing attachment on wakeup:", e);
+      }
+    }
+  }
+
+  async fetch(request) {
+    const url = new URL(request.url);
+
+    if (request.headers.get("Upgrade") === "websocket") {
+      const pair = new WebSocketPair();
+      const [clientWs, serverWs] = Object.values(pair);
+
+      const isDashboard = url.pathname.includes("/dashboard");
+      const tag = isDashboard ? "dashboard" : "app_client";
+
+      this.ctx.acceptWebSocket(serverWs, [tag]);
+
+      if (isDashboard) {
+        serverWs.send(JSON.stringify({
+          type: "snapshot",
+          data: this.computeLiveSnapshot()
+        }));
+      }
+
+      return new Response(null, { status: 101, webSocket: clientWs });
+    }
+
+    if (url.pathname === "/api/analytics" || url.pathname === "/analytics" || url.pathname === "/snapshot") {
+      return jsonResponse(this.computeLiveSnapshot(), 200, {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        "X-Sync-Source": "presence-durable-object"
+      });
+    }
+
+    return new Response("Not found", { status: 404 });
+  }
+
+  async webSocketMessage(ws, message) {
+    let data;
+    try {
+      data = typeof message === "string" ? JSON.parse(message) : JSON.parse(new TextDecoder().decode(message));
+    } catch (e) {
+      console.error("PresenceDO: Invalid WS JSON message:", e);
+      return;
+    }
+
+    const type = data.type;
+    if (type === "hello") {
+      await this.handleClientHello(ws, data);
+    } else if (type === "heartbeat") {
+      await this.handleClientHeartbeat(ws, data);
+    } else if (type === "state_change") {
+      await this.handleClientStateChange(ws, data);
+    } else if (type === "bye") {
+      await this.handleClientBye(ws, data);
+    }
+  }
+
+  async handleClientHello(ws, data) {
+    const sessionId = String(data.sessionId || "").trim();
+    const userId = String(data.userId || "anonymous").trim();
+    if (!sessionId) return;
+
+    // Supersede old connection if reconnecting with the same sessionId
+    if (this.sessions.has(sessionId)) {
+      const existing = this.sessions.get(sessionId);
+      if (existing.ws !== ws) {
+        try {
+          existing.ws.serializeAttachment(null);
+          existing.ws.close(1000, "superseded");
+        } catch (e) {}
+      }
+    }
+
+    const now = Date.now();
+    const attachment = {
+      role: "app_client",
+      sessionId,
+      userId,
+      appVersion: String(data.appVersion || "1.0"),
+      state: data.state || "ACTIVE_IN_APP_IDLE",
+      currentTrackKey: null,
+      playbackInstanceId: data.playbackInstanceId || null,
+      trackTitle: null,
+      artistName: null,
+      mediaType: "track",
+      accumulatedTrackSeconds: 0,
+      listeningStartedAt: 0,
+      lastAccountingAt: now,
+      positionMs: Number(data.positionMs) || 0,
+      lastSeen: now,
+      expiresAt: now + 40000,
+      connectionEpoch: now
+    };
+
+    ws.serializeAttachment(attachment);
+    this.sessions.set(sessionId, { ws, ...attachment });
+
+    this.recordDailyUser(userId);
+    await this.ensureAlarmScheduled();
+
+    this.broadcastToDashboards({
+      type: "presence_delta",
+      event: "user_joined",
+      sessionId,
+      userId: this.maskUserId(userId),
+      state: attachment.state
+    });
+  }
+
+  async handleClientHeartbeat(ws, data) {
+    let att = null;
+    try {
+      att = ws.deserializeAttachment();
+    } catch (e) {}
+
+    if (!att || !att.sessionId) {
+      const sId = String(data.sessionId || "").trim();
+      att = this.sessions.get(sId) || {
+        role: "app_client",
+        sessionId: sId || crypto.randomUUID(),
+        userId: String(data.userId || "anonymous"),
+        state: data.state || "ACTIVE_IN_APP_IDLE",
+        accumulatedTrackSeconds: 0,
+        lastAccountingAt: Date.now()
+      };
+    }
+
+    const now = Date.now();
+    att.lastSeen = now;
+    att.expiresAt = now + 40000;
+    if (data.positionMs !== undefined) {
+      att.positionMs = Number(data.positionMs) || 0;
+    }
+    if (data.state) {
+      att.state = data.state;
+    }
+
+    const isListening = (att.state === "ACTIVE_IN_APP_PLAYING" || att.state === "BACKGROUND_LISTENING");
+    if (isListening) {
+      const elapsed = Math.min(30, Math.max(0, (now - (att.lastAccountingAt || now)) / 1000));
+      att.accumulatedTrackSeconds = (att.accumulatedTrackSeconds || 0) + elapsed;
+    }
+    att.lastAccountingAt = now;
+
+    try {
+      ws.serializeAttachment(att);
+    } catch (e) {}
+    this.sessions.set(att.sessionId, { ws, ...att });
+  }
+
+  async handleClientStateChange(ws, data) {
+    let att = null;
+    try {
+      att = ws.deserializeAttachment();
+    } catch (e) {}
+
+    if (!att || !att.sessionId) {
+      const sId = String(data.sessionId || "").trim();
+      att = this.sessions.get(sId) || {
+        role: "app_client",
+        sessionId: sId || crypto.randomUUID(),
+        userId: String(data.userId || "anonymous"),
+        accumulatedTrackSeconds: 0,
+        lastAccountingAt: Date.now()
+      };
+    }
+
+    const now = Date.now();
+    const previousState = att.state;
+    att.state = data.state || att.state;
+    att.lastSeen = now;
+    att.expiresAt = now + 40000;
+    if (data.positionMs !== undefined) {
+      att.positionMs = Number(data.positionMs) || 0;
+    }
+
+    const track = data.track;
+    if (track && track.title && track.artist) {
+      const mediaType = track.mediaType || (track.isPodcast ? "episode" : "track");
+      const spotifyId = track.spotifyId || "";
+      const contentKey = track.contentKey || (spotifyId ? `${mediaType}:${spotifyId}` : `${mediaType}:${this.simpleHash(track.title + " - " + track.artist)}`);
+
+      if (contentKey !== att.currentTrackKey) {
+        this.flushTrackListening(att);
+
+        att.currentTrackKey = contentKey;
+        att.trackTitle = track.title;
+        att.artistName = track.artist;
+        att.mediaType = mediaType;
+        att.accumulatedTrackSeconds = 0;
+        att.listeningStartedAt = now;
+        att.lastAccountingAt = now;
+
+        const pInstanceId = data.playbackInstanceId || att.playbackInstanceId || null;
+        this.recordTrackPlay(contentKey, track.title, track.artist, mediaType, pInstanceId, att.userId);
+      }
+    } else if (!data.isPlaying) {
+      this.flushTrackListening(att);
+      att.lastAccountingAt = now;
+    }
+
+    try {
+      ws.serializeAttachment(att);
+    } catch (e) {}
+    this.sessions.set(att.sessionId, { ws, ...att });
+
+    await this.ensureAlarmScheduled();
+
+    this.broadcastToDashboards({
+      type: "presence_delta",
+      event: "state_changed",
+      sessionId: att.sessionId,
+      userId: this.maskUserId(att.userId),
+      previousState,
+      newState: att.state,
+      trackTitle: att.trackTitle,
+      artistName: att.artistName,
+      isPlaying: (att.state === "ACTIVE_IN_APP_PLAYING" || att.state === "BACKGROUND_LISTENING")
+    });
+  }
+
+  async handleClientBye(ws, data) {
+    let att = null;
+    try {
+      att = ws.deserializeAttachment();
+    } catch (e) {}
+
+    const sessionId = (att && att.sessionId) || String(data.sessionId || "");
+    if (sessionId && this.sessions.has(sessionId)) {
+      const session = this.sessions.get(sessionId);
+      // Ownership Guard: verify this socket is still the active owner of this session
+      if (session.ws !== ws || (att && att.connectionEpoch && session.connectionEpoch !== att.connectionEpoch)) {
+        return; // Stale or superseded socket!
+      }
+      this.flushTrackListening(session);
+      this.sessions.delete(sessionId);
+
+      this.broadcastToDashboards({
+        type: "presence_delta",
+        event: "user_left",
+        sessionId,
+        userId: this.maskUserId(session.userId),
+        reason: "bye"
+      });
+    }
+
+    try {
+      ws.close(1000, "user_bye");
+    } catch (e) {}
+  }
+
+  async webSocketClose(ws, code, reason, wasClean) {
+    let att = null;
+    try {
+      att = ws.deserializeAttachment();
+    } catch (e) {}
+
+    if (att && att.sessionId && this.sessions.has(att.sessionId)) {
+      const session = this.sessions.get(att.sessionId);
+      // Ownership Guard: verify this socket is still the active owner of this session
+      if (session.ws !== ws || (att.connectionEpoch && session.connectionEpoch !== att.connectionEpoch)) {
+        return; // Stale or superseded socket!
+      }
+      this.flushTrackListening(session);
+      this.sessions.delete(att.sessionId);
+
+      this.broadcastToDashboards({
+        type: "presence_delta",
+        event: "user_left",
+        sessionId: att.sessionId,
+        userId: this.maskUserId(session.userId),
+        reason: "closed"
+      });
+    }
+  }
+
+  async alarm() {
+    const now = Date.now();
+    let anyExpired = false;
+    let minExpiresAt = Infinity;
+
+    for (const [sessionId, session] of this.sessions.entries()) {
+      if (now >= session.expiresAt) {
+        anyExpired = true;
+        try {
+          session.ws.close(1000, "lease_expired");
+        } catch (e) {}
+
+        this.flushTrackListening(session);
+        this.sessions.delete(sessionId);
+
+        this.broadcastToDashboards({
+          type: "presence_delta",
+          event: "user_left",
+          sessionId,
+          userId: this.maskUserId(session.userId),
+          reason: "lease_expired"
+        });
+      } else {
+        if (session.expiresAt < minExpiresAt) {
+          minExpiresAt = session.expiresAt;
+        }
+      }
+    }
+
+    if (anyExpired) {
+      this.broadcastSnapshotToDashboards();
+    }
+
+    if (this.sessions.size > 0 && minExpiresAt !== Infinity) {
+      await this.ctx.storage.setAlarm(Math.max(Date.now() + 1000, minExpiresAt));
+    }
+  }
+
+  maskUserId(userId) {
+    const str = String(userId || "");
+    return "משתמש " + (str.length > 4 ? str.slice(-4) : str);
+  }
+
+  simpleHash(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = ((hash << 5) - hash) + str.charCodeAt(i);
+      hash |= 0;
+    }
+    return Math.abs(hash).toString(36);
+  }
+
+  async ensureAlarmScheduled() {
+    try {
+      const current = await this.ctx.storage.getAlarm();
+      if (!current && this.sessions.size > 0) {
+        let minExpiresAt = Infinity;
+        for (const session of this.sessions.values()) {
+          if (session.expiresAt < minExpiresAt) {
+            minExpiresAt = session.expiresAt;
+          }
+        }
+        if (minExpiresAt !== Infinity) {
+          await this.ctx.storage.setAlarm(Math.max(Date.now() + 1000, minExpiresAt));
+        }
+      }
+    } catch (e) {
+      console.error("PresenceDO: ensureAlarmScheduled error:", e);
+    }
+  }
+
+  ensureSqliteSchema() {
+    if (this.schemaInitialized) return;
+    try {
+      this.ctx.storage.sql.exec(`
+        CREATE TABLE IF NOT EXISTS daily_users (
+          day_key TEXT NOT NULL,
+          user_id TEXT NOT NULL,
+          first_seen INTEGER NOT NULL,
+          PRIMARY KEY(day_key, user_id)
+        );
+        CREATE TABLE IF NOT EXISTS daily_analytics (
+          day_key TEXT PRIMARY KEY,
+          total_listening_seconds INTEGER DEFAULT 0,
+          updated_at INTEGER
+        );
+        CREATE TABLE IF NOT EXISTS top_tracks (
+          content_key TEXT PRIMARY KEY,
+          title TEXT NOT NULL,
+          artist TEXT NOT NULL,
+          media_type TEXT DEFAULT 'track',
+          play_count INTEGER DEFAULT 0,
+          total_seconds INTEGER DEFAULT 0,
+          last_played INTEGER
+        );
+        CREATE TABLE IF NOT EXISTS top_artists (
+          artist_name TEXT PRIMARY KEY,
+          play_count INTEGER DEFAULT 0,
+          last_played INTEGER
+        );
+        CREATE TABLE IF NOT EXISTS playback_ledger (
+          playback_instance_id TEXT PRIMARY KEY,
+          content_key TEXT NOT NULL,
+          user_id TEXT NOT NULL,
+          started_at INTEGER NOT NULL
+        );
+      `);
+      this.schemaInitialized = true;
+    } catch (e) {
+      console.error("PresenceDO: ensureSqliteSchema error:", e);
+    }
+  }
+
+  recordDailyUser(userId) {
+    try {
+      this.ensureSqliteSchema();
+      const dayKey = new Date().toISOString().slice(0, 10);
+      this.ctx.storage.sql.exec(
+        `INSERT OR IGNORE INTO daily_users (day_key, user_id, first_seen) VALUES (?, ?, ?);`,
+        dayKey, userId, Date.now()
+      );
+    } catch (e) {
+      console.error("PresenceDO: recordDailyUser error:", e);
+    }
+  }
+
+  recordTrackPlay(contentKey, title, artist, mediaType, playbackInstanceId, userId) {
+    try {
+      this.ensureSqliteSchema();
+      const now = Date.now();
+      let isNewPlay = true;
+
+      if (playbackInstanceId) {
+        const ledgerRes = this.ctx.storage.sql.exec(`
+          INSERT OR IGNORE INTO playback_ledger (playback_instance_id, content_key, user_id, started_at)
+          VALUES (?, ?, ?, ?);
+        `, playbackInstanceId, contentKey, userId || "anonymous", now);
+
+        if (ledgerRes.rowsWritten === 0) {
+          isNewPlay = false; // Already counted! Idempotent across socket close & reconnects
+        }
+      }
+
+      if (isNewPlay) {
+        this.ctx.storage.sql.exec(`
+          INSERT INTO top_tracks (content_key, title, artist, media_type, play_count, total_seconds, last_played)
+          VALUES (?, ?, ?, ?, 1, 0, ?)
+          ON CONFLICT(content_key) DO UPDATE SET
+            play_count = play_count + 1,
+            last_played = ?;
+        `, contentKey, title, artist, mediaType || "track", now, now);
+
+        if (artist) {
+          this.ctx.storage.sql.exec(`
+            INSERT INTO top_artists (artist_name, play_count, last_played)
+            VALUES (?, 1, ?)
+            ON CONFLICT(artist_name) DO UPDATE SET
+              play_count = play_count + 1,
+              last_played = ?;
+          `, artist, now, now);
+        }
+      }
+    } catch (e) {
+      console.error("PresenceDO: recordTrackPlay error:", e);
+    }
+  }
+
+  flushTrackListening(session) {
+    if (!session || !session.accumulatedTrackSeconds || session.accumulatedTrackSeconds <= 0) return;
+    const seconds = Math.round(session.accumulatedTrackSeconds);
+    session.accumulatedTrackSeconds = 0;
+    try {
+      this.ensureSqliteSchema();
+      const now = Date.now();
+      const dayKey = new Date().toISOString().slice(0, 10);
+
+      this.ctx.storage.sql.exec(`
+        INSERT INTO daily_analytics (day_key, total_listening_seconds, updated_at)
+        VALUES (?, ?, ?)
+        ON CONFLICT(day_key) DO UPDATE SET
+          total_listening_seconds = total_listening_seconds + ?,
+          updated_at = ?;
+      `, dayKey, seconds, now, seconds, now);
+
+      if (session.currentTrackKey) {
+        this.ctx.storage.sql.exec(`
+          UPDATE top_tracks SET total_seconds = total_seconds + ? WHERE content_key = ?;
+        `, seconds, session.currentTrackKey);
+      }
+    } catch (e) {
+      console.error("PresenceDO: flushTrackListening error:", e);
+    }
+  }
+
+  computeLiveSnapshot() {
+    const now = Date.now();
+    const dayKey = new Date().toISOString().slice(0, 10);
+    const activeList = [];
+    let onlineCount = 0;
+    let activeListenersCount = 0;
+
+    for (const s of this.sessions.values()) {
+      if (now <= s.expiresAt) {
+        onlineCount++;
+        const isListening = (s.state === "ACTIVE_IN_APP_PLAYING" || s.state === "BACKGROUND_LISTENING");
+        if (isListening) activeListenersCount++;
+
+        activeList.push({
+          sessionId: s.sessionId,
+          userId: this.maskUserId(s.userId),
+          rawUserId: s.userId,
+          state: s.state,
+          isPlaying: isListening,
+          trackTitle: s.trackTitle || "ללא שיר כרגע",
+          artistName: s.artistName || "",
+          contentKey: s.currentTrackKey,
+          positionMs: s.positionMs || 0,
+          expiresAt: s.expiresAt,
+          lastSeenSecondsAgo: Math.max(0, Math.round((now - s.lastSeen) / 1000))
+        });
+      }
+    }
+
+    let totalListeningSeconds = 0;
+    let uniqueUsersToday = Math.max(onlineCount, 1);
+    let topTracksList = [];
+    let topArtistsList = [];
+
+    try {
+      this.ensureSqliteSchema();
+      const dayRow = this.ctx.storage.sql.exec(
+        `SELECT total_listening_seconds FROM daily_analytics WHERE day_key = ?`, dayKey
+      ).toArray()[0];
+      if (dayRow) totalListeningSeconds = dayRow.total_listening_seconds || 0;
+
+      const userCountRow = this.ctx.storage.sql.exec(
+        `SELECT COUNT(*) as count FROM daily_users WHERE day_key = ?`, dayKey
+      ).toArray()[0];
+      if (userCountRow && userCountRow.count > 0) uniqueUsersToday = userCountRow.count;
+
+      const tracksCursor = this.ctx.storage.sql.exec(
+        `SELECT content_key, title, artist, play_count FROM top_tracks ORDER BY play_count DESC LIMIT 10`
+      );
+      for (const row of tracksCursor) {
+        topTracksList.push({ contentKey: row.content_key, title: row.title, artist: row.artist, count: row.play_count });
+      }
+
+      const artistsCursor = this.ctx.storage.sql.exec(
+        `SELECT artist_name as name, play_count as count FROM top_artists ORDER BY play_count DESC LIMIT 10`
+      );
+      for (const row of artistsCursor) {
+        topArtistsList.push({ name: row.name, count: row.count });
+      }
+    } catch (e) {
+      console.error("PresenceDO: SQLite query error:", e);
+    }
+
+    const totalHours = Math.round((totalListeningSeconds / 3600) * 10) / 10;
+    const avgHours = Math.round((totalHours / Math.max(uniqueUsersToday, 1)) * 10) / 10;
+
+    return {
+      onlineUsers: onlineCount,
+      activeListeners: activeListenersCount,
+      totalUsers: uniqueUsersToday,
+      totalListeningHours: totalHours,
+      avgListeningHoursPerUser: avgHours,
+      currentlyPlaying: activeList.filter(u => u.isPlaying && u.trackTitle !== "ללא שיר כרגע"),
+      activeSessions: activeList,
+      topTracks: topTracksList,
+      topArtists: topArtistsList,
+      updatedAt: new Date().toISOString()
+    };
+  }
+
+  broadcastToDashboards(payload) {
+    const msg = JSON.stringify(payload);
+    for (const ws of this.ctx.getWebSockets("dashboard")) {
+      try {
+        ws.send(msg);
+      } catch (e) {}
+    }
+  }
+
+  broadcastSnapshotToDashboards() {
+    const snap = this.computeLiveSnapshot();
+    this.broadcastToDashboards({ type: "snapshot", data: snap });
+  }
+}
+
+
+// ==============================================================================
 // Worker Entry Point
 // ==============================================================================
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+
+    if (env) {
+      if (env.TELEGRAM_BOT_TOKEN) CONFIG.TELEGRAM_BOT_TOKEN = env.TELEGRAM_BOT_TOKEN;
+      if (env.TELEGRAM_CHANNEL_ID) CONFIG.TELEGRAM_CHANNEL_ID = env.TELEGRAM_CHANNEL_ID;
+      if (env.GITHUB_TOKEN) CONFIG.GITHUB_TOKEN = env.GITHUB_TOKEN;
+      if (env.ADMIN_API_KEY) CONFIG.ADMIN_API_KEY = env.ADMIN_API_KEY;
+    }
 
     // --------------------------------------------------------------------------
     // 0. CORS Preflight
@@ -76,6 +670,18 @@ export default {
     }
 
     // --------------------------------------------------------------------------
+    // 0.1 WebSocket Upgrade Routes עבור Live Presence ו-Dashboard
+    // --------------------------------------------------------------------------
+    if (url.pathname === "/ws/presence" || url.pathname === "/ws/dashboard") {
+      if (env && env.PRESENCE_DO) {
+        const doId = env.PRESENCE_DO.idFromName("global_presence");
+        const stub = env.PRESENCE_DO.get(doId);
+        return stub.fetch(request);
+      }
+      return new Response("PRESENCE_DO binding not configured in environment", { status: 503 });
+    }
+
+    // --------------------------------------------------------------------------
     // 1. לוח מחוונים וסטטיסטיקות שידור חי (Live Analytics Dashboard)
     // --------------------------------------------------------------------------
     if (request.method === "GET" && (url.pathname === "/dashboard" || url.pathname === "/live")) {
@@ -83,6 +689,11 @@ export default {
     }
 
     if (request.method === "GET" && (url.pathname === "/api/analytics" || url.pathname === "/analytics")) {
+      if (env && env.PRESENCE_DO) {
+        const doId = env.PRESENCE_DO.idFromName("global_presence");
+        const stub = env.PRESENCE_DO.get(doId);
+        return stub.fetch(request);
+      }
       return handleGetAnalytics(env);
     }
 
@@ -143,6 +754,19 @@ export default {
       if (update.callback_query) {
         // עונים לטלגרם ב-20ms בלבד, וממשיכים את העדכון ברקע דרך waitUntil
         ctx.waitUntil(handleTelegramCallback(update.callback_query));
+        return new Response("OK", { status: 200 });
+      }
+
+      if (update.message && update.message.text) {
+        const msgText = update.message.text.trim();
+        const msgChatId = update.message.chat.id;
+        if (msgText.startsWith("/start")) {
+          ctx.waitUntil(sendTelegram("sendMessage", {
+            chat_id: msgChatId,
+            text: "👋 שלום! זהו בוט הפיקוח והאישורים של *ספוטיפיי כשר*.\n\nבקשות להיתר תמונות שירים ואמנים מועברות ישירות לערוץ הבדיקה.\nמנהלים יכולים לאשר או להסיר פריטים בלחיצה על הכפתורים שבערוץ.",
+            parse_mode: "Markdown"
+          }));
+        }
         return new Response("OK", { status: 200 });
       }
 
@@ -262,6 +886,11 @@ function whitelistResponse(whitelist, { cacheSource, requestId, stale = false })
 }
 
 // ==============================================================================
+// מניעת לחיצות כפולות (Deduplication Set)
+// ==============================================================================
+const callbackClaimed = new Set();
+
+// ==============================================================================
 // טיפול בלחיצה בטלגרם (רץ ברקע דרך waitUntil)
 // ==============================================================================
 async function handleTelegramCallback(query) {
@@ -272,7 +901,7 @@ async function handleTelegramCallback(query) {
   const chatId = msg.chat.id;
   const msgId = msg.message_id;
   const data = query.data || "";
-  const text = msg.text || "";
+  const text = msg.text || msg.caption || "";
   const from = query.from || {};
   const userMention = from.username
     ? `@${from.username}`
@@ -285,6 +914,15 @@ async function handleTelegramCallback(query) {
   }
   callbackClaimed.add(queryId);
   if (callbackClaimed.size > 500) callbackClaimed.clear();
+
+  if (data === "noop") {
+    await sendTelegram("answerCallbackQuery", {
+      callback_query_id: queryId,
+      text: "⏳ הפעולה כבר מתבצעת כעת...",
+      show_alert: false
+    });
+    return;
+  }
 
   const isApproveArtist = data.startsWith("appr:art");
   const isApproveTrack  = data.startsWith("appr:trk");
@@ -302,86 +940,100 @@ async function handleTelegramCallback(query) {
 
   const isApprove = isApproveArtist || isApproveTrack;
 
-  // 1. Fast Telegram ACK (מכבה את גלגל הטעינה בטלגרם בתוך 20ms!)
-  await sendTelegram("answerCallbackQuery", {
-    callback_query_id: queryId,
-    text: isApprove ? "⏳ מאשר ומוסיף לרשימה..." : "⏳ מסיר מרשימת ההיתר...",
-    show_alert: false
-  });
-
-  // חילוץ פרטים
-  const parts = data.split(":");
-  let spotifyId = parts.length >= 3 ? parts[2].trim() : "";
-  let artistName = "";
-  let trackTitle = "";
-
-  const artistMatch = text.match(/(?:אמן|Artist):\s*([^\n\r*]+)/i);
-  if (artistMatch) artistName = artistMatch[1].trim();
-
-  const trackMatch = text.match(/(?:שיר|Track):\s*([^\n\r*]+)/i);
-  if (trackMatch) trackTitle = trackMatch[1].trim();
-
-  const idMatch = text.match(/(?:מזהה ספוטיפיי|ID):\s*`?([a-zA-Z0-9]+)`?/i);
-  if (!spotifyId && idMatch) spotifyId = idMatch[1].trim();
-
-  const action = isApproveArtist
-    ? "approve_artist"
-    : isRemoveArtist
-    ? "block_artist"
-    : isApproveTrack
-    ? "approve_track"
-    : "block_track";
-
-  // 2. הסרת כפתורי הפעולה ועדכון ההודעה בטלגרם (<200ms)
-  const originalKeyboard = (msg.reply_markup && msg.reply_markup.inline_keyboard) || [];
-  const urlButtons = extractUrlButtons(originalKeyboard);
-
-  await sendTelegram("editMessageReplyMarkup", {
-    chat_id: chatId,
-    message_id: msgId,
-    reply_markup: { inline_keyboard: urlButtons }
-  });
-
-  const actionStatusText = isApprove
-    ? `✅ *אושר ונוסף לרשימה הכשרה על ידי ${userMention}!*`
-    : `❌ *הוסר מרשימת ההיתר ונחסם על ידי ${userMention}!*`;
-
-  const updatedText = `${text}\n\n━━━━━━━━━━━━━━━━━━━━\n${actionStatusText}`;
-  await sendTelegram("editMessageText", {
-    chat_id: chatId,
-    message_id: msgId,
-    text: updatedText,
-    parse_mode: "Markdown",
-    reply_markup: { inline_keyboard: urlButtons }
-  });
-
-  // 3. עדכון ב-GitHub
   try {
-    await updateGitHubWhitelistWithRetry({
-      action,
-      spotifyId,
-      artistName,
-      trackTitle,
-      userMention
+    // 1. Fast Telegram ACK (מכבה את גלגל הטעינה בטלגרם בתוך 20ms!)
+    await sendTelegram("answerCallbackQuery", {
+      callback_query_id: queryId,
+      text: isApprove ? "⏳ מאשר ומוסיף לרשימה..." : "⏳ מסיר מרשימת ההיתר...",
+      show_alert: false
     });
 
-    // 4. סנכרון ל-Google Apps Script עבור מכשירים ישנים
-    if (CONFIG.GAS_SYNC_URL) {
-      try {
-        const syncUrl = `${CONFIG.GAS_SYNC_URL}?action=${encodeURIComponent(action)}&id=${encodeURIComponent(spotifyId)}&name=${encodeURIComponent(artistName)}&title=${encodeURIComponent(trackTitle)}&token=${encodeURIComponent(CONFIG.ADMIN_API_KEY)}`;
-        await fetch(syncUrl).catch(e => console.error("GAS sync error:", e));
-      } catch (gasErr) {
-        console.error("GAS sync trigger error:", gasErr);
-      }
-    }
-  } catch (err) {
-    console.error("GitHub update failed:", err);
-    await sendTelegram("editMessageText", {
+    // חילוץ פרטים
+    const parts = data.split(":");
+    let spotifyId = parts.length >= 3 ? parts[2].trim() : "";
+    let artistName = "";
+    let trackTitle = "";
+
+    const artistMatch = text.match(/(?:אמן|Artist):\s*([^\n\r*]+)/i);
+    if (artistMatch) artistName = artistMatch[1].trim();
+
+    const trackMatch = text.match(/(?:שיר|Track):\s*([^\n\r*]+)/i);
+    if (trackMatch) trackTitle = trackMatch[1].trim();
+
+    const idMatch = text.match(/(?:מזהה ספוטיפיי|ID):\s*`?([a-zA-Z0-9]+)`?/i);
+    if (!spotifyId && idMatch) spotifyId = idMatch[1].trim();
+
+    const action = isApproveArtist
+      ? "approve_artist"
+      : isRemoveArtist
+      ? "block_artist"
+      : isApproveTrack
+      ? "approve_track"
+      : "block_track";
+
+    // 2. הסרת כפתורי הפעולה ועדכון ההודעה בטלגרם (<200ms)
+    const originalKeyboard = (msg.reply_markup && msg.reply_markup.inline_keyboard) || [];
+    const urlButtons = extractUrlButtons(originalKeyboard);
+
+    await sendTelegram("editMessageReplyMarkup", {
       chat_id: chatId,
       message_id: msgId,
-      text: `${text}\n\n❌ *שגיאה בעדכון ב-GitHub: ${escapeMarkdown(String(err?.message || err))}*`,
-      reply_markup: { inline_keyboard: originalKeyboard }
+      reply_markup: { inline_keyboard: urlButtons }
     });
+
+    const actionStatusText = isApprove
+      ? `✅ *אושר ונוסף לרשימה הכשרה על ידי ${userMention}!*`
+      : `❌ *הוסר מרשימת ההיתר ונחסם על ידי ${userMention}!*`;
+
+    const updatedText = `${text}\n\n━━━━━━━━━━━━━━━━━━━━\n${actionStatusText}`;
+    const isCaption = !msg.text && Boolean(msg.caption);
+    const editMethod = isCaption ? "editMessageCaption" : "editMessageText";
+
+    await sendTelegram(editMethod, {
+      chat_id: chatId,
+      message_id: msgId,
+      [isCaption ? "caption" : "text"]: updatedText,
+      parse_mode: "Markdown",
+      reply_markup: { inline_keyboard: urlButtons }
+    });
+
+    // 3. עדכון ב-GitHub
+    try {
+      await updateGitHubWhitelistWithRetry({
+        action,
+        spotifyId,
+        artistName,
+        trackTitle,
+        userMention
+      });
+
+      // 4. סנכרון ל-Google Apps Script עבור מכשירים ישנים
+      if (CONFIG.GAS_SYNC_URL) {
+        try {
+          const syncUrl = `${CONFIG.GAS_SYNC_URL}?action=${encodeURIComponent(action)}&id=${encodeURIComponent(spotifyId)}&name=${encodeURIComponent(artistName)}&title=${encodeURIComponent(trackTitle)}&token=${encodeURIComponent(CONFIG.ADMIN_API_KEY)}`;
+          await fetch(syncUrl).catch(e => console.error("GAS sync error:", e));
+        } catch (gasErr) {
+          console.error("GAS sync trigger error:", gasErr);
+        }
+      }
+    } catch (err) {
+      console.error("GitHub update failed:", err);
+      await sendTelegram(editMethod, {
+        chat_id: chatId,
+        message_id: msgId,
+        [isCaption ? "caption" : "text"]: `${text}\n\n❌ *שגיאה בעדכון ב-GitHub: ${escapeMarkdown(String(err?.message || err))}*`,
+        reply_markup: { inline_keyboard: originalKeyboard }
+      });
+    }
+  } catch (fatalErr) {
+    console.error("Fatal error in handleTelegramCallback:", fatalErr);
+    try {
+      await sendTelegram("answerCallbackQuery", {
+        callback_query_id: queryId,
+        text: `❌ שגיאה: ${fatalErr?.message || fatalErr}`,
+        show_alert: true
+      });
+    } catch (_) {}
   }
 }
 
@@ -490,14 +1142,22 @@ async function sendTelegram(method, payload) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
     });
-    if (!res.ok && payload.parse_mode) {
-      const retryPayload = { ...payload };
-      delete retryPayload.parse_mode;
-      await fetch(`https://api.telegram.org/bot${CONFIG.TELEGRAM_BOT_TOKEN}/${method}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(retryPayload)
-      });
+    if (!res.ok) {
+      const errText = await res.text();
+      console.error(`Telegram ${method} failed (${res.status}): ${errText}`);
+      if (payload.parse_mode) {
+        const retryPayload = { ...payload };
+        delete retryPayload.parse_mode;
+        const retryRes = await fetch(`https://api.telegram.org/bot${CONFIG.TELEGRAM_BOT_TOKEN}/${method}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(retryPayload)
+        });
+        if (!retryRes.ok) {
+          const retryErr = await retryRes.text();
+          console.error(`Telegram ${method} retry without parse_mode failed (${retryRes.status}): ${retryErr}`);
+        }
+      }
     }
   } catch (e) {
     console.error(`Telegram ${method} error:`, e);
@@ -1255,8 +1915,68 @@ function getDashboardHtml() {
         .replace(/'/g, '&#039;');
     }
 
+    let ws = null;
+    let pollInterval = null;
+
+    function connectDashboardWebSocket() {
+      const isSecure = window.location.protocol === 'https:';
+      const wsProtocol = isSecure ? 'wss:' : 'ws:';
+      const wsUrl = wsProtocol + '//' + window.location.host + '/ws/dashboard';
+
+      try {
+        ws = new WebSocket(wsUrl);
+
+        ws.onopen = function() {
+          console.log('Connected to Presence WebSocket');
+          const badge = document.getElementById('liveStatusText');
+          if (badge) badge.textContent = 'שידור חי (חיבור WebSocket Push ללא השהיה ⚡)';
+          if (pollInterval) {
+            clearInterval(pollInterval);
+            pollInterval = null;
+          }
+        };
+
+        ws.onmessage = function(event) {
+          try {
+            const msg = JSON.parse(event.data);
+            if (msg.type === 'snapshot' && msg.data) {
+              renderData(msg.data);
+            } else if (msg.type === 'presence_delta') {
+              fetchAnalytics();
+            }
+          } catch (e) {
+            console.error('Error handling WS message:', e);
+          }
+        };
+
+        ws.onclose = function() {
+          console.log('WebSocket closed, attempting reconnect in 3s...');
+          const badge = document.getElementById('liveStatusText');
+          if (badge) badge.textContent = 'חיבור מחדש... (Fallback Polling)';
+          startFallbackPolling();
+          setTimeout(connectDashboardWebSocket, 3000);
+        };
+
+        ws.onerror = function(err) {
+          console.error('WebSocket error:', err);
+          ws.close();
+        };
+      } catch (e) {
+        console.error('WebSocket not supported or failed to init:', e);
+        startFallbackPolling();
+      }
+    }
+
+    function startFallbackPolling() {
+      if (!pollInterval) {
+        fetchAnalytics();
+        pollInterval = setInterval(fetchAnalytics, 5000);
+      }
+    }
+
+    // Initialize: First fetch for immediate display, then connect live WebSocket
     fetchAnalytics();
-    setInterval(fetchAnalytics, 5000);
+    connectDashboardWebSocket();
   </script>
 </body>
 </html>`;

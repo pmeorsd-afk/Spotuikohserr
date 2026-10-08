@@ -111,6 +111,7 @@ class PlaybackService : MediaLibraryService() {
                 // Reflect the web player's real play/pause state into the in-app UI
                 // so the on-screen icon matches after the notification's pause.
                 currentSongState.updatePlayingState(SpotifyWebPlayer.isPlaying)
+                com.music.spotui.util.PresenceCoordinator.onPlaybackStateChanged(SpotifyWebPlayer.isPlaying)
             }
         }
     }
@@ -537,6 +538,7 @@ class PlaybackService : MediaLibraryService() {
     }
 
     override fun onDestroy() {
+        com.music.spotui.util.PresenceCoordinator.onPlaybackServiceDestroyed()
         SongPlayer.setOnTrackEndedListener(null)
         serviceScope.cancel()
         SongPlayer.onPlayerSwapped = null

@@ -123,6 +123,13 @@ fun HomeScreen(navController: NavController){
     val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
 
     var menuSong by remember { mutableStateOf<SongsModel?>(null) }
+    var showPodcastsComingSoonDialog by remember { mutableStateOf(false) }
+
+    com.music.spotui.ui.components.PodcastsComingSoonDialog(
+        showDialog = showPodcastsComingSoonDialog,
+        onDismiss = { showPodcastsComingSoonDialog = false }
+    )
+
     menuSong?.let { sel ->
         com.music.spotui.ui.components.SongOptionsSheet(
             song = sel,
@@ -169,7 +176,13 @@ fun HomeScreen(navController: NavController){
                     navController = navController,
                     feed = feed ?: com.music.spotui.data.entity.HomeFeedModel(topGrid = emptyList(), sections = emptyList()),
                     currentFilter = currentFilter,
-                    onFilterSelected = { homeViewModel.setFilter(it) },
+                    onFilterSelected = { filter ->
+                        if (filter == com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS) {
+                            showPodcastsComingSoonDialog = true
+                        } else {
+                            homeViewModel.setFilter(filter)
+                        }
+                    },
                     followedPodcasts = followedPodcasts,
                     onPlayTrack = { song -> homeViewModel.playTrack(song, context) },
                     onSongLongClick = { menuSong = it }
@@ -182,7 +195,13 @@ fun HomeScreen(navController: NavController){
                     navController = navController,
                     feed = feed,
                     currentFilter = currentFilter,
-                    onFilterSelected = { homeViewModel.setFilter(it) },
+                    onFilterSelected = { filter ->
+                        if (filter == com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS) {
+                            showPodcastsComingSoonDialog = true
+                        } else {
+                            homeViewModel.setFilter(filter)
+                        }
+                    },
                     followedPodcasts = followedPodcasts,
                     onPlayTrack = { song -> homeViewModel.playTrack(song, context) },
                     onSongLongClick = { menuSong = it }

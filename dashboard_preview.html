@@ -504,8 +504,68 @@
         .replace(/'/g, '&#039;');
     }
 
+    let ws = null;
+    let pollInterval = null;
+
+    function connectDashboardWebSocket() {
+      const isRemote = !(window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.endsWith('.loca.lt'));
+      const wsUrl = isRemote 
+        ? 'wss://lingering-brook-93f6.orelgame156.workers.dev/ws/dashboard'
+        : ((window.location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + window.location.host + '/ws/dashboard');
+
+      try {
+        ws = new WebSocket(wsUrl);
+
+        ws.onopen = function() {
+          console.log('Connected to Live Presence WebSocket');
+          const badge = document.getElementById('liveStatusText');
+          if (badge) badge.textContent = 'שידור חי (חיבור WebSocket Push ישיר ⚡)';
+          if (pollInterval) {
+            clearInterval(pollInterval);
+            pollInterval = null;
+          }
+        };
+
+        ws.onmessage = function(event) {
+          try {
+            const msg = JSON.parse(event.data);
+            if (msg.type === 'snapshot' && msg.data) {
+              renderData(msg.data);
+            } else if (msg.type === 'presence_delta') {
+              fetchAnalytics();
+            }
+          } catch (e) {
+            console.error('Error handling WS message:', e);
+          }
+        };
+
+        ws.onclose = function() {
+          console.log('WebSocket closed, attempting reconnect in 3s...');
+          const badge = document.getElementById('liveStatusText');
+          if (badge) badge.textContent = 'חיבור מחדש... (Fallback Polling)';
+          startFallbackPolling();
+          setTimeout(connectDashboardWebSocket, 3000);
+        };
+
+        ws.onerror = function(err) {
+          console.error('WebSocket error:', err);
+          ws.close();
+        };
+      } catch (e) {
+        console.error('WebSocket not supported or failed to init:', e);
+        startFallbackPolling();
+      }
+    }
+
+    function startFallbackPolling() {
+      if (!pollInterval) {
+        fetchAnalytics();
+        pollInterval = setInterval(fetchAnalytics, 5000);
+      }
+    }
+
     fetchAnalytics();
-    setInterval(fetchAnalytics, 5000);
+    connectDashboardWebSocket();
   </script>
 </body>
 </html>

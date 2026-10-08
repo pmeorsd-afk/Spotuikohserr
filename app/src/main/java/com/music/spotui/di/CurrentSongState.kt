@@ -198,6 +198,8 @@ class CurrentSongState @Inject constructor() {
         com.music.spotui.util.AppTelemetryManager.onPlaybackStateChanged(
             com.music.spotui.MyApplication.instance, track, playingState
         )
+        // Keep PresenceCoordinator metadata in sync
+        com.music.spotui.util.PresenceCoordinator.onTrackMetadataChanged(track)
         if (title.isNotBlank()) {
             val sId = if (songId > 0) songId else (title + singer).hashCode() and 0x7fffffff
             com.music.spotui.data.preferences.saveLastPlayedTrack(

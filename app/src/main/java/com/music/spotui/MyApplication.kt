@@ -30,6 +30,7 @@ class MyApplication : Application(){
         instance = this
         com.music.spotui.util.CrashLogger.init(this)
         com.music.spotui.util.KosherWhitelistManager.init(this)
+        com.music.spotui.util.PresenceCoordinator.initialize(this)
         if (!BuildConfig.IS_ADMIN) {
             runCatching {
                 androidx.core.content.ContextCompat.registerReceiver(

@@ -1,10 +1,10 @@
 {
-  "versionCode": 17,
-  "versionName": "1.7",
-  "title": "יצא עדכון משמעותי לאפליקציה! 🎉",
-  "message": "גרסה חדשה זמינה להורדה , נוסף מיני נגן לוויז, ותיקון תמונות במסך התראות.",
-  "downloadUrl": "https://mitmachim.top/post/1239494",
-  "forceUpdate": true,
+  "versionCode": 28,
+  "versionName": "2.8",
+  "title": "יצא עדכון חדש לאפליקציה! (גרסה 2.8) 🎉",
+  "message": "עדכון גרסה 2.8 כשרה: נוספה הודעת פודקאסטים בקרוב מעוצבת, באנרי 'בקרוב!' מורחבים בחיפוש, שיפורי יציבות, ביצועים וטעינה.",
+  "downloadUrl": "https://github.com/pmeorsd-afk/Spotuikohserr/releases/tag/v2.8",
+  "forceUpdate": false,
   "updateButtonText": "הורד עדכון עכשיו",
   "cancelButtonText": "הזכר לי מאוחר יותר"
 }

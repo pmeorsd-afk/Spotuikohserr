@@ -490,6 +490,25 @@ fun SongOptionsSheet(
                                     }
                                 )
                             }
+                        } else {
+                            item {
+                                ContextMenuItem(
+                                    title = "הצע לבדיקה והיתר תמונות",
+                                    icon = Icons.Default.CheckCircle,
+                                    iconColor = Color(0xFF1ED760),
+                                    onClick = {
+                                        com.music.spotui.util.TelegramNotifier.sendTrackApprovalRequest(
+                                            context = context,
+                                            trackTitle = song.title,
+                                            artistName = song.singer,
+                                            trackId = song.spotifyTrackId,
+                                            coverUrl = song.coverUri ?: ""
+                                        )
+                                        Toast.makeText(context, "הבקשה נשלחה בהצלחה לבדיקה!", Toast.LENGTH_SHORT).show()
+                                        onDismiss()
+                                    }
+                                )
+                            }
                         }
                     }
                 }

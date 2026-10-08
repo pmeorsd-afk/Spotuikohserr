@@ -1716,7 +1716,8 @@ fun PlayerOptionsSheet(
                                 context = context,
                                 trackTitle = title,
                                 artistName = singer,
-                                trackId = trackId
+                                trackId = trackId,
+                                coverUrl = currentSong?.coverUri.orEmpty()
                             )
                             onDismiss()
                         }

@@ -98,11 +98,17 @@ class MainActivity : ComponentActivity() {
         }
         com.music.spotui.util.KosherWhitelistManager.syncWithRemote(this)
         com.music.spotui.util.AppTelemetryManager.onAppForegrounded(this)
+        com.music.spotui.util.PresenceCoordinator.setUiForeground(true)
     }
 
     override fun onPause() {
         super.onPause()
         com.music.spotui.util.AppTelemetryManager.onAppBackgrounded(this)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        com.music.spotui.util.PresenceCoordinator.setUiForeground(false)
     }
 
     override fun onNewIntent(intent: Intent) {

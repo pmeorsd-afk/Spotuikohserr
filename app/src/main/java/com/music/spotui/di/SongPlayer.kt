@@ -1738,6 +1738,10 @@ object SongPlayer {
 
     private fun attachListener(p: ExoPlayer) {
         p.addListener(object : androidx.media3.common.Player.Listener {
+            override fun onIsPlayingChanged(isPlaying: Boolean) {
+                onIsPlayingChangedListener?.invoke(isPlaying)
+            }
+
             override fun onPlaybackStateChanged(playbackState: Int) {
                 if (playbackState == androidx.media3.common.Player.STATE_ENDED) {
                     val token = activePlaybackToken
@@ -1827,6 +1831,9 @@ object SongPlayer {
 
     /** Notified right after the ExoPlayer is built so the session can attach to it. */
     @Volatile var onPlayerCreated: ((ExoPlayer) -> Unit)? = null
+
+    /** Notified when audio playback state changes (isPlaying). Direct source of truth for Presence. */
+    @Volatile var onIsPlayingChangedListener: ((Boolean) -> Unit)? = null
 
     fun isPlaying(): Boolean {
         if (webPlaybackActive()) return SpotifyWebPlayer.isPlaying

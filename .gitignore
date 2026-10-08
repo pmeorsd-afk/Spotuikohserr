@@ -17,3 +17,5 @@ app/release/
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+.wrangler/
+**/.wrangler/
