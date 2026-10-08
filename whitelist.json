@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 251,
-  "last_updated": "2026-10-08T13:36:40.318Z",
+  "version": 252,
+  "last_updated": "2026-10-08T14:30:49.698Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "",
+      "title": "משה פייגלין: \"חיסונים כמו בארה\"ב. רשות בלבד\"",
+      "artist": "אבי שושן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-08T14:30:49.698Z"
+    },
     {
       "id": "2oNXYk8KHThlxBD1GCBSng",
       "title": "זוכר אותנו",
