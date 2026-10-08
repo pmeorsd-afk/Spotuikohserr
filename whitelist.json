@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 255,
-  "last_updated": "2026-10-08T16:20:30.543Z",
+  "version": 256,
+  "last_updated": "2026-10-08T16:20:54.085Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -706,7 +706,7 @@
       "artist": "דוד שרר",
       "status": "approved",
       "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-08T16:20:30.543Z"
+      "updated_at": "2026-10-08T16:20:54.085Z"
     },
     {
       "id": "",
