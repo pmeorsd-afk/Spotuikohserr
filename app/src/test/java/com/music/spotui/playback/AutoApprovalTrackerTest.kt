@@ -38,8 +38,40 @@ class AutoApprovalTrackerTest {
             mediaType = MediaType.PODCAST_EPISODE
         )
 
-        // Calling onTrackPlayed for podcast should not crash and should not submit
-        AutoApprovalTracker.onTrackPlayed(context = null, song = podcastEpisode)
+        // Calling onPlaybackStateChanged for podcast should not crash and should not submit
+        AutoApprovalTracker.onPlaybackStateChanged(context = null, song = podcastEpisode, isPlaying = true)
         assertFalse(AutoApprovalTracker.isSubmitted(context = null, key = "episode_999_test_dummy"))
+    }
+
+    @Test
+    fun testShortPlayback_doesNotSubmitImmediately() {
+        val testSong = SongsModel(
+            id = 777,
+            title = "שיר בדיקה קצר",
+            singer = "זמר בדיקה לא בהיתר",
+            album = "אלבום בדיקה",
+            coverUri = "https://cdn.com/test_cover.jpg",
+            url = "spotify:track:short_play_test_777",
+            mediaType = MediaType.TRACK
+        )
+
+        // Reset required threshold to standard 30s
+        AutoApprovalTracker.requiredListeningMs = 30_000L
+
+        // Start playback
+        AutoApprovalTracker.onPlaybackStateChanged(context = null, song = testSong, isPlaying = true)
+
+        // Immediately after start (< 30s), should NOT be marked as submitted!
+        assertFalse(
+            "Track should NOT be submitted immediately on play (< 30s)",
+            AutoApprovalTracker.isSubmitted(context = null, key = "short_play_test_777")
+        )
+
+        // User pauses after 2 seconds
+        AutoApprovalTracker.onPlaybackStateChanged(context = null, song = testSong, isPlaying = false)
+        assertFalse(
+            "Track should NOT be submitted when paused before 30s",
+            AutoApprovalTracker.isSubmitted(context = null, key = "short_play_test_777")
+        )
     }
 }

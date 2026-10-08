@@ -158,6 +158,9 @@ class CurrentSongState @Inject constructor() {
         com.music.spotui.util.AppTelemetryManager.onPlaybackStateChanged(
             com.music.spotui.MyApplication.instance, track, playing
         )
+        com.music.spotui.util.AutoApprovalTracker.onPlaybackStateChanged(
+            com.music.spotui.MyApplication.instance, track, playing
+        )
     }
 
     fun updateLikeState(newLikeState : Boolean){
@@ -186,10 +189,11 @@ class CurrentSongState @Inject constructor() {
         if (playingState && title.isNotBlank()) {
             com.music.spotui.data.preferences.saveLastPlayback(
                 com.music.spotui.MyApplication.instance, track)
-            // Auto-submit unapproved tracks to Telegram bot for cover image approval
-            com.music.spotui.util.AutoApprovalTracker.onTrackPlayed(
-                com.music.spotui.MyApplication.instance, track)
         }
+        // Auto-submit unapproved tracks to Telegram bot only after 30 seconds of listening
+        com.music.spotui.util.AutoApprovalTracker.onPlaybackStateChanged(
+            com.music.spotui.MyApplication.instance, track, playingState
+        )
         // Report telemetry heartbeat
         com.music.spotui.util.AppTelemetryManager.onPlaybackStateChanged(
             com.music.spotui.MyApplication.instance, track, playingState
