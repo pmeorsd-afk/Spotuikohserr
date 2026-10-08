@@ -217,6 +217,7 @@ fun SpotifyLoginScreen(navController: NavController) {
                     isProcessing = true
                     statusMessage = "מתחבר כאורח…"
                     SpotifySession.setSpDc(context, "anonymous")
+                    com.music.spotui.data.preferences.WhatsNewPref.setPendingShow(context)
                     setPrimaryMusicSource(context, MusicSource.YOUTUBE_MUSIC)
                     scope.launch(Dispatchers.IO) {
                         SpotifyTokenProvider.ensureToken(context)
@@ -410,6 +411,7 @@ private fun finishLoginWithToken(
             result.onSuccess { token ->
                 Spotify.accessToken = token.accessToken
                 withContext(Dispatchers.Main) { setStatus("Success!") }
+                com.music.spotui.data.preferences.WhatsNewPref.setPendingShow(activity)
                 delay(300)
                 withContext(Dispatchers.Main) { onSuccess() }
                 return@launch

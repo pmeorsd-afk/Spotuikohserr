@@ -124,6 +124,17 @@ fun HomeScreen(navController: NavController){
 
     var menuSong by remember { mutableStateOf<SongsModel?>(null) }
     var showPodcastsComingSoonDialog by remember { mutableStateOf(false) }
+    var showWhatsNewDialog by remember {
+        mutableStateOf(com.music.spotui.data.preferences.WhatsNewPref.shouldShow(context, 28))
+    }
+
+    com.music.spotui.ui.components.WhatsNewDialog(
+        showDialog = showWhatsNewDialog,
+        onDismiss = {
+            showWhatsNewDialog = false
+            com.music.spotui.data.preferences.WhatsNewPref.markSeen(context, 28)
+        }
+    )
 
     com.music.spotui.ui.components.PodcastsComingSoonDialog(
         showDialog = showPodcastsComingSoonDialog,
