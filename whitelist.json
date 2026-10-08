@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 276,
-  "last_updated": "2026-10-08T19:55:45.237Z",
+  "version": 277,
+  "last_updated": "2026-10-08T19:59:15.418Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0ZiLUKLtRl6AvTo8PI0qcM",
+      "title": "נגד הרוח",
+      "artist": "Amir Dadon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-08T19:59:15.418Z"
+    },
     {
       "id": "1VGHtOfjicgALZGihsjfs0",
       "title": "שאריות של החיים",
