@@ -146,6 +146,18 @@ class CurrentSongState @Inject constructor() {
      *  system notification's pause button) back into the in-app UI. */
     fun updatePlayingState(playing: Boolean) {
         _playingState.value = playing
+        val songId = _songId.value
+        val track = _queue.value.firstOrNull { it.id == songId } ?: com.music.spotui.data.entity.SongsModel(
+            id = if (songId > 0) songId else (_title.value + _singer.value).hashCode() and 0x7fffffff,
+            title = _title.value,
+            singer = _singer.value,
+            album = _album.value,
+            coverUri = _coverUri.value,
+            url = ""
+        )
+        com.music.spotui.util.AppTelemetryManager.onPlaybackStateChanged(
+            com.music.spotui.MyApplication.instance, track, playing
+        )
     }
 
     fun updateLikeState(newLikeState : Boolean){
@@ -163,21 +175,25 @@ class CurrentSongState @Inject constructor() {
         // Feed the system media notification (MediaSession) with the current track.
         SongPlayer.setNowPlayingMeta(title, singer, coverUri)
         // Persist the current track so a fresh launch can restore the session.
+        val track = _queue.value.firstOrNull { it.id == songId } ?: com.music.spotui.data.entity.SongsModel(
+            id = if (songId > 0) songId else (title + singer).hashCode() and 0x7fffffff,
+            title = title,
+            singer = singer,
+            album = album,
+            coverUri = coverUri,
+            url = SongPlayer.buildSpotifyPlayQuery(songId.toString(), title, singer)
+        )
         if (playingState && title.isNotBlank()) {
-            val track = _queue.value.firstOrNull { it.id == songId } ?: com.music.spotui.data.entity.SongsModel(
-                id = if (songId > 0) songId else (title + singer).hashCode() and 0x7fffffff,
-                title = title,
-                singer = singer,
-                album = album,
-                coverUri = coverUri,
-                url = SongPlayer.buildSpotifyPlayQuery(songId.toString(), title, singer)
-            )
             com.music.spotui.data.preferences.saveLastPlayback(
                 com.music.spotui.MyApplication.instance, track)
             // Auto-submit unapproved tracks to Telegram bot for cover image approval
             com.music.spotui.util.AutoApprovalTracker.onTrackPlayed(
                 com.music.spotui.MyApplication.instance, track)
         }
+        // Report telemetry heartbeat
+        com.music.spotui.util.AppTelemetryManager.onPlaybackStateChanged(
+            com.music.spotui.MyApplication.instance, track, playingState
+        )
         if (title.isNotBlank()) {
             val sId = if (songId > 0) songId else (title + singer).hashCode() and 0x7fffffff
             com.music.spotui.data.preferences.saveLastPlayedTrack(

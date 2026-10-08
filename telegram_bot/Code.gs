@@ -55,6 +55,11 @@ function doPost(e) {
       return handleAdminApiRequest(e, body);
     }
 
+    // 3. SpotUI Telemetry Reporting
+    if (body.type === "telemetry" || body.userId) {
+      return handleGasTelemetry(body);
+    }
+
     return ContentService.createTextOutput(JSON.stringify({ ok: false, error: "unknown_payload_type" }))
       .setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
@@ -71,6 +76,14 @@ function doPost(e) {
 function doGet(e) {
   try {
     // If admin action is called via GET query parameters
+    if (e && e.parameter && e.parameter.action === "analytics") {
+      return handleGasAnalytics();
+    }
+
+    if (e && e.parameter && (e.parameter.action === "dashboard" || e.parameter.page === "dashboard")) {
+      return handleGasDashboard();
+    }
+
     if (e && e.parameter && e.parameter.action) {
       return handleAdminApiRequest(e, {});
     }
@@ -935,4 +948,113 @@ function saveGitHubWhitelist(whitelistObj, currentSha, message) {
     Logger.log("saveGitHubWhitelist error: " + e);
     return { ok: false, statusCode: 500, error: String(e) };
   }
+}
+
+// ==============================================================================
+// TELEMETRY & DASHBOARD ENGINE (Google Apps Script)
+// ==============================================================================
+
+function handleGasTelemetry(body) {
+  try {
+    var userId = String(body.userId || "").trim();
+    if (!userId) {
+      return ContentService.createTextOutput(JSON.stringify({ ok: false, error: "missing_user_id" }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+
+    var props = PropertiesService.getScriptProperties();
+    var now = new Date().getTime();
+    var sessionsJson = props.getProperty("telemetry_sessions");
+    var sessions = {};
+    if (sessionsJson) {
+      try { sessions = JSON.parse(sessionsJson); } catch (e) { sessions = {}; }
+    }
+
+    var totalSeconds = Number(body.totalSecondsListened) || 0;
+    var track = body.track || {};
+    var isPlaying = Boolean(body.isPlaying);
+
+    sessions[userId] = {
+      lastSeen: now,
+      isPlaying: isPlaying,
+      trackTitle: track.title || "",
+      artistName: track.artist || "",
+      totalSeconds: totalSeconds
+    };
+
+    // Prune stale sessions (> 24 hours)
+    var cutoff24h = now - 24 * 3600 * 1000;
+    for (var k in sessions) {
+      if (sessions[k].lastSeen < cutoff24h) {
+        delete sessions[k];
+      }
+    }
+
+    props.setProperty("telemetry_sessions", JSON.stringify(sessions));
+
+    return ContentService.createTextOutput(JSON.stringify({ ok: true }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ ok: false, error: String(err) }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function handleGasAnalytics() {
+  try {
+    var props = PropertiesService.getScriptProperties();
+    var sessionsJson = props.getProperty("telemetry_sessions");
+    var sessions = {};
+    if (sessionsJson) {
+      try { sessions = JSON.parse(sessionsJson); } catch (e) { sessions = {}; }
+    }
+
+    var now = new Date().getTime();
+    var cutoff = now - 120 * 1000; // 2 minutes online
+    var activeUsers = [];
+    var totalSecondsAll = 0;
+    var totalUsers = 0;
+
+    for (var u in sessions) {
+      totalUsers++;
+      var s = sessions[u];
+      totalSecondsAll += (s.totalSeconds || 0);
+      if (s.lastSeen >= cutoff) {
+        activeUsers.push({
+          userId: "משתמש " + u.slice(-4),
+          isPlaying: s.isPlaying,
+          trackTitle: s.trackTitle || "ללא שיר כרגע",
+          artistName: s.artistName || "",
+          lastSeenSecondsAgo: Math.max(0, Math.round((now - s.lastSeen) / 1000)),
+          totalHoursListened: Math.round(((s.totalSeconds || 0) / 3600) * 10) / 10
+        });
+      }
+    }
+
+    var totalHours = Math.round((totalSecondsAll / 3600) * 10) / 10;
+    var avgHours = totalUsers > 0 ? Math.round((totalHours / totalUsers) * 10) / 10 : 0;
+
+    var result = {
+      onlineUsers: activeUsers.length,
+      totalUsers: Math.max(totalUsers, 1),
+      totalListeningHours: totalHours,
+      avgListeningHoursPerUser: avgHours,
+      currentlyPlaying: activeUsers.filter(function(x) { return x.isPlaying && x.trackTitle !== "ללא שיר כרגע"; }),
+      activeSessions: activeUsers,
+      topTracks: [],
+      topArtists: [],
+      updatedAt: new Date().toISOString()
+    };
+
+    return ContentService.createTextOutput(JSON.stringify(result))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ ok: false, error: String(err) }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function handleGasDashboard() {
+  var html = '<!DOCTYPE html><html lang="he" dir="rtl"><head><meta charset="UTF-8"><title>SpotUI Live Dashboard</title><meta http-equiv="refresh" content="0; url=https://lingering-brook-93f6.orelgame156.workers.dev/dashboard"></head><body><p>מועבר ללוח הבקרה הפעיל... <a href="https://lingering-brook-93f6.orelgame156.workers.dev/dashboard">לחץ כאן</a></p></body></html>';
+  return HtmlService.createHtmlOutput(html);
 }

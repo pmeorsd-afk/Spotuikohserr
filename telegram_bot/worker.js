@@ -43,7 +43,15 @@ const CONFIG = {
 const WHITELIST_CACHE_TTL_MS = 10 * 1000; // 10 seconds
 let memoryWhitelist = null;
 let memoryWhitelistFetchedAt = 0;
-let callbackClaimed = new Set();
+// ------------------------------------------------------------------------------
+// In-Memory Telemetry State
+// ------------------------------------------------------------------------------
+const telemetrySessions = new Map(); // userId -> { lastSeen, isPlaying, track, totalSeconds, appVersion }
+const telemetryStats = {
+  totalUsersSeen: new Set(),
+  topTracks: new Map(),       // "title - artist" -> { title, artist, count }
+  topArtists: new Map()       // artist -> count
+};
 
 // ==============================================================================
 // Worker Entry Point
@@ -53,7 +61,40 @@ export default {
     const url = new URL(request.url);
 
     // --------------------------------------------------------------------------
-    // 1. הגדרת Webhook בטלגרם בלחיצה ישירה מהדפדפן
+    // 0. CORS Preflight
+    // --------------------------------------------------------------------------
+    if (request.method === "OPTIONS") {
+      return new Response(null, {
+        status: 204,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, User-Agent, X-Requested-With",
+          "Access-Control-Max-Age": "86400"
+        }
+      });
+    }
+
+    // --------------------------------------------------------------------------
+    // 1. לוח מחוונים וסטטיסטיקות שידור חי (Live Analytics Dashboard)
+    // --------------------------------------------------------------------------
+    if (request.method === "GET" && (url.pathname === "/dashboard" || url.pathname === "/live")) {
+      return handleGetDashboard();
+    }
+
+    if (request.method === "GET" && (url.pathname === "/api/analytics" || url.pathname === "/analytics")) {
+      return handleGetAnalytics();
+    }
+
+    // --------------------------------------------------------------------------
+    // 2. קבלת טלמטריה מהאפליקציה (Live Telemetry POST)
+    // --------------------------------------------------------------------------
+    if (request.method === "POST" && (url.pathname === "/api/telemetry" || url.pathname === "/telemetry")) {
+      return handleTelemetryPost(request, env, ctx);
+    }
+
+    // --------------------------------------------------------------------------
+    // 3. הגדרת Webhook בטלגרם בלחיצה ישירה מהדפדפן
     // --------------------------------------------------------------------------
     if (url.pathname === "/setWebhook") {
       const workerUrl = `${url.origin}/`;
@@ -66,7 +107,7 @@ export default {
     }
 
     // --------------------------------------------------------------------------
-    // 2. שרת Whitelist מהיר מבוסס GitHub Contents API
+    // 4. שרת Whitelist מהיר מבוסס GitHub Contents API
     // --------------------------------------------------------------------------
     if (
       request.method === "GET" &&
@@ -76,12 +117,12 @@ export default {
     }
 
     // --------------------------------------------------------------------------
-    // 3. בדיקת תקינות (Health Check)
+    // 5. בדיקת תקינות (Health Check)
     // --------------------------------------------------------------------------
     if (request.method === "GET") {
       const ver = memoryWhitelist ? memoryWhitelist.version : "not_cached_yet";
       return new Response(
-        `SpotUI Telegram Bot Worker v3.1 is running 🚀\nWhitelist API: /whitelist.json\nCurrent Memory Version: ${ver}`,
+        `SpotUI Telegram Bot Worker v3.1 is running 🚀\nWhitelist API: /whitelist.json\nCurrent Memory Version: ${ver}\nLive Dashboard: /dashboard\nAnalytics API: /api/analytics`,
         {
           status: 200,
           headers: { "Content-Type": "text/plain; charset=utf-8" }
@@ -90,7 +131,7 @@ export default {
     }
 
     // --------------------------------------------------------------------------
-    // 4. Telegram Webhook (POST)
+    // 6. Telegram Webhook (POST)
     // --------------------------------------------------------------------------
     if (request.method !== "POST") {
       return new Response("Method not allowed", { status: 405 });
@@ -560,6 +601,9 @@ function jsonResponse(data, status = 200, extraHeaders = {}) {
     status,
     headers: {
       "Content-Type": "application/json; charset=utf-8",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, User-Agent, X-Requested-With",
       ...extraHeaders
     }
   });
@@ -568,3 +612,621 @@ function jsonResponse(data, status = 200, extraHeaders = {}) {
 function escapeMarkdown(value) {
   return String(value || "").replace(/([_*[\]()~`>#+\-=|{}.!])/g, "\\$1");
 }
+
+// ==============================================================================
+// TELEMETRY & LIVE ANALYTICS ENGINE
+// ==============================================================================
+
+const ONLINE_WINDOW_MS = 120 * 1000; // 2 minutes window for active listeners
+
+async function handleTelemetryPost(request, env, ctx) {
+  try {
+    const data = await request.json();
+    const userId = String(data.userId || "").trim();
+    if (!userId) {
+      return jsonResponse({ ok: false, error: "missing_user_id" }, 400);
+    }
+
+    const now = Date.now();
+    telemetryStats.totalUsersSeen.add(userId);
+
+    const isPlaying = Boolean(data.isPlaying);
+    const track = data.track || {};
+    const secondsDelta = Number(data.secondsDelta) || 0;
+    const totalSeconds = Number(data.totalSecondsListened) || 0;
+    const appVersion = String(data.appVersion || "1.0");
+
+    let session = telemetrySessions.get(userId);
+    if (!session) {
+      session = {
+        userId,
+        firstSeen: now,
+        lastSeen: now,
+        isPlaying,
+        track,
+        totalSeconds,
+        appVersion
+      };
+      telemetrySessions.set(userId, session);
+    } else {
+      session.lastSeen = now;
+      session.isPlaying = isPlaying;
+      if (track.title) session.track = track;
+      if (totalSeconds > session.totalSeconds) session.totalSeconds = totalSeconds;
+      session.appVersion = appVersion;
+    }
+
+    // Top tracks & top artists counter
+    if (isPlaying && track.title && track.artist && !track.isPodcast) {
+      const trackKey = `${track.title} - ${track.artist}`.trim();
+      const existingT = telemetryStats.topTracks.get(trackKey) || { title: track.title, artist: track.artist, count: 0 };
+      if (data.event === "play" || data.event === "track_change") {
+        existingT.count += 1;
+        telemetryStats.topTracks.set(trackKey, existingT);
+
+        const artistKey = track.artist.trim();
+        const aCount = (telemetryStats.topArtists.get(artistKey) || 0) + 1;
+        telemetryStats.topArtists.set(artistKey, aCount);
+      }
+    }
+
+    // Async sync to Google Apps Script for persistent sheet records
+    if (CONFIG.GAS_SYNC_URL && (data.event === "play" || (secondsDelta > 0 && Math.random() < 0.2))) {
+      ctx.waitUntil(
+        fetch(CONFIG.GAS_SYNC_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            type: "telemetry",
+            userId,
+            event: data.event,
+            track,
+            totalSecondsListened: session.totalSeconds,
+            timestamp: now
+          })
+        }).catch(err => console.log("GAS sync error:", err))
+      );
+    }
+
+    return jsonResponse({ ok: true, activeUsers: getActiveUsersCount() }, 200);
+  } catch (err) {
+    return jsonResponse({ ok: false, error: String(err?.message || err) }, 500);
+  }
+}
+
+function getActiveUsersCount() {
+  const cutoff = Date.now() - ONLINE_WINDOW_MS;
+  let count = 0;
+  for (const s of telemetrySessions.values()) {
+    if (s.lastSeen >= cutoff) count++;
+  }
+  return count;
+}
+
+function computeAnalytics() {
+  const now = Date.now();
+  const cutoff = now - ONLINE_WINDOW_MS;
+  const activeUsers = [];
+  let totalSecondsAllUsers = 0;
+
+  for (const s of telemetrySessions.values()) {
+    totalSecondsAllUsers += s.totalSeconds || 0;
+    if (s.lastSeen >= cutoff) {
+      activeUsers.push({
+        userId: "משתמש " + s.userId.slice(-4),
+        isPlaying: s.isPlaying,
+        trackTitle: s.track?.title || "ללא שיר כרגע",
+        artistName: s.track?.artist || "",
+        isPodcast: Boolean(s.track?.isPodcast),
+        lastSeenSecondsAgo: Math.max(0, Math.round((now - s.lastSeen) / 1000)),
+        totalHoursListened: Math.round(((s.totalSeconds || 0) / 3600) * 10) / 10
+      });
+    }
+  }
+
+  const totalUsers = Math.max(telemetryStats.totalUsersSeen.size, telemetrySessions.size, 1);
+  const totalHours = Math.round((totalSecondsAllUsers / 3600) * 10) / 10;
+  const avgHours = Math.round((totalHours / totalUsers) * 10) / 10;
+
+  const topTracksList = Array.from(telemetryStats.topTracks.values())
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 10);
+
+  const topArtistsList = Array.from(telemetryStats.topArtists.entries())
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 10);
+
+  return {
+    onlineUsers: activeUsers.length,
+    totalUsers,
+    totalListeningHours: totalHours,
+    avgListeningHoursPerUser: avgHours,
+    currentlyPlaying: activeUsers.filter(u => u.isPlaying && u.trackTitle !== "ללא שיר כרגע"),
+    activeSessions: activeUsers,
+    topTracks: topTracksList,
+    topArtists: topArtistsList,
+    updatedAt: new Date().toISOString()
+  };
+}
+
+function handleGetAnalytics() {
+  return jsonResponse(computeAnalytics(), 200, {
+    "Cache-Control": "no-cache, no-store, must-revalidate"
+  });
+}
+
+function handleGetDashboard() {
+  const html = getDashboardHtml();
+  return new Response(html, {
+    status: 200,
+    headers: {
+      "Content-Type": "text/html; charset=utf-8",
+      "Cache-Control": "no-cache, no-store, must-revalidate"
+    }
+  });
+}
+
+function getDashboardHtml() {
+  return `<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpotUI Kosher - לוח מדדים ופעילות בזמן אמת</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>">
+  <style>
+    :root {
+      --bg-base: #121212;
+      --bg-card: #181818;
+      --bg-card-hover: #222222;
+      --spotify-green: #1DB954;
+      --spotify-green-hover: #1ed760;
+      --text-main: #FFFFFF;
+      --text-sub: #B3B3B3;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --pulse-glow: rgba(29, 185, 84, 0.4);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      padding: 24px 16px;
+      direction: rtl;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 1100px;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 28px;
+    }
+    .header-title-box h1 {
+      font-size: 26px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header-title-box p {
+      color: var(--text-sub);
+      font-size: 14px;
+      margin-top: 4px;
+    }
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(29, 185, 84, 0.15);
+      border: 1px solid var(--spotify-green);
+      color: var(--spotify-green);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .pulsing-dot {
+      width: 10px;
+      height: 10px;
+      background-color: var(--spotify-green);
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 var(--pulse-glow);
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(29, 185, 84, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(29, 185, 84, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(29, 185, 84, 0); }
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .stat-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-sub);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .stat-icon {
+      font-size: 20px;
+    }
+    .stat-value {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+    .stat-sub {
+      color: var(--text-sub);
+      font-size: 12px;
+      margin-top: 6px;
+    }
+    .highlight-green {
+      color: var(--spotify-green);
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .live-feed-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .now-playing-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+    }
+    .equalizer {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 24px;
+      width: 20px;
+    }
+    .eq-bar {
+      width: 4px;
+      background-color: var(--spotify-green);
+      border-radius: 2px;
+      animation: soundWave 1.2s infinite ease-in-out;
+    }
+    .eq-bar:nth-child(1) { height: 18px; animation-delay: 0.1s; }
+    .eq-bar:nth-child(2) { height: 24px; animation-delay: 0.3s; }
+    .eq-bar:nth-child(3) { height: 12px; animation-delay: 0.2s; }
+    @keyframes soundWave {
+      0%, 100% { height: 6px; }
+      50% { height: 22px; }
+    }
+    .track-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .track-title {
+      font-size: 15px;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .track-artist {
+      font-size: 13px;
+      color: var(--text-sub);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 2px;
+    }
+    .user-tag {
+      font-size: 11px;
+      color: var(--text-sub);
+      margin-top: 4px;
+    }
+    .charts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .chart-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .chart-box h3 {
+      font-size: 16px;
+      margin-bottom: 16px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .chart-list {
+      list-style: none;
+    }
+    .chart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 14px;
+    }
+    .chart-item:last-child {
+      border-bottom: none;
+    }
+    .chart-rank {
+      font-weight: 800;
+      width: 28px;
+      color: var(--text-sub);
+    }
+    .chart-rank.top1 { color: #FFD700; }
+    .chart-rank.top2 { color: #C0C0C0; }
+    .chart-rank.top3 { color: #CD7F32; }
+    .chart-details {
+      flex: 1;
+      margin: 0 10px;
+      overflow: hidden;
+    }
+    .chart-title {
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .chart-sub {
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+    .chart-plays {
+      font-size: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+    .empty-state {
+      padding: 32px;
+      text-align: center;
+      color: var(--text-sub);
+      background: var(--bg-card);
+      border-radius: 12px;
+      border: 1px dashed var(--border-color);
+      grid-column: 1 / -1;
+    }
+    footer {
+      margin-top: auto;
+      text-align: center;
+      color: var(--text-sub);
+      font-size: 13px;
+      padding: 20px 0;
+      border-top: 1px solid var(--border-color);
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-title-box">
+        <h1><span>🎧</span> SpotUI Kosher — לוח פעילות חי</h1>
+        <p>מעקב משתמשים בזמן אמת, זמני האזנה וסטטיסטיקות שידור חי</p>
+      </div>
+      <div class="live-badge">
+        <span class="pulsing-dot"></span>
+        <span id="liveStatusText">שידור חי (מתעדכן כל 5 שניות)</span>
+      </div>
+    </header>
+
+    <!-- 4 כרטיסי מדדי מפתח -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <span>מחוברים עכשיו (Live)</span>
+          <span class="stat-icon">🟢</span>
+        </div>
+        <div class="stat-value highlight-green" id="statOnline">--</div>
+        <div class="stat-sub">משתמשים פעילים ב-2 דקות אחרונות</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <span>ממוצע שעות למשתמש</span>
+          <span class="stat-icon">⏱️</span>
+        </div>
+        <div class="stat-value" id="statAvgHours">--</div>
+        <div class="stat-sub">זמן האזנה ממוצע לכל משתמש</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <span>סך שעות האזנה</span>
+          <span class="stat-icon">🎧</span>
+        </div>
+        <div class="stat-value" id="statTotalHours">--</div>
+        <div class="stat-sub">מצטבר בכלל מכשירי האפליקציה</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <span>סך משתמשים ייחודיים</span>
+          <span class="stat-icon">👥</span>
+        </div>
+        <div class="stat-value" id="statTotalUsers">--</div>
+        <div class="stat-sub">מכשירים ייחודיים שחוברו</div>
+      </div>
+    </div>
+
+    <!-- מתנגן עכשיו בשידור חי -->
+    <div class="section-title">
+      <span>🎵</span>
+      <span>מתנגן עכשיו בשידור חי</span>
+    </div>
+    <div class="live-feed-grid" id="nowPlayingFeed">
+      <div class="empty-state">טוען נתונים בשידור חי...</div>
+    </div>
+
+    <!-- מצעד שירים ואמנים מובילים -->
+    <div class="charts-grid">
+      <div class="chart-box">
+        <h3><span>🔥</span> השירים המושמעים ביותר</h3>
+        <ul class="chart-list" id="topTracksList">
+          <li class="empty-state">אין עדיין נתונים</li>
+        </ul>
+      </div>
+
+      <div class="chart-box">
+        <h3><span>🎤</span> האמנים המובילים</h3>
+        <ul class="chart-list" id="topArtistsList">
+          <li class="empty-state">אין עדיין נתונים</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      SpotUI Kosher Live Telemetry Engine &bull; פועל בענן Cloudflare & Google Apps Script
+    </footer>
+  </div>
+
+  <script>
+    async function fetchAnalytics() {
+      try {
+        const res = await fetch('/api/analytics', { cache: 'no-store' });
+        if (!res.ok) throw new Error('Network error: ' + res.status);
+        const data = await res.json();
+        renderData(data);
+      } catch (err) {
+        console.error('Fetch error:', err);
+      }
+    }
+
+    function renderData(data) {
+      document.getElementById('statOnline').textContent = data.onlineUsers ?? 0;
+      document.getElementById('statAvgHours').textContent = (data.avgListeningHoursPerUser ?? 0) + ' שעות';
+      document.getElementById('statTotalHours').textContent = (data.totalListeningHours ?? 0) + ' שעות';
+      document.getElementById('statTotalUsers').textContent = data.totalUsers ?? 0;
+
+      const feed = document.getElementById('nowPlayingFeed');
+      const playing = data.currentlyPlaying || [];
+      if (playing.length === 0) {
+        feed.innerHTML = '<div class="empty-state">אין כרגע שירים מתנגנים בשידור חי ברגע זה</div>';
+      } else {
+        feed.innerHTML = playing.map(p => \`
+          <div class="now-playing-card">
+            <div class="equalizer">
+              <div class="eq-bar"></div>
+              <div class="eq-bar"></div>
+              <div class="eq-bar"></div>
+            </div>
+            <div class="track-info">
+              <div class="track-title">\${escapeHtml(p.trackTitle)}</div>
+              <div class="track-artist">\${escapeHtml(p.artistName)}</div>
+              <div class="user-tag">\${escapeHtml(p.userId)} &bull; לפני \${p.lastSeenSecondsAgo} שניות &bull; צבר \${p.totalHoursListened} שעות</div>
+            </div>
+          </div>
+        \`).join('');
+      }
+
+      const topTracks = data.topTracks || [];
+      const tracksList = document.getElementById('topTracksList');
+      if (topTracks.length === 0) {
+        tracksList.innerHTML = '<li class="empty-state">אין עדיין נתוני השמעות</li>';
+      } else {
+        tracksList.innerHTML = topTracks.map((t, idx) => {
+          const rankClass = idx === 0 ? 'top1' : idx === 1 ? 'top2' : idx === 2 ? 'top3' : '';
+          return \`
+            <li class="chart-item">
+              <span class="chart-rank \${rankClass}">#\${idx + 1}</span>
+              <div class="chart-details">
+                <div class="chart-title">\${escapeHtml(t.title)}</div>
+                <div class="chart-sub">\${escapeHtml(t.artist)}</div>
+              </div>
+              <span class="chart-plays">\${t.count} השמעות</span>
+            </li>
+          \`;
+        }).join('');
+      }
+
+      const topArtists = data.topArtists || [];
+      const artistsList = document.getElementById('topArtistsList');
+      if (topArtists.length === 0) {
+        artistsList.innerHTML = '<li class="empty-state">אין עדיין נתוני אמנים</li>';
+      } else {
+        artistsList.innerHTML = topArtists.map((a, idx) => {
+          const rankClass = idx === 0 ? 'top1' : idx === 1 ? 'top2' : idx === 2 ? 'top3' : '';
+          return \`
+            <li class="chart-item">
+              <span class="chart-rank \${rankClass}">#\${idx + 1}</span>
+              <div class="chart-details">
+                <div class="chart-title">\${escapeHtml(a.name)}</div>
+              </div>
+              <span class="chart-plays">\${a.count} השמעות</span>
+            </li>
+          \`;
+        }).join('');
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    fetchAnalytics();
+    setInterval(fetchAnalytics, 5000);
+  </script>
+</body>
+</html>\`;
+}
+
