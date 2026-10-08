@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 270,
-  "last_updated": "2026-10-08T19:38:02.486Z",
+  "version": 271,
+  "last_updated": "2026-10-08T19:38:04.845Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5w5QMf4ZqjDpL2HOgUyoJa",
+      "title": "בית הבובות",
+      "artist": "Beit Habubot",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-08T19:38:04.845Z"
+    },
     {
       "id": "1vBRipAlR5MO9jAaabbW7f",
       "title": "שיר בעפרון",
