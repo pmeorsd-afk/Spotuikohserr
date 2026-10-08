@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 278,
-  "last_updated": "2026-10-08T19:59:18.833Z",
+  "version": 279,
+  "last_updated": "2026-10-08T20:14:23.193Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "27Sd1OtzjDaGURaArp3ssz",
+      "title": "לך אלי",
+      "artist": "Meir Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-08T20:14:23.193Z"
+    },
     {
       "id": "0ZiLUKLtRl6AvTo8PI0qcM",
       "title": "נגד הרוח",
