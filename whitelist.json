@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 273,
-  "last_updated": "2026-10-08T19:39:41.345Z",
+  "version": 274,
+  "last_updated": "2026-10-08T19:39:44.553Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "ילד של אבא",
       "artist": "Mooki",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-08T19:39:41.345Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-08T19:39:44.553Z"
     },
     {
       "id": "5w5QMf4ZqjDpL2HOgUyoJa",
