@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 249,
-  "last_updated": "2026-10-08T13:36:24.957Z",
+  "version": 250,
+  "last_updated": "2026-10-08T13:36:36.377Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -704,9 +704,9 @@
       "id": "2oNXYk8KHThlxBD1GCBSng",
       "title": "זוכר אותנו",
       "artist": "מיתר רובין, בן צור",
-      "status": "approved",
-      "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-08T13:36:24.957Z"
+      "status": "blocked",
+      "notes": "blocked via telegram",
+      "updated_at": "2026-10-08T13:36:36.377Z"
     },
     {
       "id": "7hRk7RQ4Xhhu3i2hiYQ7VP",
