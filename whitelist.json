@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 252,
-  "last_updated": "2026-10-08T14:30:49.698Z",
+  "version": 253,
+  "last_updated": "2026-10-08T14:30:56.784Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "משה פייגלין: \"חיסונים כמו בארה\"ב. רשות בלבד\"",
       "artist": "אבי שושן",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-08T14:30:49.698Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-08T14:30:56.784Z"
     },
     {
       "id": "2oNXYk8KHThlxBD1GCBSng",
