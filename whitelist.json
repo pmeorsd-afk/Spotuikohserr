@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 244,
-  "last_updated": "2026-10-08T10:09:34.748Z",
+  "version": 245,
+  "last_updated": "2026-10-08T10:09:37.467Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "ברוך השם הכל מעולה (Live)",
       "artist": "בן צור, עדן מאירי",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-08T10:09:34.748Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-08T10:09:37.467Z"
     },
     {
       "id": "0lMKrzkvoUK3WFBS8I0aJP",
