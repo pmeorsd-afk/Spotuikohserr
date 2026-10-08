@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 274,
-  "last_updated": "2026-10-08T19:39:44.553Z",
+  "version": 275,
+  "last_updated": "2026-10-08T19:55:41.499Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1VGHtOfjicgALZGihsjfs0",
+      "title": "שאריות של החיים",
+      "artist": "Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-08T19:55:41.499Z"
+    },
     {
       "id": "4qSauJzB88rkLHr7pt1Bl7",
       "title": "ילד של אבא",
