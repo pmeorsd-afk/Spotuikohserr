@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 256,
-  "last_updated": "2026-10-08T16:20:54.085Z",
+  "version": 257,
+  "last_updated": "2026-10-08T18:19:00.338Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7C7dkdsNmKgvWS7rYfVK92",
+      "title": "וביניהם",
+      "artist": "Meir Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-08T18:19:00.338Z"
+    },
     {
       "id": "youtube",
       "title": "אבי הטחול (גרסת ברסלב)-דוד שרר",
