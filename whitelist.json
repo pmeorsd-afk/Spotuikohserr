@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 268,
-  "last_updated": "2026-10-08T19:37:59.116Z",
+  "version": 269,
+  "last_updated": "2026-10-08T19:38:01.337Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -713,8 +713,8 @@
       "title": "יסמין",
       "artist": "הפיל הכחול",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-08T19:37:57.007Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-08T19:38:01.337Z"
     },
     {
       "id": "201btQ2Q0QqOqKuIHy2LWv",
