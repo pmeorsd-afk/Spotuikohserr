@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 329,
-  "last_updated": "2026-10-09T12:15:26.900Z",
+  "version": 330,
+  "last_updated": "2026-10-09T12:23:27.144Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2EeI9eLvFclI29qseDnP4k",
+      "title": "ואמרתם (עתיק)",
+      "artist": "יוסף משה כהנא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:23:27.144Z"
+    },
     {
       "id": "07CfqexvuHPjUyl9w8t21p",
       "title": "אחותינו",
