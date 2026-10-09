@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 334,
-  "last_updated": "2026-10-09T12:32:52.766Z",
+  "version": 335,
+  "last_updated": "2026-10-09T12:32:56.083Z",
   "artists": [
     {
       "id": "3rGb36Q0Tpnbcmkqo5zo1V",
@@ -10,8 +10,8 @@
         "יואלי דוידוביץ"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:32:52.766Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:32:56.083Z"
     },
     {
       "id": "1GUxxofuVbh3GKNXcRMKxU",
