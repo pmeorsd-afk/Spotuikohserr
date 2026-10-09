@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 294,
-  "last_updated": "2026-10-09T06:28:00.968Z",
+  "version": 295,
+  "last_updated": "2026-10-09T06:31:30.503Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2GoD3AAfOedLRxxjttws4Q",
+      "title": "בסוף יהיה טוב",
+      "artist": "Assaf Harush",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T06:31:30.503Z"
+    },
     {
       "id": "1X1c69aHRZODcJtDBeGvVi",
       "title": "כולי תפילה & בן של מלך - בריכת הסולטן לייב",
