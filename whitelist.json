@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 289,
-  "last_updated": "2026-10-09T06:13:57.330Z",
+  "version": 290,
+  "last_updated": "2026-10-09T06:14:00.371Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "Voicemail (Tiësto Remix)",
       "artist": "KUKO, Tiësto",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T06:13:57.330Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T06:14:00.371Z"
     },
     {
       "id": "2OKo7g3KfmCt3kyLvUAL0g",
