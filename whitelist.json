@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 285,
-  "last_updated": "2026-10-09T06:13:46.978Z",
+  "version": 286,
+  "last_updated": "2026-10-09T06:13:50.401Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "Great Fairy Fountain - Piano & Violin",
       "artist": "Nostalgia Dreams",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T06:13:46.978Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T06:13:50.401Z"
     },
     {
       "id": "4UXS0LHX5tZFOBzmbmXGQm",
