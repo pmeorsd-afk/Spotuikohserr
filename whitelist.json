@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 336,
-  "last_updated": "2026-10-09T12:40:54.481Z",
+  "version": 337,
+  "last_updated": "2026-10-09T12:40:56.775Z",
   "artists": [
+    {
+      "id": "3HwVQK92VIS09vSIBOACmd",
+      "canonical_name": "אלירן מזוז",
+      "aliases": [
+        "אלירן מזוז"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:40:56.775Z"
+    },
     {
       "id": "6ZpN6Chn6QlnUQt5jKyS0Q",
       "canonical_name": "jalle band",
