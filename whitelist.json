@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 314,
-  "last_updated": "2026-10-09T12:06:16.722Z",
+  "version": 315,
+  "last_updated": "2026-10-09T12:06:20.371Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "בר יוחאי (עתיק)",
       "artist": "יוסף משה כהנא",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:06:16.722Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:06:20.371Z"
     },
     {
       "id": "4JC6Ig26ZJLPW0N2CjcCNJ",
