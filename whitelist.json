@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 345,
-  "last_updated": "2026-10-09T12:44:52.301Z",
+  "version": 346,
+  "last_updated": "2026-10-09T12:44:55.463Z",
   "artists": [
     {
       "id": "0BOq1jvIXhjGzcqPtgKtlB",
@@ -10,8 +10,8 @@
         "חנני זית"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:44:52.301Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:44:55.463Z"
     },
     {
       "id": "1wYpqpB3OACMUseVn8Z3iP",
