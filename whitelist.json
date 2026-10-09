@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 342,
-  "last_updated": "2026-10-09T12:41:05.899Z",
+  "version": 343,
+  "last_updated": "2026-10-09T12:41:28.289Z",
   "artists": [
+    {
+      "id": "1wYpqpB3OACMUseVn8Z3iP",
+      "canonical_name": "Gal Hever",
+      "aliases": [
+        "Gal Hever"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:41:28.289Z"
+    },
     {
       "id": "3HwVQK92VIS09vSIBOACmd",
       "canonical_name": "אלירן מזוז",
