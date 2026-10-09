@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 327,
-  "last_updated": "2026-10-09T12:11:30.323Z",
+  "version": 328,
+  "last_updated": "2026-10-09T12:15:23.579Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "07CfqexvuHPjUyl9w8t21p",
+      "title": "אחותינו",
+      "artist": "R' Cheskie Weisz, Chaim Horowitz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:15:23.579Z"
+    },
     {
       "id": "5rdyW4ZgquABqSxSErqLiT",
       "title": "האדרת והאמונה",
