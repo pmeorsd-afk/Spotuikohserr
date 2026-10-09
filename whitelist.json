@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 365,
-  "last_updated": "2026-10-09T13:49:41.807Z",
+  "version": 366,
+  "last_updated": "2026-10-09T13:49:45.114Z",
   "artists": [
     {
       "id": "6UsNXOFhgUb13vSHmBuWmm",
@@ -775,8 +775,8 @@
       "title": "שיר המונדיאל 2026",
       "artist": "Srutonim",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T13:49:41.807Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T13:49:45.114Z"
     },
     {
       "id": "7IGOHBGIpuG1nwAQJ3zdgz",
