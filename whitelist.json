@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 343,
-  "last_updated": "2026-10-09T12:41:28.289Z",
+  "version": 344,
+  "last_updated": "2026-10-09T12:41:31.417Z",
   "artists": [
     {
       "id": "1wYpqpB3OACMUseVn8Z3iP",
@@ -10,8 +10,8 @@
         "Gal Hever"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:41:28.289Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:41:31.417Z"
     },
     {
       "id": "3HwVQK92VIS09vSIBOACmd",
