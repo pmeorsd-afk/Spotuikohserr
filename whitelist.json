@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 333,
-  "last_updated": "2026-10-09T12:24:19.086Z",
+  "version": 334,
+  "last_updated": "2026-10-09T12:32:52.766Z",
   "artists": [
+    {
+      "id": "3rGb36Q0Tpnbcmkqo5zo1V",
+      "canonical_name": "יואלי דוידוביץ",
+      "aliases": [
+        "יואלי דוידוביץ"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:32:52.766Z"
+    },
     {
       "id": "1GUxxofuVbh3GKNXcRMKxU",
       "canonical_name": "יוסף משה כהנא",
