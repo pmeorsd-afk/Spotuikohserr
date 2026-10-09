@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 292,
-  "last_updated": "2026-10-09T06:14:41.571Z",
+  "version": 293,
+  "last_updated": "2026-10-09T06:27:58.019Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1X1c69aHRZODcJtDBeGvVi",
+      "title": "כולי תפילה & בן של מלך - בריכת הסולטן לייב",
+      "artist": "Eden Hason, Meydad Tasa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T06:27:58.019Z"
+    },
     {
       "id": "5Dkzvw1WWPF8naTU5gUbY1",
       "title": "Turn The Tide (ft. Sylver)",
