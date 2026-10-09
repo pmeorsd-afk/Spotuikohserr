@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 305,
-  "last_updated": "2026-10-09T06:51:41.850Z",
+  "version": 306,
+  "last_updated": "2026-10-09T08:03:56.494Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4TQmgOWfxnPyD4AIbFuBUb",
+      "title": "מחרוזת חסידית - מנורה לייב",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T08:03:56.494Z"
+    },
     {
       "id": "4sNYW3jSDqgwjUahndBkRZ",
       "title": "לדבקה בך",
