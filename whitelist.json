@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 337,
-  "last_updated": "2026-10-09T12:40:56.775Z",
+  "version": 338,
+  "last_updated": "2026-10-09T12:40:58.801Z",
   "artists": [
     {
       "id": "3HwVQK92VIS09vSIBOACmd",
@@ -20,8 +20,8 @@
         "jalle band"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:40:54.481Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:40:58.801Z"
     },
     {
       "id": "3rGb36Q0Tpnbcmkqo5zo1V",
