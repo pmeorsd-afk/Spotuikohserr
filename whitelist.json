@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 309,
-  "last_updated": "2026-10-09T08:14:19.601Z",
+  "version": 310,
+  "last_updated": "2026-10-09T08:40:31.582Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5wogW5KA9Fvz8MqOjyaIRY",
+      "title": "והריקותי לכם ברכה",
+      "artist": "Gad Elbaz, Roi Harush",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T08:40:31.582Z"
+    },
     {
       "id": "4TQmgOWfxnPyD4AIbFuBUb",
       "title": "מחרוזת חסידית - מנורה לייב",
