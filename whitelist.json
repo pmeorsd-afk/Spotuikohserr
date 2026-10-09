@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 340,
-  "last_updated": "2026-10-09T12:41:02.791Z",
+  "version": 341,
+  "last_updated": "2026-10-09T12:41:04.221Z",
   "artists": [
     {
       "id": "3HwVQK92VIS09vSIBOACmd",
@@ -753,8 +753,8 @@
       "title": "ג'עלה",
       "artist": "אלירן מזוז, Gal Hever, jalle band",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:41:01.119Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:41:04.221Z"
     },
     {
       "id": "2EeI9eLvFclI29qseDnP4k",
