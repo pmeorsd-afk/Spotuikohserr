@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 311,
-  "last_updated": "2026-10-09T08:40:35.141Z",
+  "version": 312,
+  "last_updated": "2026-10-09T09:18:08.930Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4JC6Ig26ZJLPW0N2CjcCNJ",
+      "title": "מחרוזת שבת",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T09:18:08.930Z"
+    },
     {
       "id": "5wogW5KA9Fvz8MqOjyaIRY",
       "title": "והריקותי לכם ברכה",
