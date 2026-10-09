@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 349,
-  "last_updated": "2026-10-09T12:49:57.028Z",
+  "version": 350,
+  "last_updated": "2026-10-09T12:50:00.466Z",
   "artists": [
     {
       "id": "0BOq1jvIXhjGzcqPtgKtlB",
@@ -765,8 +765,8 @@
       "title": "כיף לי בגן שלי",
       "artist": "Eti Granot Weizer",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:49:57.028Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:50:00.466Z"
     },
     {
       "id": "0jJak93T1MVgM7S51j1VlD",
