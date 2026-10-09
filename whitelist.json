@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 286,
-  "last_updated": "2026-10-09T06:13:50.401Z",
+  "version": 287,
+  "last_updated": "2026-10-09T06:13:51.577Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2OKo7g3KfmCt3kyLvUAL0g",
+      "title": "The Search",
+      "artist": "NF",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T06:13:51.577Z"
+    },
     {
       "id": "2DiGr1c5J6vE6BbBNQkIpc",
       "title": "Great Fairy Fountain - Piano & Violin",
