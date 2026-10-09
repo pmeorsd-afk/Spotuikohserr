@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 353,
-  "last_updated": "2026-10-09T12:54:09.750Z",
+  "version": 354,
+  "last_updated": "2026-10-09T12:54:13.876Z",
   "artists": [
     {
       "id": "6UsNXOFhgUb13vSHmBuWmm",
@@ -10,8 +10,8 @@
         "Amit Sharon"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:54:09.750Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:54:13.876Z"
     },
     {
       "id": "0BOq1jvIXhjGzcqPtgKtlB",
