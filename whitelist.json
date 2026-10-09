@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 313,
-  "last_updated": "2026-10-09T09:18:11.910Z",
+  "version": 314,
+  "last_updated": "2026-10-09T12:06:16.722Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Qr8AGn7qhuwLhy7OIU1XH",
+      "title": "בר יוחאי (עתיק)",
+      "artist": "יוסף משה כהנא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:06:16.722Z"
+    },
     {
       "id": "4JC6Ig26ZJLPW0N2CjcCNJ",
       "title": "מחרוזת שבת",
