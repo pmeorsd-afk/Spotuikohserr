@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 339,
-  "last_updated": "2026-10-09T12:41:01.119Z",
+  "version": 340,
+  "last_updated": "2026-10-09T12:41:02.791Z",
   "artists": [
     {
       "id": "3HwVQK92VIS09vSIBOACmd",
@@ -740,6 +740,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0jJak93T1MVgM7S51j1VlD",
+      "title": "יפה ותמה",
+      "artist": "אלירן מזוז, Gal Hever, jalle band",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:41:02.791Z"
+    },
     {
       "id": "6ccTFSWEgjTfJ8agkelBYQ",
       "title": "ג'עלה",
