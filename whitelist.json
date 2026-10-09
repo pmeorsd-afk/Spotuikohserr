@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 335,
-  "last_updated": "2026-10-09T12:32:56.083Z",
+  "version": 336,
+  "last_updated": "2026-10-09T12:40:54.481Z",
   "artists": [
+    {
+      "id": "6ZpN6Chn6QlnUQt5jKyS0Q",
+      "canonical_name": "jalle band",
+      "aliases": [
+        "jalle band"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:40:54.481Z"
+    },
     {
       "id": "3rGb36Q0Tpnbcmkqo5zo1V",
       "canonical_name": "יואלי דוידוביץ",
