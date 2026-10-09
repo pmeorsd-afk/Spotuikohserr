@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 324,
-  "last_updated": "2026-10-09T12:08:46.695Z",
+  "version": 325,
+  "last_updated": "2026-10-09T12:08:49.166Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "קה אכסוף-קרלין",
       "artist": "יוסף משה כהנא",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:08:46.695Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:08:49.166Z"
     },
     {
       "id": "5p9563h238gxtsSpx5OZh9",
