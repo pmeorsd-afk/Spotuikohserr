@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 331,
-  "last_updated": "2026-10-09T12:23:30.124Z",
+  "version": 332,
+  "last_updated": "2026-10-09T12:24:15.772Z",
   "artists": [
+    {
+      "id": "1GUxxofuVbh3GKNXcRMKxU",
+      "canonical_name": "יוסף משה כהנא",
+      "aliases": [
+        "יוסף משה כהנא"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:24:15.772Z"
+    },
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
       "canonical_name": "הרשי אייזנבך",
