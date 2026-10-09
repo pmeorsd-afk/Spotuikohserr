@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 338,
-  "last_updated": "2026-10-09T12:40:58.801Z",
+  "version": 339,
+  "last_updated": "2026-10-09T12:41:01.119Z",
   "artists": [
     {
       "id": "3HwVQK92VIS09vSIBOACmd",
@@ -740,6 +740,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ccTFSWEgjTfJ8agkelBYQ",
+      "title": "ג'עלה",
+      "artist": "אלירן מזוז, Gal Hever, jalle band",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:41:01.119Z"
+    },
     {
       "id": "2EeI9eLvFclI29qseDnP4k",
       "title": "ואמרתם (עתיק)",
