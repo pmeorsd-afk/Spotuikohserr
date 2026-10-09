@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 318,
-  "last_updated": "2026-10-09T12:08:36.183Z",
+  "version": 319,
+  "last_updated": "2026-10-09T12:08:38.268Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "Kol Haneshama",
       "artist": "Eli David, jalle band",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:08:34.377Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:08:38.268Z"
     },
     {
       "id": "7L4wSegKVWO9OOyygnQTRD",
