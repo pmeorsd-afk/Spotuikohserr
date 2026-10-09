@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 332,
-  "last_updated": "2026-10-09T12:24:15.772Z",
+  "version": 333,
+  "last_updated": "2026-10-09T12:24:19.086Z",
   "artists": [
     {
       "id": "1GUxxofuVbh3GKNXcRMKxU",
@@ -10,8 +10,8 @@
         "יוסף משה כהנא"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:24:15.772Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:24:19.086Z"
     },
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
