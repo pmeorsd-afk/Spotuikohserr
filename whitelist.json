@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 352,
-  "last_updated": "2026-10-09T12:50:23.483Z",
+  "version": 353,
+  "last_updated": "2026-10-09T12:54:09.750Z",
   "artists": [
+    {
+      "id": "6UsNXOFhgUb13vSHmBuWmm",
+      "canonical_name": "Amit Sharon",
+      "aliases": [
+        "Amit Sharon"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:54:09.750Z"
+    },
     {
       "id": "0BOq1jvIXhjGzcqPtgKtlB",
       "canonical_name": "חנני זית",
