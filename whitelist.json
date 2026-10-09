@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 284,
-  "last_updated": "2026-10-09T06:13:36.616Z",
+  "version": 285,
+  "last_updated": "2026-10-09T06:13:46.978Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2DiGr1c5J6vE6BbBNQkIpc",
+      "title": "Great Fairy Fountain - Piano & Violin",
+      "artist": "Nostalgia Dreams",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T06:13:46.978Z"
+    },
     {
       "id": "4UXS0LHX5tZFOBzmbmXGQm",
       "title": "הימים עוברים",
