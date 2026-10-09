@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 364,
-  "last_updated": "2026-10-09T13:48:51.247Z",
+  "version": 365,
+  "last_updated": "2026-10-09T13:49:41.807Z",
   "artists": [
     {
       "id": "6UsNXOFhgUb13vSHmBuWmm",
@@ -770,6 +770,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5nNgAucmwfSYQBeOqD1n5O",
+      "title": "שיר המונדיאל 2026",
+      "artist": "Srutonim",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T13:49:41.807Z"
+    },
     {
       "id": "7IGOHBGIpuG1nwAQJ3zdgz",
       "title": "לא מפחד",
