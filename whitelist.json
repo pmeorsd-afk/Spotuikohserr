@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 302,
-  "last_updated": "2026-10-09T06:31:45.343Z",
+  "version": 303,
+  "last_updated": "2026-10-09T06:31:48.266Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "Echo Sax Finale",
       "artist": "Tiësto, Caleb Arredondo",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T06:31:45.343Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T06:31:48.266Z"
     },
     {
       "id": "5Vz9XUiw2emOIRLobTMEkD",
