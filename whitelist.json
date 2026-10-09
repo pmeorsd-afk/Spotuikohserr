@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 341,
-  "last_updated": "2026-10-09T12:41:04.221Z",
+  "version": 342,
+  "last_updated": "2026-10-09T12:41:05.899Z",
   "artists": [
     {
       "id": "3HwVQK92VIS09vSIBOACmd",
@@ -745,8 +745,8 @@
       "title": "יפה ותמה",
       "artist": "אלירן מזוז, Gal Hever, jalle band",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:41:02.791Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:41:05.899Z"
     },
     {
       "id": "6ccTFSWEgjTfJ8agkelBYQ",
