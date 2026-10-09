@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 326,
-  "last_updated": "2026-10-09T12:11:27.368Z",
+  "version": 327,
+  "last_updated": "2026-10-09T12:11:30.323Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "האדרת והאמונה",
       "artist": "Kobi Aflalo, צמאה",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:11:27.368Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:11:30.323Z"
     },
     {
       "id": "2EkzzGVnQGcK8QOjoF9CNC",
