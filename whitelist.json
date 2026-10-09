@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 320,
-  "last_updated": "2026-10-09T12:08:39.632Z",
+  "version": 321,
+  "last_updated": "2026-10-09T12:08:41.579Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5p9563h238gxtsSpx5OZh9",
+      "title": "ותחזינה שירושיר",
+      "artist": "ישראל סוסנה ותזמורתו, זאנוויל ויינברגר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:08:41.579Z"
+    },
     {
       "id": "6YFvyhqM9Pxa5i0hDcFxXI",
       "title": "ואפילו בהסתרה",
