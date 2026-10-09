@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 315,
-  "last_updated": "2026-10-09T12:06:20.371Z",
+  "version": 316,
+  "last_updated": "2026-10-09T12:08:33.076Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7L4wSegKVWO9OOyygnQTRD",
+      "title": "אושפיזין עילאין",
+      "artist": "יואלי דוידוביץ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:08:33.076Z"
+    },
     {
       "id": "2Qr8AGn7qhuwLhy7OIU1XH",
       "title": "בר יוחאי (עתיק)",
