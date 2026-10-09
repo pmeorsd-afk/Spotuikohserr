@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 322,
-  "last_updated": "2026-10-09T12:08:42.675Z",
+  "version": 323,
+  "last_updated": "2026-10-09T12:08:44.754Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "ותחזינה שירושיר",
       "artist": "ישראל סוסנה ותזמורתו, זאנוויל ויינברגר",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:08:41.579Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:08:44.754Z"
     },
     {
       "id": "6YFvyhqM9Pxa5i0hDcFxXI",
