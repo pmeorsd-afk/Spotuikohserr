@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 344,
-  "last_updated": "2026-10-09T12:41:31.417Z",
+  "version": 345,
+  "last_updated": "2026-10-09T12:44:52.301Z",
   "artists": [
+    {
+      "id": "0BOq1jvIXhjGzcqPtgKtlB",
+      "canonical_name": "חנני זית",
+      "aliases": [
+        "חנני זית"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:44:52.301Z"
+    },
     {
       "id": "1wYpqpB3OACMUseVn8Z3iP",
       "canonical_name": "Gal Hever",
