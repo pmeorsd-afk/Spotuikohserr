@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 319,
-  "last_updated": "2026-10-09T12:08:38.268Z",
+  "version": 320,
+  "last_updated": "2026-10-09T12:08:39.632Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6YFvyhqM9Pxa5i0hDcFxXI",
+      "title": "ואפילו בהסתרה",
+      "artist": "יואלי קליין, נתן פוקס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T12:08:39.632Z"
+    },
     {
       "id": "17urK4VWTRczqbU7stcwxh",
       "title": "Kol Haneshama",
