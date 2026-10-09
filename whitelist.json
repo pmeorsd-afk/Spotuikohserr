@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 300,
-  "last_updated": "2026-10-09T06:31:41.914Z",
+  "version": 301,
+  "last_updated": "2026-10-09T06:31:43.469Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "Happiness Is So Sad",
       "artist": "Swedish House Mafia, Lykke Li",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T06:31:39.824Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T06:31:43.469Z"
     },
     {
       "id": "2sksm6zC7U7fRmAGSQICiF",
