@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 304,
-  "last_updated": "2026-10-09T06:51:38.974Z",
+  "version": 305,
+  "last_updated": "2026-10-09T06:51:41.850Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "לדבקה בך",
       "artist": "יאיר אלייצור, Shir David Gadasi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T06:51:38.974Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T06:51:41.850Z"
     },
     {
       "id": "5r87pH2ofTqx375POjVKtc",
