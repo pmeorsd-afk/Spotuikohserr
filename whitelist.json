@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 321,
-  "last_updated": "2026-10-09T12:08:41.579Z",
+  "version": 322,
+  "last_updated": "2026-10-09T12:08:42.675Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -713,8 +713,8 @@
       "title": "ואפילו בהסתרה",
       "artist": "יואלי קליין, נתן פוקס",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T12:08:39.632Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T12:08:42.675Z"
     },
     {
       "id": "17urK4VWTRczqbU7stcwxh",
