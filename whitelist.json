@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 287,
-  "last_updated": "2026-10-09T06:13:51.577Z",
+  "version": 288,
+  "last_updated": "2026-10-09T06:13:55.219Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -705,8 +705,8 @@
       "title": "The Search",
       "artist": "NF",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T06:13:51.577Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T06:13:55.219Z"
     },
     {
       "id": "2DiGr1c5J6vE6BbBNQkIpc",
