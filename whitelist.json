@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 303,
-  "last_updated": "2026-10-09T06:31:48.266Z",
+  "version": 304,
+  "last_updated": "2026-10-09T06:51:38.974Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4sNYW3jSDqgwjUahndBkRZ",
+      "title": "לדבקה בך",
+      "artist": "יאיר אלייצור, Shir David Gadasi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T06:51:38.974Z"
+    },
     {
       "id": "5r87pH2ofTqx375POjVKtc",
       "title": "Echo Sax Finale",
