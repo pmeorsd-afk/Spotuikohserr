@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 363,
-  "last_updated": "2026-10-09T13:48:48.174Z",
+  "version": 364,
+  "last_updated": "2026-10-09T13:48:51.247Z",
   "artists": [
     {
       "id": "6UsNXOFhgUb13vSHmBuWmm",
@@ -775,8 +775,8 @@
       "title": "לא מפחד",
       "artist": "מתן חסן",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-09T13:48:48.174Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-09T13:48:51.247Z"
     },
     {
       "id": "5Fnu5WKIvFACrChZPE8B4X",
