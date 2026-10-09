@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 296,
-  "last_updated": "2026-10-09T06:31:33.979Z",
+  "version": 297,
+  "last_updated": "2026-10-09T06:31:36.012Z",
   "artists": [
     {
       "id": "2zHEEACExzMmffxmf1pn6H",
@@ -700,6 +700,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7tLV2RcvOeXCWkmuTM1Fcz",
+      "title": "Für Immer",
+      "artist": "KUKO, tinkerbel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-09T06:31:36.012Z"
+    },
     {
       "id": "2GoD3AAfOedLRxxjttws4Q",
       "title": "בסוף יהיה טוב",
