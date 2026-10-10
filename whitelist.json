@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 373,
-  "last_updated": "2026-10-10T21:52:05.193Z",
+  "version": 374,
+  "last_updated": "2026-10-10T21:52:08.109Z",
   "artists": [
     {
       "id": "34k6w1EBBzdFGY1pvZHE0r",
@@ -10,8 +10,8 @@
         "אברומי וינברג"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-10T21:52:05.193Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-10T21:52:08.109Z"
     },
     {
       "id": "7nCgIBreDol8TSBNosCCus",
