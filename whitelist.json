@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 367,
-  "last_updated": "2026-10-10T17:52:41.646Z",
+  "version": 368,
+  "last_updated": "2026-10-10T17:52:44.604Z",
   "artists": [
     {
       "id": "7nCgIBreDol8TSBNosCCus",
@@ -780,6 +780,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Nn5rAJpUi1AhPIubW6HU7",
+      "title": "בני ברק או ערק",
+      "artist": "מתן חסן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-10T17:52:44.604Z"
+    },
     {
       "id": "5nNgAucmwfSYQBeOqD1n5O",
       "title": "שיר המונדיאל 2026",
