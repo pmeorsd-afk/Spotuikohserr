@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 372,
-  "last_updated": "2026-10-10T21:51:44.726Z",
+  "version": 373,
+  "last_updated": "2026-10-10T21:52:05.193Z",
   "artists": [
+    {
+      "id": "34k6w1EBBzdFGY1pvZHE0r",
+      "canonical_name": "אברומי וינברג",
+      "aliases": [
+        "אברומי וינברג"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-10T21:52:05.193Z"
+    },
     {
       "id": "7nCgIBreDol8TSBNosCCus",
       "canonical_name": "Shimmy Weiss",
