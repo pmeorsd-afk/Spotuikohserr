@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 371,
-  "last_updated": "2026-10-10T21:51:41.758Z",
+  "version": 372,
+  "last_updated": "2026-10-10T21:51:44.726Z",
   "artists": [
     {
       "id": "7nCgIBreDol8TSBNosCCus",
@@ -785,8 +785,8 @@
       "title": "המורי הזקן",
       "artist": "The Revivo Project",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-10T21:51:41.758Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-10T21:51:44.726Z"
     },
     {
       "id": "2Nn5rAJpUi1AhPIubW6HU7",
