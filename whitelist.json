@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 366,
-  "last_updated": "2026-10-09T13:49:45.114Z",
+  "version": 367,
+  "last_updated": "2026-10-10T17:52:41.646Z",
   "artists": [
+    {
+      "id": "7nCgIBreDol8TSBNosCCus",
+      "canonical_name": "Shimmy Weiss",
+      "aliases": [
+        "Shimmy Weiss"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-10T17:52:41.646Z"
+    },
     {
       "id": "6UsNXOFhgUb13vSHmBuWmm",
       "canonical_name": "Amit Sharon",
