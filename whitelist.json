@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 369,
-  "last_updated": "2026-10-10T17:52:46.339Z",
+  "version": 370,
+  "last_updated": "2026-10-10T17:52:47.506Z",
   "artists": [
     {
       "id": "7nCgIBreDol8TSBNosCCus",
@@ -785,8 +785,8 @@
       "title": "בני ברק או ערק",
       "artist": "מתן חסן",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-10T17:52:44.604Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-10T17:52:47.506Z"
     },
     {
       "id": "5nNgAucmwfSYQBeOqD1n5O",
