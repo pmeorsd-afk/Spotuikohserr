@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 368,
-  "last_updated": "2026-10-10T17:52:44.604Z",
+  "version": 369,
+  "last_updated": "2026-10-10T17:52:46.339Z",
   "artists": [
     {
       "id": "7nCgIBreDol8TSBNosCCus",
@@ -10,8 +10,8 @@
         "Shimmy Weiss"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-10T17:52:41.646Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-10T17:52:46.339Z"
     },
     {
       "id": "6UsNXOFhgUb13vSHmBuWmm",
