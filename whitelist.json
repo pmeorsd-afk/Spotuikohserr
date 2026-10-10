@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 370,
-  "last_updated": "2026-10-10T17:52:47.506Z",
+  "version": 371,
+  "last_updated": "2026-10-10T21:51:41.758Z",
   "artists": [
     {
       "id": "7nCgIBreDol8TSBNosCCus",
@@ -780,6 +780,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2pyZVEG7Rz7imadqsqiAFX",
+      "title": "המורי הזקן",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-10T21:51:41.758Z"
+    },
     {
       "id": "2Nn5rAJpUi1AhPIubW6HU7",
       "title": "בני ברק או ערק",
