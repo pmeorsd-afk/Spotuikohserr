@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 385,
-  "last_updated": "2026-10-11T22:35:27.496Z",
+  "version": 386,
+  "last_updated": "2026-10-11T22:35:30.056Z",
   "artists": [
     {
       "id": "6TCry1yyXqzxMI5zFvnAHv",
@@ -10,8 +10,8 @@
         "The Yanuka Music"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T22:35:27.496Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T22:35:30.056Z"
     },
     {
       "id": "7GexbCzDEFxE5yQ3dHPXIN",
