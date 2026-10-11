@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 380,
-  "last_updated": "2026-10-11T10:14:23.476Z",
+  "version": 381,
+  "last_updated": "2026-10-11T10:18:42.311Z",
   "artists": [
+    {
+      "id": "4JPEPaHmkuHbtB5BQ941w7",
+      "canonical_name": "נחלא",
+      "aliases": [
+        "נחלא"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T10:18:42.311Z"
+    },
     {
       "id": "34k6w1EBBzdFGY1pvZHE0r",
       "canonical_name": "אברומי וינברג",
