@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 387,
-  "last_updated": "2026-10-11T22:38:53.154Z",
+  "version": 388,
+  "last_updated": "2026-10-11T22:38:54.394Z",
   "artists": [
+    {
+      "id": "3yfe9Z2tPCBtnoHrH064PR",
+      "canonical_name": "Lil Shmulik 770",
+      "aliases": [
+        "Lil Shmulik 770"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T22:38:54.394Z"
+    },
     {
       "id": "5YU8tyByYk8UBpecQunEM9",
       "canonical_name": "Pinhas & Sheqel",
