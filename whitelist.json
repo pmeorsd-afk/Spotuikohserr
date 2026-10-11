@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 408,
-  "last_updated": "2026-10-11T22:39:54.315Z",
+  "version": 409,
+  "last_updated": "2026-10-11T22:39:56.446Z",
   "artists": [
+    {
+      "id": "5hlpMZOQY2M8XnY4gNuggj",
+      "canonical_name": "עמית שרון",
+      "aliases": [
+        "עמית שרון"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T22:39:56.446Z"
+    },
     {
       "id": "3Q0n09zFPwxGvl3Ww3b8pO",
       "canonical_name": "Duvid Berger",
