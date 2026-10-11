@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 379,
-  "last_updated": "2026-10-11T10:14:20.591Z",
+  "version": 380,
+  "last_updated": "2026-10-11T10:14:23.476Z",
   "artists": [
     {
       "id": "34k6w1EBBzdFGY1pvZHE0r",
@@ -795,8 +795,8 @@
       "title": "דבקה רפיח",
       "artist": "פרויקט דאפה",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T10:14:20.591Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T10:14:23.476Z"
     },
     {
       "id": "7oXml6FmqvQN9xiOoVltrh",
