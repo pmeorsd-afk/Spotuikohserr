@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 398,
-  "last_updated": "2026-10-11T22:39:14.110Z",
+  "version": 399,
+  "last_updated": "2026-10-11T22:39:15.799Z",
   "artists": [
+    {
+      "id": "2XFNN8AGP7S85uRMDPHKyv",
+      "canonical_name": "אהרל'ה סאמעט",
+      "aliases": [
+        "אהרל'ה סאמעט"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T22:39:15.799Z"
+    },
     {
       "id": "019DLuZpBMcSshuT5nP7IT",
       "canonical_name": "יואלי דיקמן",
