@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 394,
-  "last_updated": "2026-10-11T22:39:05.200Z",
+  "version": 395,
+  "last_updated": "2026-10-11T22:39:07.079Z",
   "artists": [
+    {
+      "id": "78yGaHEZmUqftpV2Q5GPQp",
+      "canonical_name": "בנצי שטיין",
+      "aliases": [
+        "בנצי שטיין"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T22:39:07.079Z"
+    },
     {
       "id": "2w2ofqFgwFosQCjzy8bLBv",
       "canonical_name": "מקהלת נשמה",
