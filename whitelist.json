@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 404,
-  "last_updated": "2026-10-11T22:39:36.052Z",
+  "version": 405,
+  "last_updated": "2026-10-11T22:39:40.488Z",
   "artists": [
+    {
+      "id": "0GarA3BftPRtkPfJJTY2HO",
+      "canonical_name": "יענקי אויש",
+      "aliases": [
+        "יענקי אויש"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T22:39:40.488Z"
+    },
     {
       "id": "0F105Tm8qNZr2X7uQG5Adr",
       "canonical_name": "מקהלת הילדים קינדר",
