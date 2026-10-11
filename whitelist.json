@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 384,
-  "last_updated": "2026-10-11T10:19:11.703Z",
+  "version": 385,
+  "last_updated": "2026-10-11T22:35:27.496Z",
   "artists": [
+    {
+      "id": "6TCry1yyXqzxMI5zFvnAHv",
+      "canonical_name": "The Yanuka Music",
+      "aliases": [
+        "The Yanuka Music"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T22:35:27.496Z"
+    },
     {
       "id": "7GexbCzDEFxE5yQ3dHPXIN",
       "canonical_name": "פרויקט דאפה",
