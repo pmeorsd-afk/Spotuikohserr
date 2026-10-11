@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 390,
-  "last_updated": "2026-10-11T22:38:57.101Z",
+  "version": 391,
+  "last_updated": "2026-10-11T22:38:59.681Z",
   "artists": [
+    {
+      "id": "3vOaGVqHAJ9ZSBIhbPaciM",
+      "canonical_name": "Quarter to Africa",
+      "aliases": [
+        "Quarter to Africa"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T22:38:59.681Z"
+    },
     {
       "id": "3yfe9Z2tPCBtnoHrH064PR",
       "canonical_name": "Lil Shmulik 770",
