@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 406,
-  "last_updated": "2026-10-11T22:39:43.153Z",
+  "version": 407,
+  "last_updated": "2026-10-11T22:39:50.708Z",
   "artists": [
+    {
+      "id": "3Q0n09zFPwxGvl3Ww3b8pO",
+      "canonical_name": "Duvid Berger",
+      "aliases": [
+        "Duvid Berger"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T22:39:50.708Z"
+    },
     {
       "id": "0GarA3BftPRtkPfJJTY2HO",
       "canonical_name": "יענקי אויש",
