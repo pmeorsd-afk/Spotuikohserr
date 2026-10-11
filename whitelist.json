@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 402,
-  "last_updated": "2026-10-11T22:39:31.194Z",
+  "version": 403,
+  "last_updated": "2026-10-11T22:39:33.314Z",
   "artists": [
+    {
+      "id": "0F105Tm8qNZr2X7uQG5Adr",
+      "canonical_name": "מקהלת הילדים קינדר",
+      "aliases": [
+        "מקהלת הילדים קינדר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T22:39:33.314Z"
+    },
     {
       "id": "72hBk38VAFj6JZcajjsTB3",
       "canonical_name": "יואלי גרינפעלד",
