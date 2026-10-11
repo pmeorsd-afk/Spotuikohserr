@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 375,
-  "last_updated": "2026-10-11T09:58:32.567Z",
+  "version": 376,
+  "last_updated": "2026-10-11T09:58:35.085Z",
   "artists": [
     {
       "id": "34k6w1EBBzdFGY1pvZHE0r",
@@ -795,8 +795,8 @@
       "title": "כשושנה",
       "artist": "נחלא",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T09:58:32.567Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T09:58:35.085Z"
     },
     {
       "id": "2pyZVEG7Rz7imadqsqiAFX",
