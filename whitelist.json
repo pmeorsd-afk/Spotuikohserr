@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 395,
-  "last_updated": "2026-10-11T22:39:07.079Z",
+  "version": 396,
+  "last_updated": "2026-10-11T22:39:09.853Z",
   "artists": [
     {
       "id": "78yGaHEZmUqftpV2Q5GPQp",
@@ -10,8 +10,8 @@
         "בנצי שטיין"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T22:39:07.079Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T22:39:09.853Z"
     },
     {
       "id": "2w2ofqFgwFosQCjzy8bLBv",
