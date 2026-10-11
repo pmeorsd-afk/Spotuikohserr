@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 393,
-  "last_updated": "2026-10-11T22:39:04.022Z",
+  "version": 394,
+  "last_updated": "2026-10-11T22:39:05.200Z",
   "artists": [
     {
       "id": "2w2ofqFgwFosQCjzy8bLBv",
@@ -20,8 +20,8 @@
         "משה דוד וייסמאנדל"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T22:39:02.438Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T22:39:05.200Z"
     },
     {
       "id": "3vOaGVqHAJ9ZSBIhbPaciM",
