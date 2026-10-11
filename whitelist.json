@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 377,
-  "last_updated": "2026-10-11T10:02:23.133Z",
+  "version": 378,
+  "last_updated": "2026-10-11T10:02:26.672Z",
   "artists": [
     {
       "id": "34k6w1EBBzdFGY1pvZHE0r",
@@ -795,8 +795,8 @@
       "title": "ארץ הקדושה",
       "artist": "פרויקט דאפה",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T10:02:23.133Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T10:02:26.672Z"
     },
     {
       "id": "0TCy1RcQ6SlFa3tAkP831b",
