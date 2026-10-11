@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 409,
-  "last_updated": "2026-10-11T22:39:56.446Z",
+  "version": 410,
+  "last_updated": "2026-10-11T22:39:59.779Z",
   "artists": [
     {
       "id": "5hlpMZOQY2M8XnY4gNuggj",
@@ -10,8 +10,8 @@
         "עמית שרון"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T22:39:56.446Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T22:39:59.779Z"
     },
     {
       "id": "3Q0n09zFPwxGvl3Ww3b8pO",
