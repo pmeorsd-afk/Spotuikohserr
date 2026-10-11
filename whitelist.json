@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 374,
-  "last_updated": "2026-10-10T21:52:08.109Z",
+  "version": 375,
+  "last_updated": "2026-10-11T09:58:32.567Z",
   "artists": [
     {
       "id": "34k6w1EBBzdFGY1pvZHE0r",
@@ -790,6 +790,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0TCy1RcQ6SlFa3tAkP831b",
+      "title": "כשושנה",
+      "artist": "נחלא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T09:58:32.567Z"
+    },
     {
       "id": "2pyZVEG7Rz7imadqsqiAFX",
       "title": "המורי הזקן",
