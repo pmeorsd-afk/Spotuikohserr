@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 400,
-  "last_updated": "2026-10-11T22:39:18.415Z",
+  "version": 401,
+  "last_updated": "2026-10-11T22:39:28.669Z",
   "artists": [
+    {
+      "id": "72hBk38VAFj6JZcajjsTB3",
+      "canonical_name": "יואלי גרינפעלד",
+      "aliases": [
+        "יואלי גרינפעלד"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T22:39:28.669Z"
+    },
     {
       "id": "2XFNN8AGP7S85uRMDPHKyv",
       "canonical_name": "אהרל'ה סאמעט",
