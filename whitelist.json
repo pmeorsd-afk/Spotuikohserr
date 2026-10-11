@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 401,
-  "last_updated": "2026-10-11T22:39:28.669Z",
+  "version": 402,
+  "last_updated": "2026-10-11T22:39:31.194Z",
   "artists": [
     {
       "id": "72hBk38VAFj6JZcajjsTB3",
@@ -10,8 +10,8 @@
         "יואלי גרינפעלד"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T22:39:28.669Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T22:39:31.194Z"
     },
     {
       "id": "2XFNN8AGP7S85uRMDPHKyv",
