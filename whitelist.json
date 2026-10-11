@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 382,
-  "last_updated": "2026-10-11T10:18:45.374Z",
+  "version": 383,
+  "last_updated": "2026-10-11T10:19:09.002Z",
   "artists": [
+    {
+      "id": "7GexbCzDEFxE5yQ3dHPXIN",
+      "canonical_name": "פרויקט דאפה",
+      "aliases": [
+        "פרויקט דאפה"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T10:19:09.002Z"
+    },
     {
       "id": "4JPEPaHmkuHbtB5BQ941w7",
       "canonical_name": "נחלא",
