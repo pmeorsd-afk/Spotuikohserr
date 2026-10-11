@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 403,
-  "last_updated": "2026-10-11T22:39:33.314Z",
+  "version": 404,
+  "last_updated": "2026-10-11T22:39:36.052Z",
   "artists": [
     {
       "id": "0F105Tm8qNZr2X7uQG5Adr",
@@ -10,8 +10,8 @@
         "מקהלת הילדים קינדר"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T22:39:33.314Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T22:39:36.052Z"
     },
     {
       "id": "72hBk38VAFj6JZcajjsTB3",
