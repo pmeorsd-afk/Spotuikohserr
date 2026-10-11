@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 399,
-  "last_updated": "2026-10-11T22:39:15.799Z",
+  "version": 400,
+  "last_updated": "2026-10-11T22:39:18.415Z",
   "artists": [
     {
       "id": "2XFNN8AGP7S85uRMDPHKyv",
@@ -10,8 +10,8 @@
         "אהרל'ה סאמעט"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T22:39:15.799Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T22:39:18.415Z"
     },
     {
       "id": "019DLuZpBMcSshuT5nP7IT",
