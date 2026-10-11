@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 396,
-  "last_updated": "2026-10-11T22:39:09.853Z",
+  "version": 397,
+  "last_updated": "2026-10-11T22:39:11.179Z",
   "artists": [
+    {
+      "id": "019DLuZpBMcSshuT5nP7IT",
+      "canonical_name": "יואלי דיקמן",
+      "aliases": [
+        "יואלי דיקמן"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-11T22:39:11.179Z"
+    },
     {
       "id": "78yGaHEZmUqftpV2Q5GPQp",
       "canonical_name": "בנצי שטיין",
