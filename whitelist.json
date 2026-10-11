@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 397,
-  "last_updated": "2026-10-11T22:39:11.179Z",
+  "version": 398,
+  "last_updated": "2026-10-11T22:39:14.110Z",
   "artists": [
     {
       "id": "019DLuZpBMcSshuT5nP7IT",
@@ -10,8 +10,8 @@
         "יואלי דיקמן"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T22:39:11.179Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T22:39:14.110Z"
     },
     {
       "id": "78yGaHEZmUqftpV2Q5GPQp",
