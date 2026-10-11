@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 388,
-  "last_updated": "2026-10-11T22:38:54.394Z",
+  "version": 389,
+  "last_updated": "2026-10-11T22:38:56.201Z",
   "artists": [
     {
       "id": "3yfe9Z2tPCBtnoHrH064PR",
@@ -20,8 +20,8 @@
         "Pinhas & Sheqel"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T22:38:53.154Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T22:38:56.201Z"
     },
     {
       "id": "6TCry1yyXqzxMI5zFvnAHv",
