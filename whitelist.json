@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 383,
-  "last_updated": "2026-10-11T10:19:09.002Z",
+  "version": 384,
+  "last_updated": "2026-10-11T10:19:11.703Z",
   "artists": [
     {
       "id": "7GexbCzDEFxE5yQ3dHPXIN",
@@ -10,8 +10,8 @@
         "פרויקט דאפה"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T10:19:09.002Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T10:19:11.703Z"
     },
     {
       "id": "4JPEPaHmkuHbtB5BQ941w7",
