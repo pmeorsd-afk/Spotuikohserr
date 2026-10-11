@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 405,
-  "last_updated": "2026-10-11T22:39:40.488Z",
+  "version": 406,
+  "last_updated": "2026-10-11T22:39:43.153Z",
   "artists": [
     {
       "id": "0GarA3BftPRtkPfJJTY2HO",
@@ -10,8 +10,8 @@
         "יענקי אויש"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-11T22:39:40.488Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-11T22:39:43.153Z"
     },
     {
       "id": "0F105Tm8qNZr2X7uQG5Adr",
