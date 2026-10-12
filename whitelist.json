@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 434,
-  "last_updated": "2026-10-12T15:55:23.210Z",
+  "version": 435,
+  "last_updated": "2026-10-12T15:55:26.305Z",
   "artists": [
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
@@ -1005,8 +1005,8 @@
       "title": "Wandering Thoughts",
       "artist": "Sotto Dreams",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-12T15:55:20.779Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-12T15:55:26.305Z"
     },
     {
       "id": "5ke3go3Q9fRtDnDHshcUmk",
