@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 418,
-  "last_updated": "2026-10-12T08:19:02.084Z",
+  "version": 419,
+  "last_updated": "2026-10-12T11:48:14.613Z",
   "artists": [
+    {
+      "id": "0fMnR3CSj93AVm1cwCNp0L",
+      "canonical_name": "Aviel Sultan",
+      "aliases": [
+        "Aviel Sultan"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-12T11:48:14.613Z"
+    },
     {
       "id": "2RqSKsuk1Nv2drLcQd0HT0",
       "canonical_name": "Aaron Razel",
