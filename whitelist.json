@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 414,
-  "last_updated": "2026-10-12T08:18:52.991Z",
+  "version": 415,
+  "last_updated": "2026-10-12T08:18:54.492Z",
   "artists": [
     {
       "id": "4DiDueIoUtGzv1MazYpnay",
@@ -20,8 +20,8 @@
         "Efraim Markowitz"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-12T08:18:51.455Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-12T08:18:54.492Z"
     },
     {
       "id": "3AOvSrP0wGQlH4uepooNRq",
