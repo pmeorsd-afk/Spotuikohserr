@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 425,
-  "last_updated": "2026-10-12T14:33:00.528Z",
+  "version": 426,
+  "last_updated": "2026-10-12T14:33:04.044Z",
   "artists": [
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
@@ -1005,8 +1005,8 @@
       "title": "ישמח חתני",
       "artist": "Daklon",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-12T14:33:00.528Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-12T14:33:04.044Z"
     },
     {
       "id": "6MwsuFL115vgX9mCHlTZyU",
