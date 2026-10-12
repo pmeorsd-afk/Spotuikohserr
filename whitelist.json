@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 428,
-  "last_updated": "2026-10-12T14:36:19.403Z",
+  "version": 429,
+  "last_updated": "2026-10-12T15:54:54.176Z",
   "artists": [
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
@@ -1000,6 +1000,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5ke3go3Q9fRtDnDHshcUmk",
+      "title": "ניגון ב'",
+      "artist": "ניגוני הינוקא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-12T15:54:54.176Z"
+    },
     {
       "id": "5UXszOqT3cbCofI1Dm8gtC",
       "title": "פרח המדבר",
