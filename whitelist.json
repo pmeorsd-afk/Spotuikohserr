@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 415,
-  "last_updated": "2026-10-12T08:18:54.492Z",
+  "version": 416,
+  "last_updated": "2026-10-12T08:18:56.126Z",
   "artists": [
     {
       "id": "4DiDueIoUtGzv1MazYpnay",
@@ -10,8 +10,8 @@
         "Zanvil Weinberger"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-12T08:18:52.991Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-12T08:18:56.126Z"
     },
     {
       "id": "5gVLG7uKBLu1O7VkzqI4qw",
