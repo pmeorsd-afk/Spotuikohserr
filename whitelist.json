@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 423,
-  "last_updated": "2026-10-12T13:27:14.988Z",
+  "version": 424,
+  "last_updated": "2026-10-12T13:27:18.561Z",
   "artists": [
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
@@ -1005,8 +1005,8 @@
       "title": "הלוואי",
       "artist": "פאר טסי, חנן בן ארי",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-12T13:27:14.988Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-12T13:27:18.561Z"
     },
     {
       "id": "7vXv8385iNKK2cdja1sHrU",
