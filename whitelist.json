@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 424,
-  "last_updated": "2026-10-12T13:27:18.561Z",
+  "version": 425,
+  "last_updated": "2026-10-12T14:33:00.528Z",
   "artists": [
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
@@ -1000,6 +1000,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "22uAZL2cwuGD3NROfm4Qms",
+      "title": "ישמח חתני",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-12T14:33:00.528Z"
+    },
     {
       "id": "6MwsuFL115vgX9mCHlTZyU",
       "title": "הלוואי",
