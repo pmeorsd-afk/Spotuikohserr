@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 419,
-  "last_updated": "2026-10-12T11:48:14.613Z",
+  "version": 420,
+  "last_updated": "2026-10-12T11:48:17.713Z",
   "artists": [
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
@@ -10,8 +10,8 @@
         "Aviel Sultan"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-12T11:48:14.613Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-12T11:48:17.713Z"
     },
     {
       "id": "2RqSKsuk1Nv2drLcQd0HT0",
