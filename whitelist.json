@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 410,
-  "last_updated": "2026-10-11T22:39:59.779Z",
+  "version": 411,
+  "last_updated": "2026-10-12T08:18:06.011Z",
   "artists": [
+    {
+      "id": "3AOvSrP0wGQlH4uepooNRq",
+      "canonical_name": "Botzer",
+      "aliases": [
+        "Botzer"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-12T08:18:06.011Z"
+    },
     {
       "id": "5hlpMZOQY2M8XnY4gNuggj",
       "canonical_name": "עמית שרון",
