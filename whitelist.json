@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 436,
-  "last_updated": "2026-10-12T15:55:28.232Z",
+  "version": 437,
+  "last_updated": "2026-10-12T15:55:31.167Z",
   "artists": [
     {
       "id": "1jVbMc7E8yy5e96QEJXRzh",
@@ -10,8 +10,8 @@
         "Lipa Schmeltzer"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-12T15:55:28.232Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-12T15:55:31.167Z"
     },
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
