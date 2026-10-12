@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 417,
-  "last_updated": "2026-10-12T08:18:59.416Z",
+  "version": 418,
+  "last_updated": "2026-10-12T08:19:02.084Z",
   "artists": [
     {
       "id": "2RqSKsuk1Nv2drLcQd0HT0",
@@ -10,8 +10,8 @@
         "Aaron Razel"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-12T08:18:59.416Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-12T08:19:02.084Z"
     },
     {
       "id": "4DiDueIoUtGzv1MazYpnay",
