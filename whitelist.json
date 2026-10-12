@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 412,
-  "last_updated": "2026-10-12T08:18:08.744Z",
+  "version": 413,
+  "last_updated": "2026-10-12T08:18:51.455Z",
   "artists": [
+    {
+      "id": "5gVLG7uKBLu1O7VkzqI4qw",
+      "canonical_name": "Efraim Markowitz",
+      "aliases": [
+        "Efraim Markowitz"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-12T08:18:51.455Z"
+    },
     {
       "id": "3AOvSrP0wGQlH4uepooNRq",
       "canonical_name": "Botzer",
