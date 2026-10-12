@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 426,
-  "last_updated": "2026-10-12T14:33:04.044Z",
+  "version": 427,
+  "last_updated": "2026-10-12T14:36:16.315Z",
   "artists": [
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
@@ -1000,6 +1000,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5UXszOqT3cbCofI1Dm8gtC",
+      "title": "פרח המדבר",
+      "artist": "Sagiv Cohen, Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-12T14:36:16.315Z"
+    },
     {
       "id": "22uAZL2cwuGD3NROfm4Qms",
       "title": "ישמח חתני",
