@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 429,
-  "last_updated": "2026-10-12T15:54:54.176Z",
+  "version": 430,
+  "last_updated": "2026-10-12T15:54:58.039Z",
   "artists": [
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
@@ -1005,8 +1005,8 @@
       "title": "ניגון ב'",
       "artist": "ניגוני הינוקא",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-12T15:54:54.176Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-12T15:54:58.039Z"
     },
     {
       "id": "5UXszOqT3cbCofI1Dm8gtC",
