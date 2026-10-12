@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 432,
-  "last_updated": "2026-10-12T15:55:16.336Z",
+  "version": 433,
+  "last_updated": "2026-10-12T15:55:20.779Z",
   "artists": [
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
@@ -1000,6 +1000,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0GtKp5BCAvj7skh0M6fg1v",
+      "title": "Wandering Thoughts",
+      "artist": "Sotto Dreams",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-12T15:55:20.779Z"
+    },
     {
       "id": "5ke3go3Q9fRtDnDHshcUmk",
       "title": "ניגון ב'",
