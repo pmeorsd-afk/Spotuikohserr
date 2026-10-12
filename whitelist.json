@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 422,
-  "last_updated": "2026-10-12T13:11:53.220Z",
+  "version": 423,
+  "last_updated": "2026-10-12T13:27:14.988Z",
   "artists": [
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
@@ -1000,6 +1000,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6MwsuFL115vgX9mCHlTZyU",
+      "title": "הלוואי",
+      "artist": "פאר טסי, חנן בן ארי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-12T13:27:14.988Z"
+    },
     {
       "id": "7vXv8385iNKK2cdja1sHrU",
       "title": "תשמור עלי",
