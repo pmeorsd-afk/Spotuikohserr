@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 420,
-  "last_updated": "2026-10-12T11:48:17.713Z",
+  "version": 421,
+  "last_updated": "2026-10-12T13:11:49.922Z",
   "artists": [
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
@@ -1000,6 +1000,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7vXv8385iNKK2cdja1sHrU",
+      "title": "תשמור עלי",
+      "artist": "יאיר אלייצור, E-Z, Bar Tzabary",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-12T13:11:49.922Z"
+    },
     {
       "id": "54z6q1gL1GuNl0XDP87VGJ",
       "title": "דבקה רפיח",
