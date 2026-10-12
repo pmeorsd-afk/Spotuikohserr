@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 416,
-  "last_updated": "2026-10-12T08:18:56.126Z",
+  "version": 417,
+  "last_updated": "2026-10-12T08:18:59.416Z",
   "artists": [
+    {
+      "id": "2RqSKsuk1Nv2drLcQd0HT0",
+      "canonical_name": "Aaron Razel",
+      "aliases": [
+        "Aaron Razel"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-12T08:18:59.416Z"
+    },
     {
       "id": "4DiDueIoUtGzv1MazYpnay",
       "canonical_name": "Zanvil Weinberger",
