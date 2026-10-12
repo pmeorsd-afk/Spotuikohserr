@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 435,
-  "last_updated": "2026-10-12T15:55:26.305Z",
+  "version": 436,
+  "last_updated": "2026-10-12T15:55:28.232Z",
   "artists": [
+    {
+      "id": "1jVbMc7E8yy5e96QEJXRzh",
+      "canonical_name": "Lipa Schmeltzer",
+      "aliases": [
+        "Lipa Schmeltzer"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-12T15:55:28.232Z"
+    },
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
       "canonical_name": "Aviel Sultan",
