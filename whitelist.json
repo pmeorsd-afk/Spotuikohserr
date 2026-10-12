@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 427,
-  "last_updated": "2026-10-12T14:36:16.315Z",
+  "version": 428,
+  "last_updated": "2026-10-12T14:36:19.403Z",
   "artists": [
     {
       "id": "0fMnR3CSj93AVm1cwCNp0L",
@@ -1005,8 +1005,8 @@
       "title": "פרח המדבר",
       "artist": "Sagiv Cohen, Daklon",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-12T14:36:16.315Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-12T14:36:19.403Z"
     },
     {
       "id": "22uAZL2cwuGD3NROfm4Qms",
