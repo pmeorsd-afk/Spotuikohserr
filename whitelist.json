@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 537,
-  "last_updated": "2026-10-13T19:35:15.647Z",
+  "version": 538,
+  "last_updated": "2026-10-13T19:35:20.181Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6JPlSTk7mpboMx3VRxiFTC",
+      "title": "אהבה ראשונה",
+      "artist": "נדב חנציס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:35:20.181Z"
+    },
     {
       "id": "7rU2eldvcR7Iwu07Z9A8w3",
       "title": "אם את כבר הולכת",
