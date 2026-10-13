@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 592,
-  "last_updated": "2026-10-13T19:38:44.442Z",
+  "version": 593,
+  "last_updated": "2026-10-13T19:38:47.464Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "תמיד חלמתי",
       "artist": "Eliad",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:38:44.442Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:38:47.464Z"
     },
     {
       "id": "4QS3Dgcd3dtx9wj7HKOOc7",
