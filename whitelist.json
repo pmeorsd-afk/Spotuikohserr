@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 617,
-  "last_updated": "2026-10-13T19:40:44.739Z",
+  "version": 618,
+  "last_updated": "2026-10-13T19:40:48.006Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "התרת חלומות",
       "artist": "Noifeld's Glasses, Shuli Rand",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:40:44.739Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:40:48.006Z"
     },
     {
       "id": "4bmO4ZJBOqSEVRAN3rrmx4",
