@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 488,
-  "last_updated": "2026-10-13T19:32:19.232Z",
+  "version": 489,
+  "last_updated": "2026-10-13T19:32:21.849Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7KM07Ky2IyUfQlmlo9lSCw",
+      "title": "תנגן",
+      "artist": "ShrekDiMC",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:32:21.849Z"
+    },
     {
       "id": "5QujC6ONKNlrh2TYlfe2FV",
       "title": "וואי לי",
