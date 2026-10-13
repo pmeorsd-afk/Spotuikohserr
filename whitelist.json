@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 480,
-  "last_updated": "2026-10-13T18:41:19.448Z",
+  "version": 481,
+  "last_updated": "2026-10-13T18:41:25.119Z",
   "artists": [
+    {
+      "id": "3LvbEL0S6kskBf0lifrM7x",
+      "canonical_name": "Beri Weber",
+      "aliases": [
+        "Beri Weber"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T18:41:25.119Z"
+    },
     {
       "id": "3DHpWSN267Ce8TxqZQ6bgv",
       "canonical_name": "Vach Family",
