@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 629,
-  "last_updated": "2026-10-13T19:41:19.489Z",
+  "version": 630,
+  "last_updated": "2026-10-13T19:41:22.984Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "מחרוזת סיום הש''ס - Live",
       "artist": "Eli Herzlich",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:41:15.872Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:41:22.984Z"
     },
     {
       "id": "1p4Q4pvOF41ixvOLYKojVM",
