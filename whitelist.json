@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 516,
-  "last_updated": "2026-10-13T19:33:53.165Z",
+  "version": 517,
+  "last_updated": "2026-10-13T19:33:55.266Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5dlEgrCOjy9FTcQM1vrrh5",
+      "title": "עד מחר",
+      "artist": "Eviatar Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:33:55.266Z"
+    },
     {
       "id": "734AMCv7X6sufZrOLJV5ap",
       "title": "עונג שבת",
