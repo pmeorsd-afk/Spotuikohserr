@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 444,
-  "last_updated": "2026-10-13T07:35:02.067Z",
+  "version": 445,
+  "last_updated": "2026-10-13T07:35:06.891Z",
   "artists": [
     {
       "id": "1jVbMc7E8yy5e96QEJXRzh",
@@ -1015,8 +1015,8 @@
       "title": "מהפכה של שמחה",
       "artist": "Omer Adam, ליאור נרקיס",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T07:35:02.067Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T07:35:06.891Z"
     },
     {
       "id": "4OVbwz68bKwy7tdMMMfisJ",
