@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 598,
-  "last_updated": "2026-10-13T19:39:04.415Z",
+  "version": 599,
+  "last_updated": "2026-10-13T19:39:07.852Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "חרקות",
       "artist": "Peled",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:39:04.415Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:39:07.852Z"
     },
     {
       "id": "6JRsbFB9owqVu12t4a5mrI",
