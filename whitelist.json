@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 615,
-  "last_updated": "2026-10-13T19:40:40.426Z",
+  "version": 616,
+  "last_updated": "2026-10-13T19:40:43.009Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4bmO4ZJBOqSEVRAN3rrmx4",
+      "title": "עולה בשביל",
+      "artist": "Aaron Razel, Shuli Rand",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:40:43.009Z"
+    },
     {
       "id": "6eCeenpv2pHVl6qIR5HDZ7",
       "title": "ציון - גרסה מלאה",
