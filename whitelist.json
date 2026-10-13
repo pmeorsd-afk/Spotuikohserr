@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 580,
-  "last_updated": "2026-10-13T19:37:40.275Z",
+  "version": 581,
+  "last_updated": "2026-10-13T19:37:45.224Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1218,7 +1218,7 @@
       "artist": "Dimmu Borgir",
       "status": "approved",
       "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:36:36.948Z"
+      "updated_at": "2026-10-13T19:37:45.224Z"
     },
     {
       "id": "7sYnUihJysp9eSHUTFq9EP",
