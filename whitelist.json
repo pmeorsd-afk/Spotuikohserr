@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 460,
-  "last_updated": "2026-10-13T09:15:57.142Z",
+  "version": 461,
+  "last_updated": "2026-10-13T09:15:59.506Z",
   "artists": [
     {
       "id": "7sCJYXmdHWXAuGexUhzlks",
@@ -10,8 +10,8 @@
         "Shloime Gertner"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T09:15:54.750Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T09:15:59.506Z"
     },
     {
       "id": "2WPFopOnH8xIDAvIX8RypK",
