@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 472,
-  "last_updated": "2026-10-13T18:40:19.531Z",
+  "version": 473,
+  "last_updated": "2026-10-13T18:40:20.974Z",
   "artists": [
     {
       "id": "7ysbokDPSeKJFdExlLa1Zn",
@@ -20,8 +20,8 @@
         "דודי קאליש"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T18:40:17.465Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T18:40:20.974Z"
     },
     {
       "id": "2KnsrVFZm5NAvkUIMayRmC",
