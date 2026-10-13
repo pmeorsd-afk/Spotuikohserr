@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 445,
-  "last_updated": "2026-10-13T07:35:06.891Z",
+  "version": 446,
+  "last_updated": "2026-10-13T07:52:23.832Z",
   "artists": [
+    {
+      "id": "2QL0PF5G5wsbQESK7azhd9",
+      "canonical_name": "Eli Marcus",
+      "aliases": [
+        "Eli Marcus"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T07:52:23.832Z"
+    },
     {
       "id": "1jVbMc7E8yy5e96QEJXRzh",
       "canonical_name": "Lipa Schmeltzer",
