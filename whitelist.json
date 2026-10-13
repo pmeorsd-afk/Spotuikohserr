@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 498,
-  "last_updated": "2026-10-13T19:32:44.715Z",
+  "version": 499,
+  "last_updated": "2026-10-13T19:32:47.795Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "VRF - ווארף",
       "artist": "Hershy Weinberger, Beri Weber",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:32:44.715Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:32:47.795Z"
     },
     {
       "id": "3E94v2pbd2kk0XgeohfJR3",
