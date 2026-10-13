@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 637,
-  "last_updated": "2026-10-13T20:52:11.296Z",
+  "version": 638,
+  "last_updated": "2026-10-13T20:52:13.916Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "The Ones Still Here",
       "artist": "Valhallar Kall",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T20:52:08.596Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T20:52:13.916Z"
     },
     {
       "id": "5fkB2Yjb0fyxHDsAc823ZW",
