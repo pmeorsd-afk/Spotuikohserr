@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 512,
-  "last_updated": "2026-10-13T19:33:41.098Z",
+  "version": 513,
+  "last_updated": "2026-10-13T19:33:44.963Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "במדורות מלחמה",
       "artist": "Ofer Marciano",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:33:41.098Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:33:44.963Z"
     },
     {
       "id": "2CGlVhHnz1LDbZs2u9ezcE",
