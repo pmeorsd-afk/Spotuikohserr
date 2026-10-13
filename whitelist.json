@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 495,
-  "last_updated": "2026-10-13T19:32:37.441Z",
+  "version": 496,
+  "last_updated": "2026-10-13T19:32:40.551Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3E94v2pbd2kk0XgeohfJR3",
+      "title": "מגדלים 2",
+      "artist": "דודו אהרון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:32:40.551Z"
+    },
     {
       "id": "4BnqGasQmJZsFDsrTymuth",
       "title": "מגנט",
