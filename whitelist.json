@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 443,
-  "last_updated": "2026-10-13T07:26:39.778Z",
+  "version": 444,
+  "last_updated": "2026-10-13T07:35:02.067Z",
   "artists": [
     {
       "id": "1jVbMc7E8yy5e96QEJXRzh",
@@ -1010,6 +1010,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2bIFsmffovIlzqXeJGOB5X",
+      "title": "מהפכה של שמחה",
+      "artist": "Omer Adam, ליאור נרקיס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T07:35:02.067Z"
+    },
     {
       "id": "4OVbwz68bKwy7tdMMMfisJ",
       "title": "ה' כל יכול",
