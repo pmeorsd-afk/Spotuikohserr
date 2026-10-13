@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 467,
-  "last_updated": "2026-10-13T09:17:01.516Z",
+  "version": 468,
+  "last_updated": "2026-10-13T18:38:50.128Z",
   "artists": [
+    {
+      "id": "0VXG44vdmNhcTCipc2Iz3Z",
+      "canonical_name": "Zusha",
+      "aliases": [
+        "Zusha"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T18:38:50.128Z"
+    },
     {
       "id": "6pEd9IH5zxk8oJtWRRZ3Kx",
       "canonical_name": "Zisha'la",
