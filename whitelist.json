@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 542,
-  "last_updated": "2026-10-13T19:35:37.185Z",
+  "version": 543,
+  "last_updated": "2026-10-13T19:35:39.477Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0ZFeVCKCMCXUQ1TKVd2azW",
+      "title": "The Sound of Silence",
+      "artist": "Pentatonix",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:35:39.477Z"
+    },
     {
       "id": "1xh45NhqemL8MSmkBIPPz4",
       "title": "Birchos Avicha / Birchos Habanim",
