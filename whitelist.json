@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 608,
-  "last_updated": "2026-10-13T19:40:19.995Z",
+  "version": 609,
+  "last_updated": "2026-10-13T19:40:23.992Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "Thunder",
       "artist": "Imagine Dragons",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:40:19.995Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:40:23.992Z"
     },
     {
       "id": "4jurtysyzLBMr64w1uYIau",
