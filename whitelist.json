@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 621,
-  "last_updated": "2026-10-13T19:40:54.911Z",
+  "version": 622,
+  "last_updated": "2026-10-13T19:40:57.773Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5lQH1IKPEFIB4sQ6zRfVzG",
+      "title": "מחבק בקבוק",
+      "artist": "Moshe Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:40:57.773Z"
+    },
     {
       "id": "4AZv2n6wHEqFZVyAhnwEA4",
       "title": "מלא עוד כוס חבר",
