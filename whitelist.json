@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 610,
-  "last_updated": "2026-10-13T19:40:25.762Z",
+  "version": 611,
+  "last_updated": "2026-10-13T19:40:29.876Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "שיר ההודיה",
       "artist": "jalle band, אלירן מזוז, חנני זית, Aviel Sultan",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:40:25.762Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:40:29.876Z"
     },
     {
       "id": "1zB4vmk8tFRmM9UULNzbLB",
