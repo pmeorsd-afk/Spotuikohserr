@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 545,
-  "last_updated": "2026-10-13T19:35:45.979Z",
+  "version": 546,
+  "last_updated": "2026-10-13T19:35:48.102Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4wRmeX5mNKHCEL0lV3fcV7",
+      "title": "עוד נגיעה",
+      "artist": "The Friends of Natasha",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:35:48.102Z"
+    },
     {
       "id": "0ZFeVCKCMCXUQ1TKVd2azW",
       "title": "The Sound of Silence",
