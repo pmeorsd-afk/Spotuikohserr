@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 499,
-  "last_updated": "2026-10-13T19:32:47.795Z",
+  "version": 500,
+  "last_updated": "2026-10-13T19:32:50.391Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4daf4HrJMkrSmIhEflIwAE",
+      "title": "מחרוזת פסנתרים - Live",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:32:50.391Z"
+    },
     {
       "id": "6QNeOirrWpLu5inKRFTlwA",
       "title": "VRF - ווארף",
