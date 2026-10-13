@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 476,
-  "last_updated": "2026-10-13T18:40:29.274Z",
+  "version": 477,
+  "last_updated": "2026-10-13T18:40:31.025Z",
   "artists": [
+    {
+      "id": "0tIEZbEeNOlhSVY84NVVqg",
+      "canonical_name": "מנדי גולדברג",
+      "aliases": [
+        "מנדי גולדברג"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T18:40:31.025Z"
+    },
     {
       "id": "7ysbokDPSeKJFdExlLa1Zn",
       "canonical_name": "מוטי איידנסון",
