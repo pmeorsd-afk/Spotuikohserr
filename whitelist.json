@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 639,
-  "last_updated": "2026-10-13T20:52:16.329Z",
+  "version": 640,
+  "last_updated": "2026-10-13T20:55:30.316Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7vYHjRjcLDum4sr1cgsc0f",
+      "title": "Hear the Iron Sing",
+      "artist": "Valhallar Kall",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T20:55:30.316Z"
+    },
     {
       "id": "3oQmt3HSSb5jAKn550t9gw",
       "title": "The North Made Us Ready",
