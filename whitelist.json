@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 510,
-  "last_updated": "2026-10-13T19:33:34.622Z",
+  "version": 511,
+  "last_updated": "2026-10-13T19:33:38.199Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "כבר לא שמח",
       "artist": "נדב חנציס, אופק אדנק",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:33:34.622Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:33:38.199Z"
     },
     {
       "id": "7wkWZVXeermsMN69ehO5aa",
