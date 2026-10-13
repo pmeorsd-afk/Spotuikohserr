@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 548,
-  "last_updated": "2026-10-13T19:35:55.337Z",
+  "version": 549,
+  "last_updated": "2026-10-13T19:35:58.294Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3tT0AuW2Xjykbx5TcYv64j",
+      "title": "תקופה חרא",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:35:58.294Z"
+    },
     {
       "id": "2QkVXq7dLpefWAiETsvIOs",
       "title": "אהובתי כבר לא רואה אותי",
