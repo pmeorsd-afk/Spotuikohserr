@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 529,
-  "last_updated": "2026-10-13T19:34:38.555Z",
+  "version": 530,
+  "last_updated": "2026-10-13T19:34:41.668Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3v68sJRnOLir4wN9yaGgGF",
+      "title": "לא פראיירים",
+      "artist": "Hadag Nahash",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:34:41.668Z"
+    },
     {
       "id": "7tQojtI7wYjDxJiJ06FyZB",
       "title": "קיפוד על הזקן",
