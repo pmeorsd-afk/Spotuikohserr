@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 483,
-  "last_updated": "2026-10-13T18:41:28.746Z",
+  "version": 484,
+  "last_updated": "2026-10-13T18:41:30.377Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -10,8 +10,8 @@
         "Hershy Weinberger"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T18:41:27.122Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T18:41:30.377Z"
     },
     {
       "id": "3LvbEL0S6kskBf0lifrM7x",
