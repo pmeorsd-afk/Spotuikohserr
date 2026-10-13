@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 505,
-  "last_updated": "2026-10-13T19:33:15.654Z",
+  "version": 506,
+  "last_updated": "2026-10-13T19:33:18.265Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "מחרוזת פסנתרים - Live",
       "artist": "Eyal Golan",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:33:12.342Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:33:18.265Z"
     },
     {
       "id": "6QNeOirrWpLu5inKRFTlwA",
