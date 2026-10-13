@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 454,
-  "last_updated": "2026-10-13T08:00:01.148Z",
+  "version": 455,
+  "last_updated": "2026-10-13T08:00:05.768Z",
   "artists": [
     {
       "id": "4jZTumxAYFA6HqjqLOgubv",
@@ -1045,8 +1045,8 @@
       "title": "Adon Olam",
       "artist": "A.K.A. Pella",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T08:00:01.148Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T08:00:05.768Z"
     },
     {
       "id": "7nCe56CzvRKGqTIs5k1dYm",
