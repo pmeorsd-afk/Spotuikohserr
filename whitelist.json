@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 478,
-  "last_updated": "2026-10-13T18:40:34.212Z",
+  "version": 479,
+  "last_updated": "2026-10-13T18:41:14.685Z",
   "artists": [
+    {
+      "id": "3DHpWSN267Ce8TxqZQ6bgv",
+      "canonical_name": "Vach Family",
+      "aliases": [
+        "Vach Family"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T18:41:14.685Z"
+    },
     {
       "id": "0tIEZbEeNOlhSVY84NVVqg",
       "canonical_name": "מנדי גולדברג",
