@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 589,
-  "last_updated": "2026-10-13T19:38:36.004Z",
+  "version": 590,
+  "last_updated": "2026-10-13T19:38:39.673Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "רק אותך אהבתי",
       "artist": "Yossi Eden",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:38:36.004Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:38:39.673Z"
     },
     {
       "id": "1iYQAtJsnzONJqCCLeHpNY",
