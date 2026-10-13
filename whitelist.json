@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 577,
-  "last_updated": "2026-10-13T19:37:30.774Z",
+  "version": 578,
+  "last_updated": "2026-10-13T19:37:33.681Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1201,8 +1201,8 @@
       "title": "לא הפסקתי לחפש אותך",
       "artist": "Shlomo Artzi, Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:37:30.774Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:37:33.681Z"
     },
     {
       "id": "3JaRl4D6PARxz4aNYgMYtx",
