@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 459,
-  "last_updated": "2026-10-13T09:15:54.750Z",
+  "version": 460,
+  "last_updated": "2026-10-13T09:15:57.142Z",
   "artists": [
     {
       "id": "7sCJYXmdHWXAuGexUhzlks",
@@ -20,8 +20,8 @@
         "Yossi Green"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T09:15:52.361Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T09:15:57.142Z"
     },
     {
       "id": "78jIrb1ifoNvqw10CzHi09",
