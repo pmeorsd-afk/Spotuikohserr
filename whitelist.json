@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 497,
-  "last_updated": "2026-10-13T19:32:42.819Z",
+  "version": 498,
+  "last_updated": "2026-10-13T19:32:44.715Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6QNeOirrWpLu5inKRFTlwA",
+      "title": "VRF - ווארף",
+      "artist": "Hershy Weinberger, Beri Weber",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:32:44.715Z"
+    },
     {
       "id": "3E94v2pbd2kk0XgeohfJR3",
       "title": "מגדלים 2",
