@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 591,
-  "last_updated": "2026-10-13T19:38:41.788Z",
+  "version": 592,
+  "last_updated": "2026-10-13T19:38:44.442Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5eJEIlx5iUqEokq3cOzD4D",
+      "title": "תמיד חלמתי",
+      "artist": "Eliad",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:38:44.442Z"
+    },
     {
       "id": "4QS3Dgcd3dtx9wj7HKOOc7",
       "title": "נאחז באוויר",
