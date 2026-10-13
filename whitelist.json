@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 462,
-  "last_updated": "2026-10-13T09:16:08.157Z",
+  "version": 463,
+  "last_updated": "2026-10-13T09:16:11.612Z",
   "artists": [
     {
       "id": "2plllpJj0sU7FsdZrn8EHq",
@@ -10,8 +10,8 @@
         "Maccabeats"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T09:16:08.157Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T09:16:11.612Z"
     },
     {
       "id": "7sCJYXmdHWXAuGexUhzlks",
