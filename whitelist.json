@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 457,
-  "last_updated": "2026-10-13T08:20:57.979Z",
+  "version": 458,
+  "last_updated": "2026-10-13T09:15:52.361Z",
   "artists": [
+    {
+      "id": "2WPFopOnH8xIDAvIX8RypK",
+      "canonical_name": "Yossi Green",
+      "aliases": [
+        "Yossi Green"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T09:15:52.361Z"
+    },
     {
       "id": "78jIrb1ifoNvqw10CzHi09",
       "canonical_name": "הראל טל",
