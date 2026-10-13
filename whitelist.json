@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 588,
-  "last_updated": "2026-10-13T19:38:30.705Z",
+  "version": 589,
+  "last_updated": "2026-10-13T19:38:36.004Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0ZadcJfYlJ7euYqqJZssJm",
+      "title": "רק אותך אהבתי",
+      "artist": "Yossi Eden",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:38:36.004Z"
+    },
     {
       "id": "1iYQAtJsnzONJqCCLeHpNY",
       "title": "וידה לוקה",
