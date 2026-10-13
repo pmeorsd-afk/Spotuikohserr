@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 448,
-  "last_updated": "2026-10-13T07:52:35.386Z",
+  "version": 449,
+  "last_updated": "2026-10-13T07:52:38.466Z",
   "artists": [
     {
       "id": "0Vp26EZ6tkXjxmqzABrs5T",
@@ -10,8 +10,8 @@
         "Chony Milecki"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T07:52:35.386Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T07:52:38.466Z"
     },
     {
       "id": "2QL0PF5G5wsbQESK7azhd9",
