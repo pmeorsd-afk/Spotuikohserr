@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 482,
-  "last_updated": "2026-10-13T18:41:27.122Z",
+  "version": 483,
+  "last_updated": "2026-10-13T18:41:28.746Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -20,8 +20,8 @@
         "Beri Weber"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T18:41:25.119Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T18:41:28.746Z"
     },
     {
       "id": "3DHpWSN267Ce8TxqZQ6bgv",
