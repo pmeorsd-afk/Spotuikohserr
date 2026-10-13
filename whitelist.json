@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 543,
-  "last_updated": "2026-10-13T19:35:39.477Z",
+  "version": 544,
+  "last_updated": "2026-10-13T19:35:42.976Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "Birchos Avicha / Birchos Habanim",
       "artist": "A.K.A. Pella",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:35:37.185Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:35:42.976Z"
     },
     {
       "id": "0rVTBbyS7Etl0lI3bpwo0h",
