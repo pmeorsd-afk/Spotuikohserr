@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 590,
-  "last_updated": "2026-10-13T19:38:39.673Z",
+  "version": 591,
+  "last_updated": "2026-10-13T19:38:41.788Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4QS3Dgcd3dtx9wj7HKOOc7",
+      "title": "נאחז באוויר",
+      "artist": "Gidi Gov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:38:41.788Z"
+    },
     {
       "id": "0ZadcJfYlJ7euYqqJZssJm",
       "title": "רק אותך אהבתי",
