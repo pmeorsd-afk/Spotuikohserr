@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 521,
-  "last_updated": "2026-10-13T19:34:05.311Z",
+  "version": 522,
+  "last_updated": "2026-10-13T19:34:12.002Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "62yJjFtgkhUrXktIoSjgP2",
+      "title": "Radioactive",
+      "artist": "Imagine Dragons",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:34:12.002Z"
+    },
     {
       "id": "5dlEgrCOjy9FTcQM1vrrh5",
       "title": "עד מחר",
