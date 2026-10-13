@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 536,
-  "last_updated": "2026-10-13T19:35:12.602Z",
+  "version": 537,
+  "last_updated": "2026-10-13T19:35:15.647Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "אם את כבר הולכת",
       "artist": "נדב חנציס",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:35:12.602Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:35:15.647Z"
     },
     {
       "id": "6q407anU9HRxKp0ek7SHf9",
