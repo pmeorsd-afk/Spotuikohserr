@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 492,
-  "last_updated": "2026-10-13T19:32:29.436Z",
+  "version": 493,
+  "last_updated": "2026-10-13T19:32:31.448Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Lm4r7GD0ybaPWQjjhLeK0",
+      "title": "סה לה וי",
+      "artist": "Kobi Peretz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:32:31.448Z"
+    },
     {
       "id": "7wL2FfAPuP90EqSBALn7qM",
       "title": "התעוררתי עם נמר",
