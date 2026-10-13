@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 560,
-  "last_updated": "2026-10-13T19:36:32.239Z",
+  "version": 561,
+  "last_updated": "2026-10-13T19:36:35.168Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7sYnUihJysp9eSHUTFq9EP",
+      "title": "דאון",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:36:35.168Z"
+    },
     {
       "id": "4zqlCicLICAUkPYYqnPbkn",
       "title": "Galiya",
