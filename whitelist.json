@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 539,
-  "last_updated": "2026-10-13T19:35:23.932Z",
+  "version": 540,
+  "last_updated": "2026-10-13T19:35:27.821Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0rVTBbyS7Etl0lI3bpwo0h",
+      "title": "אבי הטחול",
+      "artist": "רואי אדם",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:35:27.821Z"
+    },
     {
       "id": "6JPlSTk7mpboMx3VRxiFTC",
       "title": "אהבה ראשונה",
