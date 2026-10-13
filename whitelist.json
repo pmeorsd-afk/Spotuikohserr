@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 565,
-  "last_updated": "2026-10-13T19:36:44.022Z",
+  "version": 566,
+  "last_updated": "2026-10-13T19:36:45.535Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1VlZ3l7Ea1vVXl2LqivNuS",
+      "title": "לא הפסקתי לחפש אותך",
+      "artist": "Shlomo Artzi, Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:36:45.535Z"
+    },
     {
       "id": "3JaRl4D6PARxz4aNYgMYtx",
       "title": "הצפרדע",
