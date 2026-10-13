@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 585,
-  "last_updated": "2026-10-13T19:37:56.179Z",
+  "version": 586,
+  "last_updated": "2026-10-13T19:37:59.005Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1497,8 +1497,8 @@
       "title": "נתתי לך בית",
       "artist": "אופק אדנק",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:37:53.383Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:37:59.005Z"
     },
     {
       "id": "68kVzJf0STAv91tuLutuDr",
