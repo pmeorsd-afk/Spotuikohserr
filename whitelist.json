@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 490,
-  "last_updated": "2026-10-13T19:32:24.344Z",
+  "version": 491,
+  "last_updated": "2026-10-13T19:32:26.461Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7wL2FfAPuP90EqSBALn7qM",
+      "title": "התעוררתי עם נמר",
+      "artist": "Omer Adam, E-Z",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:32:26.461Z"
+    },
     {
       "id": "7KM07Ky2IyUfQlmlo9lSCw",
       "title": "תנגן",
