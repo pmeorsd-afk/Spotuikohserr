@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 642,
-  "last_updated": "2026-10-13T21:24:40.806Z",
+  "version": 643,
+  "last_updated": "2026-10-13T21:24:44.420Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "DARKSIDE",
       "artist": "Neoni",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T21:24:40.806Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T21:24:44.420Z"
     },
     {
       "id": "7vYHjRjcLDum4sr1cgsc0f",
