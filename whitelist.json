@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 534,
-  "last_updated": "2026-10-13T19:34:57.149Z",
+  "version": 535,
+  "last_updated": "2026-10-13T19:35:00.434Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "Shirat Hastiker (Sticker Song)",
       "artist": "Hadag Nahash",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:34:54.468Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:35:00.434Z"
     },
     {
       "id": "0rXOX9yyDrbDRXVrBtb3Qa",
