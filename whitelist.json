@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 619,
-  "last_updated": "2026-10-13T19:40:50.707Z",
+  "version": 620,
+  "last_updated": "2026-10-13T19:40:52.597Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4AZv2n6wHEqFZVyAhnwEA4",
+      "title": "מלא עוד כוס חבר",
+      "artist": "Avi Biter",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:40:52.597Z"
+    },
     {
       "id": "0tnH1qEidXyFVZvbpGk1Uo",
       "title": "נדרתי נדר",
