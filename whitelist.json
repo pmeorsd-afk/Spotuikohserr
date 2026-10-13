@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 570,
-  "last_updated": "2026-10-13T19:36:57.387Z",
+  "version": 571,
+  "last_updated": "2026-10-13T19:37:00.423Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "כוכבים",
       "artist": "שילה בן סעדון",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:36:57.387Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:37:00.423Z"
     },
     {
       "id": "6b81SZnVeA0USPODwCSjeD",
