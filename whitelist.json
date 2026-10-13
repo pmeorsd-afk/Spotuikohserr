@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 494,
-  "last_updated": "2026-10-13T19:32:35.258Z",
+  "version": 495,
+  "last_updated": "2026-10-13T19:32:37.441Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4BnqGasQmJZsFDsrTymuth",
+      "title": "מגנט",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:32:37.441Z"
+    },
     {
       "id": "4Lm4r7GD0ybaPWQjjhLeK0",
       "title": "סה לה וי",
