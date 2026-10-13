@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 593,
-  "last_updated": "2026-10-13T19:38:47.464Z",
+  "version": 594,
+  "last_updated": "2026-10-13T19:38:49.618Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ve80cifNREUQiY6g2d6h6",
+      "title": "שמש",
+      "artist": "Hadag Nahash, Shai Tsabari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:38:49.618Z"
+    },
     {
       "id": "5eJEIlx5iUqEokq3cOzD4D",
       "title": "תמיד חלמתי",
