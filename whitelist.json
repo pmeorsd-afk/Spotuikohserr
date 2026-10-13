@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 468,
-  "last_updated": "2026-10-13T18:38:50.128Z",
+  "version": 469,
+  "last_updated": "2026-10-13T18:38:53.766Z",
   "artists": [
     {
       "id": "0VXG44vdmNhcTCipc2Iz3Z",
@@ -10,8 +10,8 @@
         "Zusha"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T18:38:50.128Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T18:38:53.766Z"
     },
     {
       "id": "6pEd9IH5zxk8oJtWRRZ3Kx",
