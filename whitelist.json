@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 587,
-  "last_updated": "2026-10-13T19:38:27.231Z",
+  "version": 588,
+  "last_updated": "2026-10-13T19:38:30.705Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "וידה לוקה",
       "artist": "ShrekDiMC",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:38:27.231Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:38:30.705Z"
     },
     {
       "id": "4EN9nGt9TWutt0iDTRnXjY",
