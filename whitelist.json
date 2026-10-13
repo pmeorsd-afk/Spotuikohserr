@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 623,
-  "last_updated": "2026-10-13T19:41:00.721Z",
+  "version": 624,
+  "last_updated": "2026-10-13T19:41:03.957Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "מחבק בקבוק",
       "artist": "Moshe Cohen",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:40:57.773Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:41:03.957Z"
     },
     {
       "id": "4AZv2n6wHEqFZVyAhnwEA4",
