@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 622,
-  "last_updated": "2026-10-13T19:40:57.773Z",
+  "version": 623,
+  "last_updated": "2026-10-13T19:41:00.721Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3St0rKm8yXVMaB2u4ZAhal",
+      "title": "דירה בעומקים",
+      "artist": "Shir Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:41:00.721Z"
+    },
     {
       "id": "5lQH1IKPEFIB4sQ6zRfVzG",
       "title": "מחבק בקבוק",
