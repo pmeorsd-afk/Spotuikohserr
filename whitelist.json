@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 641,
-  "last_updated": "2026-10-13T20:55:34.575Z",
+  "version": 642,
+  "last_updated": "2026-10-13T21:24:40.806Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6xlOnm5MITIKtixzJW8R0j",
+      "title": "DARKSIDE",
+      "artist": "Neoni",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T21:24:40.806Z"
+    },
     {
       "id": "7vYHjRjcLDum4sr1cgsc0f",
       "title": "Hear the Iron Sing",
