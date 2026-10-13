@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 479,
-  "last_updated": "2026-10-13T18:41:14.685Z",
+  "version": 480,
+  "last_updated": "2026-10-13T18:41:19.448Z",
   "artists": [
     {
       "id": "3DHpWSN267Ce8TxqZQ6bgv",
@@ -10,8 +10,8 @@
         "Vach Family"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T18:41:14.685Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T18:41:19.448Z"
     },
     {
       "id": "0tIEZbEeNOlhSVY84NVVqg",
