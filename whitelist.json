@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 581,
-  "last_updated": "2026-10-13T19:37:45.224Z",
+  "version": 582,
+  "last_updated": "2026-10-13T19:37:49.579Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1305,8 +1305,8 @@
       "title": "אבי הטחול",
       "artist": "רואי אדם",
       "status": "approved",
-      "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-13T19:35:31.905Z"
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:37:49.579Z"
     },
     {
       "id": "6JPlSTk7mpboMx3VRxiFTC",
