@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 607,
-  "last_updated": "2026-10-13T19:40:17.647Z",
+  "version": 608,
+  "last_updated": "2026-10-13T19:40:19.995Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1zB4vmk8tFRmM9UULNzbLB",
+      "title": "Thunder",
+      "artist": "Imagine Dragons",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:40:19.995Z"
+    },
     {
       "id": "4jurtysyzLBMr64w1uYIau",
       "title": "קחי לך זמן",
