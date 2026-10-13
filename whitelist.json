@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 440,
-  "last_updated": "2026-10-13T06:55:15.613Z",
+  "version": 441,
+  "last_updated": "2026-10-13T06:55:19.031Z",
   "artists": [
     {
       "id": "1jVbMc7E8yy5e96QEJXRzh",
@@ -1015,8 +1015,8 @@
       "title": "מחרוזת שירי שבת - שירי מוסף",
       "artist": "להקת לב אבות",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T06:55:15.613Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T06:55:19.031Z"
     },
     {
       "id": "3kLZDIuccNcuQRKE4PhgLp",
