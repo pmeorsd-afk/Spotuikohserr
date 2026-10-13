@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 451,
-  "last_updated": "2026-10-13T07:57:57.351Z",
+  "version": 452,
+  "last_updated": "2026-10-13T07:58:43.596Z",
   "artists": [
+    {
+      "id": "4jZTumxAYFA6HqjqLOgubv",
+      "canonical_name": "The New York City Chanukah Ensemble",
+      "aliases": [
+        "The New York City Chanukah Ensemble"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T07:58:43.596Z"
+    },
     {
       "id": "0Vp26EZ6tkXjxmqzABrs5T",
       "canonical_name": "Chony Milecki",
