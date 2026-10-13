@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 469,
-  "last_updated": "2026-10-13T18:38:53.766Z",
+  "version": 470,
+  "last_updated": "2026-10-13T18:40:13.821Z",
   "artists": [
+    {
+      "id": "2KnsrVFZm5NAvkUIMayRmC",
+      "canonical_name": "שמוליק קליין",
+      "aliases": [
+        "שמוליק קליין"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T18:40:13.821Z"
+    },
     {
       "id": "0VXG44vdmNhcTCipc2Iz3Z",
       "canonical_name": "Zusha",
