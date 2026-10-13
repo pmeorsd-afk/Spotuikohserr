@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 626,
-  "last_updated": "2026-10-13T19:41:09.701Z",
+  "version": 627,
+  "last_updated": "2026-10-13T19:41:13.130Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "ואז את תראי - מנורה לייב 2026",
       "artist": "Moshik Afia, Dikla",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:41:09.701Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:41:13.130Z"
     },
     {
       "id": "3St0rKm8yXVMaB2u4ZAhal",
