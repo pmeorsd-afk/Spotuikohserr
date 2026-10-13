@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 531,
-  "last_updated": "2026-10-13T19:34:45.121Z",
+  "version": 532,
+  "last_updated": "2026-10-13T19:34:50.321Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0rXOX9yyDrbDRXVrBtb3Qa",
+      "title": "יום שישי",
+      "artist": "Hadag Nahash, Izhak Klepter",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:34:50.321Z"
+    },
     {
       "id": "3v68sJRnOLir4wN9yaGgGF",
       "title": "לא פראיירים",
