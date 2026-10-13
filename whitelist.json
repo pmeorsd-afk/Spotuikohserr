@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 519,
-  "last_updated": "2026-10-13T19:33:59.466Z",
+  "version": 520,
+  "last_updated": "2026-10-13T19:34:02.076Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "עד מחר",
       "artist": "Eviatar Banai",
       "status": "approved",
-      "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-13T19:33:59.466Z"
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:34:02.076Z"
     },
     {
       "id": "734AMCv7X6sufZrOLJV5ap",
