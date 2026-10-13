@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 554,
-  "last_updated": "2026-10-13T19:36:19.773Z",
+  "version": 555,
+  "last_updated": "2026-10-13T19:36:22.018Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "135jrUJgJwjwzIrto0I0fk",
+      "title": "לקחו לי את החופש",
+      "artist": "Alon Hasson",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:36:22.018Z"
+    },
     {
       "id": "4dELL8S6XVMibwBkjJACF1",
       "title": "לילות וקללות",
