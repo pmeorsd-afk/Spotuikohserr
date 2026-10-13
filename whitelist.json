@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 611,
-  "last_updated": "2026-10-13T19:40:29.876Z",
+  "version": 612,
+  "last_updated": "2026-10-13T19:40:32.222Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5gfN0Mp01a6cpxlm10UYkw",
+      "title": "חבר ואח",
+      "artist": "Avi Biter",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:40:32.222Z"
+    },
     {
       "id": "4FzIwoC0XCaAT21sXtYapb",
       "title": "שיר ההודיה",
