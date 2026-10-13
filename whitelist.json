@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 464,
-  "last_updated": "2026-10-13T09:16:47.380Z",
+  "version": 465,
+  "last_updated": "2026-10-13T09:16:50.770Z",
   "artists": [
     {
       "id": "08WVGenh26k9T2tLtfgRDf",
@@ -10,8 +10,8 @@
         "Sruly Green"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T09:16:47.380Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T09:16:50.770Z"
     },
     {
       "id": "2plllpJj0sU7FsdZrn8EHq",
