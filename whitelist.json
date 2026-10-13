@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 557,
-  "last_updated": "2026-10-13T19:36:25.844Z",
+  "version": 558,
+  "last_updated": "2026-10-13T19:36:28.064Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "Galiya",
       "artist": "Sajanka, TERRA",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:36:24.044Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:36:28.064Z"
     },
     {
       "id": "135jrUJgJwjwzIrto0I0fk",
