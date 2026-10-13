@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 601,
-  "last_updated": "2026-10-13T19:39:12.582Z",
+  "version": 602,
+  "last_updated": "2026-10-13T19:39:14.791Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1WWEQHnT0iuQGQrbqsFddk",
+      "title": "Lo Yachol Lehorid Mimench Et HaEynaim (Can't Take My Eyes Off Of You)",
+      "artist": "Meir Ariel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:39:14.791Z"
+    },
     {
       "id": "0he8xafG8wTFEbvG42AhyF",
       "title": "יש לי סיכוי - Live",
