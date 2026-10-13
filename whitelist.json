@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 603,
-  "last_updated": "2026-10-13T19:39:18.953Z",
+  "version": 604,
+  "last_updated": "2026-10-13T19:39:28.204Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "Lo Yachol Lehorid Mimench Et HaEynaim (Can't Take My Eyes Off Of You)",
       "artist": "Meir Ariel",
       "status": "approved",
-      "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-13T19:39:18.953Z"
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:39:28.204Z"
     },
     {
       "id": "0he8xafG8wTFEbvG42AhyF",
