@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 541,
-  "last_updated": "2026-10-13T19:35:31.905Z",
+  "version": 542,
+  "last_updated": "2026-10-13T19:35:37.185Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1xh45NhqemL8MSmkBIPPz4",
+      "title": "Birchos Avicha / Birchos Habanim",
+      "artist": "A.K.A. Pella",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:35:37.185Z"
+    },
     {
       "id": "0rVTBbyS7Etl0lI3bpwo0h",
       "title": "אבי הטחול",
