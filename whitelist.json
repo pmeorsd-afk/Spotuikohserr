@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 507,
-  "last_updated": "2026-10-13T19:33:21.312Z",
+  "version": 508,
+  "last_updated": "2026-10-13T19:33:25.321Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7wkWZVXeermsMN69ehO5aa",
+      "title": "RTVT",
+      "artist": "Hershy Weinberger, Shmueli Ungar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:33:25.321Z"
+    },
     {
       "id": "6Gt2PGz5zL9HnnJo3UvDV4",
       "title": "עולם בשני צבעים",
