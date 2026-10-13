@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 449,
-  "last_updated": "2026-10-13T07:52:38.466Z",
+  "version": 450,
+  "last_updated": "2026-10-13T07:57:54.061Z",
   "artists": [
     {
       "id": "0Vp26EZ6tkXjxmqzABrs5T",
@@ -1030,6 +1030,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7nCe56CzvRKGqTIs5k1dYm",
+      "title": "עוף מוזר",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T07:57:54.061Z"
+    },
     {
       "id": "2bIFsmffovIlzqXeJGOB5X",
       "title": "מהפכה של שמחה",
