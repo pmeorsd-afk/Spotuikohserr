@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 441,
-  "last_updated": "2026-10-13T06:55:19.031Z",
+  "version": 442,
+  "last_updated": "2026-10-13T07:26:36.216Z",
   "artists": [
     {
       "id": "1jVbMc7E8yy5e96QEJXRzh",
@@ -1010,6 +1010,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4OVbwz68bKwy7tdMMMfisJ",
+      "title": "ה' כל יכול",
+      "artist": "Kobi Peretz, Haim Israel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T07:26:36.216Z"
+    },
     {
       "id": "4OSvcouExgUN8fGogkqsgc",
       "title": "מחרוזת שירי שבת - שירי מוסף",
