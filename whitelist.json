@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 465,
-  "last_updated": "2026-10-13T09:16:50.770Z",
+  "version": 466,
+  "last_updated": "2026-10-13T09:16:58.058Z",
   "artists": [
+    {
+      "id": "6pEd9IH5zxk8oJtWRRZ3Kx",
+      "canonical_name": "Zisha'la",
+      "aliases": [
+        "Zisha'la"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T09:16:58.058Z"
+    },
     {
       "id": "08WVGenh26k9T2tLtfgRDf",
       "canonical_name": "Sruly Green",
