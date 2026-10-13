@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 609,
-  "last_updated": "2026-10-13T19:40:23.992Z",
+  "version": 610,
+  "last_updated": "2026-10-13T19:40:25.762Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4FzIwoC0XCaAT21sXtYapb",
+      "title": "שיר ההודיה",
+      "artist": "jalle band, אלירן מזוז, חנני זית, Aviel Sultan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:40:25.762Z"
+    },
     {
       "id": "1zB4vmk8tFRmM9UULNzbLB",
       "title": "Thunder",
