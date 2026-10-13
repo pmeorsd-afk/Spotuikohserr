@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 595,
-  "last_updated": "2026-10-13T19:38:52.604Z",
+  "version": 596,
+  "last_updated": "2026-10-13T19:38:58.734Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6JRsbFB9owqVu12t4a5mrI",
+      "title": "מחלת נפש",
+      "artist": "פרודוקס, Peled",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:38:58.734Z"
+    },
     {
       "id": "2ve80cifNREUQiY6g2d6h6",
       "title": "שמש",
