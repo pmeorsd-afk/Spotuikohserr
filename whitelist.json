@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 439,
-  "last_updated": "2026-10-13T06:55:12.877Z",
+  "version": 440,
+  "last_updated": "2026-10-13T06:55:15.613Z",
   "artists": [
     {
       "id": "1jVbMc7E8yy5e96QEJXRzh",
@@ -1010,6 +1010,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4OSvcouExgUN8fGogkqsgc",
+      "title": "מחרוזת שירי שבת - שירי מוסף",
+      "artist": "להקת לב אבות",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T06:55:15.613Z"
+    },
     {
       "id": "3kLZDIuccNcuQRKE4PhgLp",
       "title": "מחרוזת שירי הלל | להקת המעיין מתארחת בישיבת ירוחם",
