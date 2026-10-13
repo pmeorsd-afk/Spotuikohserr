@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 638,
-  "last_updated": "2026-10-13T20:52:13.916Z",
+  "version": 639,
+  "last_updated": "2026-10-13T20:52:16.329Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "The North Made Us Ready",
       "artist": "Valhallar Kall",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T20:52:11.296Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T20:52:16.329Z"
     },
     {
       "id": "3EZ6aRlcSNtba5wUQlgHuE",
