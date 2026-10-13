@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 471,
-  "last_updated": "2026-10-13T18:40:17.465Z",
+  "version": 472,
+  "last_updated": "2026-10-13T18:40:19.531Z",
   "artists": [
+    {
+      "id": "7ysbokDPSeKJFdExlLa1Zn",
+      "canonical_name": "מוטי איידנסון",
+      "aliases": [
+        "מוטי איידנסון"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T18:40:19.531Z"
+    },
     {
       "id": "3mndJkV3JVyJ5PUA05R5GG",
       "canonical_name": "דודי קאליש",
