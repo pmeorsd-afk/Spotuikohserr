@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 567,
-  "last_updated": "2026-10-13T19:36:49.751Z",
+  "version": 568,
+  "last_updated": "2026-10-13T19:36:52.289Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6b81SZnVeA0USPODwCSjeD",
+      "title": "תן לי לבד",
+      "artist": "Ido B & Zooki, אפוקליפסיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:36:52.289Z"
+    },
     {
       "id": "1VlZ3l7Ea1vVXl2LqivNuS",
       "title": "לא הפסקתי לחפש אותך",
