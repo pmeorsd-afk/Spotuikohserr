@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 442,
-  "last_updated": "2026-10-13T07:26:36.216Z",
+  "version": 443,
+  "last_updated": "2026-10-13T07:26:39.778Z",
   "artists": [
     {
       "id": "1jVbMc7E8yy5e96QEJXRzh",
@@ -1015,8 +1015,8 @@
       "title": "ה' כל יכול",
       "artist": "Kobi Peretz, Haim Israel",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T07:26:36.216Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T07:26:39.778Z"
     },
     {
       "id": "4OSvcouExgUN8fGogkqsgc",
