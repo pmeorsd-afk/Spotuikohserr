@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 452,
-  "last_updated": "2026-10-13T07:58:43.596Z",
+  "version": 453,
+  "last_updated": "2026-10-13T07:58:46.590Z",
   "artists": [
     {
       "id": "4jZTumxAYFA6HqjqLOgubv",
@@ -10,8 +10,8 @@
         "The New York City Chanukah Ensemble"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T07:58:43.596Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T07:58:46.590Z"
     },
     {
       "id": "0Vp26EZ6tkXjxmqzABrs5T",
