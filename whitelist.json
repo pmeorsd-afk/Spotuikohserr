@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 552,
-  "last_updated": "2026-10-13T19:36:14.481Z",
+  "version": 553,
+  "last_updated": "2026-10-13T19:36:16.881Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "תקופה חרא",
       "artist": "Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:36:12.432Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:36:16.881Z"
     },
     {
       "id": "2QkVXq7dLpefWAiETsvIOs",
