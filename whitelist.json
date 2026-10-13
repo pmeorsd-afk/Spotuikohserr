@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 485,
-  "last_updated": "2026-10-13T19:32:11.917Z",
+  "version": 486,
+  "last_updated": "2026-10-13T19:32:14.526Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3p5NEImV6ChytYLOD3FMkQ",
+      "title": "נתתי לך בית",
+      "artist": "אופק אדנק",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:32:14.526Z"
+    },
     {
       "id": "68kVzJf0STAv91tuLutuDr",
       "title": "שקיעות אדומות",
