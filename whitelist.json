@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 484,
-  "last_updated": "2026-10-13T18:41:30.377Z",
+  "version": 485,
+  "last_updated": "2026-10-13T19:32:11.917Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "68kVzJf0STAv91tuLutuDr",
+      "title": "שקיעות אדומות",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:32:11.917Z"
+    },
     {
       "id": "1fJOgnLsGKNpfyCkpwqnaV",
       "title": "Adon Olam",
