@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 571,
-  "last_updated": "2026-10-13T19:37:00.423Z",
+  "version": 572,
+  "last_updated": "2026-10-13T19:37:14.878Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1250,7 +1250,7 @@
       "artist": "Omer Adam",
       "status": "approved",
       "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:36:19.773Z"
+      "updated_at": "2026-10-13T19:37:14.878Z"
     },
     {
       "id": "64bfvxCPzxyljgC4aPi4vu",
