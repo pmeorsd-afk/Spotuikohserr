@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 458,
-  "last_updated": "2026-10-13T09:15:52.361Z",
+  "version": 459,
+  "last_updated": "2026-10-13T09:15:54.750Z",
   "artists": [
+    {
+      "id": "7sCJYXmdHWXAuGexUhzlks",
+      "canonical_name": "Shloime Gertner",
+      "aliases": [
+        "Shloime Gertner"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T09:15:54.750Z"
+    },
     {
       "id": "2WPFopOnH8xIDAvIX8RypK",
       "canonical_name": "Yossi Green",
