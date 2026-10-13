@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 504,
-  "last_updated": "2026-10-13T19:33:12.342Z",
+  "version": 505,
+  "last_updated": "2026-10-13T19:33:15.654Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Gt2PGz5zL9HnnJo3UvDV4",
+      "title": "עולם בשני צבעים",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:33:15.654Z"
+    },
     {
       "id": "4daf4HrJMkrSmIhEflIwAE",
       "title": "מחרוזת פסנתרים - Live",
