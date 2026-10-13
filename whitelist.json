@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 437,
-  "last_updated": "2026-10-12T15:55:31.167Z",
+  "version": 438,
+  "last_updated": "2026-10-13T06:55:09.963Z",
   "artists": [
     {
       "id": "1jVbMc7E8yy5e96QEJXRzh",
@@ -1010,6 +1010,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3kLZDIuccNcuQRKE4PhgLp",
+      "title": "מחרוזת שירי הלל | להקת המעיין מתארחת בישיבת ירוחם",
+      "artist": "להקת המעיין",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T06:55:09.963Z"
+    },
     {
       "id": "0GtKp5BCAvj7skh0M6fg1v",
       "title": "Wandering Thoughts",
