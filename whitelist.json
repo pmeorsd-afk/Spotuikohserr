@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 597,
-  "last_updated": "2026-10-13T19:39:01.930Z",
+  "version": 598,
+  "last_updated": "2026-10-13T19:39:04.415Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "28wDbRgoZjtR6yk87K8BKS",
+      "title": "חרקות",
+      "artist": "Peled",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:39:04.415Z"
+    },
     {
       "id": "6JRsbFB9owqVu12t4a5mrI",
       "title": "מחלת נפש",
