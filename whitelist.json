@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 547,
-  "last_updated": "2026-10-13T19:35:51.311Z",
+  "version": 548,
+  "last_updated": "2026-10-13T19:35:55.337Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2QkVXq7dLpefWAiETsvIOs",
+      "title": "אהובתי כבר לא רואה אותי",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:35:55.337Z"
+    },
     {
       "id": "4wRmeX5mNKHCEL0lV3fcV7",
       "title": "עוד נגיעה",
