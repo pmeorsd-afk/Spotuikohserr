@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 612,
-  "last_updated": "2026-10-13T19:40:32.222Z",
+  "version": 613,
+  "last_updated": "2026-10-13T19:40:35.387Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "חבר ואח",
       "artist": "Avi Biter",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:40:32.222Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:40:35.387Z"
     },
     {
       "id": "4FzIwoC0XCaAT21sXtYapb",
