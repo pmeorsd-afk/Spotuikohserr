@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 627,
-  "last_updated": "2026-10-13T19:41:13.130Z",
+  "version": 628,
+  "last_updated": "2026-10-13T19:41:15.872Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1ItgHeQKx1O02xNwdju6Zz",
+      "title": "מחרוזת סיום הש''ס - Live",
+      "artist": "Eli Herzlich",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:41:15.872Z"
+    },
     {
       "id": "1p4Q4pvOF41ixvOLYKojVM",
       "title": "ואז את תראי - מנורה לייב 2026",
