@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 453,
-  "last_updated": "2026-10-13T07:58:46.590Z",
+  "version": 454,
+  "last_updated": "2026-10-13T08:00:01.148Z",
   "artists": [
     {
       "id": "4jZTumxAYFA6HqjqLOgubv",
@@ -1040,6 +1040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1fJOgnLsGKNpfyCkpwqnaV",
+      "title": "Adon Olam",
+      "artist": "A.K.A. Pella",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T08:00:01.148Z"
+    },
     {
       "id": "7nCe56CzvRKGqTIs5k1dYm",
       "title": "עוף מוזר",
