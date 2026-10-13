@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 456,
-  "last_updated": "2026-10-13T08:20:53.927Z",
+  "version": 457,
+  "last_updated": "2026-10-13T08:20:57.979Z",
   "artists": [
     {
       "id": "78jIrb1ifoNvqw10CzHi09",
@@ -10,8 +10,8 @@
         "הראל טל"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T08:20:53.927Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T08:20:57.979Z"
     },
     {
       "id": "4jZTumxAYFA6HqjqLOgubv",
