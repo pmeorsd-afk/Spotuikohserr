@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 535,
-  "last_updated": "2026-10-13T19:35:00.434Z",
+  "version": 536,
+  "last_updated": "2026-10-13T19:35:12.602Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7rU2eldvcR7Iwu07Z9A8w3",
+      "title": "אם את כבר הולכת",
+      "artist": "נדב חנציס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:35:12.602Z"
+    },
     {
       "id": "6q407anU9HRxKp0ek7SHf9",
       "title": "Shirat Hastiker (Sticker Song)",
