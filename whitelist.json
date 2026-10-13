@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 474,
-  "last_updated": "2026-10-13T18:40:22.973Z",
+  "version": 475,
+  "last_updated": "2026-10-13T18:40:25.162Z",
   "artists": [
     {
       "id": "7ysbokDPSeKJFdExlLa1Zn",
@@ -10,8 +10,8 @@
         "מוטי איידנסון"
       ],
       "status": "approved",
-      "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-13T18:40:22.973Z"
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T18:40:25.162Z"
     },
     {
       "id": "3mndJkV3JVyJ5PUA05R5GG",
