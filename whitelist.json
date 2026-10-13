@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 634,
-  "last_updated": "2026-10-13T20:48:55.194Z",
+  "version": 635,
+  "last_updated": "2026-10-13T20:48:58.879Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "Under the Northern Lights",
       "artist": "Valhallar Kall",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T20:48:55.194Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T20:48:58.879Z"
     },
     {
       "id": "1lAjAfgdF93eWNN1j0dDx5",
