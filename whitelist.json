@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 466,
-  "last_updated": "2026-10-13T09:16:58.058Z",
+  "version": 467,
+  "last_updated": "2026-10-13T09:17:01.516Z",
   "artists": [
     {
       "id": "6pEd9IH5zxk8oJtWRRZ3Kx",
@@ -10,8 +10,8 @@
         "Zisha'la"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T09:16:58.058Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T09:17:01.516Z"
     },
     {
       "id": "08WVGenh26k9T2tLtfgRDf",
