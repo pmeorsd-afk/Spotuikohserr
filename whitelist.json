@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 616,
-  "last_updated": "2026-10-13T19:40:43.009Z",
+  "version": 617,
+  "last_updated": "2026-10-13T19:40:44.739Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0of83kXLhJelC27toC0tRs",
+      "title": "התרת חלומות",
+      "artist": "Noifeld's Glasses, Shuli Rand",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:40:44.739Z"
+    },
     {
       "id": "4bmO4ZJBOqSEVRAN3rrmx4",
       "title": "עולה בשביל",
