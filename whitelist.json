@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 569,
-  "last_updated": "2026-10-13T19:36:55.487Z",
+  "version": 570,
+  "last_updated": "2026-10-13T19:36:57.387Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4EN9nGt9TWutt0iDTRnXjY",
+      "title": "כוכבים",
+      "artist": "שילה בן סעדון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:36:57.387Z"
+    },
     {
       "id": "6b81SZnVeA0USPODwCSjeD",
       "title": "תן לי לבד",
