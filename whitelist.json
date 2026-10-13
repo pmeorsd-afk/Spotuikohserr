@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 618,
-  "last_updated": "2026-10-13T19:40:48.006Z",
+  "version": 619,
+  "last_updated": "2026-10-13T19:40:50.707Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0tnH1qEidXyFVZvbpGk1Uo",
+      "title": "נדרתי נדר",
+      "artist": "Moshe Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:40:50.707Z"
+    },
     {
       "id": "0of83kXLhJelC27toC0tRs",
       "title": "התרת חלומות",
