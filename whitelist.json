@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 613,
-  "last_updated": "2026-10-13T19:40:35.387Z",
+  "version": 614,
+  "last_updated": "2026-10-13T19:40:36.878Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6eCeenpv2pHVl6qIR5HDZ7",
+      "title": "ציון - גרסה מלאה",
+      "artist": "Botzer",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:40:36.878Z"
+    },
     {
       "id": "5gfN0Mp01a6cpxlm10UYkw",
       "title": "חבר ואח",
