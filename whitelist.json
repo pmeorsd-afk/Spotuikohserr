@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 461,
-  "last_updated": "2026-10-13T09:15:59.506Z",
+  "version": 462,
+  "last_updated": "2026-10-13T09:16:08.157Z",
   "artists": [
+    {
+      "id": "2plllpJj0sU7FsdZrn8EHq",
+      "canonical_name": "Maccabeats",
+      "aliases": [
+        "Maccabeats"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T09:16:08.157Z"
+    },
     {
       "id": "7sCJYXmdHWXAuGexUhzlks",
       "canonical_name": "Shloime Gertner",
