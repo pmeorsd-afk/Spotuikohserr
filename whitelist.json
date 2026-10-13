@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 511,
-  "last_updated": "2026-10-13T19:33:38.199Z",
+  "version": 512,
+  "last_updated": "2026-10-13T19:33:41.098Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2XDcHJy0PPFfRoo40sL5XJ",
+      "title": "במדורות מלחמה",
+      "artist": "Ofer Marciano",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:33:41.098Z"
+    },
     {
       "id": "2CGlVhHnz1LDbZs2u9ezcE",
       "title": "כבר לא שמח",
