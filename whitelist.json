@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 551,
-  "last_updated": "2026-10-13T19:36:12.432Z",
+  "version": 552,
+  "last_updated": "2026-10-13T19:36:14.481Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "64bfvxCPzxyljgC4aPi4vu",
+      "title": "משפחה וכבוד",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T19:36:14.481Z"
+    },
     {
       "id": "3tT0AuW2Xjykbx5TcYv64j",
       "title": "תקופה חרא",
