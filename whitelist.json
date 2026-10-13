@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 447,
-  "last_updated": "2026-10-13T07:52:27.123Z",
+  "version": 448,
+  "last_updated": "2026-10-13T07:52:35.386Z",
   "artists": [
+    {
+      "id": "0Vp26EZ6tkXjxmqzABrs5T",
+      "canonical_name": "Chony Milecki",
+      "aliases": [
+        "Chony Milecki"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T07:52:35.386Z"
+    },
     {
       "id": "2QL0PF5G5wsbQESK7azhd9",
       "canonical_name": "Eli Marcus",
