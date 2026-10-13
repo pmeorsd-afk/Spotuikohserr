@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 481,
-  "last_updated": "2026-10-13T18:41:25.119Z",
+  "version": 482,
+  "last_updated": "2026-10-13T18:41:27.122Z",
   "artists": [
+    {
+      "id": "6nwdGYvvU7caFI06fyz153",
+      "canonical_name": "Hershy Weinberger",
+      "aliases": [
+        "Hershy Weinberger"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T18:41:27.122Z"
+    },
     {
       "id": "3LvbEL0S6kskBf0lifrM7x",
       "canonical_name": "Beri Weber",
