@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 632,
-  "last_updated": "2026-10-13T20:17:14.910Z",
+  "version": 633,
+  "last_updated": "2026-10-13T20:17:18.620Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "מוזיקה מרגיעה לשניה עמוקה - להירדם תוך 10 דקות",
       "artist": "Teramid Music.",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T20:17:14.910Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T20:17:18.620Z"
     },
     {
       "id": "1ItgHeQKx1O02xNwdju6Zz",
