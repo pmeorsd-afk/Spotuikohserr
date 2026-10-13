@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 558,
-  "last_updated": "2026-10-13T19:36:28.064Z",
+  "version": 559,
+  "last_updated": "2026-10-13T19:36:30.331Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1218,7 +1218,7 @@
       "artist": "Omer Adam",
       "status": "approved",
       "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-13T19:36:16.881Z"
+      "updated_at": "2026-10-13T19:36:30.331Z"
     },
     {
       "id": "2QkVXq7dLpefWAiETsvIOs",
