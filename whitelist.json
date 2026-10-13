@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 455,
-  "last_updated": "2026-10-13T08:00:05.768Z",
+  "version": 456,
+  "last_updated": "2026-10-13T08:20:53.927Z",
   "artists": [
+    {
+      "id": "78jIrb1ifoNvqw10CzHi09",
+      "canonical_name": "הראל טל",
+      "aliases": [
+        "הראל טל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T08:20:53.927Z"
+    },
     {
       "id": "4jZTumxAYFA6HqjqLOgubv",
       "canonical_name": "The New York City Chanukah Ensemble",
