@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 582,
-  "last_updated": "2026-10-13T19:37:49.579Z",
+  "version": 583,
+  "last_updated": "2026-10-13T19:37:51.722Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1217,8 +1217,8 @@
       "title": "Gateways",
       "artist": "Dimmu Borgir",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:37:45.224Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:37:51.722Z"
     },
     {
       "id": "7sYnUihJysp9eSHUTFq9EP",
