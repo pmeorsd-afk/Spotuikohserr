@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 636,
-  "last_updated": "2026-10-13T20:52:08.596Z",
+  "version": 637,
+  "last_updated": "2026-10-13T20:52:11.296Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3oQmt3HSSb5jAKn550t9gw",
+      "title": "The North Made Us Ready",
+      "artist": "Valhallar Kall",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T20:52:11.296Z"
+    },
     {
       "id": "3EZ6aRlcSNtba5wUQlgHuE",
       "title": "The Ones Still Here",
