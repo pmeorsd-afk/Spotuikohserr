@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 470,
-  "last_updated": "2026-10-13T18:40:13.821Z",
+  "version": 471,
+  "last_updated": "2026-10-13T18:40:17.465Z",
   "artists": [
+    {
+      "id": "3mndJkV3JVyJ5PUA05R5GG",
+      "canonical_name": "דודי קאליש",
+      "aliases": [
+        "דודי קאליש"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-13T18:40:17.465Z"
+    },
     {
       "id": "2KnsrVFZm5NAvkUIMayRmC",
       "canonical_name": "שמוליק קליין",
