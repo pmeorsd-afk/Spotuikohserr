@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 546,
-  "last_updated": "2026-10-13T19:35:48.102Z",
+  "version": 547,
+  "last_updated": "2026-10-13T19:35:51.311Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "עוד נגיעה",
       "artist": "The Friends of Natasha",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-13T19:35:48.102Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-13T19:35:51.311Z"
     },
     {
       "id": "0ZFeVCKCMCXUQ1TKVd2azW",
