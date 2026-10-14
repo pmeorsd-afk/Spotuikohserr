@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 668,
-  "last_updated": "2026-10-14T18:53:42.873Z",
+  "version": 669,
+  "last_updated": "2026-10-14T18:53:44.479Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5IgjP7X4th6nMNDh4akUHb",
+      "title": "Under The Influence",
+      "artist": "Chris Brown",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:53:44.479Z"
+    },
     {
       "id": "4PiEH0BBX6wMsg9lZmR3Wo",
       "title": "בידיים התמונות",
