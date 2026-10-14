@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 687,
-  "last_updated": "2026-10-14T18:55:50.458Z",
+  "version": 688,
+  "last_updated": "2026-10-14T18:55:53.921Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "שלום עליכם (מלאכי השרת)",
       "artist": "David D'Or, Patrick Sebag",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:55:50.458Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:55:53.921Z"
     },
     {
       "id": "7HOAxTGXHa88t2UDFcAF8d",
