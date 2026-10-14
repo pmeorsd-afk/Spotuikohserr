@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 679,
-  "last_updated": "2026-10-14T18:54:22.280Z",
+  "version": 680,
+  "last_updated": "2026-10-14T18:54:24.472Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "חלל",
       "artist": "Zohar Ashirov, מאור בן סימון",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:54:18.555Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:54:24.472Z"
     },
     {
       "id": "63blfvLEHWVKPlIEyiA3bc",
