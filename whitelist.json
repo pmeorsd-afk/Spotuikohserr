@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 678,
-  "last_updated": "2026-10-14T18:54:18.555Z",
+  "version": 679,
+  "last_updated": "2026-10-14T18:54:22.280Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Ip4sr7PVQYylEZtHjAKw9",
+      "title": "BABA YAGA",
+      "artist": "Blady Julguer7, Capsule Col, J BIEBER",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:54:22.280Z"
+    },
     {
       "id": "04nlJf22kZMlJffQZ3Lhuk",
       "title": "חלל",
