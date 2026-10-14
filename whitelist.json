@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 699,
-  "last_updated": "2026-10-14T18:56:34.662Z",
+  "version": 700,
+  "last_updated": "2026-10-14T19:17:28.094Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5XQ1V8k28eLiChUKJhSrEI",
+      "title": "Guf VeNeshama - גוף ונשמה - Live",
+      "artist": "Yaakov Shwekey, Amir Dadon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T19:17:28.094Z"
+    },
     {
       "id": "6svDE1ySQelKOFfW7kCn2B",
       "title": "התקדמתי ממך",
