@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 692,
-  "last_updated": "2026-10-14T18:56:09.604Z",
+  "version": 693,
+  "last_updated": "2026-10-14T18:56:15.987Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7vs6sUUgZbKSRzPan8wA9X",
+      "title": "מתוך הדמעות הוא קורא לך",
+      "artist": "ישראל אס, יאיר אלייצור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:56:15.987Z"
+    },
     {
       "id": "3snRCMbjJjjUfbSaksgbco",
       "title": "שלום עליכם (מלאכי השרת)",
