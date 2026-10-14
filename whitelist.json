@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 651,
-  "last_updated": "2026-10-14T18:23:47.355Z",
+  "version": 652,
+  "last_updated": "2026-10-14T18:50:21.872Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "63SEvXI7C4G2K8gCAltC0K",
+      "title": "Journey At Sea",
+      "artist": "Abie Rotenberg, Lev Tahor, Eli Schwebel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:50:21.872Z"
+    },
     {
       "id": "1u7dx4QxbZbcWWEGfgFo0z",
       "title": "המלחמה האחרונה",
