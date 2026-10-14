@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 646,
-  "last_updated": "2026-10-14T03:52:49.896Z",
+  "version": 647,
+  "last_updated": "2026-10-14T03:52:52.640Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "אהבה זה לא חטא",
       "artist": "עדי אגאי",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T03:52:47.844Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T03:52:52.640Z"
     },
     {
       "id": "6ClBALT8gl0EygNvqRHbdP",
