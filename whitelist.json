@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 669,
-  "last_updated": "2026-10-14T18:53:44.479Z",
+  "version": 670,
+  "last_updated": "2026-10-14T18:53:48.156Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "Under The Influence",
       "artist": "Chris Brown",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:53:44.479Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:53:48.156Z"
     },
     {
       "id": "4PiEH0BBX6wMsg9lZmR3Wo",
