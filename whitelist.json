@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 704,
-  "last_updated": "2026-10-14T19:48:53.290Z",
+  "version": 705,
+  "last_updated": "2026-10-14T19:48:59.900Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "בזמן האחרון",
       "artist": "Idan Amedi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T19:48:53.290Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T19:48:59.900Z"
     },
     {
       "id": "6E6GgvBQEGbQaNyInwS6lO",
