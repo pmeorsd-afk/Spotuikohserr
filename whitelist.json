@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 643,
-  "last_updated": "2026-10-13T21:24:44.420Z",
+  "version": 644,
+  "last_updated": "2026-10-14T03:52:44.201Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ClBALT8gl0EygNvqRHbdP",
+      "title": "אם את עדיין אוהבת אותי",
+      "artist": "Boaz Sharabi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T03:52:44.201Z"
+    },
     {
       "id": "6xlOnm5MITIKtixzJW8R0j",
       "title": "DARKSIDE",
