@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 674,
-  "last_updated": "2026-10-14T18:54:00.736Z",
+  "version": 675,
+  "last_updated": "2026-10-14T18:54:03.907Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -2321,8 +2321,8 @@
       "title": "אבי הטחול (גרסת ברסלב)-דוד שרר",
       "artist": "דוד שרר",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:54:00.736Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:54:03.907Z"
     },
     {
       "id": "",
