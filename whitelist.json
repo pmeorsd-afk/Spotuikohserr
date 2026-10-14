@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 696,
-  "last_updated": "2026-10-14T18:56:24.736Z",
+  "version": 697,
+  "last_updated": "2026-10-14T18:56:27.994Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "נווה הדרים",
       "artist": "ששון איפרם שאולוב",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:56:21.272Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:56:27.994Z"
     },
     {
       "id": "7vs6sUUgZbKSRzPan8wA9X",
