@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 653,
-  "last_updated": "2026-10-14T18:50:24.095Z",
+  "version": 654,
+  "last_updated": "2026-10-14T18:50:26.540Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "Journey At Sea",
       "artist": "Abie Rotenberg, Lev Tahor, Eli Schwebel",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:50:21.872Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:50:26.540Z"
     },
     {
       "id": "1u7dx4QxbZbcWWEGfgFo0z",
