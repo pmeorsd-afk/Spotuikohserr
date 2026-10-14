@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 648,
-  "last_updated": "2026-10-14T18:23:24.265Z",
+  "version": 649,
+  "last_updated": "2026-10-14T18:23:28.963Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "כשתבוא",
       "artist": "Boaz Sharabi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:23:24.265Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:23:28.963Z"
     },
     {
       "id": "6AmSuQB3yhhcWXpsm8L4U8",
