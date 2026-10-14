@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 658,
-  "last_updated": "2026-10-14T18:50:59.248Z",
+  "version": 659,
+  "last_updated": "2026-10-14T18:51:02.351Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "קשה לי",
       "artist": "Avi Peretz",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:50:59.248Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:51:02.351Z"
     },
     {
       "id": "7F2HkBsshPlY2jDFbHpUvQ",
