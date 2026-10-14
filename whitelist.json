@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 650,
-  "last_updated": "2026-10-14T18:23:44.108Z",
+  "version": 651,
+  "last_updated": "2026-10-14T18:23:47.355Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "המלחמה האחרונה",
       "artist": "יאיר אלייצור, בר קופרשטיין",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:23:44.108Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:23:47.355Z"
     },
     {
       "id": "3ju0QmgSgd7c4SUR6cNlJU",
