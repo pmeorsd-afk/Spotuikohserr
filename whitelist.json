@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 694,
-  "last_updated": "2026-10-14T18:56:19.252Z",
+  "version": 695,
+  "last_updated": "2026-10-14T18:56:21.272Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3E8a4zr8OUM4MIU7t9SGI7",
+      "title": "נווה הדרים",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:56:21.272Z"
+    },
     {
       "id": "7vs6sUUgZbKSRzPan8wA9X",
       "title": "מתוך הדמעות הוא קורא לך",
