@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 682,
-  "last_updated": "2026-10-14T18:54:28.774Z",
+  "version": 683,
+  "last_updated": "2026-10-14T18:54:31.267Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "Unbreakable Soul",
       "artist": "Drae Kash",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:54:28.774Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:54:31.267Z"
     },
     {
       "id": "5Ip4sr7PVQYylEZtHjAKw9",
