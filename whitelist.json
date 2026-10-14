@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 660,
-  "last_updated": "2026-10-14T18:51:10.474Z",
+  "version": 661,
+  "last_updated": "2026-10-14T18:51:14.324Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "solachti - סלחתי",
       "artist": "Gershi Uri",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:51:10.474Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:51:14.324Z"
     },
     {
       "id": "3LJ9DTfTlqUjb5U9vsqaEZ",
