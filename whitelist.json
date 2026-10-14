@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 685,
-  "last_updated": "2026-10-14T18:54:36.656Z",
+  "version": 686,
+  "last_updated": "2026-10-14T18:55:48.189Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7HOAxTGXHa88t2UDFcAF8d",
+      "title": "פתח ליבך",
+      "artist": "David D'Or, The Student Choir of Makor Chaim, Avraham Freid, David Broza, Yonatan Razel, Ishay Ribo, Kobi Aflalo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:55:48.189Z"
+    },
     {
       "id": "51jkyPM0z0X2VM0Vju0AkS",
       "title": "You Lost Me Forever",
