@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 665,
-  "last_updated": "2026-10-14T18:53:16.912Z",
+  "version": 666,
+  "last_updated": "2026-10-14T18:53:38.800Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "76PapET6FAdMxOlaRamTj0",
+      "title": "מתגעגע",
+      "artist": "Tomer Hen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:53:38.800Z"
+    },
     {
       "id": "4opEOBSzFQ5bIwlkzFZCwr",
       "title": "קן של אהבה",
