@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 663,
-  "last_updated": "2026-10-14T18:53:11.596Z",
+  "version": 664,
+  "last_updated": "2026-10-14T18:53:14.441Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "ילדה",
       "artist": "Eli Luzon",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:53:07.792Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:53:14.441Z"
     },
     {
       "id": "7jTQgcl4QbJUrAjrF8qr8I",
