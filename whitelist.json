@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 698,
-  "last_updated": "2026-10-14T18:56:29.906Z",
+  "version": 699,
+  "last_updated": "2026-10-14T18:56:34.662Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "התקדמתי ממך",
       "artist": "Itay Levi, ששון איפרם שאולוב",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:56:29.906Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:56:34.662Z"
     },
     {
       "id": "3aoITEdIAA25UWJlmJeGbD",
