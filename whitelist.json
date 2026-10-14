@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 662,
-  "last_updated": "2026-10-14T18:53:07.792Z",
+  "version": 663,
+  "last_updated": "2026-10-14T18:53:11.596Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4opEOBSzFQ5bIwlkzFZCwr",
+      "title": "קן של אהבה",
+      "artist": "Ethnix, Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:53:11.596Z"
+    },
     {
       "id": "5bcDDH2BnuzBWcdQnrhGmU",
       "title": "ילדה",
