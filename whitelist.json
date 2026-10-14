@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 656,
-  "last_updated": "2026-10-14T18:50:31.964Z",
+  "version": 657,
+  "last_updated": "2026-10-14T18:50:36.028Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "Royalty",
       "artist": "Egzod, Maestro Chives, Neoni",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:50:31.964Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:50:36.028Z"
     },
     {
       "id": "6KuN7pq5gES3SmCizb1bdw",
