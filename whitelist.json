@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 652,
-  "last_updated": "2026-10-14T18:50:21.872Z",
+  "version": 653,
+  "last_updated": "2026-10-14T18:50:24.095Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6KuN7pq5gES3SmCizb1bdw",
+      "title": "Yufyafisa (Alternative Breakaway Version)",
+      "artist": "A.K.A. Pella",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:50:24.095Z"
+    },
     {
       "id": "63SEvXI7C4G2K8gCAltC0K",
       "title": "Journey At Sea",
