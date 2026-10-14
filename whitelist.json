@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 700,
-  "last_updated": "2026-10-14T19:17:28.094Z",
+  "version": 701,
+  "last_updated": "2026-10-14T19:17:31.842Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "Guf VeNeshama - גוף ונשמה - Live",
       "artist": "Yaakov Shwekey, Amir Dadon",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T19:17:28.094Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T19:17:31.842Z"
     },
     {
       "id": "6svDE1ySQelKOFfW7kCn2B",
