@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 695,
-  "last_updated": "2026-10-14T18:56:21.272Z",
+  "version": 696,
+  "last_updated": "2026-10-14T18:56:24.736Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3aoITEdIAA25UWJlmJeGbD",
+      "title": "WADINI",
+      "artist": "Afroto",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:56:24.736Z"
+    },
     {
       "id": "3E8a4zr8OUM4MIU7t9SGI7",
       "title": "נווה הדרים",
