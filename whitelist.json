@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 667,
-  "last_updated": "2026-10-14T18:53:40.648Z",
+  "version": 668,
+  "last_updated": "2026-10-14T18:53:42.873Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "מתגעגע",
       "artist": "Tomer Hen",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:53:38.800Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:53:42.873Z"
     },
     {
       "id": "4opEOBSzFQ5bIwlkzFZCwr",
