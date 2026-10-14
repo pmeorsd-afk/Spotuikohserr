@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 676,
-  "last_updated": "2026-10-14T18:54:07.902Z",
+  "version": 677,
+  "last_updated": "2026-10-14T18:54:10.853Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "אהבה ללא גבולות",
       "artist": "Eyal Golan",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:54:07.902Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:54:10.853Z"
     },
     {
       "id": "1wVuPmvt6AWvTL5W2GJnzZ",
