@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 683,
-  "last_updated": "2026-10-14T18:54:31.267Z",
+  "version": 684,
+  "last_updated": "2026-10-14T18:54:33.858Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "51jkyPM0z0X2VM0Vju0AkS",
+      "title": "You Lost Me Forever",
+      "artist": "Silus",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:54:33.858Z"
+    },
     {
       "id": "2mKxYSSLJSD3eG6bXMqxnk",
       "title": "Unbreakable Soul",
