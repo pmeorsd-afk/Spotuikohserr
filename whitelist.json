@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 649,
-  "last_updated": "2026-10-14T18:23:28.963Z",
+  "version": 650,
+  "last_updated": "2026-10-14T18:23:44.108Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1u7dx4QxbZbcWWEGfgFo0z",
+      "title": "המלחמה האחרונה",
+      "artist": "יאיר אלייצור, בר קופרשטיין",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:23:44.108Z"
+    },
     {
       "id": "3ju0QmgSgd7c4SUR6cNlJU",
       "title": "כשתבוא",
