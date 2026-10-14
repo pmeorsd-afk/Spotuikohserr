@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 693,
-  "last_updated": "2026-10-14T18:56:15.987Z",
+  "version": 694,
+  "last_updated": "2026-10-14T18:56:19.252Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "מתוך הדמעות הוא קורא לך",
       "artist": "ישראל אס, יאיר אלייצור",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:56:15.987Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:56:19.252Z"
     },
     {
       "id": "3snRCMbjJjjUfbSaksgbco",
