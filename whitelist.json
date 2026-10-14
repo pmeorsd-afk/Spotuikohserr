@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 677,
-  "last_updated": "2026-10-14T18:54:10.853Z",
+  "version": 678,
+  "last_updated": "2026-10-14T18:54:18.555Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "04nlJf22kZMlJffQZ3Lhuk",
+      "title": "חלל",
+      "artist": "Zohar Ashirov, מאור בן סימון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:54:18.555Z"
+    },
     {
       "id": "63blfvLEHWVKPlIEyiA3bc",
       "title": "אהבה ללא גבולות",
