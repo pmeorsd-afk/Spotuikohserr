@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 697,
-  "last_updated": "2026-10-14T18:56:27.994Z",
+  "version": 698,
+  "last_updated": "2026-10-14T18:56:29.906Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6svDE1ySQelKOFfW7kCn2B",
+      "title": "התקדמתי ממך",
+      "artist": "Itay Levi, ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:56:29.906Z"
+    },
     {
       "id": "3aoITEdIAA25UWJlmJeGbD",
       "title": "WADINI",
