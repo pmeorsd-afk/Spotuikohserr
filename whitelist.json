@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 689,
-  "last_updated": "2026-10-14T18:55:56.288Z",
+  "version": 690,
+  "last_updated": "2026-10-14T18:55:59.231Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1785,8 +1785,8 @@
       "title": "עונג שבת",
       "artist": "Shuli Rand, ShrekDiMC",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-14T18:55:56.288Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-14T18:55:59.231Z"
     },
     {
       "id": "33hekXUB91e5KbiYT1ZxJU",
@@ -2371,14 +2371,6 @@
       "status": "approved",
       "notes": "approved via SpotUI Admin",
       "updated_at": "2026-10-08T18:19:03.465Z"
-    },
-    {
-      "id": "youtube",
-      "title": "אבי הטחול (גרסת ברסלב)-דוד שרר",
-      "artist": "דוד שרר",
-      "status": "approved",
-      "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-14T18:54:03.907Z"
     },
     {
       "id": "",
