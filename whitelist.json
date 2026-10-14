@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 655,
-  "last_updated": "2026-10-14T18:50:28.319Z",
+  "version": 656,
+  "last_updated": "2026-10-14T18:50:31.964Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7F2HkBsshPlY2jDFbHpUvQ",
+      "title": "Royalty",
+      "artist": "Egzod, Maestro Chives, Neoni",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:50:31.964Z"
+    },
     {
       "id": "6KuN7pq5gES3SmCizb1bdw",
       "title": "Yufyafisa (Alternative Breakaway Version)",
