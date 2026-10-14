@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 657,
-  "last_updated": "2026-10-14T18:50:36.028Z",
+  "version": 658,
+  "last_updated": "2026-10-14T18:50:59.248Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3LJ9DTfTlqUjb5U9vsqaEZ",
+      "title": "קשה לי",
+      "artist": "Avi Peretz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-14T18:50:59.248Z"
+    },
     {
       "id": "7F2HkBsshPlY2jDFbHpUvQ",
       "title": "Royalty",
