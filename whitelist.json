@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 772,
-  "last_updated": "2026-10-15T17:27:04.451Z",
+  "version": 773,
+  "last_updated": "2026-10-15T17:27:09.369Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "זהבה ושלושת הדובים",
       "artist": "Yosi Gerber",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:27:04.451Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:27:09.369Z"
     },
     {
       "id": "2BoQr4BP4FbMluaIA4BJHZ",
