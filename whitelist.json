@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 747,
-  "last_updated": "2026-10-15T17:06:42.995Z",
+  "version": 748,
+  "last_updated": "2026-10-15T17:06:45.565Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "Diamonds",
       "artist": "Sam Smith",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:06:40.439Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:06:45.565Z"
     },
     {
       "id": "03tqa1PKELgEzPQTvN86aj",
