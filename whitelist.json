@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 791,
-  "last_updated": "2026-10-15T17:32:11.301Z",
+  "version": 792,
+  "last_updated": "2026-10-15T17:32:27.346Z",
   "artists": [
+    {
+      "id": "09Dsft7Gph22zApHqhCqus",
+      "canonical_name": "Levy Falkowitz",
+      "aliases": [
+        "Levy Falkowitz"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:32:27.346Z"
+    },
     {
       "id": "6R3TPDd3bohT1l59k7muX7",
       "canonical_name": "Michoel Schnitzler",
