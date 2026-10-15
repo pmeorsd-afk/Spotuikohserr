@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 779,
-  "last_updated": "2026-10-15T17:29:29.196Z",
+  "version": 780,
+  "last_updated": "2026-10-15T17:30:07.627Z",
   "artists": [
+    {
+      "id": "09I8dfj7wsEFPbgTqVODMO",
+      "canonical_name": "Dovy Meisels",
+      "aliases": [
+        "Dovy Meisels"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:30:07.627Z"
+    },
     {
       "id": "0JCLwJp45ICZOKl7OTzl9A",
       "canonical_name": "Shlock Rock",
