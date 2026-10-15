@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 709,
-  "last_updated": "2026-10-15T09:47:16.091Z",
+  "version": 710,
+  "last_updated": "2026-10-15T09:47:18.116Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6YYLY0OIeVF3razSxCmIGU",
+      "title": "בלוז כנעני",
+      "artist": "Ehud Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T09:47:18.116Z"
+    },
     {
       "id": "1Eb90nmqTrxylKFhcUzW8P",
       "title": "(Everything I Do) I Do It For You",
