@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 710,
-  "last_updated": "2026-10-15T09:47:18.116Z",
+  "version": 711,
+  "last_updated": "2026-10-15T09:47:19.572Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "(Everything I Do) I Do It For You",
       "artist": "Bryan Adams",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T09:47:16.091Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T09:47:19.572Z"
     },
     {
       "id": "3rR3dvYqkQxAc9mI5Adrrk",
