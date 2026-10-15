@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 708,
-  "last_updated": "2026-10-15T09:47:13.661Z",
+  "version": 709,
+  "last_updated": "2026-10-15T09:47:16.091Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Eb90nmqTrxylKFhcUzW8P",
+      "title": "(Everything I Do) I Do It For You",
+      "artist": "Bryan Adams",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T09:47:16.091Z"
+    },
     {
       "id": "3rR3dvYqkQxAc9mI5Adrrk",
       "title": "עולם מושלם",
