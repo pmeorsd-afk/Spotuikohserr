@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 848,
-  "last_updated": "2026-10-15T19:54:53.028Z",
+  "version": 849,
+  "last_updated": "2026-10-15T19:54:57.482Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -1425,8 +1425,8 @@
       "title": "הכל עובר",
       "artist": "Idan Raichel",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T19:54:53.028Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T19:54:57.482Z"
     },
     {
       "id": "3NF23A4wVjKV8G5THJ1KSd",
