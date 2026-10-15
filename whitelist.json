@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 834,
-  "last_updated": "2026-10-15T18:48:19.543Z",
+  "version": 835,
+  "last_updated": "2026-10-15T18:48:23.225Z",
   "artists": [
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
@@ -1415,8 +1415,8 @@
       "title": "Mitgaagea",
       "artist": "Yaakov Hatan",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T18:48:19.543Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T18:48:23.225Z"
     },
     {
       "id": "1zK2cwaZJg1MsNT02iUV5K",
