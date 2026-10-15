@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 768,
-  "last_updated": "2026-10-15T17:26:56.889Z",
+  "version": 769,
+  "last_updated": "2026-10-15T17:26:58.265Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2BoQr4BP4FbMluaIA4BJHZ",
+      "title": "הדייג ודג הזהב",
+      "artist": "Yosi Gerber",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:26:58.265Z"
+    },
     {
       "id": "0CVRTtvbYSNnDUJFQ5E2wT",
       "title": "הברוזון המכוער",
