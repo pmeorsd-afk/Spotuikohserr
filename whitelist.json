@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 838,
-  "last_updated": "2026-10-15T18:55:23.106Z",
+  "version": 839,
+  "last_updated": "2026-10-15T18:55:27.400Z",
   "artists": [
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
@@ -1415,8 +1415,8 @@
       "title": "קוצים",
       "artist": "Aviv Geffen, Idan Raichel",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T18:55:23.106Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T18:55:27.400Z"
     },
     {
       "id": "6DVXyB4dHEJqWqkuUyfjTQ",
