@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 815,
-  "last_updated": "2026-10-15T17:36:27.714Z",
+  "version": 816,
+  "last_updated": "2026-10-15T17:36:51.287Z",
   "artists": [
+    {
+      "id": "08I17YfmlYNv3gnqDKLvc9",
+      "canonical_name": "הרב שלום ארוש",
+      "aliases": [
+        "הרב שלום ארוש"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:36:51.287Z"
+    },
     {
       "id": "1aHwMcpYIOTXqyAPT5Q0ZU",
       "canonical_name": "יואלי קליין",
