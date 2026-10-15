@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 711,
-  "last_updated": "2026-10-15T09:47:19.572Z",
+  "version": 712,
+  "last_updated": "2026-10-15T09:47:21.277Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4CyMxRgojJsGD6HmMK9bEL",
+      "title": "כמו גשם במאי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T09:47:21.277Z"
+    },
     {
       "id": "6YYLY0OIeVF3razSxCmIGU",
       "title": "בלוז כנעני",
