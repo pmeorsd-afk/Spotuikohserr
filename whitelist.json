@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 842,
-  "last_updated": "2026-10-15T19:45:58.616Z",
+  "version": 843,
+  "last_updated": "2026-10-15T19:46:04.126Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -10,8 +10,8 @@
         "רפאל מלול"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T19:45:58.616Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T19:46:04.126Z"
     },
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
