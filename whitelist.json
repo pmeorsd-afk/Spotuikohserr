@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 813,
-  "last_updated": "2026-10-15T17:35:51.890Z",
+  "version": 814,
+  "last_updated": "2026-10-15T17:36:23.650Z",
   "artists": [
+    {
+      "id": "1aHwMcpYIOTXqyAPT5Q0ZU",
+      "canonical_name": "יואלי קליין",
+      "aliases": [
+        "יואלי קליין"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:36:23.650Z"
+    },
     {
       "id": "2lE2JFILhHTQzOoaqSBCyU",
       "canonical_name": "Simcha Abramczik",
