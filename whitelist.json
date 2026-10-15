@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 837,
-  "last_updated": "2026-10-15T18:52:11.039Z",
+  "version": 838,
+  "last_updated": "2026-10-15T18:55:23.106Z",
   "artists": [
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
@@ -1410,6 +1410,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3WyvZJGxtORVdtOkNyHBJp",
+      "title": "קוצים",
+      "artist": "Aviv Geffen, Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T18:55:23.106Z"
+    },
     {
       "id": "6DVXyB4dHEJqWqkuUyfjTQ",
       "title": "מי נהר",
