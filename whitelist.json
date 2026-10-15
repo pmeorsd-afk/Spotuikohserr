@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 707,
-  "last_updated": "2026-10-15T09:47:11.892Z",
+  "version": 708,
+  "last_updated": "2026-10-15T09:47:13.661Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3rR3dvYqkQxAc9mI5Adrrk",
+      "title": "עולם מושלם",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T09:47:13.661Z"
+    },
     {
       "id": "4FGdjrKzyN5r4UDiSPvGU1",
       "title": "רק בן אדם",
