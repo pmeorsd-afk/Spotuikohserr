@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 787,
-  "last_updated": "2026-10-15T17:31:20.902Z",
+  "version": 788,
+  "last_updated": "2026-10-15T17:31:36.781Z",
   "artists": [
+    {
+      "id": "5Sy6C6tmABT5pefZ1I11qI",
+      "canonical_name": "NECHEMYA",
+      "aliases": [
+        "NECHEMYA"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:31:36.781Z"
+    },
     {
       "id": "0YTDuC5dPXKDgpWy7raIxh",
       "canonical_name": "Shmili Landau",
