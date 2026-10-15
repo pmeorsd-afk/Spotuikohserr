@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 828,
-  "last_updated": "2026-10-15T18:43:20.941Z",
+  "version": 829,
+  "last_updated": "2026-10-15T18:43:22.506Z",
   "artists": [
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
@@ -1411,12 +1411,12 @@
   ],
   "tracks": [
     {
-      "id": "2Ysf59yn2BvORwWGQLn4XX",
+      "id": "3Oyo1ka336xz4JwMUKUISe",
       "title": "לפעמים",
       "artist": "Ravid Plotnik",
       "status": "approved",
       "notes": "approved via telegram",
-      "updated_at": "2026-10-15T18:43:20.941Z"
+      "updated_at": "2026-10-15T18:43:22.506Z"
     },
     {
       "id": "0yVINvKJFjJHyYW5F0BTeT",
