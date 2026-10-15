@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 805,
-  "last_updated": "2026-10-15T17:34:14.249Z",
+  "version": 806,
+  "last_updated": "2026-10-15T17:34:25.325Z",
   "artists": [
+    {
+      "id": "5HAsvzFyNt3CF8HNO2naK8",
+      "canonical_name": "Yosef Gestetner",
+      "aliases": [
+        "Yosef Gestetner"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:34:25.325Z"
+    },
     {
       "id": "6fvTRpTf5Hjb55Ly9WZiEF",
       "canonical_name": "Yecheskel Brecher",
