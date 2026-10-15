@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 770,
-  "last_updated": "2026-10-15T17:27:00.287Z",
+  "version": 771,
+  "last_updated": "2026-10-15T17:27:02.854Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "הדייג ודג הזהב",
       "artist": "Yosi Gerber",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:26:58.265Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:27:02.854Z"
     },
     {
       "id": "0CVRTtvbYSNnDUJFQ5E2wT",
