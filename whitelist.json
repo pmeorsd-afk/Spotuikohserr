@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 831,
-  "last_updated": "2026-10-15T18:43:27.142Z",
+  "version": 832,
+  "last_updated": "2026-10-15T18:44:49.618Z",
   "artists": [
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
@@ -1410,6 +1410,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1zK2cwaZJg1MsNT02iUV5K",
+      "title": "לפעמים - Cover",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T18:44:49.618Z"
+    },
     {
       "id": "3Oyo1ka336xz4JwMUKUISe",
       "title": "לפעמים",
