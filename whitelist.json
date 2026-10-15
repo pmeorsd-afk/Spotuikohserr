@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 728,
-  "last_updated": "2026-10-15T15:50:15.132Z",
+  "version": 729,
+  "last_updated": "2026-10-15T15:50:19.871Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1201,8 +1201,8 @@
       "title": "קרן שמש",
       "artist": "בניה ברבי",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T15:50:07.295Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T15:50:19.871Z"
     },
     {
       "id": "7DqRDwosrx7pMcQgmA4xYC",
