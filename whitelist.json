@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 812,
-  "last_updated": "2026-10-15T17:35:48.255Z",
+  "version": 813,
+  "last_updated": "2026-10-15T17:35:51.890Z",
   "artists": [
     {
       "id": "2lE2JFILhHTQzOoaqSBCyU",
@@ -10,8 +10,8 @@
         "Simcha Abramczik"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:35:48.255Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:35:51.890Z"
     },
     {
       "id": "799SNgh98CJez8y4OPrQ2s",
