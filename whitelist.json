@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 755,
-  "last_updated": "2026-10-15T17:07:06.317Z",
+  "version": 756,
+  "last_updated": "2026-10-15T17:07:09.021Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "Someone You Loved",
       "artist": "Lewis Capaldi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:07:04.138Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:07:09.021Z"
     },
     {
       "id": "0QjpQP1w7apeMXzioL8sqN",
