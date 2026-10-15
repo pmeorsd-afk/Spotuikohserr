@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 807,
-  "last_updated": "2026-10-15T17:34:28.813Z",
+  "version": 808,
+  "last_updated": "2026-10-15T17:34:37.346Z",
   "artists": [
+    {
+      "id": "6GlaWa4BtkvAWSvEZdEekN",
+      "canonical_name": "Yaakov Rosenblum",
+      "aliases": [
+        "Yaakov Rosenblum"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:34:37.346Z"
+    },
     {
       "id": "5HAsvzFyNt3CF8HNO2naK8",
       "canonical_name": "Yosef Gestetner",
