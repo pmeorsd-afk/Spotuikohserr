@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 740,
-  "last_updated": "2026-10-15T15:54:36.037Z",
+  "version": 741,
+  "last_updated": "2026-10-15T15:54:40.182Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "שיר האמונה",
       "artist": "Kobi Peretz, הרב שלום ארוש",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T15:54:36.037Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T15:54:40.182Z"
     },
     {
       "id": "7zSEiGAWqX369STfCRYWVu",
