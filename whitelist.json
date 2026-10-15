@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 734,
-  "last_updated": "2026-10-15T15:50:36.171Z",
+  "version": 735,
+  "last_updated": "2026-10-15T15:50:38.446Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1202,7 +1202,7 @@
       "artist": "Avraham Fried, Ari Stern",
       "status": "approved",
       "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-15T15:50:22.185Z"
+      "updated_at": "2026-10-15T15:50:38.446Z"
     },
     {
       "id": "5p0n1FnLSEKgA6cGdobYU7",
