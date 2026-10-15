@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 852,
-  "last_updated": "2026-10-15T20:01:47.910Z",
+  "version": 853,
+  "last_updated": "2026-10-15T20:01:51.949Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -1425,8 +1425,8 @@
       "title": "ילד שלי",
       "artist": "Harel Moyal",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T20:01:47.910Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T20:01:51.949Z"
     },
     {
       "id": "6rc94blq9sGQLVaeEs3IDl",
