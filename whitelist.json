@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 716,
-  "last_updated": "2026-10-15T09:47:33.546Z",
+  "version": 717,
+  "last_updated": "2026-10-15T09:48:02.036Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "58O0U0FzJC4sFVCvPuepZj",
+      "title": "קול ביער",
+      "artist": "דניאל וייס, צמאה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T09:48:02.036Z"
+    },
     {
       "id": "6lSSdXZtqF4tFlmaQyV0ut",
       "title": "צמאה לאהבה",
