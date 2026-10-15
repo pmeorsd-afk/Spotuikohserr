@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 737,
-  "last_updated": "2026-10-15T15:51:28.176Z",
+  "version": 738,
+  "last_updated": "2026-10-15T15:54:03.890Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7zSEiGAWqX369STfCRYWVu",
+      "title": "הבן של אלוהים",
+      "artist": "Kobi Peretz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T15:54:03.890Z"
+    },
     {
       "id": "3Es4JHDDGWAjzdhFzl8HO8",
       "title": "שאו שערים",
