@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 792,
-  "last_updated": "2026-10-15T17:32:27.346Z",
+  "version": 793,
+  "last_updated": "2026-10-15T17:32:31.544Z",
   "artists": [
     {
       "id": "09Dsft7Gph22zApHqhCqus",
@@ -10,8 +10,8 @@
         "Levy Falkowitz"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:32:27.346Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:32:31.544Z"
     },
     {
       "id": "6R3TPDd3bohT1l59k7muX7",
