@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 726,
-  "last_updated": "2026-10-15T15:50:09.667Z",
+  "version": 727,
+  "last_updated": "2026-10-15T15:50:12.503Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6tyNefJBpXtd6eUItFZUpz",
+      "title": "חיבת ירושלים",
+      "artist": "Avraham Fried, Ari Stern",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T15:50:12.503Z"
+    },
     {
       "id": "5p0n1FnLSEKgA6cGdobYU7",
       "title": "ושמחת בחגך",
