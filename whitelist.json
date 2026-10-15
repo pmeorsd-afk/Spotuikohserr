@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 736,
-  "last_updated": "2026-10-15T15:51:24.153Z",
+  "version": 737,
+  "last_updated": "2026-10-15T15:51:28.176Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "שאו שערים",
       "artist": "בניה ברבי, צמאה",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T15:51:24.153Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T15:51:28.176Z"
     },
     {
       "id": "1rbHAsCivqcZqHf6K8M9XH",
