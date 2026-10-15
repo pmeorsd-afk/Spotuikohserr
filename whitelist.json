@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 721,
-  "last_updated": "2026-10-15T15:49:58.723Z",
+  "version": 722,
+  "last_updated": "2026-10-15T15:50:01.245Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7DqRDwosrx7pMcQgmA4xYC",
+      "title": "בוחר מחדש",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T15:50:01.245Z"
+    },
     {
       "id": "1mH4Ef5h5ZmvvoS8mdrrOh",
       "title": "אחת למליון & איתך אני מאושר - משאפ",
