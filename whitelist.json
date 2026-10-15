@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 836,
-  "last_updated": "2026-10-15T18:52:07.356Z",
+  "version": 837,
+  "last_updated": "2026-10-15T18:52:11.039Z",
   "artists": [
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
@@ -1415,8 +1415,8 @@
       "title": "מי נהר",
       "artist": "Idan Raichel",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T18:52:07.356Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T18:52:11.039Z"
     },
     {
       "id": "5FGG9tl1Fws1QlaLwUi4q3",
