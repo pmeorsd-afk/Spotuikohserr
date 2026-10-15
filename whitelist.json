@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 724,
-  "last_updated": "2026-10-15T15:50:05.398Z",
+  "version": 725,
+  "last_updated": "2026-10-15T15:50:07.295Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3zhFqDzJZfnc8L5QkGWWG6",
+      "title": "קרן שמש",
+      "artist": "בניה ברבי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T15:50:07.295Z"
+    },
     {
       "id": "7DqRDwosrx7pMcQgmA4xYC",
       "title": "בוחר מחדש",
