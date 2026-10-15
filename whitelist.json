@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 742,
-  "last_updated": "2026-10-15T15:54:41.959Z",
+  "version": 743,
+  "last_updated": "2026-10-15T15:54:45.572Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "03tqa1PKELgEzPQTvN86aj",
+      "title": "כל יום שעובר לייב",
+      "artist": "Bar Tzabary",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T15:54:45.572Z"
+    },
     {
       "id": "3Zz7flVk3IeY5iTJFxGdNs",
       "title": "חטאנו לפניך",
