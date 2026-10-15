@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 727,
-  "last_updated": "2026-10-15T15:50:12.503Z",
+  "version": 728,
+  "last_updated": "2026-10-15T15:50:15.132Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "ושמחת בחגך",
       "artist": "Avraham Fried, ליאור נרקיס, צמאה",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T15:50:09.667Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T15:50:15.132Z"
     },
     {
       "id": "3zhFqDzJZfnc8L5QkGWWG6",
