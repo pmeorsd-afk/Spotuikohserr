@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 847,
-  "last_updated": "2026-10-15T19:53:16.152Z",
+  "version": 848,
+  "last_updated": "2026-10-15T19:54:53.028Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -1420,6 +1420,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1DAGRamUqALbm7scn4tc11",
+      "title": "הכל עובר",
+      "artist": "Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T19:54:53.028Z"
+    },
     {
       "id": "3NF23A4wVjKV8G5THJ1KSd",
       "title": "תפילה לעני",
