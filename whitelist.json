@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 743,
-  "last_updated": "2026-10-15T15:54:45.572Z",
+  "version": 744,
+  "last_updated": "2026-10-15T15:54:47.569Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "חטאנו לפניך",
       "artist": "מתן חסן",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T15:54:41.959Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T15:54:47.569Z"
     },
     {
       "id": "2bflVGJkXopKfKrMHhhqqR",
