@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 794,
-  "last_updated": "2026-10-15T17:32:41.704Z",
+  "version": 795,
+  "last_updated": "2026-10-15T17:32:44.918Z",
   "artists": [
     {
       "id": "3mZNc4n1kI3Bz6aYLIzGXI",
@@ -10,8 +10,8 @@
         "Shimmy Engel"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:32:41.704Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:32:44.918Z"
     },
     {
       "id": "09Dsft7Gph22zApHqhCqus",
