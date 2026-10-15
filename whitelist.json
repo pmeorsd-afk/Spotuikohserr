@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 718,
-  "last_updated": "2026-10-15T09:48:05.816Z",
+  "version": 719,
+  "last_updated": "2026-10-15T15:49:50.279Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3rmo8F54jFF8OgYsqTxm5d",
+      "title": "Bad Habits",
+      "artist": "Ed Sheeran",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T15:49:50.279Z"
+    },
     {
       "id": "58O0U0FzJC4sFVCvPuepZj",
       "title": "קול ביער",
