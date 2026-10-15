@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 706,
-  "last_updated": "2026-10-15T09:47:08.472Z",
+  "version": 707,
+  "last_updated": "2026-10-15T09:47:11.892Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "רק בן אדם",
       "artist": "נווה לוי",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T09:47:08.472Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T09:47:11.892Z"
     },
     {
       "id": "5mT0kHqW0vMAjLS9dCGkeM",
