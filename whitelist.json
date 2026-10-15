@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 853,
-  "last_updated": "2026-10-15T20:01:51.949Z",
+  "version": 854,
+  "last_updated": "2026-10-15T21:08:15.783Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -1420,6 +1420,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "71Fr6FjccDocFjtsBmQHgk",
+      "title": "Kvish Hachof",
+      "artist": "Static & Ben El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T21:08:15.783Z"
+    },
     {
       "id": "7cxqy95Vktuz5egMPFHmDS",
       "title": "ילד שלי",
