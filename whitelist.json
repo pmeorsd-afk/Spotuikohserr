@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 753,
-  "last_updated": "2026-10-15T17:07:01.821Z",
+  "version": 754,
+  "last_updated": "2026-10-15T17:07:04.138Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7qEHsqek33rTcFNT9PFqLf",
+      "title": "Someone You Loved",
+      "artist": "Lewis Capaldi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:07:04.138Z"
+    },
     {
       "id": "0QjpQP1w7apeMXzioL8sqN",
       "title": "The Nights",
