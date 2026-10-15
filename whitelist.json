@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 717,
-  "last_updated": "2026-10-15T09:48:02.036Z",
+  "version": 718,
+  "last_updated": "2026-10-15T09:48:05.816Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "קול ביער",
       "artist": "דניאל וייס, צמאה",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T09:48:02.036Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T09:48:05.816Z"
     },
     {
       "id": "6lSSdXZtqF4tFlmaQyV0ut",
