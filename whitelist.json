@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 809,
-  "last_updated": "2026-10-15T17:34:41.042Z",
+  "version": 810,
+  "last_updated": "2026-10-15T17:34:49.640Z",
   "artists": [
+    {
+      "id": "799SNgh98CJez8y4OPrQ2s",
+      "canonical_name": "דניאל וייס",
+      "aliases": [
+        "דניאל וייס"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:34:49.640Z"
+    },
     {
       "id": "6GlaWa4BtkvAWSvEZdEekN",
       "canonical_name": "Yaakov Rosenblum",
