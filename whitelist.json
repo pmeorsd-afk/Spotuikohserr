@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 751,
-  "last_updated": "2026-10-15T17:06:53.428Z",
+  "version": 752,
+  "last_updated": "2026-10-15T17:06:58.857Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0QjpQP1w7apeMXzioL8sqN",
+      "title": "The Nights",
+      "artist": "Avicii",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:06:58.857Z"
+    },
     {
       "id": "7qiZfU4dY1lWllzX7mPBI3",
       "title": "Shape of You",
