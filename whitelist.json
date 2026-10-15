@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 776,
-  "last_updated": "2026-10-15T17:29:04.573Z",
+  "version": 777,
+  "last_updated": "2026-10-15T17:29:07.903Z",
   "artists": [
     {
       "id": "5xVi3qDCQZgPRvDUMJOc1Y",
@@ -10,8 +10,8 @@
         "EKEV"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:29:04.573Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:29:07.903Z"
     },
     {
       "id": "5OcwZj5oNteLMuBI1ZO8p8",
