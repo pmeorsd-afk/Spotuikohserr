@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 819,
-  "last_updated": "2026-10-15T17:37:05.385Z",
+  "version": 820,
+  "last_updated": "2026-10-15T17:37:13.835Z",
   "artists": [
+    {
+      "id": "0weOKqPQBZtgtV4ybtCxE2",
+      "canonical_name": "איתי דוד",
+      "aliases": [
+        "איתי דוד"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:37:13.835Z"
+    },
     {
       "id": "0K8k1l7HIRcBfZU0txFRzV",
       "canonical_name": "ישיבת עתניאל",
