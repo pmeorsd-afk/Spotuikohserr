@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 840,
-  "last_updated": "2026-10-15T19:32:12.135Z",
+  "version": 841,
+  "last_updated": "2026-10-15T19:32:16.544Z",
   "artists": [
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
@@ -1415,8 +1415,8 @@
       "title": "את",
       "artist": "לירן דנינו, כוכב נולד",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T19:32:12.135Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T19:32:16.544Z"
     },
     {
       "id": "3WyvZJGxtORVdtOkNyHBJp",
