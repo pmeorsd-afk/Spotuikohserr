@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 782,
-  "last_updated": "2026-10-15T17:30:40.927Z",
+  "version": 783,
+  "last_updated": "2026-10-15T17:30:45.740Z",
   "artists": [
     {
       "id": "68lH6kkDz4YnUfeoiPMoTq",
@@ -10,8 +10,8 @@
         "Sara Doron"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:30:40.927Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:30:45.740Z"
     },
     {
       "id": "09I8dfj7wsEFPbgTqVODMO",
