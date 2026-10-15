@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 820,
-  "last_updated": "2026-10-15T17:37:13.835Z",
+  "version": 821,
+  "last_updated": "2026-10-15T17:37:18.686Z",
   "artists": [
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
@@ -10,8 +10,8 @@
         "איתי דוד"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:37:13.835Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:37:18.686Z"
     },
     {
       "id": "0K8k1l7HIRcBfZU0txFRzV",
