@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 826,
-  "last_updated": "2026-10-15T18:42:32.058Z",
+  "version": 827,
+  "last_updated": "2026-10-15T18:42:35.591Z",
   "artists": [
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
@@ -1415,8 +1415,8 @@
       "title": "שוב",
       "artist": "נתנאל ששון",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T18:42:32.058Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T18:42:35.591Z"
     },
     {
       "id": "4qsIJwY7UMDW1GvzBkNa5T",
