@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 818,
-  "last_updated": "2026-10-15T17:37:01.775Z",
+  "version": 819,
+  "last_updated": "2026-10-15T17:37:05.385Z",
   "artists": [
     {
       "id": "0K8k1l7HIRcBfZU0txFRzV",
@@ -10,8 +10,8 @@
         "ישיבת עתניאל"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:37:01.775Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:37:05.385Z"
     },
     {
       "id": "08I17YfmlYNv3gnqDKLvc9",
