@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 796,
-  "last_updated": "2026-10-15T17:32:56.201Z",
+  "version": 797,
+  "last_updated": "2026-10-15T17:32:59.991Z",
   "artists": [
     {
       "id": "3mZNc4n1kI3Bz6aYLIzGXI",
@@ -80,8 +80,8 @@
         "Dovy Meisels"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:32:56.201Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:32:59.991Z"
     },
     {
       "id": "0JCLwJp45ICZOKl7OTzl9A",
