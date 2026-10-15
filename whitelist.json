@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 854,
-  "last_updated": "2026-10-15T21:08:15.783Z",
+  "version": 855,
+  "last_updated": "2026-10-15T21:08:19.475Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -1425,8 +1425,8 @@
       "title": "Kvish Hachof",
       "artist": "Static & Ben El",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T21:08:15.783Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T21:08:19.475Z"
     },
     {
       "id": "7cxqy95Vktuz5egMPFHmDS",
