@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 799,
-  "last_updated": "2026-10-15T17:33:18.359Z",
+  "version": 800,
+  "last_updated": "2026-10-15T17:33:28.568Z",
   "artists": [
+    {
+      "id": "6yjruG2CpZEHN1jo4MH4LI",
+      "canonical_name": "Naftali Schnitzler",
+      "aliases": [
+        "Naftali Schnitzler"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:33:28.568Z"
+    },
     {
       "id": "3rToi7fIfKqKYfFEVXuvqo",
       "canonical_name": "Moishe Eisenberg",
