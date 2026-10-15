@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 774,
-  "last_updated": "2026-10-15T17:27:51.887Z",
+  "version": 775,
+  "last_updated": "2026-10-15T17:27:55.769Z",
   "artists": [
     {
       "id": "5OcwZj5oNteLMuBI1ZO8p8",
@@ -10,8 +10,8 @@
         "Yossi Graber"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:27:51.887Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:27:55.769Z"
     },
     {
       "id": "6nwdGYvvU7caFI06fyz153",
