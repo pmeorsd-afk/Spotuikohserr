@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 785,
-  "last_updated": "2026-10-15T17:31:06.175Z",
+  "version": 786,
+  "last_updated": "2026-10-15T17:31:17.790Z",
   "artists": [
+    {
+      "id": "0YTDuC5dPXKDgpWy7raIxh",
+      "canonical_name": "Shmili Landau",
+      "aliases": [
+        "Shmili Landau"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:31:17.790Z"
+    },
     {
       "id": "3JPAwaRvJZgCGvLBuTmIIp",
       "canonical_name": "Gershi Uri",
