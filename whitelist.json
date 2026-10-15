@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 719,
-  "last_updated": "2026-10-15T15:49:50.279Z",
+  "version": 720,
+  "last_updated": "2026-10-15T15:49:53.389Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "Bad Habits",
       "artist": "Ed Sheeran",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T15:49:50.279Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T15:49:53.389Z"
     },
     {
       "id": "58O0U0FzJC4sFVCvPuepZj",
