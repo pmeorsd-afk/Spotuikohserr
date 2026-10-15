@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 722,
-  "last_updated": "2026-10-15T15:50:01.245Z",
+  "version": 723,
+  "last_updated": "2026-10-15T15:50:03.788Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1193,8 +1193,8 @@
       "title": "אחת למליון & איתך אני מאושר - משאפ",
       "artist": "אלקנה מרציאנו",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T15:49:58.723Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T15:50:03.788Z"
     },
     {
       "id": "3rmo8F54jFF8OgYsqTxm5d",
