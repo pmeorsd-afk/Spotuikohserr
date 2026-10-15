@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 783,
-  "last_updated": "2026-10-15T17:30:45.740Z",
+  "version": 784,
+  "last_updated": "2026-10-15T17:31:01.472Z",
   "artists": [
+    {
+      "id": "3JPAwaRvJZgCGvLBuTmIIp",
+      "canonical_name": "Gershi Uri",
+      "aliases": [
+        "Gershi Uri"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:31:01.472Z"
+    },
     {
       "id": "68lH6kkDz4YnUfeoiPMoTq",
       "canonical_name": "Sara Doron",
