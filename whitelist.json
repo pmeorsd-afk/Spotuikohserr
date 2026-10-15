@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 833,
-  "last_updated": "2026-10-15T18:44:53.934Z",
+  "version": 834,
+  "last_updated": "2026-10-15T18:48:19.543Z",
   "artists": [
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
@@ -1410,6 +1410,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5FGG9tl1Fws1QlaLwUi4q3",
+      "title": "Mitgaagea",
+      "artist": "Yaakov Hatan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T18:48:19.543Z"
+    },
     {
       "id": "1zK2cwaZJg1MsNT02iUV5K",
       "title": "לפעמים - Cover",
