@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 781,
-  "last_updated": "2026-10-15T17:30:12.138Z",
+  "version": 782,
+  "last_updated": "2026-10-15T17:30:40.927Z",
   "artists": [
+    {
+      "id": "68lH6kkDz4YnUfeoiPMoTq",
+      "canonical_name": "Sara Doron",
+      "aliases": [
+        "Sara Doron"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:30:40.927Z"
+    },
     {
       "id": "09I8dfj7wsEFPbgTqVODMO",
       "canonical_name": "Dovy Meisels",
