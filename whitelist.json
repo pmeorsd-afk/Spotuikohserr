@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 811,
-  "last_updated": "2026-10-15T17:34:53.362Z",
+  "version": 812,
+  "last_updated": "2026-10-15T17:35:48.255Z",
   "artists": [
+    {
+      "id": "2lE2JFILhHTQzOoaqSBCyU",
+      "canonical_name": "Simcha Abramczik",
+      "aliases": [
+        "Simcha Abramczik"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:35:48.255Z"
+    },
     {
       "id": "799SNgh98CJez8y4OPrQ2s",
       "canonical_name": "דניאל וייס",
