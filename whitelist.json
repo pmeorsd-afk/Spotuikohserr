@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 748,
-  "last_updated": "2026-10-15T17:06:45.565Z",
+  "version": 749,
+  "last_updated": "2026-10-15T17:06:47.738Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3B0irDyS69y5eAz15xV2Ee",
+      "title": "Wake Me Up",
+      "artist": "Avicii",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:06:47.738Z"
+    },
     {
       "id": "5zFglKYiknIxks8geR8rcL",
       "title": "Beautiful Mistakes (feat. Megan Thee Stallion)",
