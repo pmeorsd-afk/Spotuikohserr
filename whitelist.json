@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 788,
-  "last_updated": "2026-10-15T17:31:36.781Z",
+  "version": 789,
+  "last_updated": "2026-10-15T17:31:40.080Z",
   "artists": [
     {
       "id": "5Sy6C6tmABT5pefZ1I11qI",
@@ -10,8 +10,8 @@
         "NECHEMYA"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T17:31:36.781Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T17:31:40.080Z"
     },
     {
       "id": "0YTDuC5dPXKDgpWy7raIxh",
