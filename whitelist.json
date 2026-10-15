@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 715,
-  "last_updated": "2026-10-15T09:47:30.081Z",
+  "version": 716,
+  "last_updated": "2026-10-15T09:47:33.546Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "צמאה לאהבה",
       "artist": "Liran Danino",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T09:47:30.081Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T09:47:33.546Z"
     },
     {
       "id": "4CyMxRgojJsGD6HmMK9bEL",
