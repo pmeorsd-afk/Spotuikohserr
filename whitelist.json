@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 803,
-  "last_updated": "2026-10-15T17:33:50.519Z",
+  "version": 804,
+  "last_updated": "2026-10-15T17:34:10.220Z",
   "artists": [
+    {
+      "id": "6fvTRpTf5Hjb55Ly9WZiEF",
+      "canonical_name": "Yecheskel Brecher",
+      "aliases": [
+        "Yecheskel Brecher"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:34:10.220Z"
+    },
     {
       "id": "5fUah1gIocxA2lUVyu7ja7",
       "canonical_name": "Yoely Greenfeld",
