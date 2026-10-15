@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 851,
-  "last_updated": "2026-10-15T19:58:10.686Z",
+  "version": 852,
+  "last_updated": "2026-10-15T20:01:47.910Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -1420,6 +1420,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7cxqy95Vktuz5egMPFHmDS",
+      "title": "ילד שלי",
+      "artist": "Harel Moyal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T20:01:47.910Z"
+    },
     {
       "id": "6rc94blq9sGQLVaeEs3IDl",
       "title": "חולה מאהבה",
