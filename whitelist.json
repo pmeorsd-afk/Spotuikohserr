@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 725,
-  "last_updated": "2026-10-15T15:50:07.295Z",
+  "version": 726,
+  "last_updated": "2026-10-15T15:50:09.667Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5p0n1FnLSEKgA6cGdobYU7",
+      "title": "ושמחת בחגך",
+      "artist": "Avraham Fried, ליאור נרקיס, צמאה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T15:50:09.667Z"
+    },
     {
       "id": "3zhFqDzJZfnc8L5QkGWWG6",
       "title": "קרן שמש",
