@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 758,
-  "last_updated": "2026-10-15T17:08:35.968Z",
+  "version": 759,
+  "last_updated": "2026-10-15T17:08:39.414Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3at4D3FZnJnYR0Mfcn6JSN",
+      "title": "Take You Dancing",
+      "artist": "Jason Derulo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T17:08:39.414Z"
+    },
     {
       "id": "6cx06DFPPHchuUAcTxznu9",
       "title": "Head & Heart (feat. MNEK)",
