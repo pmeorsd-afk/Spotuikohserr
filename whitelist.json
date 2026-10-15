@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 822,
-  "last_updated": "2026-10-15T17:37:31.800Z",
+  "version": 823,
+  "last_updated": "2026-10-15T17:37:35.599Z",
   "artists": [
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
@@ -60,8 +60,8 @@
         "דניאל וייס"
       ],
       "status": "blocked",
-      "notes": "blocked via telegram",
-      "updated_at": "2026-10-15T17:37:31.800Z"
+      "notes": "blocked via SpotUI Admin",
+      "updated_at": "2026-10-15T17:37:35.599Z"
     },
     {
       "id": "6GlaWa4BtkvAWSvEZdEekN",
