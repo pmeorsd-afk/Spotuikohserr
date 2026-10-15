@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 841,
-  "last_updated": "2026-10-15T19:32:16.544Z",
+  "version": 842,
+  "last_updated": "2026-10-15T19:45:58.616Z",
   "artists": [
+    {
+      "id": "7d3wDE732D4GnhEMhqSSOY",
+      "canonical_name": "רפאל מלול",
+      "aliases": [
+        "רפאל מלול"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T19:45:58.616Z"
+    },
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
       "canonical_name": "איתי דוד",
