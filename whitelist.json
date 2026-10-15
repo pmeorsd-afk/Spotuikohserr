@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 739,
-  "last_updated": "2026-10-15T15:54:07.614Z",
+  "version": 740,
+  "last_updated": "2026-10-15T15:54:36.037Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1180,6 +1180,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2bflVGJkXopKfKrMHhhqqR",
+      "title": "שיר האמונה",
+      "artist": "Kobi Peretz, הרב שלום ארוש",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T15:54:36.037Z"
+    },
     {
       "id": "7zSEiGAWqX369STfCRYWVu",
       "title": "הבן של אלוהים",
