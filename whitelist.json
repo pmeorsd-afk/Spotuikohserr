@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 846,
-  "last_updated": "2026-10-15T19:53:12.107Z",
+  "version": 847,
+  "last_updated": "2026-10-15T19:53:16.152Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -1425,8 +1425,8 @@
       "title": "תפילה לעני",
       "artist": "Yuval Dayan",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T19:53:12.107Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T19:53:16.152Z"
     },
     {
       "id": "0XbNyFJKF3uwaTbumwF795",
