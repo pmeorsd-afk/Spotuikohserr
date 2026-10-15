@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 744,
-  "last_updated": "2026-10-15T15:54:47.569Z",
+  "version": 745,
+  "last_updated": "2026-10-15T15:54:49.352Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "כל יום שעובר לייב",
       "artist": "Bar Tzabary",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T15:54:45.572Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T15:54:49.352Z"
     },
     {
       "id": "3Zz7flVk3IeY5iTJFxGdNs",
