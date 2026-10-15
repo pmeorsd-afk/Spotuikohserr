@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 825,
-  "last_updated": "2026-10-15T18:37:23.626Z",
+  "version": 826,
+  "last_updated": "2026-10-15T18:42:32.058Z",
   "artists": [
     {
       "id": "0weOKqPQBZtgtV4ybtCxE2",
@@ -1410,6 +1410,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0yVINvKJFjJHyYW5F0BTeT",
+      "title": "שוב",
+      "artist": "נתנאל ששון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-15T18:42:32.058Z"
+    },
     {
       "id": "4qsIJwY7UMDW1GvzBkNa5T",
       "title": "אני מקווה",
