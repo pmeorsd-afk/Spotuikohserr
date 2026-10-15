@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 850,
-  "last_updated": "2026-10-15T19:58:06.812Z",
+  "version": 851,
+  "last_updated": "2026-10-15T19:58:10.686Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -1425,8 +1425,8 @@
       "title": "חולה מאהבה",
       "artist": "Harel Skaat",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T19:58:06.812Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T19:58:10.686Z"
     },
     {
       "id": "1DAGRamUqALbm7scn4tc11",
