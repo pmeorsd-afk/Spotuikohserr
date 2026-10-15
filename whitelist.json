@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 713,
-  "last_updated": "2026-10-15T09:47:23.982Z",
+  "version": 714,
+  "last_updated": "2026-10-15T09:47:26.359Z",
   "artists": [
     {
       "id": "6nwdGYvvU7caFI06fyz153",
@@ -1185,8 +1185,8 @@
       "title": "כמו גשם במאי",
       "artist": "Eyal Golan",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-15T09:47:21.277Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-15T09:47:26.359Z"
     },
     {
       "id": "6YYLY0OIeVF3razSxCmIGU",
