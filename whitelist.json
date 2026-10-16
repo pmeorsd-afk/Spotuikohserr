@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 906,
-  "last_updated": "2026-10-16T09:26:57.386Z",
+  "version": 907,
+  "last_updated": "2026-10-16T09:30:15.734Z",
   "artists": [
+    {
+      "id": "3byXwT49eLyKwoVNO9WRT9",
+      "canonical_name": "Yeshivah of Flatbush Elementary School Choir",
+      "aliases": [
+        "Yeshivah of Flatbush Elementary School Choir"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:30:15.734Z"
+    },
     {
       "id": "4QJ9qlXf3pVzZDCHvDPSYe",
       "canonical_name": "Mamtak L'eshabat",
