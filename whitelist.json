@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 964,
-  "last_updated": "2026-10-16T12:47:13.158Z",
+  "version": 965,
+  "last_updated": "2026-10-16T12:47:17.196Z",
   "artists": [
     {
       "id": "1tQwdPFSPBsA18caP5hTJq",
@@ -10,8 +10,8 @@
         "ישיבת ההסדר קריית שמונה"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:47:13.158Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:47:17.196Z"
     },
     {
       "id": "6inOuTGVSU6wIjXnaM09dK",
