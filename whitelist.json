@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 912,
-  "last_updated": "2026-10-16T09:41:13.423Z",
+  "version": 913,
+  "last_updated": "2026-10-16T09:45:43.621Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1610,6 +1610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4rQ8af8cPucPLo2Tv7Rvuv",
+      "title": "מחזיק לי את היד",
+      "artist": "Shir Levi, Nati Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:45:43.621Z"
+    },
     {
       "id": "2NHd4NplJdSuT4kMBCLQtC",
       "title": "הצייר",
