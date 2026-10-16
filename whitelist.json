@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 963,
-  "last_updated": "2026-10-16T12:47:11.011Z",
+  "version": 964,
+  "last_updated": "2026-10-16T12:47:13.158Z",
   "artists": [
+    {
+      "id": "1tQwdPFSPBsA18caP5hTJq",
+      "canonical_name": "ישיבת ההסדר קריית שמונה",
+      "aliases": [
+        "ישיבת ההסדר קריית שמונה"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:47:13.158Z"
+    },
     {
       "id": "6inOuTGVSU6wIjXnaM09dK",
       "canonical_name": "The Music of Shabbos",
