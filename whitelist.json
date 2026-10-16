@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 977,
-  "last_updated": "2026-10-16T13:12:45.745Z",
+  "version": 978,
+  "last_updated": "2026-10-16T13:18:16.364Z",
   "artists": [
+    {
+      "id": "3tVllQ51EDMBuzaGd3O2pn",
+      "canonical_name": "Yiddish Nachas",
+      "aliases": [
+        "Yiddish Nachas"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T13:18:16.364Z"
+    },
     {
       "id": "6pvMmR7myGILzuBhw0buvL",
       "canonical_name": "Yitzy Waldner",
