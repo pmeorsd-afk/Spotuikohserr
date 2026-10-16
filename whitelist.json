@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 976,
-  "last_updated": "2026-10-16T13:12:42.116Z",
+  "version": 977,
+  "last_updated": "2026-10-16T13:12:45.745Z",
   "artists": [
     {
       "id": "6pvMmR7myGILzuBhw0buvL",
@@ -10,8 +10,8 @@
         "Yitzy Waldner"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T13:12:42.116Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T13:12:45.745Z"
     },
     {
       "id": "5bK2Z9ANfRV6WeDGDVvZrN",
