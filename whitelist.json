@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 880,
-  "last_updated": "2026-10-16T09:24:13.358Z",
+  "version": 881,
+  "last_updated": "2026-10-16T09:24:16.503Z",
   "artists": [
     {
       "id": "53LziakL6xbzRRfUz5vXcE",
@@ -10,8 +10,8 @@
         "מיכאל פרץ"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:24:13.358Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:24:16.503Z"
     },
     {
       "id": "4xF6j9UXuWb1efCa0U0aik",
