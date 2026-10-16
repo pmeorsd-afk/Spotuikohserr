@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 909,
-  "last_updated": "2026-10-16T09:40:37.074Z",
+  "version": 910,
+  "last_updated": "2026-10-16T09:40:41.137Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -10,8 +10,8 @@
         "Yingerlich"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:40:37.074Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:40:41.137Z"
     },
     {
       "id": "3byXwT49eLyKwoVNO9WRT9",
