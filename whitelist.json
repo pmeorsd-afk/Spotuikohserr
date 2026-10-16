@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 941,
-  "last_updated": "2026-10-16T12:45:14.814Z",
+  "version": 942,
+  "last_updated": "2026-10-16T12:45:17.879Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1625,8 +1625,8 @@
       "title": "אין מילים איתך - חי באולפן גלגלצ",
       "artist": "נדב חנציס, גלגלצ",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:45:14.814Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:45:17.879Z"
     },
     {
       "id": "3zdogW7JHSbiyBJVSaDvbf",
