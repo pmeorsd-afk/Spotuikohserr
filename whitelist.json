@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 931,
-  "last_updated": "2026-10-16T12:43:11.082Z",
+  "version": 932,
+  "last_updated": "2026-10-16T12:43:14.436Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -10,8 +10,8 @@
         "Shay Viner"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:43:11.082Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:43:14.436Z"
     },
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
