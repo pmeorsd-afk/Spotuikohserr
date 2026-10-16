@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 933,
-  "last_updated": "2026-10-16T12:43:46.823Z",
+  "version": 934,
+  "last_updated": "2026-10-16T12:43:50.322Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1625,8 +1625,8 @@
       "title": "ואהבת",
       "artist": "אליה והב",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:43:46.823Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:43:50.322Z"
     },
     {
       "id": "2VbbP91Dw4MPoabO5S7gpA",
