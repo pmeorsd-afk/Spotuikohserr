@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 876,
-  "last_updated": "2026-10-16T09:21:07.671Z",
+  "version": 877,
+  "last_updated": "2026-10-16T09:21:10.559Z",
   "artists": [
     {
       "id": "4xF6j9UXuWb1efCa0U0aik",
@@ -1455,8 +1455,8 @@
       "title": "יבוא עלינו אושר",
       "artist": "Dudi Buzaglo",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:21:07.671Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:21:10.559Z"
     },
     {
       "id": "2uV8NosZ5sAlCjnwwaEExp",
