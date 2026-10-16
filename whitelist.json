@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 904,
-  "last_updated": "2026-10-16T09:25:49.725Z",
+  "version": 905,
+  "last_updated": "2026-10-16T09:26:54.108Z",
   "artists": [
+    {
+      "id": "4QJ9qlXf3pVzZDCHvDPSYe",
+      "canonical_name": "Mamtak L'eshabat",
+      "aliases": [
+        "Mamtak L'eshabat"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:26:54.108Z"
+    },
     {
       "id": "34NAOzd5ukmwCr81L9mrrP",
       "canonical_name": "עומרי גורן",
