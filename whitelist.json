@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 947,
-  "last_updated": "2026-10-16T12:45:28.822Z",
+  "version": 948,
+  "last_updated": "2026-10-16T12:45:30.487Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1625,8 +1625,8 @@
       "title": "טעם של טעות",
       "artist": "דודו אהרון",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:45:27.435Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:45:30.487Z"
     },
     {
       "id": "6EuV78LSE0PCdmYvVklGD7",
