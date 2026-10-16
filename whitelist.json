@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 886,
-  "last_updated": "2026-10-16T09:24:51.546Z",
+  "version": 887,
+  "last_updated": "2026-10-16T09:24:52.720Z",
   "artists": [
     {
       "id": "6vGuQc6LW3s9QBI04GscdI",
@@ -20,8 +20,8 @@
         "Motty Vizel"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:24:48.851Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:24:52.720Z"
     },
     {
       "id": "3ku5Yag5M4UMqfTFCqk5JM",
