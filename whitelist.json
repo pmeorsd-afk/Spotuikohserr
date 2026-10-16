@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 908,
-  "last_updated": "2026-10-16T09:30:19.161Z",
+  "version": 909,
+  "last_updated": "2026-10-16T09:40:37.074Z",
   "artists": [
+    {
+      "id": "3T7KpE0p3WJeXCjUQNoGcG",
+      "canonical_name": "Yingerlich",
+      "aliases": [
+        "Yingerlich"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:40:37.074Z"
+    },
     {
       "id": "3byXwT49eLyKwoVNO9WRT9",
       "canonical_name": "Yeshivah of Flatbush Elementary School Choir",
