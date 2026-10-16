@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 861,
-  "last_updated": "2026-10-16T02:21:14.250Z",
+  "version": 862,
+  "last_updated": "2026-10-16T02:21:38.201Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -1420,6 +1420,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0VjIjW4GlUZAMYd2vXMi3b",
+      "title": "Blinding Lights",
+      "artist": "The Weeknd",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T02:21:38.201Z"
+    },
     {
       "id": "4gnDl7R6mT3whj9o5PoNwF",
       "title": "גבר מרוקאי",
