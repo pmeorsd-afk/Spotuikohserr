@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 943,
-  "last_updated": "2026-10-16T12:45:20.237Z",
+  "version": 944,
+  "last_updated": "2026-10-16T12:45:23.390Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1625,8 +1625,8 @@
       "title": "תניח את המדים (מתוך פרויקט מנגינת הנצח)",
       "artist": "Eyal Golan, נדב חנציס, יגל אושרי, רותם חן, ליאם גולן, יובל מזרחי",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:45:20.237Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:45:23.390Z"
     },
     {
       "id": "4zvH3OlpFKLKbboxuYbtUu",
