@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 869,
-  "last_updated": "2026-10-16T06:40:57.049Z",
+  "version": 870,
+  "last_updated": "2026-10-16T06:41:31.505Z",
   "artists": [
+    {
+      "id": "4xF6j9UXuWb1efCa0U0aik",
+      "canonical_name": "חן ביטון",
+      "aliases": [
+        "חן ביטון"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T06:41:31.505Z"
+    },
     {
       "id": "0rwMVagBIPxueywUxvknl4",
       "canonical_name": "אופיר סלומון",
