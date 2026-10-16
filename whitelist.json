@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 919,
-  "last_updated": "2026-10-16T09:53:32.100Z",
+  "version": 920,
+  "last_updated": "2026-10-16T09:53:35.332Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1615,8 +1615,8 @@
       "title": "שבויה באהבה",
       "artist": "Shimi Ron",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:53:32.100Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:53:35.332Z"
     },
     {
       "id": "716pngIwxxmjLeVgJAsOXh",
