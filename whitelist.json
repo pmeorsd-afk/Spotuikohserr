@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 898,
-  "last_updated": "2026-10-16T09:25:24.557Z",
+  "version": 899,
+  "last_updated": "2026-10-16T09:25:31.804Z",
   "artists": [
+    {
+      "id": "3EyRCGcgyJMVxVA20EvaKb",
+      "canonical_name": "Choni G",
+      "aliases": [
+        "Choni G"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:25:31.804Z"
+    },
     {
       "id": "7DqKgB6xiJKOriQcY7Hq0B",
       "canonical_name": "להקת לב אבות",
