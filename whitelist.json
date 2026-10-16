@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 923,
-  "last_updated": "2026-10-16T10:08:35.462Z",
+  "version": 924,
+  "last_updated": "2026-10-16T10:08:37.117Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1615,8 +1615,8 @@
       "title": "More Than You Know",
       "artist": "Axwell /\\ Ingrosso",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T10:08:33.285Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T10:08:37.117Z"
     },
     {
       "id": "0CezSpPX6QEKNIMmmO93G6",
