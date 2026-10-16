@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 881,
-  "last_updated": "2026-10-16T09:24:16.503Z",
+  "version": 882,
+  "last_updated": "2026-10-16T09:24:18.235Z",
   "artists": [
+    {
+      "id": "6sEfWjMz2dl6L81BJQ3PUc",
+      "canonical_name": "עלאי ונתאי צרפתי",
+      "aliases": [
+        "עלאי ונתאי צרפתי"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:24:18.235Z"
+    },
     {
       "id": "53LziakL6xbzRRfUz5vXcE",
       "canonical_name": "מיכאל פרץ",
