@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 962,
-  "last_updated": "2026-10-16T12:47:07.860Z",
+  "version": 963,
+  "last_updated": "2026-10-16T12:47:11.011Z",
   "artists": [
     {
       "id": "6inOuTGVSU6wIjXnaM09dK",
@@ -10,8 +10,8 @@
         "The Music of Shabbos"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:47:07.860Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:47:11.011Z"
     },
     {
       "id": "6dH4o7pUF4rvtDnvNvA6tO",
