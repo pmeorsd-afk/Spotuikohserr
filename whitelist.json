@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 934,
-  "last_updated": "2026-10-16T12:43:50.322Z",
+  "version": 935,
+  "last_updated": "2026-10-16T12:44:40.915Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1620,6 +1620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7tPq06JPk6t0Kk9ptZ6Cia",
+      "title": "סגול בהיר",
+      "artist": "Mergui",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:44:40.915Z"
+    },
     {
       "id": "6wZ2qa4ex6r0q7TGPOufao",
       "title": "ואהבת",
