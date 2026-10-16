@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 917,
-  "last_updated": "2026-10-16T09:48:15.833Z",
+  "version": 918,
+  "last_updated": "2026-10-16T09:48:19.418Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1615,8 +1615,8 @@
       "title": "תן לזמן ללכת",
       "artist": "The Revivo Project",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:48:15.833Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:48:19.418Z"
     },
     {
       "id": "35U0inWm1UG3wPlHdLxmLo",
