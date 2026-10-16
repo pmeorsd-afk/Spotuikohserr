@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 966,
-  "last_updated": "2026-10-16T12:47:19.279Z",
+  "version": 967,
+  "last_updated": "2026-10-16T12:47:22.583Z",
   "artists": [
     {
       "id": "1tQwdPFSPBsA18caP5hTJq",
@@ -2937,8 +2937,8 @@
       "title": "עונג שבת",
       "artist": "Shuli Rand, ShrekDiMC",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:47:19.279Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:47:22.583Z"
     },
     {
       "id": "33hekXUB91e5KbiYT1ZxJU",
