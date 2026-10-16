@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 967,
-  "last_updated": "2026-10-16T12:47:22.583Z",
+  "version": 968,
+  "last_updated": "2026-10-16T12:47:26.566Z",
   "artists": [
+    {
+      "id": "2BFlnV6PiwBY8BHMh2sYx5",
+      "canonical_name": "Itzik Eshel",
+      "aliases": [
+        "Itzik Eshel"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:47:26.566Z"
+    },
     {
       "id": "1tQwdPFSPBsA18caP5hTJq",
       "canonical_name": "ישיבת ההסדר קריית שמונה",
