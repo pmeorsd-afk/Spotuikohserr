@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 873,
-  "last_updated": "2026-10-16T09:01:34.434Z",
+  "version": 874,
+  "last_updated": "2026-10-16T09:20:09.223Z",
   "artists": [
     {
       "id": "4xF6j9UXuWb1efCa0U0aik",
@@ -1450,6 +1450,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2uV8NosZ5sAlCjnwwaEExp",
+      "title": "מחרוזת השירים שגדלנו",
+      "artist": "נחמן סבג",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:20:09.223Z"
+    },
     {
       "id": "6Fs6SHUgNIVMxxvDoOhJDr",
       "title": "אבא תודה",
