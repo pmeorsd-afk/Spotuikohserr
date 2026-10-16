@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 929,
-  "last_updated": "2026-10-16T12:42:10.739Z",
+  "version": 930,
+  "last_updated": "2026-10-16T12:42:14.840Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1615,8 +1615,8 @@
       "title": "ילדות של פעם",
       "artist": "Itay Levi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:42:10.739Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:42:14.840Z"
     },
     {
       "id": "0vbtURX4qv1l7besfwmnD8",
