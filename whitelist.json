@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 899,
-  "last_updated": "2026-10-16T09:25:31.804Z",
+  "version": 900,
+  "last_updated": "2026-10-16T09:25:34.657Z",
   "artists": [
+    {
+      "id": "2gY5qyOAJApJoxr9FGt7Qn",
+      "canonical_name": "יונתן שינפלד",
+      "aliases": [
+        "יונתן שינפלד"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:25:34.657Z"
+    },
     {
       "id": "3EyRCGcgyJMVxVA20EvaKb",
       "canonical_name": "Choni G",
