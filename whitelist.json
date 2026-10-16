@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 877,
-  "last_updated": "2026-10-16T09:21:10.559Z",
+  "version": 878,
+  "last_updated": "2026-10-16T09:24:07.289Z",
   "artists": [
     {
       "id": "4xF6j9UXuWb1efCa0U0aik",
@@ -1450,6 +1450,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0xjLIjh61KoPjxzd73nLZ3",
+      "title": "צלצולי פעמונים",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:24:07.289Z"
+    },
     {
       "id": "2kd6uVOcwWkmEzxTp89N2w",
       "title": "יבוא עלינו אושר",
