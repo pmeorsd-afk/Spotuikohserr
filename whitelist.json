@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 940,
-  "last_updated": "2026-10-16T12:45:13.313Z",
+  "version": 941,
+  "last_updated": "2026-10-16T12:45:14.814Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1620,6 +1620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4zvH3OlpFKLKbboxuYbtUu",
+      "title": "אין מילים איתך - חי באולפן גלגלצ",
+      "artist": "נדב חנציס, גלגלצ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:45:14.814Z"
+    },
     {
       "id": "3zdogW7JHSbiyBJVSaDvbf",
       "title": "Shabbat Gan Eden - שבת גן עדן",
