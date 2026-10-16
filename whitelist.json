@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 974,
-  "last_updated": "2026-10-16T13:07:58.595Z",
+  "version": 975,
+  "last_updated": "2026-10-16T13:08:01.992Z",
   "artists": [
     {
       "id": "5bK2Z9ANfRV6WeDGDVvZrN",
@@ -10,8 +10,8 @@
         "חיים אביטל"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T13:07:58.595Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T13:08:01.992Z"
     },
     {
       "id": "2BFlnV6PiwBY8BHMh2sYx5",
