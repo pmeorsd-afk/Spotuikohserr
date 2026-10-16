@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 865,
-  "last_updated": "2026-10-16T05:30:23.390Z",
+  "version": 866,
+  "last_updated": "2026-10-16T06:16:38.662Z",
   "artists": [
     {
       "id": "3NcNvialRQhykjZGPGpv7n",
@@ -1430,6 +1430,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Fs6SHUgNIVMxxvDoOhJDr",
+      "title": "אבא תודה",
+      "artist": "חן ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T06:16:38.662Z"
+    },
     {
       "id": "0VjIjW4GlUZAMYd2vXMi3b",
       "title": "Blinding Lights",
