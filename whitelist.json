@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 897,
-  "last_updated": "2026-10-16T09:25:20.603Z",
+  "version": 898,
+  "last_updated": "2026-10-16T09:25:24.557Z",
   "artists": [
     {
       "id": "7DqKgB6xiJKOriQcY7Hq0B",
@@ -10,8 +10,8 @@
         "להקת לב אבות"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:25:20.603Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:25:24.557Z"
     },
     {
       "id": "5htnwilsRHcEnWEjOwOkva",
