@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 979,
-  "last_updated": "2026-10-16T13:18:18.414Z",
+  "version": 980,
+  "last_updated": "2026-10-16T13:18:20.083Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -20,8 +20,8 @@
         "Yiddish Nachas"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T13:18:16.364Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T13:18:20.083Z"
     },
     {
       "id": "6pvMmR7myGILzuBhw0buvL",
