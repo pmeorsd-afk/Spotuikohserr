@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 856,
-  "last_updated": "2026-10-16T02:20:55.853Z",
+  "version": 857,
+  "last_updated": "2026-10-16T02:20:59.356Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -1425,8 +1425,8 @@
       "title": "פאפית",
       "artist": "אודיה",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T02:20:55.853Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T02:20:59.356Z"
     },
     {
       "id": "71Fr6FjccDocFjtsBmQHgk",
