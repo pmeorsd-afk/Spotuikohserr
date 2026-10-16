@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 863,
-  "last_updated": "2026-10-16T02:21:41.827Z",
+  "version": 864,
+  "last_updated": "2026-10-16T05:30:19.992Z",
   "artists": [
+    {
+      "id": "3NcNvialRQhykjZGPGpv7n",
+      "canonical_name": "יצחק בן ארזה",
+      "aliases": [
+        "יצחק בן ארזה"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T05:30:19.992Z"
+    },
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
       "canonical_name": "רפאל מלול",
