@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 924,
-  "last_updated": "2026-10-16T10:08:37.117Z",
+  "version": 925,
+  "last_updated": "2026-10-16T10:08:39.003Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1610,6 +1610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Cu4HtKyu4n3eiso2eqdR2",
+      "title": "איתך ובלעדייך",
+      "artist": "Avi Sinvani",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T10:08:39.003Z"
+    },
     {
       "id": "6C09ToLEI6k4HOaXBRW49m",
       "title": "More Than You Know",
