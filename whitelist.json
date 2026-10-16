@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 927,
-  "last_updated": "2026-10-16T10:08:43.973Z",
+  "version": 928,
+  "last_updated": "2026-10-16T10:08:46.433Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1615,8 +1615,8 @@
       "title": "I Took A Pill In Ibiza - Seeb Remix",
       "artist": "Mike Posner, Seeb",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T10:08:41.392Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T10:08:46.433Z"
     },
     {
       "id": "0Cu4HtKyu4n3eiso2eqdR2",
