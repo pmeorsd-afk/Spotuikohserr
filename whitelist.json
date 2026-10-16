@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 896,
-  "last_updated": "2026-10-16T09:25:18.573Z",
+  "version": 897,
+  "last_updated": "2026-10-16T09:25:20.603Z",
   "artists": [
+    {
+      "id": "7DqKgB6xiJKOriQcY7Hq0B",
+      "canonical_name": "להקת לב אבות",
+      "aliases": [
+        "להקת לב אבות"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:25:20.603Z"
+    },
     {
       "id": "5htnwilsRHcEnWEjOwOkva",
       "canonical_name": "אבישי אשל",
