@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 858,
-  "last_updated": "2026-10-16T02:21:04.145Z",
+  "version": 859,
+  "last_updated": "2026-10-16T02:21:07.216Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -1425,8 +1425,8 @@
       "title": "נמשכת לעצמי",
       "artist": "אודיה",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T02:21:04.145Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T02:21:07.216Z"
     },
     {
       "id": "1RGW8pkRNuu09XDdxPF5cm",
