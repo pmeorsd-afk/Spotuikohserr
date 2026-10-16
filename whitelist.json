@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 867,
-  "last_updated": "2026-10-16T06:16:42.151Z",
+  "version": 868,
+  "last_updated": "2026-10-16T06:40:53.478Z",
   "artists": [
+    {
+      "id": "0rwMVagBIPxueywUxvknl4",
+      "canonical_name": "אופיר סלומון",
+      "aliases": [
+        "אופיר סלומון"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T06:40:53.478Z"
+    },
     {
       "id": "3NcNvialRQhykjZGPGpv7n",
       "canonical_name": "יצחק בן ארזה",
