@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 878,
-  "last_updated": "2026-10-16T09:24:07.289Z",
+  "version": 879,
+  "last_updated": "2026-10-16T09:24:10.617Z",
   "artists": [
     {
       "id": "4xF6j9UXuWb1efCa0U0aik",
@@ -1455,8 +1455,8 @@
       "title": "צלצולי פעמונים",
       "artist": "The Revivo Project",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:24:07.289Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:24:10.617Z"
     },
     {
       "id": "2kd6uVOcwWkmEzxTp89N2w",
