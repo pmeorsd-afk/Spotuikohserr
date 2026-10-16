@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 956,
-  "last_updated": "2026-10-16T12:46:47.710Z",
+  "version": 957,
+  "last_updated": "2026-10-16T12:46:56.265Z",
   "artists": [
+    {
+      "id": "5hwW4zy9qdGLHlRF2YixwY",
+      "canonical_name": "שמעון אלבז",
+      "aliases": [
+        "שמעון אלבז"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:46:56.265Z"
+    },
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
       "canonical_name": "Shay Viner",
