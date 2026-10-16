@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 893,
-  "last_updated": "2026-10-16T09:25:10.634Z",
+  "version": 894,
+  "last_updated": "2026-10-16T09:25:13.755Z",
   "artists": [
     {
       "id": "089hCVlrMmIrnNnHJiuMq9",
@@ -10,8 +10,8 @@
         "Avraham Willig"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:25:10.634Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:25:13.755Z"
     },
     {
       "id": "2g5wdcdtXX1hkHiUaFYD7U",
