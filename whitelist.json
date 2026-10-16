@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 939,
-  "last_updated": "2026-10-16T12:45:10.138Z",
+  "version": 940,
+  "last_updated": "2026-10-16T12:45:13.313Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1625,8 +1625,8 @@
       "title": "Shabbat Gan Eden - שבת גן עדן",
       "artist": "Yaakov Shwekey, Eliad",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:45:10.138Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:45:13.313Z"
     },
     {
       "id": "18en36WnFvVNoGPNm2vPp6",
