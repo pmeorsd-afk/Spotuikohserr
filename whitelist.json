@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 937,
-  "last_updated": "2026-10-16T12:44:48.164Z",
+  "version": 938,
+  "last_updated": "2026-10-16T12:44:51.529Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1625,8 +1625,8 @@
       "title": "אורך ימים",
       "artist": "אבישי אשל, דיג'יי ניסו סלוב",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:44:48.164Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:44:51.529Z"
     },
     {
       "id": "7tPq06JPk6t0Kk9ptZ6Cia",
