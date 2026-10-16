@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 928,
-  "last_updated": "2026-10-16T10:08:46.433Z",
+  "version": 929,
+  "last_updated": "2026-10-16T12:42:10.739Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1610,6 +1610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2VbbP91Dw4MPoabO5S7gpA",
+      "title": "ילדות של פעם",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:42:10.739Z"
+    },
     {
       "id": "0vbtURX4qv1l7besfwmnD8",
       "title": "I Took A Pill In Ibiza - Seeb Remix",
