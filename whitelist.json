@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 892,
-  "last_updated": "2026-10-16T09:25:09.162Z",
+  "version": 893,
+  "last_updated": "2026-10-16T09:25:10.634Z",
   "artists": [
+    {
+      "id": "089hCVlrMmIrnNnHJiuMq9",
+      "canonical_name": "Avraham Willig",
+      "aliases": [
+        "Avraham Willig"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:25:10.634Z"
+    },
     {
       "id": "2g5wdcdtXX1hkHiUaFYD7U",
       "canonical_name": "Yeshivah of Flatbush",
