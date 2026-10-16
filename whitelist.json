@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 894,
-  "last_updated": "2026-10-16T09:25:13.755Z",
+  "version": 895,
+  "last_updated": "2026-10-16T09:25:15.074Z",
   "artists": [
+    {
+      "id": "5htnwilsRHcEnWEjOwOkva",
+      "canonical_name": "אבישי אשל",
+      "aliases": [
+        "אבישי אשל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:25:15.074Z"
+    },
     {
       "id": "089hCVlrMmIrnNnHJiuMq9",
       "canonical_name": "Avraham Willig",
