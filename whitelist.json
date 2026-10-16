@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 902,
-  "last_updated": "2026-10-16T09:25:39.225Z",
+  "version": 903,
+  "last_updated": "2026-10-16T09:25:46.936Z",
   "artists": [
+    {
+      "id": "34NAOzd5ukmwCr81L9mrrP",
+      "canonical_name": "עומרי גורן",
+      "aliases": [
+        "עומרי גורן"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:25:46.936Z"
+    },
     {
       "id": "2gY5qyOAJApJoxr9FGt7Qn",
       "canonical_name": "יונתן שינפלד",
