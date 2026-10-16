@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 895,
-  "last_updated": "2026-10-16T09:25:15.074Z",
+  "version": 896,
+  "last_updated": "2026-10-16T09:25:18.573Z",
   "artists": [
     {
       "id": "5htnwilsRHcEnWEjOwOkva",
@@ -10,8 +10,8 @@
         "אבישי אשל"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:25:15.074Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:25:18.573Z"
     },
     {
       "id": "089hCVlrMmIrnNnHJiuMq9",
