@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 971,
-  "last_updated": "2026-10-16T12:47:49.357Z",
+  "version": 972,
+  "last_updated": "2026-10-16T12:47:52.940Z",
   "artists": [
     {
       "id": "2BFlnV6PiwBY8BHMh2sYx5",
@@ -10,8 +10,8 @@
         "Itzik Eshel"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:47:49.357Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:47:52.940Z"
     },
     {
       "id": "1tQwdPFSPBsA18caP5hTJq",
