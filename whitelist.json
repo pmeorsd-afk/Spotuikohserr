@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 907,
-  "last_updated": "2026-10-16T09:30:15.734Z",
+  "version": 908,
+  "last_updated": "2026-10-16T09:30:19.161Z",
   "artists": [
     {
       "id": "3byXwT49eLyKwoVNO9WRT9",
@@ -10,8 +10,8 @@
         "Yeshivah of Flatbush Elementary School Choir"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:30:15.734Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:30:19.161Z"
     },
     {
       "id": "4QJ9qlXf3pVzZDCHvDPSYe",
