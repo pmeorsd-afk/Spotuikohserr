@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 859,
-  "last_updated": "2026-10-16T02:21:07.216Z",
+  "version": 860,
+  "last_updated": "2026-10-16T02:21:10.998Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -1420,6 +1420,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4gnDl7R6mT3whj9o5PoNwF",
+      "title": "גבר מרוקאי",
+      "artist": "רון חיון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T02:21:10.998Z"
+    },
     {
       "id": "3ENp4kaSoINQQDLZ27Zy2X",
       "title": "נמשכת לעצמי",
