@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 903,
-  "last_updated": "2026-10-16T09:25:46.936Z",
+  "version": 904,
+  "last_updated": "2026-10-16T09:25:49.725Z",
   "artists": [
     {
       "id": "34NAOzd5ukmwCr81L9mrrP",
@@ -10,8 +10,8 @@
         "עומרי גורן"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:25:46.936Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:25:49.725Z"
     },
     {
       "id": "2gY5qyOAJApJoxr9FGt7Qn",
