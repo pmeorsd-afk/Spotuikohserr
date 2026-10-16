@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 889,
-  "last_updated": "2026-10-16T09:24:57.851Z",
+  "version": 890,
+  "last_updated": "2026-10-16T09:25:00.880Z",
   "artists": [
     {
       "id": "4u2dGauijBzoGSlGHytkHo",
@@ -10,8 +10,8 @@
         "Yeshivah of Flatbush Choir"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:24:57.851Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:25:00.880Z"
     },
     {
       "id": "6vGuQc6LW3s9QBI04GscdI",
