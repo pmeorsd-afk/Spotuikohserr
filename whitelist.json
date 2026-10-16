@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 885,
-  "last_updated": "2026-10-16T09:24:48.851Z",
+  "version": 886,
+  "last_updated": "2026-10-16T09:24:51.546Z",
   "artists": [
+    {
+      "id": "6vGuQc6LW3s9QBI04GscdI",
+      "canonical_name": "רזיאל חי",
+      "aliases": [
+        "רזיאל חי"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:24:51.546Z"
+    },
     {
       "id": "3hD6ZS0V8ggdlfr3uwmUCF",
       "canonical_name": "Motty Vizel",
