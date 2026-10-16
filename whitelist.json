@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 870,
-  "last_updated": "2026-10-16T06:41:31.505Z",
+  "version": 871,
+  "last_updated": "2026-10-16T06:41:35.312Z",
   "artists": [
     {
       "id": "4xF6j9UXuWb1efCa0U0aik",
@@ -10,8 +10,8 @@
         "חן ביטון"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T06:41:31.505Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T06:41:35.312Z"
     },
     {
       "id": "0rwMVagBIPxueywUxvknl4",
