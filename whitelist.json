@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 890,
-  "last_updated": "2026-10-16T09:25:00.880Z",
+  "version": 891,
+  "last_updated": "2026-10-16T09:25:05.118Z",
   "artists": [
+    {
+      "id": "2g5wdcdtXX1hkHiUaFYD7U",
+      "canonical_name": "Yeshivah of Flatbush",
+      "aliases": [
+        "Yeshivah of Flatbush"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:25:05.118Z"
+    },
     {
       "id": "4u2dGauijBzoGSlGHytkHo",
       "canonical_name": "Yeshivah of Flatbush Choir",
