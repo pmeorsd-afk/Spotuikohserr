@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 905,
-  "last_updated": "2026-10-16T09:26:54.108Z",
+  "version": 906,
+  "last_updated": "2026-10-16T09:26:57.386Z",
   "artists": [
     {
       "id": "4QJ9qlXf3pVzZDCHvDPSYe",
@@ -10,8 +10,8 @@
         "Mamtak L'eshabat"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:26:54.108Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:26:57.386Z"
     },
     {
       "id": "34NAOzd5ukmwCr81L9mrrP",
