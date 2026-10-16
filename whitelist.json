@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 936,
-  "last_updated": "2026-10-16T12:44:43.951Z",
+  "version": 937,
+  "last_updated": "2026-10-16T12:44:48.164Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1620,6 +1620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "18en36WnFvVNoGPNm2vPp6",
+      "title": "אורך ימים",
+      "artist": "אבישי אשל, דיג'יי ניסו סלוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:44:48.164Z"
+    },
     {
       "id": "7tPq06JPk6t0Kk9ptZ6Cia",
       "title": "סגול בהיר",
