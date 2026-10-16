@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 975,
-  "last_updated": "2026-10-16T13:08:01.992Z",
+  "version": 976,
+  "last_updated": "2026-10-16T13:12:42.116Z",
   "artists": [
+    {
+      "id": "6pvMmR7myGILzuBhw0buvL",
+      "canonical_name": "Yitzy Waldner",
+      "aliases": [
+        "Yitzy Waldner"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T13:12:42.116Z"
+    },
     {
       "id": "5bK2Z9ANfRV6WeDGDVvZrN",
       "canonical_name": "חיים אביטל",
