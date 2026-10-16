@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 951,
-  "last_updated": "2026-10-16T12:45:38.920Z",
+  "version": 952,
+  "last_updated": "2026-10-16T12:45:42.347Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1625,8 +1625,8 @@
       "title": "בן 32",
       "artist": "Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:45:38.920Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:45:42.347Z"
     },
     {
       "id": "6Eds9y8ZiQHcIegsEIVcYP",
