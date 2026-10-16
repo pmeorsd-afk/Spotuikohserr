@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 868,
-  "last_updated": "2026-10-16T06:40:53.478Z",
+  "version": 869,
+  "last_updated": "2026-10-16T06:40:57.049Z",
   "artists": [
     {
       "id": "0rwMVagBIPxueywUxvknl4",
@@ -10,8 +10,8 @@
         "אופיר סלומון"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T06:40:53.478Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T06:40:57.049Z"
     },
     {
       "id": "3NcNvialRQhykjZGPGpv7n",
