@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 922,
-  "last_updated": "2026-10-16T10:08:33.285Z",
+  "version": 923,
+  "last_updated": "2026-10-16T10:08:35.462Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1623,8 +1623,8 @@
       "title": "במילים את מנצחת",
       "artist": "Rubi Levi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T10:08:30.983Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T10:08:35.462Z"
     },
     {
       "id": "1qmY1Tpys5bIp2p9vzfKTa",
