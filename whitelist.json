@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 948,
-  "last_updated": "2026-10-16T12:45:30.487Z",
+  "version": 949,
+  "last_updated": "2026-10-16T12:45:33.113Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1620,6 +1620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Eds9y8ZiQHcIegsEIVcYP",
+      "title": "את חסרה לי & אורות",
+      "artist": "Avraham Tal, Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:45:33.113Z"
+    },
     {
       "id": "1nN07SOuLhIer4C7rtZ58M",
       "title": "טעם של טעות",
