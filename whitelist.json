@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 930,
-  "last_updated": "2026-10-16T12:42:14.840Z",
+  "version": 931,
+  "last_updated": "2026-10-16T12:43:11.082Z",
   "artists": [
+    {
+      "id": "3VbJFS67YDdxun99QYaF5p",
+      "canonical_name": "Shay Viner",
+      "aliases": [
+        "Shay Viner"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:43:11.082Z"
+    },
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
       "canonical_name": "Yingerlich",
