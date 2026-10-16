@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 879,
-  "last_updated": "2026-10-16T09:24:10.617Z",
+  "version": 880,
+  "last_updated": "2026-10-16T09:24:13.358Z",
   "artists": [
+    {
+      "id": "53LziakL6xbzRRfUz5vXcE",
+      "canonical_name": "מיכאל פרץ",
+      "aliases": [
+        "מיכאל פרץ"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:24:13.358Z"
+    },
     {
       "id": "4xF6j9UXuWb1efCa0U0aik",
       "canonical_name": "חן ביטון",
