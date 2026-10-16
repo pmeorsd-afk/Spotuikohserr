@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 958,
-  "last_updated": "2026-10-16T12:46:58.345Z",
+  "version": 959,
+  "last_updated": "2026-10-16T12:47:00.088Z",
   "artists": [
     {
       "id": "5hwW4zy9qdGLHlRF2YixwY",
@@ -10,8 +10,8 @@
         "שמעון אלבז"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:46:56.265Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:47:00.088Z"
     },
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
