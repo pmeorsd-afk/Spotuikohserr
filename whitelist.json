@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 960,
-  "last_updated": "2026-10-16T12:47:02.240Z",
+  "version": 961,
+  "last_updated": "2026-10-16T12:47:05.905Z",
   "artists": [
     {
       "id": "6dH4o7pUF4rvtDnvNvA6tO",
@@ -10,8 +10,8 @@
         "עוז כהן"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:47:02.240Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:47:05.905Z"
     },
     {
       "id": "5hwW4zy9qdGLHlRF2YixwY",
