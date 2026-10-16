@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 959,
-  "last_updated": "2026-10-16T12:47:00.088Z",
+  "version": 960,
+  "last_updated": "2026-10-16T12:47:02.240Z",
   "artists": [
+    {
+      "id": "6dH4o7pUF4rvtDnvNvA6tO",
+      "canonical_name": "עוז כהן",
+      "aliases": [
+        "עוז כהן"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:47:02.240Z"
+    },
     {
       "id": "5hwW4zy9qdGLHlRF2YixwY",
       "canonical_name": "שמעון אלבז",
