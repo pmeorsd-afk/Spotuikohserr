@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 920,
-  "last_updated": "2026-10-16T09:53:35.332Z",
+  "version": 921,
+  "last_updated": "2026-10-16T10:08:30.983Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1610,6 +1610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0CezSpPX6QEKNIMmmO93G6",
+      "title": "במילים את מנצחת",
+      "artist": "Rubi Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T10:08:30.983Z"
+    },
     {
       "id": "1qmY1Tpys5bIp2p9vzfKTa",
       "title": "שבויה באהבה",
