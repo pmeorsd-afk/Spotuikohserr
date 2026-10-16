@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 978,
-  "last_updated": "2026-10-16T13:18:16.364Z",
+  "version": 979,
+  "last_updated": "2026-10-16T13:18:18.414Z",
   "artists": [
+    {
+      "id": "6IDt4WH3o02qiOyqXXWwab",
+      "canonical_name": "Nissim Saal",
+      "aliases": [
+        "Nissim Saal"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T13:18:18.414Z"
+    },
     {
       "id": "3tVllQ51EDMBuzaGd3O2pn",
       "canonical_name": "Yiddish Nachas",
