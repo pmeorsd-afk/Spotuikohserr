@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 938,
-  "last_updated": "2026-10-16T12:44:51.529Z",
+  "version": 939,
+  "last_updated": "2026-10-16T12:45:10.138Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1620,6 +1620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3zdogW7JHSbiyBJVSaDvbf",
+      "title": "Shabbat Gan Eden - שבת גן עדן",
+      "artist": "Yaakov Shwekey, Eliad",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:45:10.138Z"
+    },
     {
       "id": "18en36WnFvVNoGPNm2vPp6",
       "title": "אורך ימים",
