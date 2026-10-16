@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 945,
-  "last_updated": "2026-10-16T12:45:25.522Z",
+  "version": 946,
+  "last_updated": "2026-10-16T12:45:27.435Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1620,6 +1620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1nN07SOuLhIer4C7rtZ58M",
+      "title": "טעם של טעות",
+      "artist": "דודו אהרון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:45:27.435Z"
+    },
     {
       "id": "6EuV78LSE0PCdmYvVklGD7",
       "title": "ואני בחסדך בטחתי",
