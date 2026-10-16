@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 935,
-  "last_updated": "2026-10-16T12:44:40.915Z",
+  "version": 936,
+  "last_updated": "2026-10-16T12:44:43.951Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1625,8 +1625,8 @@
       "title": "סגול בהיר",
       "artist": "Mergui",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T12:44:40.915Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T12:44:43.951Z"
     },
     {
       "id": "6wZ2qa4ex6r0q7TGPOufao",
