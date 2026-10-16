@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 932,
-  "last_updated": "2026-10-16T12:43:14.436Z",
+  "version": 933,
+  "last_updated": "2026-10-16T12:43:46.823Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1620,6 +1620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6wZ2qa4ex6r0q7TGPOufao",
+      "title": "ואהבת",
+      "artist": "אליה והב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:43:46.823Z"
+    },
     {
       "id": "2VbbP91Dw4MPoabO5S7gpA",
       "title": "ילדות של פעם",
