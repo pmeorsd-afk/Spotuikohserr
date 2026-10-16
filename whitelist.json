@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 901,
-  "last_updated": "2026-10-16T09:25:36.984Z",
+  "version": 902,
+  "last_updated": "2026-10-16T09:25:39.225Z",
   "artists": [
     {
       "id": "2gY5qyOAJApJoxr9FGt7Qn",
@@ -10,8 +10,8 @@
         "יונתן שינפלד"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:25:34.657Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:25:39.225Z"
     },
     {
       "id": "3EyRCGcgyJMVxVA20EvaKb",
