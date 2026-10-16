@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 914,
-  "last_updated": "2026-10-16T09:45:45.697Z",
+  "version": 915,
+  "last_updated": "2026-10-16T09:45:47.119Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1623,8 +1623,8 @@
       "title": "מחזיק לי את היד",
       "artist": "Shir Levi, Nati Levi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:45:43.621Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:45:47.119Z"
     },
     {
       "id": "2NHd4NplJdSuT4kMBCLQtC",
