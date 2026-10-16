@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 911,
-  "last_updated": "2026-10-16T09:41:10.012Z",
+  "version": 912,
+  "last_updated": "2026-10-16T09:41:13.423Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1615,8 +1615,8 @@
       "title": "הצייר",
       "artist": "Nati Levi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:41:10.012Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:41:13.423Z"
     },
     {
       "id": "0xjLIjh61KoPjxzd73nLZ3",
