@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 874,
-  "last_updated": "2026-10-16T09:20:09.223Z",
+  "version": 875,
+  "last_updated": "2026-10-16T09:20:13.279Z",
   "artists": [
     {
       "id": "4xF6j9UXuWb1efCa0U0aik",
@@ -1455,8 +1455,8 @@
       "title": "מחרוזת השירים שגדלנו",
       "artist": "נחמן סבג",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:20:09.223Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:20:13.279Z"
     },
     {
       "id": "6Fs6SHUgNIVMxxvDoOhJDr",
