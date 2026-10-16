@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 888,
-  "last_updated": "2026-10-16T09:24:54.728Z",
+  "version": 889,
+  "last_updated": "2026-10-16T09:24:57.851Z",
   "artists": [
+    {
+      "id": "4u2dGauijBzoGSlGHytkHo",
+      "canonical_name": "Yeshivah of Flatbush Choir",
+      "aliases": [
+        "Yeshivah of Flatbush Choir"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:24:57.851Z"
+    },
     {
       "id": "6vGuQc6LW3s9QBI04GscdI",
       "canonical_name": "רזיאל חי",
