@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 887,
-  "last_updated": "2026-10-16T09:24:52.720Z",
+  "version": 888,
+  "last_updated": "2026-10-16T09:24:54.728Z",
   "artists": [
     {
       "id": "6vGuQc6LW3s9QBI04GscdI",
@@ -10,8 +10,8 @@
         "רזיאל חי"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:24:51.546Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:24:54.728Z"
     },
     {
       "id": "3hD6ZS0V8ggdlfr3uwmUCF",
