@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 884,
-  "last_updated": "2026-10-16T09:24:23.660Z",
+  "version": 885,
+  "last_updated": "2026-10-16T09:24:48.851Z",
   "artists": [
+    {
+      "id": "3hD6ZS0V8ggdlfr3uwmUCF",
+      "canonical_name": "Motty Vizel",
+      "aliases": [
+        "Motty Vizel"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:24:48.851Z"
+    },
     {
       "id": "3ku5Yag5M4UMqfTFCqk5JM",
       "canonical_name": "עלאי צרפתי",
