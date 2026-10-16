@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 882,
-  "last_updated": "2026-10-16T09:24:18.235Z",
+  "version": 883,
+  "last_updated": "2026-10-16T09:24:21.027Z",
   "artists": [
+    {
+      "id": "3ku5Yag5M4UMqfTFCqk5JM",
+      "canonical_name": "עלאי צרפתי",
+      "aliases": [
+        "עלאי צרפתי"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:24:21.027Z"
+    },
     {
       "id": "6sEfWjMz2dl6L81BJQ3PUc",
       "canonical_name": "עלאי ונתאי צרפתי",
