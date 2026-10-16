@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 875,
-  "last_updated": "2026-10-16T09:20:13.279Z",
+  "version": 876,
+  "last_updated": "2026-10-16T09:21:07.671Z",
   "artists": [
     {
       "id": "4xF6j9UXuWb1efCa0U0aik",
@@ -1450,6 +1450,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2kd6uVOcwWkmEzxTp89N2w",
+      "title": "יבוא עלינו אושר",
+      "artist": "Dudi Buzaglo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T09:21:07.671Z"
+    },
     {
       "id": "2uV8NosZ5sAlCjnwwaEExp",
       "title": "מחרוזת השירים שגדלנו",
