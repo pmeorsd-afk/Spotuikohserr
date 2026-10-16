@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 891,
-  "last_updated": "2026-10-16T09:25:05.118Z",
+  "version": 892,
+  "last_updated": "2026-10-16T09:25:09.162Z",
   "artists": [
     {
       "id": "2g5wdcdtXX1hkHiUaFYD7U",
@@ -10,8 +10,8 @@
         "Yeshivah of Flatbush"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:25:05.118Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:25:09.162Z"
     },
     {
       "id": "4u2dGauijBzoGSlGHytkHo",
