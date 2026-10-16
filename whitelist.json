@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 915,
-  "last_updated": "2026-10-16T09:45:47.119Z",
+  "version": 916,
+  "last_updated": "2026-10-16T09:45:49.975Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1615,8 +1615,8 @@
       "title": "ילדה של אב 2016",
       "artist": "Netanel",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T09:45:45.697Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T09:45:49.975Z"
     },
     {
       "id": "4rQ8af8cPucPLo2Tv7Rvuv",
