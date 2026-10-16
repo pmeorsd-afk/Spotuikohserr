@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 944,
-  "last_updated": "2026-10-16T12:45:23.390Z",
+  "version": 945,
+  "last_updated": "2026-10-16T12:45:25.522Z",
   "artists": [
     {
       "id": "3VbJFS67YDdxun99QYaF5p",
@@ -1620,6 +1620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6EuV78LSE0PCdmYvVklGD7",
+      "title": "ואני בחסדך בטחתי",
+      "artist": "אודיה, בן צור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T12:45:25.522Z"
+    },
     {
       "id": "2PFVWnT4Hd62ONkt2CZGYJ",
       "title": "תניח את המדים (מתוך פרויקט מנגינת הנצח)",
