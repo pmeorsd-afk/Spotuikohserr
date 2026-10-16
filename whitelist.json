@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 926,
-  "last_updated": "2026-10-16T10:08:41.392Z",
+  "version": 927,
+  "last_updated": "2026-10-16T10:08:43.973Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1623,8 +1623,8 @@
       "title": "איתך ובלעדייך",
       "artist": "Avi Sinvani",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T10:08:39.003Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T10:08:43.973Z"
     },
     {
       "id": "6C09ToLEI6k4HOaXBRW49m",
