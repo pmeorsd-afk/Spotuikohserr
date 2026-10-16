@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 862,
-  "last_updated": "2026-10-16T02:21:38.201Z",
+  "version": 863,
+  "last_updated": "2026-10-16T02:21:41.827Z",
   "artists": [
     {
       "id": "7d3wDE732D4GnhEMhqSSOY",
@@ -1425,8 +1425,8 @@
       "title": "Blinding Lights",
       "artist": "The Weeknd",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-16T02:21:38.201Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-16T02:21:41.827Z"
     },
     {
       "id": "4gnDl7R6mT3whj9o5PoNwF",
