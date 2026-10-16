@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 925,
-  "last_updated": "2026-10-16T10:08:39.003Z",
+  "version": 926,
+  "last_updated": "2026-10-16T10:08:41.392Z",
   "artists": [
     {
       "id": "3T7KpE0p3WJeXCjUQNoGcG",
@@ -1610,6 +1610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0vbtURX4qv1l7besfwmnD8",
+      "title": "I Took A Pill In Ibiza - Seeb Remix",
+      "artist": "Mike Posner, Seeb",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-16T10:08:41.392Z"
+    },
     {
       "id": "0Cu4HtKyu4n3eiso2eqdR2",
       "title": "איתך ובלעדייך",
