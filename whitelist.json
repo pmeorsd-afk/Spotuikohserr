@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 988,
-  "last_updated": "2026-10-17T17:38:39.594Z",
+  "version": 989,
+  "last_updated": "2026-10-17T17:38:42.263Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -1715,8 +1715,8 @@
       "title": "ילדה מטורפת",
       "artist": "Bar Tzabary",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T17:38:39.594Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T17:38:42.263Z"
     },
     {
       "id": "2dd3G3ZqEcG2cNS1tp3oEk",
