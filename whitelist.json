@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1050,
-  "last_updated": "2026-10-17T20:50:30.271Z",
+  "version": 1051,
+  "last_updated": "2026-10-17T20:50:33.930Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1735,8 +1735,8 @@
       "title": "איך זה שכל יום",
       "artist": "ניב דמירל",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T20:50:30.271Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T20:50:33.930Z"
     },
     {
       "id": "2OomZwwpxVSG877ntmDjDG",
