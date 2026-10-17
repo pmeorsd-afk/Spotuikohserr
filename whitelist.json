@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1048,
-  "last_updated": "2026-10-17T19:16:24.951Z",
+  "version": 1049,
+  "last_updated": "2026-10-17T19:16:28.124Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1735,8 +1735,8 @@
       "title": "מחשבות טובות רמיקס",
       "artist": "יהודה מור, Moti Weiss",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T19:16:24.951Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T19:16:28.124Z"
     },
     {
       "id": "1L1Bcmh8GZOlnKxLcuSn5Z",
