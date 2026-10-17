@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 984,
-  "last_updated": "2026-10-17T17:38:21.453Z",
+  "version": 985,
+  "last_updated": "2026-10-17T17:38:23.855Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -1715,8 +1715,8 @@
       "title": "La Plena - W Sound 05",
       "artist": "W Sound, Beéle, Ovy On The Drums",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T17:38:21.453Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T17:38:23.855Z"
     },
     {
       "id": "5BUFp4NBYS9ONrIlZHC9vA",
