@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 985,
-  "last_updated": "2026-10-17T17:38:23.855Z",
+  "version": 986,
+  "last_updated": "2026-10-17T17:38:33.937Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -1710,6 +1710,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2dd3G3ZqEcG2cNS1tp3oEk",
+      "title": "capaz (merengueton)",
+      "artist": "Alleh, Yorghaki",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T17:38:33.937Z"
+    },
     {
       "id": "6iOndD4OFo7GkaDypWQIou",
       "title": "La Plena - W Sound 05",
