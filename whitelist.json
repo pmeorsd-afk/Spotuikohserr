@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1007,
-  "last_updated": "2026-10-17T17:40:20.414Z",
+  "version": 1008,
+  "last_updated": "2026-10-17T17:40:22.978Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -1710,6 +1710,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0sMyBmtyp4riKYNpDVNSH4",
+      "title": "את לא יודעת כמה שאני אוהב אותך",
+      "artist": "אודיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T17:40:22.978Z"
+    },
     {
       "id": "4RyainOBqMazNOuSU2BMfx",
       "title": "כמה אני אוהב אותך",
