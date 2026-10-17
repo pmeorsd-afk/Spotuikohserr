@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1020,
-  "last_updated": "2026-10-17T17:44:41.484Z",
+  "version": 1021,
+  "last_updated": "2026-10-17T17:44:44.070Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1735,8 +1735,8 @@
       "title": "מחרוזת מלכת המועדון",
       "artist": "מייק מנג'ו",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T17:44:41.484Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T17:44:44.070Z"
     },
     {
       "id": "5UyWjoxSelg5cBqNv44jr5",
