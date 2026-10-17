@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1026,
-  "last_updated": "2026-10-17T18:12:40.518Z",
+  "version": 1027,
+  "last_updated": "2026-10-17T18:12:43.500Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1735,8 +1735,8 @@
       "title": "לפני שייגמר",
       "artist": "Idan Raichel",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T18:12:40.518Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T18:12:43.500Z"
     },
     {
       "id": "0l8i50kbKbmhBUTs5idvs2",
