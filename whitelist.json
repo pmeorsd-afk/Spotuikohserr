@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1012,
-  "last_updated": "2026-10-17T17:40:34.569Z",
+  "version": 1013,
+  "last_updated": "2026-10-17T17:40:37.233Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -1715,8 +1715,8 @@
       "title": "בובה על חוט",
       "artist": "יהונתן לוי",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T17:40:34.569Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T17:40:37.233Z"
     },
     {
       "id": "5Up1HF29rZsAcbsV7U0IQy",
