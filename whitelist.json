@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1018,
-  "last_updated": "2026-10-17T17:43:19.468Z",
+  "version": 1019,
+  "last_updated": "2026-10-17T17:43:22.130Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -10,8 +10,8 @@
         "Yeedle"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T17:43:19.468Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T17:43:22.130Z"
     },
     {
       "id": "20682d4e48YO3XuN49CnYK",
