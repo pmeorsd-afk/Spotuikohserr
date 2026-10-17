@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1035,
-  "last_updated": "2026-10-17T18:42:36.855Z",
+  "version": 1036,
+  "last_updated": "2026-10-17T18:47:57.235Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6tldCcfbfXkLApFllqab7S",
+      "title": "מדברים בשקט (מתוך חזרות למופע NEXT)",
+      "artist": "Omer Adam, Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T18:47:57.235Z"
+    },
     {
       "id": "1koL3hu8nim6a84hL8dSJJ",
       "title": "להגיע הביתה",
