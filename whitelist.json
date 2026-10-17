@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1059,
-  "last_updated": "2026-10-17T22:56:55.707Z",
+  "version": 1060,
+  "last_updated": "2026-10-17T23:01:51.842Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Fd6yahKmQxkfrY6yXnMpm",
+      "title": "אני גיטרה",
+      "artist": "Benny Amdursky",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T23:01:51.842Z"
+    },
     {
       "id": "50pvcygkSBjbH0LvqeFgdd",
       "title": "צליל מכוון",
