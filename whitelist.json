@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1039,
-  "last_updated": "2026-10-17T18:58:40.037Z",
+  "version": 1040,
+  "last_updated": "2026-10-17T18:58:41.550Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1743,8 +1743,8 @@
       "title": "נשמה שלי",
       "artist": "Idan Rafael Haviv",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T18:58:38.049Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T18:58:41.550Z"
     },
     {
       "id": "6tldCcfbfXkLApFllqab7S",
