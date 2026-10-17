@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1011,
-  "last_updated": "2026-10-17T17:40:32.895Z",
+  "version": 1012,
+  "last_updated": "2026-10-17T17:40:34.569Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -1710,6 +1710,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6AehsxqLeQi4JO7ue0DEbd",
+      "title": "בובה על חוט",
+      "artist": "יהונתן לוי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T17:40:34.569Z"
+    },
     {
       "id": "5Up1HF29rZsAcbsV7U0IQy",
       "title": "לאב סונג",
