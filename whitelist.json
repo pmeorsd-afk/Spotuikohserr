@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1031,
-  "last_updated": "2026-10-17T18:30:53.138Z",
+  "version": 1032,
+  "last_updated": "2026-10-17T18:39:50.322Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3iZsKXtvGpqdeclQq3RNSn",
+      "title": "בלתי מנוצח",
+      "artist": "Avihai Hollender",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T18:39:50.322Z"
+    },
     {
       "id": "44CnbJqmDm3ou9bOL6xUFM",
       "title": "מה שהלב בחר",
