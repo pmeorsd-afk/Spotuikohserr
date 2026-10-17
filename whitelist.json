@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1045,
-  "last_updated": "2026-10-17T19:09:03.719Z",
+  "version": 1046,
+  "last_updated": "2026-10-17T19:12:30.290Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1L1Bcmh8GZOlnKxLcuSn5Z",
+      "title": "שמים בוערים",
+      "artist": "Guy & Yahel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T19:12:30.290Z"
+    },
     {
       "id": "2bUFkWJtxBOAITaP1BrTTM",
       "title": "צבעים",
