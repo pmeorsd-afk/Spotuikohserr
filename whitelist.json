@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1005,
-  "last_updated": "2026-10-17T17:40:13.286Z",
+  "version": 1006,
+  "last_updated": "2026-10-17T17:40:18.032Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -1710,6 +1710,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4RyainOBqMazNOuSU2BMfx",
+      "title": "כמה אני אוהב אותך",
+      "artist": "Guy Mazig",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T17:40:18.032Z"
+    },
     {
       "id": "5ujZi98wwzuJzpDmjWqyuc",
       "title": "מחרוזת דתית | LIVE מתוך מופע הזאפה 2025",
