@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1021,
-  "last_updated": "2026-10-17T17:44:44.070Z",
+  "version": 1022,
+  "last_updated": "2026-10-17T17:45:40.147Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6jLSvTOdPH592NgIZpFgs7",
+      "title": "Sunborn 396Hz",
+      "artist": "The Relief Experience",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T17:45:40.147Z"
+    },
     {
       "id": "3uju96irAblWqVUdDogDOl",
       "title": "מחרוזת מלכת המועדון",
