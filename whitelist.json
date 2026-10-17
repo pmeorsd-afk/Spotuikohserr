@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1055,
-  "last_updated": "2026-10-17T22:14:06.321Z",
+  "version": 1056,
+  "last_updated": "2026-10-17T22:54:39.245Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6UgGsxaJZ9XuXe9koPwdwA",
+      "title": "שיר החייל",
+      "artist": "Ehud Banai, Berry Sakharof",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T22:54:39.245Z"
+    },
     {
       "id": "5bKRq8XZW5thpmtNJ1uov2",
       "title": "שקרים יפים",
