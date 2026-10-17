@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1023,
-  "last_updated": "2026-10-17T17:45:42.797Z",
+  "version": 1024,
+  "last_updated": "2026-10-17T17:51:26.259Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0l8i50kbKbmhBUTs5idvs2",
+      "title": "מוזיקה מרגיעה לעיסוי וטיפולים - נעימות שקטות להשראת רוגע ושלווה",
+      "artist": "Teramid Music.",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T17:51:26.259Z"
+    },
     {
       "id": "6jLSvTOdPH592NgIZpFgs7",
       "title": "Sunborn 396Hz",
