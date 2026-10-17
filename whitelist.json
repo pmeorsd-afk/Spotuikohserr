@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1043,
-  "last_updated": "2026-10-17T19:01:56.343Z",
+  "version": 1044,
+  "last_updated": "2026-10-17T19:09:01.008Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2bUFkWJtxBOAITaP1BrTTM",
+      "title": "צבעים",
+      "artist": "Gil Vain, Ron Buhnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T19:09:01.008Z"
+    },
     {
       "id": "5bxd1DEtcLOuTLqbMT43Xz",
       "title": "לא הכל מן אללה",
