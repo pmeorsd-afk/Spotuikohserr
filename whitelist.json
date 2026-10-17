@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1036,
-  "last_updated": "2026-10-17T18:47:57.235Z",
+  "version": 1037,
+  "last_updated": "2026-10-17T18:47:59.993Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1735,8 +1735,8 @@
       "title": "מדברים בשקט (מתוך חזרות למופע NEXT)",
       "artist": "Omer Adam, Idan Raichel",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T18:47:57.235Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T18:47:59.993Z"
     },
     {
       "id": "1koL3hu8nim6a84hL8dSJJ",
