@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 993,
-  "last_updated": "2026-10-17T17:38:51.934Z",
+  "version": 994,
+  "last_updated": "2026-10-17T17:38:54.932Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -1710,6 +1710,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4NBMvQX5yM05Mgznqw0zXR",
+      "title": "קוקוריקו (אל תדליקו אותי)",
+      "artist": "Ravid Plotnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T17:38:54.932Z"
+    },
     {
       "id": "6DNfX5wKJklQeVVfqKZASC",
       "title": "עוד יום",
