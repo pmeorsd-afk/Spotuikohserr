@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1008,
-  "last_updated": "2026-10-17T17:40:22.978Z",
+  "version": 1009,
+  "last_updated": "2026-10-17T17:40:25.896Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -1715,8 +1715,8 @@
       "title": "את לא יודעת כמה שאני אוהב אותך",
       "artist": "אודיה",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T17:40:22.978Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T17:40:25.896Z"
     },
     {
       "id": "4RyainOBqMazNOuSU2BMfx",
