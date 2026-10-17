@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1052,
-  "last_updated": "2026-10-17T22:00:54.927Z",
+  "version": 1053,
+  "last_updated": "2026-10-17T22:00:58.006Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1735,8 +1735,8 @@
       "title": "רוזה",
       "artist": "Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T22:00:54.927Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T22:00:58.006Z"
     },
     {
       "id": "3i7p1zPzFK0hYtafsqq8bE",
