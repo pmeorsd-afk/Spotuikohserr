@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1001,
-  "last_updated": "2026-10-17T17:39:38.228Z",
+  "version": 1002,
+  "last_updated": "2026-10-17T17:39:56.296Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -1710,6 +1710,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3AJwUDP919kvQ9QcozQPxg",
+      "title": "Yellow",
+      "artist": "Coldplay",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T17:39:56.296Z"
+    },
     {
       "id": "6QJ6AbNj7YQQzERYNqy9ro",
       "title": "הילד עם הבוגי",
