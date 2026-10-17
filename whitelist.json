@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1047,
-  "last_updated": "2026-10-17T19:12:33.560Z",
+  "version": 1048,
+  "last_updated": "2026-10-17T19:16:24.951Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2OomZwwpxVSG877ntmDjDG",
+      "title": "מחשבות טובות רמיקס",
+      "artist": "יהודה מור, Moti Weiss",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T19:16:24.951Z"
+    },
     {
       "id": "1L1Bcmh8GZOlnKxLcuSn5Z",
       "title": "שמים בוערים",
