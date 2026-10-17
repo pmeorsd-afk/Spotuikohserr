@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1051,
-  "last_updated": "2026-10-17T20:50:33.930Z",
+  "version": 1052,
+  "last_updated": "2026-10-17T22:00:54.927Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6gGbQIKS0dyNQrJfUatt46",
+      "title": "רוזה",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T22:00:54.927Z"
+    },
     {
       "id": "3i7p1zPzFK0hYtafsqq8bE",
       "title": "איך זה שכל יום",
