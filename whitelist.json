@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1016,
-  "last_updated": "2026-10-17T17:42:54.000Z",
+  "version": 1017,
+  "last_updated": "2026-10-17T17:42:56.667Z",
   "artists": [
     {
       "id": "20682d4e48YO3XuN49CnYK",
@@ -10,8 +10,8 @@
         "Arik Dvir"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T17:42:54.000Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T17:42:56.667Z"
     },
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
