@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 982,
-  "last_updated": "2026-10-17T17:38:05.682Z",
+  "version": 983,
+  "last_updated": "2026-10-17T17:38:08.636Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -1715,8 +1715,8 @@
       "title": "מקום בחייך",
       "artist": "ים רפאלי",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T17:38:05.682Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T17:38:08.636Z"
     },
     {
       "id": "3CdPL5qF03DtSPZMhECaqu",
