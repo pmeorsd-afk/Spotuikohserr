@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1037,
-  "last_updated": "2026-10-17T18:47:59.993Z",
+  "version": 1038,
+  "last_updated": "2026-10-17T18:58:38.049Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7606oAr5GqreqTOdIX3uGB",
+      "title": "נשמה שלי",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T18:58:38.049Z"
+    },
     {
       "id": "6tldCcfbfXkLApFllqab7S",
       "title": "מדברים בשקט (מתוך חזרות למופע NEXT)",
