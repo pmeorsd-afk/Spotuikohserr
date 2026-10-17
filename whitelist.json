@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1002,
-  "last_updated": "2026-10-17T17:39:56.296Z",
+  "version": 1003,
+  "last_updated": "2026-10-17T17:40:00.690Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -1715,8 +1715,8 @@
       "title": "Yellow",
       "artist": "Coldplay",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T17:39:56.296Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T17:40:00.690Z"
     },
     {
       "id": "6QJ6AbNj7YQQzERYNqy9ro",
