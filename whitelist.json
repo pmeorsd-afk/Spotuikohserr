@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1042,
-  "last_updated": "2026-10-17T19:01:53.877Z",
+  "version": 1043,
+  "last_updated": "2026-10-17T19:01:56.343Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1735,8 +1735,8 @@
       "title": "לא הכל מן אללה",
       "artist": "E-Z",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T19:01:53.877Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T19:01:56.343Z"
     },
     {
       "id": "5RXqRJ78tXUm54Y9pmo8yp",
