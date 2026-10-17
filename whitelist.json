@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1049,
-  "last_updated": "2026-10-17T19:16:28.124Z",
+  "version": 1050,
+  "last_updated": "2026-10-17T20:50:30.271Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3i7p1zPzFK0hYtafsqq8bE",
+      "title": "איך זה שכל יום",
+      "artist": "ניב דמירל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T20:50:30.271Z"
+    },
     {
       "id": "2OomZwwpxVSG877ntmDjDG",
       "title": "מחשבות טובות רמיקס",
