@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1029,
-  "last_updated": "2026-10-17T18:24:33.024Z",
+  "version": 1030,
+  "last_updated": "2026-10-17T18:30:50.401Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44CnbJqmDm3ou9bOL6xUFM",
+      "title": "מה שהלב בחר",
+      "artist": "Kobi Aflalo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T18:30:50.401Z"
+    },
     {
       "id": "7a8B2vmOcJ6btFlBGl2IX9",
       "title": "ואז את תראי",
