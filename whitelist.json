@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1057,
-  "last_updated": "2026-10-17T22:54:41.938Z",
+  "version": 1058,
+  "last_updated": "2026-10-17T22:56:52.126Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1730,6 +1730,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "50pvcygkSBjbH0LvqeFgdd",
+      "title": "צליל מכוון",
+      "artist": "Itzhak Klepter",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T22:56:52.126Z"
+    },
     {
       "id": "6UgGsxaJZ9XuXe9koPwdwA",
       "title": "שיר החייל",
