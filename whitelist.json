@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1040,
-  "last_updated": "2026-10-17T18:58:41.550Z",
+  "version": 1041,
+  "last_updated": "2026-10-17T18:58:44.055Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1735,8 +1735,8 @@
       "title": "בלילה",
       "artist": "Idan Raichel",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T18:58:40.037Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T18:58:44.055Z"
     },
     {
       "id": "7606oAr5GqreqTOdIX3uGB",
