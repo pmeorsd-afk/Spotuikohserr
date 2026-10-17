@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1058,
-  "last_updated": "2026-10-17T22:56:52.126Z",
+  "version": 1059,
+  "last_updated": "2026-10-17T22:56:55.707Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1735,8 +1735,8 @@
       "title": "צליל מכוון",
       "artist": "Itzhak Klepter",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T22:56:52.126Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T22:56:55.707Z"
     },
     {
       "id": "6UgGsxaJZ9XuXe9koPwdwA",
