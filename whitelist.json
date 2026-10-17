@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1024,
-  "last_updated": "2026-10-17T17:51:26.259Z",
+  "version": 1025,
+  "last_updated": "2026-10-17T17:51:29.061Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1735,8 +1735,8 @@
       "title": "מוזיקה מרגיעה לעיסוי וטיפולים - נעימות שקטות להשראת רוגע ושלווה",
       "artist": "Teramid Music.",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T17:51:26.259Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T17:51:29.061Z"
     },
     {
       "id": "6jLSvTOdPH592NgIZpFgs7",
