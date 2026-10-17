@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1054,
-  "last_updated": "2026-10-17T22:14:02.833Z",
+  "version": 1055,
+  "last_updated": "2026-10-17T22:14:06.321Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1735,8 +1735,8 @@
       "title": "שקרים יפים",
       "artist": "Itay Levi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T22:14:02.833Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T22:14:06.321Z"
     },
     {
       "id": "6gGbQIKS0dyNQrJfUatt46",
