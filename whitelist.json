@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1015,
-  "last_updated": "2026-10-17T17:40:42.279Z",
+  "version": 1016,
+  "last_updated": "2026-10-17T17:42:54.000Z",
   "artists": [
+    {
+      "id": "20682d4e48YO3XuN49CnYK",
+      "canonical_name": "Arik Dvir",
+      "aliases": [
+        "Arik Dvir"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-17T17:42:54.000Z"
+    },
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
       "canonical_name": "Nissim Saal",
