@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 998,
-  "last_updated": "2026-10-17T17:39:30.820Z",
+  "version": 999,
+  "last_updated": "2026-10-17T17:39:33.714Z",
   "artists": [
     {
       "id": "6IDt4WH3o02qiOyqXXWwab",
@@ -1715,8 +1715,8 @@
       "title": "עזבת ת'בית",
       "artist": "Peled, Nastia Rod",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T17:39:30.820Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T17:39:33.714Z"
     },
     {
       "id": "1UVfk9QoJCj6wsGgco7rUI",
