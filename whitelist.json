@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1034,
-  "last_updated": "2026-10-17T18:42:33.867Z",
+  "version": 1035,
+  "last_updated": "2026-10-17T18:42:36.855Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1735,8 +1735,8 @@
       "title": "להגיע הביתה",
       "artist": "Doli & Penn, Elai Botner",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-17T18:42:33.867Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-17T18:42:36.855Z"
     },
     {
       "id": "3iZsKXtvGpqdeclQq3RNSn",
