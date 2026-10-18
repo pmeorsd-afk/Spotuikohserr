@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1226,
-  "last_updated": "2026-10-18T18:41:39.223Z",
+  "version": 1227,
+  "last_updated": "2026-10-18T18:41:41.060Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1790,6 +1790,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ACUaaKpqtwL2a7fVPVsdH",
+      "title": "כל הכח",
+      "artist": "Kobi Peretz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T18:41:41.060Z"
+    },
     {
       "id": "5ppuL7dOIhd7td0YCJJuwf",
       "title": "טקילה",
