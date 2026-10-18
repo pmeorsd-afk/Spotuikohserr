@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1218,
-  "last_updated": "2026-10-18T18:41:19.233Z",
+  "version": 1219,
+  "last_updated": "2026-10-18T18:41:23.277Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1795,8 +1795,8 @@
       "title": "אליס - חי באולפן גלגלצ",
       "artist": "נדב חנציס, גלגלצ",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T18:41:19.233Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T18:41:23.277Z"
     },
     {
       "id": "37v0Zux1TcXoW7glY3VY4E",
