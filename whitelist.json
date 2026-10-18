@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1200,
-  "last_updated": "2026-10-18T12:17:09.845Z",
+  "version": 1201,
+  "last_updated": "2026-10-18T12:17:13.040Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "אפס מאמץ",
       "artist": "Static & Ben El, Netta",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T12:17:09.845Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T12:17:13.040Z"
     },
     {
       "id": "6TX7G0VueGjrwAmX4nDXZW",
