@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1215,
-  "last_updated": "2026-10-18T18:41:10.859Z",
+  "version": 1216,
+  "last_updated": "2026-10-18T18:41:13.220Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1803,8 +1803,8 @@
       "title": "מרגיש שלך",
       "artist": "Osher Cohen",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T18:41:07.984Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T18:41:13.220Z"
     },
     {
       "id": "6KaEnhXKR6vSqqWzQOyqxE",
