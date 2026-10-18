@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1209,
-  "last_updated": "2026-10-18T13:25:43.078Z",
+  "version": 1210,
+  "last_updated": "2026-10-18T13:25:50.844Z",
   "artists": [
+    {
+      "id": "0cnlzAGTVpF97Nca21GwzP",
+      "canonical_name": "Avrum Mordche Schwartz",
+      "aliases": [
+        "Avrum Mordche Schwartz"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T13:25:50.844Z"
+    },
     {
       "id": "70QKL4NGyQneGBoiICVfws",
       "canonical_name": "אבי לרנר",
