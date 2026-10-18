@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1158,
-  "last_updated": "2026-10-18T07:04:33.765Z",
+  "version": 1159,
+  "last_updated": "2026-10-18T07:04:38.663Z",
   "artists": [
+    {
+      "id": "3ObnkOSF8KZ9405ZPJtwbB",
+      "canonical_name": "Eviatar Banai",
+      "aliases": [
+        "Eviatar Banai"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T07:04:38.663Z"
+    },
     {
       "id": "4prewR1ENiQONu6k5IC5gO",
       "canonical_name": "תזמורת שלהבת",
