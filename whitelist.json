@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1190,
-  "last_updated": "2026-10-18T11:55:17.200Z",
+  "version": 1191,
+  "last_updated": "2026-10-18T11:55:19.960Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "06",
       "artist": "Itay Levi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T11:55:17.200Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T11:55:19.960Z"
     },
     {
       "id": "0I8cnk3ElNwkznTDij1MRd",
