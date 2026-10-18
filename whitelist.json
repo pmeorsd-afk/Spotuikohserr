@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1174,
-  "last_updated": "2026-10-18T09:49:36.348Z",
+  "version": 1175,
+  "last_updated": "2026-10-18T10:07:49.079Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1770,6 +1770,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ml1tecvYSfbETHZXVmXkH",
+      "title": "פלאזה אתנה",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T10:07:49.079Z"
+    },
     {
       "id": "4LXH4zESukk6G9J9PJb9CN",
       "title": "ואז את תראי - רמיקס",
