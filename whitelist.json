@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1233,
-  "last_updated": "2026-10-18T18:53:54.300Z",
+  "version": 1234,
+  "last_updated": "2026-10-18T20:40:44.359Z",
   "artists": [
+    {
+      "id": "7KGI8Bxcj7Z84L0J797ENx",
+      "canonical_name": "ישיבת ההסדר ירוחם",
+      "aliases": [
+        "ישיבת ההסדר ירוחם"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T20:40:44.359Z"
+    },
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
       "canonical_name": "Anshel Friedman",
