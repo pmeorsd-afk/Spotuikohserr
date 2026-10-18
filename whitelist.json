@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1169,
-  "last_updated": "2026-10-18T07:17:22.940Z",
+  "version": 1170,
+  "last_updated": "2026-10-18T07:18:02.866Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "השעות הקטנות",
       "artist": "ניב דמירל",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T07:17:22.940Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T07:18:02.866Z"
     },
     {
       "id": "2gADPoVkpXPGnl1ZuParzp",
