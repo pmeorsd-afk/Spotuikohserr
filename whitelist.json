@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1223,
-  "last_updated": "2026-10-18T18:41:32.139Z",
+  "version": 1224,
+  "last_updated": "2026-10-18T18:41:34.116Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1790,6 +1790,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1UxPPRzZOUhZPTslSjzagr",
+      "title": "Stam",
+      "artist": "Static & Ben El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T18:41:34.116Z"
+    },
     {
       "id": "1g0IBPZTRP7VYkctJ4Qafg",
       "title": "Silsulim",
