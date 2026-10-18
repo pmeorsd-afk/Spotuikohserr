@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1221,
-  "last_updated": "2026-10-18T18:41:28.195Z",
+  "version": 1222,
+  "last_updated": "2026-10-18T18:41:30.210Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1803,8 +1803,8 @@
       "title": "ואן גוך",
       "artist": "SEGA ofc, ערן יוסף, עידו בן דב",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T18:41:26.099Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T18:41:30.210Z"
     },
     {
       "id": "1fWkzxrhsViaXfuJPIflNl",
