@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1234,
-  "last_updated": "2026-10-18T20:40:44.359Z",
+  "version": 1235,
+  "last_updated": "2026-10-18T20:40:47.304Z",
   "artists": [
     {
       "id": "7KGI8Bxcj7Z84L0J797ENx",
@@ -10,8 +10,8 @@
         "ישיבת ההסדר ירוחם"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T20:40:44.359Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T20:40:47.304Z"
     },
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
