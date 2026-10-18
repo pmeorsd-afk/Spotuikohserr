@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1231,
-  "last_updated": "2026-10-18T18:41:52.372Z",
+  "version": 1232,
+  "last_updated": "2026-10-18T18:53:51.099Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1790,6 +1790,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7G0xb7lcKKI6N42XRoqJMV",
+      "title": "כלוב זהב",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T18:53:51.099Z"
+    },
     {
       "id": "15JINEqzVMv3SvJTAXAKED",
       "title": "Love The Way You Lie",
