@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1096,
-  "last_updated": "2026-10-18T06:51:30.535Z",
+  "version": 1097,
+  "last_updated": "2026-10-18T06:53:02.356Z",
   "artists": [
+    {
+      "id": "0qYJ1FO8HqG5JKXOC4zDrl",
+      "canonical_name": "גלעד פוטולסקי",
+      "aliases": [
+        "גלעד פוטולסקי"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T06:53:02.356Z"
+    },
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
       "canonical_name": "Yeedle",
