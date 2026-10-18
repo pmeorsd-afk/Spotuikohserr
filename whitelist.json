@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1098,
-  "last_updated": "2026-10-18T06:53:04.810Z",
+  "version": 1099,
+  "last_updated": "2026-10-18T06:53:19.345Z",
   "artists": [
+    {
+      "id": "4prewR1ENiQONu6k5IC5gO",
+      "canonical_name": "תזמורת שלהבת",
+      "aliases": [
+        "תזמורת שלהבת"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T06:53:19.345Z"
+    },
     {
       "id": "0qYJ1FO8HqG5JKXOC4zDrl",
       "canonical_name": "גלעד פוטולסקי",
