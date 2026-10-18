@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1217,
-  "last_updated": "2026-10-18T18:41:15.011Z",
+  "version": 1218,
+  "last_updated": "2026-10-18T18:41:19.233Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1790,6 +1790,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1fWkzxrhsViaXfuJPIflNl",
+      "title": "אליס - חי באולפן גלגלצ",
+      "artist": "נדב חנציס, גלגלצ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T18:41:19.233Z"
+    },
     {
       "id": "37v0Zux1TcXoW7glY3VY4E",
       "title": "מה הוא יודע",
