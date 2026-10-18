@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1196,
-  "last_updated": "2026-10-18T11:55:30.956Z",
+  "version": 1197,
+  "last_updated": "2026-10-18T11:55:33.703Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "בעיר שלי - לייב היכל מנורה",
       "artist": "Noam Bettan, Eden Hason",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T11:55:30.956Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T11:55:33.703Z"
     },
     {
       "id": "1AlnrCNHBkYlWp73v8fFge",
