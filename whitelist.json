@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1167,
-  "last_updated": "2026-10-18T07:13:51.943Z",
+  "version": 1168,
+  "last_updated": "2026-10-18T07:13:54.772Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "Echad Meohav",
       "artist": "Dudi Buzaglo",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T07:13:51.943Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T07:13:54.772Z"
     },
     {
       "id": "1EElDZddDZIOX6Ani1VZgb",
