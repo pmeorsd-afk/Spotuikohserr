@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1166,
-  "last_updated": "2026-10-18T07:11:50.692Z",
+  "version": 1167,
+  "last_updated": "2026-10-18T07:13:51.943Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1770,6 +1770,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2gADPoVkpXPGnl1ZuParzp",
+      "title": "Echad Meohav",
+      "artist": "Dudi Buzaglo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T07:13:51.943Z"
+    },
     {
       "id": "1EElDZddDZIOX6Ani1VZgb",
       "title": "בלי שקל בכיסים",
