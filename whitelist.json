@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1180,
-  "last_updated": "2026-10-18T10:41:13.851Z",
+  "version": 1181,
+  "last_updated": "2026-10-18T10:41:16.835Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "אהבה כפולה",
       "artist": "שימי מזרחי, Moshik Afia",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T10:41:13.851Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T10:41:16.835Z"
     },
     {
       "id": "4ml1tecvYSfbETHZXVmXkH",
