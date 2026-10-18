@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1222,
-  "last_updated": "2026-10-18T18:41:30.210Z",
+  "version": 1223,
+  "last_updated": "2026-10-18T18:41:32.139Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1795,8 +1795,8 @@
       "title": "Silsulim",
       "artist": "Static & Ben El",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T18:41:28.195Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T18:41:32.139Z"
     },
     {
       "id": "2Otm3KEdvaoS1svZOLVGwc",
