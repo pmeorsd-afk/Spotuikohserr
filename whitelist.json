@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1162,
-  "last_updated": "2026-10-18T07:04:45.884Z",
+  "version": 1163,
+  "last_updated": "2026-10-18T07:05:00.583Z",
   "artists": [
+    {
+      "id": "70QKL4NGyQneGBoiICVfws",
+      "canonical_name": "אבי לרנר",
+      "aliases": [
+        "אבי לרנר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T07:05:00.583Z"
+    },
     {
       "id": "3ObnkOSF8KZ9405ZPJtwbB",
       "canonical_name": "Eviatar Banai",
