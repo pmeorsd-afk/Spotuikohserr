@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1194,
-  "last_updated": "2026-10-18T11:55:26.784Z",
+  "version": 1195,
+  "last_updated": "2026-10-18T11:55:29.225Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "אין לך מה לדאוג",
       "artist": "Idan Rafael Haviv",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T11:55:26.784Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T11:55:29.225Z"
     },
     {
       "id": "3US82sqZ2NBqiS1odRwU8f",
