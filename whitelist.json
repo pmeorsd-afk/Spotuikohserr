@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1210,
-  "last_updated": "2026-10-18T13:25:50.844Z",
+  "version": 1211,
+  "last_updated": "2026-10-18T13:25:53.329Z",
   "artists": [
     {
       "id": "0cnlzAGTVpF97Nca21GwzP",
@@ -10,8 +10,8 @@
         "Avrum Mordche Schwartz"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T13:25:50.844Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T13:25:53.329Z"
     },
     {
       "id": "70QKL4NGyQneGBoiICVfws",
