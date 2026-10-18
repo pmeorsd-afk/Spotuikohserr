@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1235,
-  "last_updated": "2026-10-18T20:40:47.304Z",
+  "version": 1236,
+  "last_updated": "2026-10-18T20:41:12.957Z",
   "artists": [
+    {
+      "id": "0sF7DgSwkHbQgjuIlx8iKS",
+      "canonical_name": "Motti Gantz",
+      "aliases": [
+        "Motti Gantz"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T20:41:12.957Z"
+    },
     {
       "id": "7KGI8Bxcj7Z84L0J797ENx",
       "canonical_name": "ישיבת ההסדר ירוחם",
