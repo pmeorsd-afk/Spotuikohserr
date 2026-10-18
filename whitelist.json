@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1216,
-  "last_updated": "2026-10-18T18:41:13.220Z",
+  "version": 1217,
+  "last_updated": "2026-10-18T18:41:15.011Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1795,8 +1795,8 @@
       "title": "מה הוא יודע",
       "artist": "The Ultras, Osher Cohen, Eli Perez",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T18:41:10.859Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T18:41:15.011Z"
     },
     {
       "id": "0eUOTmdTChjShxHH0bZrDR",
