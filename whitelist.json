@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1212,
-  "last_updated": "2026-10-18T13:25:55.168Z",
+  "version": 1213,
+  "last_updated": "2026-10-18T13:25:57.534Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -10,8 +10,8 @@
         "Anshel Friedman"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T13:25:55.168Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T13:25:57.534Z"
     },
     {
       "id": "0cnlzAGTVpF97Nca21GwzP",
