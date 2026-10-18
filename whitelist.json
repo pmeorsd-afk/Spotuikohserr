@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1065,
-  "last_updated": "2026-10-18T06:39:01.319Z",
+  "version": 1066,
+  "last_updated": "2026-10-18T06:39:05.744Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -4239,6 +4239,15 @@
       "title": "כולי תפילה",
       "artist": "Eden Hason, Meydad Tasa",
       "status": "approved"
+    }
+  ],
+  "home_images": [
+    {
+      "id": "f35df86562a463a1c0fccb14136548e891ed90272986201a",
+      "url": "https://mosaic.scdn.co/640/ab67616d00001e0219b36e42a0b0790b5b2c8827ab67616d00001e0261614bb00d6ae0c4d7a8214aab67616d00001e02bcd4208772c428fcfce6b557ab67616d00001e02d34390b876622431aefc6437",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-10-18T06:39:05.744Z"
     }
   ]
 }
