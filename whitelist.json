@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1238,
-  "last_updated": "2026-10-18T20:41:28.519Z",
+  "version": 1239,
+  "last_updated": "2026-10-18T20:41:31.316Z",
   "artists": [
     {
       "id": "0aeegzzL2CkAkxG73lhj4E",
@@ -10,8 +10,8 @@
         "משה פלד"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T20:41:28.519Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T20:41:31.316Z"
     },
     {
       "id": "0sF7DgSwkHbQgjuIlx8iKS",
