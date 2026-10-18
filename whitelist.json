@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1181,
-  "last_updated": "2026-10-18T10:41:16.835Z",
+  "version": 1182,
+  "last_updated": "2026-10-18T11:54:58.455Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1770,6 +1770,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4u7EnebtmKWzUH433cf5Qv",
+      "title": "Bohemian Rhapsody - Remastered 2011",
+      "artist": "Queen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T11:54:58.455Z"
+    },
     {
       "id": "49NkXXxBoX7jqWRMzGYvdF",
       "title": "אהבה כפולה",
