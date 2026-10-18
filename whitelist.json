@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1173,
-  "last_updated": "2026-10-18T09:49:33.329Z",
+  "version": 1174,
+  "last_updated": "2026-10-18T09:49:36.348Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "ואז את תראי - רמיקס",
       "artist": "Doli & Penn, Dikla, Idan Rafael Haviv, Mark Eliyahu, Hevi Levi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T09:49:33.329Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T09:49:36.348Z"
     },
     {
       "id": "1QJRg6vk8CEKjTX7HnU7Ux",
