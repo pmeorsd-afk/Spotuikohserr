@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1203,
-  "last_updated": "2026-10-18T13:25:28.664Z",
+  "version": 1204,
+  "last_updated": "2026-10-18T13:25:30.617Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1783,8 +1783,8 @@
       "title": "I Wish - Brutal Remix By Skazi",
       "artist": "Skazi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T13:25:26.109Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T13:25:30.617Z"
     },
     {
       "id": "3scEZ2JrbtrqfUvgHrPnSt",
