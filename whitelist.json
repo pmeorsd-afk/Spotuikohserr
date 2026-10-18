@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1064,
-  "last_updated": "2026-10-18T06:38:59.126Z",
+  "version": 1065,
+  "last_updated": "2026-10-18T06:39:01.319Z",
   "artists": [
     {
       "id": "6Ke4UQ2wybP81VrMK8hpXg",
@@ -1743,8 +1743,8 @@
       "title": "אלינור",
       "artist": "Zohar Argov",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T06:38:54.135Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T06:39:01.319Z"
     },
     {
       "id": "4Fd6yahKmQxkfrY6yXnMpm",
