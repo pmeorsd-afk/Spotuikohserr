@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1182,
-  "last_updated": "2026-10-18T11:54:58.455Z",
+  "version": 1183,
+  "last_updated": "2026-10-18T11:55:00.310Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1770,6 +1770,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "40riOy7x9W7GXjyGp4pjAv",
+      "title": "Hotel California - 2013 Remaster",
+      "artist": "Eagles",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T11:55:00.310Z"
+    },
     {
       "id": "4u7EnebtmKWzUH433cf5Qv",
       "title": "Bohemian Rhapsody - Remastered 2011",
