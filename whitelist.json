@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1161,
-  "last_updated": "2026-10-18T07:04:42.935Z",
+  "version": 1162,
+  "last_updated": "2026-10-18T07:04:45.884Z",
   "artists": [
     {
       "id": "3ObnkOSF8KZ9405ZPJtwbB",
@@ -1765,8 +1765,8 @@
       "title": "מכתוב",
       "artist": "Eve And Lear",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T07:04:42.935Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T07:04:45.884Z"
     },
     {
       "id": "0Hunqq0C13dr8uTBA4Daml",
