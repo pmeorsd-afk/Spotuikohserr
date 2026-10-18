@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1108,
-  "last_updated": "2026-10-18T06:56:02.836Z",
+  "version": 1109,
+  "last_updated": "2026-10-18T06:56:11.242Z",
   "artists": [
     {
       "id": "4prewR1ENiQONu6k5IC5gO",
@@ -4534,6 +4534,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-10-18T06:56:02.836Z"
+    },
+    {
+      "id": "d4a37920956ba0e3314e1890bb091e18136c171fefe96d1b",
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c2db2ceb9e8f6da1cecbbbe65",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-10-18T06:56:11.242Z"
     }
   ]
 }
