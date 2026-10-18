@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1195,
-  "last_updated": "2026-10-18T11:55:29.225Z",
+  "version": 1196,
+  "last_updated": "2026-10-18T11:55:30.956Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1770,6 +1770,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6TX7G0VueGjrwAmX4nDXZW",
+      "title": "בעיר שלי - לייב היכל מנורה",
+      "artist": "Noam Bettan, Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T11:55:30.956Z"
+    },
     {
       "id": "1AlnrCNHBkYlWp73v8fFge",
       "title": "אין לך מה לדאוג",
