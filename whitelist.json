@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1183,
-  "last_updated": "2026-10-18T11:55:00.310Z",
+  "version": 1184,
+  "last_updated": "2026-10-18T11:55:02.741Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "Hotel California - 2013 Remaster",
       "artist": "Eagles",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T11:55:00.310Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T11:55:02.741Z"
     },
     {
       "id": "4u7EnebtmKWzUH433cf5Qv",
