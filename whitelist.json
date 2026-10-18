@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1165,
-  "last_updated": "2026-10-18T07:11:47.536Z",
+  "version": 1166,
+  "last_updated": "2026-10-18T07:11:50.692Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "בלי שקל בכיסים",
       "artist": "Shaked Komemy",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T07:11:47.536Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T07:11:50.692Z"
     },
     {
       "id": "5Try5Fu8DTrUD4SXQLnCQY",
