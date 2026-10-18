@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1204,
-  "last_updated": "2026-10-18T13:25:30.617Z",
+  "version": 1205,
+  "last_updated": "2026-10-18T13:25:33.596Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "Breeze",
       "artist": "Berg, Skazi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T13:25:28.664Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T13:25:33.596Z"
     },
     {
       "id": "2GFJDl7kEuDgckSfExlHOa",
