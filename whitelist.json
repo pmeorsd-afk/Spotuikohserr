@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1177,
-  "last_updated": "2026-10-18T10:10:44.368Z",
+  "version": 1178,
+  "last_updated": "2026-10-18T10:10:47.407Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -3327,8 +3327,8 @@
       "title": "The Sound of Silence",
       "artist": "Pentatonix",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T10:10:44.368Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T10:10:47.407Z"
     },
     {
       "id": "1xh45NhqemL8MSmkBIPPz4",
