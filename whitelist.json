@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1189,
-  "last_updated": "2026-10-18T11:55:13.711Z",
+  "version": 1190,
+  "last_updated": "2026-10-18T11:55:17.200Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1770,6 +1770,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5iEZUAgj4QZxRPf0FojQ0Y",
+      "title": "06",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T11:55:17.200Z"
+    },
     {
       "id": "0I8cnk3ElNwkznTDij1MRd",
       "title": "Most Wanted Riddim",
