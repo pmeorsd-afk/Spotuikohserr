@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1224,
-  "last_updated": "2026-10-18T18:41:34.116Z",
+  "version": 1225,
+  "last_updated": "2026-10-18T18:41:37.191Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1795,8 +1795,8 @@
       "title": "Stam",
       "artist": "Static & Ben El",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T18:41:34.116Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T18:41:37.191Z"
     },
     {
       "id": "1g0IBPZTRP7VYkctJ4Qafg",
