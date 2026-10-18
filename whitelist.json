@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1172,
-  "last_updated": "2026-10-18T09:07:41.832Z",
+  "version": 1173,
+  "last_updated": "2026-10-18T09:49:33.329Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1770,6 +1770,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4LXH4zESukk6G9J9PJb9CN",
+      "title": "ואז את תראי - רמיקס",
+      "artist": "Doli & Penn, Dikla, Idan Rafael Haviv, Mark Eliyahu, Hevi Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T09:49:33.329Z"
+    },
     {
       "id": "1QJRg6vk8CEKjTX7HnU7Ux",
       "title": "מחרוזת: מה לך ילדה",
