@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1236,
-  "last_updated": "2026-10-18T20:41:12.957Z",
+  "version": 1237,
+  "last_updated": "2026-10-18T20:41:15.511Z",
   "artists": [
     {
       "id": "0sF7DgSwkHbQgjuIlx8iKS",
@@ -10,8 +10,8 @@
         "Motti Gantz"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T20:41:12.957Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T20:41:15.511Z"
     },
     {
       "id": "7KGI8Bxcj7Z84L0J797ENx",
