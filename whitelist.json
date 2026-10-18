@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1178,
-  "last_updated": "2026-10-18T10:10:47.407Z",
+  "version": 1179,
+  "last_updated": "2026-10-18T10:11:11.486Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -3328,7 +3328,7 @@
       "artist": "Pentatonix",
       "status": "approved",
       "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-18T10:10:47.407Z"
+      "updated_at": "2026-10-18T10:11:11.486Z"
     },
     {
       "id": "1xh45NhqemL8MSmkBIPPz4",
