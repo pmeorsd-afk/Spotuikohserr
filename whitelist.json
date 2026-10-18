@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1100,
-  "last_updated": "2026-10-18T06:53:22.388Z",
+  "version": 1101,
+  "last_updated": "2026-10-18T06:53:38.421Z",
   "artists": [
     {
       "id": "4prewR1ENiQONu6k5IC5gO",
@@ -4478,6 +4478,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-10-18T06:51:30.535Z"
+    },
+    {
+      "id": "8aa59745371e0d727a5b1fe9f295191dd20a3c1763836fc1",
+      "url": "https://i.scdn.co/image/ab6761610000e5eb7f2eaad9e8a6d1c0a1b42bda",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-10-18T06:53:38.421Z"
     }
   ]
 }
