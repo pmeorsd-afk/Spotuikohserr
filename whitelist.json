@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1175,
-  "last_updated": "2026-10-18T10:07:49.079Z",
+  "version": 1176,
+  "last_updated": "2026-10-18T10:07:52.316Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "פלאזה אתנה",
       "artist": "Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T10:07:49.079Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T10:07:52.316Z"
     },
     {
       "id": "4LXH4zESukk6G9J9PJb9CN",
