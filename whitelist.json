@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1225,
-  "last_updated": "2026-10-18T18:41:37.191Z",
+  "version": 1226,
+  "last_updated": "2026-10-18T18:41:39.223Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1790,6 +1790,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5ppuL7dOIhd7td0YCJJuwf",
+      "title": "טקילה",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T18:41:39.223Z"
+    },
     {
       "id": "1UxPPRzZOUhZPTslSjzagr",
       "title": "Stam",
