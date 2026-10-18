@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1171,
-  "last_updated": "2026-10-18T09:07:38.956Z",
+  "version": 1172,
+  "last_updated": "2026-10-18T09:07:41.832Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "מחרוזת: מה לך ילדה",
       "artist": "Zohar Argov",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T09:07:38.956Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T09:07:41.832Z"
     },
     {
       "id": "5shn2i4JvFfzNlqeljroXn",
