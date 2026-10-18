@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1187,
-  "last_updated": "2026-10-18T11:55:09.138Z",
+  "version": 1188,
+  "last_updated": "2026-10-18T11:55:11.310Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1775,8 +1775,8 @@
       "title": "Most Wanted Riddim",
       "artist": "NagashBeatz, אברהם איילאו, רוני אייסו, אבי מולה, Ayallew, אופק אדנק, Flight (Bluggo), Mr. Ranking",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T11:55:09.138Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T11:55:11.310Z"
     },
     {
       "id": "3N4GpSs07D076HzWyZJNYA",
