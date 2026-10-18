@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1228,
-  "last_updated": "2026-10-18T18:41:43.265Z",
+  "version": 1229,
+  "last_updated": "2026-10-18T18:41:46.256Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1795,8 +1795,8 @@
       "title": "כל הכח",
       "artist": "Kobi Peretz",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T18:41:41.060Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T18:41:46.256Z"
     },
     {
       "id": "5ppuL7dOIhd7td0YCJJuwf",
