@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1184,
-  "last_updated": "2026-10-18T11:55:02.741Z",
+  "version": 1185,
+  "last_updated": "2026-10-18T11:55:05.317Z",
   "artists": [
     {
       "id": "70QKL4NGyQneGBoiICVfws",
@@ -1783,8 +1783,8 @@
       "title": "Bohemian Rhapsody - Remastered 2011",
       "artist": "Queen",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T11:54:58.455Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T11:55:05.317Z"
     },
     {
       "id": "49NkXXxBoX7jqWRMzGYvdF",
