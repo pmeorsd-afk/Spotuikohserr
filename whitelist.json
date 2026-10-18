@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1230,
-  "last_updated": "2026-10-18T18:41:49.508Z",
+  "version": 1231,
+  "last_updated": "2026-10-18T18:41:52.372Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1795,8 +1795,8 @@
       "title": "Love The Way You Lie",
       "artist": "Eminem, Rihanna",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-18T18:41:49.508Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-18T18:41:52.372Z"
     },
     {
       "id": "4ACUaaKpqtwL2a7fVPVsdH",
