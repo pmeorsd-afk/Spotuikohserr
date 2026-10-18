@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1237,
-  "last_updated": "2026-10-18T20:41:15.511Z",
+  "version": 1238,
+  "last_updated": "2026-10-18T20:41:28.519Z",
   "artists": [
+    {
+      "id": "0aeegzzL2CkAkxG73lhj4E",
+      "canonical_name": "משה פלד",
+      "aliases": [
+        "משה פלד"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T20:41:28.519Z"
+    },
     {
       "id": "0sF7DgSwkHbQgjuIlx8iKS",
       "canonical_name": "Motti Gantz",
