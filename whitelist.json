@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1213,
-  "last_updated": "2026-10-18T13:25:57.534Z",
+  "version": 1214,
+  "last_updated": "2026-10-18T18:41:07.984Z",
   "artists": [
     {
       "id": "6NKCbZHtGk7hHe4kjVMORV",
@@ -1790,6 +1790,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0eUOTmdTChjShxHH0bZrDR",
+      "title": "מרגיש שלך",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-18T18:41:07.984Z"
+    },
     {
       "id": "6KaEnhXKR6vSqqWzQOyqxE",
       "title": "Breeze",
