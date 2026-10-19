@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1308,
-  "last_updated": "2026-10-19T21:01:07.963Z",
+  "version": 1309,
+  "last_updated": "2026-10-19T21:01:10.184Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "מחרוזת טוב לך איתו - Live",
       "artist": "Eyal Golan",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T21:01:05.460Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T21:01:10.184Z"
     },
     {
       "id": "1pRSeqDwhUReBzLzNCTeJE",
