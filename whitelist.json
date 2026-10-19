@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1263,
-  "last_updated": "2026-10-19T18:34:07.001Z",
+  "version": 1264,
+  "last_updated": "2026-10-19T18:34:09.948Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "Radio Ga Ga",
       "artist": "Queen",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:34:07.001Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:34:09.948Z"
     },
     {
       "id": "3EYOJ48Et32uATr9ZmLnAo",
