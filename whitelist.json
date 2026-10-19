@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1240,
-  "last_updated": "2026-10-19T03:49:15.041Z",
+  "version": 1241,
+  "last_updated": "2026-10-19T04:00:40.085Z",
   "artists": [
+    {
+      "id": "1paUzjMvh7hjs7IxLNoZD6",
+      "canonical_name": "ניגוני הינוקא",
+      "aliases": [
+        "ניגוני הינוקא"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T04:00:40.085Z"
+    },
     {
       "id": "0aeegzzL2CkAkxG73lhj4E",
       "canonical_name": "משה פלד",
