@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1247,
-  "last_updated": "2026-10-19T18:33:04.274Z",
+  "version": 1248,
+  "last_updated": "2026-10-19T18:33:07.351Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "סתם",
       "artist": "Static & Ben El, Static, Ben El Tavori",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:33:04.274Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:33:07.351Z"
     },
     {
       "id": "5e6cbyWyBzwktNI4FXPyLh",
