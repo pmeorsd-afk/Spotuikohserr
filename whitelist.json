@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1261,
-  "last_updated": "2026-10-19T18:34:02.489Z",
+  "version": 1262,
+  "last_updated": "2026-10-19T18:34:05.478Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "Roxanne",
       "artist": "The Police",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:34:02.489Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:34:05.478Z"
     },
     {
       "id": "5Iu5Arli8isXulPfAQjbYI",
