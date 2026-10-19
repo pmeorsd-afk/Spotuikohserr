@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1271,
-  "last_updated": "2026-10-19T18:34:44.354Z",
+  "version": 1272,
+  "last_updated": "2026-10-19T18:34:46.845Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "Revers 2, La Médaille",
       "artist": "Saad",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:34:44.354Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:34:46.845Z"
     },
     {
       "id": "3LuGpJcIQoHydJJp3smdEx",
