@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1257,
-  "last_updated": "2026-10-19T18:33:29.240Z",
+  "version": 1258,
+  "last_updated": "2026-10-19T18:33:34.153Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "Maman - מאמו",
       "artist": "Itay Levi, Stephane Legar",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:33:29.240Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:33:34.153Z"
     },
     {
       "id": "0q3yDDxPh0k5nvgh2SPcsS",
