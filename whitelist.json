@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1280,
-  "last_updated": "2026-10-19T18:35:23.665Z",
+  "version": 1281,
+  "last_updated": "2026-10-19T18:35:26.640Z",
   "artists": [
     {
       "id": "2n2c21RZvNukQcn0kzHREh",
@@ -10,8 +10,8 @@
         "Udi Davidi"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:35:23.665Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:35:26.640Z"
     },
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
