@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1298,
-  "last_updated": "2026-10-19T20:18:16.399Z",
+  "version": 1299,
+  "last_updated": "2026-10-19T20:18:19.912Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "ריו דה ז'נרו",
       "artist": "Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T20:18:16.399Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T20:18:19.912Z"
     },
     {
       "id": "0c9dF3kGQwrS07K4IWC6ty",
