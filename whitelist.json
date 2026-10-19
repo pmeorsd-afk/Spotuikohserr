@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1251,
-  "last_updated": "2026-10-19T18:33:15.183Z",
+  "version": 1252,
+  "last_updated": "2026-10-19T18:33:18.436Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "גומיגם",
       "artist": "Static, Ben El Tavori, Static & Ben El",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:33:15.183Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:33:18.436Z"
     },
     {
       "id": "1BrxpiR9Kcy3sbgpDONbNp",
