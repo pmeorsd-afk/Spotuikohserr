@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1244,
-  "last_updated": "2026-10-19T18:32:30.702Z",
+  "version": 1245,
+  "last_updated": "2026-10-19T18:32:33.365Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "אחים בדם",
       "artist": "Avi Gueta, Itzik Cohen",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:32:30.702Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:32:33.365Z"
     },
     {
       "id": "38640CoyYmrZIjHQBytjFp",
