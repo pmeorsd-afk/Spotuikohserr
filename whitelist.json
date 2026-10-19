@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1268,
-  "last_updated": "2026-10-19T18:34:28.409Z",
+  "version": 1269,
+  "last_updated": "2026-10-19T18:34:36.714Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1830,6 +1830,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3LuGpJcIQoHydJJp3smdEx",
+      "title": "Anesthésie",
+      "artist": "L2Haine",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T18:34:36.714Z"
+    },
     {
       "id": "6E6iyiKVgxPlNqyvFOq3gm",
       "title": "Gang",
