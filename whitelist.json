@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1249,
-  "last_updated": "2026-10-19T18:33:09.800Z",
+  "version": 1250,
+  "last_updated": "2026-10-19T18:33:12.848Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "לאהוב שלום",
       "artist": "הינוקא - הרב שלמה יהודה בארי",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:33:09.800Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:33:12.848Z"
     },
     {
       "id": "2aUVlmWZPWiNkb710VN1bM",
