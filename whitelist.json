@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1254,
-  "last_updated": "2026-10-19T18:33:22.866Z",
+  "version": 1255,
+  "last_updated": "2026-10-19T18:33:25.278Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1843,8 +1843,8 @@
       "title": "תני לי רגע",
       "artist": "Mergui",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:33:20.825Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:33:25.278Z"
     },
     {
       "id": "2cVs8bOwF3eotWtEQAyvq1",
