@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1241,
-  "last_updated": "2026-10-19T04:00:40.085Z",
+  "version": 1242,
+  "last_updated": "2026-10-19T04:00:43.109Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -10,8 +10,8 @@
         "ניגוני הינוקא"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T04:00:40.085Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T04:00:43.109Z"
     },
     {
       "id": "0aeegzzL2CkAkxG73lhj4E",
