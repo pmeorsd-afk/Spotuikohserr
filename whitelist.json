@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1299,
-  "last_updated": "2026-10-19T20:18:19.912Z",
+  "version": 1300,
+  "last_updated": "2026-10-19T20:28:52.748Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2bCQnHIQne6U0EGW7iVNkw",
+      "title": "מגדלים",
+      "artist": "The Voice Israel, Mendy Twerski",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T20:28:52.748Z"
+    },
     {
       "id": "4PQDzCTyZkCW5o4FueSJaa",
       "title": "ריו דה ז'נרו",
