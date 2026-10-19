@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1277,
-  "last_updated": "2026-10-19T18:35:03.297Z",
+  "version": 1278,
+  "last_updated": "2026-10-19T18:35:06.453Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "D על ה G",
       "artist": "Balishag",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:35:03.297Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:35:06.453Z"
     },
     {
       "id": "48eulq0WxexmY8mIYSoCm8",
