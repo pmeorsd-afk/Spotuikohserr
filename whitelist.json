@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1265,
-  "last_updated": "2026-10-19T18:34:12.682Z",
+  "version": 1266,
+  "last_updated": "2026-10-19T18:34:15.459Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "All You Need Is Love - Remastered 2009",
       "artist": "The Beatles",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:34:12.682Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:34:15.459Z"
     },
     {
       "id": "6N717o83wbmahFGUqkjQj7",
