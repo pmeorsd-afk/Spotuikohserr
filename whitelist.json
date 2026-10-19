@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1291,
-  "last_updated": "2026-10-19T18:38:46.868Z",
+  "version": 1292,
+  "last_updated": "2026-10-19T18:39:01.708Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -5432,6 +5432,13 @@
       "scope": "search",
       "status": "approved",
       "updated_at": "2026-10-19T18:38:46.868Z"
+    },
+    {
+      "id": "68a6018293f8e1cb73a8b9d9a5683a882790df7c2127f0c0",
+      "url": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg",
+      "scope": "search",
+      "status": "approved",
+      "updated_at": "2026-10-19T18:39:01.708Z"
     }
   ]
 }
