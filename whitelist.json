@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1248,
-  "last_updated": "2026-10-19T18:33:07.351Z",
+  "version": 1249,
+  "last_updated": "2026-10-19T18:33:09.800Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1830,6 +1830,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1BrxpiR9Kcy3sbgpDONbNp",
+      "title": "לאהוב שלום",
+      "artist": "הינוקא - הרב שלמה יהודה בארי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T18:33:09.800Z"
+    },
     {
       "id": "2aUVlmWZPWiNkb710VN1bM",
       "title": "סתם",
