@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1270,
-  "last_updated": "2026-10-19T18:34:39.791Z",
+  "version": 1271,
+  "last_updated": "2026-10-19T18:34:44.354Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1830,6 +1830,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5jsTa8LYa0NUA156T5di1q",
+      "title": "Revers 2, La Médaille",
+      "artist": "Saad",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T18:34:44.354Z"
+    },
     {
       "id": "3LuGpJcIQoHydJJp3smdEx",
       "title": "Anesthésie",
