@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1276,
-  "last_updated": "2026-10-19T18:34:59.253Z",
+  "version": 1277,
+  "last_updated": "2026-10-19T18:35:03.297Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1830,6 +1830,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5kKbIrj5wrxl2mwIxkFYPo",
+      "title": "D על ה G",
+      "artist": "Balishag",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T18:35:03.297Z"
+    },
     {
       "id": "48eulq0WxexmY8mIYSoCm8",
       "title": "Revers",
