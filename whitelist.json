@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1300,
-  "last_updated": "2026-10-19T20:28:52.748Z",
+  "version": 1301,
+  "last_updated": "2026-10-19T20:28:56.249Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "מגדלים",
       "artist": "The Voice Israel, Mendy Twerski",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T20:28:52.748Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T20:28:56.249Z"
     },
     {
       "id": "4PQDzCTyZkCW5o4FueSJaa",
