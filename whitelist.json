@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1260,
-  "last_updated": "2026-10-19T18:33:39.260Z",
+  "version": 1261,
+  "last_updated": "2026-10-19T18:34:02.489Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1830,6 +1830,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3EYOJ48Et32uATr9ZmLnAo",
+      "title": "Roxanne",
+      "artist": "The Police",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T18:34:02.489Z"
+    },
     {
       "id": "5Iu5Arli8isXulPfAQjbYI",
       "title": "נמס ממך",
