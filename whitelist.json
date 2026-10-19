@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1259,
-  "last_updated": "2026-10-19T18:33:36.829Z",
+  "version": 1260,
+  "last_updated": "2026-10-19T18:33:39.260Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "נמס ממך",
       "artist": "Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:33:36.829Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:33:39.260Z"
     },
     {
       "id": "13ERMZwBUdkq17I3TQioJv",
