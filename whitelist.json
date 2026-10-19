@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1266,
-  "last_updated": "2026-10-19T18:34:15.459Z",
+  "version": 1267,
+  "last_updated": "2026-10-19T18:34:25.629Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1830,6 +1830,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6E6iyiKVgxPlNqyvFOq3gm",
+      "title": "Gang",
+      "artist": "A2K",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T18:34:25.629Z"
+    },
     {
       "id": "68BTFws92cRztMS1oQ7Ewj",
       "title": "All You Need Is Love - Remastered 2009",
