@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1264,
-  "last_updated": "2026-10-19T18:34:09.948Z",
+  "version": 1265,
+  "last_updated": "2026-10-19T18:34:12.682Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1830,6 +1830,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "68BTFws92cRztMS1oQ7Ewj",
+      "title": "All You Need Is Love - Remastered 2009",
+      "artist": "The Beatles",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T18:34:12.682Z"
+    },
     {
       "id": "6N717o83wbmahFGUqkjQj7",
       "title": "Radio Ga Ga",
