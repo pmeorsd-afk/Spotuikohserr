@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1250,
-  "last_updated": "2026-10-19T18:33:12.848Z",
+  "version": 1251,
+  "last_updated": "2026-10-19T18:33:15.183Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1830,6 +1830,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2cVs8bOwF3eotWtEQAyvq1",
+      "title": "גומיגם",
+      "artist": "Static, Ben El Tavori, Static & Ben El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T18:33:15.183Z"
+    },
     {
       "id": "1BrxpiR9Kcy3sbgpDONbNp",
       "title": "לאהוב שלום",
