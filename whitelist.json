@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1306,
-  "last_updated": "2026-10-19T21:01:03.272Z",
+  "version": 1307,
+  "last_updated": "2026-10-19T21:01:05.460Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4nu6Nm1bxV7ZSEFS3FMYlX",
+      "title": "מחרוזת טוב לך איתו - Live",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T21:01:05.460Z"
+    },
     {
       "id": "1pRSeqDwhUReBzLzNCTeJE",
       "title": "מחרוזת: עינייך החומות",
