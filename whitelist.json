@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1273,
-  "last_updated": "2026-10-19T18:34:49.171Z",
+  "version": 1274,
+  "last_updated": "2026-10-19T18:34:51.843Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "Grace (feat. 42 Dugg)",
       "artist": "Lil Baby, 42 Dugg",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:34:49.171Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:34:51.843Z"
     },
     {
       "id": "5jsTa8LYa0NUA156T5di1q",
