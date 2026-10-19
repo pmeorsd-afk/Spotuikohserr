@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1243,
-  "last_updated": "2026-10-19T18:32:27.736Z",
+  "version": 1244,
+  "last_updated": "2026-10-19T18:32:30.702Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1830,6 +1830,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5e6cbyWyBzwktNI4FXPyLh",
+      "title": "אחים בדם",
+      "artist": "Avi Gueta, Itzik Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T18:32:30.702Z"
+    },
     {
       "id": "38640CoyYmrZIjHQBytjFp",
       "title": "Early in the Morning",
