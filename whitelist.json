@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1307,
-  "last_updated": "2026-10-19T21:01:05.460Z",
+  "version": 1308,
+  "last_updated": "2026-10-19T21:01:07.963Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1863,8 +1863,8 @@
       "title": "מחרוזת: עינייך החומות",
       "artist": "Eyal Golan",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T21:00:59.762Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T21:01:07.963Z"
     },
     {
       "id": "5nYFRLTLrqiETyy6LUPfhQ",
