@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1255,
-  "last_updated": "2026-10-19T18:33:25.278Z",
+  "version": 1256,
+  "last_updated": "2026-10-19T18:33:27.449Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "אין יותר מועדונים",
       "artist": "Eden Hason",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:33:22.866Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:33:27.449Z"
     },
     {
       "id": "6JA3KmhNTm9Hh8XPdH88wM",
