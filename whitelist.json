@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1296,
-  "last_updated": "2026-10-19T18:43:09.481Z",
+  "version": 1297,
+  "last_updated": "2026-10-19T18:43:12.671Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "מהדורה מוגבלת",
       "artist": "פוצ'ו",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:43:09.481Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:43:12.671Z"
     },
     {
       "id": "5kKbIrj5wrxl2mwIxkFYPo",
