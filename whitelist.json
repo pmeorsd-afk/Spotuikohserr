@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1252,
-  "last_updated": "2026-10-19T18:33:18.436Z",
+  "version": 1253,
+  "last_updated": "2026-10-19T18:33:20.825Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1830,6 +1830,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6JA3KmhNTm9Hh8XPdH88wM",
+      "title": "תני לי רגע",
+      "artist": "Mergui",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T18:33:20.825Z"
+    },
     {
       "id": "2cVs8bOwF3eotWtEQAyvq1",
       "title": "גומיגם",
