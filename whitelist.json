@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1285,
-  "last_updated": "2026-10-19T18:36:58.604Z",
+  "version": 1286,
+  "last_updated": "2026-10-19T18:37:13.189Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -5390,6 +5390,13 @@
       "scope": "search",
       "status": "approved",
       "updated_at": "2026-10-19T18:36:58.604Z"
+    },
+    {
+      "id": "02842414343923d4640846bd5821e9dac2aaaba43dff748a",
+      "url": "https://concerts.spotifycdn.com/images/live-events_category-image.jpg",
+      "scope": "search",
+      "status": "blocked",
+      "updated_at": "2026-10-19T18:37:13.189Z"
     }
   ]
 }
