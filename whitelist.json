@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1281,
-  "last_updated": "2026-10-19T18:35:26.640Z",
+  "version": 1282,
+  "last_updated": "2026-10-19T18:35:29.168Z",
   "artists": [
+    {
+      "id": "54HicbsQOHeibnnFCMtLwl",
+      "canonical_name": "Gad Elbaz",
+      "aliases": [
+        "Gad Elbaz"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T18:35:29.168Z"
+    },
     {
       "id": "2n2c21RZvNukQcn0kzHREh",
       "canonical_name": "Udi Davidi",
