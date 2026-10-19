@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1304,
-  "last_updated": "2026-10-19T21:00:57.520Z",
+  "version": 1305,
+  "last_updated": "2026-10-19T21:00:59.762Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1pRSeqDwhUReBzLzNCTeJE",
+      "title": "מחרוזת: עינייך החומות",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T21:00:59.762Z"
+    },
     {
       "id": "5nYFRLTLrqiETyy6LUPfhQ",
       "title": "מגדלים",
