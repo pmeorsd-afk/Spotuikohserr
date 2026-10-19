@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1267,
-  "last_updated": "2026-10-19T18:34:25.629Z",
+  "version": 1268,
+  "last_updated": "2026-10-19T18:34:28.409Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "Gang",
       "artist": "A2K",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:34:25.629Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:34:28.409Z"
     },
     {
       "id": "68BTFws92cRztMS1oQ7Ewj",
