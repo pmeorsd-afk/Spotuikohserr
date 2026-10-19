@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1275,
-  "last_updated": "2026-10-19T18:34:56.026Z",
+  "version": 1276,
+  "last_updated": "2026-10-19T18:34:59.253Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1835,8 +1835,8 @@
       "title": "Revers",
       "artist": "SAAD",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:34:56.026Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:34:59.253Z"
     },
     {
       "id": "01JMnRUs2YOK6DDpdQASGY",
