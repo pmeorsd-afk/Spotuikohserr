@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1258,
-  "last_updated": "2026-10-19T18:33:34.153Z",
+  "version": 1259,
+  "last_updated": "2026-10-19T18:33:36.829Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1830,6 +1830,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Iu5Arli8isXulPfAQjbYI",
+      "title": "נמס ממך",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T18:33:36.829Z"
+    },
     {
       "id": "13ERMZwBUdkq17I3TQioJv",
       "title": "Maman - מאמו",
