@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1245,
-  "last_updated": "2026-10-19T18:32:33.365Z",
+  "version": 1246,
+  "last_updated": "2026-10-19T18:32:36.359Z",
   "artists": [
     {
       "id": "1paUzjMvh7hjs7IxLNoZD6",
@@ -1843,8 +1843,8 @@
       "title": "Early in the Morning",
       "artist": "Peder B. Helland",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:32:27.736Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:32:36.359Z"
     },
     {
       "id": "7G0xb7lcKKI6N42XRoqJMV",
