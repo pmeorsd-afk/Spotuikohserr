@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1309,
-  "last_updated": "2026-10-19T21:01:10.184Z",
+  "version": 1310,
+  "last_updated": "2026-10-19T21:13:28.819Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "318lAsapyPCL1JjGCsCMd8",
+      "title": "שלום לך",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-19T21:13:28.819Z"
+    },
     {
       "id": "4nu6Nm1bxV7ZSEFS3FMYlX",
       "title": "מחרוזת טוב לך איתו - Live",
