@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1282,
-  "last_updated": "2026-10-19T18:35:29.168Z",
+  "version": 1283,
+  "last_updated": "2026-10-19T18:35:32.020Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -10,8 +10,8 @@
         "Gad Elbaz"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-19T18:35:29.168Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-19T18:35:32.020Z"
     },
     {
       "id": "2n2c21RZvNukQcn0kzHREh",
