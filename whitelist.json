@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1358,
-  "last_updated": "2026-10-20T18:29:23.261Z",
+  "version": 1359,
+  "last_updated": "2026-10-20T18:29:26.103Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "75lTaVlluq5Qktycnnwfnm",
+      "title": "מאוהב בגשם",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:29:26.103Z"
+    },
     {
       "id": "0vwFh4N0mZrkC1YxOzt9cg",
       "title": "13",
