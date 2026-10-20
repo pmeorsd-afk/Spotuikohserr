@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1312,
-  "last_updated": "2026-10-20T03:40:37.486Z",
+  "version": 1313,
+  "last_updated": "2026-10-20T03:40:39.739Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0kbBGodkSvTkiwSFMYgRNE",
+      "title": "Soothing Relaxation",
+      "artist": "Peder B. Helland",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T03:40:39.739Z"
+    },
     {
       "id": "5JoXMHC7cQlToJJSLAYnxD",
       "title": "Calm Wind",
