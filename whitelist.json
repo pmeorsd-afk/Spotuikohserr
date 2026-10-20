@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1364,
-  "last_updated": "2026-10-20T18:29:45.321Z",
+  "version": 1365,
+  "last_updated": "2026-10-20T18:30:01.852Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3D7Cd9b5t4UMogXcmD3FUX",
+      "title": "מתוק כשמרלי",
+      "artist": "Eliad",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:30:01.852Z"
+    },
     {
       "id": "64iK1QSmwsRfwOWI0sKPRP",
       "title": "בעולם שלה",
