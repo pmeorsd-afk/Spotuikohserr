@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1331,
-  "last_updated": "2026-10-20T18:26:55.982Z",
+  "version": 1332,
+  "last_updated": "2026-10-20T18:27:07.491Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "באקסית",
       "artist": "פוצ'ו, Balishag",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:26:55.982Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:27:07.491Z"
     },
     {
       "id": "1lnc5kaalVlVHsBQQTkPR8",
