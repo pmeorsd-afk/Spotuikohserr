@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1344,
-  "last_updated": "2026-10-20T18:28:27.751Z",
+  "version": 1345,
+  "last_updated": "2026-10-20T18:28:31.135Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6jG3OmapjEN38Q1UCA6CJI",
+      "title": "אורות כחולים",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:28:31.135Z"
+    },
     {
       "id": "0FQWnGOdQJOFLmQ3LUCbC1",
       "title": "אני את ואלוהים",
