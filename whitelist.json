@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1342,
-  "last_updated": "2026-10-20T18:28:22.100Z",
+  "version": 1343,
+  "last_updated": "2026-10-20T18:28:25.404Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0FQWnGOdQJOFLmQ3LUCbC1",
+      "title": "אני את ואלוהים",
+      "artist": "Eyal Golan, Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:28:25.404Z"
+    },
     {
       "id": "2J2ODtdQJrJ2DJPW1eECFG",
       "title": "ביום הכי יפה",
