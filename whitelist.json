@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1313,
-  "last_updated": "2026-10-20T03:40:39.739Z",
+  "version": 1314,
+  "last_updated": "2026-10-20T03:40:42.778Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1863,8 +1863,8 @@
       "title": "Calm Wind",
       "artist": "Peder B. Helland",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T03:40:37.486Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T03:40:42.778Z"
     },
     {
       "id": "318lAsapyPCL1JjGCsCMd8",
