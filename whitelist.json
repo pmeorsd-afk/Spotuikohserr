@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1370,
-  "last_updated": "2026-10-20T18:30:16.350Z",
+  "version": 1371,
+  "last_updated": "2026-10-20T18:30:18.827Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3uidHx3If1PWAOCMcCdkNH",
+      "title": "סהרה",
+      "artist": "Tuna",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:30:18.827Z"
+    },
     {
       "id": "1UqARS50UENashmHmp7gmQ",
       "title": "חלליות",
