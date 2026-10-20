@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1393,
-  "last_updated": "2026-10-20T20:03:55.372Z",
+  "version": 1394,
+  "last_updated": "2026-10-20T20:03:58.822Z",
   "artists": [
     {
       "id": "73aEASgFnEE89ROkaPgs3V",
@@ -10,8 +10,8 @@
         "Hamenagnim"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T20:03:55.372Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T20:03:58.822Z"
     },
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
