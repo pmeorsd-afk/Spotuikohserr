@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1396,
-  "last_updated": "2026-10-20T20:04:21.220Z",
+  "version": 1397,
+  "last_updated": "2026-10-20T20:04:33.896Z",
   "artists": [
+    {
+      "id": "5ObwIX0Stm1BvfjlIk1BGc",
+      "canonical_name": "Shlomo Cohen",
+      "aliases": [
+        "Shlomo Cohen"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T20:04:33.896Z"
+    },
     {
       "id": "7li1QhlnTnbIJzdcNwDA3E",
       "canonical_name": "שלמה כהן",
