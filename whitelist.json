@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1329,
-  "last_updated": "2026-10-20T18:26:50.886Z",
+  "version": 1330,
+  "last_updated": "2026-10-20T18:26:53.755Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "Go",
       "artist": "LE RISQUE",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:26:50.886Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:26:53.755Z"
     },
     {
       "id": "3bB3Mj2IDsVHCyvKqZdulE",
