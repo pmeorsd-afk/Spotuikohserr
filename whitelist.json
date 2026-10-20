@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1328,
-  "last_updated": "2026-10-20T18:26:47.406Z",
+  "version": 1329,
+  "last_updated": "2026-10-20T18:26:50.886Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1lnc5kaalVlVHsBQQTkPR8",
+      "title": "Go",
+      "artist": "LE RISQUE",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:26:50.886Z"
+    },
     {
       "id": "3bB3Mj2IDsVHCyvKqZdulE",
       "title": "ABCGE (feat. BIG30)",
