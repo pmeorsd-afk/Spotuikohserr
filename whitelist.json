@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1406,
-  "last_updated": "2026-10-20T20:07:02.324Z",
+  "version": 1407,
+  "last_updated": "2026-10-20T20:07:18.937Z",
   "artists": [
+    {
+      "id": "6PfE42O41H1K367pr2HkO9",
+      "canonical_name": "Yagel Harush",
+      "aliases": [
+        "Yagel Harush"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T20:07:18.937Z"
+    },
     {
       "id": "4OvOIPNNkKjU56H8W6u1OA",
       "canonical_name": "הרב יגאל כהן",
