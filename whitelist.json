@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1410,
-  "last_updated": "2026-10-20T20:07:33.930Z",
+  "version": 1411,
+  "last_updated": "2026-10-20T20:07:38.509Z",
   "artists": [
+    {
+      "id": "3hyOI3AVqyRy14BkHY49cH",
+      "canonical_name": "יאיר כהן",
+      "aliases": [
+        "יאיר כהן"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T20:07:38.509Z"
+    },
     {
       "id": "2TXctogkiBx1RVfJSTCkqb",
       "canonical_name": "Sinai Tor",
