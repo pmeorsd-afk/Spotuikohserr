@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1356,
-  "last_updated": "2026-10-20T18:29:17.555Z",
+  "version": 1357,
+  "last_updated": "2026-10-20T18:29:20.351Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0vwFh4N0mZrkC1YxOzt9cg",
+      "title": "13",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:29:20.351Z"
+    },
     {
       "id": "07tmh55NQgZsPqkE7nyHq6",
       "title": "12",
