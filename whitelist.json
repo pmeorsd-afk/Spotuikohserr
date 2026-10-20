@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1351,
-  "last_updated": "2026-10-20T18:29:03.793Z",
+  "version": 1352,
+  "last_updated": "2026-10-20T18:29:06.403Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "אביצ'י",
       "artist": "נדב חנציס",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:29:03.793Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:29:06.403Z"
     },
     {
       "id": "6RooMdGNCzckeBJR9FGHR0",
