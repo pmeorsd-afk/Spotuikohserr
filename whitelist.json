@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1377,
-  "last_updated": "2026-10-20T18:30:44.521Z",
+  "version": 1378,
+  "last_updated": "2026-10-20T18:30:47.584Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "עכשיו או לעולם",
       "artist": "Idan Rafael Haviv",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:30:44.521Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:30:47.584Z"
     },
     {
       "id": "2V2JllKfdxFVNzNwPFVa1a",
