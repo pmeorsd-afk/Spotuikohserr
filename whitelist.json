@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1376,
-  "last_updated": "2026-10-20T18:30:34.615Z",
+  "version": 1377,
+  "last_updated": "2026-10-20T18:30:44.521Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1KvOIFIOGKEtbD2SR974fM",
+      "title": "עכשיו או לעולם",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:30:44.521Z"
+    },
     {
       "id": "2V2JllKfdxFVNzNwPFVa1a",
       "title": "הסדקים זה כל היופי",
