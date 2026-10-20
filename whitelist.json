@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1361,
-  "last_updated": "2026-10-20T18:29:32.694Z",
+  "version": 1362,
+  "last_updated": "2026-10-20T18:29:35.421Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "מחרוזת מרכז תל אביב - Live",
       "artist": "Itay Levi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:29:32.694Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:29:35.421Z"
     },
     {
       "id": "75lTaVlluq5Qktycnnwfnm",
