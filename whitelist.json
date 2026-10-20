@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1399,
-  "last_updated": "2026-10-20T20:04:57.988Z",
+  "version": 1400,
+  "last_updated": "2026-10-20T20:05:01.093Z",
   "artists": [
     {
       "id": "3uv8zgalhfYHWrprGkL3WC",
@@ -10,8 +10,8 @@
         "משה חבושה"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T20:04:57.988Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T20:05:01.093Z"
     },
     {
       "id": "5ObwIX0Stm1BvfjlIk1BGc",
