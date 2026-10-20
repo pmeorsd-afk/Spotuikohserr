@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1341,
-  "last_updated": "2026-10-20T18:28:19.347Z",
+  "version": 1342,
+  "last_updated": "2026-10-20T18:28:22.100Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "ביום הכי יפה",
       "artist": "Amir Dadon",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:28:19.347Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:28:22.100Z"
     },
     {
       "id": "7IYAf32MmX7oCqgnGNT3g8",
