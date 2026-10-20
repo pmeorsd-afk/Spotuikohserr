@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1350,
-  "last_updated": "2026-10-20T18:28:55.145Z",
+  "version": 1351,
+  "last_updated": "2026-10-20T18:29:03.793Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4DAwc04XQCOGDDHZ6trCbK",
+      "title": "אביצ'י",
+      "artist": "נדב חנציס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:29:03.793Z"
+    },
     {
       "id": "6RooMdGNCzckeBJR9FGHR0",
       "title": "להיות בשמחה",
