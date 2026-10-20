@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1372,
-  "last_updated": "2026-10-20T18:30:21.734Z",
+  "version": 1373,
+  "last_updated": "2026-10-20T18:30:23.427Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3lnNl7aBopawF1Kh4Zcnl7",
+      "title": "ראוי לאהבה",
+      "artist": "אלקנה מרציאנו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:30:23.427Z"
+    },
     {
       "id": "3uidHx3If1PWAOCMcCdkNH",
       "title": "סהרה",
