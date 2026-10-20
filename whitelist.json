@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1369,
-  "last_updated": "2026-10-20T18:30:12.706Z",
+  "version": 1370,
+  "last_updated": "2026-10-20T18:30:16.350Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "חלליות",
       "artist": "Berry Sakharof",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:30:12.706Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:30:16.350Z"
     },
     {
       "id": "5eiDT9DpFUVMlqGX0YtenT",
