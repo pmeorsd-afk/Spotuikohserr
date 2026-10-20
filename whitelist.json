@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1381,
-  "last_updated": "2026-10-20T18:30:56.182Z",
+  "version": 1382,
+  "last_updated": "2026-10-20T18:30:59.107Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "ממה את מפחדת",
       "artist": "Eyal Golan, בניה ברבי",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:30:56.182Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:30:59.107Z"
     },
     {
       "id": "1KvOIFIOGKEtbD2SR974fM",
