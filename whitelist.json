@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1324,
-  "last_updated": "2026-10-20T03:41:04.772Z",
+  "version": 1325,
+  "last_updated": "2026-10-20T18:26:33.042Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5siT4ZlL0D1eXe5lXI3yvC",
+      "title": "ניגון חזק ואמץ",
+      "artist": "Udi Damari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:26:33.042Z"
+    },
     {
       "id": "1vk8jx8AAnrV3K71DDNyIt",
       "title": "Romantic Morning",
