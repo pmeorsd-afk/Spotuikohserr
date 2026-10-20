@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1400,
-  "last_updated": "2026-10-20T20:05:01.093Z",
+  "version": 1401,
+  "last_updated": "2026-10-20T20:06:08.576Z",
   "artists": [
+    {
+      "id": "0jmIp3CrEa7Ras32kXtYLD",
+      "canonical_name": "דוד שירו",
+      "aliases": [
+        "דוד שירו"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T20:06:08.576Z"
+    },
     {
       "id": "3uv8zgalhfYHWrprGkL3WC",
       "canonical_name": "משה חבושה",
