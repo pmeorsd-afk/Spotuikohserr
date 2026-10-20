@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1368,
-  "last_updated": "2026-10-20T18:30:10.643Z",
+  "version": 1369,
+  "last_updated": "2026-10-20T18:30:12.706Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1UqARS50UENashmHmp7gmQ",
+      "title": "חלליות",
+      "artist": "Berry Sakharof",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:30:12.706Z"
+    },
     {
       "id": "5eiDT9DpFUVMlqGX0YtenT",
       "title": "בצהרי יום",
