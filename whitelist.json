@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1363,
-  "last_updated": "2026-10-20T18:29:42.571Z",
+  "version": 1364,
+  "last_updated": "2026-10-20T18:29:45.321Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "בעולם שלה",
       "artist": "Hatikva 6",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:29:42.571Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:29:45.321Z"
     },
     {
       "id": "6T5AJbtCJ7HtJkYOpt8WmF",
