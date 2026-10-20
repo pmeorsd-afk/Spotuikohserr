@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1345,
-  "last_updated": "2026-10-20T18:28:31.135Z",
+  "version": 1346,
+  "last_updated": "2026-10-20T18:28:34.534Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "אורות כחולים",
       "artist": "Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:28:31.135Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:28:34.534Z"
     },
     {
       "id": "0FQWnGOdQJOFLmQ3LUCbC1",
