@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1311,
-  "last_updated": "2026-10-19T21:13:32.187Z",
+  "version": 1312,
+  "last_updated": "2026-10-20T03:40:37.486Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5JoXMHC7cQlToJJSLAYnxD",
+      "title": "Calm Wind",
+      "artist": "Peder B. Helland",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T03:40:37.486Z"
+    },
     {
       "id": "318lAsapyPCL1JjGCsCMd8",
       "title": "שלום לך",
