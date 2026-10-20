@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1335,
-  "last_updated": "2026-10-20T18:27:37.803Z",
+  "version": 1336,
+  "last_updated": "2026-10-20T18:27:41.099Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "ואן דאם",
       "artist": "אודיה",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:27:37.803Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:27:41.099Z"
     },
     {
       "id": "3lzJhsQJ3EU2iihnLmZGi4",
