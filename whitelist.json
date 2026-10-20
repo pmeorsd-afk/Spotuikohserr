@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1379,
-  "last_updated": "2026-10-20T18:30:50.062Z",
+  "version": 1380,
+  "last_updated": "2026-10-20T18:30:53.567Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -4799,8 +4799,8 @@
       "title": "אבא",
       "artist": "בן צור",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:30:50.062Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:30:53.567Z"
     },
     {
       "id": "",
