@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1348,
-  "last_updated": "2026-10-20T18:28:39.629Z",
+  "version": 1349,
+  "last_updated": "2026-10-20T18:28:52.050Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6RooMdGNCzckeBJR9FGHR0",
+      "title": "להיות בשמחה",
+      "artist": "הרב יגאל כהן, Idan Bakshi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:28:52.050Z"
+    },
     {
       "id": "1UiK8cqdOkUHjUPeWoyadu",
       "title": "הרוח הטובה",
