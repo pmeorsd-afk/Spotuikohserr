@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1403,
-  "last_updated": "2026-10-20T20:06:46.748Z",
+  "version": 1404,
+  "last_updated": "2026-10-20T20:06:49.851Z",
   "artists": [
     {
       "id": "6YmKeftuKZF237pqZnJnTb",
@@ -10,8 +10,8 @@
         "Rammy Shiro"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T20:06:46.748Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T20:06:49.851Z"
     },
     {
       "id": "0jmIp3CrEa7Ras32kXtYLD",
