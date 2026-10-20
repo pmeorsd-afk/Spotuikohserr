@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1316,
-  "last_updated": "2026-10-20T03:40:47.555Z",
+  "version": 1317,
+  "last_updated": "2026-10-20T03:40:50.372Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "Kawaii",
       "artist": "Static & Ben El",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T03:40:47.555Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T03:40:50.372Z"
     },
     {
       "id": "0kbBGodkSvTkiwSFMYgRNE",
