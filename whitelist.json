@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1373,
-  "last_updated": "2026-10-20T18:30:23.427Z",
+  "version": 1374,
+  "last_updated": "2026-10-20T18:30:26.725Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "ראוי לאהבה",
       "artist": "אלקנה מרציאנו",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:30:23.427Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:30:26.725Z"
     },
     {
       "id": "3uidHx3If1PWAOCMcCdkNH",
