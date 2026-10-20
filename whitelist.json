@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1397,
-  "last_updated": "2026-10-20T20:04:33.896Z",
+  "version": 1398,
+  "last_updated": "2026-10-20T20:04:36.549Z",
   "artists": [
     {
       "id": "5ObwIX0Stm1BvfjlIk1BGc",
@@ -10,8 +10,8 @@
         "Shlomo Cohen"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T20:04:33.896Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T20:04:36.549Z"
     },
     {
       "id": "7li1QhlnTnbIJzdcNwDA3E",
