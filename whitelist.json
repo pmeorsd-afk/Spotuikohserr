@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1346,
-  "last_updated": "2026-10-20T18:28:34.534Z",
+  "version": 1347,
+  "last_updated": "2026-10-20T18:28:37.061Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1UiK8cqdOkUHjUPeWoyadu",
+      "title": "הרוח הטובה",
+      "artist": "Amir Dadon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:28:37.061Z"
+    },
     {
       "id": "6jG3OmapjEN38Q1UCA6CJI",
       "title": "אורות כחולים",
