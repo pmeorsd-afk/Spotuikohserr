@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1343,
-  "last_updated": "2026-10-20T18:28:25.404Z",
+  "version": 1344,
+  "last_updated": "2026-10-20T18:28:27.751Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "אני את ואלוהים",
       "artist": "Eyal Golan, Eden Hason",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:28:25.404Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:28:27.751Z"
     },
     {
       "id": "2J2ODtdQJrJ2DJPW1eECFG",
