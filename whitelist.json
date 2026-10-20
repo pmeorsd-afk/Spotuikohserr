@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1366,
-  "last_updated": "2026-10-20T18:30:05.041Z",
+  "version": 1367,
+  "last_updated": "2026-10-20T18:30:07.375Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5eiDT9DpFUVMlqGX0YtenT",
+      "title": "בצהרי יום",
+      "artist": "David Broza, Meir Ariel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:30:07.375Z"
+    },
     {
       "id": "3D7Cd9b5t4UMogXcmD3FUX",
       "title": "מתוק כשמרלי",
