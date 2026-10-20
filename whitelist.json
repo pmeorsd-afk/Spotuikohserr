@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1327,
-  "last_updated": "2026-10-20T18:26:44.355Z",
+  "version": 1328,
+  "last_updated": "2026-10-20T18:26:47.406Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "ABCGE (feat. BIG30)",
       "artist": "Pooh Shiesty, BIG30",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:26:44.355Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:26:47.406Z"
     },
     {
       "id": "5siT4ZlL0D1eXe5lXI3yvC",
