@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1332,
-  "last_updated": "2026-10-20T18:27:07.491Z",
+  "version": 1333,
+  "last_updated": "2026-10-20T18:27:20.910Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3lzJhsQJ3EU2iihnLmZGi4",
+      "title": "סיבוב עם בחור",
+      "artist": "Balishag, וואן דאן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:27:20.910Z"
+    },
     {
       "id": "5XeaHtNG290C0jjv8jKNvK",
       "title": "באקסית",
