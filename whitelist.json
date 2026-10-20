@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1392,
-  "last_updated": "2026-10-20T19:37:19.339Z",
+  "version": 1393,
+  "last_updated": "2026-10-20T20:03:55.372Z",
   "artists": [
+    {
+      "id": "73aEASgFnEE89ROkaPgs3V",
+      "canonical_name": "Hamenagnim",
+      "aliases": [
+        "Hamenagnim"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T20:03:55.372Z"
+    },
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
       "canonical_name": "Gad Elbaz",
