@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1339,
-  "last_updated": "2026-10-20T18:27:48.457Z",
+  "version": 1340,
+  "last_updated": "2026-10-20T18:27:51.511Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "כולם גנבים",
       "artist": "Osher Cohen",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:27:48.457Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:27:51.511Z"
     },
     {
       "id": "3sEFwx7G4fvdPBJYhMSVd3",
