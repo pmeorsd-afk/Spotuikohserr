@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1409,
-  "last_updated": "2026-10-20T20:07:30.919Z",
+  "version": 1410,
+  "last_updated": "2026-10-20T20:07:33.930Z",
   "artists": [
     {
       "id": "2TXctogkiBx1RVfJSTCkqb",
@@ -10,8 +10,8 @@
         "Sinai Tor"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T20:07:30.919Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T20:07:33.930Z"
     },
     {
       "id": "6PfE42O41H1K367pr2HkO9",
