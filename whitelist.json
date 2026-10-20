@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1359,
-  "last_updated": "2026-10-20T18:29:26.103Z",
+  "version": 1360,
+  "last_updated": "2026-10-20T18:29:28.765Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "מאוהב בגשם",
       "artist": "Itay Levi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:29:26.103Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:29:28.765Z"
     },
     {
       "id": "0vwFh4N0mZrkC1YxOzt9cg",
