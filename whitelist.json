@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1362,
-  "last_updated": "2026-10-20T18:29:35.421Z",
+  "version": 1363,
+  "last_updated": "2026-10-20T18:29:42.571Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "64iK1QSmwsRfwOWI0sKPRP",
+      "title": "בעולם שלה",
+      "artist": "Hatikva 6",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:29:42.571Z"
+    },
     {
       "id": "6T5AJbtCJ7HtJkYOpt8WmF",
       "title": "מחרוזת מרכז תל אביב - Live",
