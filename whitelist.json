@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1404,
-  "last_updated": "2026-10-20T20:06:49.851Z",
+  "version": 1405,
+  "last_updated": "2026-10-20T20:06:59.134Z",
   "artists": [
+    {
+      "id": "4OvOIPNNkKjU56H8W6u1OA",
+      "canonical_name": "הרב יגאל כהן",
+      "aliases": [
+        "הרב יגאל כהן"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T20:06:59.134Z"
+    },
     {
       "id": "6YmKeftuKZF237pqZnJnTb",
       "canonical_name": "Rammy Shiro",
