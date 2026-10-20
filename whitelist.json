@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1365,
-  "last_updated": "2026-10-20T18:30:01.852Z",
+  "version": 1366,
+  "last_updated": "2026-10-20T18:30:05.041Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "מתוק כשמרלי",
       "artist": "Eliad",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:30:01.852Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:30:05.041Z"
     },
     {
       "id": "64iK1QSmwsRfwOWI0sKPRP",
