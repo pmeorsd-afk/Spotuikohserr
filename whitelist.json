@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1371,
-  "last_updated": "2026-10-20T18:30:18.827Z",
+  "version": 1372,
+  "last_updated": "2026-10-20T18:30:21.734Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "סהרה",
       "artist": "Tuna",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:30:18.827Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:30:21.734Z"
     },
     {
       "id": "1UqARS50UENashmHmp7gmQ",
