@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1375,
-  "last_updated": "2026-10-20T18:30:31.799Z",
+  "version": 1376,
+  "last_updated": "2026-10-20T18:30:34.615Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "הסדקים זה כל היופי",
       "artist": "Stav Beger",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:30:31.799Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:30:34.615Z"
     },
     {
       "id": "3lnNl7aBopawF1Kh4Zcnl7",
