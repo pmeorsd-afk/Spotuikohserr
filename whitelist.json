@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1334,
-  "last_updated": "2026-10-20T18:27:24.030Z",
+  "version": 1335,
+  "last_updated": "2026-10-20T18:27:37.803Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3gdSZLWC594njZXkwWh7lQ",
+      "title": "ואן דאם",
+      "artist": "אודיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:27:37.803Z"
+    },
     {
       "id": "3lzJhsQJ3EU2iihnLmZGi4",
       "title": "סיבוב עם בחור",
