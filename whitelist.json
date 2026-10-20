@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1325,
-  "last_updated": "2026-10-20T18:26:33.042Z",
+  "version": 1326,
+  "last_updated": "2026-10-20T18:26:36.424Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "ניגון חזק ואמץ",
       "artist": "Udi Damari",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:26:33.042Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:26:36.424Z"
     },
     {
       "id": "1vk8jx8AAnrV3K71DDNyIt",
