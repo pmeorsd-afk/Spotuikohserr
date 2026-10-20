@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1411,
-  "last_updated": "2026-10-20T20:07:38.509Z",
+  "version": 1412,
+  "last_updated": "2026-10-20T20:07:41.476Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -10,8 +10,8 @@
         "יאיר כהן"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T20:07:38.509Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T20:07:41.476Z"
     },
     {
       "id": "2TXctogkiBx1RVfJSTCkqb",
