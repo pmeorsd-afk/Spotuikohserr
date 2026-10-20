@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1394,
-  "last_updated": "2026-10-20T20:03:58.822Z",
+  "version": 1395,
+  "last_updated": "2026-10-20T20:04:18.211Z",
   "artists": [
+    {
+      "id": "7li1QhlnTnbIJzdcNwDA3E",
+      "canonical_name": "שלמה כהן",
+      "aliases": [
+        "שלמה כהן"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T20:04:18.211Z"
+    },
     {
       "id": "73aEASgFnEE89ROkaPgs3V",
       "canonical_name": "Hamenagnim",
