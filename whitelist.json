@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1401,
-  "last_updated": "2026-10-20T20:06:08.576Z",
+  "version": 1402,
+  "last_updated": "2026-10-20T20:06:11.626Z",
   "artists": [
     {
       "id": "0jmIp3CrEa7Ras32kXtYLD",
@@ -10,8 +10,8 @@
         "דוד שירו"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T20:06:08.576Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T20:06:11.626Z"
     },
     {
       "id": "3uv8zgalhfYHWrprGkL3WC",
