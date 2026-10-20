@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1337,
-  "last_updated": "2026-10-20T18:27:43.153Z",
+  "version": 1338,
+  "last_updated": "2026-10-20T18:27:46.151Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "סטארטר",
       "artist": "Ehud Banai",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T18:27:43.153Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T18:27:46.151Z"
     },
     {
       "id": "3gdSZLWC594njZXkwWh7lQ",
