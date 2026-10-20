@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1378,
-  "last_updated": "2026-10-20T18:30:47.584Z",
+  "version": 1379,
+  "last_updated": "2026-10-20T18:30:50.062Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -4795,12 +4795,12 @@
       "updated_at": "2026-10-02T11:51:49.540Z"
     },
     {
-      "id": "3DTHsQnfuQVESYAYv0fybQ",
+      "id": "6Sx7aS59LUQcsPbCp3zOSx",
       "title": "אבא",
       "artist": "בן צור",
       "status": "approved",
-      "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-02T11:51:32.122Z"
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:30:50.062Z"
     },
     {
       "id": "",
