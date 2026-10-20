@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1360,
-  "last_updated": "2026-10-20T18:29:28.765Z",
+  "version": 1361,
+  "last_updated": "2026-10-20T18:29:32.694Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6T5AJbtCJ7HtJkYOpt8WmF",
+      "title": "מחרוזת מרכז תל אביב - Live",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:29:32.694Z"
+    },
     {
       "id": "75lTaVlluq5Qktycnnwfnm",
       "title": "מאוהב בגשם",
