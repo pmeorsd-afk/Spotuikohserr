@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1340,
-  "last_updated": "2026-10-20T18:27:51.511Z",
+  "version": 1341,
+  "last_updated": "2026-10-20T18:28:19.347Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2J2ODtdQJrJ2DJPW1eECFG",
+      "title": "ביום הכי יפה",
+      "artist": "Amir Dadon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:28:19.347Z"
+    },
     {
       "id": "7IYAf32MmX7oCqgnGNT3g8",
       "title": "כולם גנבים",
