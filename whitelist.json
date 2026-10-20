@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1330,
-  "last_updated": "2026-10-20T18:26:53.755Z",
+  "version": 1331,
+  "last_updated": "2026-10-20T18:26:55.982Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5XeaHtNG290C0jjv8jKNvK",
+      "title": "באקסית",
+      "artist": "פוצ'ו, Balishag",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:26:55.982Z"
+    },
     {
       "id": "1lnc5kaalVlVHsBQQTkPR8",
       "title": "Go",
