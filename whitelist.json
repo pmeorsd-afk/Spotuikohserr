@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1323,
-  "last_updated": "2026-10-20T03:41:02.494Z",
+  "version": 1324,
+  "last_updated": "2026-10-20T03:41:04.772Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1855,8 +1855,8 @@
       "title": "Romantic Morning",
       "artist": "Mayrain",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-20T03:40:59.854Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-20T03:41:04.772Z"
     },
     {
       "id": "40Mwd7iZfUJCb4F5DzrXsU",
