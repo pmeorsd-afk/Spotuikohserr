@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1336,
-  "last_updated": "2026-10-20T18:27:41.099Z",
+  "version": 1337,
+  "last_updated": "2026-10-20T18:27:43.153Z",
   "artists": [
     {
       "id": "54HicbsQOHeibnnFCMtLwl",
@@ -1850,6 +1850,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3sEFwx7G4fvdPBJYhMSVd3",
+      "title": "סטארטר",
+      "artist": "Ehud Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-20T18:27:43.153Z"
+    },
     {
       "id": "3gdSZLWC594njZXkwWh7lQ",
       "title": "ואן דאם",
