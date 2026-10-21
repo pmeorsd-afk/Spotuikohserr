@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1496,
-  "last_updated": "2026-10-21T18:38:43.698Z",
+  "version": 1497,
+  "last_updated": "2026-10-21T18:38:45.836Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "That Cabin Warmth",
       "artist": "R. Guru",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:38:41.496Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:38:45.836Z"
     },
     {
       "id": "2ACz2tjRaxwK2v7Gsmm5X2",
