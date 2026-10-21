@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1419,
-  "last_updated": "2026-10-21T18:33:13.118Z",
+  "version": 1420,
+  "last_updated": "2026-10-21T18:33:16.088Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Lucky Lips",
       "artist": "The Shadows, Cliff Richard",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:33:13.118Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:33:16.088Z"
     },
     {
       "id": "1c3I7NUpM28wG7m0dNmTao",
