@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1414,
-  "last_updated": "2026-10-21T18:31:33.430Z",
+  "version": 1415,
+  "last_updated": "2026-10-21T18:32:21.949Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3gYYZnxrPzQCV40cNK4UqY",
+      "title": "Summer Holiday",
+      "artist": "The Shadows, Cliff Richard",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:32:21.949Z"
+    },
     {
       "id": "4Y8WD0bbvBlSpC7nZ9DSzC",
       "title": "Apache",
