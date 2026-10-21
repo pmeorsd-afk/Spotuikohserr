@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1551,
-  "last_updated": "2026-10-21T18:41:26.721Z",
+  "version": 1552,
+  "last_updated": "2026-10-21T18:41:29.041Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Sleep-Inducing Train Ambience for a Better Night's Rest",
       "artist": "States & Benefits",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:41:24.676Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:41:29.041Z"
     },
     {
       "id": "5567dJ8VPiIiwBw2TG3wkF",
