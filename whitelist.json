@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1544,
-  "last_updated": "2026-10-21T18:41:11.062Z",
+  "version": 1545,
+  "last_updated": "2026-10-21T18:41:13.002Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3kgOZqPw2xurllVbuNxg8E",
+      "title": "נשמה שלי את",
+      "artist": "אבירם עמר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:41:13.002Z"
+    },
     {
       "id": "5fZ2lCLqlnnDzg5y0HxWMH",
       "title": "Slumbering Rail",
