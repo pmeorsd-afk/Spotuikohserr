@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1547,
-  "last_updated": "2026-10-21T18:41:17.912Z",
+  "version": 1548,
+  "last_updated": "2026-10-21T18:41:19.700Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Serenity in Motion: Train Sounds for Relaxation",
       "artist": "Binaural Trains",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:41:15.332Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:41:19.700Z"
     },
     {
       "id": "3kgOZqPw2xurllVbuNxg8E",
