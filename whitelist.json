@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1455,
-  "last_updated": "2026-10-21T18:36:18.032Z",
+  "version": 1456,
+  "last_updated": "2026-10-21T18:36:20.784Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "שובו בנים",
       "artist": "Balishag",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:36:18.032Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:36:20.784Z"
     },
     {
       "id": "3TX7HJMMgU42A07Rzzn7w5",
