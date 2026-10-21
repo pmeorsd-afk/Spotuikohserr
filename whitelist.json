@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1534,
-  "last_updated": "2026-10-21T18:40:37.517Z",
+  "version": 1535,
+  "last_updated": "2026-10-21T18:40:39.344Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7oSj7HLzlJr2wl6W22vezE",
+      "title": "Cabin Sound And Passing Trains",
+      "artist": "Binaural Trains",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:40:39.344Z"
+    },
     {
       "id": "0whix6Fii1KR8GhPJI783c",
       "title": "Spaceship Engine Hum",
