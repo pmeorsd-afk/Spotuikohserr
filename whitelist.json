@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1447,
-  "last_updated": "2026-10-21T18:35:45.407Z",
+  "version": 1448,
+  "last_updated": "2026-10-21T18:35:48.309Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "High Freq. Blue Noise",
       "artist": "Synthetic Architect",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:35:45.407Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:35:48.309Z"
     },
     {
       "id": "1mAlj6zBQIywrgFHNjFMiH",
