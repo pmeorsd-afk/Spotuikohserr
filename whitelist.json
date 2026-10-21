@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1429,
-  "last_updated": "2026-10-21T18:33:52.780Z",
+  "version": 1430,
+  "last_updated": "2026-10-21T18:33:55.930Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Atlantis - 2004 Remaster",
       "artist": "The Shadows",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:33:52.780Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:33:55.930Z"
     },
     {
       "id": "1ZzRuFUIYVIMQmPhZbnpdf",
