@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1531,
-  "last_updated": "2026-10-21T18:40:30.382Z",
+  "version": 1532,
+  "last_updated": "2026-10-21T18:40:33.161Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2qqME0ZRyHJjCkfNWZpnOC",
+      "title": "Wildlife Storm (Nature)",
+      "artist": "Earth Alliance",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:40:33.161Z"
+    },
     {
       "id": "2S8THgm4D9ibaTT1gLWx2F",
       "title": "Satisfying Rain",
