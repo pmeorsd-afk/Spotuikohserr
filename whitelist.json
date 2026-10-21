@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1526,
-  "last_updated": "2026-10-21T18:40:18.227Z",
+  "version": 1527,
+  "last_updated": "2026-10-21T18:40:20.176Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1979,8 +1979,8 @@
       "title": "Relaxing Direct Flight",
       "artist": "Astrofuss",
       "status": "approved",
-      "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-21T18:39:31.004Z"
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:40:20.176Z"
     },
     {
       "id": "1e0gsgIZsJ97No7BJC3253",
