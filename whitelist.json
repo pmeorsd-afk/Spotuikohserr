@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1423,
-  "last_updated": "2026-10-21T18:33:36.887Z",
+  "version": 1424,
+  "last_updated": "2026-10-21T18:33:40.280Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "When the Girl in Your Arms Is the Girl in Your Heart",
       "artist": "The Shadows, Cliff Richard",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:33:36.887Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:33:40.280Z"
     },
     {
       "id": "4BAO1Tf0LjzfgKvKniehFJ",
