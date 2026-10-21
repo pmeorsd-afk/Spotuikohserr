@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1440,
-  "last_updated": "2026-10-21T18:34:44.955Z",
+  "version": 1441,
+  "last_updated": "2026-10-21T18:34:46.973Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1SirUENsOpONVZ7DKCg0VU",
+      "title": "Night Storm",
+      "artist": "Four Winds",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:34:46.973Z"
+    },
     {
       "id": "4MIWH7F44rmKGfMMnNWUHI",
       "title": "City Stormy Night",
