@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1490,
-  "last_updated": "2026-10-21T18:38:30.155Z",
+  "version": 1491,
+  "last_updated": "2026-10-21T18:38:32.154Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0f3RTuR61j5TvPpiKmYspX",
+      "title": "Logcabin Crackle - Seamless",
+      "artist": "Little Log Lady",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:38:32.154Z"
+    },
     {
       "id": "4wIPrFkj9AufvzEJLUIbWz",
       "title": "Sleepy Train Stop",
