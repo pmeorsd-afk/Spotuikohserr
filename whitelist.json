@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1437,
-  "last_updated": "2026-10-21T18:34:32.565Z",
+  "version": 1438,
+  "last_updated": "2026-10-21T18:34:36.549Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Heavy Rain with Thunder and Lightning",
       "artist": "Digiffects Sound Effects Library",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:34:32.565Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:34:36.549Z"
     },
     {
       "id": "0b18g3G5spr4ZCkz7Y6Q0Q",
