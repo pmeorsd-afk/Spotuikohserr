@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1495,
-  "last_updated": "2026-10-21T18:38:41.496Z",
+  "version": 1496,
+  "last_updated": "2026-10-21T18:38:43.698Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1963,8 +1963,8 @@
       "title": "Soothing Ocean Sound",
       "artist": "Astrinity",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:38:39.324Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:38:43.698Z"
     },
     {
       "id": "0f3RTuR61j5TvPpiKmYspX",
