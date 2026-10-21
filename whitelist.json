@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1444,
-  "last_updated": "2026-10-21T18:34:55.691Z",
+  "version": 1445,
+  "last_updated": "2026-10-21T18:34:58.070Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1963,8 +1963,8 @@
       "title": "Wooden Fire",
       "artist": "Ray Karma",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:34:52.483Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:34:58.070Z"
     },
     {
       "id": "1SirUENsOpONVZ7DKCg0VU",
