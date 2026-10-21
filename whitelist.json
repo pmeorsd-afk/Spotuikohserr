@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1417,
-  "last_updated": "2026-10-21T18:32:42.341Z",
+  "version": 1418,
+  "last_updated": "2026-10-21T18:32:44.819Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "The Young Ones - Remastered",
       "artist": "Cliff Richard, The Shadows",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:32:42.341Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:32:44.819Z"
     },
     {
       "id": "3gYYZnxrPzQCV40cNK4UqY",
