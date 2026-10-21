@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1481,
-  "last_updated": "2026-10-21T18:38:10.834Z",
+  "version": 1482,
+  "last_updated": "2026-10-21T18:38:13.156Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "ABG",
       "artist": "Quando Rondo",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:38:08.245Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:38:13.156Z"
     },
     {
       "id": "6LYLYWCFOPO4EnxfV1bBXE",
