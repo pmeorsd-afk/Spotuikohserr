@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1418,
-  "last_updated": "2026-10-21T18:32:44.819Z",
+  "version": 1419,
+  "last_updated": "2026-10-21T18:33:13.118Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ZUWrfAOdIGhLBi8FRz464",
+      "title": "Lucky Lips",
+      "artist": "The Shadows, Cliff Richard",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:33:13.118Z"
+    },
     {
       "id": "1c3I7NUpM28wG7m0dNmTao",
       "title": "The Young Ones - Remastered",
