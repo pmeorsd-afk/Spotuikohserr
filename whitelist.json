@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1412,
-  "last_updated": "2026-10-20T20:07:41.476Z",
+  "version": 1413,
+  "last_updated": "2026-10-21T18:31:30.402Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Y8WD0bbvBlSpC7nZ9DSzC",
+      "title": "Apache",
+      "artist": "The Shadows",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:31:30.402Z"
+    },
     {
       "id": "0vHfUyS3MmAvTbaApCbzo6",
       "title": "ממה את מפחדת",
