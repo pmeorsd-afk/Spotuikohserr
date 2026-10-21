@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1460,
-  "last_updated": "2026-10-21T18:36:30.657Z",
+  "version": 1461,
+  "last_updated": "2026-10-21T18:36:35.208Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2XWjPtKdi5sucFYtVav07d",
+      "title": "365",
+      "artist": "Zedd, Katy Perry",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:36:35.208Z"
+    },
     {
       "id": "4SO0kE6juvk7tuZSfAbPVv",
       "title": "Green Swirling Noise",
