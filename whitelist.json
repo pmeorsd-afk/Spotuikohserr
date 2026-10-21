@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1468,
-  "last_updated": "2026-10-21T18:37:08.386Z",
+  "version": 1469,
+  "last_updated": "2026-10-21T18:37:11.328Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0EE4aAm9uRM9bU8fGCruAK",
+      "title": "Blazer",
+      "artist": "Little Log Lady",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:37:11.328Z"
+    },
     {
       "id": "6IhCVL0RABB6TasrKYaWuV",
       "title": "Sleepy Train Noise",
