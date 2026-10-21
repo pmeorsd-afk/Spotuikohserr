@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1542,
-  "last_updated": "2026-10-21T18:41:06.269Z",
+  "version": 1543,
+  "last_updated": "2026-10-21T18:41:08.462Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5fZ2lCLqlnnDzg5y0HxWMH",
+      "title": "Slumbering Rail",
+      "artist": "Treyn",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:41:08.462Z"
+    },
     {
       "id": "0SmY5bTuls1ccput6QhHSA",
       "title": "אני אוהב, אני מכור, אני שרוף",
