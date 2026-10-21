@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1500,
-  "last_updated": "2026-10-21T18:38:58.721Z",
+  "version": 1501,
+  "last_updated": "2026-10-21T18:39:00.045Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5tEYaSl3lripQLNVh6al9O",
+      "title": "Heated Room",
+      "artist": "Lumière",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:39:00.045Z"
+    },
     {
       "id": "5T24Zh9FPZ7Ku6NjrJZmcn",
       "title": "Days I Will Remember",
