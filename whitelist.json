@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1550,
-  "last_updated": "2026-10-21T18:41:24.676Z",
+  "version": 1551,
+  "last_updated": "2026-10-21T18:41:26.721Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1963,8 +1963,8 @@
       "title": "On The Railway",
       "artist": "Brooke St.",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:41:22.044Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:41:26.721Z"
     },
     {
       "id": "4UdenL9l3JD5wdFA31tjV4",
