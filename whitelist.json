@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1568,
-  "last_updated": "2026-10-21T19:02:22.972Z",
+  "version": 1569,
+  "last_updated": "2026-10-21T20:38:32.349Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6cdR11YGGyunUm15qZAM5X",
+      "title": "נחלת בנימין",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T20:38:32.349Z"
+    },
     {
       "id": "2ZUjc8sFg1NTpE5nesp5ml",
       "title": "Sleep-Inducing Train Ambience for a Better Night's Rest",
