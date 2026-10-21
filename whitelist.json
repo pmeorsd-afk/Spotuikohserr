@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1521,
-  "last_updated": "2026-10-21T18:40:06.005Z",
+  "version": 1522,
+  "last_updated": "2026-10-21T18:40:08.460Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -2011,8 +2011,8 @@
       "title": "Llamas Pesadas",
       "artist": "The Extinguished",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:40:02.830Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:40:08.460Z"
     },
     {
       "id": "1xdKt1OT75Uqp4cxwTsxtZ",
