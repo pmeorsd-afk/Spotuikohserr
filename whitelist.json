@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1471,
-  "last_updated": "2026-10-21T18:37:17.775Z",
+  "version": 1472,
+  "last_updated": "2026-10-21T18:37:20.642Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Renegade",
       "artist": "Aaryan Shah",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:37:17.775Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:37:20.642Z"
     },
     {
       "id": "0EE4aAm9uRM9bU8fGCruAK",
