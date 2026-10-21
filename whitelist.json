@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1442,
-  "last_updated": "2026-10-21T18:34:49.945Z",
+  "version": 1443,
+  "last_updated": "2026-10-21T18:34:52.483Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1agzAN03kBYjwhA4pDIG9o",
+      "title": "Wooden Fire",
+      "artist": "Ray Karma",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:34:52.483Z"
+    },
     {
       "id": "1SirUENsOpONVZ7DKCg0VU",
       "title": "Night Storm",
