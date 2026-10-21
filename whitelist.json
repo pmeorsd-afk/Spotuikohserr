@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1475,
-  "last_updated": "2026-10-21T18:37:55.280Z",
+  "version": 1476,
+  "last_updated": "2026-10-21T18:37:58.074Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Fall Asleep Cart Noise",
       "artist": "The Railwayers",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:37:55.280Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:37:58.074Z"
     },
     {
       "id": "4SQasIuw7XpUZoznJtOMce",
