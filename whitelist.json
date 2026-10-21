@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1532,
-  "last_updated": "2026-10-21T18:40:33.161Z",
+  "version": 1533,
+  "last_updated": "2026-10-21T18:40:35.641Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1963,8 +1963,8 @@
       "title": "Satisfying Rain",
       "artist": "WeatherBug",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:40:30.382Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:40:35.641Z"
     },
     {
       "id": "0FC1tacGtMA1ri9sbS0lLG",
