@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1459,
-  "last_updated": "2026-10-21T18:36:27.564Z",
+  "version": 1460,
+  "last_updated": "2026-10-21T18:36:30.657Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Green Swirling Noise",
       "artist": "No!zez",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:36:27.564Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:36:30.657Z"
     },
     {
       "id": "1kP7Cx3keqaQwwJJlJKsL5",
