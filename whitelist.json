@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1535,
-  "last_updated": "2026-10-21T18:40:39.344Z",
+  "version": 1536,
+  "last_updated": "2026-10-21T18:40:41.432Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1963,8 +1963,8 @@
       "title": "Spaceship Engine Hum",
       "artist": "Mystical Soundscapes",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:40:37.517Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:40:41.432Z"
     },
     {
       "id": "2qqME0ZRyHJjCkfNWZpnOC",
