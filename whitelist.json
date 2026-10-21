@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1528,
-  "last_updated": "2026-10-21T18:40:22.516Z",
+  "version": 1529,
+  "last_updated": "2026-10-21T18:40:25.306Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1963,8 +1963,8 @@
       "title": "שביל האושר",
       "artist": "Tamir Gal",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:40:22.516Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:40:25.306Z"
     },
     {
       "id": "75LcH81GTi2s6QDM4PdCZ0",
