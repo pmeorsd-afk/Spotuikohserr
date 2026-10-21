@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1546,
-  "last_updated": "2026-10-21T18:41:15.332Z",
+  "version": 1547,
+  "last_updated": "2026-10-21T18:41:17.912Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1963,8 +1963,8 @@
       "title": "נשמה שלי את",
       "artist": "אבירם עמר",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:41:13.002Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:41:17.912Z"
     },
     {
       "id": "5fZ2lCLqlnnDzg5y0HxWMH",
