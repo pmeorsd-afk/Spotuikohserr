@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1508,
-  "last_updated": "2026-10-21T18:39:15.171Z",
+  "version": 1509,
+  "last_updated": "2026-10-21T18:39:17.546Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Healing Rain",
       "artist": "R. Guru",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:39:12.471Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:39:17.546Z"
     },
     {
       "id": "11KYxP2CcZ7ILRQAspD1jC",
