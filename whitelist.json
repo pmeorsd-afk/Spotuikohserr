@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1416,
-  "last_updated": "2026-10-21T18:32:25.067Z",
+  "version": 1417,
+  "last_updated": "2026-10-21T18:32:42.341Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1c3I7NUpM28wG7m0dNmTao",
+      "title": "The Young Ones - Remastered",
+      "artist": "Cliff Richard, The Shadows",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:32:42.341Z"
+    },
     {
       "id": "3gYYZnxrPzQCV40cNK4UqY",
       "title": "Summer Holiday",
