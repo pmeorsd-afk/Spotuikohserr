@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1491,
-  "last_updated": "2026-10-21T18:38:32.154Z",
+  "version": 1492,
+  "last_updated": "2026-10-21T18:38:34.948Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1963,8 +1963,8 @@
       "title": "Sleepy Train Stop",
       "artist": "Cargo Punk",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:38:30.155Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:38:34.948Z"
     },
     {
       "id": "2JFcPJUkdlGO5rUrFi4C7n",
