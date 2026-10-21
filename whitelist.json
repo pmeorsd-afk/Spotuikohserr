@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1479,
-  "last_updated": "2026-10-21T18:38:05.469Z",
+  "version": 1480,
+  "last_updated": "2026-10-21T18:38:08.245Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1mHLxIGKfmWBdH1bZzO7pW",
+      "title": "ABG",
+      "artist": "Quando Rondo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:38:08.245Z"
+    },
     {
       "id": "6LYLYWCFOPO4EnxfV1bBXE",
       "title": "Backyard Trees in Storm",
