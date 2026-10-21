@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1422,
-  "last_updated": "2026-10-21T18:33:23.685Z",
+  "version": 1423,
+  "last_updated": "2026-10-21T18:33:36.887Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5lAtQQgbwwoGCcHsDY8zjv",
+      "title": "When the Girl in Your Arms Is the Girl in Your Heart",
+      "artist": "The Shadows, Cliff Richard",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:33:36.887Z"
+    },
     {
       "id": "4BAO1Tf0LjzfgKvKniehFJ",
       "title": "Wonderful Land",
