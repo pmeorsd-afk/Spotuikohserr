@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1441,
-  "last_updated": "2026-10-21T18:34:46.973Z",
+  "version": 1442,
+  "last_updated": "2026-10-21T18:34:49.945Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Night Storm",
       "artist": "Four Winds",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:34:46.973Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:34:49.945Z"
     },
     {
       "id": "4MIWH7F44rmKGfMMnNWUHI",
