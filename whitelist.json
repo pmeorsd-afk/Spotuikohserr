@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1486,
-  "last_updated": "2026-10-21T18:38:23.097Z",
+  "version": 1487,
+  "last_updated": "2026-10-21T18:38:25.150Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4eDg7YaUApc1andUr3Elm0",
+      "title": "Commuter's Nap",
+      "artist": "Freight Going Nowhere",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:38:25.150Z"
+    },
     {
       "id": "1Y8kjg4m3dRilNg7QXKhlA",
       "title": "Box Fan ASMR",
