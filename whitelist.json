@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1569,
-  "last_updated": "2026-10-21T20:38:32.349Z",
+  "version": 1570,
+  "last_updated": "2026-10-21T20:38:35.949Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "נחלת בנימין",
       "artist": "Itay Levi",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T20:38:32.349Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T20:38:35.949Z"
     },
     {
       "id": "2ZUjc8sFg1NTpE5nesp5ml",
