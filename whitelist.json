@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1515,
-  "last_updated": "2026-10-21T18:39:31.004Z",
+  "version": 1516,
+  "last_updated": "2026-10-21T18:39:33.175Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "75LcH81GTi2s6QDM4PdCZ0",
+      "title": "Jungle Showers",
+      "artist": "Akvavit",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:39:33.175Z"
+    },
     {
       "id": "6W4ELYUvjy58NmiaUUB3SN",
       "title": "Relaxing Direct Flight",
