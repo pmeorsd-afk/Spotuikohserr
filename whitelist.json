@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1501,
-  "last_updated": "2026-10-21T18:39:00.045Z",
+  "version": 1502,
+  "last_updated": "2026-10-21T18:39:02.141Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1963,8 +1963,8 @@
       "title": "Days I Will Remember",
       "artist": "Tyrone Wells",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:38:58.721Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:39:02.141Z"
     },
     {
       "id": "28KswoQztifTUjKJxujGWV",
