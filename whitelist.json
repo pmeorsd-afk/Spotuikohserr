@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1524,
-  "last_updated": "2026-10-21T18:40:13.635Z",
+  "version": 1525,
+  "last_updated": "2026-10-21T18:40:15.610Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1996,7 +1996,7 @@
       "artist": "Dance Of Centuries",
       "status": "approved",
       "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:39:23.460Z"
+      "updated_at": "2026-10-21T18:40:15.610Z"
     },
     {
       "id": "7CBoa5w1UD3Ox4bbrOn6aX",
