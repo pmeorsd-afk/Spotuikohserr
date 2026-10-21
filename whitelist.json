@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1477,
-  "last_updated": "2026-10-21T18:38:00.441Z",
+  "version": 1478,
+  "last_updated": "2026-10-21T18:38:03.421Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Nature Sounds & Brown Noise",
       "artist": "Julia Sono",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:38:00.441Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:38:03.421Z"
     },
     {
       "id": "69HPeOUxRupzMaZbxuHwtA",
