@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1445,
-  "last_updated": "2026-10-21T18:34:58.070Z",
+  "version": 1446,
+  "last_updated": "2026-10-21T18:35:00.629Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Cars and Trucks on a Wet Road",
       "artist": "Sweet Fret",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:34:55.691Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:35:00.629Z"
     },
     {
       "id": "1agzAN03kBYjwhA4pDIG9o",
