@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1430,
-  "last_updated": "2026-10-21T18:33:55.930Z",
+  "version": 1431,
+  "last_updated": "2026-10-21T18:33:57.981Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7b78YGRRO6TUKBXq2Ynb8i",
+      "title": "F.B.I.",
+      "artist": "The Shadows",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:33:57.981Z"
+    },
     {
       "id": "3uG1vKmbGs0AEY54R1bd35",
       "title": "Atlantis - 2004 Remaster",
