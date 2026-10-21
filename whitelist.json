@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1465,
-  "last_updated": "2026-10-21T18:37:00.132Z",
+  "version": 1466,
+  "last_updated": "2026-10-21T18:37:03.524Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Tokyo-Rain",
       "artist": "Noise Geek",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:37:00.132Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:37:03.524Z"
     },
     {
       "id": "2XWjPtKdi5sucFYtVav07d",
