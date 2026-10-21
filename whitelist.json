@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1427,
-  "last_updated": "2026-10-21T18:33:47.447Z",
+  "version": 1428,
+  "last_updated": "2026-10-21T18:33:50.599Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "The Theme from \"The Deer Hunter\" (Cavatina)",
       "artist": "The Shadows",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:33:47.447Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:33:50.599Z"
     },
     {
       "id": "02cdsKdpub4eVO2Mag6rND",
