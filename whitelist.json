@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1502,
-  "last_updated": "2026-10-21T18:39:02.141Z",
+  "version": 1503,
+  "last_updated": "2026-10-21T18:39:04.686Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Heated Room",
       "artist": "Lumière",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:39:00.045Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:39:04.686Z"
     },
     {
       "id": "5T24Zh9FPZ7Ku6NjrJZmcn",
