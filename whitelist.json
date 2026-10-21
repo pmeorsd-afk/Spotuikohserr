@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1566,
-  "last_updated": "2026-10-21T19:01:52.073Z",
+  "version": 1567,
+  "last_updated": "2026-10-21T19:02:16.897Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -6516,6 +6516,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-10-21T19:01:52.073Z"
+    },
+    {
+      "id": "7aaa7a02099e45796556a8a8e9a8f2d6e74d6ec1316494e0",
+      "url": "https://i1.sndcdn.com/artworks-412FhHnOd5yUabO6-b3srZA-t3000x3000.png",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-10-21T19:02:16.897Z"
     }
   ],
   "search_images": [
