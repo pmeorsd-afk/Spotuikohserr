@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1424,
-  "last_updated": "2026-10-21T18:33:40.280Z",
+  "version": 1425,
+  "last_updated": "2026-10-21T18:33:41.688Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "02cdsKdpub4eVO2Mag6rND",
+      "title": "Sleepwalk",
+      "artist": "The Shadows",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:33:41.688Z"
+    },
     {
       "id": "5lAtQQgbwwoGCcHsDY8zjv",
       "title": "When the Girl in Your Arms Is the Girl in Your Heart",
