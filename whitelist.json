@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1452,
-  "last_updated": "2026-10-21T18:35:59.772Z",
+  "version": 1453,
+  "last_updated": "2026-10-21T18:36:02.605Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3TX7HJMMgU42A07Rzzn7w5",
+      "title": "Crackling Fire Sounds for Sleep and Relaxation",
+      "artist": "Doug Kilgore",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:36:02.605Z"
+    },
     {
       "id": "7qt6wADnCvEwxVvCae6HSi",
       "title": "Harmonious Thunder",
