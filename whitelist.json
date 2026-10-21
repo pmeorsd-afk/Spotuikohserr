@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1415,
-  "last_updated": "2026-10-21T18:32:21.949Z",
+  "version": 1416,
+  "last_updated": "2026-10-21T18:32:25.067Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Summer Holiday",
       "artist": "The Shadows, Cliff Richard",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:32:21.949Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:32:25.067Z"
     },
     {
       "id": "4Y8WD0bbvBlSpC7nZ9DSzC",
