@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1428,
-  "last_updated": "2026-10-21T18:33:50.599Z",
+  "version": 1429,
+  "last_updated": "2026-10-21T18:33:52.780Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3uG1vKmbGs0AEY54R1bd35",
+      "title": "Atlantis - 2004 Remaster",
+      "artist": "The Shadows",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:33:52.780Z"
+    },
     {
       "id": "1ZzRuFUIYVIMQmPhZbnpdf",
       "title": "The Theme from \"The Deer Hunter\" (Cavatina)",
