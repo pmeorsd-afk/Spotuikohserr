@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1504,
-  "last_updated": "2026-10-21T18:39:06.738Z",
+  "version": 1505,
+  "last_updated": "2026-10-21T18:39:08.365Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "11KYxP2CcZ7ILRQAspD1jC",
+      "title": "Llamas Pesadas",
+      "artist": "The Extinguished",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:39:08.365Z"
+    },
     {
       "id": "1xdKt1OT75Uqp4cxwTsxtZ",
       "title": "Green Noise Bourne",
