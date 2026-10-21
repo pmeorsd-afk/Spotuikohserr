@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1435,
-  "last_updated": "2026-10-21T18:34:08.764Z",
+  "version": 1436,
+  "last_updated": "2026-10-21T18:34:11.892Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Rasputin",
       "artist": "Majestic, Boney M.",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:34:08.764Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:34:11.892Z"
     },
     {
       "id": "4f2Exnbvsd6ayKXnso6eUd",
