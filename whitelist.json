@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1439,
-  "last_updated": "2026-10-21T18:34:42.083Z",
+  "version": 1440,
+  "last_updated": "2026-10-21T18:34:44.955Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "City Stormy Night",
       "artist": "Biologique",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:34:42.083Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:34:44.955Z"
     },
     {
       "id": "1OG8IcfNonw90joJ1zJ0Op",
