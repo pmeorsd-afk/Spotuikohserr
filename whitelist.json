@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1567,
-  "last_updated": "2026-10-21T19:02:16.897Z",
+  "version": 1568,
+  "last_updated": "2026-10-21T19:02:22.972Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -6523,6 +6523,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-10-21T19:02:16.897Z"
+    },
+    {
+      "id": "267152acc8a2bedc7ce75ff4c9f61f3071803d9974dca6af",
+      "url": "https://www.omnycontent.com/d/programs/178d72a7-a889-4132-8008-a5cc014ed109/58f80809-a292-4e6a-96ad-b23a00df678e/image.jpg?t=1754475991&size=Large",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-10-21T19:02:22.972Z"
     }
   ],
   "search_images": [
