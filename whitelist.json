@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1512,
-  "last_updated": "2026-10-21T18:39:23.460Z",
+  "version": 1513,
+  "last_updated": "2026-10-21T18:39:26.225Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1e0gsgIZsJ97No7BJC3253",
+      "title": "כואב אחי",
+      "artist": "Doron Miran, Notis, Moshik Afia",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:39:26.225Z"
+    },
     {
       "id": "5yKIj4RhWVzGyZMx4a7snt",
       "title": "Green Noise Flowstate",
