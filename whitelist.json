@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1517,
-  "last_updated": "2026-10-21T18:39:35.430Z",
+  "version": 1518,
+  "last_updated": "2026-10-21T18:39:37.850Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1963,8 +1963,8 @@
       "title": "Jungle Showers",
       "artist": "Akvavit",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:39:33.175Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:39:37.850Z"
     },
     {
       "id": "6W4ELYUvjy58NmiaUUB3SN",
