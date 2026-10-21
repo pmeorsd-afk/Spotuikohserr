@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1473,
-  "last_updated": "2026-10-21T18:37:49.426Z",
+  "version": 1474,
+  "last_updated": "2026-10-21T18:37:52.539Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Indian Ocean Waves (at East Beach in Durban, South Africa)",
       "artist": "National Geographic",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:37:49.426Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:37:52.539Z"
     },
     {
       "id": "4n8cj1HW9hTL1AU5Hagq6K",
