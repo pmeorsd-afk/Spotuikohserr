@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1494,
-  "last_updated": "2026-10-21T18:38:39.324Z",
+  "version": 1495,
+  "last_updated": "2026-10-21T18:38:41.496Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7lXDI557voKM71ZPnIuy2Q",
+      "title": "That Cabin Warmth",
+      "artist": "R. Guru",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:38:41.496Z"
+    },
     {
       "id": "2ACz2tjRaxwK2v7Gsmm5X2",
       "title": "Soothing Ocean Sound",
