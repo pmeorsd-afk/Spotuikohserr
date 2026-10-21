@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1543,
-  "last_updated": "2026-10-21T18:41:08.462Z",
+  "version": 1544,
+  "last_updated": "2026-10-21T18:41:11.062Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Slumbering Rail",
       "artist": "Treyn",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:41:08.462Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:41:11.062Z"
     },
     {
       "id": "0SmY5bTuls1ccput6QhHSA",
