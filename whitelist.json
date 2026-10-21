@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1536,
-  "last_updated": "2026-10-21T18:40:41.432Z",
+  "version": 1537,
+  "last_updated": "2026-10-21T18:40:43.792Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Cabin Sound And Passing Trains",
       "artist": "Binaural Trains",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:40:39.344Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:40:43.792Z"
     },
     {
       "id": "0whix6Fii1KR8GhPJI783c",
