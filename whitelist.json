@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1443,
-  "last_updated": "2026-10-21T18:34:52.483Z",
+  "version": 1444,
+  "last_updated": "2026-10-21T18:34:55.691Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1mAlj6zBQIywrgFHNjFMiH",
+      "title": "Cars and Trucks on a Wet Road",
+      "artist": "Sweet Fret",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:34:55.691Z"
+    },
     {
       "id": "1agzAN03kBYjwhA4pDIG9o",
       "title": "Wooden Fire",
