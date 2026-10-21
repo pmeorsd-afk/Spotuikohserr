@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1489,
-  "last_updated": "2026-10-21T18:38:28.106Z",
+  "version": 1490,
+  "last_updated": "2026-10-21T18:38:30.155Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4wIPrFkj9AufvzEJLUIbWz",
+      "title": "Sleepy Train Stop",
+      "artist": "Cargo Punk",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:38:30.155Z"
+    },
     {
       "id": "2JFcPJUkdlGO5rUrFi4C7n",
       "title": "Approaching Thunder and Gentle Rain for Restful Sleep and Wellness",
