@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1487,
-  "last_updated": "2026-10-21T18:38:25.150Z",
+  "version": 1488,
+  "last_updated": "2026-10-21T18:38:26.639Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2JFcPJUkdlGO5rUrFi4C7n",
+      "title": "Approaching Thunder and Gentle Rain for Restful Sleep and Wellness",
+      "artist": "Dragon Power",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:38:26.639Z"
+    },
     {
       "id": "4eDg7YaUApc1andUr3Elm0",
       "title": "Commuter's Nap",
