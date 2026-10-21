@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1413,
-  "last_updated": "2026-10-21T18:31:30.402Z",
+  "version": 1414,
+  "last_updated": "2026-10-21T18:31:33.430Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Apache",
       "artist": "The Shadows",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:31:30.402Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:31:33.430Z"
     },
     {
       "id": "0vHfUyS3MmAvTbaApCbzo6",
