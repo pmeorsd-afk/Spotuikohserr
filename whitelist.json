@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1449,
-  "last_updated": "2026-10-21T18:35:50.808Z",
+  "version": 1450,
+  "last_updated": "2026-10-21T18:35:54.183Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Repetitive Train Tracks",
       "artist": "Railway Recorders",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-21T18:35:50.808Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-21T18:35:54.183Z"
     },
     {
       "id": "5ocznPFkaJcIdZahTgTokZ",
