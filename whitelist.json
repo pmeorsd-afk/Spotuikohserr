@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1476,
-  "last_updated": "2026-10-21T18:37:58.074Z",
+  "version": 1477,
+  "last_updated": "2026-10-21T18:38:00.441Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3GwbuVbMiLLKV06b1MMwip",
+      "title": "Nature Sounds & Brown Noise",
+      "artist": "Julia Sono",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:38:00.441Z"
+    },
     {
       "id": "69HPeOUxRupzMaZbxuHwtA",
       "title": "Fall Asleep Cart Noise",
