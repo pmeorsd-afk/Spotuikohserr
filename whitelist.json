@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1462,
-  "last_updated": "2026-10-21T18:36:38.172Z",
+  "version": 1463,
+  "last_updated": "2026-10-21T18:36:48.218Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "365",
       "artist": "Zedd, Katy Perry",
       "status": "approved",
-      "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-21T18:36:38.172Z"
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:36:48.218Z"
     },
     {
       "id": "4SO0kE6juvk7tuZSfAbPVv",
