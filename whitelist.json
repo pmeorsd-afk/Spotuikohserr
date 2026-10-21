@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1523,
-  "last_updated": "2026-10-21T18:40:10.868Z",
+  "version": 1524,
+  "last_updated": "2026-10-21T18:40:13.635Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -2003,8 +2003,8 @@
       "title": "Endless Healing Waves",
       "artist": "Scallope",
       "status": "approved",
-      "notes": "approved via SpotUI Admin",
-      "updated_at": "2026-10-21T18:39:21.640Z"
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-21T18:40:13.635Z"
     },
     {
       "id": "3MeV1PeFOCjgwXOnADJtE5",
