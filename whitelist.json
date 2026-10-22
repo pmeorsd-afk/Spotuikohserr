@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1572,
-  "last_updated": "2026-10-22T18:04:52.014Z",
+  "version": 1573,
+  "last_updated": "2026-10-22T18:04:55.058Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3oTuTpF1F3A7rEC6RKsMRz",
+      "title": "Raindance (feat. Tems)",
+      "artist": "Dave, Tems",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:04:55.058Z"
+    },
     {
       "id": "7AfWkhoN7gijL1EalwoBf7",
       "title": "הרע זה לא אני",
