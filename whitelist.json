@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1641,
-  "last_updated": "2026-10-22T18:11:14.130Z",
+  "version": 1642,
+  "last_updated": "2026-10-22T18:11:17.190Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6V7g6qM8wheMivMWrzbPTM",
+      "title": "Leave Me Alone",
+      "artist": "Flipp Dinero",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:11:17.190Z"
+    },
     {
       "id": "2z3Jj5GNuSSd0l5X7LkFLO",
       "title": "גלקסיה",
