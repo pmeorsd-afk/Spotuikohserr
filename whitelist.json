@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1607,
-  "last_updated": "2026-10-22T18:07:45.489Z",
+  "version": 1608,
+  "last_updated": "2026-10-22T18:07:48.701Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2gclBmNGjQR9f2RXmlZFQ7",
+      "title": "פרצופים + כשאת הולכת + אז הלכתי + טמפרטורה - Live",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:07:48.701Z"
+    },
     {
       "id": "4lBl6TVdZKF7KyLVw68JfP",
       "title": "שממה",
