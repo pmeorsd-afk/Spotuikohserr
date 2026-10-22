@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1651,
-  "last_updated": "2026-10-22T18:11:56.982Z",
+  "version": 1652,
+  "last_updated": "2026-10-22T19:29:58.003Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3oxaubAqZCO1hBKGuHv70J",
+      "title": "ריקוד רומנטי",
+      "artist": "ישי לוי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T19:29:58.003Z"
+    },
     {
       "id": "7362lWsAM9fv1ZF3tjNG1K",
       "title": "אני מסתובב",
