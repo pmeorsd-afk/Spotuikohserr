@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1611,
-  "last_updated": "2026-10-22T18:07:58.106Z",
+  "version": 1612,
+  "last_updated": "2026-10-22T18:07:59.967Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1lkD8T5atVaCDOeun0r8X1",
+      "title": "היה טוב + לבד על המיטה + אהובתי כבר לא רואה אותי + וואי - Live",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:07:59.967Z"
+    },
     {
       "id": "5RSdIMQeerM8UUqnYU02rs",
       "title": "נמס ממך - Live",
