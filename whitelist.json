@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1593,
-  "last_updated": "2026-10-22T18:06:24.604Z",
+  "version": 1594,
+  "last_updated": "2026-10-22T18:06:25.940Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3I9q8UVSS6CYls7ue4KdKr",
+      "title": "אח שלי מתחתן",
+      "artist": "Doli & Penn, Mosh Ben Ari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:06:25.940Z"
+    },
     {
       "id": "3idINUuyRidKbQiMFt6EkU",
       "title": "משוגעת",
