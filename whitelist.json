@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1576,
-  "last_updated": "2026-10-22T18:05:06.385Z",
+  "version": 1577,
+  "last_updated": "2026-10-22T18:05:09.119Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2BwyejowEfrqnyfmNfagZr",
+      "title": "אזורים",
+      "artist": "Balishag",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:05:09.119Z"
+    },
     {
       "id": "5rL3pBAs8eR8UCIpHfMwSm",
       "title": "Tempted",
