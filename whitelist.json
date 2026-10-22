@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1619,
-  "last_updated": "2026-10-22T18:08:27.441Z",
+  "version": 1620,
+  "last_updated": "2026-10-22T18:08:33.637Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7FJymyIc4hWyEzbmoIt5Wv",
+      "title": "מודה לשם",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:08:33.637Z"
+    },
     {
       "id": "5UJakPjizi7kT3Du4G3VyC",
       "title": "חברות שלך + שושו - Live",
