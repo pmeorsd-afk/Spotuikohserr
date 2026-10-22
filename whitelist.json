@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1613,
-  "last_updated": "2026-10-22T18:08:05.163Z",
+  "version": 1614,
+  "last_updated": "2026-10-22T18:08:07.972Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "06LDyvDSxXoDk5hyGHv1vP",
+      "title": "אחרי הסערה",
+      "artist": "Chen Cohen, Hadas Kleinman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:08:07.972Z"
+    },
     {
       "id": "1lkD8T5atVaCDOeun0r8X1",
       "title": "היה טוב + לבד על המיטה + אהובתי כבר לא רואה אותי + וואי - Live",
