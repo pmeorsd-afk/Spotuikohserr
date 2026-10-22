@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1629,
-  "last_updated": "2026-10-22T18:10:08.965Z",
+  "version": 1630,
+  "last_updated": "2026-10-22T18:10:12.512Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2JPdPERoWlqqzCv4N0Mxv0",
+      "title": "ביט של דודא",
+      "artist": "ליעד מאיר, דודא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:10:12.512Z"
+    },
     {
       "id": "0YCyfUaZrRhEKGJEozmq65",
       "title": "מתמודד",
