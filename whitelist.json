@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1616,
-  "last_updated": "2026-10-22T18:08:13.794Z",
+  "version": 1617,
+  "last_updated": "2026-10-22T18:08:18.316Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "עברנו הכול - Live",
       "artist": "Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:08:13.794Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:08:18.316Z"
     },
     {
       "id": "06LDyvDSxXoDk5hyGHv1vP",
