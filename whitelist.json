@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1621,
-  "last_updated": "2026-10-22T18:08:38.036Z",
+  "version": 1622,
+  "last_updated": "2026-10-22T18:09:14.047Z",
   "artists": [
+    {
+      "id": "1wDW7J6Pa9f6kDw3g1EXiN",
+      "canonical_name": "רון לוי",
+      "aliases": [
+        "רון לוי"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:09:14.047Z"
+    },
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
       "canonical_name": "יאיר כהן",
