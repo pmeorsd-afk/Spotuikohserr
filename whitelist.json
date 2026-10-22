@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1645,
-  "last_updated": "2026-10-22T18:11:28.641Z",
+  "version": 1646,
+  "last_updated": "2026-10-22T18:11:40.370Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1QhwAylFBbxeGwLBxXmCI7",
+      "title": "בחלומות שלנו",
+      "artist": "דודו אהרון, Eden Meiri",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:11:40.370Z"
+    },
     {
       "id": "03lZuldKCduRN6UuiY0tcn",
       "title": "3 משאלות",
