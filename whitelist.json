@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1579,
-  "last_updated": "2026-10-22T18:05:16.114Z",
+  "version": 1580,
+  "last_updated": "2026-10-22T18:05:18.579Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Bailan Rochas y Chetas",
       "artist": "Nene Malo, Magenta",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:05:12.626Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:05:18.579Z"
     },
     {
       "id": "2BwyejowEfrqnyfmNfagZr",
