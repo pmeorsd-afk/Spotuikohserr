@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1636,
-  "last_updated": "2026-10-22T18:10:32.237Z",
+  "version": 1637,
+  "last_updated": "2026-10-22T18:10:35.228Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1973,8 +1973,8 @@
       "title": "תפוס'תי",
       "artist": "Roisha, נקר, דודא",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:10:21.943Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:10:35.228Z"
     },
     {
       "id": "4OkFRFKte8DjzR5t6fytFb",
