@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1660,
-  "last_updated": "2026-10-22T19:58:20.808Z",
+  "version": 1661,
+  "last_updated": "2026-10-22T19:58:23.705Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -5165,8 +5165,8 @@
       "title": "עונג שבת",
       "artist": "Shuli Rand, ShrekDiMC",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T19:58:20.808Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T19:58:23.705Z"
     },
     {
       "id": "33hekXUB91e5KbiYT1ZxJU",
@@ -6071,12 +6071,6 @@
       "status": "approved",
       "notes": "approved via SpotUI Admin",
       "updated_at": "2026-09-14T19:29:59.755Z"
-    },
-    {
-      "id": "7pdniD9t65ZEuULdrpm7Sn",
-      "title": "כולי תפילה",
-      "artist": "Eden Hason, Meydad Tasa",
-      "status": "approved"
     }
   ],
   "home_images": [
