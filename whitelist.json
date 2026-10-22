@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1656,
-  "last_updated": "2026-10-22T19:46:56.152Z",
+  "version": 1657,
+  "last_updated": "2026-10-22T19:46:59.447Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1965,8 +1965,8 @@
       "title": "עולם משוגע",
       "artist": "Tuna, Ravid Plotnik",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T19:46:56.152Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T19:46:59.447Z"
     },
     {
       "id": "4L5Uj4Dt6rjFL0H7hl2qHF",
