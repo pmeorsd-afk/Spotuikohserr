@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1573,
-  "last_updated": "2026-10-22T18:04:55.058Z",
+  "version": 1574,
+  "last_updated": "2026-10-22T18:04:58.042Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Raindance (feat. Tems)",
       "artist": "Dave, Tems",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:04:55.058Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:04:58.042Z"
     },
     {
       "id": "7AfWkhoN7gijL1EalwoBf7",
