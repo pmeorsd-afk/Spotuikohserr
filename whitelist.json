@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1628,
-  "last_updated": "2026-10-22T18:10:03.211Z",
+  "version": 1629,
+  "last_updated": "2026-10-22T18:10:08.965Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1965,8 +1965,8 @@
       "title": "מתמודד",
       "artist": "Lukach, דודא, דורון גוברמן",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:10:03.211Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:10:08.965Z"
     },
     {
       "id": "03X0s2d8hpjbcaUHIoyok8",
