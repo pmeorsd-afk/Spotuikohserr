@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1666,
-  "last_updated": "2026-10-22T21:56:36.163Z",
+  "version": 1667,
+  "last_updated": "2026-10-22T21:56:38.924Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1965,8 +1965,8 @@
       "title": "ערב יום שישי",
       "artist": "Eyal Golan, ששון איפרם שאולוב",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T21:56:36.163Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T21:56:38.924Z"
     },
     {
       "id": "2fewVF6oOGKux69rHGbPMq",
