@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1582,
-  "last_updated": "2026-10-22T18:05:25.353Z",
+  "version": 1583,
+  "last_updated": "2026-10-22T18:05:29.354Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3coSv6fcKv2JFWXfgT6q0e",
+      "title": "הרבה ממך נשאר",
+      "artist": "Liran Danino",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:05:29.354Z"
+    },
     {
       "id": "1LPAIuklAWhEUGQ3nQrcBr",
       "title": "Lifamim",
