@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1588,
-  "last_updated": "2026-10-22T18:05:59.100Z",
+  "version": 1589,
+  "last_updated": "2026-10-22T18:06:09.994Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1P6UlVYFHyLo102LDrLVBr",
+      "title": "מהרי נא",
+      "artist": "Ehud Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:06:09.994Z"
+    },
     {
       "id": "2u3EyuCqqV31woqGvO9LBz",
       "title": "Sum 2 Prove",
