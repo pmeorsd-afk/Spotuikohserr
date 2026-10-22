@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1603,
-  "last_updated": "2026-10-22T18:06:57.552Z",
+  "version": 1604,
+  "last_updated": "2026-10-22T18:07:18.738Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7jsGZ7OUuuG7WJidTNMFGp",
+      "title": "רוזה + טקילה - Live",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:07:18.738Z"
+    },
     {
       "id": "6O3MwVMNdyojvbG61gD4VA",
       "title": "את שומעת",
