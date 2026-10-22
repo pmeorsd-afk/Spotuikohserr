@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1618,
-  "last_updated": "2026-10-22T18:08:23.109Z",
+  "version": 1619,
+  "last_updated": "2026-10-22T18:08:27.441Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "חברות שלך + שושו - Live",
       "artist": "Omer Adam, אודיה",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:08:23.109Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:08:27.441Z"
     },
     {
       "id": "2xOi69i7vqguCg08CJBEVW",
