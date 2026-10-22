@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1630,
-  "last_updated": "2026-10-22T18:10:12.512Z",
+  "version": 1631,
+  "last_updated": "2026-10-22T18:10:17.359Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1965,8 +1965,8 @@
       "title": "ביט של דודא",
       "artist": "ליעד מאיר, דודא",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:10:12.512Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:10:17.359Z"
     },
     {
       "id": "0YCyfUaZrRhEKGJEozmq65",
