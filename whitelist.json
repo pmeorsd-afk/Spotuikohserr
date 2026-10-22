@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1599,
-  "last_updated": "2026-10-22T18:06:43.833Z",
+  "version": 1600,
+  "last_updated": "2026-10-22T18:06:48.105Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "20baHHhdkXgztan8bPPPA9",
+      "title": "אינטרו + תהום - Live",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:06:48.105Z"
+    },
     {
       "id": "4pBo4wLIrTz5deO2UxOEBN",
       "title": "אין מילים איתך - מיוחד למצעד הישראלי השנתי תשפ\"ו",
