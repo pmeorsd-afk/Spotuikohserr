@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1597,
-  "last_updated": "2026-10-22T18:06:37.870Z",
+  "version": 1598,
+  "last_updated": "2026-10-22T18:06:40.022Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1963,8 +1963,8 @@
       "title": "המלכה של השכונה",
       "artist": "Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:06:32.354Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:06:40.022Z"
     },
     {
       "id": "3I9q8UVSS6CYls7ue4KdKr",
