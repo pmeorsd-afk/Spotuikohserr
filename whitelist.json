@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1590,
-  "last_updated": "2026-10-22T18:06:14.029Z",
+  "version": 1591,
+  "last_updated": "2026-10-22T18:06:17.253Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3KjK86Zg2gKF9aij1GmHFk",
+      "title": "אהובתי",
+      "artist": "Mashina",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:06:17.253Z"
+    },
     {
       "id": "1P6UlVYFHyLo102LDrLVBr",
       "title": "מהרי נא",
