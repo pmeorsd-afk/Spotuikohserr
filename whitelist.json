@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1605,
-  "last_updated": "2026-10-22T18:07:23.139Z",
+  "version": 1606,
+  "last_updated": "2026-10-22T18:07:39.729Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4lBl6TVdZKF7KyLVw68JfP",
+      "title": "שממה",
+      "artist": "Ori Ben Ari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:07:39.729Z"
+    },
     {
       "id": "7jsGZ7OUuuG7WJidTNMFGp",
       "title": "רוזה + טקילה - Live",
