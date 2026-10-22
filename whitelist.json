@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1657,
-  "last_updated": "2026-10-22T19:46:59.447Z",
+  "version": 1658,
+  "last_updated": "2026-10-22T19:47:37.475Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2fewVF6oOGKux69rHGbPMq",
+      "title": "צוחקת ובוכה",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T19:47:37.475Z"
+    },
     {
       "id": "4JmmjsGmOED0sn0Le3r84u",
       "title": "עולם משוגע",
