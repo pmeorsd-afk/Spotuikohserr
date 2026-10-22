@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1591,
-  "last_updated": "2026-10-22T18:06:17.253Z",
+  "version": 1592,
+  "last_updated": "2026-10-22T18:06:21.200Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3idINUuyRidKbQiMFt6EkU",
+      "title": "משוגעת",
+      "artist": "Gal Adam, NOROZ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:06:21.200Z"
+    },
     {
       "id": "3KjK86Zg2gKF9aij1GmHFk",
       "title": "אהובתי",
