@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1606,
-  "last_updated": "2026-10-22T18:07:39.729Z",
+  "version": 1607,
+  "last_updated": "2026-10-22T18:07:45.489Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "שממה",
       "artist": "Ori Ben Ari",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:07:39.729Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:07:45.489Z"
     },
     {
       "id": "7jsGZ7OUuuG7WJidTNMFGp",
