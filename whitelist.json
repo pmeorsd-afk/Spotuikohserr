@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1649,
-  "last_updated": "2026-10-22T18:11:50.684Z",
+  "version": 1650,
+  "last_updated": "2026-10-22T18:11:54.376Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1973,8 +1973,8 @@
       "title": "אני חוזר",
       "artist": "מתן חסן",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:11:47.921Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:11:54.376Z"
     },
     {
       "id": "1QhwAylFBbxeGwLBxXmCI7",
