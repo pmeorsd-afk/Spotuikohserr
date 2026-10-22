@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1620,
-  "last_updated": "2026-10-22T18:08:33.637Z",
+  "version": 1621,
+  "last_updated": "2026-10-22T18:08:38.036Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "מודה לשם",
       "artist": "Idan Rafael Haviv",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:08:33.637Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:08:38.036Z"
     },
     {
       "id": "5UJakPjizi7kT3Du4G3VyC",
