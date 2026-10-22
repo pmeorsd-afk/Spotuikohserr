@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1580,
-  "last_updated": "2026-10-22T18:05:18.579Z",
+  "version": 1581,
+  "last_updated": "2026-10-22T18:05:21.116Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1LPAIuklAWhEUGQ3nQrcBr",
+      "title": "Lifamim",
+      "artist": "Ori Ben Ari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:05:21.116Z"
+    },
     {
       "id": "3lC4mM6NiSLttfYTv1HTNQ",
       "title": "Bailan Rochas y Chetas",
