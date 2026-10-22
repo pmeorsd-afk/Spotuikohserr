@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1647,
-  "last_updated": "2026-10-22T18:11:45.534Z",
+  "version": 1648,
+  "last_updated": "2026-10-22T18:11:47.921Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0D9A15ZzO3VzLIYqOfm6QB",
+      "title": "אני חוזר",
+      "artist": "מתן חסן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:11:47.921Z"
+    },
     {
       "id": "1QhwAylFBbxeGwLBxXmCI7",
       "title": "בחלומות שלנו",
