@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1609,
-  "last_updated": "2026-10-22T18:07:53.409Z",
+  "version": 1610,
+  "last_updated": "2026-10-22T18:07:55.453Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1963,8 +1963,8 @@
       "title": "פרצופים + כשאת הולכת + אז הלכתי + טמפרטורה - Live",
       "artist": "Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:07:48.701Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:07:55.453Z"
     },
     {
       "id": "4lBl6TVdZKF7KyLVw68JfP",
