@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1585,
-  "last_updated": "2026-10-22T18:05:38.037Z",
+  "version": 1586,
+  "last_updated": "2026-10-22T18:05:41.528Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "Sum 2 Prove",
       "artist": "Lil Baby",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:05:38.037Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:05:41.528Z"
     },
     {
       "id": "3coSv6fcKv2JFWXfgT6q0e",
