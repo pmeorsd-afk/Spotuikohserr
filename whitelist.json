@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1614,
-  "last_updated": "2026-10-22T18:08:07.972Z",
+  "version": 1615,
+  "last_updated": "2026-10-22T18:08:11.663Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "אחרי הסערה",
       "artist": "Chen Cohen, Hadas Kleinman",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:08:07.972Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:08:11.663Z"
     },
     {
       "id": "1lkD8T5atVaCDOeun0r8X1",
