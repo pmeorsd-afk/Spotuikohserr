@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1658,
-  "last_updated": "2026-10-22T19:47:37.475Z",
+  "version": 1659,
+  "last_updated": "2026-10-22T19:47:41.262Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1965,8 +1965,8 @@
       "title": "צוחקת ובוכה",
       "artist": "Eden Hason",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T19:47:37.475Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T19:47:41.262Z"
     },
     {
       "id": "4JmmjsGmOED0sn0Le3r84u",
