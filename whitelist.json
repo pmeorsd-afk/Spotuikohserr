@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1667,
-  "last_updated": "2026-10-22T21:56:38.924Z",
+  "version": 1668,
+  "last_updated": "2026-10-22T22:53:03.018Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:tLTgCQovmpc",
+      "title": "אבי הטחול (גרסת ברסלב)-דוד שרר",
+      "artist": "דוד שרר",
+      "status": "approved",
+      "notes": "Restored exact ID from approved 2026-10-08 Telegram grant; original commit b24b8f09d5eac7e7dd680d58aa60ae526903e731",
+      "updated_at": "2026-10-22T22:53:03.018Z"
+    },
     {
       "id": "67AdLDY1VWt0aPh3rcTOkP",
       "title": "ערב יום שישי",
