@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1640,
-  "last_updated": "2026-10-22T18:11:10.134Z",
+  "version": 1641,
+  "last_updated": "2026-10-22T18:11:14.130Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1965,8 +1965,8 @@
       "title": "גלקסיה",
       "artist": "Avihai Hollender",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:11:10.134Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:11:14.130Z"
     },
     {
       "id": "2BFIGMoy2VNL7c4HtTjsjK",
