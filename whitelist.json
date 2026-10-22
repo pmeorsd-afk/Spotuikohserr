@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1594,
-  "last_updated": "2026-10-22T18:06:25.940Z",
+  "version": 1595,
+  "last_updated": "2026-10-22T18:06:29.416Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "אח שלי מתחתן",
       "artist": "Doli & Penn, Mosh Ben Ari",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:06:25.940Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:06:29.416Z"
     },
     {
       "id": "3idINUuyRidKbQiMFt6EkU",
