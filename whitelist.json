@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1615,
-  "last_updated": "2026-10-22T18:08:11.663Z",
+  "version": 1616,
+  "last_updated": "2026-10-22T18:08:13.794Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2xOi69i7vqguCg08CJBEVW",
+      "title": "עברנו הכול - Live",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:08:13.794Z"
+    },
     {
       "id": "06LDyvDSxXoDk5hyGHv1vP",
       "title": "אחרי הסערה",
