@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1610,
-  "last_updated": "2026-10-22T18:07:55.453Z",
+  "version": 1611,
+  "last_updated": "2026-10-22T18:07:58.106Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "נמס ממך - Live",
       "artist": "Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:07:53.409Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:07:58.106Z"
     },
     {
       "id": "2gclBmNGjQR9f2RXmlZFQ7",
