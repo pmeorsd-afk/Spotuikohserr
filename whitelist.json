@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1627,
-  "last_updated": "2026-10-22T18:09:54.147Z",
+  "version": 1628,
+  "last_updated": "2026-10-22T18:10:03.211Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0YCyfUaZrRhEKGJEozmq65",
+      "title": "מתמודד",
+      "artist": "Lukach, דודא, דורון גוברמן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:10:03.211Z"
+    },
     {
       "id": "03X0s2d8hpjbcaUHIoyok8",
       "title": "געגועים",
