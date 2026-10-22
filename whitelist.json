@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1602,
-  "last_updated": "2026-10-22T18:06:55.850Z",
+  "version": 1603,
+  "last_updated": "2026-10-22T18:06:57.552Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "את שומעת",
       "artist": "Mosh Ben Ari",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:06:52.455Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:06:57.552Z"
     },
     {
       "id": "20baHHhdkXgztan8bPPPA9",
