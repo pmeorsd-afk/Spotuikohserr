@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1623,
-  "last_updated": "2026-10-22T18:09:19.109Z",
+  "version": 1624,
+  "last_updated": "2026-10-22T18:09:21.825Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7DCJg0P2T9LRPnlZNvOKj7",
+      "title": "מסוכנת",
+      "artist": "Balishag, אוראל, ויק אוחנה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:09:21.825Z"
+    },
     {
       "id": "7FJymyIc4hWyEzbmoIt5Wv",
       "title": "מודה לשם",
