@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1598,
-  "last_updated": "2026-10-22T18:06:40.022Z",
+  "version": 1599,
+  "last_updated": "2026-10-22T18:06:43.833Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "אין מילים איתך - מיוחד למצעד הישראלי השנתי תשפ\"ו",
       "artist": "Full Trunk, ליעד מאיר, גלגלצ",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:06:37.870Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:06:43.833Z"
     },
     {
       "id": "2ysu423hT5FlgzQhCFtvg8",
