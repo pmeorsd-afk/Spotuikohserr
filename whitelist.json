@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1601,
-  "last_updated": "2026-10-22T18:06:52.455Z",
+  "version": 1602,
+  "last_updated": "2026-10-22T18:06:55.850Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1963,8 +1963,8 @@
       "title": "אינטרו + תהום - Live",
       "artist": "Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:06:48.105Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:06:55.850Z"
     },
     {
       "id": "4pBo4wLIrTz5deO2UxOEBN",
