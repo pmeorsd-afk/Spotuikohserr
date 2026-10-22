@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1612,
-  "last_updated": "2026-10-22T18:07:59.967Z",
+  "version": 1613,
+  "last_updated": "2026-10-22T18:08:05.163Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "היה טוב + לבד על המיטה + אהובתי כבר לא רואה אותי + וואי - Live",
       "artist": "Omer Adam",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:07:59.967Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:08:05.163Z"
     },
     {
       "id": "5RSdIMQeerM8UUqnYU02rs",
