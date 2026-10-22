@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1622,
-  "last_updated": "2026-10-22T18:09:14.047Z",
+  "version": 1623,
+  "last_updated": "2026-10-22T18:09:19.109Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -10,8 +10,8 @@
         "רון לוי"
       ],
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:09:14.047Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:09:19.109Z"
     },
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
