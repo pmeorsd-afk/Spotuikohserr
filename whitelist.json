@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1596,
-  "last_updated": "2026-10-22T18:06:32.354Z",
+  "version": 1597,
+  "last_updated": "2026-10-22T18:06:37.870Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4pBo4wLIrTz5deO2UxOEBN",
+      "title": "אין מילים איתך - מיוחד למצעד הישראלי השנתי תשפ\"ו",
+      "artist": "Full Trunk, ליעד מאיר, גלגלצ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:06:37.870Z"
+    },
     {
       "id": "2ysu423hT5FlgzQhCFtvg8",
       "title": "המלכה של השכונה",
