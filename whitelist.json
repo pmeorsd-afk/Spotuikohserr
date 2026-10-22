@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1574,
-  "last_updated": "2026-10-22T18:04:58.042Z",
+  "version": 1575,
+  "last_updated": "2026-10-22T18:05:00.486Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5rL3pBAs8eR8UCIpHfMwSm",
+      "title": "Tempted",
+      "artist": "Yung Filly",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:05:00.486Z"
+    },
     {
       "id": "3oTuTpF1F3A7rEC6RKsMRz",
       "title": "Raindance (feat. Tems)",
