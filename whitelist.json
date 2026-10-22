@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1589,
-  "last_updated": "2026-10-22T18:06:09.994Z",
+  "version": 1590,
+  "last_updated": "2026-10-22T18:06:14.029Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1955,8 +1955,8 @@
       "title": "מהרי נא",
       "artist": "Ehud Banai",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:06:09.994Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:06:14.029Z"
     },
     {
       "id": "2u3EyuCqqV31woqGvO9LBz",
