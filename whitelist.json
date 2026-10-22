@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1570,
-  "last_updated": "2026-10-21T20:38:35.949Z",
+  "version": 1571,
+  "last_updated": "2026-10-22T18:04:47.750Z",
   "artists": [
     {
       "id": "3hyOI3AVqyRy14BkHY49cH",
@@ -1950,6 +1950,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7AfWkhoN7gijL1EalwoBf7",
+      "title": "הרע זה לא אני",
+      "artist": "ששון איפרם שאולוב, יאיר אלייצור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T18:04:47.750Z"
+    },
     {
       "id": "6cdR11YGGyunUm15qZAM5X",
       "title": "נחלת בנימין",
