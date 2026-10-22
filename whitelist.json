@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1653,
-  "last_updated": "2026-10-22T19:30:01.868Z",
+  "version": 1654,
+  "last_updated": "2026-10-22T19:46:50.123Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4L5Uj4Dt6rjFL0H7hl2qHF",
+      "title": "עברנו הכל",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-22T19:46:50.123Z"
+    },
     {
       "id": "3oxaubAqZCO1hBKGuHv70J",
       "title": "ריקוד רומנטי",
