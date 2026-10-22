@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1633,
-  "last_updated": "2026-10-22T18:10:21.943Z",
+  "version": 1634,
+  "last_updated": "2026-10-22T18:10:25.320Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1973,8 +1973,8 @@
       "title": "בבילון",
       "artist": "אברי ג'י, סבסטיאן XL, דודא",
       "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-22T18:10:19.916Z"
+      "notes": "approved via SpotUI Admin",
+      "updated_at": "2026-10-22T18:10:25.320Z"
     },
     {
       "id": "2JPdPERoWlqqzCv4N0Mxv0",
