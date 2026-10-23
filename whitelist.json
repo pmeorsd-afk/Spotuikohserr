@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1722,
-  "last_updated": "2026-10-23T12:04:07.879Z",
+  "version": 1723,
+  "last_updated": "2026-10-23T12:18:38.746Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7CuCzFcemPckW014Zsi8Sm",
+      "title": "Runaround Sue",
+      "artist": "The Belmonts, Dion",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T12:18:38.746Z"
+    },
     {
       "id": "7aP8Zz9NMsVvOYdz65vbWf",
       "title": "מתקשרת אליי",
