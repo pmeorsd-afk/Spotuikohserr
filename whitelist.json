@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1719,
-  "last_updated": "2026-10-23T12:02:12.558Z",
+  "version": 1720,
+  "last_updated": "2026-10-23T12:02:14.298Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Wr6wZgEP1npYg0vrsWPIZ",
+      "title": "רוז",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T12:02:14.298Z"
+    },
     {
       "id": "1Ttz2PpMy1uF6qQJ2TpEoh",
       "title": "אחרי הנצח",
