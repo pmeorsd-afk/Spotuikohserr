@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1713,
-  "last_updated": "2026-10-23T11:53:04.029Z",
+  "version": 1714,
+  "last_updated": "2026-10-23T11:53:05.769Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4DKH1iLhp007TVLURYtmeC",
+      "title": "מה יהיה מחר",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T11:53:05.769Z"
+    },
     {
       "id": "6FplvPeXFwR3rVZDJFysc9",
       "title": "Slide Power",
