@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1669,
-  "last_updated": "2026-10-23T05:33:51.285Z",
+  "version": 1670,
+  "last_updated": "2026-10-23T05:33:54.810Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3V1FEnWwoN0pt2n4F6JrNx",
+      "title": "בין קודש לחול",
+      "artist": "Amir Dadon, Shuli Rand",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T05:33:54.810Z"
+    },
     {
       "id": "3hay408PSjTAxPn5TPxzyh",
       "title": "חלק מהזמן",
