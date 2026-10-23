@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1728,
-  "last_updated": "2026-10-23T12:21:01.893Z",
+  "version": 1729,
+  "last_updated": "2026-10-23T12:21:21.814Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1kSSWsWZuCcrlgVpb5yKYn",
+      "title": "Warrior Part 2",
+      "artist": "Lloyd Banks",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T12:21:21.814Z"
+    },
     {
       "id": "627teoJpK7qZOxRRY8TNnv",
       "title": "Let's Get It On",
