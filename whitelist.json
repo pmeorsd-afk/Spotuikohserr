@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1688,
-  "last_updated": "2026-10-23T10:17:51.615Z",
+  "version": 1689,
+  "last_updated": "2026-10-23T10:17:53.498Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2XVDzp7duEMFKqLmcwydWM",
+      "title": "Intro",
+      "artist": "Chems",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T10:17:53.498Z"
+    },
     {
       "id": "17gq6XM69j9v60L3eSn1yc",
       "title": "פרק אחד",
