@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1678,
-  "last_updated": "2026-10-23T09:08:10.946Z",
+  "version": 1679,
+  "last_updated": "2026-10-23T09:15:22.502Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5EMV3fTrnULzv8j2Rgo9qy",
+      "title": "אמא שלי",
+      "artist": "Arik Einstein, Yoni Rechter",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T09:15:22.502Z"
+    },
     {
       "id": "3FlfALTooQeIT30pzgjpGY",
       "title": "מקהלה עליזה",
