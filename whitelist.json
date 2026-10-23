@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1707,
-  "last_updated": "2026-10-23T11:29:06.946Z",
+  "version": 1708,
+  "last_updated": "2026-10-23T11:32:37.634Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "49Obyk8fNUe41eaKzvpTtQ",
+      "title": "מחרוזת בגדת בליבי",
+      "artist": "ראובן המלאך, חנן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T11:32:37.634Z"
+    },
     {
       "id": "0bS1w2cwJUdsX7OfwbRKgg",
       "title": "פאפית",
