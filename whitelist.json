@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1700,
-  "last_updated": "2026-10-23T10:56:35.497Z",
+  "version": 1701,
+  "last_updated": "2026-10-23T11:13:29.954Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3BdmZgqVCALAjZSbt6k2U6",
+      "title": "שתדעי",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T11:13:29.954Z"
+    },
     {
       "id": "1uNBN0rbqE6dHGA29rnMtx",
       "title": "הדם שלי",
