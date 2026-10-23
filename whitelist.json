@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1681,
-  "last_updated": "2026-10-23T10:17:37.366Z",
+  "version": 1682,
+  "last_updated": "2026-10-23T10:17:39.525Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3IQz49JrOqwhWoSF62zMgW",
+      "title": "מחזיק לך את היד",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T10:17:39.525Z"
+    },
     {
       "id": "23KiELGaEcQ77LR9cKd2Sh",
       "title": "אהבת פועלי הבניין",
