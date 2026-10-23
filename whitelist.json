@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1696,
-  "last_updated": "2026-10-23T10:24:48.251Z",
+  "version": 1697,
+  "last_updated": "2026-10-23T10:35:28.222Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "795G0BQbHP5NoSbTXt3YZs",
+      "title": "מחרוזת: כי אשמרה שבת, דרור יקרא",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T10:35:28.222Z"
+    },
     {
       "id": "3oyWPBYztJaapE0tkVYtOM",
       "title": "כי אשמרה שבת",
