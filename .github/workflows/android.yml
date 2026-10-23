@@ -1,11 +1,6 @@
 name: Android CI & APK Build
 
 on:
-  push:
-    branches: [ "*" ]
-    tags: [ "v*" ]
-  pull_request:
-    branches: [ "*" ]
   workflow_dispatch:
 
 jobs:
@@ -48,11 +43,4 @@ jobs:
         name: Spotify-${{ github.ref_name }}-Release-APK
         path: app/build/outputs/apk/user/release/*.apk
 
-    - name: Upload to GitHub Release v2.8
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        gh release upload v2.8 \
-          app/build/outputs/apk/user/release/Spotify-Kosher.apk \
-          app/build/outputs/apk/user/release/Spotify.apk \
-          --clobber || echo "Release upload step finished"
+

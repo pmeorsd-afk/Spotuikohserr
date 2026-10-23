@@ -372,6 +372,8 @@ object KosherWhitelistManager {
                 }
             }
 
+            HomeArtworkPermissions.replace(root.optJSONArray("home_images"))
+            SearchArtworkPermissions.replace(root.optJSONArray("search_images"))
             rebuildIndexes(parsedArtists, parsedTracks)
             if (remoteVersion > 0) {
                 currentVersion = remoteVersion
@@ -1190,7 +1192,7 @@ object KosherWhitelistManager {
     fun exportWhitelistJson(): String {
         val root = JSONObject()
         root.put("schema_version", 2)
-        root.put("version", 2)
+        root.put("version", currentVersion)
         root.put("last_updated", SimpleDateFormat("yyyy-MM-dd", Locale.US).format(Date()))
 
         val artistsArr = JSONArray()
@@ -1217,6 +1219,8 @@ object KosherWhitelistManager {
             })
         }
         root.put("tracks", tracksArr)
+        root.put("home_images", HomeArtworkPermissions.toJson())
+        root.put("search_images", SearchArtworkPermissions.toJson())
 
         return root.toString(2)
     }

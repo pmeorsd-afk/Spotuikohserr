@@ -435,10 +435,12 @@ object Spotify {
     /**
      * Extracts track duration in ms from GQL track payload.
      * Tries multiple keys because different operations may return duration
-     * as nested (duration.totalMilliseconds) or flat (durationMs / duration_ms).
+     * as nested (duration.totalMilliseconds / trackDuration.totalMilliseconds)
+     * or flat (durationMs / duration_ms). fetchPlaylist uses trackDuration.
      */
     private fun parseGqlTrackDurationMs(trackData: JsonObject): Int {
         trackData.obj("duration")?.int("totalMilliseconds")?.let { if (it > 0) return it }
+        trackData.obj("trackDuration")?.int("totalMilliseconds")?.let { if (it > 0) return it }
         trackData.int("durationMs")?.let { if (it > 0) return it }
         trackData.int("duration_ms")?.let { if (it > 0) return it }
         // Some APIs return duration in seconds
@@ -909,28 +911,7 @@ object Spotify {
                 response.obj("data")?.obj("playlistV2")
                     ?: throw SpotifyException(500, "Invalid fetchPlaylist response")
 
-            val ownerData = playlist.obj("ownerV2")?.obj("data")
-            val ownerUri = ownerData?.str("uri") ?: ""
-
-            val images =
-                playlist.obj("images")?.arr("items")?.firstOrNull()?.let {
-                    parseGqlImages(it.jsonObject.arr("sources"))
-                } ?: emptyList()
-
-            SpotifyPlaylist(
-                id = playlistId,
-                name = playlist.str("name") ?: "",
-                description = playlist.str("description"),
-                images = images,
-                owner =
-                    SpotifyPlaylistOwner(
-                        id = ownerUri.substringAfterLast(":"),
-                        displayName = ownerData?.str("name"),
-                        uri = ownerUri.ifEmpty { null },
-                    ),
-                tracks = SpotifyPlaylistTracksRef(total = playlist.obj("content")?.int("totalCount") ?: 0),
-                collaborative = (playlist.obj("members")?.arr("items")?.size ?: 0) > 1,
-            )
+            parsePlaylistMetadata(playlistId, playlist)
         }
 
     suspend fun playlistTracks(
@@ -957,25 +938,84 @@ object Spotify {
                 response.obj("data")?.obj("playlistV2")?.obj("content")
                     ?: throw SpotifyException(500, "No content in fetchPlaylist response")
 
-            val tracks =
-                content.arr("items")?.mapNotNull { elem ->
-                    val itemWrapper = elem.jsonObject.obj("itemV2") ?: return@mapNotNull null
-                    val itemData = itemWrapper.obj("data") ?: return@mapNotNull null
-                    val wrapperUri = itemWrapper.str("_uri") ?: itemWrapper.str("uri")
-                    val uid = elem.jsonObject.str("uid") ?: itemWrapper.str("uid")
-                    SpotifyPlaylistTrack(
-                        track = parseGqlTrack(itemData, uriOverride = wrapperUri),
-                        uid = uid,
-                    )
-                } ?: emptyList()
-
-            SpotifyPaging(
-                items = tracks,
-                total = content.int("totalCount") ?: 0,
-                limit = limit,
-                offset = offset,
-            )
+            parsePlaylistTracks(content, limit, offset)
         }
+
+    data class PlaylistPage(
+        val playlist: SpotifyPlaylist,
+        val tracks: SpotifyPaging<SpotifyPlaylistTrack>,
+        val consumedItems: Int,
+    )
+
+    /** One response supplies both the header and this page of tracks. */
+    suspend fun playlistPage(playlistId: String, limit: Int = 100, offset: Int = 0): Result<PlaylistPage> =
+        runCatching {
+            val response = graphqlPost("fetchPlaylist", buildJsonObject {
+                put("uri", "spotify:playlist:" + playlistId)
+                put("offset", offset)
+                put("limit", limit)
+                put("enableWatchFeedEntrypoint", false)
+            })
+            parsePlaylistPage(playlistId, response, limit, offset)
+        }
+
+    internal fun parsePlaylistPage(playlistId: String, response: JsonObject, limit: Int, offset: Int): PlaylistPage {
+        val playlist = response.obj("data")?.obj("playlistV2")
+            ?: throw SpotifyException(500, "Invalid fetchPlaylist response")
+        val content = playlist.obj("content")
+            ?: throw SpotifyException(500, "No content in fetchPlaylist response")
+        return PlaylistPage(
+            parsePlaylistMetadata(playlistId, playlist),
+            parsePlaylistTracks(content, limit, offset),
+            content.arr("items")?.size ?: 0,
+        )
+    }
+
+    private fun parsePlaylistMetadata(playlistId: String, playlist: JsonObject): SpotifyPlaylist {
+        val ownerData = playlist.obj("ownerV2")?.obj("data")
+        val ownerUri = ownerData?.str("uri") ?: ""
+
+        val images =
+            playlist.obj("images")?.arr("items")?.firstOrNull()?.let {
+                parseGqlImages(it.jsonObject.arr("sources"))
+            } ?: emptyList()
+
+        return SpotifyPlaylist(
+            id = playlistId,
+            name = playlist.str("name") ?: "",
+            description = playlist.str("description"),
+            images = images,
+            owner =
+                SpotifyPlaylistOwner(
+                    id = ownerUri.substringAfterLast(":"),
+                    displayName = ownerData?.str("name"),
+                    uri = ownerUri.ifEmpty { null },
+                ),
+            tracks = SpotifyPlaylistTracksRef(total = playlist.obj("content")?.int("totalCount") ?: 0),
+            collaborative = (playlist.obj("members")?.arr("items")?.size ?: 0) > 1,
+        )
+    }
+
+    private fun parsePlaylistTracks(content: JsonObject, limit: Int, offset: Int): SpotifyPaging<SpotifyPlaylistTrack> {
+        val tracks =
+            content.arr("items")?.mapNotNull { elem ->
+                val itemWrapper = elem.jsonObject.obj("itemV2") ?: return@mapNotNull null
+                val itemData = itemWrapper.obj("data") ?: return@mapNotNull null
+                val wrapperUri = itemWrapper.str("_uri") ?: itemWrapper.str("uri")
+                val uid = elem.jsonObject.str("uid") ?: itemWrapper.str("uid")
+                SpotifyPlaylistTrack(
+                    track = parseGqlTrack(itemData, uriOverride = wrapperUri),
+                    uid = uid,
+                )
+            } ?: emptyList()
+
+        return SpotifyPaging(
+            items = tracks,
+            total = content.int("totalCount") ?: 0,
+            limit = limit,
+            offset = offset,
+        )
+    }
 
     // ── Playlist Mutations (GQL) ──────────────────────────────────────
 

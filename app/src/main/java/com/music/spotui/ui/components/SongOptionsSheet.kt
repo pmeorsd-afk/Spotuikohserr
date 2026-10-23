@@ -245,17 +245,17 @@ fun SongOptionsSheet(
                                 if (liked) {
                                     removeLikedSong(context, song)
                                     liked = false
-                                    if (song.spotifyTrackId.isNotBlank()) {
+                                    if (!song.isPodcast() && song.spotifyTrackId.isNotBlank()) {
                                         com.music.spotui.data.api.SpotifySync.setTrackSaved(context, song.spotifyTrackId, false)
                                     }
-                                    Toast.makeText(context, "הוסר מהשירים שאהבתם", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(context, if (song.isPodcast()) "הוסר מהפרקים שלכם" else "הוסר מהשירים שאהבתם", Toast.LENGTH_SHORT).show()
                                 } else {
                                     addLikedSong(context, song)
                                     liked = true
-                                    if (song.spotifyTrackId.isNotBlank()) {
+                                    if (!song.isPodcast() && song.spotifyTrackId.isNotBlank()) {
                                         com.music.spotui.data.api.SpotifySync.setTrackSaved(context, song.spotifyTrackId, true)
                                     }
-                                    Toast.makeText(context, "נוסף לשירים שאהבתם", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(context, if (song.isPodcast()) "נוסף לפרקים שלכם" else "נוסף לשירים שאהבתם", Toast.LENGTH_SHORT).show()
                                 }
                                 onDismiss()
                             }

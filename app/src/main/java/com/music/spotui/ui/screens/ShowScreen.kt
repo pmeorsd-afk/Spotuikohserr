@@ -17,7 +17,6 @@ import androidx.compose.animation.slideOutVertically
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -42,10 +41,7 @@ import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -74,12 +70,10 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -91,8 +85,6 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
-import com.bumptech.glide.integration.compose.placeholder
-import com.music.spotui.R
 import com.music.spotui.data.api.Response
 import com.music.spotui.data.entity.PodcastEpisodeUiModel
 import com.music.spotui.data.entity.SongsModel
@@ -103,7 +95,12 @@ import com.music.spotui.data.preferences.toTrackKey
 import com.music.spotui.di.Palette
 import com.music.spotui.di.SongPlayer
 import com.music.spotui.ui.components.EpisodeCardItem
-import com.music.spotui.ui.components.GlideImage
+import com.music.spotui.ui.components.PodcastShowHeader
+import com.music.spotui.ui.components.PodcastShowMenuSheet
+import com.music.spotui.ui.components.sharePodcastShow
+import com.music.spotui.ui.podcast.PodcastShowMenuTarget
+import com.music.spotui.ui.components.PodcastShowTabs
+import com.music.spotui.ui.components.PodcastEpisodeListHeading
 import com.music.spotui.ui.components.SavedInSheet
 import com.music.spotui.ui.components.SongOptionsSheet
 import com.music.spotui.ui.viewmodel.ShowViewModel
@@ -114,10 +111,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 private fun isEpisodeSavedInLibrary(context: android.content.Context, song: SongsModel): Boolean {
-    if (isSongLiked(context, song)) return true
-    val playlists = CustomPlaylistStore.getPlaylists(context)
-    val key = song.toTrackKey()
-    return playlists.any { it.songKeys.contains(key) }
+    return com.music.spotui.data.preferences.isSavedInAnyDestination(context, song)
 }
 
 @OptIn(ExperimentalGlideComposeApi::class, ExperimentalFoundationApi::class)
@@ -148,7 +142,8 @@ fun ShowScreen(
                 playUrl = s.url,
                 showId = s.podcastShowId.ifBlank { showId },
                 showName = s.album.ifBlank { showName },
-                publisher = s.singer
+                publisher = s.singer,
+                spotifyEpisodeId = s.spotifyTrackId,
             )
         }
     }
@@ -171,9 +166,7 @@ fun ShowScreen(
 
     var selectedTab by remember { mutableIntStateOf(0) }
     val followRevision by com.music.spotui.data.preferences.podcastFollowRevision.collectAsState()
-    var isFollowing by remember(showId, followRevision) {
-        mutableStateOf(vm.isPodcastFollowed(showId))
-    }
+    val isFollowing = remember(showId, followRevision) { vm.isPodcastFollowed(showId) }
     var notificationsEnabled by remember { mutableStateOf(false) }
 
     val effectiveCoverUri = remember(singleEpisode, show, episodes) {
@@ -182,7 +175,7 @@ fun ShowScreen(
             ?: episodes.firstOrNull()?.coverUri
             ?: ""
     }
-    var rawDominantColor by remember { mutableStateOf(Color(0xFF141414)) }
+    var rawDominantColor by remember(effectiveCoverUri) { mutableStateOf(Color(0xFF141414)) }
     val dominantColor by animateColorAsState(
         targetValue = rawDominantColor,
         animationSpec = tween(durationMillis = 400),
@@ -199,6 +192,7 @@ fun ShowScreen(
 
     var savedInSheetSong by remember { mutableStateOf<SongsModel?>(null) }
     var refreshSavedTrigger by remember { mutableIntStateOf(0) }
+    val savedRevision by com.music.spotui.data.preferences.likedSongsRevision.collectAsState()
 
     savedInSheetSong?.let { songToSave ->
         SavedInSheet(
@@ -224,6 +218,19 @@ fun ShowScreen(
                 menuSong = null
                 refreshSavedTrigger++
             },
+        )
+    }
+
+    var menuShow by remember(showId) { mutableStateOf<PodcastShowMenuTarget?>(null) }
+    menuShow?.let { target ->
+        PodcastShowMenuSheet(
+            target = target,
+            following = isFollowing,
+            onToggleFollow = {
+                if (isFollowing) vm.unfollowPodcast(target.show.id)
+                else vm.followPodcast(target.show.id, target.show.name, target.show.coverUri)
+            },
+            onDismiss = { menuShow = null },
         )
     }
 
@@ -338,12 +345,12 @@ fun ShowScreen(
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(460.dp)
+                    .height(320.dp)
                     .background(
                         brush = Brush.verticalGradient(
                             colors = listOf(
                                 dominantColor,
-                                dominantColor.copy(alpha = 0.5f),
+                                androidx.compose.ui.graphics.lerp(dominantColor, Color(0xFF121212), 0.65f),
                                 Color(0xFF121212)
                             )
                         )
@@ -539,12 +546,13 @@ fun ShowScreen(
                                     val isPlayingCurrent = (ep.numericId == vm.currentSongId.value)
                                     val isPlayingActive = (isPlayingCurrent && vm.currentSongPlayingState.value)
                                     val epSong = remember(ep) { ep.toSongModel() }
-                                    val isSaved = remember(ep.numericId, refreshSavedTrigger) {
+                                    val isSaved = remember(epSong, refreshSavedTrigger, savedRevision) {
                                         isEpisodeSavedInLibrary(context, epSong)
                                     }
 
                                     EpisodeCardItem(
                                         ep = ep,
+                                        showPageStyle = true,
                                         showCoverUri = show?.coverUri,
                                         isPlayingCurrent = isPlayingCurrent,
                                         isPlayingActive = isPlayingActive,
@@ -678,226 +686,42 @@ fun ShowScreen(
                                 .weight(1f)
                                 .nestedScroll(nestedScrollConnection),
                         ) {
-                            // Header Section: Asymmetric side-by-side header matching official Spotify
+                            // Show-specific presentation; existing callbacks keep their behavior.
                             item {
-                                Column(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .padding(horizontal = 16.dp, vertical = 4.dp)
-                                ) {
-                                    // Row with cover artwork on the right and title/author on the left (RTL)
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        verticalAlignment = Alignment.CenterVertically
-                                    ) {
-                                        // Show Cover Art (right side in RTL)
-                                        GlideImage(
-                                            model = singleEpisode?.coverUri ?: show?.coverUri ?: episodes.firstOrNull()?.coverUri,
-                                            contentScale = ContentScale.Crop,
-                                            failure = placeholder(R.drawable.placeholder),
-                                            loading = placeholder(R.drawable.placeholder),
-                                            modifier = Modifier
-                                                .size(96.dp)
-                                                .clip(RoundedCornerShape(8.dp)),
-                                            isAllowed = if (singleEpisode != null) {
-                                                KosherWhitelistManager.isSongWhitelisted(singleEpisode.toSongModel())
-                                            } else {
-                                                KosherWhitelistManager.isPodcastShowWhitelisted(show)
-                                            },
-                                            contentDescription = null,
-                                        )
-
-                                        Spacer(modifier = Modifier.width(14.dp))
-
-                                        // Show Title & Publisher (left of cover in RTL)
-                                        Column(
-                                            modifier = Modifier.weight(1f)
-                                        ) {
-                                            Text(
-                                                text = if (singleEpisode != null) singleEpisode.showName else (show?.name ?: showName),
-                                                color = Color.White,
-                                                fontSize = 20.sp,
-                                                fontWeight = FontWeight.Bold,
-                                                maxLines = 2,
-                                                overflow = TextOverflow.Ellipsis,
-                                                lineHeight = 24.sp
-                                            )
-                                            val publisherText = if (singleEpisode != null) singleEpisode.publisher else show?.publisher
-                                            publisherText?.takeIf { it.isNotBlank() }?.let {
-                                                Text(
-                                                    text = it,
-                                                    color = Color(0xFFB3B3B3),
-                                                    fontSize = 13.sp,
-                                                    maxLines = 1,
-                                                    overflow = TextOverflow.Ellipsis,
-                                                    modifier = Modifier.padding(top = 4.dp)
-                                                )
-                                            }
+                                PodcastShowHeader(
+                                    title = if (singleEpisode != null) singleEpisode.showName else (show?.name ?: showName),
+                                    publisher = if (singleEpisode != null) singleEpisode.publisher else show?.publisher.orEmpty(),
+                                    coverUri = effectiveCoverUri,
+                                    artworkAllowed = if (singleEpisode != null) {
+                                        KosherWhitelistManager.isSongWhitelisted(singleEpisode.toSongModel())
+                                    } else {
+                                        KosherWhitelistManager.isPodcastShowWhitelisted(show)
+                                    },
+                                    topics = show?.topics.orEmpty(),
+                                    following = isFollowing,
+                                    notificationsEnabled = notificationsEnabled,
+                                    onFollow = {
+                                        if (isFollowing) {
+                                            vm.unfollowPodcast(showId)
+                                        } else {
+                                            val nameToSave = show?.name?.ifBlank { showName }?.ifBlank { "Podcast" } ?: showName.ifBlank { "Podcast" }
+                                            val imageToSave = effectiveCoverUri.ifBlank { show?.coverUri.orEmpty() }
+                                            vm.followPodcast(showId, nameToSave, imageToSave)
                                         }
-                                    }
-
-                                    // Metadata line (Rating & Category / Topics)
-                                    val categoryTag = show?.topics?.firstOrNull() ?: "פודקאסט"
-                                    Text(
-                                        text = "★ 4.8 • $categoryTag",
-                                        color = Color(0xFFB3B3B3),
-                                        fontSize = 12.sp,
-                                        modifier = Modifier.padding(top = 10.dp)
-                                    )
-
-                                    Spacer(Modifier.height(12.dp))
-
-                                    // Actions Bar: Follow pill, Bell, Share, More options
-                                    Row(
-                                        verticalAlignment = Alignment.CenterVertically,
-                                        horizontalArrangement = Arrangement.Start,
-                                        modifier = Modifier.fillMaxWidth()
-                                    ) {
-                                        // "מעקב" / "במעקב" pill button
-                                        Box(
-                                            contentAlignment = Alignment.Center,
-                                            modifier = Modifier
-                                                .clip(RoundedCornerShape(16.dp))
-                                                .border(
-                                                    width = 1.dp,
-                                                    color = if (isFollowing) Color(0xFF1ED760) else Color(0xFF727272),
-                                                    shape = RoundedCornerShape(16.dp)
-                                                )
-                                                .background(if (isFollowing) Color(0x331ED760) else Color.Transparent)
-                                                .clickable {
-                                                    if (isFollowing) {
-                                                        vm.unfollowPodcast(showId)
-                                                        isFollowing = false
-                                                    } else {
-                                                        val nameToSave = show?.name?.ifBlank { showName }?.ifBlank { "Podcast" } ?: showName.ifBlank { "Podcast" }
-                                                        val imageToSave = effectiveCoverUri.ifBlank { show?.coverUri.orEmpty() }
-                                                        vm.followPodcast(showId, nameToSave, imageToSave)
-                                                        isFollowing = true
-                                                    }
-                                                }
-                                                .padding(horizontal = 16.dp, vertical = 6.dp)
-                                        ) {
-                                            Text(
-                                                text = if (isFollowing) "במעקב" else "מעקב",
-                                                color = if (isFollowing) Color(0xFF1ED760) else Color.White,
-                                                fontSize = 12.sp,
-                                                fontWeight = FontWeight.SemiBold
-                                            )
+                                    },
+                                    onNotifications = { notificationsEnabled = !notificationsEnabled },
+                                    onShare = {
+                                        PodcastShowMenuTarget.fromRoute(showId, showName, show)?.let {
+                                            sharePodcastShow(context, it)
                                         }
-
-                                        Spacer(modifier = Modifier.width(12.dp))
-
-                                        // Notification Bell
-                                        Icon(
-                                            imageVector = Icons.Default.Notifications,
-                                            contentDescription = "התראות",
-                                            tint = if (notificationsEnabled) Color(0xFF1ED760) else Color(0xFFB3B3B3),
-                                            modifier = Modifier
-                                                .size(36.dp)
-                                                .clip(CircleShape)
-                                                .clickable { notificationsEnabled = !notificationsEnabled }
-                                                .padding(6.dp)
-                                        )
-
-                                        Spacer(modifier = Modifier.width(8.dp))
-
-                                        // Share
-                                        Icon(
-                                            imageVector = Icons.Default.Share,
-                                            contentDescription = "שתף",
-                                            tint = Color(0xFFB3B3B3),
-                                            modifier = Modifier
-                                                .size(36.dp)
-                                                .clip(CircleShape)
-                                                .clickable {
-                                                    val sendIntent = Intent().apply {
-                                                        action = Intent.ACTION_SEND
-                                                        putExtra(Intent.EXTRA_TEXT, "${show?.name ?: showName} ב-SpotUI")
-                                                        type = "text/plain"
-                                                    }
-                                                    context.startActivity(Intent.createChooser(sendIntent, null))
-                                                }
-                                                .padding(6.dp)
-                                        )
-
-                                        Spacer(modifier = Modifier.width(8.dp))
-
-                                        // More options
-                                        Icon(
-                                            imageVector = Icons.Default.MoreVert,
-                                            contentDescription = "אפשרויות נוספות",
-                                            tint = Color(0xFFB3B3B3),
-                                            modifier = Modifier
-                                                .size(36.dp)
-                                                .clip(CircleShape)
-                                                .clickable {
-                                                    episodes.firstOrNull()?.let { menuSong = it.toSongModel() }
-                                                }
-                                                .padding(6.dp)
-                                        )
-                                    }
-                                }
+                                    },
+                                    onMore = {
+                                        menuShow = PodcastShowMenuTarget.fromRoute(showId, showName, show)
+                                    },
+                                )
                             }
-
-                            // Tabs Row: "פרקים" / "אודות"
                             if (singleEpisode == null) {
-                                item {
-                                    Row(
-                                        modifier = Modifier
-                                            .fillMaxWidth()
-                                            .padding(top = 10.dp, bottom = 4.dp, start = 16.dp, end = 16.dp)
-                                    ) {
-                                        // Tab 0: פרקים
-                                        Column(
-                                            modifier = Modifier
-                                                .clickable { selectedTab = 0 }
-                                                .padding(horizontal = 12.dp, vertical = 6.dp)
-                                        ) {
-                                            Text(
-                                                text = "פרקים",
-                                                fontSize = 15.sp,
-                                                fontWeight = if (selectedTab == 0) FontWeight.Bold else FontWeight.Normal,
-                                                color = if (selectedTab == 0) Color.White else Color(0xFFB3B3B3)
-                                            )
-                                            if (selectedTab == 0) {
-                                                Box(
-                                                    modifier = Modifier
-                                                        .padding(top = 6.dp)
-                                                        .height(3.dp)
-                                                        .width(36.dp)
-                                                        .clip(RoundedCornerShape(1.5.dp))
-                                                        .background(Color(0xFF1ED760))
-                                                )
-                                            }
-                                        }
-
-                                        Spacer(modifier = Modifier.width(12.dp))
-
-                                        // Tab 1: אודות
-                                        Column(
-                                            modifier = Modifier
-                                                .clickable { selectedTab = 1 }
-                                                .padding(horizontal = 12.dp, vertical = 6.dp)
-                                        ) {
-                                            Text(
-                                                text = "אודות",
-                                                fontSize = 15.sp,
-                                                fontWeight = if (selectedTab == 1) FontWeight.Bold else FontWeight.Normal,
-                                                color = if (selectedTab == 1) Color.White else Color(0xFFB3B3B3)
-                                            )
-                                            if (selectedTab == 1) {
-                                                Box(
-                                                    modifier = Modifier
-                                                        .padding(top = 6.dp)
-                                                        .height(3.dp)
-                                                        .width(36.dp)
-                                                        .clip(RoundedCornerShape(1.5.dp))
-                                                        .background(Color(0xFF1ED760))
-                                                )
-                                            }
-                                        }
-                                    }
-                                }
+                                item { PodcastShowTabs(selectedTab) { selectedTab = it } }
                             }
 
                             // Tab 1: אודות View
@@ -933,28 +757,7 @@ fun ShowScreen(
                             // Tab 0: פרקים View
                             if (selectedTab == 0 || singleEpisode != null) {
                                 if (singleEpisode == null) {
-                                    item {
-                                        Row(
-                                            verticalAlignment = Alignment.CenterVertically,
-                                            horizontalArrangement = Arrangement.SpaceBetween,
-                                            modifier = Modifier
-                                                .fillMaxWidth()
-                                                .padding(horizontal = 16.dp, vertical = 10.dp)
-                                        ) {
-                                            Text(
-                                                text = "כל הפרקים • הפריטים החדשים ביותר",
-                                                fontSize = 14.sp,
-                                                fontWeight = FontWeight.SemiBold,
-                                                color = Color.White
-                                            )
-                                            Icon(
-                                                painter = painterResource(R.drawable.ic_view_list),
-                                                contentDescription = "מיון",
-                                                tint = Color(0xFFB3B3B3),
-                                                modifier = Modifier.size(20.dp)
-                                            )
-                                        }
-                                    }
+                                    item { PodcastEpisodeListHeading() }
                                 }
 
                                 if (singleEpisode == null && episodesState is Response.Loading) {
@@ -1012,12 +815,13 @@ fun ShowScreen(
                                     val isPlayingCurrent = (ep.numericId == vm.currentSongId.value)
                                     val isPlayingActive = (isPlayingCurrent && vm.currentSongPlayingState.value)
                                     val epSong = remember(ep) { ep.toSongModel() }
-                                    val isSaved = remember(ep.numericId, refreshSavedTrigger) {
+                                    val isSaved = remember(epSong, refreshSavedTrigger, savedRevision) {
                                         isEpisodeSavedInLibrary(context, epSong)
                                     }
 
                                     EpisodeCardItem(
                                         ep = ep,
+                                        showPageStyle = true,
                                         showCoverUri = show?.coverUri,
                                         isPlayingCurrent = isPlayingCurrent,
                                         isPlayingActive = isPlayingActive,
@@ -1052,7 +856,6 @@ fun ShowScreen(
                                 }
                             }
 
-                            item { Spacer(Modifier.height(130.dp)) }
                         }
                     }
                 }

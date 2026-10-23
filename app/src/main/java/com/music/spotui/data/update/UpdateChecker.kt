@@ -1,6 +1,5 @@
 package com.music.spotui.data.update
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
 import com.music.spotui.BuildConfig
@@ -8,17 +7,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import org.json.JSONObject
-import java.security.SecureRandom
-import java.security.cert.X509Certificate
 import java.util.concurrent.TimeUnit
-import javax.net.ssl.SSLContext
-import javax.net.ssl.TrustManager
-import javax.net.ssl.X509TrustManager
 
 /**
  * Checks for updates from the project's GitHub version.json file.
- * Compatible with filtered / kosher networks (NetFree, Tag, etc.) via SSL bypass and CDN mirrors.
+ * Uses platform TLS validation and the app's configured system/user trust anchors.
  */
 object UpdateChecker {
 
@@ -33,7 +26,14 @@ object UpdateChecker {
     private const val KEY_SKIP = "skip_fingerprint"
 
     private val httpClient: OkHttpClient by lazy {
-        createPermissiveHttpClient()
+        // Update metadata now selects an installable package. Keep certificate and hostname
+        // validation enabled; installed filtering CAs are supported by network_security_config.
+        OkHttpClient.Builder()
+            .connectTimeout(8, TimeUnit.SECONDS)
+            .readTimeout(8, TimeUnit.SECONDS)
+            .followSslRedirects(false)
+            .retryOnConnectionFailure(true)
+            .build()
     }
 
     data class UpdateInfo(
@@ -45,6 +45,8 @@ object UpdateChecker {
         val forceUpdate: Boolean = false,
         val updateButtonText: String = "הורד עדכון עכשיו",
         val cancelButtonText: String = "הזכר לי מאוחר יותר",
+        val apkUrl: String = "",
+        val apkSha256: String = "",
         val fingerprint: String = "$versionCode:$versionName",
     )
 
@@ -98,27 +100,7 @@ object UpdateChecker {
                     val text = response.body?.string().orEmpty()
                     if (text.isBlank() || !text.trim().startsWith("{")) return@use
 
-                    val json = JSONObject(text)
-                    val versionCode = json.optInt("versionCode", 0)
-                    val versionName = json.optString("versionName", "")
-                    val title = json.optString("title", "יצא עדכון חדש! 🎉")
-                    val message = json.optString("message", "גרסה חדשה זמינה להורדה. מומלץ לעדכן כדי ליהנות מכל השיפורים.")
-                    val downloadUrl = json.optString("downloadUrl", "https://github.com/pmeorsd-afk/Spotuikohserr/releases/latest")
-                    val forceUpdate = json.optBoolean("forceUpdate", false)
-                    val updateButtonText = json.optString("updateButtonText", "הורד עדכון עכשיו")
-                    val cancelButtonText = json.optString("cancelButtonText", "הזכר לי מאוחר יותר")
-
-                    return UpdateInfo(
-                        versionCode = versionCode,
-                        versionName = versionName,
-                        title = title,
-                        message = message,
-                        downloadUrl = downloadUrl,
-                        forceUpdate = forceUpdate,
-                        updateButtonText = updateButtonText,
-                        cancelButtonText = cancelButtonText,
-                        fingerprint = "$versionCode:$versionName",
-                    )
+                    return UpdateManifest.parse(text, isAdmin = BuildConfig.IS_ADMIN)
                 }
             } catch (e: Exception) {
                 Log.w(TAG, "Failed fetching from $baseUrl: ${e.message}")
@@ -139,28 +121,4 @@ object UpdateChecker {
         return false
     }
 
-    @SuppressLint("CustomX509TrustManager")
-    private fun createPermissiveHttpClient(): OkHttpClient {
-        return try {
-            val trustAllCerts = arrayOf<TrustManager>(object : X509TrustManager {
-                override fun checkClientTrusted(chain: Array<out X509Certificate>?, authType: String?) {}
-                override fun checkServerTrusted(chain: Array<out X509Certificate>?, authType: String?) {}
-                override fun getAcceptedIssuers(): Array<X509Certificate> = arrayOf()
-            })
-            val sslContext = SSLContext.getInstance("TLS")
-            sslContext.init(null, trustAllCerts, SecureRandom())
-            OkHttpClient.Builder()
-                .sslSocketFactory(sslContext.socketFactory, trustAllCerts[0] as X509TrustManager)
-                .hostnameVerifier { _, _ -> true }
-                .connectTimeout(8, TimeUnit.SECONDS)
-                .readTimeout(8, TimeUnit.SECONDS)
-                .retryOnConnectionFailure(true)
-                .build()
-        } catch (e: Exception) {
-            OkHttpClient.Builder()
-                .connectTimeout(8, TimeUnit.SECONDS)
-                .readTimeout(8, TimeUnit.SECONDS)
-                .build()
-        }
-    }
 }

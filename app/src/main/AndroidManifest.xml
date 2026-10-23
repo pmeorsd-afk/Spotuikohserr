@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
@@ -11,6 +12,7 @@
         android:maxSdkVersion="28"/>
 
     <queries>
+        <provider android:authorities="androidx.car.app.connection" />
         <package android:name="com.waze" />
         <package android:name="com.music.spotui" />
         <package android:name="com.music.spotui.admin" />
@@ -44,10 +46,34 @@
             </intent-filter>
         </activity>
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.updates"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/update_file_paths" />
+        </provider>
+
         <!-- Android Auto: declares the app as a media app for the car. -->
+        <provider
+            android:name=".ui.notification.AutoArtworkProvider"
+            android:authorities="${applicationId}.auto.artwork"
+            android:exported="true" />
         <meta-data
             android:name="com.google.android.gms.car.application"
             android:resource="@xml/automotive_app_desc" />
+        <meta-data
+            android:name="com.google.android.gms.car.application.theme"
+            android:resource="@style/SpotUIAutoTheme" />
+
+        <receiver
+            android:name=".ui.notification.ResumeMediaButtonReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
 
         <service
             android:name=".ui.notification.PlaybackService"

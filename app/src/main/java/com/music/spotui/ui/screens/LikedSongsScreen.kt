@@ -129,7 +129,7 @@ fun LikedSongsScreen(navController: NavController) {
 
     LaunchedEffect(rawSongs) {
         if (rawSongs.isNotEmpty()) {
-            SongPlayer.prefetchList(rawSongs.map { it.url }, context)
+            SongPlayer.prefetchSongs(rawSongs, context)
         }
     }
 

@@ -1,0 +1,96 @@
+{
+  "spotify:artist:1IAEef07H0fd9aA8aUHUlL": {
+    "__typename": "Artist",
+    "uri": "spotify:artist:1IAEef07H0fd9aA8aUHUlL",
+    "relatedContent": {
+      "featuringV2": {
+        "items": [
+          {
+            "data": {
+              "__typename": "Playlist",
+              "id": "37i9dQZF1DZ06evO0XEWbA",
+              "images": {
+                "items": [
+                  {
+                    "sources": [
+                      {
+                        "height": null,
+                        "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/1IAEef07H0fd9aA8aUHUlL/he",
+                        "width": null
+                      }
+                    ]
+                  }
+                ]
+              },
+              "name": "עומר אדם This Is‏",
+              "uri": "spotify:playlist:37i9dQZF1DZ06evO0XEWbA"
+            }
+          },
+          {
+            "data": {
+              "__typename": "Playlist",
+              "id": "37i9dQZF1DWSYF6geMtQMW",
+              "images": {
+                "items": [
+                  {
+                    "sources": [
+                      {
+                        "height": null,
+                        "url": "https://i.scdn.co/image/ab67706f00000002472aa0a59f778d417bc62ed4",
+                        "width": null
+                      }
+                    ]
+                  }
+                ]
+              },
+              "name": "הלהיטים הגדולים של ישראל",
+              "uri": "spotify:playlist:37i9dQZF1DWSYF6geMtQMW"
+            }
+          },
+          {
+            "data": {
+              "__typename": "Playlist",
+              "id": "37i9dQZF1DWT9L7hoCDtjB",
+              "images": {
+                "items": [
+                  {
+                    "sources": [
+                      {
+                        "height": null,
+                        "url": "https://i.scdn.co/image/ab67706f000000024b2d17672ad5961d4d1316a8",
+                        "width": null
+                      }
+                    ]
+                  }
+                ]
+              },
+              "name": "ים תיכוני חדש",
+              "uri": "spotify:playlist:37i9dQZF1DWT9L7hoCDtjB"
+            }
+          },
+          {
+            "data": {
+              "__typename": "Playlist",
+              "id": "37i9dQZF1DX3zGuzLhXjyK",
+              "images": {
+                "items": [
+                  {
+                    "sources": [
+                      {
+                        "height": null,
+                        "url": "https://i.scdn.co/image/ab67706f00000002aa512c0f102f89b654d2c03a",
+                        "width": null
+                      }
+                    ]
+                  }
+                ]
+              },
+              "name": "המיטב של העשור בשבילכם",
+              "uri": "spotify:playlist:37i9dQZF1DX3zGuzLhXjyK"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

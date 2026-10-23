@@ -17,6 +17,7 @@ object WazeDetector {
      * so the overlay and usage-stats permissions this object used to also check for are gone.
      */
     fun hasScreenDetectorPermission(context: Context): Boolean {
+        if (Settings.Secure.getInt(context.contentResolver, Settings.Secure.ACCESSIBILITY_ENABLED, 0) != 1) return false
         val component = ComponentName(context, com.music.spotui.service.WazeScreenAccessibilityService::class.java)
         val enabled = Settings.Secure.getString(
             context.contentResolver,

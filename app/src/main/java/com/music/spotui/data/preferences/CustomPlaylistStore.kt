@@ -14,7 +14,8 @@ private const val KEY_PLAYLISTS = "playlists"
  * NEVER invents or mocks dummy IDs.
  */
 fun SongsModel.toTrackKey(): String =
-    if (spotifyTrackId.isNotBlank()) spotifyTrackId else id.toString()
+    if (isPodcast()) requireNotNull(episodeSaveKey(this)) { "Episode requires exact identity" }
+    else if (spotifyTrackId.isNotBlank()) spotifyTrackId else id.toString()
 
 data class CustomPlaylist(
     val id: String,
@@ -49,7 +50,10 @@ object CustomPlaylistStore {
                             url = to.getString("url"),
                             spotifyTrackId = to.optString("spotifyTrackId", ""),
                             explicit = to.optBoolean("explicit", false),
-                            durationMs = to.optInt("durationMs", 0)
+                            durationMs = to.optInt("durationMs", 0),
+                            mediaType = if (to.optString("mediaType") == "PODCAST_EPISODE" || to.optString("url").startsWith("episode:"))
+                                com.music.spotui.data.entity.MediaType.PODCAST_EPISODE else com.music.spotui.data.entity.MediaType.TRACK,
+                            podcastShowId = to.optString("podcastShowId")
                         )
                     }.getOrNull()
                 }
@@ -69,7 +73,13 @@ object CustomPlaylistStore {
                     name = o.getString("name"),
                     coverUri = sanitizedCover,
                     updatedAt = o.optLong("updatedAt", 0L),
-                    songKeys = keys,
+                    // Upgrade only keys backed by explicit episode metadata; preserve unknown keys.
+                    songKeys = keys.flatMap { key ->
+                        val typed = tracks.filter { it.isPodcast() && episodeSaveKey(it) != null &&
+                            (it.spotifyTrackId.ifBlank { it.id.toString() } == key) }
+                        if (typed.isEmpty()) listOf(key) else typed.map { it.toTrackKey() } +
+                            if (tracks.any { !it.isPodcast() && it.toTrackKey() == key }) listOf(key) else emptyList()
+                    }.distinct(),
                     cachedTracks = tracks
                 )
             }.sortedByDescending { it.updatedAt }
@@ -77,11 +87,12 @@ object CustomPlaylistStore {
     }
 
     fun createPlaylist(context: Context, name: String, initialSong: SongsModel? = null): CustomPlaylist {
+        require(initialSong == null || !initialSong.isPodcast() || episodeSaveKey(initialSong) != null)
         val current = getPlaylists(context).toMutableList()
         val key = initialSong?.toTrackKey()
         val isAllowed = initialSong != null && com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(initialSong)
         val newPl = CustomPlaylist(
-            id = "custom_" + System.currentTimeMillis(),
+            id = "custom_" + java.util.UUID.randomUUID(),
             name = name.trim(),
             coverUri = if (isAllowed) initialSong.coverUri.orEmpty() else "",
             updatedAt = System.currentTimeMillis(),
@@ -95,6 +106,7 @@ object CustomPlaylistStore {
     }
 
     fun toggleSong(context: Context, playlistId: String, song: SongsModel): Boolean {
+        if (song.isPodcast() && episodeSaveKey(song) == null) return false
         val current = getPlaylists(context).toMutableList()
         val idx = current.indexOfFirst { it.id == playlistId }
         if (idx == -1) return false
@@ -129,8 +141,11 @@ object CustomPlaylistStore {
 
     fun isSongInPlaylist(context: Context, playlistId: String, song: SongsModel): Boolean {
         val pl = getPlaylists(context).firstOrNull { it.id == playlistId } ?: return false
-        return pl.songKeys.contains(song.toTrackKey())
+        return containsSong(pl, song)
     }
+
+    fun containsSong(playlist: CustomPlaylist, song: SongsModel): Boolean =
+        (!song.isPodcast() || episodeSaveKey(song) != null) && playlist.songKeys.contains(song.toTrackKey())
 
     fun deletePlaylist(context: Context, playlistId: String): Boolean {
         val current = getPlaylists(context).toMutableList()
@@ -191,6 +206,8 @@ object CustomPlaylistStore {
                         put("spotifyTrackId", t.spotifyTrackId)
                         put("explicit", t.explicit)
                         put("durationMs", t.durationMs)
+                        put("mediaType", t.mediaType.name)
+                        put("podcastShowId", t.podcastShowId)
                     })
                 }
                 put("cachedTracks", tArr)

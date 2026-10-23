@@ -62,7 +62,16 @@ fun EpisodeCardItem(
     onDownloadClick: () -> Unit = {},
     onShareClick: () -> Unit = {},
     onMoreClick: () -> Unit = {},
+    showDownloadAction: Boolean = true,
+    showPageStyle: Boolean = false,
+    coverContent: (@Composable (Modifier) -> Unit)? = null,
 ) {
+    if (showPageStyle) {
+        PodcastShowEpisodeCard(ep, showCoverUri, isPlayingCurrent, isPlayingActive, isSaved,
+            onEpisodeClick, onTogglePlay, onSaveClick, onDownloadClick, onShareClick, onMoreClick,
+            showDownloadAction)
+        return
+    }
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -79,14 +88,13 @@ fun EpisodeCardItem(
             verticalAlignment = Alignment.Top,
             modifier = Modifier.fillMaxWidth()
         ) {
-            GlideImage(
+            val coverModifier = Modifier.size(56.dp).clip(RoundedCornerShape(6.dp))
+            if (coverContent != null) coverContent(coverModifier) else GlideImage(
                 model = ep.coverUri.ifBlank { showCoverUri.orEmpty() },
                 contentScale = ContentScale.Crop,
                 failure = placeholder(R.drawable.placeholder),
                 loading = placeholder(R.drawable.placeholder),
-                modifier = Modifier
-                    .size(56.dp)
-                    .clip(RoundedCornerShape(6.dp)),
+                modifier = coverModifier,
                 isAllowed = KosherWhitelistManager.isSongWhitelisted(ep.toSongModel()),
                 contentDescription = ep.title,
             )
@@ -142,22 +150,11 @@ fun EpisodeCardItem(
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 // 1. Save (+) -> Opens SavedInSheet exactly like Spotify
-                Icon(
-                    painter = painterResource(if (isSaved) R.drawable.added else R.drawable.ic_add),
-                    contentDescription = if (isSaved) "נשמר" else "הוסף",
-                    tint = if (isSaved) Color(0xFF1ED760) else Color(0xFFB3B3B3),
-                    modifier = Modifier
-                        .size(24.dp)
-                        .clickable(
-                            interactionSource = remember { MutableInteractionSource() },
-                            indication = null
-                        ) {
-                            onSaveClick()
-                        }
-                )
+                SpotifyPlusButton(isSaved, onSaveClick, size = 24.dp,
+                    unsavedTint = Color(0xFFB3B3B3), itemKey = ep.id)
 
                 // 2. Download (↓)
-                Icon(
+                if (showDownloadAction) Icon(
                     painter = painterResource(R.drawable.ic_spotify_download),
                     contentDescription = "הורדה",
                     tint = Color(0xFFB3B3B3),

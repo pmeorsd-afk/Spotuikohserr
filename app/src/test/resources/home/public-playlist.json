@@ -1,0 +1,117 @@
+{
+  "spotify:playlist:37i9dQZF1E4wmWec21cCcJ": {
+    "__typename": "Playlist",
+    "content": {
+      "items": [
+        {
+          "itemV2": {
+            "data": {
+              "__typename": "Track",
+              "uri": "spotify:track:5ppuL7dOIhd7td0YCJJuwf",
+              "name": "טקילה",
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:1IAEef07H0fd9aA8aUHUlL",
+                    "profile": {
+                      "name": "עומר אדם"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "itemV2": {
+            "data": {
+              "__typename": "Track",
+              "uri": "spotify:track:7rU2eldvcR7Iwu07Z9A8w3",
+              "name": "אם את כבר הולכת",
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:4ZXLucEFePscKcgUlD0Sf9",
+                    "profile": {
+                      "name": "נדב חנציס"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "itemV2": {
+            "data": {
+              "__typename": "Track",
+              "uri": "spotify:track:0D9A15ZzO3VzLIYqOfm6QB",
+              "name": "אני חוזר",
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:36TG4OFhKuCHnTFCa6BEh7",
+                    "profile": {
+                      "name": "מתן חסן"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "itemV2": {
+            "data": {
+              "__typename": "Track",
+              "uri": "spotify:track:79ceEymympExEIdkZOtC2t",
+              "name": "שקט Live",
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:3VTm1513t2LL1mSKzzyQuj",
+                    "profile": {
+                      "name": "ישי ריבו"
+                    }
+                  },
+                  {
+                    "uri": "spotify:artist:1IAEef07H0fd9aA8aUHUlL",
+                    "profile": {
+                      "name": "עומר אדם"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "totalCount": 50
+    },
+    "description": "עם נדב חנציס, ישי ריבו, מתן חסן ועוד",
+    "followers": 24631,
+    "id": "37i9dQZF1E4wmWec21cCcJ",
+    "images": {
+      "items": [
+        {
+          "sources": [
+            {
+              "height": null,
+              "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/1IAEef07H0fd9aA8aUHUlL/he",
+              "width": null
+            }
+          ]
+        }
+      ]
+    },
+    "name": "רדיו לפי עומר אדם",
+    "ownerV2": {
+      "data": {
+        "name": "Spotify",
+        "uri": "spotify:user:spotify",
+        "username": "spotify"
+      }
+    },
+    "uri": "spotify:playlist:37i9dQZF1E4wmWec21cCcJ"
+  }
+}

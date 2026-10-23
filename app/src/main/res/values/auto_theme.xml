@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android Auto only: phone/splash themes remain unchanged. The host chooses a contrasting icon. -->
+    <color name="auto_accent_green">#2CF261</color>
+    <style name="SpotUIAutoTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:colorAccent">@color/auto_accent_green</item>
+    </style>
+</resources>

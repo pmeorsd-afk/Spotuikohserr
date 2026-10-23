@@ -23,6 +23,7 @@ data class RecentItem(
     val explicit: Boolean = false,
     val durationMs: Int = 0,
     val podcastShowId: String = "",
+    val collectionId: String = "", // Exact album id; legacy name-only rows never guess one.
 )
 
 private const val PREF = "RecentItems"
@@ -35,6 +36,7 @@ private fun RecentItem.toJson(): JSONObject = JSONObject().apply {
     put("songUrl", songUrl); put("spotifyTrackId", spotifyTrackId)
     put("explicit", explicit); put("durationMs", durationMs)
     put("podcastShowId", podcastShowId)
+    put("collectionId", collectionId)
 }
 
 private fun JSONObject.toRecentItem(): RecentItem = RecentItem(
@@ -44,6 +46,7 @@ private fun JSONObject.toRecentItem(): RecentItem = RecentItem(
     songUrl = optString("songUrl"), spotifyTrackId = optString("spotifyTrackId"),
     explicit = optBoolean("explicit", false), durationMs = optInt("durationMs", 0),
     podcastShowId = optString("podcastShowId"),
+    collectionId = optString("collectionId"),
 )
 
 fun getRecentItems(context: Context): List<RecentItem> {

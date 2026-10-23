@@ -24,6 +24,10 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.ensureActive
+import com.music.spotui.ui.search.LatestSearchRequest
+import com.music.spotui.ui.search.SearchSuggestions
+import com.music.spotui.ui.search.searchRequestText
 import javax.inject.Inject
 
 data class UnifiedSearchResults(
@@ -33,6 +37,7 @@ data class UnifiedSearchResults(
     val artists: List<ArtistsModel> = emptyList(),
     val shows: List<PodcastModel> = emptyList(),
     val episodes: List<SongsModel> = emptyList(),
+    val spotifyPlaylists: List<com.music.spotui.data.entity.LibraryEntry> = emptyList(),
 )
 
 @HiltViewModel
@@ -43,6 +48,8 @@ class SearchViewModel @Inject constructor(
 
     private val _unifiedResults = MutableStateFlow<Response<UnifiedSearchResults>>(Response.Success(UnifiedSearchResults()))
     val unifiedResults: StateFlow<Response<UnifiedSearchResults>> = _unifiedResults
+    private val _searching = MutableStateFlow(false)
+    val searching: StateFlow<Boolean> = _searching
 
     private val _suggestions = MutableStateFlow<List<String>>(emptyList())
     val suggestions: StateFlow<List<String>> = _suggestions
@@ -53,38 +60,25 @@ class SearchViewModel @Inject constructor(
         .build()
 
     private var suggestionJob: Job? = null
+    private val suggestionRequests = LatestSearchRequest()
+    private val searchRequests = LatestSearchRequest()
+    private var lastQuery: String? = null
 
     fun fetchSuggestions(query: String) {
         suggestionJob?.cancel()
+        val request = suggestionRequests.begin()
+        _suggestions.value = emptyList()
         if (query.isBlank()) {
             _suggestions.value = emptyList()
             return
         }
         suggestionJob = viewModelScope.launch(Dispatchers.IO) {
-            val list = mutableListOf<String>()
-            runCatching {
-                val encoded = java.net.URLEncoder.encode(query, "UTF-8")
-                val url = "https://suggestqueries-clients6.youtube.com/complete/search?client=firefox&ds=yt&q=$encoded&hl=iw&gl=IL"
-                val request = okhttp3.Request.Builder()
-                    .url(url)
-                    .header("User-Agent", "Mozilla/5.0")
-                    .build()
-                val response = httpClient.newCall(request).execute()
-                val body = response.body?.string()
-                if (!body.isNullOrBlank()) {
-                    val jsonArray = org.json.JSONArray(body)
-                    val array = jsonArray.optJSONArray(1)
-                    if (array != null) {
-                        for (i in 0 until minOf(array.length(), 6)) {
-                            val item = array.optString(i)
-                            if (item.isNotBlank() && !list.contains(item)) {
-                                list.add(item)
-                            }
-                        }
-                    }
-                }
-            }
-            _suggestions.value = list
+            delay(180)
+            val list = runCatching {
+                SearchSuggestions.fetch(httpClient, query)
+            }.getOrDefault(emptyList())
+            ensureActive()
+            suggestionRequests.publish(request) { _suggestions.value = list }
         }
     }
 
@@ -136,23 +130,40 @@ class SearchViewModel @Inject constructor(
         currentSongState.updateSongState(coverUri, title, singer, playingState, songId, songIndex, album)
     }
 
-    fun search(query: String) {
+    fun search(text: String, force: Boolean = false) {
+        val query = searchRequestText(text)
+        if (!force && query == lastQuery) return
+        lastQuery = query
         searchJob?.cancel()
+        val request = searchRequests.begin()
+        fetchSuggestions(query)
         if (query.isBlank()) {
+            _searching.value = false
             _suggestions.value = emptyList()
             _unifiedResults.value = Response.Success(UnifiedSearchResults())
             _songs.value = Response.Success(emptyList())
             return
         }
+        _unifiedResults.value = Response.Loading()
+        _songs.value = Response.Loading()
+        _searching.value = true
         searchJob = viewModelScope.launch(Dispatchers.IO) {
             delay(150) // debounce for real-time typing
-            _unifiedResults.value = Response.Loading()
 
             // Query Spotify and YouTube Music in parallel
             val spotifyDeferred = async {
                 runCatching {
                     var last: Response<SearchResults> = Response.Loading()
                     repository.searchEverything(query).collect { if (it !is Response.Loading) last = it }
+                    ensureActive()
+                    (last as? Response.Success)?.data?.let { result ->
+                        searchRequests.publish(request) {
+                            _unifiedResults.value = Response.Success(UnifiedSearchResults(songs = result.songs,
+                                albums = result.albums, artists = result.artists, shows = result.shows, episodes = result.episodes,
+                                spotifyPlaylists = result.playlists))
+                            _songs.value = Response.Success(result.songs)
+                        }
+                    }
                     last
                 }.getOrNull()
             }
@@ -173,9 +184,12 @@ class SearchViewModel @Inject constructor(
                 }.getOrNull()
             }
 
-            val spotifyRes = (spotifyDeferred.await() as? Response.Success)?.data ?: SearchResults()
-            val ytGeneral = (ytDeferred.await() as? Response.Success)?.data.orEmpty()
-            val ytPlaylists = (ytPlaylistsDeferred.await() as? Response.Success)?.data.orEmpty().filterIsInstance<PlaylistItem>()
+            val spotifyResponse = spotifyDeferred.await()
+            val ytResponse = ytDeferred.await()
+            val ytPlaylistResponse = ytPlaylistsDeferred.await()
+            val spotifyRes = (spotifyResponse as? Response.Success)?.data ?: SearchResults()
+            val ytGeneral = (ytResponse as? Response.Success)?.data.orEmpty()
+            val ytPlaylists = (ytPlaylistResponse as? Response.Success)?.data.orEmpty().filterIsInstance<PlaylistItem>()
 
             // Extract YouTube songs
             val ytSongs = ytGeneral.filterIsInstance<SongItem>().map { item ->
@@ -232,12 +246,18 @@ class SearchViewModel @Inject constructor(
                 artists = combinedArtists,
                 shows = spotifyRes.shows,
                 episodes = spotifyRes.episodes,
+                spotifyPlaylists = spotifyRes.playlists,
             )
 
             android.util.Log.d("SearchViewModel", "searchUnified: query='$query' -> shows=${unified.shows.size}, episodes=${unified.episodes.size}, songs=${unified.songs.size}")
 
-            _unifiedResults.value = Response.Success(unified)
-            _songs.value = Response.Success(combinedSongs)
+            ensureActive()
+            searchRequests.publish(request) {
+                _searching.value = false
+                _unifiedResults.value = if (spotifyResponse !is Response.Success && ytResponse !is Response.Success && ytPlaylistResponse !is Response.Success)
+                    Response.Error("לא ניתן לחפש כרגע") else Response.Success(unified)
+                _songs.value = Response.Success(combinedSongs)
+            }
         }
     }
 }

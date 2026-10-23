@@ -49,7 +49,10 @@ import androidx.compose.ui.unit.sp
 import com.music.spotui.MainActivity
 import com.music.spotui.R
 import com.music.spotui.data.entity.SongsModel
-import com.music.spotui.data.preferences.getListeningHistory
+import com.music.spotui.data.local.LocalListeningTracker
+import com.music.spotui.playback.PlaybackSnapshot
+import com.music.spotui.playback.PlaybackSnapshotCodec
+import com.music.spotui.playback.WazeResumeResolver
 import com.music.spotui.data.preferences.getWazeButtonSize
 import com.music.spotui.di.CurrentSongState
 import com.music.spotui.di.SongPlayer
@@ -76,7 +79,6 @@ fun WazeOverlayView(
 
     val liveTitle = currentSongState.title.value
     val liveSinger = currentSongState.singer.value
-    val liveCoverUri = currentSongState.coverUri.value
     val liveSongId = currentSongState.songId.value
 
     val lastSavedTrack = remember(liveTitle, isExpanded) {
@@ -85,8 +87,11 @@ fun WazeOverlayView(
 
     val title = if (liveTitle.isNotBlank()) liveTitle else lastSavedTrack?.title.orEmpty()
     val singer = if (liveSinger.isNotBlank()) liveSinger else lastSavedTrack?.singer.orEmpty()
-    val coverUri = if (liveCoverUri.isNotBlank()) liveCoverUri else lastSavedTrack?.coverUri.orEmpty()
     val currentSongId = if (liveSongId > 0) liveSongId else lastSavedTrack?.songId ?: 0
+    val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
+    val artworkSong = WazeOverlayArtwork.current(currentSongState.queue.value, liveSongId,
+        liveTitle, liveSinger, lastSavedTrack?.song, SongPlayer.ownedPlaybackSnapshot()?.song)
+    val artworkAllowed = remember(artworkSong, whitelistVersion) { WazeOverlayArtwork.allowed(artworkSong) }
 
     var progress by remember { mutableFloatStateOf(0f) }
     var dynamicRecommendations by remember { mutableStateOf<List<SongsModel>>(emptyList()) }
@@ -291,7 +296,8 @@ fun WazeOverlayView(
                                             .background(Color(0xFF2C2C2C))
                                     ) {
                                         GlideImage(
-                                            model = coverUri.ifBlank { null },
+                                            model = artworkSong?.coverUri?.ifBlank { null },
+                                            isAllowed = artworkAllowed,
                                             contentDescription = title,
                                             modifier = Modifier.fillMaxSize(),
                                             contentScale = ContentScale.Crop
@@ -405,9 +411,7 @@ fun WazeOverlayView(
                                                         // ההשהיה סוגרת את המיני-נגן וחוזרת לכפתור בלבד
                                                         closePlayer()
                                                     } else {
-                                                        SongPlayer.play()
-                                                        currentSongState.updatePlayingState(true)
-                                                        isPlayingLive = true
+                                                        resumeFromPersistedTrack(context)
                                                     }
                                                 },
                                                 modifier = Modifier.size(44.dp)
@@ -500,10 +504,11 @@ fun WazeOverlayView(
                                 val seenKeys = mutableSetOf<String>()
 
                                 fun addSong(song: SongsModel) {
-                                    val key = (song.title + " - " + song.singer).lowercase().trim()
-                                    if (song.title.isNotBlank() && key !in seenKeys) {
+                                    val exact = WazeResumeResolver.normalize(song) ?: return
+                                    val key = exact.mediaType.name + ":" + exact.spotifyTrackId + ":" + exact.url
+                                    if (key !in seenKeys) {
                                         seenKeys.add(key)
-                                        result.add(song)
+                                        result.add(exact)
                                     }
                                 }
 
@@ -525,25 +530,12 @@ fun WazeOverlayView(
                                     if (result.size >= 18) break
                                 }
 
-                                // 4. History tracks (previously played real tracks with real covers)
-                                val history = getListeningHistory(context)
-                                for (entry in history) {
-                                    if (entry.title.isNotBlank()) {
-                                        val sId = if (entry.songId > 0) entry.songId else (entry.title + entry.singer).hashCode() and 0x7fffffff
-                                        addSong(
-                                            SongsModel(
-                                                id = sId,
-                                                title = entry.title,
-                                                singer = entry.singer,
-                                                coverUri = entry.image,
-                                                album = entry.album,
-                                                url = SongPlayer.buildSpotifyPlayQuery(sId.toString(), entry.title, entry.singer)
-                                            )
-                                        )
-                                    }
+                                // 4. Typed history retains the original episode/track identity.
+                                // Legacy title-only HistoryEntry records cannot safely become play queries.
+                                for (entry in LocalListeningTracker(context).recentTracks(18)) {
+                                    addSong(entry.toSongModel())
                                     if (result.size >= 18) break
                                 }
-
                                 result
                             }
 
@@ -557,21 +549,13 @@ fun WazeOverlayView(
                             ) {
                                 items(showListSongs) { song ->
                                     val isSelected = song.id == currentSongId
+                                    val allowed = remember(song, whitelistVersion) { WazeOverlayArtwork.allowed(song) }
                                     Column(
                                         horizontalAlignment = Alignment.CenterHorizontally,
                                         modifier = Modifier
                                             .clip(RoundedCornerShape(8.dp))
                                             .clickable {
-                                                currentSongState.updateSongState(
-                                                    coverUri = song.coverUri,
-                                                    title = song.title,
-                                                    singer = song.singer,
-                                                    playingState = true,
-                                                    songId = song.id,
-                                                    songIndex = showListSongs.indexOf(song),
-                                                    album = song.album
-                                                )
-                                                SongPlayer.playSong(song.url, context)
+                                                playOverlayItem(context, currentSongState, showListSongs, showListSongs.indexOf(song))
                                                 closePlayer()
                                             }
                                     ) {
@@ -586,6 +570,7 @@ fun WazeOverlayView(
                                         ) {
                                             GlideImage(
                                                 model = song.coverUri.ifBlank { null },
+                                                isAllowed = allowed,
                                                 contentDescription = song.title,
                                                 modifier = Modifier.fillMaxSize(),
                                                 contentScale = ContentScale.Crop
@@ -630,40 +615,25 @@ fun WazeOverlayView(
     }
 }
 
+private fun playOverlayItem(context: Context, state: CurrentSongState, queue: List<SongsModel>, index: Int) {
+    val song = queue.getOrNull(index)?.let(WazeResumeResolver::normalize) ?: return
+    SongPlayer.resumeResolvedPlayback(song, null, context) {
+        state.commitPlayback(com.music.spotui.playback.PlaybackQueueIdentity.select(song, queue))
+    }
+}
+
 private fun skipNext(context: Context, currentSongState: CurrentSongState) {
     val q = currentSongState.queue.value
-    val curIndex = currentSongState.songIndex.value
-    if (q.isNotEmpty() && curIndex >= 0 && curIndex + 1 < q.size) {
-        val nextSong = q[curIndex + 1]
-        currentSongState.updateSongState(
-            coverUri = nextSong.coverUri,
-            title = nextSong.title,
-            singer = nextSong.singer,
-            playingState = true,
-            songId = nextSong.id,
-            songIndex = curIndex + 1,
-            album = nextSong.album
-        )
-        SongPlayer.playSong(nextSong.url, context)
-    }
+    val active = SongPlayer.ownedPlaybackSnapshot()?.song ?: return
+    val index = q.indices.filter { WazeResumeResolver.sameMedia(q[it], active) }.singleOrNull() ?: return
+    if (index >= 0) playOverlayItem(context, currentSongState, q, index + 1)
 }
 
 private fun skipPrevious(context: Context, currentSongState: CurrentSongState) {
     val q = currentSongState.queue.value
-    val curIndex = currentSongState.songIndex.value
-    if (q.isNotEmpty() && curIndex > 0) {
-        val prevSong = q[curIndex - 1]
-        currentSongState.updateSongState(
-            coverUri = prevSong.coverUri,
-            title = prevSong.title,
-            singer = prevSong.singer,
-            playingState = true,
-            songId = prevSong.id,
-            songIndex = curIndex - 1,
-            album = prevSong.album
-        )
-        SongPlayer.playSong(prevSong.url, context)
-    }
+    val active = SongPlayer.ownedPlaybackSnapshot()?.song ?: return
+    val index = q.indices.filter { WazeResumeResolver.sameMedia(q[it], active) }.singleOrNull() ?: return
+    if (index > 0) playOverlayItem(context, currentSongState, q, index - 1)
 }
 
 private fun addToLiked(context: Context, currentSongState: CurrentSongState) {
@@ -682,6 +652,11 @@ private fun resumeFromPersistedTrack(context: Context) {
         putExtra("waze_resume_return_to_waze", true)
         putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_RETURN_TO_WAZE, true)
         if (track != null) {
+            track.song?.let { song ->
+                putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_PLAYBACK_SNAPSHOT,
+                    PlaybackSnapshotCodec.encode(PlaybackSnapshot(song, track.positionMs)))
+                putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_MEDIA_TYPE, song.mediaType.name)
+            }
             putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_SONG_ID, track.songId)
             putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_TITLE, track.title)
             putExtra(com.music.spotui.data.preferences.WazeResumeContract.EXTRA_SINGER, track.singer)

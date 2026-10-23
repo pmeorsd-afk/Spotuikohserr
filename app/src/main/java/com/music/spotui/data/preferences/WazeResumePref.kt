@@ -13,6 +13,8 @@ data class LastPlayedTrack(
     val singer: String,
     val album: String,
     val coverUri: String,
+    val song: com.music.spotui.data.entity.SongsModel? = null,
+    val positionMs: Long = 0L,
 )
 
 private const val PREFS_NAME = "waze_last_track"
@@ -37,31 +39,19 @@ fun saveLastPlayedTrack(context: Context, track: LastPlayedTrack) {
 }
 
 fun getLastPlayedTrack(context: Context): LastPlayedTrack? {
+    // Exact playback identity always precedes the legacy display-only Waze preference.
+    loadLastPlayback(context)?.let { (song, position) ->
+        return LastPlayedTrack(song.id, song.title, song.singer, song.album, song.coverUri, song, position)
+    }
     val p = prefs(context)
-    val title = p.getString(KEY_TITLE, null)
-    if (!title.isNullOrBlank()) {
-        val songId = p.getInt(KEY_SONG_ID, -1)
-        val singer = p.getString(KEY_SINGER, "") ?: ""
-        val effectiveId = if (songId > 0) songId else (title + singer).hashCode() and 0x7fffffff
-        return LastPlayedTrack(
-            songId = effectiveId,
-            title = title,
-            singer = singer,
-            album = p.getString(KEY_ALBUM, "") ?: "",
-            coverUri = p.getString(KEY_COVER_URI, "") ?: "",
-        )
-    }
-    // Fallback to PlaybackStatePref if WazeResumePref is not populated yet
-    return loadLastPlayback(context)?.first?.let { song ->
-        val sId = if (song.id > 0) song.id else (song.title + song.singer).hashCode() and 0x7fffffff
-        LastPlayedTrack(
-            songId = sId,
-            title = song.title,
-            singer = song.singer,
-            album = song.album,
-            coverUri = song.coverUri,
-        )
-    }
+    val title = p.getString(KEY_TITLE, null)?.takeIf { it.isNotBlank() } ?: return null
+    return LastPlayedTrack(
+        songId = p.getInt(KEY_SONG_ID, -1),
+        title = title,
+        singer = p.getString(KEY_SINGER, "").orEmpty(),
+        album = p.getString(KEY_ALBUM, "").orEmpty(),
+        coverUri = p.getString(KEY_COVER_URI, "").orEmpty(),
+    )
 }
 
 /**
@@ -70,6 +60,8 @@ fun getLastPlayedTrack(context: Context): LastPlayedTrack? {
  * Waze on its own. See CHANGES.md part 2.
  */
 object WazeResumeContract {
+    const val EXTRA_PLAYBACK_SNAPSHOT = "waze_resume_playback_snapshot"
+    const val EXTRA_MEDIA_TYPE = "waze_resume_media_type"
     const val EXTRA_SONG_ID = "waze_resume_song_id"
     const val EXTRA_TITLE = "waze_resume_title"
     const val EXTRA_SINGER = "waze_resume_singer"

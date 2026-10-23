@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -23,6 +24,7 @@ import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderColors
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -131,27 +133,19 @@ fun MiniPlayer(navController: NavHostController) {
     var isLiked by remember {
         mutableStateOf(false)
     }
-    val currentTrack = miniPlayerViewModel.queue.value.firstOrNull { it.id == songId }
-    val effectiveSong = currentTrack ?: SongsModel(
-        id = songId,
-        title = songTitle,
-        album = "",
-        singer = songSinger,
-        coverUri = songCoverUri,
-        url = "youtube:$songTitle $songSinger",
-        durationMs = SongPlayer.getDuration().toInt().coerceAtLeast(0)
-    )
+    val currentTrack = com.music.spotui.ui.library.savedMediaTarget(miniPlayerViewModel.queue.value, songId, songTitle, SongPlayer.ownedPlaybackSnapshot()?.song)
+    val savedRevision by com.music.spotui.data.preferences.likedSongsRevision.collectAsState()
     val likeState = miniPlayerViewModel.likeState.value
-    LaunchedEffect(likeState, songId, currentTrack) {
-        isLiked = isSongLiked(context, effectiveSong)
+    LaunchedEffect(likeState, songId, currentTrack, savedRevision) {
+        isLiked = currentTrack?.let { com.music.spotui.data.preferences.isSavedInAnyDestination(context, it) } == true
     }
     val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
-    var showSavedIn by remember { mutableStateOf(false) }
-    if (showSavedIn && currentTrack != null) {
+    var savedInSong by remember { mutableStateOf<SongsModel?>(null) }
+    savedInSong?.let { currentTrack ->
         SavedInSheet(
             song = currentTrack,
             context = context,
-            onDismiss = { showSavedIn = false },
+            onDismiss = { savedInSong = null },
             onLikedChanged = {
                 isLiked = it
                 miniPlayerViewModel.updateLikeState(!likeState)
@@ -170,144 +164,132 @@ fun MiniPlayer(navController: NavHostController) {
             .clipToBounds()
 
     ) {
-        Row(horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier
-                .fillMaxWidth()
-                //.background(Color.Green)
-                .padding(0.dp, 4.dp)
-                .clickable(
-                    interactionSource = remember { MutableInteractionSource() },
-                    indication = null
-                ) {
-                    navController.navigate(Routes.Player.route)
-                }
-        ){
+        BoxWithConstraints(Modifier.fillMaxWidth()) {
+            val saveButtonSize = 22.dp
+            val playButtonSize = 36.dp
+            // Reserve both controls before sizing the artwork/title area. The previous
+            // 260dp area squeezed the saved circle (and hid Play) on narrow viewports.
+            // Keep the original geometry wherever both controls already fit.
+            val infoWidth = (maxWidth - saveButtonSize - playButtonSize).coerceIn(0.dp, 260.dp)
 
-            Row(horizontalArrangement = Arrangement.Start,
+            Row(horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
-                    .width(260.dp)
-                    .clipToBounds()
-            ) {
-                GlideImage(
+                    .fillMaxWidth()
+                    //.background(Color.Green)
+                    .padding(0.dp, 4.dp)
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null
+                    ) {
+                        navController.navigate(Routes.Player.route)
+                    }
+            ){
+
+                Row(horizontalArrangement = Arrangement.Start,
+                    verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
-                        .padding(0.dp, 0.dp, 10.dp, 0.dp)
-                        .size(42.dp)
-                        .clip(RoundedCornerShape(6.dp))
-                    ,
-                    model = songCoverUri,
-                    contentScale = ContentScale.Crop,
-                    failure = placeholder(R.drawable.placeholder),
-                    loading = placeholder(R.drawable.placeholder),
-                    isAllowed = com.music.spotui.BuildConfig.IS_ADMIN ||
-                        com.music.spotui.util.KosherWhitelistManager.isTrackAllowed(currentTrack) ||
-                        com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(
-                            com.music.spotui.util.KosherWhitelistManager.canonicalTrackId(currentTrack)
-                                .ifBlank { currentTrack?.spotifyTrackId?.ifBlank { currentTrack?.url } },
-                            songTitle,
-                            songSinger
-                        ),
-                    contentDescription = ""
-                )
-                Column(
-                    modifier = Modifier
-                        .widthIn(Dp.Unspecified, 200.dp)
+                        .width(infoWidth)
+                        .clipToBounds()
                 ) {
-                    Text(text = songTitle, color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold, maxLines = 1, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis )
-                    Text(text = songSinger, color = Color.LightGray, fontSize = 12.sp, fontWeight = FontWeight.Medium, maxLines = 1, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
-                }
-            }
-
-            Row(
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.width(70.dp)
-            ) {
-
-                // Plus = save; green check = already saved. A second tap opens the
-                // "Saved in" sheet (Liked Songs + playlists) instead of unliking.
-                if (isLiked) {
-                    Icon(
-                        imageVector = Icons.Default.CheckCircle,
-                        tint = Color(0xFF1ED760),
+                    GlideImage(
                         modifier = Modifier
-                            .size(22.dp)
-                            .clickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = null
-                            ) { showSavedIn = true },
-                        contentDescription = "Saved",
+                            .padding(0.dp, 0.dp, 10.dp, 0.dp)
+                            .size(42.dp)
+                            .clip(RoundedCornerShape(6.dp))
+                        ,
+                        model = songCoverUri,
+                        contentScale = ContentScale.Crop,
+                        failure = placeholder(R.drawable.placeholder),
+                        loading = placeholder(R.drawable.placeholder),
+                        isAllowed = com.music.spotui.BuildConfig.IS_ADMIN ||
+                            com.music.spotui.util.KosherWhitelistManager.isTrackAllowed(currentTrack) ||
+                            com.music.spotui.util.KosherWhitelistManager.isTrackWhitelisted(
+                                com.music.spotui.util.KosherWhitelistManager.canonicalTrackId(currentTrack)
+                                    .ifBlank { currentTrack?.spotifyTrackId?.ifBlank { currentTrack?.url } },
+                                songTitle,
+                                songSinger
+                            ),
+                        contentDescription = ""
                     )
-                } else {
-                    Icon(
+                    Column(
                         modifier = Modifier
-                            .size(22.dp)
+                            .widthIn(Dp.Unspecified, 200.dp)
+                    ) {
+                        Text(text = songTitle, color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold, maxLines = 1, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis )
+                        Text(text = songSinger, color = Color.LightGray, fontSize = 12.sp, fontWeight = FontWeight.Medium, maxLines = 1, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
+                    }
+                }
+
+                Row(
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.width(70.dp)
+                ) {
+
+                    // Plus = save; green check = already saved. A second tap opens the
+                    // "Saved in" sheet (Liked Songs + playlists) instead of unliking.
+                    SpotifyPlusButton(isLiked, size = saveButtonSize,
+                        itemKey = currentTrack?.let { com.music.spotui.playback.PlaybackProgressStore.key(it) },
+                        enabled = currentTrack != null, onClick = {
+                            val target = currentTrack ?: return@SpotifyPlusButton
+                            if (com.music.spotui.data.preferences.saveToDefaultIfNeeded(context, target)) {
+                                isLiked = true
+                                savedInSong = target
+                                miniPlayerViewModel.updateLikeState(!likeState)
+                                if (!target.isPodcast() && target.spotifyTrackId.isNotBlank())
+                                    com.music.spotui.data.api.SpotifySync.setTrackSaved(context, target.spotifyTrackId, isSongLiked(context, target))
+                            }
+                        })
+
+
+                    Icon(
+                        painter = if (songPlayingState)
+                            painterResource(id = R.drawable.ic_playing)
+                        else
+                            painterResource(id = R.drawable.play_svgrepo_com)
+                        ,
+                        contentDescription = "",
+                        tint = Color.White,
+                        modifier = Modifier
+                            .size(playButtonSize)
+                            .padding(5.dp, 0.dp)
                             .clickable(
                                 interactionSource = remember { MutableInteractionSource() },
                                 indication = null
                             ) {
-                                addLikedSong(context, effectiveSong)
-                                isLiked = true
-                                miniPlayerViewModel.updateLikeState(!likeState)
-                                // Mirror the like to the real Spotify account if Spotify ID exists.
-                                if (effectiveSong.spotifyTrackId.isNotBlank()) {
-                                    com.music.spotui.data.api.SpotifySync.setTrackSaved(
-                                        context, effectiveSong.spotifyTrackId, true)
+                                if (songPlayingState) {
+                                    SongPlayer.pause()
+                                    miniPlayerViewModel.updateSongState(
+                                        songCoverUri,
+                                        songTitle,
+                                        songSinger,
+                                        false,
+                                        songId,
+                                        songIndex,
+                                        songAlbum
+                                    )
+                                } else {
+                                    SongPlayer.play()
+                                    miniPlayerViewModel.updateSongState(
+                                        songCoverUri,
+                                        songTitle,
+                                        songSinger,
+                                        true,
+                                        songId,
+                                        songIndex,
+                                        songAlbum
+                                    )
                                 }
-                            },
-                        painter = painterResource(id = R.drawable.ic_add),
-                        tint = Color.White,
-                        contentDescription = "Add",
+                            }
                     )
                 }
 
 
-                Icon(
-                    painter = if (songPlayingState)
-                        painterResource(id = R.drawable.ic_playing)
-                    else
-                        painterResource(id = R.drawable.play_svgrepo_com)
-                    ,
-                    contentDescription = "",
-                    tint = Color.White,
-                    modifier = Modifier
-                        .size(36.dp)
-                        .padding(5.dp, 0.dp)
-                        .clickable(
-                            interactionSource = remember { MutableInteractionSource() },
-                            indication = null
-                        ) {
-                            if (songPlayingState) {
-                                SongPlayer.pause()
-                                miniPlayerViewModel.updateSongState(
-                                    songCoverUri,
-                                    songTitle,
-                                    songSinger,
-                                    false,
-                                    songId,
-                                    songIndex,
-                                    songAlbum
-                                )
-                            } else {
-                                SongPlayer.play()
-                                miniPlayerViewModel.updateSongState(
-                                    songCoverUri,
-                                    songTitle,
-                                    songSinger,
-                                    true,
-                                    songId,
-                                    songIndex,
-                                    songAlbum
-                                )
-                            }
-                        }
-                )
             }
 
 
         }
-
 
         CustomSlider(
             value = songProgress,

@@ -9,12 +9,16 @@ import com.music.spotui.data.preferences.cacheFollowedArtists
 import com.music.spotui.data.preferences.cacheLibraryEntries
 import com.music.spotui.data.preferences.getCachedFollowedArtists
 import com.music.spotui.data.preferences.getCachedLibraryEntries
+import com.music.spotui.data.preferences.getFollowedShows
+import com.music.spotui.data.preferences.observeFollowedShows
 import com.music.spotui.ui.repository.AppRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -34,7 +38,18 @@ class LibraryViewModel @Inject constructor(
         MutableStateFlow(emptyList())
     val followedArtists: StateFlow<List<com.music.spotui.data.entity.ArtistsModel>> = _followedArtists
 
+    // Independent of the remote music-library response, including loading/error/offline states.
+    val followedPodcasts = observeFollowedShows(context)
+        .stateIn(viewModelScope, SharingStarted.Eagerly, getFollowedShows(context))
+
     init {
+        viewModelScope.launch {
+            com.music.spotui.data.preferences.savedCollectionsRevision.collect {
+                val current = (_entries.value as? Response.Success)?.data ?: getCachedLibraryEntries(context)
+                val merged = com.music.spotui.data.preferences.withSavedCollections(context, current)
+                if (merged.isNotEmpty() || _entries.value is Response.Success) _entries.value = Response.Success(merged)
+            }
+        }
         // Seed UI with the last-seen library immediately so it's visible offline.
         val cached = getCachedLibraryEntries(context)
         if (cached.isNotEmpty()) _entries.value = Response.Success(cached)
@@ -64,6 +79,12 @@ class LibraryViewModel @Inject constructor(
 
     fun deletePlaylist(playlistId: String) {
         val current = (_entries.value as? Response.Success)?.data
+        current?.firstOrNull { it.isPlaylist && it.spotifyId == playlistId }?.let { entry ->
+            if (com.music.spotui.data.preferences.validCollection(entry)) {
+                com.music.spotui.data.preferences.setCollectionSaved(context, entry, false)
+                if (!playlistId.startsWith("youtube:")) com.music.spotui.data.api.SpotifySync.setPlaylistSaved(context, playlistId, false)
+            }
+        }
         if (current != null) {
             val updated = current.filterNot { it.spotifyId == playlistId }
             _entries.value = Response.Success(updated)

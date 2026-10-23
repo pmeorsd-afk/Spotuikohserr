@@ -148,6 +148,7 @@ fun AlbumScreen(
                 albumName = singleSong?.title ?: albumName,
                 initialArtist = singleSong?.singer ?: artist,
                 initialCover = singleSong?.coverUri ?: coverUrl,
+                initialAlbumId = albumId,
                 singleSong = singleSong,
                 context = context
             )
@@ -166,6 +167,7 @@ fun SumUpAlbumScreen(
     albumName: String,
     initialArtist: String = "",
     initialCover: String = "",
+    initialAlbumId: String = "",
     singleSong: SongsModel? = null,
     context: Context
 ) {
@@ -176,7 +178,7 @@ fun SumUpAlbumScreen(
     // (near-)instantly instead of resolving YouTube on the tap.
     LaunchedEffect(albumSongs) {
         if (albumSongs.isNotEmpty()) {
-            SongPlayer.prefetchList(albumSongs.map { it.url }, context)
+            SongPlayer.prefetchSongs(albumSongs, context)
         }
     }
 
@@ -194,13 +196,15 @@ fun SumUpAlbumScreen(
             )
         )
     } else {
-        albumByName[albumName] ?: listOf(
+        (if (initialAlbumId.isNotBlank()) albums.filter { it.spotifyId == initialAlbumId }.takeIf { it.isNotEmpty() }
+        else albumByName[albumName]) ?: listOf(
             AlbumsModel(
                 id = albumName.hashCode() and 0x7fffffff,
                 artists = initialArtist.ifBlank { albumSongs.firstOrNull()?.singer ?: "" },
                 coverUri = initialCover.ifBlank { albumSongs.firstOrNull()?.coverUri ?: "" },
                 name = albumName,
                 time = "",
+                spotifyId = initialAlbumId,
             )
         )
     }
@@ -215,7 +219,11 @@ fun SumUpAlbumScreen(
 
     }
 
-    var isAlbumLiked by remember { mutableStateOf( isAlbumLiked(context, album[0].id.toString())) }
+    val (collectionSaved, saveCollection) = com.music.spotui.ui.search.rememberCollectionSave(
+        if (singleSong == null) com.music.spotui.data.entity.LibraryEntry(album[0].spotifyId, album[0].name,
+            "אלבום • ${album[0].artists}", album[0].coverUri, false, album[0].artists) else null)
+    var legacyAlbumLiked by remember { mutableStateOf(isAlbumLiked(context, album[0].id.toString())) }
+    val isAlbumLiked = if (saveCollection != null) collectionSaved else legacyAlbumLiked
 
     var snackbarMessage by remember {
         mutableStateOf("")
@@ -395,15 +403,19 @@ fun SumUpAlbumScreen(
                                         interactionSource = remember { MutableInteractionSource() },
                                         indication = null
                                     ) {
-                                        if (isAlbumLiked) {
-                                            removeLikedAlbumId(context, album[0].id.toString())
-                                            snackbarMessage = "Removed from Library"
+                                        if (saveCollection != null) {
+                                            saveCollection()
                                         } else {
-                                            addLikedAlbumId(context, album[0].id.toString())
-                                            snackbarMessage = "Added to Library"
+                                            if (isAlbumLiked) {
+                                                removeLikedAlbumId(context, album[0].id.toString())
+                                                snackbarMessage = "Removed from Library"
+                                            } else {
+                                                addLikedAlbumId(context, album[0].id.toString())
+                                                snackbarMessage = "Added to Library"
+                                            }
+                                            legacyAlbumLiked = isAlbumLiked(context, album[0].id.toString())
+                                            snackbarVisible = true
                                         }
-                                        isAlbumLiked = isAlbumLiked(context, album[0].id.toString())
-                                        snackbarVisible = true
 
                                     },
                                 painter = if (isAlbumLiked){

@@ -1,446 +1,131 @@
 package com.music.spotui.ui.screens
 
-import android.annotation.SuppressLint
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.combinedClickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Arrangement
+import android.widget.Toast
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material3.CenterAlignedTopAppBar
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.foundation.layout.consumeWindowInsets
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBarDefaults
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.vectorResource
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import com.music.spotui.ui.collections.RadioPreviewScreen
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
-import com.music.spotui.ui.components.GlideImage
-import com.bumptech.glide.integration.compose.placeholder
-import com.music.spotui.R
 import com.music.spotui.data.api.Response
 import com.music.spotui.data.entity.AlbumsModel
-import com.music.spotui.di.Palette
+import com.music.spotui.data.entity.HomeItem
+import com.music.spotui.data.entity.SongsModel
+import com.music.spotui.data.preferences.getCachedLibraryEntries
 import com.music.spotui.di.SongPlayer
-import com.music.spotui.ui.components.Loader
-import com.music.spotui.ui.theme.AppBackground
-import com.music.spotui.ui.theme.AppPalette
+import com.music.spotui.ui.components.HomeCoverMenuSheet
+import com.music.spotui.ui.components.SongOptionsSheet
+import com.music.spotui.ui.collections.CollectionContent
+import com.music.spotui.ui.collections.CollectionPresentation
 import com.music.spotui.ui.viewmodel.PlaylistViewModel
+import com.music.spotui.util.KosherWhitelistManager
+import com.music.spotui.util.HomeArtworkPermissions
+import com.music.spotui.ui.collections.isRadioCollection
+import com.music.spotui.ui.navigation.playlistRoute
+import com.music.spotui.ui.viewmodel.CollectionRecommendationsViewModel
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalGlideComposeApi::class, ExperimentalFoundationApi::class)
 @Composable
-fun PlaylistScreen(navController: NavController, playlistId: String, playlistName: String = "") {
-
-    val playlistViewModel: PlaylistViewModel = hiltViewModel()
-    val songsResp by playlistViewModel.songs.collectAsState()
-    val playlistResp by playlistViewModel.playlist.collectAsState()
+fun PlaylistScreen(navController: NavController, playlistId: String, playlistName: String = "", homeCover: String = "") {
+    val vm: PlaylistViewModel = hiltViewModel()
+    val songsResponse by vm.songs.collectAsState()
+    val playlistResponse by vm.playlist.collectAsState()
     val context = LocalContext.current
-
-    LaunchedEffect(playlistId) {
-        playlistViewModel.loadPlaylist(playlistId)
+    HomeImageApprovalRefresh(LocalLifecycleOwner.current)
+    LaunchedEffect(playlistId) { vm.loadPlaylist(playlistId) }
+    val songs = (songsResponse as? Response.Success)?.data.orEmpty()
+    val playlist = (playlistResponse as? Response.Success)?.data
+        ?: AlbumsModel(id = playlistId.hashCode() and 0x7fffffff, artists = "", coverUri = "", name = playlistName, time = "")
+    // Keep the established prefetch and playback callbacks; this change is presentation only.
+    LaunchedEffect(songs) { if (songs.isNotEmpty()) SongPlayer.prefetchSongs(songs, context) }
+    var menuSong by remember { mutableStateOf<SongsModel?>(null) }
+    menuSong?.let { SongOptionsSheet(it, navController, context, onDismiss = { menuSong = null }) }
+    var collectionMenu by remember { mutableStateOf(false) }
+    var savedRevision by remember { mutableIntStateOf(0) }
+    val cover = HomeArtworkPermissions.imageUrl(homeCover) ?: playlist.coverUri
+    val item = HomeItem.Playlist(playlist.name.ifBlank { playlistName }, cover, playlist.artists, playlistId)
+    val radio = isRadioCollection(item.name) || isRadioCollection(playlistName)
+    var recommendationMenu by remember { mutableStateOf<HomeItem.Playlist?>(null) }
+    var scrollReset by remember { mutableIntStateOf(0) }
+    if (collectionMenu) HomeCoverMenuSheet(item, onOpen = { scrollReset++ }, onSongOptions = {},
+        onDismiss = { collectionMenu = false; savedRevision++ })
+    recommendationMenu?.let { recommended ->
+        HomeCoverMenuSheet(recommended,
+            onOpen = { navController.navigate(playlistRoute(recommended.id, recommended.name, recommended.imageUrl)) },
+            onSongOptions = {}, onDismiss = { recommendationMenu = null })
     }
-
-    val songs = (songsResp as? Response.Success)?.data.orEmpty()
-    val playlist = (playlistResp as? Response.Success)?.data
-        ?: AlbumsModel(
-            id = playlistId.hashCode() and 0x7fffffff,
-            artists = "",
-            coverUri = songs.firstOrNull()?.coverUri ?: "",
-            name = playlistName,
-            time = "",
-        )
-
-    LaunchedEffect(songs) {
-        if (songs.isNotEmpty()) {
-            SongPlayer.prefetchList(songs.map { it.url }, context)
-        }
+    val recommendations: CollectionRecommendationsViewModel = hiltViewModel()
+    val recommendationState by recommendations.state.collectAsState()
+    LaunchedEffect(radio, playlistId, songs) { if (radio) recommendations.load(playlistId, songs) }
+    val whitelistVersion by KosherWhitelistManager.versionState
+    val allowed = remember(whitelistVersion, playlist, songs) {
+        KosherWhitelistManager.isPlaylistWhitelisted(playlistId, playlist.coverUri, playlist.artists) ||
+            songs.any { it.coverUri == playlist.coverUri && KosherWhitelistManager.isSongWhitelisted(it) }
     }
-
-    var menuSong by remember { mutableStateOf<com.music.spotui.data.entity.SongsModel?>(null) }
-    menuSong?.let { sel ->
-        com.music.spotui.ui.components.SongOptionsSheet(
-            song = sel,
-            navController = navController,
-            context = context,
-            onDismiss = { menuSong = null },
-        )
+    LaunchedEffect(allowed, playlist.coverUri) {
+        if (allowed && playlist.coverUri.isNotBlank()) KosherWhitelistManager.allowImageUrl(playlist.coverUri)
     }
-
-    // 0 = playlist order, 1 = title A-Z, 2 = title Z-A, 3 = artist A-Z
-    var sortOrder by remember { mutableStateOf(0) }
-    val displaySongs = when (sortOrder) {
-        1 -> songs.sortedBy { it.title.lowercase() }
-        2 -> songs.sortedByDescending { it.title.lowercase() }
-        3 -> songs.sortedBy { it.singer.lowercase() }
-        else -> songs
-    }
-
-    Surface(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color(AppBackground.toArgb()))
-    ) {
-        if (songsResp is Response.Loading && playlistResp is Response.Loading) {
-            Loader()
-            return@Surface
-        }
-
-        var dominentColor by remember { mutableStateOf(Color(AppBackground.toArgb())) }
-        val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
-        val isPlaylistAllowed = remember(whitelistVersion, playlist, songs) {
-            com.music.spotui.util.KosherWhitelistManager.isPlaylistWhitelisted(
-                playlistId = playlistId,
-                coverUri = playlist.coverUri,
-                subtitleOrArtists = playlist.artists
-            ) || songs.any { s -> s.coverUri == playlist.coverUri && com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(s) }
-        }
-        LaunchedEffect(isPlaylistAllowed, playlist.coverUri) {
-            if (isPlaylistAllowed && playlist.coverUri.isNotBlank()) {
-                com.music.spotui.util.KosherWhitelistManager.allowImageUrl(playlist.coverUri)
+    val saved = remember(playlistId, savedRevision) { getCachedLibraryEntries(context).any { it.spotifyId == playlistId } }
+    val playing by vm.currentSongPlayingState
+    val currentId by vm.currentSongId
+    // Only the legacy grant above may register a global URL. A Home approval stays scoped here.
+    val presentation = CollectionPresentation(item.name, playlist.artists, playlist.time, cover,
+        (allowed && cover == playlist.coverUri) || HomeArtworkPermissions.isAllowedInCollection(item), radio)
+    var radioPreview by rememberSaveable(playlistId) { mutableStateOf(false) }
+    Box {
+    Box(if (radioPreview) Modifier.clearAndSetSemantics {} else Modifier) {
+    CollectionContent(presentation, songs, playing, currentId, saved,
+        loading = songsResponse is Response.Loading, error = (songsResponse as? Response.Error)?.error,
+        onBack = { navController.navigateUp() }, onRetry = { vm.loadPlaylist(playlistId) },
+        onSave = { collectionMenu = true }, onMore = { collectionMenu = true }, onSongMore = { menuSong = it },
+        onDownload = {
+            if (!SongPlayer.allDownloaded(songs, context)) {
+                SongPlayer.downloadAll(songs.filterNot { it.isPodcast() }, context)
+                Toast.makeText(context, "Downloading ${songs.count { !it.isPodcast() }} tracks…", Toast.LENGTH_SHORT).show()
             }
-        }
-        LaunchedEffect(playlist.coverUri) {
-            if (playlist.coverUri.isNotBlank()) {
-                runCatching {
-                    Palette().extractSecondColorFromCoverUrl(context = context, playlist.coverUri) { color ->
-                        dominentColor = color
+        },
+        onShuffle = { displaySongs ->
+            if (displaySongs.any { it.isPodcast() }) {
+                val shuffled = displaySongs.shuffled()
+                shuffled.firstOrNull()?.let { vm.playSavedSelection(it, shuffled, context) }
+            } else {
+                vm.startShuffled(displaySongs)?.let { first ->
+                    SongPlayer.playSong(first.url, context)
+                    vm.updateSongState(first.coverUri, first.title, first.singer, true, first.id, 0, playlist.name)
+                }
+            }
+        },
+        onPlay = { displaySongs ->
+            when {
+                playing -> vm.setPlaying(false)
+                songs.any { it.id == vm.currentSongId.value } -> vm.setPlaying(true)
+                else -> displaySongs.firstOrNull()?.let { first ->
+                    if (first.isPodcast()) vm.playSavedSelection(first, displaySongs, context)
+                    else {
+                        vm.updateQueue(displaySongs)
+                        SongPlayer.playSong(first.url, context)
+                        vm.updateSongState(first.coverUri, first.title, first.singer, true, first.id, 0, playlist.name)
                     }
                 }
             }
-        }
-
-        Scaffold(
-            containerColor = Color.Transparent,
-            topBar = {
-                CenterAlignedTopAppBar(
-                    modifier = Modifier.padding(16.dp, 0.dp),
-                    navigationIcon = {
-                        Icon(
-                            modifier = Modifier.clickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = null
-                            ) { navController.navigateUp() },
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "",
-                            tint = Color.White
-                        )
-                    },
-                    colors = TopAppBarDefaults.topAppBarColors(
-                        containerColor = Color.Transparent,
-                        titleContentColor = Color.White,
-                    ),
-                    title = { Text(text = "") }
-                )
+        },
+        onSong = { song, index, displaySongs ->
+            if (song.isPodcast()) vm.playSavedSelection(song, displaySongs, context)
+            else {
+                vm.updateQueue(displaySongs)
+                vm.updateSongState(song.coverUri, song.title, song.singer, true, song.id, index, playlist.name)
+                SongPlayer.playSong(song.url, context)
             }
-        ) { innerPadding ->
-            LazyColumn(
-                contentPadding = innerPadding,
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(Color(AppBackground.toArgb()))
-                    .consumeWindowInsets(innerPadding)
-            ) {
-                item {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            // Minimum, not fixed: a long playlist description used to
-                            // overflow the fixed height and squash the play button.
-                            .heightIn(min = 440.dp)
-                            .padding(bottom = 8.dp)
-                            .background(
-                                brush = Brush.verticalGradient(
-                                    colors = listOf(dominentColor, Color(AppBackground.toArgb())),
-                                    startY = -100f,
-                                ),
-                            ),
-                        verticalArrangement = Arrangement.Center,
-                    ) {
-                        Spacer(modifier = Modifier.padding(25.dp))
-
-                        Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
-                            GlideImage(
-                                modifier = Modifier.size(230.dp),
-                                model = playlist.coverUri,
-                                failure = placeholder(R.drawable.placeholder),
-                                isAllowed = isPlaylistAllowed,
-                                contentDescription = "",
-                            )
-                        }
-                        Spacer(modifier = Modifier.padding(5.dp))
-                        Text(
-                            modifier = Modifier.padding(20.dp, 5.dp, 0.dp, 0.dp),
-                            text = playlist.name.ifBlank { playlistName },
-                            color = Color.White,
-                            fontSize = 23.sp,
-                            fontWeight = FontWeight.Bold
-                        )
-                        if (playlist.time.isNotBlank()) {
-                            Text(
-                                modifier = Modifier.padding(20.dp, 4.dp, 20.dp, 0.dp),
-                                text = playlist.time,
-                                color = Color.Gray,
-                                fontSize = 12.sp,
-                                fontWeight = FontWeight.Medium
-                            )
-                        }
-                        if (playlist.artists.isNotBlank()) {
-                            Text(
-                                modifier = Modifier.padding(20.dp, 4.dp, 0.dp, 0.dp),
-                                text = "Playlist • ${playlist.artists}",
-                                color = Color.White,
-                                fontSize = 12.sp,
-                                fontWeight = FontWeight.Medium
-                            )
-                        }
-
-                        if (songs.isNotEmpty()) {
-                            val sortLabels = listOf("Custom order", "Title A-Z", "Title Z-A", "Artist")
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.End,
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(20.dp, 0.dp, 20.dp, 2.dp),
-                            ) {
-                                Text(
-                                    text = sortLabels[sortOrder],
-                                    color = if (sortOrder == 0) Color.Gray else Color(AppPalette.toArgb()),
-                                    fontSize = 12.sp,
-                                    modifier = Modifier.clickable(
-                                        interactionSource = remember { MutableInteractionSource() },
-                                        indication = null,
-                                    ) { sortOrder = (sortOrder + 1) % 4 },
-                                )
-                                Spacer(Modifier.width(2.dp))
-                                Icon(
-                                    imageVector = Icons.Default.KeyboardArrowDown,
-                                    contentDescription = null,
-                                    tint = if (sortOrder == 0) Color.Gray else Color(AppPalette.toArgb()),
-                                    modifier = Modifier
-                                        .size(16.dp)
-                                        .clickable(
-                                            interactionSource = remember { MutableInteractionSource() },
-                                            indication = null,
-                                        ) { sortOrder = (sortOrder + 1) % 4 },
-                                )
-                            }
-                        }
-
-                        Row(
-                            horizontalArrangement = Arrangement.End,
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(52.dp)
-                                .padding(20.dp, 0.dp)
-                        ) {
-                            // Download the whole playlist (all tracks) for offline playback.
-                            var playlistDownloaded by remember(songs) {
-                                mutableStateOf(songs.isNotEmpty() && SongPlayer.allDownloaded(songs, context))
-                            }
-                            if (songs.isNotEmpty()) {
-                                Icon(
-                                    imageVector = if (playlistDownloaded)
-                                        Icons.Default.CheckCircle else ImageVector.vectorResource(R.drawable.ic_download),
-                                    tint = if (playlistDownloaded) Color(AppPalette.toArgb()) else Color.White,
-                                    modifier = Modifier
-                                        .size(24.dp)
-                                        .clickable(
-                                            interactionSource = remember { MutableInteractionSource() },
-                                            indication = null,
-                                        ) {
-                                            if (!playlistDownloaded) {
-                                                SongPlayer.downloadAll(songs, context)
-                                                android.widget.Toast.makeText(
-                                                    context,
-                                                    "Downloading ${songs.size} tracks…",
-                                                    android.widget.Toast.LENGTH_SHORT,
-                                                ).show()
-                                            }
-                                        },
-                                    contentDescription = "Download playlist",
-                                )
-                                Spacer(modifier = Modifier.width(16.dp))
-                                // Shuffle-play: start the playlist in random order.
-                                Icon(
-                                    painter = painterResource(id = R.drawable.ic_player_shuffle),
-                                    tint = Color.White,
-                                    modifier = Modifier
-                                        .size(24.dp)
-                                        .clickable(
-                                            interactionSource = remember { MutableInteractionSource() },
-                                            indication = null,
-                                        ) {
-                                            playlistViewModel.startShuffled(displaySongs)?.let { first ->
-                                                SongPlayer.playSong(first.url, context)
-                                                playlistViewModel.updateSongState(
-                                                    first.coverUri,
-                                                    first.title,
-                                                    first.singer,
-                                                    true,
-                                                    first.id,
-                                                    0,
-                                                    playlist.name,
-                                                )
-                                            }
-                                        },
-                                    contentDescription = "Shuffle play",
-                                )
-                                Spacer(modifier = Modifier.width(16.dp))
-                            }
-                            // Always visible: pause when playing, resume when this
-                            // list's track is paused, otherwise start from the top.
-                            if (songs.isNotEmpty()) {
-                                val playing = playlistViewModel.currentSongPlayingState.value
-                                Box(
-                                    contentAlignment = Alignment.Center,
-                                    modifier = Modifier
-                                        .size(52.dp)
-                                        .clip(RoundedCornerShape(100.dp))
-                                        .background(Color.White)
-                                        .clickable(
-                                            interactionSource = remember { MutableInteractionSource() },
-                                            indication = null
-                                        ) {
-                                            when {
-                                                playing -> playlistViewModel.setPlaying(false)
-                                                songs.any { it.id == playlistViewModel.currentSongId.value } ->
-                                                    playlistViewModel.setPlaying(true)
-                                                else -> {
-                                                    displaySongs.firstOrNull()?.let { firstSong ->
-                                                        playlistViewModel.updateQueue(displaySongs)
-                                                        SongPlayer.playSong(firstSong.url, context)
-                                                        playlistViewModel.updateSongState(
-                                                            firstSong.coverUri,
-                                                            firstSong.title,
-                                                            firstSong.singer,
-                                                            true,
-                                                            firstSong.id,
-                                                            0,
-                                                            playlist.name
-                                                        )
-                                                    }
-                                                }
-                                            }
-                                        }
-                                ) {
-                                    Icon(
-                                        modifier = Modifier.size(25.dp),
-                                        tint = Color.Black,
-                                        painter = painterResource(
-                                            id = if (playing) R.drawable.ic_playing else R.drawable.play_svgrepo_com,
-                                        ),
-                                        contentDescription = if (playing) "Pause" else "Play"
-                                    )
-                                }
-                            }
-                        }
-                    }
-                }
-
-                itemsIndexed(displaySongs, key = { index, song -> "${song.id}_${index}_${song.url.hashCode()}" }) { index, song ->
-                    val currentColor = if (song.id == playlistViewModel.currentSongId.value)
-                        Color(AppPalette.toArgb()) else Color.White
-
-                    Row(
-                        horizontalArrangement = Arrangement.Start,
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(20.dp, 8.dp)
-                            .combinedClickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = null,
-                                onLongClick = { menuSong = song },
-                                onClick = {
-                                    playlistViewModel.updateQueue(displaySongs)
-                                    playlistViewModel.updateSongState(
-                                        song.coverUri,
-                                        song.title,
-                                        song.singer,
-                                        true,
-                                        song.id,
-                                        index,
-                                        playlist.name
-                                    )
-                                    SongPlayer.playSong(song.url, context)
-                                },
-                            )
-                    ) {
-                        GlideImage(
-                            modifier = Modifier
-                                .size(48.dp)
-                                .clip(RoundedCornerShape(4.dp)),
-                            model = song.coverUri,
-                            failure = placeholder(R.drawable.placeholder),
-                            contentScale = ContentScale.Crop,
-                            isAllowed = com.music.spotui.util.KosherWhitelistManager.isSongWhitelisted(song),
-                            contentDescription = ""
-                        )
-                        Column(modifier = Modifier.padding(start = 12.dp).weight(1f)) {
-                            Text(
-                                text = song.title,
-                                color = currentColor,
-                                fontSize = 14.sp,
-                                fontWeight = FontWeight.Medium,
-                                maxLines = 1
-                            )
-                            Text(
-                                text = song.singer,
-                                color = Color.Gray,
-                                fontSize = 12.sp,
-                                fontWeight = FontWeight.Medium,
-                                maxLines = 1
-                            )
-                        }
-                    }
-                }
-
-                item { Spacer(modifier = Modifier.padding(80.dp)) }
-            }
-        }
+        }, scrollReset = scrollReset, recommendations = recommendationState.items,
+        recommendationsLoading = recommendationState.loading, recommendationsFailed = recommendationState.failed,
+        onRecommendationsRetry = { recommendations.load(playlistId, songs, force = true) },
+        onRecommendation = { navController.navigate(playlistRoute(it.id, it.name, it.imageUrl)) },
+        onRecommendationMore = { recommendationMenu = it }, onRadioPreview = { radioPreview = true })
+    }
+    if (radio && radioPreview) RadioPreviewScreen(presentation, songs,
+        onBack = { radioPreview = false }, onMore = { menuSong = it })
     }
 }

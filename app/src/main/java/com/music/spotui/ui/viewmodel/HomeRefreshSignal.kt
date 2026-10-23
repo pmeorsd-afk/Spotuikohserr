@@ -3,9 +3,10 @@
 import kotlinx.coroutines.flow.MutableSharedFlow
 
 object HomeRefreshSignal {
-    val events = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+    data class Request(val selectAll: Boolean)
+    val events = MutableSharedFlow<Request>(extraBufferCapacity = 1)
 
-    fun trigger() {
-        events.tryEmit(Unit)
+    fun trigger(selectAll: Boolean = false) {
+        events.tryEmit(Request(selectAll))
     }
 }

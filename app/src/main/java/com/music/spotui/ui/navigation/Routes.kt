@@ -20,6 +20,8 @@ sealed class Routes(
     object Show : Routes(0, "Show", "show")
     object Queue : Routes(0, "Queue", "queue")
     object Liked : Routes(0, "Liked", "liked")
+    object SavedEpisodes : Routes(0, "Saved Episodes", "saved_episodes")
+    object NewEpisodes : Routes(0, "New Episodes", "new_episodes")
     object AddToLiked : Routes(0, "AddToLiked", "add_to_liked")
     object Downloads : Routes(0, "Downloads", "downloads")
     object Category : Routes(0, "Category", "category")
@@ -34,6 +36,7 @@ sealed class Routes(
     object SpotiflacVerify : Routes(0, "SpotiflacVerify", "spotiflacverify")
     object KosherAdmin : Routes(0, "Kosher Admin", "kosher_admin")
     object PodcastHub : Routes(0, "PodcastHub", "podcast_hub")
+    object PodcastChooser : Routes(0, "PodcastChooser", "podcast_chooser")
     object PodcastCategory : Routes(0, "PodcastCategory", "podcast_category")
     object PodcastAllCategories : Routes(0, "PodcastAllCategories", "podcast_all_categories")
 }
@@ -54,8 +57,9 @@ fun categoryRoute(genre: String, title: String): String =
     "${Routes.Category.route}/${android.net.Uri.encode(genre)}?title=${android.net.Uri.encode(title)}"
 
 /** Builds a playlist route carrying the Spotify playlist id (and a display name). */
-fun playlistRoute(id: String, name: String = ""): String =
-    "${Routes.Playlist.route}/${android.net.Uri.encode(id)}?name=${android.net.Uri.encode(name)}"
+fun playlistRoute(id: String, name: String = "", cover: String = ""): String =
+    "${Routes.Playlist.route}/${android.net.Uri.encode(id)}?name=${android.net.Uri.encode(name)}" +
+        (com.music.spotui.util.HomeArtworkPermissions.imageUrl(cover)?.let { "&cover=${android.net.Uri.encode(it)}" } ?: "")
 
 /** Builds a podcast-show route carrying the Spotify show id (and a display name), with optional singleEpisodeId. */
 fun showRoute(id: String, name: String = "", singleEpisodeId: String = ""): String {

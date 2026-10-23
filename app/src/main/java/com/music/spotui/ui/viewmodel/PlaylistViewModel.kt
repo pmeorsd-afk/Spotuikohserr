@@ -12,6 +12,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -36,6 +37,13 @@ class PlaylistViewModel @Inject constructor(
 
     fun startShuffled(songs: List<SongsModel>) = currentSongState.startShuffled(songs)
 
+    /** Used by saved podcast/mixed playlists; commit the selected metadata only after resolution. */
+    fun playSavedSelection(song: SongsModel, songs: List<SongsModel>, context: android.content.Context) {
+        com.music.spotui.di.SongPlayer.resumeResolvedPlayback(song, null, context) {
+            currentSongState.commitPlayback(com.music.spotui.playback.PlaybackQueueIdentity.select(song, songs))
+        }
+    }
+
     /** Pause/resume global playback (the header play button stays visible while playing). */
     fun setPlaying(playing: Boolean) {
         if (playing) com.music.spotui.di.SongPlayer.play() else com.music.spotui.di.SongPlayer.pause()
@@ -53,15 +61,30 @@ class PlaylistViewModel @Inject constructor(
     }
 
     private var playlistKey: String? = null
+    private var playlistJob: kotlinx.coroutines.Job? = null
 
     fun loadPlaylist(playlistId: String) {
         if (playlistKey == playlistId) return
+        playlistJob?.cancel()
         playlistKey = playlistId
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.providePlaylist(playlistId).collect { _playlist.value = it }
-        }
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.providePlaylistSongs(playlistId).collect { _songs.value = it }
+        _playlist.value = Response.Loading()
+        _songs.value = Response.Loading()
+        playlistJob = viewModelScope.launch {
+            repository.providePlaylistContent(playlistId).flowOn(Dispatchers.IO).collect { result ->
+                when (result) {
+                    is Response.Loading -> Unit
+                    is Response.Success -> {
+                        _playlist.value = Response.Success(result.data.playlist)
+                        _songs.value = Response.Success(result.data.songs)
+                    }
+                    is Response.Error -> {
+                        // Preserve already displayed pages, but allow a same-ID retry after failure.
+                        if (_songs.value !is Response.Success) _songs.value = Response.Error(result.error)
+                        if (_playlist.value !is Response.Success) _playlist.value = Response.Error(result.error)
+                        playlistKey = null
+                    }
+                }
+            }
         }
     }
 }

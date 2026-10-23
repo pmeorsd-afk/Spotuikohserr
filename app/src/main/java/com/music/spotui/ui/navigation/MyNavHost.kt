@@ -17,6 +17,8 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.navigation.navArgument
 import com.music.spotui.ui.screens.AddToLikedSongsScreen
 import com.music.spotui.ui.screens.AlbumScreen
@@ -119,11 +121,12 @@ fun MyNavHost(
             }
             LibraryScreen(navHostController)
         }
-        composable(Routes.Player.route){
-            LaunchedEffect(playerState) {
-                bottomBarState.value = false
-                bottomBarPlayerState.value = playerState != ""
-            }
+        // A full-window sheet keeps the actual previous screen behind drag-to-dismiss.
+        // Its bottom bars keep their existing state underneath the opaque Player.
+        dialog(Routes.Player.route, dialogProperties = DialogProperties(
+            usePlatformDefaultWidth = false, decorFitsSystemWindows = false,
+            dismissOnClickOutside = false,
+        )) {
             PlayerScreen(navHostController)
         }
 
@@ -141,6 +144,22 @@ fun MyNavHost(
                 bottomBarPlayerState.value = playerState != ""
             }
             LikedSongsScreen(navHostController)
+        }
+
+        composable(Routes.NewEpisodes.route) {
+            LaunchedEffect(playerState) {
+                bottomBarState.value = true
+                bottomBarPlayerState.value = playerState != ""
+            }
+            com.music.spotui.ui.screens.NewEpisodesScreen(navHostController)
+        }
+
+        composable(Routes.SavedEpisodes.route) {
+            LaunchedEffect(playerState) {
+                bottomBarState.value = true
+                bottomBarPlayerState.value = playerState != ""
+            }
+            com.music.spotui.ui.screens.SavedEpisodesScreen(navHostController)
         }
 
         composable(Routes.Downloads.route){
@@ -267,6 +286,14 @@ fun MyNavHost(
             PodcastHubScreen(navHostController)
         }
 
+        composable(Routes.PodcastChooser.route) {
+            LaunchedEffect(Unit) {
+                bottomBarState.value = false
+                bottomBarPlayerState.value = false
+            }
+            com.music.spotui.ui.screens.PodcastChooserScreen(navHostController)
+        }
+
         composable(
             "${Routes.PodcastCategory.route}/{categoryId}?title={title}",
             arguments = listOf(
@@ -324,8 +351,8 @@ fun MyNavHost(
         }
 
         composable(
-            "${Routes.Playlist.route}/{pId}?name={name}",
-            arguments = listOf(navArgument("name") { defaultValue = "" }),
+            "${Routes.Playlist.route}/{pId}?name={name}&cover={cover}",
+            arguments = listOf(navArgument("name") { defaultValue = "" }, navArgument("cover") { defaultValue = "" }),
         ) { navBackStackEntry ->
             LaunchedEffect(playerState) {
                 bottomBarState.value = true
@@ -333,7 +360,8 @@ fun MyNavHost(
             }
             val pId = navBackStackEntry.arguments?.getString("pId")
             val name = navBackStackEntry.arguments?.getString("name").orEmpty()
-            pId?.let { PlaylistScreen(navHostController, playlistId = it, playlistName = name) }
+            val cover = navBackStackEntry.arguments?.getString("cover").orEmpty()
+            pId?.let { PlaylistScreen(navHostController, playlistId = it, playlistName = name, homeCover = cover) }
         }
 
         composable(

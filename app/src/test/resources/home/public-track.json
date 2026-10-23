@@ -1,0 +1,21 @@
+{
+  "spotify:track:4Nx17F3hhny6jw0CMOUQ65": {
+    "__typename": "Track",
+    "id": "4Nx17F3hhny6jw0CMOUQ65",
+    "uri": "spotify:track:4Nx17F3hhny6jw0CMOUQ65",
+    "name": "קאט לדבר הבא",
+    "firstArtist": {
+      "items": [
+        {
+          "uri": "spotify:artist:4ZXLucEFePscKcgUlD0Sf9",
+          "profile": {
+            "name": "נדב חנציס"
+          }
+        }
+      ]
+    },
+    "otherArtists": {
+      "items": []
+    }
+  }
+}

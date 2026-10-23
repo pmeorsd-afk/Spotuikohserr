@@ -361,47 +361,28 @@ fun SettingsScreen(navController: NavController) {
                 com.music.spotui.utils.WazeDetector.hasScreenDetectorPermission(context)
             }
 
-            var wazeOverlayOn by remember {
-                mutableStateOf(com.music.spotui.data.preferences.isWazeOverlayEnabled(context) && hasScreenDetector)
+            val wazeOverlayOn = remember(permissionRefreshTrigger, hasScreenDetector) {
+                com.music.spotui.data.preferences.isWazeOverlayEnabled(context) && hasScreenDetector
             }
-            var showWazeAccessibilityPrompt by remember { mutableStateOf(false) }
-
+            var showWazeAccessibilityPrompt by androidx.compose.runtime.saveable.rememberSaveable { mutableStateOf(false) }
             SettingsSwitchRow(
                 title = "נגן צף אוטומטי ב-Waze",
-                subtitle = if (wazeOverlayOn)
-                    "✓ פעיל — מוצג באפליקציית Waze (ניתן לגרור את הכפתור לכל מקום)"
-                else "הצגת כפתור ספוטיפיי צף ושליטה במוזיקה רק ב-Waze",
+                subtitle = if (wazeOverlayOn) "פעיל — אפשר לגרור את הכפתור למקום שנוח לכם ב-Waze"
+                    else "כפתור צף לשליטה בהאזנה בתוך Waze",
                 checked = wazeOverlayOn,
                 onCheckedChange = { enable ->
-                    if (enable) {
-                        if (hasScreenDetector) {
-                            wazeOverlayOn = true
-                            com.music.spotui.data.preferences.setWazeOverlayEnabled(context, true)
-                        } else {
-                            showWazeAccessibilityPrompt = true
-                        }
-                    } else {
-                        wazeOverlayOn = false
+                    if (enable) showWazeAccessibilityPrompt = true
+                    else {
                         com.music.spotui.data.preferences.setWazeOverlayEnabled(context, false)
+                        permissionRefreshTrigger++
                     }
                 }
             )
-
             if (showWazeAccessibilityPrompt) {
-                WazeAccessibilityPrompt(
-                    onRequestAccessibility = {
-                        com.music.spotui.utils.WazeDetector.requestScreenDetectorPermission(context)
-                    },
-                    onDismiss = { showWazeAccessibilityPrompt = false }
-                )
-            }
-
-            LaunchedEffect(hasScreenDetector) {
-                if (hasScreenDetector && showWazeAccessibilityPrompt) {
-                    wazeOverlayOn = true
-                    com.music.spotui.data.preferences.setWazeOverlayEnabled(context, true)
+                WazeSetupDialog(onDismiss = {
                     showWazeAccessibilityPrompt = false
-                }
+                    permissionRefreshTrigger++
+                })
             }
 
             Spacer(Modifier.height(12.dp))

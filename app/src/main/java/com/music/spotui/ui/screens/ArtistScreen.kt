@@ -157,7 +157,7 @@ private fun ArtistOverviewContent(
     // Warm the stream cache for the top tracks so the first tap plays instantly.
     LaunchedEffect(tracks) {
         if (tracks.isNotEmpty()) {
-            SongPlayer.prefetchList(tracks.map { it.song.url }, context)
+            SongPlayer.prefetchSongs(tracks.map { it.song }, context)
         }
     }
 

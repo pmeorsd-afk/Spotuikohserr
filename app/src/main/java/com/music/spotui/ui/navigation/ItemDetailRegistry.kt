@@ -12,7 +12,7 @@ object ItemDetailRegistry {
     private val items = ConcurrentHashMap<String, SongsModel>()
 
     fun register(song: SongsModel): String {
-        val key = when {
+        val key = song.mediaType.name + ":" + when {
             song.spotifyTrackId.isNotBlank() -> song.spotifyTrackId
             song.url.isNotBlank() -> song.url
             else -> "${song.title}_${song.singer}_${song.album}"

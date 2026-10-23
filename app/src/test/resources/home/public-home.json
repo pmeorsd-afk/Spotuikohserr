@@ -1,0 +1,111 @@
+{
+  "session": {
+    "isAnonymous": true
+  },
+  "home": {
+    "data": {
+      "sections": [
+        {
+          "title": "Trending songs",
+          "uri": "spotify:section:0JQ5DB5E8N831KzFzsBBQ2",
+          "items": [
+            {
+              "title": "קאט לדבר הבא",
+              "uri": "spotify:track:4Nx17F3hhny6jw0CMOUQ65",
+              "href": "track/4Nx17F3hhny6jw0CMOUQ65",
+              "imageUrl": "https://i.scdn.co/image/ab67616d00001e027c054962bcefa5939f51e368",
+              "renderAsCircle": false
+            },
+            {
+              "title": "מאוהב בגשם",
+              "uri": "spotify:track:75lTaVlluq5Qktycnnwfnm",
+              "href": "track/75lTaVlluq5Qktycnnwfnm",
+              "imageUrl": "https://i.scdn.co/image/ab67616d00001e0211e607c9d06e51e177442be6",
+              "renderAsCircle": false
+            }
+          ]
+        },
+        {
+          "title": "Popular artists",
+          "uri": "spotify:section:0JQ5DAnM3wGh0gz1MXnu3C",
+          "items": [
+            {
+              "title": "Omer Adam",
+              "uri": "spotify:artist:1IAEef07H0fd9aA8aUHUlL",
+              "href": "artist/1IAEef07H0fd9aA8aUHUlL",
+              "imageUrl": "https://i.scdn.co/image/ab67616100005174b9dc71ce711a1a831623b92f",
+              "renderAsCircle": true
+            },
+            {
+              "title": "Osher Cohen",
+              "uri": "spotify:artist:2LUB7PhWK2j2obgSTeD3GN",
+              "href": "artist/2LUB7PhWK2j2obgSTeD3GN",
+              "imageUrl": "https://i.scdn.co/image/ab67616100005174dc6dd6c1433cb2ec9ba71f4c",
+              "renderAsCircle": true
+            }
+          ]
+        },
+        {
+          "title": "Popular albums and singles",
+          "uri": "spotify:section:0JQ5DAnM3wGh0gz1MXnu3B",
+          "items": [
+            {
+              "title": "לחנים שבורים",
+              "uri": "spotify:album:6qBbLMrB32FOw0uitKl2RR",
+              "href": "album/6qBbLMrB32FOw0uitKl2RR",
+              "imageUrl": "https://i.scdn.co/image/ab67616d00001e02635571e4dbe218b57bf5c1ff",
+              "renderAsCircle": false
+            },
+            {
+              "title": "ראפ מטורף",
+              "uri": "spotify:album:02swRH6gJm8HcQ98uP7aOq",
+              "href": "album/02swRH6gJm8HcQ98uP7aOq",
+              "imageUrl": "https://i.scdn.co/image/ab67616d00001e02121f282728252d986cd4b0b4",
+              "renderAsCircle": false
+            }
+          ]
+        },
+        {
+          "title": "Popular radio",
+          "uri": "spotify:section:0JQ5DAnM3wGh0gz1MXnu4h",
+          "items": [
+            {
+              "title": "Omer Adam Radio",
+              "uri": "spotify:playlist:37i9dQZF1E4wmWec21cCcJ",
+              "href": "playlist/37i9dQZF1E4wmWec21cCcJ",
+              "imageUrl": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/1IAEef07H0fd9aA8aUHUlL/en",
+              "renderAsCircle": false
+            },
+            {
+              "title": "Idan Raichel Radio",
+              "uri": "spotify:playlist:37i9dQZF1E4uZeffkAU3XM",
+              "href": "playlist/37i9dQZF1E4uZeffkAU3XM",
+              "imageUrl": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/5EBnQEKoaiAk37Q7cfGrE1/en",
+              "renderAsCircle": false
+            }
+          ]
+        },
+        {
+          "title": "Featured Charts",
+          "uri": "spotify:section:0JQ5DAzQHECxDlYNI6xD1g",
+          "items": [
+            {
+              "title": "Top Songs - Global",
+              "uri": "spotify:playlist:37i9dQZEVXbNG2KDcFcKOF",
+              "href": "playlist/37i9dQZEVXbNG2KDcFcKOF",
+              "imageUrl": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg",
+              "renderAsCircle": false
+            },
+            {
+              "title": "Top Songs - Israel",
+              "uri": "spotify:playlist:37i9dQZEVXbJ5J1TrbkAF9",
+              "href": "playlist/37i9dQZEVXbJ5J1TrbkAF9",
+              "imageUrl": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_il_default.jpg",
+              "renderAsCircle": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

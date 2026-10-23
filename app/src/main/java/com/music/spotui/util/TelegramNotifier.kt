@@ -265,20 +265,84 @@ object TelegramNotifier {
         )
     }
 
+    private val homeRequestCoordinator = HomeImageRequestCoordinator()
+
+    internal fun sendHomeImageApprovalRequest(context: Context, request: HomeImageApprovalRequest,
+        automatic: Boolean = false, isAllowed: () -> Boolean = { HomeArtworkPermissions.isApproved(request.url) },
+        onComplete: (Boolean) -> Unit) {
+        val app = context.applicationContext
+        // Application-owned: navigating away from Home must not cancel the tapped request.
+        CoroutineScope(Dispatchers.Main).launch {
+            val result = homeRequestCoordinator.request(HomeArtworkPermissions.key(request.url),
+                allowed = isAllowed,
+                pending = { HomeImageApprovalRequests.isPending(app, request.url) },
+                sync = { awaitArtworkPermissionSync(app) },
+                send = {
+                    val decision = HomeImageApprovalRequests.decisionAtSend(request.url)
+                    kotlinx.coroutines.suspendCancellableCoroutine<Boolean> { continuation ->
+                        sendTelegramMessage(app, request.text, request.keyboard(), silent = true, parseMode = null,
+                            onComplete = { success ->
+                                if (success) HomeImageApprovalRequests.recordSent(app, request.url, decision)
+                                if (continuation.isActive) continuation.resumeWith(Result.success(success))
+                            })
+                    }
+                })
+            if (!automatic) {
+                val message = when (result) {
+                    HomeRequestResult.APPROVED -> "התמונה כבר מותרת. האישור עודכן במכשיר."
+                    HomeRequestResult.PENDING, HomeRequestResult.IN_FLIGHT -> "הבקשה כבר נשלחה לבדיקה."
+                    HomeRequestResult.SENT -> "הבקשה נשלחה. התמונה תופיע בבית לאחר אישור המנהל."
+                    HomeRequestResult.SYNC_FAILED -> "לא ניתן לבדוק את האישור כרגע. נסו שוב כשיש חיבור."
+                    HomeRequestResult.FAILED -> "שגיאה בשליחה, נסה שנית."
+                }
+                Toast.makeText(app, message, Toast.LENGTH_SHORT).show()
+            }
+            onComplete(result in setOf(HomeRequestResult.APPROVED, HomeRequestResult.PENDING, HomeRequestResult.SENT))
+        }
+    }
+
+    internal fun sendSearchImageApprovalRequest(context: Context, request: SearchImageApprovalRequest, onComplete: (Boolean) -> Unit) {
+        val app = context.applicationContext
+        CoroutineScope(Dispatchers.IO).launch {
+            if (!SearchArtworkLinkValidator().isAvailable(request.url)) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(app, "לא ניתן לפתוח את תמונת הקטגוריה כרגע. הבקשה לא נשלחה; נסו שוב מאוחר יותר.", Toast.LENGTH_LONG).show()
+                    onComplete(false)
+                }
+                return@launch
+            }
+            val decisionAtSend = SearchImageApprovalRequests.decisionAtSend(request.url)
+            sendTelegramMessage(
+                context = app,
+                markdownText = request.text,
+                replyMarkup = request.keyboard(),
+                successToast = "הבקשה נשלחה. התמונה תופיע בקטגוריות החיפוש לאחר אישור המנהל.",
+                parseMode = null,
+                onComplete = { success ->
+                    if (success) SearchImageApprovalRequests.recordSent(app, request.url, decisionAtSend)
+                    onComplete(success)
+                },
+            )
+        }
+    }
+
     private fun sendTelegramMessage(
         context: Context,
         markdownText: String,
         replyMarkup: JSONObject? = null,
         successToast: String = "הבקשה נשלחה בהצלחה לבדיקה!",
         silent: Boolean = false,
-        onComplete: ((Boolean) -> Unit)? = null
+        onComplete: ((Boolean) -> Unit)? = null,
+        parseMode: String? = "Markdown"
     ) {
         CoroutineScope(Dispatchers.IO).launch {
             var success = false
+            var connection: HttpURLConnection? = null
             try {
                 val apiUrl = "https://api.telegram.org/bot$BOT_TOKEN/sendMessage"
                 val url = URL(apiUrl)
                 val conn = url.openConnection() as HttpURLConnection
+                connection = conn
                 conn.requestMethod = "POST"
                 conn.connectTimeout = 10000
                 conn.readTimeout = 10000
@@ -289,7 +353,7 @@ object TelegramNotifier {
                 val payload = JSONObject().apply {
                     put("chat_id", CHANNEL_ID)
                     put("text", markdownText)
-                    put("parse_mode", "Markdown")
+                    if (parseMode != null) put("parse_mode", parseMode)
                     if (replyMarkup != null) {
                         put("reply_markup", replyMarkup)
                     }
@@ -301,10 +365,14 @@ object TelegramNotifier {
                 }
 
                 val responseCode = conn.responseCode
-                success = responseCode in 200..299
+                success = responseCode in 200..299 && conn.inputStream.bufferedReader().use {
+                    JSONObject(it.readText()).optBoolean("ok", false)
+                }
             } catch (e: Exception) {
-                e.printStackTrace()
+                android.util.Log.w("TelegramNotifier", "Telegram request failed")
                 success = false
+            } finally {
+                connection?.disconnect()
             }
 
             withContext(Dispatchers.Main) {

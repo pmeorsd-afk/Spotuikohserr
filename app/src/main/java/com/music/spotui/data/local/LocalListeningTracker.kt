@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.music.spotui.data.entity.MediaType
 import com.music.spotui.data.entity.SongsModel
+import com.music.spotui.playback.ExternalMediaIdentityResolver
 import dagger.hilt.android.qualifiers.ApplicationContext
 import org.json.JSONArray
 import org.json.JSONObject
@@ -24,8 +25,49 @@ data class TrackListenStat(
     val mediaType: MediaType = MediaType.TRACK,
     val podcastShowId: String = "",
     val originalUrl: String = "",
-    val durationMs: Int = 0
+    val durationMs: Int = 0,
+    val spotifyEpisodeId: String = "",
 ) {
+
+    internal fun toJson(): JSONObject = JSONObject().apply {
+        put("trackId", trackId)
+        put("title", title)
+        put("artist", artist)
+        put("coverUri", coverUri)
+        put("playCount", playCount)
+        put("completedCount", completedCount)
+        put("lastPlayedAt", lastPlayedAt)
+        put("album", album)
+        put("mediaType", mediaType.name)
+        put("podcastShowId", podcastShowId)
+        put("originalUrl", originalUrl)
+        put("durationMs", durationMs)
+        put("spotifyEpisodeId", spotifyEpisodeId)
+    }
+
+    companion object {
+        internal fun fromJson(obj: JSONObject): TrackListenStat? {
+            val trackId = obj.optString("trackId").trim()
+            if (trackId.isBlank()) return null
+            return TrackListenStat(
+                trackId = trackId,
+                title = obj.optString("title"),
+                artist = obj.optString("artist"),
+                coverUri = obj.optString("coverUri"),
+                playCount = obj.optInt("playCount", 0),
+                completedCount = obj.optInt("completedCount", 0),
+                lastPlayedAt = obj.optLong("lastPlayedAt", 0L),
+                album = obj.optString("album", ""),
+                mediaType = runCatching { MediaType.valueOf(obj.optString("mediaType")) }
+                    .getOrDefault(MediaType.TRACK),
+                podcastShowId = obj.optString("podcastShowId", ""),
+                originalUrl = obj.optString("originalUrl", ""),
+                durationMs = obj.optInt("durationMs", 0),
+                spotifyEpisodeId = obj.optString("spotifyEpisodeId", ""),
+            )
+        }
+    }
+
     fun toSongModel(): SongsModel {
         // Safe backward-compatibility fallback if mediaType is TRACK but old record is podcast:
         val effectiveMediaType = if (mediaType == MediaType.PODCAST_EPISODE) {
@@ -41,9 +83,14 @@ data class TrackListenStat(
                 if (trackId.startsWith("episode:")) trackId else ""
             }
             val resolvedShowId = podcastShowId.ifBlank {
-                if (resolvedUrl.startsWith("episode:")) {
-                    resolvedUrl.removePrefix("episode:").substringBefore(":")
-                } else ""
+                (ExternalMediaIdentityResolver.parse(resolvedUrl) as?
+                    ExternalMediaIdentityResolver.Identity.InternalEpisode)?.showId.orEmpty()
+            }
+            val resolvedSpotifyId = spotifyEpisodeId.ifBlank {
+                ((ExternalMediaIdentityResolver.parse(resolvedUrl) as?
+                    ExternalMediaIdentityResolver.Identity.SpotifyEpisode)
+                    ?: (ExternalMediaIdentityResolver.parse(trackId) as?
+                        ExternalMediaIdentityResolver.Identity.SpotifyEpisode))?.id.orEmpty()
             }
             return SongsModel(
                 id = trackId.hashCode() and 0x7fffffff,
@@ -52,7 +99,7 @@ data class TrackListenStat(
                 singer = artist,
                 coverUri = coverUri,
                 url = resolvedUrl,
-                spotifyTrackId = "",
+                spotifyTrackId = resolvedSpotifyId,
                 explicit = false,
                 durationMs = durationMs,
                 mediaType = MediaType.PODCAST_EPISODE,
@@ -171,7 +218,12 @@ class LocalListeningTracker @Inject constructor(
             lastPlayedAt = now,
             album = song.album.ifBlank { existing?.album.orEmpty() },
             mediaType = song.mediaType,
-            podcastShowId = song.resolvePodcastShowId().ifBlank { existing?.podcastShowId.orEmpty() },
+            podcastShowId = song.podcastShowId.ifBlank {
+                (ExternalMediaIdentityResolver.parse(song.url) as?
+                    ExternalMediaIdentityResolver.Identity.InternalEpisode)?.showId.orEmpty()
+            }.ifBlank { existing?.podcastShowId.orEmpty() },
+            spotifyEpisodeId = ExternalMediaIdentityResolver.spotifyEpisodeId(song)
+                ?: existing?.spotifyEpisodeId.orEmpty(),
             originalUrl = song.url.ifBlank { existing?.originalUrl.orEmpty() },
             durationMs = if (song.durationMs > 0) song.durationMs else (existing?.durationMs ?: 0)
         )
@@ -213,7 +265,12 @@ class LocalListeningTracker @Inject constructor(
             lastPlayedAt = maxOf(existing?.lastPlayedAt ?: 0L, now),
             album = song.album.ifBlank { existing?.album.orEmpty() },
             mediaType = song.mediaType,
-            podcastShowId = song.resolvePodcastShowId().ifBlank { existing?.podcastShowId.orEmpty() },
+            podcastShowId = song.podcastShowId.ifBlank {
+                (ExternalMediaIdentityResolver.parse(song.url) as?
+                    ExternalMediaIdentityResolver.Identity.InternalEpisode)?.showId.orEmpty()
+            }.ifBlank { existing?.podcastShowId.orEmpty() },
+            spotifyEpisodeId = ExternalMediaIdentityResolver.spotifyEpisodeId(song)
+                ?: existing?.spotifyEpisodeId.orEmpty(),
             originalUrl = song.url.ifBlank { existing?.originalUrl.orEmpty() },
             durationMs = if (song.durationMs > 0) song.durationMs else (existing?.durationMs ?: 0)
         )
@@ -255,7 +312,12 @@ class LocalListeningTracker @Inject constructor(
             lastPlayedAt = maxOf(existing?.lastPlayedAt ?: 0L, now),
             album = song.album.ifBlank { existing?.album.orEmpty() },
             mediaType = song.mediaType,
-            podcastShowId = song.resolvePodcastShowId().ifBlank { existing?.podcastShowId.orEmpty() },
+            podcastShowId = song.podcastShowId.ifBlank {
+                (ExternalMediaIdentityResolver.parse(song.url) as?
+                    ExternalMediaIdentityResolver.Identity.InternalEpisode)?.showId.orEmpty()
+            }.ifBlank { existing?.podcastShowId.orEmpty() },
+            spotifyEpisodeId = ExternalMediaIdentityResolver.spotifyEpisodeId(song)
+                ?: existing?.spotifyEpisodeId.orEmpty(),
             originalUrl = song.url.ifBlank { existing?.originalUrl.orEmpty() },
             durationMs = if (song.durationMs > 0) song.durationMs else (existing?.durationMs ?: 0)
         )
@@ -406,37 +468,15 @@ class LocalListeningTracker @Inject constructor(
 
     private fun loadTracks(): Map<String, TrackListenStat> {
         val raw = prefs.getString(KEY_TRACKS, null) ?: return emptyMap()
-
         return try {
             val array = JSONArray(raw)
-            val result = mutableMapOf<String, TrackListenStat>()
-
-            for (i in 0 until array.length()) {
-                val obj = array.optJSONObject(i) ?: continue
-                val trackId = obj.optString("trackId").trim()
-                if (trackId.isBlank()) continue
-
-                val parsedMediaType = runCatching {
-                    val mStr = obj.optString("mediaType")
-                    if (mStr.isNotBlank()) MediaType.valueOf(mStr) else null
-                }.getOrNull() ?: MediaType.TRACK
-
-                result[trackId] = TrackListenStat(
-                    trackId = trackId,
-                    title = obj.optString("title"),
-                    artist = obj.optString("artist"),
-                    coverUri = obj.optString("coverUri"),
-                    playCount = obj.optInt("playCount", 0),
-                    completedCount = obj.optInt("completedCount", 0),
-                    lastPlayedAt = obj.optLong("lastPlayedAt", 0L),
-                    album = obj.optString("album", ""),
-                    mediaType = parsedMediaType,
-                    podcastShowId = obj.optString("podcastShowId", ""),
-                    originalUrl = obj.optString("originalUrl", ""),
-                    durationMs = obj.optInt("durationMs", 0)
-                )
+            buildMap {
+                for (i in 0 until array.length()) {
+                    val obj = array.optJSONObject(i) ?: continue
+                    val stat = TrackListenStat.fromJson(obj) ?: continue
+                    put(stat.trackId, stat)
+                }
             }
-            result
         } catch (_: Exception) {
             emptyMap()
         }
@@ -444,26 +484,7 @@ class LocalListeningTracker @Inject constructor(
 
     private fun saveTracks(tracks: Map<String, TrackListenStat>) {
         val array = JSONArray()
-
-        tracks.values.forEach { stat ->
-            array.put(
-                JSONObject().apply {
-                    put("trackId", stat.trackId)
-                    put("title", stat.title)
-                    put("artist", stat.artist)
-                    put("coverUri", stat.coverUri)
-                    put("playCount", stat.playCount)
-                    put("completedCount", stat.completedCount)
-                    put("lastPlayedAt", stat.lastPlayedAt)
-                    put("album", stat.album)
-                    put("mediaType", stat.mediaType.name)
-                    put("podcastShowId", stat.podcastShowId)
-                    put("originalUrl", stat.originalUrl)
-                    put("durationMs", stat.durationMs)
-                }
-            )
-        }
-
+        tracks.values.forEach { array.put(it.toJson()) }
         prefs.edit().putString(KEY_TRACKS, array.toString()).apply()
     }
 

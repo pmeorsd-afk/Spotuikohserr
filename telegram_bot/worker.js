@@ -1,4 +1,5 @@
 import { DurableObject } from "cloudflare:workers";
+import { legacyApprovalTarget, upsertExactTrack } from "./track_approval.mjs";
 
 // ==============================================================================
 // SpotUI Kosher - Cloudflare Worker (Production v3.1)
@@ -643,6 +644,9 @@ export class PresenceDO extends DurableObject {
 // ==============================================================================
 // Worker Entry Point
 // ==============================================================================
+import { isHomeImageCallback, homeWebhookAllowed, homeCallbackTarget, upsertHomeImage } from "./home_image_approval.mjs";
+import { isSearchImageCallback, searchCallbackTarget, upsertSearchImage } from "./search_image_approval.mjs";
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -710,8 +714,10 @@ export default {
     if (url.pathname === "/setWebhook") {
       const workerUrl = `${url.origin}/`;
       const allowedUpdatesParam = encodeURIComponent(JSON.stringify(["message", "channel_post", "callback_query"]));
+      const secretParam = env?.TELEGRAM_WEBHOOK_SECRET
+        ? `&secret_token=${encodeURIComponent(env.TELEGRAM_WEBHOOK_SECRET)}` : "";
       const tgRes = await fetch(
-        `https://api.telegram.org/bot${CONFIG.TELEGRAM_BOT_TOKEN}/setWebhook?url=${encodeURIComponent(workerUrl)}&allowed_updates=${allowedUpdatesParam}&drop_pending_updates=true`
+        `https://api.telegram.org/bot${CONFIG.TELEGRAM_BOT_TOKEN}/setWebhook?url=${encodeURIComponent(workerUrl)}&allowed_updates=${allowedUpdatesParam}${secretParam}&drop_pending_updates=true`
       );
       const tgData = await tgRes.json();
       return jsonResponse({ workerUrl, telegramResponse: tgData });
@@ -752,9 +758,17 @@ export default {
       const update = await request.json();
 
       if (update.callback_query) {
-        // עונים לטלגרם ב-20ms בלבד, וממשיכים את העדכון ברקע דרך waitUntil
-        ctx.waitUntil(handleTelegramCallback(update.callback_query));
-        return new Response("OK", { status: 200 });
+        if (!homeWebhookAllowed(request, env?.TELEGRAM_WEBHOOK_SECRET)) return new Response("Unauthorized", { status: 403 });
+        const query = update.callback_query;
+        const scoped = isHomeImageCallback(query.data) || isSearchImageCallback(query.data);
+        const target = scoped ? null : legacyApprovalTarget(query, CONFIG.TELEGRAM_CHANNEL_ID);
+        if (scoped) ctx.waitUntil(handleScopedImageCallback(query));
+        else if (target) ctx.waitUntil(handleTelegramCallback(query, target));
+        // Telegram executes this method directly from the webhook response. No outbound
+        // API call, GitHub operation or another approval holds the button spinner open.
+        return jsonResponse({ method: "answerCallbackQuery", callback_query_id: query.id,
+          text: scoped || target ? "הבקשה נקלטה, שומר את ההחלטה…" : "בקשה לא תקינה; לא בוצע שינוי.",
+          cache_time: 0 });
       }
 
       if (update.message && update.message.text) {
@@ -888,159 +902,104 @@ function whitelistResponse(whitelist, { cacheSource, requestId, stale = false })
 // ==============================================================================
 // מניעת לחיצות כפולות (Deduplication Set)
 // ==============================================================================
-const callbackClaimed = new Set();
+const callbackInFlight = new Set();
 
 // ==============================================================================
 // טיפול בלחיצה בטלגרם (רץ ברקע דרך waitUntil)
 // ==============================================================================
-async function handleTelegramCallback(query) {
-  const queryId = query.id;
-  const msg = query.message;
-  if (!msg) return;
-
-  const chatId = msg.chat.id;
-  const msgId = msg.message_id;
-  const data = query.data || "";
-  const text = msg.text || msg.caption || "";
-  const from = query.from || {};
-  const userMention = from.username
-    ? `@${from.username}`
-    : [from.first_name, from.last_name].filter(Boolean).join(" ") || "Admin";
-
-  // מניעת לחיצות כפולות באותו Isolate
-  if (callbackClaimed.has(queryId)) {
-    console.log(`Duplicate callback ignored: ${queryId}`);
-    return;
-  }
-  callbackClaimed.add(queryId);
-  if (callbackClaimed.size > 500) callbackClaimed.clear();
-
-  if (data === "noop") {
-    await sendTelegram("answerCallbackQuery", {
-      callback_query_id: queryId,
-      text: "⏳ הפעולה כבר מתבצעת כעת...",
-      show_alert: false
-    });
-    return;
-  }
-
-  const isApproveArtist = data.startsWith("appr:art");
-  const isApproveTrack  = data.startsWith("appr:trk");
-  const isRemoveArtist  = data.startsWith("rem:art");
-  const isRemoveTrack   = data.startsWith("rem:trk");
-
-  if (!isApproveArtist && !isApproveTrack && !isRemoveArtist && !isRemoveTrack) {
-    await sendTelegram("answerCallbackQuery", {
-      callback_query_id: queryId,
-      text: "פעולה לא מוכרת",
-      show_alert: false
-    });
-    return;
-  }
-
-  const isApprove = isApproveArtist || isApproveTrack;
-
+async function handleScopedImageCallback(query) {
   try {
-    // 1. Fast Telegram ACK (מכבה את גלגל הטעינה בטלגרם בתוך 20ms!)
-    await sendTelegram("answerCallbackQuery", {
-      callback_query_id: queryId,
-      text: isApprove ? "⏳ מאשר ומוסיף לרשימה..." : "⏳ מסיר מרשימת ההיתר...",
-      show_alert: false
+    const search = isSearchImageCallback(query.data);
+    const target = await (search ? searchCallbackTarget : homeCallbackTarget)(query, CONFIG.TELEGRAM_CHANNEL_ID);
+    if (!target) throw new Error("בקשת תמונה לא תקינה");
+    const memberRes = await fetch(`https://api.telegram.org/bot${CONFIG.TELEGRAM_BOT_TOKEN}/getChatMember`, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: CONFIG.TELEGRAM_CHANNEL_ID, user_id: query.from.id })
     });
-
-    // חילוץ פרטים
-    const parts = data.split(":");
-    let spotifyId = parts.length >= 3 ? parts[2].trim() : "";
-    let artistName = "";
-    let trackTitle = "";
-
-    const artistMatch = text.match(/(?:אמן|Artist):\s*([^\n\r*]+)/i);
-    if (artistMatch) artistName = artistMatch[1].trim();
-
-    const trackMatch = text.match(/(?:שיר|Track):\s*([^\n\r*]+)/i);
-    if (trackMatch) trackTitle = trackMatch[1].trim();
-
-    const idMatch = text.match(/(?:מזהה ספוטיפיי|ID):\s*`?([a-zA-Z0-9]+)`?/i);
-    if (!spotifyId && idMatch) spotifyId = idMatch[1].trim();
-
-    const action = isApproveArtist
-      ? "approve_artist"
-      : isRemoveArtist
-      ? "block_artist"
-      : isApproveTrack
-      ? "approve_track"
-      : "block_track";
-
-    // 2. הסרת כפתורי הפעולה ועדכון ההודעה בטלגרם (<200ms)
-    const originalKeyboard = (msg.reply_markup && msg.reply_markup.inline_keyboard) || [];
-    const urlButtons = extractUrlButtons(originalKeyboard);
-
-    await sendTelegram("editMessageReplyMarkup", {
-      chat_id: chatId,
-      message_id: msgId,
-      reply_markup: { inline_keyboard: urlButtons }
-    });
-
-    const actionStatusText = isApprove
-      ? `✅ *אושר ונוסף לרשימה הכשרה על ידי ${userMention}!*`
-      : `❌ *הוסר מרשימת ההיתר ונחסם על ידי ${userMention}!*`;
-
-    const updatedText = `${text}\n\n━━━━━━━━━━━━━━━━━━━━\n${actionStatusText}`;
-    const isCaption = !msg.text && Boolean(msg.caption);
-    const editMethod = isCaption ? "editMessageCaption" : "editMessageText";
-
-    await sendTelegram(editMethod, {
-      chat_id: chatId,
-      message_id: msgId,
-      [isCaption ? "caption" : "text"]: updatedText,
-      parse_mode: "Markdown",
-      reply_markup: { inline_keyboard: urlButtons }
-    });
-
-    // 3. עדכון ב-GitHub
-    try {
-      await updateGitHubWhitelistWithRetry({
-        action,
-        spotifyId,
-        artistName,
-        trackTitle,
-        userMention
-      });
-
-      // 4. סנכרון ל-Google Apps Script עבור מכשירים ישנים
-      if (CONFIG.GAS_SYNC_URL) {
-        try {
-          const syncUrl = `${CONFIG.GAS_SYNC_URL}?action=${encodeURIComponent(action)}&id=${encodeURIComponent(spotifyId)}&name=${encodeURIComponent(artistName)}&title=${encodeURIComponent(trackTitle)}&token=${encodeURIComponent(CONFIG.ADMIN_API_KEY)}`;
-          await fetch(syncUrl).catch(e => console.error("GAS sync error:", e));
-        } catch (gasErr) {
-          console.error("GAS sync trigger error:", gasErr);
-        }
-      }
-    } catch (err) {
-      console.error("GitHub update failed:", err);
-      await sendTelegram(editMethod, {
-        chat_id: chatId,
-        message_id: msgId,
-        [isCaption ? "caption" : "text"]: `${text}\n\n❌ *שגיאה בעדכון ב-GitHub: ${escapeMarkdown(String(err?.message || err))}*`,
-        reply_markup: { inline_keyboard: originalKeyboard }
-      });
+    const member = await memberRes.json();
+    if (!memberRes.ok || !member.ok || !["creator", "administrator"].includes(member.result?.status)) {
+      throw new Error("רק מנהלי הערוץ יכולים לאשר או לדחות תמונות");
     }
-  } catch (fatalErr) {
-    console.error("Fatal error in handleTelegramCallback:", fatalErr);
+    await updateGitHubWhitelistWithRetry({ ...target, userMention: `admin ${query.from.id}` });
+    // Do not report approval or remove the retry buttons until durable storage succeeds.
+    const approved = target.action === (search ? "approve_search_image" : "approve_home_image");
+    const urlButtons = extractUrlButtons(query.message.reply_markup.inline_keyboard);
+    const keyboard = approved ? [[{
+      text: search ? "❌ ביטול ההיתר לקטגוריות בחיפוש" : "❌ ביטול ההיתר לתמונת הכיסוי",
+      callback_data: `rem:${search ? "search" : "home"}:${target.imageId}`
+    }], ...urlButtons] : urlButtons;
+    const originalText = (query.message.text || (search ? "בקשת תמונה לקטגוריות החיפוש" : "בקשת תמונה למסך הבית")).split("\n\n━━━━━━━━")[0];
+    const resultText = search
+      ? (approved ? "✅ התמונה אושרה לקטגוריות מסך החיפוש בלבד." : "❌ התמונה לא אושרה / ההיתר לקטגוריות החיפוש בוטל.")
+      : (approved ? "✅ תמונת הכיסוי אושרה לבית, לפלייליסט, לרדיו ולהמלצות שלהם בלבד." : "❌ תמונת הכיסוי לא אושרה / ההיתר בוטל.");
+    await sendTelegram("editMessageText", {
+      chat_id: query.message.chat.id, message_id: query.message.message_id,
+      text: `${originalText}\n\n━━━━━━━━\n${resultText}`,
+      reply_markup: { inline_keyboard: keyboard }
+    });
+  } catch (error) {
+    console.error("Scoped image approval failed");
+    await sendTelegram("answerCallbackQuery", { callback_query_id: query.id,
+      text: "ההחלטה לא נשמרה. בדקו הרשאת מנהל ונסו שוב.", show_alert: true });
+    // Keep the original request/buttons so a failed write can be retried.
+  }
+}
+
+async function handleTelegramCallback(query, target) {
+  const msg = query.message;
+  const claim = `${msg.chat.id}:${msg.message_id}:${target.action}`;
+  if (callbackInFlight.has(claim)) return;
+  callbackInFlight.add(claim);
+  const text = (msg.text || msg.caption || "").split("\n\n━━━━━━━━")[0];
+  const isCaption = !msg.text && Boolean(msg.caption);
+  const editMethod = isCaption ? "editMessageCaption" : "editMessageText";
+  const originalKeyboard = msg.reply_markup.inline_keyboard;
+  const edit = (status, keyboard) => sendTelegram(editMethod, {
+    chat_id: msg.chat.id, message_id: msg.message_id,
+    [isCaption ? "caption" : "text"]: `${text}\n\n━━━━━━━━━━━━━━━━━━━━\n${status}`,
+    reply_markup: { inline_keyboard: keyboard }
+  });
+  try {
+    const memberRes = await fetch(`https://api.telegram.org/bot${CONFIG.TELEGRAM_BOT_TOKEN}/getChatMember`, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: CONFIG.TELEGRAM_CHANNEL_ID, user_id: query.from.id })
+    });
+    const member = await memberRes.json();
+    if (!memberRes.ok || !member.ok || !["creator", "administrator"].includes(member.result?.status)) return;
+    const from = query.from || {};
+    const userMention = from.username ? `@${from.username}` : `admin ${from.id}`;
     try {
-      await sendTelegram("answerCallbackQuery", {
-        callback_query_id: queryId,
-        text: `❌ שגיאה: ${fatalErr?.message || fatalErr}`,
-        show_alert: true
-      });
-    } catch (_) {}
+      await updateGitHubWhitelistWithRetry({ ...target, userMention });
+    } catch (error) {
+      console.error("Whitelist approval persistence failed");
+      await edit("❌ ההחלטה לא נשמרה. אפשר לנסות שוב.", originalKeyboard);
+      return;
+    }
+    // One edit after durable storage, including its keyboard. No speculative success,
+    // extra markup edit, or second mutation of the same GitHub file through GAS.
+    await edit(target.action.startsWith("approve")
+      ? `✅ אושר ונוסף לרשימה הכשרה על ידי ${userMention}!`
+      : `❌ הוסר מרשימת ההיתר ונחסם על ידי ${userMention}!`, extractUrlButtons(originalKeyboard));
+  } catch (error) {
+    console.error("Whitelist callback failed");
+  } finally {
+    callbackInFlight.delete(claim);
   }
 }
 
 // ==============================================================================
 // מנגנון כתיבה מול GitHub (PUT) עם הגנת 409 Retry ועדכון זיכרון לאחר הצלחה
 // ==============================================================================
-async function updateGitHubWhitelistWithRetry(params) {
+let whitelistWriteTail = Promise.resolve();
+function updateGitHubWhitelistWithRetry(params) {
+  // Serialize writes inside this isolate only. Other isolates still use GitHub's SHA
+  // precondition and reapply the exact action after a conflict, never a stale snapshot.
+  const write = whitelistWriteTail.then(() => writeGitHubWhitelist(params));
+  whitelistWriteTail = write.catch(() => {});
+  return write;
+}
+
+async function writeGitHubWhitelist(params) {
   const isApprove = params.action.startsWith("approve");
   const status = isApprove ? "approved" : "blocked";
   const commitSubject = params.artistName || params.trackTitle || params.spotifyId || "item";
@@ -1075,10 +1034,14 @@ async function updateGitHubWhitelistWithRetry(params) {
     const now = new Date().toISOString();
     const notes = `${status} via telegram`;
 
-    if (params.action.includes("artist")) {
+    if (params.action.endsWith("home_image")) {
+      await upsertHomeImage(whitelist, params, now);
+    } else if (params.action.endsWith("search_image")) {
+      await upsertSearchImage(whitelist, params, now);
+    } else if (params.action.includes("artist")) {
       upsertArtist(whitelist, params.spotifyId, params.artistName, status, now, notes);
     } else {
-      upsertTrack(whitelist, params.spotifyId, params.trackTitle, params.artistName, status, now, notes);
+      if (!upsertExactTrack(whitelist, params.spotifyId, params.trackTitle, params.artistName, status, now, notes)) return true;
     }
 
     whitelist.schema_version = 2;
@@ -1136,32 +1099,34 @@ async function updateGitHubWhitelistWithRetry(params) {
 // פונקציות עזר (Telegram & Data)
 // ==============================================================================
 async function sendTelegram(method, payload) {
-  try {
-    const res = await fetch(`https://api.telegram.org/bot${CONFIG.TELEGRAM_BOT_TOKEN}/${method}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
-    if (!res.ok) {
-      const errText = await res.text();
-      console.error(`Telegram ${method} failed (${res.status}): ${errText}`);
-      if (payload.parse_mode) {
-        const retryPayload = { ...payload };
-        delete retryPayload.parse_mode;
-        const retryRes = await fetch(`https://api.telegram.org/bot${CONFIG.TELEGRAM_BOT_TOKEN}/${method}`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(retryPayload)
-        });
-        if (!retryRes.ok) {
-          const retryErr = await retryRes.text();
-          console.error(`Telegram ${method} retry without parse_mode failed (${retryRes.status}): ${retryErr}`);
-        }
+  // Editing a message can be rate-limited; it must never delay the webhook ACK or
+  // another GitHub write. Retry only the explicit Telegram delay, not every error.
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const res = await fetch(`https://api.telegram.org/bot${CONFIG.TELEGRAM_BOT_TOKEN}/${method}`, {
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload)
+      });
+      const result = await res.json();
+      if (res.ok && result.ok) return true;
+      if (result.error_code === 400 && result.description?.includes("message is not modified")) return true;
+      if (attempt === 0 && payload.parse_mode && result.error_code === 400 && /parse.*entit/i.test(result.description || "")) {
+        payload = { ...payload };
+        delete payload.parse_mode;
+        continue;
       }
+      const retryAfter = result.parameters?.retry_after;
+      if (attempt === 0 && result.error_code === 429 && Number.isInteger(retryAfter) && retryAfter >= 0 && retryAfter <= 10) {
+        await sleep(retryAfter * 1000);
+        continue;
+      }
+      console.error(`Telegram ${method} failed (${result.error_code || res.status})`);
+      return false;
+    } catch (error) {
+      console.error(`Telegram ${method} transport failed`);
+      return false;
     }
-  } catch (e) {
-    console.error(`Telegram ${method} error:`, e);
   }
+  return false;
 }
 
 function extractUrlButtons(keyboard) {
@@ -1200,27 +1165,6 @@ function upsertArtist(wl, id, name, status, now, notes) {
 
   target.id = cleanId || target.id || "";
   target.canonical_name = target.canonical_name || name || "";
-  target.status = status;
-  target.notes = notes;
-  target.updated_at = now;
-}
-
-function upsertTrack(wl, id, title, artist, status, now, notes) {
-  if (!wl.tracks) wl.tracks = [];
-  const cleanId = String(id || "").trim();
-  const normTitle = norm(title);
-
-  let target = wl.tracks.find(
-    t => (cleanId && t.id === cleanId) || (normTitle && norm(t.title) === normTitle)
-  );
-  if (!target) {
-    target = { id: cleanId, title: title || "", artist: artist || "", status };
-    wl.tracks.unshift(target);
-  }
-
-  target.id = cleanId || target.id || "";
-  target.title = target.title || title || "";
-  target.artist = target.artist || artist || "";
   target.status = status;
   target.notes = notes;
   target.updated_at = now;

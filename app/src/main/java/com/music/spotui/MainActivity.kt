@@ -21,6 +21,10 @@ import androidx.media3.session.MediaController
 import androidx.media3.session.SessionToken
 import com.google.common.util.concurrent.ListenableFuture
 import com.music.spotui.data.preferences.WazeResumeContract
+import com.music.spotui.data.entity.MediaType
+import com.music.spotui.playback.PlaybackSnapshot
+import com.music.spotui.playback.PlaybackSnapshotCodec
+import com.music.spotui.playback.WazeResumeResolver
 import com.music.spotui.di.CurrentSongState
 import com.music.spotui.di.SongPlayer
 import com.music.spotui.ui.notification.PlaybackService
@@ -125,72 +129,53 @@ class MainActivity : ComponentActivity() {
         // Close/collapse the expanded mini-player so it returns to the floating button when returning to Waze
         com.music.spotui.service.WazeScreenAccessibilityService.collapseMiniPlayer()
 
-        val songId = intent.getIntExtra(WazeResumeContract.EXTRA_SONG_ID, -1)
-        val title = intent.getStringExtra(WazeResumeContract.EXTRA_TITLE)
-        val singer = intent.getStringExtra(WazeResumeContract.EXTRA_SINGER).orEmpty()
-        val album = intent.getStringExtra(WazeResumeContract.EXTRA_ALBUM).orEmpty()
-        val coverUri = intent.getStringExtra(WazeResumeContract.EXTRA_COVER_URI).orEmpty()
-
-        // 1. If player already has a track loaded (paused mid-song), simply resume playback
-        // exactly from the paused second (do NOT restart the song from 0:00).
-        val player = SongPlayer.exoPlayer
-        val requestedNewSong = songId > 0 && !title.isNullOrBlank()
-        val isSameTrack = !requestedNewSong || songId == currentSongState.songId.value
-
-        if (player != null && player.mediaItemCount > 0 && isSameTrack) {
-            SongPlayer.play()
-            currentSongState.updatePlayingState(true)
-        } else if (requestedNewSong && songId != currentSongState.songId.value) {
-            val url = SongPlayer.buildSpotifyPlayQuery(songId.toString(), title!!, singer)
-            currentSongState.updateSongState(
-                coverUri = coverUri,
-                title = title,
-                singer = singer,
-                playingState = true,
-                songId = songId,
-                songIndex = -1,
-                album = album,
-            )
-            SongPlayer.playSong(url, this)
-        } else {
-            // 2. Fresh launch / killed in background: restore the last saved session (track + position)
-            val lastPlayback = com.music.spotui.data.preferences.loadLastPlayback(this)
-            if (lastPlayback != null) {
-                val (song, positionMs) = lastPlayback
-                currentSongState.updateQueue(listOf(song))
-                currentSongState.updateSongState(
-                    coverUri = song.coverUri,
-                    title = song.title,
-                    singer = song.singer,
-                    playingState = true,
-                    songId = song.id,
-                    songIndex = 0,
-                    album = song.album
-                )
-                SongPlayer.setRestorePoint(song.url, positionMs)
-                SongPlayer.playSong(song.url, this)
-            } else if (songId > 0 && !title.isNullOrBlank()) {
-                val url = SongPlayer.buildSpotifyPlayQuery(songId.toString(), title, singer)
-                currentSongState.updateSongState(
-                    coverUri = coverUri,
-                    title = title,
-                    singer = singer,
-                    playingState = true,
-                    songId = songId,
-                    songIndex = -1,
-                    album = album,
-                )
-                SongPlayer.playSong(url, this)
-            } else {
-                SongPlayer.play()
-                currentSongState.updatePlayingState(true)
-            }
+        // Consume once: configuration recreation must not replay an old resume Intent.
+        intent.removeExtra(WazeResumeContract.EXTRA_RETURN_TO_WAZE)
+        val rawSnapshot = intent.getStringExtra(WazeResumeContract.EXTRA_PLAYBACK_SNAPSHOT)
+        val exact = rawSnapshot?.let(PlaybackSnapshotCodec::decode)
+        val rawType = intent.getStringExtra(WazeResumeContract.EXTRA_MEDIA_TYPE)
+        val requestedType = rawType?.let { runCatching { MediaType.valueOf(it) }.getOrNull() }
+        val saved = com.music.spotui.data.preferences.loadLastPlayback(this)?.let { (song, position) ->
+            PlaybackSnapshot(song, position)
         }
-
+        val ownerToken = SongPlayer.currentPlaybackToken
+        val plan = WazeResumeResolver.resolve(
+            WazeResumeResolver.Request(
+                exact = exact,
+                mediaType = requestedType,
+                malformed = (rawSnapshot != null && exact == null) || (rawType != null && requestedType == null),
+            ),
+            persisted = saved,
+            active = SongPlayer.ownedPlaybackSnapshot(),
+        )
+        val handled = WazeResumeResolver.dispatch(
+            plan,
+            resumeActive = { playback ->
+                if (SongPlayer.resumeOwnedPlayback(ownerToken)) commitWazePlayback(playback)
+            },
+            startTrack = ::startWazePlayback,
+            startPodcast = ::startWazePlayback,
+        )
+        if (!handled) android.util.Log.w("WazeResume", "Resume rejected: missing or conflicting media identity")
         returnToWazeRunnable?.let { wazeHandler.removeCallbacks(it) }
         val r = Runnable { returnToWaze() }
         returnToWazeRunnable = r
         wazeHandler.postDelayed(r, 1400L)
+    }
+
+    private fun startWazePlayback(playback: PlaybackSnapshot) {
+        // The exact model enters SongPlayer's existing typed route. Commit UI only after preparation.
+        SongPlayer.resumeResolvedPlayback(playback.song, playback.positionMs, this) {
+            commitWazePlayback(playback)
+        }
+    }
+
+    private fun commitWazePlayback(playback: PlaybackSnapshot) {
+        val song = playback.song
+        currentSongState.commitPlayback(
+            com.music.spotui.playback.PlaybackQueueIdentity.select(song, currentSongState.queue.value)
+        )
+        com.music.spotui.data.preferences.saveLastPosition(this, playback.positionMs)
     }
 
     private fun returnToWaze() {
@@ -236,5 +221,3 @@ class MainActivity : ComponentActivity() {
         controllerFuture?.let { MediaController.releaseFuture(it) }
     }
 }
-
-

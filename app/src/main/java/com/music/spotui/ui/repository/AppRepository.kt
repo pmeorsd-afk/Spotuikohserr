@@ -23,6 +23,11 @@ class AppRepository @Inject constructor(
 
     suspend fun searchEverything(query: String) = api.searchEverything(query)
 
+    // The car needs a bounded combined result; GraphQL already includes shows and episodes.
+    suspend fun searchCarCatalog(query: String) = api.searchEverything(query, includePodcastFallback = false)
+
+    suspend fun searchPodcastShows(query: String) = api.searchEverything(query, includePodcastFallback = false)
+
     suspend fun searchYouTube(
         query: String,
         filter: com.metrolist.innertube.YouTube.SearchFilter = com.metrolist.innertube.YouTube.SearchFilter.FILTER_ALL,
@@ -37,6 +42,8 @@ class AppRepository @Inject constructor(
     suspend fun providePlaylistSongs(playlistId: String) = api.getPlaylistSongs(playlistId)
 
     suspend fun providePlaylist(playlistId: String) = api.getPlaylist(playlistId)
+
+    fun providePlaylistContent(playlistId: String) = api.getPlaylistContent(playlistId)
 
     suspend fun provideShowEpisodes(showId: String, showName: String = "") = api.getShowEpisodes(showId, showName)
 

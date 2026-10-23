@@ -1,9 +1,11 @@
 {
-  "versionCode": 28,
-  "versionName": "2.8",
-  "title": "יצא עדכון חדש לאפליקציה! (גרסה 2.8) 🎉",
-  "message": "עדכון גרסה 2.8: נוספה הודעת פודקאסטים בקרוב מעוצבת, באנרי 'בקרוב!' מורחבים בחיפוש, שיפורי יציבות, ביצועים וטעינה.",
-  "downloadUrl": "https://github.com/pmeorsd-afk/Spotuikohserr/releases/tag/v2.8",
+  "versionCode": 29,
+  "versionName": "2.9",
+  "title": "יצא עדכון חדש לאפליקציה! (גרסה 2.9) 🎉",
+  "message": "עדכון גרסה 2.9: מנגנון עדכונים ישיר מתוך האפליקציה, שיפורי עיצוב וביצועים במסך הבית, בחיפוש ובספרייה, ותמיכה משופרת ב-Android Auto ו-Waze.",
+  "downloadUrl": "https://github.com/pmeorsd-afk/Spotuikohserr/releases/tag/v2.9",
+  "apkUrl": "https://github.com/pmeorsd-afk/Spotuikohserr/releases/download/v2.9/Spotify-Kosher.apk",
+  "apkSha256": "6AF6B59B186B19AC18345F22D0A3212B895DF922F2EA0870550255474A917AFB",
   "forceUpdate": false,
   "updateButtonText": "הורד עדכון עכשיו",
   "cancelButtonText": "הזכר לי מאוחר יותר"

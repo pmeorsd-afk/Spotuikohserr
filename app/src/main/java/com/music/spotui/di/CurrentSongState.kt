@@ -35,6 +35,12 @@ class CurrentSongState @Inject constructor() {
     private val _queue: MutableState<List<SongsModel>> = mutableStateOf(emptyList())
     val queue: State<List<SongsModel>> get() = _queue
 
+    internal fun commitPlayback(selection: com.music.spotui.playback.PlaybackQueueIdentity.Selection, playing: Boolean = true) {
+        updateQueue(selection.queue)
+        val song = selection.song
+        updateSongState(song.coverUri, song.title, song.singer, playing, song.id, selection.index, song.album)
+    }
+
     fun updateQueue(songs: List<SongsModel>) {
         _queue.value = songs
         // Seed the lossless resolver: map each track's play query → its Spotify id so
@@ -184,7 +190,7 @@ class CurrentSongState @Inject constructor() {
             singer = singer,
             album = album,
             coverUri = coverUri,
-            url = SongPlayer.buildSpotifyPlayQuery(songId.toString(), title, singer)
+            url = "" // Display metadata without a queue model is not a typed playback identity.
         )
         if (playingState && title.isNotBlank()) {
             com.music.spotui.data.preferences.saveLastPlayback(
@@ -211,18 +217,7 @@ class CurrentSongState @Inject constructor() {
         // time the user opens the player / scrolls to the lyrics card.
         if (playingState && title.isNotBlank()) {
             com.music.spotui.data.api.LyricsApi.prefetch(title, singer, album)
-            // Log the play into the local listening history (History & stats screen).
-            com.music.spotui.data.preferences.addListeningHistory(
-                com.music.spotui.MyApplication.instance,
-                com.music.spotui.data.preferences.HistoryEntry(
-                    ts = System.currentTimeMillis(),
-                    songId = songId,
-                    title = title,
-                    singer = singer,
-                    album = album,
-                    image = coverUri,
-                ),
-            )
+            // Listening history is recorded by the owned Player after audio starts.
         }
     }
 }

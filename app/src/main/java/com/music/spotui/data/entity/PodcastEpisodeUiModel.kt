@@ -19,7 +19,8 @@ data class PodcastEpisodeUiModel(
     val playUrl: String = "",
     val showId: String = "",
     val showName: String = "",
-    val publisher: String = ""
+    val publisher: String = "",
+    val spotifyEpisodeId: String = "",
 ) {
     fun toSongModel(): SongsModel {
         return SongsModel(
@@ -29,7 +30,7 @@ data class PodcastEpisodeUiModel(
             singer = publisher.ifBlank { showName },
             coverUri = coverUri,
             url = playUrl,
-            spotifyTrackId = "",
+            spotifyTrackId = spotifyEpisodeId,
             explicit = false,
             durationMs = durationMs.toInt(),
             mediaType = MediaType.PODCAST_EPISODE,

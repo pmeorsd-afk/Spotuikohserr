@@ -4,6 +4,9 @@ import android.content.Context
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -25,8 +28,13 @@ private const val KEY_FOLLOWED_SHOWS = "followed_shows"
 private val _podcastFollowRevision = MutableStateFlow(0L)
 val podcastFollowRevision: StateFlow<Long> = _podcastFollowRevision.asStateFlow()
 
+/** Read the same durable follows used by Show/Home/chooser; never copy them into a library cache. */
+fun observeFollowedShows(context: Context): Flow<List<FollowedPodcastShow>> =
+    podcastFollowRevision.map { getFollowedShows(context) }.distinctUntilChanged()
+
+@Synchronized
 fun notifyPodcastFollowChanged() {
-    _podcastFollowRevision.value = System.currentTimeMillis()
+    _podcastFollowRevision.value += 1L
 }
 
 private fun FollowedPodcastShow.toJson(): JSONObject = JSONObject().apply {
@@ -77,6 +85,7 @@ fun isPodcastFollowed(context: Context, showId: String): Boolean {
     return getFollowedShows(context).any { it.showId == showId }
 }
 
+@Synchronized
 fun followPodcast(context: Context, show: FollowedPodcastShow) {
     if (show.showId.isBlank()) return
     val existing = getFollowedShows(context).filterNot { it.showId == show.showId }
@@ -96,6 +105,7 @@ fun followPodcast(context: Context, showId: String, name: String, imageUrl: Stri
     )
 }
 
+@Synchronized
 fun unfollowPodcast(context: Context, showId: String): Boolean {
     if (showId.isBlank()) return false
     val current = getFollowedShows(context)
@@ -105,4 +115,20 @@ fun unfollowPodcast(context: Context, showId: String): Boolean {
         return true
     }
     return false
+}
+
+/** One preference write/revision for Done; only touched show IDs change. */
+@Synchronized
+internal fun applyPodcastFollowEdits(
+    context: Context,
+    edits: Map<String, Pair<com.music.spotui.data.entity.PodcastModel, Boolean>>,
+) {
+    if (edits.isEmpty()) return
+    val current = getFollowedShows(context)
+    val original = current.associateBy { it.showId }
+    val models = current.map { com.music.spotui.data.entity.PodcastModel(it.showId, it.name, "", it.imageUrl) }
+    val merged = com.music.spotui.data.podcast.PodcastFollowEdits.apply(models, edits).map { show ->
+        original[show.id] ?: FollowedPodcastShow(show.id, show.name, show.coverUri)
+    }
+    if (merged != current) saveFollowedShows(context, merged)
 }

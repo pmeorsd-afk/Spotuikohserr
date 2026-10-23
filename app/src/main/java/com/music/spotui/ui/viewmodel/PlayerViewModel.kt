@@ -132,14 +132,8 @@ class PlayerViewModel @Inject constructor(
 
     //val songsResponse = (songs.value as Response.Success).data
 
-    // Resolve where we currently are in the queue. The stored index can be stale
-    // (e.g. queue swapped out), so match by song id first and fall back to the index.
-    private fun currentPositionIn(queueSongs: List<SongsModel>): Int {
-        val byId = queueSongs.indexOfFirst { it.id == currentSongId.value }
-        if (byId >= 0) return byId
-        return currentSongIndex.value.coerceIn(0, queueSongs.size - 1)
-    }
-
+    private fun currentPositionIn(queueSongs: List<SongsModel>): Int =
+        com.music.spotui.playback.PlaybackQueueIdentity.indexOf(queueSongs, currentSongId.value)
     // ── Autoplay radio (Spotify recommendations) ──
     // When the queue nears its end, fetch Spotify-recommended tracks seeded by what's
     // playing and append them, so music keeps going like Spotify's autoplay instead of
@@ -148,7 +142,7 @@ class PlayerViewModel @Inject constructor(
     @Volatile private var radioLoading = false
 
     private fun maybeExtendRadio(queueSongs: List<SongsModel>, cur: Int) {
-        if (!autoplayRadioEnabled || radioLoading) return
+        if (!autoplayRadioEnabled || radioLoading || cur < 0 || queueSongs.getOrNull(cur)?.isPodcast() != false) return
         // Only start fetching when we're within one track of the end.
         if (cur < queueSongs.size - 2) return
         val seeds = queueSongs.takeLast(5)
@@ -156,13 +150,18 @@ class PlayerViewModel @Inject constructor(
             .distinct()
         if (seeds.isEmpty()) return
         radioLoading = true
+        val token = SongPlayer.currentPlaybackToken
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val recs = repository.provideRecommendations(seeds)
                 val existing = currentSongState.queue.value
                 val existingIds = existing.map { it.id }.toSet()
                 val fresh = recs.filter { it.id !in existingIds }
-                if (fresh.isNotEmpty()) currentSongState.updateQueue(existing + fresh)
+                withContext(Dispatchers.Main) {
+                    if (token == SongPlayer.currentPlaybackToken && fresh.isNotEmpty()) {
+                        currentSongState.updateQueue(currentSongState.queue.value + fresh)
+                    }
+                }
             } finally {
                 radioLoading = false
             }
@@ -175,14 +174,14 @@ class PlayerViewModel @Inject constructor(
         // A crossfade is already advancing the queue itself — don't double-skip.
         if (SongPlayer.isCrossfadeActive()) return
         val cur = currentPositionIn(queueSongs)
+        if (cur < 0) return
         val mode = repeatMode.value
-        // Top up the queue with Spotify recommendations as we approach the end.
-        maybeExtendRadio(queueSongs, cur)
         if (cur >= queueSongs.size - 1) {
             if (mode == com.music.spotui.di.RepeatMode.ALL) {
                 val nextSong = queueSongs[0]
                 updateSongState(nextSong.coverUri, nextSong.title, nextSong.singer, true, nextSong.id, 0, nextSong.album)
                 SongPlayer.playSong(nextSong.url, context)
+                maybeExtendRadio(queueSongs, 0)
             } else if (autoplayRadioEnabled) {
                 continueIntoRadio(queueSongs, context)
             } else {
@@ -204,6 +203,8 @@ class PlayerViewModel @Inject constructor(
             nextSong.album
         )
         SongPlayer.playSong(nextSong.url, context)
+        // Capture the new owner, so a normal skip does not invalidate its own radio request.
+        maybeExtendRadio(queueSongs, nextIdx)
     }
 
     /**
@@ -244,10 +245,12 @@ class PlayerViewModel @Inject constructor(
     private fun continueIntoRadio(queueSongs: List<SongsModel>, context: Context) {
         if (awaitingRadioContinue) return
         awaitingRadioContinue = true
+        val token = SongPlayer.currentPlaybackToken
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val cur = currentPositionIn(queueSongs)
-                val currentSong = queueSongs.getOrNull(cur) ?: queueSongs.firstOrNull() ?: return@launch
+                val currentSong = queueSongs.getOrNull(cur) ?: return@launch
+                if (currentSong.isPodcast()) return@launch
                 val currentSpotifyId = currentSong.spotifyTrackId.ifBlank { null }
                 val currentTitle = currentSong.title.trim().lowercase()
 
@@ -304,10 +307,11 @@ class PlayerViewModel @Inject constructor(
                 }
 
                 if (freshTracks.isNotEmpty()) {
-                    val newQueue = currentSongState.queue.value + freshTracks
-                    currentSongState.updateQueue(newQueue)
-                    val next = newQueue[queueSongs.size]
                     withContext(Dispatchers.Main) {
+                        if (token != SongPlayer.currentPlaybackToken) return@withContext
+                        val newQueue = currentSongState.queue.value + freshTracks
+                        currentSongState.updateQueue(newQueue)
+                        val next = newQueue[queueSongs.size]
                         updateSongState(next.coverUri, next.title, next.singer, true, next.id, queueSongs.size, next.album)
                         SongPlayer.playSong(next.url, context)
                     }
@@ -317,11 +321,13 @@ class PlayerViewModel @Inject constructor(
                     if (mode == com.music.spotui.di.RepeatMode.ALL || mode == com.music.spotui.di.RepeatMode.ONE) {
                         val first = queueSongs.first()
                         withContext(Dispatchers.Main) {
+                            if (token != SongPlayer.currentPlaybackToken) return@withContext
                             updateSongState(first.coverUri, first.title, first.singer, true, first.id, 0, first.album)
                             SongPlayer.playSong(first.url, context)
                         }
                     } else {
                         withContext(Dispatchers.Main) {
+                            if (token != SongPlayer.currentPlaybackToken) return@withContext
                             SongPlayer.seekTo(0)
                             SongPlayer.pause()
                             updateSongState(currentSong.coverUri, currentSong.title, currentSong.singer, false, currentSong.id, cur, currentSong.album)
@@ -341,18 +347,19 @@ class PlayerViewModel @Inject constructor(
      * the pager is merely snapping to reflect an external track change).
      */
     fun playSongAt(queueSongs: List<SongsModel>, index: Int, context: Context) {
-        if (index !in queueSongs.indices) return
+        if (index !in queueSongs.indices || currentPositionIn(queueSongs) < 0) return
         val song = queueSongs[index]
         if (song.id == currentSongId.value) return
-        maybeExtendRadio(queueSongs, index)
         updateSongState(song.coverUri, song.title, song.singer, true, song.id, index, song.album)
         SongPlayer.playSong(song.url, context)
+        maybeExtendRadio(queueSongs, index)
     }
 
     // Function to play the previous song in the album
     fun playPreviousSong(queueSongs : List<SongsModel>, context: Context) {
         if (queueSongs.isEmpty()) return
         val cur = currentPositionIn(queueSongs)
+        if (cur < 0) return
         val mode = repeatMode.value
         val prevIdx = if (cur > 0) {
             cur - 1

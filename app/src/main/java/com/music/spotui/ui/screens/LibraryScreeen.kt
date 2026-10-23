@@ -36,7 +36,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Favorite
@@ -99,6 +98,13 @@ import com.music.spotui.ui.navigation.Routes
 import com.music.spotui.ui.navigation.albumRoute
 import com.music.spotui.ui.navigation.artistRoute
 import com.music.spotui.ui.navigation.playlistRoute
+import com.music.spotui.ui.navigation.showRoute
+import com.music.spotui.ui.library.LibraryFilter
+import com.music.spotui.ui.library.LibraryItem
+import com.music.spotui.ui.library.libraryItems
+import com.music.spotui.ui.library.LibraryHeaderSurface
+import com.music.spotui.ui.library.LibraryTopBar
+import com.music.spotui.ui.library.NewEpisodesLibraryItem
 import com.music.spotui.ui.viewmodel.HomeRefreshSignal
 import com.music.spotui.ui.viewmodel.LibraryViewModel
 
@@ -108,10 +114,6 @@ private val TextWhite = Color(0xFFFFFFFF)
 private val TextSecondary = Color(0xFFA7A7A7)
 private val ChipInactiveBg = Color(0xFF2A2A2A)
 
-enum class LibraryFilter {
-    ALL, PLAYLISTS, ALBUMS, ARTISTS
-}
-
 /**
  * Spotify-authentic "Your Library" ("הספרייה") screen.
  * Sampled 1:1 directly from official Spotify:
@@ -119,7 +121,7 @@ enum class LibraryFilter {
  *   - Profile avatar on top right (32dp circle, orange with letter or profile image)
  *   - Bold title "הספרייה" (24sp)
  *   - Action icons on top left: Plus (+) to create playlist, Search to filter
- * - Content filter chips: "פלייליסטים", "אלבומים", "אמנים"
+ * - Content filter chips: "פלייליסטים", "פודקאסטים", "אלבומים", "אמנים"
  * - Sort and view row: "לאחרונה" with sort direction arrows + List/Grid view toggle
  * - Items with official dimensions (64dp cover, pinned indicator, subtitles)
  * - Long-press on any playlist opens the authentic Spotify Context Menu bottom sheet
@@ -132,7 +134,10 @@ fun LibraryScreen(navController: NavController) {
     val entries by libraryViewModel.entries.collectAsState()
     val account by libraryViewModel.account.collectAsState()
     val followedArtists by libraryViewModel.followedArtists.collectAsState()
+    val followedPodcasts by libraryViewModel.followedPodcasts.collectAsState()
+    val savedRevision by com.music.spotui.data.preferences.likedSongsRevision.collectAsState()
     val context = LocalContext.current
+    val savedEpisodeCount = remember(savedRevision) { com.music.spotui.data.preferences.getSavedEpisodes(context).size }
     val whitelistVersion by KosherWhitelistManager.versionState
 
     var showAccount by remember { mutableStateOf(false) }
@@ -162,165 +167,132 @@ fun LibraryScreen(navController: NavController) {
                 .background(SpotifyBackground)
                 .statusBarsPadding()
         ) {
-            // ── Top Bar: Profile (Right) + "הספרייה" + Search & Plus (+) (Left) ──
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 10.dp)
-            ) {
-                // Profile Avatar (Right in RTL)
-                val accountData = (account as? Response.Success)?.data
-                val avatarUrl = accountData?.imageUrl.orEmpty()
-                val initialLetter = accountData?.name?.trim()?.firstOrNull()?.uppercaseChar()?.toString() ?: "D"
-
-                Box(
-                    modifier = Modifier
-                        .size(32.dp)
-                        .clip(CircleShape)
-                        .background(Color(0xFFD85820))
-                        .clickable(
-                            interactionSource = remember { MutableInteractionSource() },
-                            indication = null
-                        ) { showAccount = true },
-                    contentAlignment = Alignment.Center
+            LibraryHeaderSurface {
+                LibraryTopBar(
+                    searchActive = searchActive,
+                    onSearch = {
+                        searchActive = !searchActive
+                        if (!searchActive) searchQuery = ""
+                    },
+                    onCreatePlaylist = { showCreateDialog = true },
                 ) {
-                    if (avatarUrl.isNotBlank()) {
-                        AccountAvatar(avatarUrl, 32.dp)
-                    } else {
-                        Text(
-                            text = initialLetter,
-                            color = TextWhite,
-                            fontSize = 15.sp,
-                            fontWeight = FontWeight.Bold
-                        )
+                    // Profile Avatar (Right in RTL)
+                    val accountData = (account as? Response.Success)?.data
+                    val avatarUrl = accountData?.imageUrl.orEmpty()
+                    val initialLetter = accountData?.name?.trim()?.firstOrNull()?.uppercaseChar()?.toString() ?: "D"
+
+                    Box(
+                        modifier = Modifier
+                            .size(32.dp)
+                            .clip(CircleShape)
+                            .background(Color(0xFFD85820))
+                            .clickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null
+                            ) { showAccount = true },
+                        contentAlignment = Alignment.Center
+                    ) {
+                        if (avatarUrl.isNotBlank()) {
+                            AccountAvatar(avatarUrl, 32.dp)
+                        } else {
+                            Text(
+                                text = initialLetter,
+                                color = TextWhite,
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
                     }
                 }
 
-                Spacer(modifier = Modifier.width(12.dp))
-
-                // Title: "הספרייה"
-                Text(
-                    text = "הספרייה",
-                    fontWeight = FontWeight.Bold,
-                    color = TextWhite,
-                    fontSize = 24.sp,
-                    modifier = Modifier.weight(1f)
-                )
-
-                // Search Icon (Left in RTL)
-                Icon(
-                    imageVector = Icons.Default.Search,
-                    contentDescription = "חיפוש",
-                    tint = if (searchActive) SpotifyGreen else TextWhite,
-                    modifier = Modifier
-                        .size(24.dp)
-                        .clickable(
-                            interactionSource = remember { MutableInteractionSource() },
-                            indication = null
-                        ) {
-                            searchActive = !searchActive
-                            if (!searchActive) searchQuery = ""
+                // ── Search Input (Animated Visibility) ──
+                AnimatedVisibility(visible = searchActive) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp, vertical = 6.dp)
+                            .clip(RoundedCornerShape(8.dp))
+                            .background(Color(0xFF252525))
+                            .padding(horizontal = 12.dp, vertical = 8.dp)
+                    ) {
+                        Icon(
+                            Icons.Default.Search,
+                            contentDescription = null,
+                            tint = TextSecondary,
+                            modifier = Modifier.size(18.dp)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        BasicTextField(
+                            value = searchQuery,
+                            onValueChange = { searchQuery = it },
+                            singleLine = true,
+                            textStyle = TextStyle(color = TextWhite, fontSize = 15.sp),
+                            cursorBrush = SolidColor(SpotifyGreen),
+                            modifier = Modifier.weight(1f),
+                            decorationBox = { inner ->
+                                Box {
+                                    if (searchQuery.isEmpty()) {
+                                        Text("חיפוש בספרייה…", color = TextSecondary, fontSize = 15.sp)
+                                    }
+                                    inner()
+                                }
+                            }
+                        )
+                        if (searchQuery.isNotEmpty()) {
+                            Icon(
+                                imageVector = Icons.Default.Close,
+                                contentDescription = "נקה",
+                                tint = TextSecondary,
+                                modifier = Modifier
+                                    .size(18.dp)
+                                    .clickable(
+                                        interactionSource = remember { MutableInteractionSource() },
+                                        indication = null
+                                    ) { searchQuery = "" }
+                            )
                         }
-                )
+                    }
+                }
 
-                Spacer(modifier = Modifier.width(18.dp))
-
-                // Plus (+) Icon: Create Playlist (Far left in RTL)
-                Icon(
-                    imageVector = Icons.Default.Add,
-                    contentDescription = "יצירת פלייליסט",
-                    tint = TextWhite,
-                    modifier = Modifier
-                        .size(26.dp)
-                        .clickable(
-                            interactionSource = remember { MutableInteractionSource() },
-                            indication = null
-                        ) { showCreateDialog = true }
-                )
-            }
-
-            // ── Search Input (Animated Visibility) ──
-            AnimatedVisibility(visible = searchActive) {
+                // ── Filter Chips Row: פלייליסטים, אלבומים, אמנים ──
                 Row(
-                    verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 16.dp, vertical = 6.dp)
-                        .clip(RoundedCornerShape(8.dp))
-                        .background(Color(0xFF252525))
-                        .padding(horizontal = 12.dp, vertical = 8.dp)
+                        .horizontalScroll(rememberScrollState())
+                        .padding(horizontal = 16.dp, vertical = 6.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    Icon(
-                        Icons.Default.Search,
-                        contentDescription = null,
-                        tint = TextSecondary,
-                        modifier = Modifier.size(18.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    BasicTextField(
-                        value = searchQuery,
-                        onValueChange = { searchQuery = it },
-                        singleLine = true,
-                        textStyle = TextStyle(color = TextWhite, fontSize = 15.sp),
-                        cursorBrush = SolidColor(SpotifyGreen),
-                        modifier = Modifier.weight(1f),
-                        decorationBox = { inner ->
-                            Box {
-                                if (searchQuery.isEmpty()) {
-                                    Text("חיפוש בספרייה…", color = TextSecondary, fontSize = 15.sp)
-                                }
-                                inner()
-                            }
+                    LibraryChip(
+                        text = "פלייליסטים",
+                        isSelected = activeFilter == LibraryFilter.PLAYLISTS,
+                        onClick = {
+                            activeFilter = if (activeFilter == LibraryFilter.PLAYLISTS) LibraryFilter.ALL else LibraryFilter.PLAYLISTS
                         }
                     )
-                    if (searchQuery.isNotEmpty()) {
-                        Icon(
-                            imageVector = Icons.Default.Close,
-                            contentDescription = "נקה",
-                            tint = TextSecondary,
-                            modifier = Modifier
-                                .size(18.dp)
-                                .clickable(
-                                    interactionSource = remember { MutableInteractionSource() },
-                                    indication = null
-                                ) { searchQuery = "" }
-                        )
-                    }
+                    LibraryChip(
+                        text = "פודקאסטים",
+                        isSelected = activeFilter == LibraryFilter.PODCASTS,
+                        onClick = {
+                            activeFilter = if (activeFilter == LibraryFilter.PODCASTS) LibraryFilter.ALL else LibraryFilter.PODCASTS
+                        }
+                    )
+                    LibraryChip(
+                        text = "אלבומים",
+                        isSelected = activeFilter == LibraryFilter.ALBUMS,
+                        onClick = {
+                            activeFilter = if (activeFilter == LibraryFilter.ALBUMS) LibraryFilter.ALL else LibraryFilter.ALBUMS
+                        }
+                    )
+                    LibraryChip(
+                        text = "אמנים",
+                        isSelected = activeFilter == LibraryFilter.ARTISTS,
+                        onClick = {
+                            activeFilter = if (activeFilter == LibraryFilter.ARTISTS) LibraryFilter.ALL else LibraryFilter.ARTISTS
+                        }
+                    )
                 }
             }
-
-            // ── Filter Chips Row: פלייליסטים, אלבומים, אמנים ──
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .horizontalScroll(rememberScrollState())
-                    .padding(horizontal = 16.dp, vertical = 6.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                LibraryChip(
-                    text = "פלייליסטים",
-                    isSelected = activeFilter == LibraryFilter.PLAYLISTS,
-                    onClick = {
-                        activeFilter = if (activeFilter == LibraryFilter.PLAYLISTS) LibraryFilter.ALL else LibraryFilter.PLAYLISTS
-                    }
-                )
-                LibraryChip(
-                    text = "אלבומים",
-                    isSelected = activeFilter == LibraryFilter.ALBUMS,
-                    onClick = {
-                        activeFilter = if (activeFilter == LibraryFilter.ALBUMS) LibraryFilter.ALL else LibraryFilter.ALBUMS
-                    }
-                )
-                LibraryChip(
-                    text = "אמנים",
-                    isSelected = activeFilter == LibraryFilter.ARTISTS,
-                    onClick = {
-                        activeFilter = if (activeFilter == LibraryFilter.ARTISTS) LibraryFilter.ALL else LibraryFilter.ARTISTS
-                    }
-                )
-            }
-
             // ── Sort & View Row: "לאחרונה" (Right) + Grid/List Icon (Left) ──
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -365,39 +337,16 @@ fun LibraryScreen(navController: NavController) {
             }
 
             // ── Content Area: List or Grid with Filter and Search ──
-            when (entries) {
-                is Response.Loading -> LibrarySkeleton(PaddingValues(0.dp))
-                is Response.Success -> {
-                    val allEntries = (entries as Response.Success).data
-
-                    // Apply type filter
-                    val filteredByType = when (activeFilter) {
-                        LibraryFilter.ALL -> allEntries
-                        LibraryFilter.PLAYLISTS -> allEntries.filter { it.isPlaylist }
-                        LibraryFilter.ALBUMS -> allEntries.filter { !it.isPlaylist }
-                        LibraryFilter.ARTISTS -> emptyList()
-                    }
-
-                    // Apply search filter
-                    val finalEntries = if (searchQuery.isBlank()) filteredByType
-                    else filteredByType.filter {
-                        it.name.contains(searchQuery, ignoreCase = true) ||
-                        it.subtitle.contains(searchQuery, ignoreCase = true)
-                    }
-
-                    val finalArtists = if (activeFilter == LibraryFilter.PLAYLISTS || activeFilter == LibraryFilter.ALBUMS) {
-                        emptyList()
-                    } else if (searchQuery.isBlank()) {
-                        followedArtists
-                    } else {
-                        followedArtists.filter { it.name.contains(searchQuery, ignoreCase = true) }
-                    }
-
+            val contentItems = remember(entries, followedPodcasts, followedArtists, activeFilter, searchQuery, savedEpisodeCount) {
+                libraryItems((entries as? Response.Success)?.data.orEmpty(), followedPodcasts,
+                    followedArtists, activeFilter, searchQuery, savedEpisodeCount)
+            }
+            when {
+                entries is Response.Success || contentItems.isNotEmpty() || activeFilter == LibraryFilter.PODCASTS -> {
                     if (gridView) {
                         LibraryGridScreen(
                             padding = PaddingValues(0.dp),
-                            entries = finalEntries,
-                            followedArtists = finalArtists,
+                            contentItems = contentItems,
                             navController = navController,
                             onPlaylistLongClick = { entry ->
                                 selectedPlaylistForMenu = entry
@@ -407,8 +356,7 @@ fun LibraryScreen(navController: NavController) {
                     } else {
                         SumUpLibraryScreen(
                             padding = PaddingValues(0.dp),
-                            entries = finalEntries,
-                            followedArtists = finalArtists,
+                            contentItems = contentItems,
                             navController = navController,
                             onPlaylistLongClick = { entry ->
                                 selectedPlaylistForMenu = entry
@@ -417,6 +365,7 @@ fun LibraryScreen(navController: NavController) {
                         )
                     }
                 }
+                entries is Response.Loading -> LibrarySkeleton(PaddingValues(0.dp))
                 else -> Box(modifier = Modifier.padding(20.dp, 100.dp)) {
                     Snackbar(showMessage = "לא ניתן לטעון את הספרייה")
                 }
@@ -514,7 +463,7 @@ fun LibraryScreen(navController: NavController) {
 }
 
 @Composable
-private fun LibraryChip(
+internal fun LibraryChip(
     text: String,
     isSelected: Boolean,
     onClick: () -> Unit
@@ -578,15 +527,14 @@ private fun SpotifyPinIcon(modifier: Modifier = Modifier) {
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalGlideComposeApi::class)
 @Composable
-fun SumUpLibraryScreen(
+private fun SumUpLibraryScreen(
     padding: PaddingValues,
-    entries: List<LibraryEntry>,
-    followedArtists: List<ArtistsModel>,
+    contentItems: List<LibraryItem>,
     navController: NavController,
     onPlaylistLongClick: (LibraryEntry) -> Unit = {}
 ) {
     val context = LocalContext.current
-    if (entries.isEmpty() && followedArtists.isEmpty()) {
+    if (contentItems.isEmpty()) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -605,166 +553,187 @@ fun SumUpLibraryScreen(
             .padding(padding)
             .background(SpotifyBackground)
     ) {
-        // Items list: Playlists & Albums
-        items(entries, key = { it.spotifyId }) { entry ->
-            val isLiked = entry.spotifyId == "liked" || entry.name == "שירים שאהבתם" || entry.name.equals("Liked Songs", ignoreCase = true)
-            val isSystemShortcut = isLiked || entry.spotifyId == "downloaded" || entry.name.equals("Downloaded", ignoreCase = true)
-            val interactionSource = remember { MutableInteractionSource() }
-            val isPressed by interactionSource.collectIsPressedAsState()
+        items(contentItems, key = { it.key }) { item ->
+            when (item) {
+                is LibraryItem.Saved -> {
+                    val entry = item.entry
+                    val isLiked = entry.spotifyId == "liked" || entry.name == "שירים שאהבתם" || entry.name.equals("Liked Songs", ignoreCase = true)
+                    val isSystemShortcut = isLiked || entry.spotifyId == "downloaded" || entry.name.equals("Downloaded", ignoreCase = true)
+                    val interactionSource = remember { MutableInteractionSource() }
+                    val isPressed by interactionSource.collectIsPressedAsState()
 
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(if (isPressed) Color.Black else Color.Transparent)
-                    .combinedClickable(
-                        interactionSource = interactionSource,
-                        indication = null,
-                        onClick = { openLibraryEntry(entry, navController) },
-                        onLongClick = {
-                            if (entry.isPlaylist && !isSystemShortcut) {
-                                onPlaylistLongClick(entry)
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .background(if (isPressed) Color.Black else Color.Transparent)
+                            .combinedClickable(
+                                interactionSource = interactionSource,
+                                indication = null,
+                                onClick = { openLibraryEntry(entry, navController) },
+                                onLongClick = {
+                                    if (entry.isPlaylist && !isSystemShortcut) {
+                                        onPlaylistLongClick(entry)
+                                    }
+                                }
+                            )
+                            .padding(horizontal = 16.dp, vertical = 8.dp)
+                    ) {
+                        // Cover Art (64x64dp)
+                        if (isLiked) {
+                            Box(
+                                contentAlignment = Alignment.Center,
+                                modifier = Modifier
+                                    .size(64.dp)
+                                    .clip(RoundedCornerShape(4.dp))
+                                    .background(
+                                        Brush.linearGradient(
+                                            listOf(Color(0xFF450AF5), Color(0xFF8E8EE5))
+                                        )
+                                    )
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Favorite,
+                                    contentDescription = null,
+                                    tint = TextWhite,
+                                    modifier = Modifier.size(28.dp)
+                                )
+                            }
+                        } else if (entry.coverUri.isNotBlank()) {
+                            val isEntryAllowed = KosherWhitelistManager.isLibraryEntryWhitelisted(entry, context)
+                            GlideImage(
+                                modifier = Modifier
+                                    .size(64.dp)
+                                    .clip(RoundedCornerShape(4.dp)),
+                                model = entry.coverUri,
+                                contentScale = ContentScale.Crop,
+                                contentDescription = entry.name,
+                                failure = placeholder(R.drawable.placeholder),
+                                loading = placeholder(R.drawable.placeholder),
+                                isAllowed = isEntryAllowed
+                            )
+                        } else {
+                            Box(
+                                contentAlignment = Alignment.Center,
+                                modifier = Modifier
+                                    .size(64.dp)
+                                    .clip(RoundedCornerShape(4.dp))
+                                    .background(Color(0xFF2E2E2E))
+                            ) {
+                                Icon(
+                                    painter = painterResource(R.drawable.ic_library_big),
+                                    contentDescription = null,
+                                    tint = TextSecondary,
+                                    modifier = Modifier.size(30.dp)
+                                )
                             }
                         }
-                    )
-                    .padding(horizontal = 16.dp, vertical = 8.dp)
-            ) {
-                // Cover Art (64x64dp)
-                if (isLiked) {
-                    Box(
-                        contentAlignment = Alignment.Center,
-                        modifier = Modifier
-                            .size(64.dp)
-                            .clip(RoundedCornerShape(4.dp))
-                            .background(
-                                Brush.linearGradient(
-                                    listOf(Color(0xFF450AF5), Color(0xFF8E8EE5))
-                                )
+
+                        Spacer(modifier = Modifier.width(14.dp))
+
+                        // Text: Title + Subtitle
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = if (isLiked) "שירים שאהבתם" else entry.name,
+                                color = TextWhite,
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
                             )
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Favorite,
-                            contentDescription = null,
-                            tint = TextWhite,
-                            modifier = Modifier.size(28.dp)
-                        )
-                    }
-                } else if (entry.coverUri.isNotBlank()) {
-                    val isEntryAllowed = KosherWhitelistManager.isLibraryEntryWhitelisted(entry, context)
-                    GlideImage(
-                        modifier = Modifier
-                            .size(64.dp)
-                            .clip(RoundedCornerShape(4.dp)),
-                        model = entry.coverUri,
-                        contentScale = ContentScale.Crop,
-                        contentDescription = entry.name,
-                        failure = placeholder(R.drawable.placeholder),
-                        loading = placeholder(R.drawable.placeholder),
-                        isAllowed = isEntryAllowed
-                    )
-                } else {
-                    Box(
-                        contentAlignment = Alignment.Center,
-                        modifier = Modifier
-                            .size(64.dp)
-                            .clip(RoundedCornerShape(4.dp))
-                            .background(Color(0xFF2E2E2E))
-                    ) {
-                        Icon(
-                            painter = painterResource(R.drawable.ic_library_big),
-                            contentDescription = null,
-                            tint = TextSecondary,
-                            modifier = Modifier.size(30.dp)
-                        )
+                            Spacer(modifier = Modifier.height(3.dp))
+
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                if (isLiked) {
+                                    SpotifyPinIcon()
+                                    Spacer(modifier = Modifier.width(4.dp))
+                                }
+                                val prefix = if (entry.isPlaylist) "פלייליסט • " else "אלבום • "
+                                val subText = if (isLiked) "שירים שאהבתם"
+                                else if (entry.subtitle.startsWith("Playlist • ") || entry.subtitle.startsWith("פלייליסט • ")) {
+                                    entry.subtitle
+                                } else {
+                                    prefix + entry.subtitle.ifBlank { "SpotUI" }
+                                }
+                                Text(
+                                    text = subText,
+                                    color = TextSecondary,
+                                    fontSize = 13.sp,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
+                                )
+                            }
+                        }
                     }
                 }
-
-                Spacer(modifier = Modifier.width(14.dp))
-
-                // Text: Title + Subtitle
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = if (isLiked) "שירים שאהבתם" else entry.name,
-                        color = TextWhite,
-                        fontSize = 16.sp,
-                        fontWeight = FontWeight.SemiBold,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                    Spacer(modifier = Modifier.height(3.dp))
-
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        if (isLiked) {
-                            SpotifyPinIcon()
-                            Spacer(modifier = Modifier.width(4.dp))
-                        }
-                        val prefix = if (entry.isPlaylist) "פלייליסט • " else "אלבום • "
-                        val subText = if (isLiked) "שירים שאהבתם"
-                        else if (entry.subtitle.startsWith("Playlist • ") || entry.subtitle.startsWith("פלייליסט • ")) {
-                            entry.subtitle
-                        } else {
-                            prefix + entry.subtitle.ifBlank { "SpotUI" }
-                        }
-                        Text(
-                            text = subText,
-                            color = TextSecondary,
-                            fontSize = 13.sp,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
+                is LibraryItem.Episodes -> SavedEpisodesLibraryItem(item.count, false) { navController.navigate(Routes.SavedEpisodes.route) }
+                LibraryItem.NewEpisodes -> NewEpisodesLibraryItem(grid = false) { navController.navigate(Routes.NewEpisodes.route) }
+                is LibraryItem.Podcast -> LibraryPodcastItem(item, grid = false) {
+                    navController.navigate(showRoute(item.followed.showId, item.followed.name))
+                }
+                is LibraryItem.Artist -> {
+                    val artist = item.artist
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null,
+                                onClick = { navController.navigate(artistRoute(artist.name, artist.id)) }
+                            )
+                            .padding(horizontal = 16.dp, vertical = 8.dp)
+                    ) {
+                        val isArtistAllowed = KosherWhitelistManager.isArtistModelWhitelisted(artist)
+                        GlideImage(
+                            modifier = Modifier
+                                .size(64.dp)
+                                .clip(CircleShape),
+                            model = artist.coverUri,
+                            contentScale = ContentScale.Crop,
+                            contentDescription = artist.name,
+                            failure = placeholder(R.drawable.placeholder),
+                            loading = placeholder(R.drawable.placeholder),
+                            isAllowed = isArtistAllowed
                         )
+
+                        Spacer(modifier = Modifier.width(14.dp))
+
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = artist.name,
+                                color = TextWhite,
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                            Spacer(modifier = Modifier.height(3.dp))
+                            Text(
+                                text = "אמן",
+                                color = TextSecondary,
+                                fontSize = 13.sp
+                            )
+                        }
                     }
                 }
             }
         }
+    }
+}
 
-        // Followed Artists section
-        if (followedArtists.isNotEmpty()) {
-            items(followedArtists, key = { it.id }) { artist ->
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable(
-                            interactionSource = remember { MutableInteractionSource() },
-                            indication = null,
-                            onClick = { navController.navigate(artistRoute(artist.name, artist.id)) }
-                        )
-                        .padding(horizontal = 16.dp, vertical = 8.dp)
-                ) {
-                    val isArtistAllowed = KosherWhitelistManager.isArtistModelWhitelisted(artist)
-                    GlideImage(
-                        modifier = Modifier
-                            .size(64.dp)
-                            .clip(CircleShape),
-                        model = artist.coverUri,
-                        contentScale = ContentScale.Crop,
-                        contentDescription = artist.name,
-                        failure = placeholder(R.drawable.placeholder),
-                        loading = placeholder(R.drawable.placeholder),
-                        isAllowed = isArtistAllowed
-                    )
-
-                    Spacer(modifier = Modifier.width(14.dp))
-
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = artist.name,
-                            color = TextWhite,
-                            fontSize = 16.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                        Spacer(modifier = Modifier.height(3.dp))
-                        Text(
-                            text = "אמן",
-                            color = TextSecondary,
-                            fontSize = 13.sp
-                        )
-                    }
-                }
-            }
-        }
+@Composable
+private fun SavedEpisodesLibraryItem(count: Int, grid: Boolean, onClick: () -> Unit) {
+    @Composable fun label() {
+        Text("הפרקים שלכם", color = TextWhite, fontSize = if (grid) 13.sp else 16.sp, fontWeight = FontWeight.SemiBold)
+        Text(com.music.spotui.data.preferences.savedEpisodeCountLabel(count), color = TextSecondary, fontSize = if (grid) 11.sp else 13.sp)
+    }
+    if (grid) Column(Modifier.clickable(onClick = onClick)) {
+        com.music.spotui.ui.components.SavedCollectionCover(true, Modifier.fillMaxWidth().aspectRatio(1f))
+        Spacer(Modifier.height(6.dp)); label()
+    } else Row(Modifier.fillMaxWidth().clickable(onClick = onClick).padding(horizontal = 16.dp, vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+        com.music.spotui.ui.components.SavedCollectionCover(true, Modifier.size(64.dp))
+        Spacer(Modifier.width(14.dp)); Column { label() }
     }
 }
 
@@ -779,7 +748,7 @@ private fun openLibraryEntry(entry: LibraryEntry, navController: NavController) 
     } else if (entry.isPlaylist) {
         navController.navigate(playlistRoute(entry.spotifyId, entry.name))
     } else {
-        navController.navigate(albumRoute(entry.name, entry.artists))
+        navController.navigate(albumRoute(entry.name, entry.artists, albumId = entry.spotifyId))
     }
 }
 
@@ -788,15 +757,14 @@ private fun openLibraryEntry(entry: LibraryEntry, navController: NavController) 
  */
 @OptIn(ExperimentalFoundationApi::class, ExperimentalGlideComposeApi::class)
 @Composable
-fun LibraryGridScreen(
+private fun LibraryGridScreen(
     padding: PaddingValues,
-    entries: List<LibraryEntry>,
-    followedArtists: List<ArtistsModel>,
+    contentItems: List<LibraryItem>,
     navController: NavController,
     onPlaylistLongClick: (LibraryEntry) -> Unit = {}
 ) {
     val context = LocalContext.current
-    if (entries.isEmpty() && followedArtists.isEmpty()) {
+    if (contentItems.isEmpty()) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -818,139 +786,190 @@ fun LibraryGridScreen(
         horizontalArrangement = Arrangement.spacedBy(12.dp),
         verticalArrangement = Arrangement.spacedBy(18.dp),
     ) {
-        items(entries, key = { it.spotifyId }) { entry ->
-            val isLiked = entry.spotifyId == "liked" || entry.name == "שירים שאהבתם" || entry.name.equals("Liked Songs", ignoreCase = true)
-            val isSystemShortcut = isLiked || entry.spotifyId == "downloaded" || entry.name.equals("Downloaded", ignoreCase = true)
-            val interactionSource = remember { MutableInteractionSource() }
-            val isPressed by interactionSource.collectIsPressedAsState()
+        items(contentItems, key = { it.key }) { item ->
+            when (item) {
+                is LibraryItem.Saved -> {
+                    val entry = item.entry
+                    val isLiked = entry.spotifyId == "liked" || entry.name == "שירים שאהבתם" || entry.name.equals("Liked Songs", ignoreCase = true)
+                    val isSystemShortcut = isLiked || entry.spotifyId == "downloaded" || entry.name.equals("Downloaded", ignoreCase = true)
+                    val interactionSource = remember { MutableInteractionSource() }
+                    val isPressed by interactionSource.collectIsPressedAsState()
 
-            Column(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(8.dp))
-                    .background(if (isPressed) Color.Black else Color.Transparent)
-                    .combinedClickable(
-                        interactionSource = interactionSource,
-                        indication = null,
-                        onClick = { openLibraryEntry(entry, navController) },
-                        onLongClick = {
-                            if (entry.isPlaylist && !isSystemShortcut) {
-                                onPlaylistLongClick(entry)
-                            }
-                        }
-                    )
-            ) {
-                if (isLiked) {
-                    Box(
-                        contentAlignment = Alignment.Center,
+                    Column(
                         modifier = Modifier
-                            .fillMaxWidth()
-                            .aspectRatio(1f)
-                            .clip(RoundedCornerShape(4.dp))
-                            .background(
-                                Brush.linearGradient(
-                                    listOf(Color(0xFF450AF5), Color(0xFF8E8EE5))
-                                )
+                            .clip(RoundedCornerShape(8.dp))
+                            .background(if (isPressed) Color.Black else Color.Transparent)
+                            .combinedClickable(
+                                interactionSource = interactionSource,
+                                indication = null,
+                                onClick = { openLibraryEntry(entry, navController) },
+                                onLongClick = {
+                                    if (entry.isPlaylist && !isSystemShortcut) {
+                                        onPlaylistLongClick(entry)
+                                    }
+                                }
                             )
                     ) {
-                        Icon(
-                            imageVector = Icons.Default.Favorite,
-                            contentDescription = null,
-                            tint = TextWhite,
-                            modifier = Modifier.size(36.dp)
+                        if (isLiked) {
+                            Box(
+                                contentAlignment = Alignment.Center,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .aspectRatio(1f)
+                                    .clip(RoundedCornerShape(4.dp))
+                                    .background(
+                                        Brush.linearGradient(
+                                            listOf(Color(0xFF450AF5), Color(0xFF8E8EE5))
+                                        )
+                                    )
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Favorite,
+                                    contentDescription = null,
+                                    tint = TextWhite,
+                                    modifier = Modifier.size(36.dp)
+                                )
+                            }
+                        } else if (entry.coverUri.isNotBlank()) {
+                            val isEntryAllowed = KosherWhitelistManager.isLibraryEntryWhitelisted(entry, context)
+                            GlideImage(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .aspectRatio(1f)
+                                    .clip(RoundedCornerShape(4.dp)),
+                                model = entry.coverUri,
+                                contentScale = ContentScale.Crop,
+                                contentDescription = entry.name,
+                                failure = placeholder(R.drawable.placeholder),
+                                loading = placeholder(R.drawable.placeholder),
+                                isAllowed = isEntryAllowed
+                            )
+                        } else {
+                            Box(
+                                contentAlignment = Alignment.Center,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .aspectRatio(1f)
+                                    .clip(RoundedCornerShape(4.dp))
+                                    .background(Color(0xFF2E2E2E))
+                            ) {
+                                Icon(
+                                    painter = painterResource(R.drawable.ic_library_big),
+                                    contentDescription = null,
+                                    tint = TextSecondary,
+                                    modifier = Modifier.size(36.dp)
+                                )
+                            }
+                        }
+
+                        Spacer(modifier = Modifier.height(6.dp))
+
+                        Text(
+                            text = if (isLiked) "שירים שאהבתם" else entry.name,
+                            color = TextWhite,
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
                         )
-                    }
-                } else if (entry.coverUri.isNotBlank()) {
-                    val isEntryAllowed = KosherWhitelistManager.isLibraryEntryWhitelisted(entry, context)
-                    GlideImage(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .aspectRatio(1f)
-                            .clip(RoundedCornerShape(4.dp)),
-                        model = entry.coverUri,
-                        contentScale = ContentScale.Crop,
-                        contentDescription = entry.name,
-                        failure = placeholder(R.drawable.placeholder),
-                        loading = placeholder(R.drawable.placeholder),
-                        isAllowed = isEntryAllowed
-                    )
-                } else {
-                    Box(
-                        contentAlignment = Alignment.Center,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .aspectRatio(1f)
-                            .clip(RoundedCornerShape(4.dp))
-                            .background(Color(0xFF2E2E2E))
-                    ) {
-                        Icon(
-                            painter = painterResource(R.drawable.ic_library_big),
-                            contentDescription = null,
-                            tint = TextSecondary,
-                            modifier = Modifier.size(36.dp)
+                        Text(
+                            text = if (isLiked) "פלייליסט" else entry.subtitle,
+                            color = TextSecondary,
+                            fontSize = 11.sp,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
                         )
                     }
                 }
+                is LibraryItem.Episodes -> SavedEpisodesLibraryItem(item.count, true) { navController.navigate(Routes.SavedEpisodes.route) }
+                LibraryItem.NewEpisodes -> NewEpisodesLibraryItem(grid = true) { navController.navigate(Routes.NewEpisodes.route) }
+                is LibraryItem.Podcast -> LibraryPodcastItem(item, grid = true) {
+                    navController.navigate(showRoute(item.followed.showId, item.followed.name))
+                }
+                is LibraryItem.Artist -> {
+                    val artist = item.artist
+                    Column(
+                        modifier = Modifier.clickable(
+                            interactionSource = remember { MutableInteractionSource() },
+                            indication = null,
+                            onClick = { navController.navigate(artistRoute(artist.name, artist.id)) }
+                        )
+                    ) {
+                        val isArtistAllowed = KosherWhitelistManager.isArtistModelWhitelisted(artist)
+                        GlideImage(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .aspectRatio(1f)
+                                .clip(CircleShape),
+                            model = artist.coverUri,
+                            contentScale = ContentScale.Crop,
+                            contentDescription = artist.name,
+                            failure = placeholder(R.drawable.placeholder),
+                            loading = placeholder(R.drawable.placeholder),
+                            isAllowed = isArtistAllowed
+                        )
 
-                Spacer(modifier = Modifier.height(6.dp))
+                        Spacer(modifier = Modifier.height(6.dp))
 
-                Text(
-                    text = if (isLiked) "שירים שאהבתם" else entry.name,
-                    color = TextWhite,
-                    fontSize = 13.sp,
-                    fontWeight = FontWeight.SemiBold,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
-                Text(
-                    text = if (isLiked) "פלייליסט" else entry.subtitle,
-                    color = TextSecondary,
-                    fontSize = 11.sp,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
+                        Text(
+                            text = artist.name,
+                            color = TextWhite,
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                        Text(
+                            text = "אמן",
+                            color = TextSecondary,
+                            fontSize = 11.sp
+                        )
+                    }
+                }
             }
         }
+    }
+}
 
-        if (followedArtists.isNotEmpty()) {
-            items(followedArtists, key = { it.id }) { artist ->
-                Column(
-                    modifier = Modifier.clickable(
-                        interactionSource = remember { MutableInteractionSource() },
-                        indication = null,
-                        onClick = { navController.navigate(artistRoute(artist.name, artist.id)) }
-                    )
-                ) {
-                    val isArtistAllowed = KosherWhitelistManager.isArtistModelWhitelisted(artist)
-                    GlideImage(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .aspectRatio(1f)
-                            .clip(CircleShape),
-                        model = artist.coverUri,
-                        contentScale = ContentScale.Crop,
-                        contentDescription = artist.name,
-                        failure = placeholder(R.drawable.placeholder),
-                        loading = placeholder(R.drawable.placeholder),
-                        isAllowed = isArtistAllowed
-                    )
-
-                    Spacer(modifier = Modifier.height(6.dp))
-
-                    Text(
-                        text = artist.name,
-                        color = TextWhite,
-                        fontSize = 13.sp,
-                        fontWeight = FontWeight.SemiBold,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                    Text(
-                        text = "אמן",
-                        color = TextSecondary,
-                        fontSize = 11.sp
-                    )
-                }
-            }
+@OptIn(ExperimentalGlideComposeApi::class)
+@Composable
+private fun LibraryPodcastItem(item: LibraryItem.Podcast, grid: Boolean, onClick: () -> Unit) {
+    val allowed = remember(item.show, KosherWhitelistManager.versionState.value) {
+        KosherWhitelistManager.isPodcastShowWhitelisted(item.show)
+    }
+    @Composable fun cover(modifier: Modifier) {
+        GlideImage(
+            modifier = modifier.clip(RoundedCornerShape(4.dp)),
+            model = item.followed.imageUrl,
+            contentDescription = item.followed.name,
+            contentScale = ContentScale.Crop,
+            failure = placeholder(R.drawable.placeholder),
+            loading = placeholder(R.drawable.placeholder),
+            isAllowed = allowed,
+        )
+    }
+    @Composable fun label() {
+        Text(item.followed.name, color = TextWhite, fontSize = if (grid) 13.sp else 16.sp,
+            fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis)
+        if (!grid) Spacer(Modifier.height(3.dp))
+        Text("פודקאסט", color = TextSecondary, fontSize = if (grid) 11.sp else 13.sp,
+            maxLines = 1, overflow = TextOverflow.Ellipsis)
+    }
+    val click = Modifier.clickable(
+        interactionSource = remember { MutableInteractionSource() }, indication = null, onClick = onClick,
+    )
+    if (grid) {
+        Column(modifier = click) {
+            cover(Modifier.fillMaxWidth().aspectRatio(1f))
+            Spacer(Modifier.height(6.dp))
+            label()
+        }
+    } else {
+        Row(modifier = Modifier.fillMaxWidth().then(click).padding(horizontal = 16.dp, vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically) {
+            cover(Modifier.size(64.dp))
+            Spacer(Modifier.width(14.dp))
+            Column(Modifier.weight(1f)) { label() }
         }
     }
 }

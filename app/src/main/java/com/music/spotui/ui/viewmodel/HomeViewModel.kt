@@ -8,10 +8,13 @@ import com.music.spotui.data.entity.ArtistsModel
 import com.music.spotui.data.entity.HomeFeedModel
 import com.music.spotui.ui.repository.AppRepository
 import com.music.spotui.data.home.HomeFeedEngine
+import com.music.spotui.data.home.HomeRecommendationPolicy
+import com.music.spotui.data.home.HomeFeedDelivery
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.update
 import com.music.spotui.data.local.LocalListeningTracker
 import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.launch
@@ -39,9 +42,17 @@ class HomeViewModel @Inject constructor(
 
     private val _currentFilter = MutableStateFlow(HomeTabFilter.ALL)
     val currentFilter: StateFlow<HomeTabFilter> = _currentFilter
+    private var previousMusicFilter = HomeTabFilter.ALL
 
     fun setFilter(filter: HomeTabFilter) {
+        if (_currentFilter.value == HomeTabFilter.ALL || _currentFilter.value == HomeTabFilter.MUSIC) {
+            previousMusicFilter = _currentFilter.value
+        }
         _currentFilter.value = filter
+    }
+
+    fun backFromPodcasts() {
+        _currentFilter.value = if (_currentFilter.value == HomeTabFilter.FOLLOWING) HomeTabFilter.PODCASTS else previousMusicFilter
     }
 
     private val _followedPodcasts = MutableStateFlow<List<com.music.spotui.data.preferences.FollowedPodcastShow>>(emptyList())
@@ -57,15 +68,36 @@ class HomeViewModel @Inject constructor(
     val artists : StateFlow<Response<List<ArtistsModel>>> = _artists
 
     private var personalizedRefreshJob: kotlinx.coroutines.Job? = null
+    private var discoveryRefreshJob: kotlinx.coroutines.Job? = null
+
+    private fun refreshDiscoveryInBackground() {
+        if (discoveryRefreshJob?.isActive == true) return
+        discoveryRefreshJob = viewModelScope.launch(Dispatchers.IO) {
+            try {
+                homeFeedEngine.refreshDiscoveryRecommendations { publishListeningUpdate(it) }
+            } catch (cancel: kotlinx.coroutines.CancellationException) {
+                throw cancel
+            } catch (e: Exception) {
+                android.util.Log.w("HomeDiscovery", "Catalog refresh unavailable", e)
+            }
+        }
+    }
+
+    private fun publishListeningUpdate(feed: HomeFeedModel) {
+        _home.update { current ->
+            Response.Success(HomeRecommendationPolicy.keepVisibleDiscovery(feed, (current as? Response.Success)?.data))
+        }
+    }
 
     init {
         refreshHome()
         viewModelScope.launch {
             listeningTracker.revision.drop(1).collect {
+                refreshDiscoveryInBackground()
                 // 1. Immediate local update for RECENTLY_PLAYED & Top Grid (0ms latency)
                 val fastFeed = homeFeedEngine.updateRecentListeningOnly()
                 if (fastFeed.sections.isNotEmpty()) {
-                    _home.value = Response.Success(fastFeed)
+                    publishListeningUpdate(fastFeed)
                 }
 
                 // 2. Background: single-flight personalized update (similar artists & recommendations)
@@ -74,7 +106,7 @@ class HomeViewModel @Inject constructor(
                     try {
                         val personalizedFeed = homeFeedEngine.updatePersonalizedRecommendations()
                         if (personalizedFeed.sections.isNotEmpty()) {
-                            _home.value = Response.Success(personalizedFeed)
+                            publishListeningUpdate(personalizedFeed)
                         }
                     } catch (e: Exception) {
                         e.printStackTrace()
@@ -83,7 +115,8 @@ class HomeViewModel @Inject constructor(
             }
         }
         viewModelScope.launch {
-            HomeRefreshSignal.events.collect {
+            HomeRefreshSignal.events.collect { request ->
+                if (request.selectAll) setFilter(HomeTabFilter.ALL)
                 homeFeedEngine.invalidate()
                 refreshHome(force = true)
             }
@@ -108,7 +141,7 @@ class HomeViewModel @Inject constructor(
     }
 
     /**
-     * Safety net on ON_RESUME: refreshes recent listening from local cache (<5ms) without network calls.
+     * ON_RESUME publishes prepared discovery with local recents, then schedules a bounded catalog refresh.
      */
     fun syncRecentListening() = viewModelScope.launch(Dispatchers.IO) {
         try {
@@ -116,6 +149,7 @@ class HomeViewModel @Inject constructor(
             if (fastFeed.sections.isNotEmpty()) {
                 _home.value = Response.Success(fastFeed)
             }
+            refreshDiscoveryInBackground()
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -164,9 +198,13 @@ class HomeViewModel @Inject constructor(
             _home.value = Response.Loading()
         }
         try {
-            val feed = homeFeedEngine.getHomeFeed(force)
+            val feed = HomeFeedDelivery.refresh(
+                local = { homeFeedEngine.updateRecentListeningOnly() },
+                remote = { homeFeedEngine.getHomeFeed(force) },
+                publish = { if (force) _home.value = Response.Success(it) else publishListeningUpdate(it) },
+            )
             if (feed.sections.isNotEmpty()) {
-                _home.value = Response.Success(feed)
+                refreshDiscoveryInBackground()
                 return@launch
             }
         } catch (e: Exception) {

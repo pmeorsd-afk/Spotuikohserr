@@ -24,6 +24,8 @@ import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.catch
+import com.music.spotui.playback.PlaylistContentLoader
 import kotlinx.coroutines.sync.Semaphore
 import javax.inject.Inject
 
@@ -40,6 +42,63 @@ import javax.inject.Inject
 class Api @Inject constructor(
     @ApplicationContext private val context: Context,
 ) {
+    data class PlaylistContent(val playlist: AlbumsModel, val songs: List<SongsModel>)
+
+    /** Header and first page are parsed from one network response. No account-crossing cache. */
+    fun getPlaylistContent(playlistId: String): Flow<Response<PlaylistContent>> = flow<Response<PlaylistContent>> {
+        emit(Response.Loading())
+        require(playlistId.isNotBlank()) { "Missing playlist id" }
+        val started = android.os.SystemClock.elapsedRealtime()
+        if (playlistId.startsWith("custom_")) {
+            val playlist = com.music.spotui.data.preferences.CustomPlaylistStore.getPlaylists(context)
+                .firstOrNull { it.id == playlistId } ?: error("Playlist not found")
+            emit(Response.Success(PlaylistContent(AlbumsModel(
+                id = stableId(playlist.id), artists = "Playlist", coverUri = playlist.coverUri,
+                name = playlist.name,
+                time = com.music.spotui.data.preferences.CustomPlaylistStore.getSubtitle(playlist.songKeys.size),
+            ), playlist.cachedTracks)))
+            return@flow
+        }
+        if (playlistId.startsWith("youtube:") || playlistId.startsWith("yt:") ||
+            playlistId.startsWith("VL") || playlistId.startsWith("PL") ||
+            playlistId.startsWith("RDAMPL") || playlistId.startsWith("MPREb_")) {
+            val details = com.metrolist.innertube.YouTube.playlistDetails(playlistId).getOrThrow()
+            val songs = details.songs.map { item -> SongsModel(
+                id = stableId("yt:" + item.id), title = item.title, album = item.album?.name.orEmpty(),
+                singer = item.artists.joinToString(", ") { it.name }, coverUri = item.thumbnail,
+                url = "youtube:" + item.id + "|" + item.title + " " + item.artists.firstOrNull()?.name.orEmpty(),
+                spotifyTrackId = "", explicit = item.explicit, durationMs = (item.duration ?: 0) * 1000,
+            ) }
+            emit(Response.Success(PlaylistContent(AlbumsModel(
+                id = stableId("playlist:" + details.id), artists = details.author.ifBlank { "YouTube Music" },
+                coverUri = details.thumbnail, name = details.title,
+                time = details.description.ifBlank { "${details.songCount} songs" },
+            ), songs)))
+            Log.i("PlaylistTiming", "first_page elapsedMs=" + (android.os.SystemClock.elapsedRealtime() - started))
+            return@flow
+        }
+        check(SpotifyTokenProvider.ensureToken(context)) { "Spotify authentication unavailable" }
+        val loader = PlaylistContentLoader<AlbumsModel, SongsModel> { offset ->
+            val page = Spotify.playlistPage(playlistId, limit = 100, offset = offset).getOrThrow()
+            val metadata = page.playlist
+            PlaylistContentLoader.Page(
+                AlbumsModel(
+                    id = stableId("playlist:" + metadata.id), artists = metadata.owner?.displayName.orEmpty(),
+                    coverUri = metadata.images.firstOrNull()?.url.orEmpty(), name = metadata.name,
+                    time = stripHtml(metadata.description),
+                ),
+                page.tracks.items.mapNotNull { it.track?.toSongModel() }, page.tracks.total, page.consumedItems,
+            ).also {
+                Log.i("PlaylistTiming", "page_offset=" + offset + " elapsedMs=" + (android.os.SystemClock.elapsedRealtime() - started))
+            }
+        }
+        loader.load().collect { emit(Response.Success(PlaylistContent(it.header, it.items))) }
+    }.catch { error ->
+        if (error is kotlinx.coroutines.CancellationException) throw error
+        Log.w("PlaylistTiming", "load_failed category=" + error.javaClass.simpleName)
+        emit(Response.Error("Could not load playlist. Check your connection and try again."))
+    }
+
     private fun stableId(key: String): Int = key.hashCode() and 0x7fffffff
 
     private val podcastFeedResolver: com.music.spotui.playback.PodcastFeedResolver =
@@ -77,6 +136,8 @@ class Api @Inject constructor(
     }
 
     private fun SpotifyTrack.toSongModel(albumCover: String = "", albumName: String = ""): SongsModel {
+        com.music.spotui.data.podcast.savedPlaylistEpisode(this)?.let { return it }
+        require(uri?.startsWith("spotify:episode:") != true) { "Invalid podcast playlist identity" }
         val singer = artists.joinToString(", ") { it.name }
         val cover = album?.images?.firstOrNull()?.url?.takeIf { it.isNotBlank() } ?: albumCover
         val albumTitle = album?.name?.takeIf { it.isNotBlank() } ?: albumName
@@ -103,6 +164,7 @@ class Api @Inject constructor(
         name = name,
         time = releaseDate ?: "",
         type = albumType.orEmpty(),
+        spotifyId = id,
     )
 
     private fun SpotifyArtist.toArtistModel(): ArtistsModel = ArtistsModel(
@@ -209,6 +271,7 @@ class Api @Inject constructor(
             imageUrl = imageUrl ?: "",
             subtitle = artists.joinToString(", ") { it.name }.ifBlank { "Album" },
             artists = artists.joinToString(", ") { it.name },
+            spotifyId = id,
         )
         is SpotifyHomeFeedItem.Artist -> HomeItem.Artist(
             name = name,
@@ -262,11 +325,11 @@ class Api @Inject constructor(
     }
 
     /**
-     * Combined search: tracks + albums + artists in a single GraphQL call
+     * Combined search: tracks, albums, artists and playlists in a single GraphQL call
      * (searchDesktop, not rate-limited). Powers the Search screen so users can
      * find albums and artists, not just songs.
      */
-    suspend fun searchEverything(query: String): Flow<Response<SearchResults>> = flow {
+    suspend fun searchEverything(query: String, includePodcastFallback: Boolean = true): Flow<Response<SearchResults>> = flow {
         emit(Response.Loading())
         if (query.isBlank()) {
             emit(Response.Success(SearchResults())); return@flow
@@ -274,19 +337,19 @@ class Api @Inject constructor(
         if (!SpotifyTokenProvider.ensureToken(context)) {
             emit(Response.Error("Spotify not authenticated — set sp_dc cookie")); return@flow
         }
-        Spotify.search(query, types = listOf("track", "album", "artist"), limit = 20).fold(
+        Spotify.search(query, types = listOf("track", "album", "artist", "playlist"), limit = 20).fold(
             onSuccess = { res ->
                 // Podcasts come primarily from GraphQL searchDesktop (not rate-limited).
                 // Fall back to REST catalog search only if GraphQL returned neither shows nor episodes.
                 val gqlShows = res.shows?.items.orEmpty()
                 val gqlEpisodes = res.episodes?.items.orEmpty()
 
-                val shows = gqlShows.ifEmpty {
+                val shows = if (!includePodcastFallback) gqlShows else gqlShows.ifEmpty {
                     Spotify.searchPodcasts(query, limit = 12)
                         .onFailure { Log.d("Api", "searchPodcasts REST fallback skipped or failed: ${it.message}") }
                         .getOrNull()?.shows?.items.orEmpty()
                 }
-                val episodes = gqlEpisodes.ifEmpty {
+                val episodes = if (!includePodcastFallback) gqlEpisodes else gqlEpisodes.ifEmpty {
                     Spotify.searchPodcasts(query, limit = 12)
                         .getOrNull()?.episodes?.items.orEmpty()
                 }
@@ -300,6 +363,15 @@ class Api @Inject constructor(
                     artists = res.artists?.items.orEmpty().map { it.toArtistModel() },
                     shows = showModels,
                     episodes = episodes.map { it.toEpisodeSongModel(null) },
+                    playlists = res.playlists?.items.orEmpty().map { playlist ->
+                        com.music.spotui.data.entity.LibraryEntry(
+                            spotifyId = playlist.id,
+                            name = playlist.name,
+                            subtitle = "Playlist" + (playlist.owner?.displayName?.let { " • $it" } ?: ""),
+                            coverUri = playlist.images.firstOrNull()?.url.orEmpty(),
+                            isPlaylist = true,
+                        )
+                    },
                 )))
             },
             onFailure = { Log.e("Api", "searchEverything failed", it); emit(Response.Error(it.message ?: "error")) },
@@ -1068,7 +1140,7 @@ class Api @Inject constructor(
      * GQL endpoint (not rate-limited). Process-cached for instant re-entry.
      */
     suspend fun getLibrary(): Flow<Response<List<com.music.spotui.data.entity.LibraryEntry>>> = flow {
-        HomeCache.library?.let { emit(Response.Success(it)) } ?: emit(Response.Loading())
+        HomeCache.library?.let { emit(Response.Success(com.music.spotui.data.preferences.withSavedCollections(context, it))) } ?: emit(Response.Loading())
 
         // Pin "Liked Songs" first, exactly like the Spotify app.
         val liked = com.music.spotui.data.entity.LibraryEntry(
@@ -1098,7 +1170,7 @@ class Api @Inject constructor(
         }
 
         if (!SpotifyTokenProvider.ensureToken(context)) {
-            val localOnly = listOf(liked, downloaded) + customPlaylists
+            val localOnly = com.music.spotui.data.preferences.withSavedCollections(context, listOf(liked, downloaded) + customPlaylists)
             HomeCache.library = localOnly
             emit(Response.Success(localOnly))
             return@flow
@@ -1122,7 +1194,7 @@ class Api @Inject constructor(
                 isPlaylist = true,
             )
         }
-        val merged = listOf(liked, downloaded) + customPlaylists + playlists + albums
+        val merged = com.music.spotui.data.preferences.withSavedCollections(context, listOf(liked, downloaded) + customPlaylists + playlists + albums)
         HomeCache.library = merged
         emit(Response.Success(merged))
     }

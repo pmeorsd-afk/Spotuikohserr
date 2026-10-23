@@ -13,6 +13,17 @@ import com.metrolist.innertube.utils.YouTubeUrlParser
 import com.metrolist.music.constants.AudioQuality
 import com.metrolist.music.utils.YTPlayerUtils
 import com.music.spotui.data.entity.MediaType
+import com.music.spotui.data.entity.SongsModel
+import com.music.spotui.playback.PlaybackFailure
+import com.music.spotui.playback.PlaybackRetry
+import com.music.spotui.playback.BackgroundPreloader
+import com.music.spotui.playback.PlaybackSourceCache
+import com.music.spotui.playback.PlaybackStartup
+import com.music.spotui.playback.SharedResolution
+import kotlinx.coroutines.ensureActive
+import com.music.spotui.playback.PlaybackControlState
+import com.music.spotui.playback.PlaybackOwnership
+import com.music.spotui.playback.PlaybackSnapshot
 import com.music.spotui.playback.DefaultEpisodePlaybackResolver
 import com.music.spotui.playback.EpisodePlaybackResolver
 import com.music.spotui.playback.PlaybackSource
@@ -43,10 +54,12 @@ object SongPlayer {
     private var player: ExoPlayer? = null
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
-    @Volatile var currentPlaybackToken: String = java.util.UUID.randomUUID().toString()
-        private set
-    @Volatile var activePlaybackToken: String? = null
-        private set
+    private val ownership = PlaybackOwnership()
+    val currentPlaybackToken: String get() = ownership.current.token
+    val activePlaybackToken: String? get() = ownership.active?.token
+    @Volatile private var resolutionJob: kotlinx.coroutines.Job? = null
+    @Volatile private var qualityUpgradeJob: kotlinx.coroutines.Job? = null
+    @Volatile private var errorRecoveryJob: kotlinx.coroutines.Job? = null
     @Volatile private var onTrackEndedListener: ((token: String) -> Unit)? = null
 
     fun setOnTrackEndedListener(listener: ((token: String) -> Unit)?) {
@@ -55,7 +68,61 @@ object SongPlayer {
 
     // Cache of resolved stream URLs keyed by the "title artist" query, so replays
     // and prefetched neighbours start instantly instead of re-hitting the network.
-    private val streamCache = java.util.concurrent.ConcurrentHashMap<String, String>()
+    private data class CachedStream(val url: String, val source: String, val quality: String)
+    private data class SourceScope(val network: String, val settings: String, val session: List<String?>, val revision: Long)
+    private val sourceRevision = java.util.concurrent.atomic.AtomicLong()
+    private data class MatchScope(val metadata: TrackMatchMetadata?, val duration: Int?, val explicit: Boolean?)
+    private fun matchScope(query: String) = MatchScope(metadataRegistry[query], durationRegistry[query], explicitRegistry[query])
+    private data class StreamScope(val source: SourceScope, val match: MatchScope)
+    private fun streamScope(query: String, context: Context) = StreamScope(sourceScope(context), matchScope(query))
+    private data class ResolutionKey(val query: String, val quality: AudioQuality, val scope: SourceScope, val match: MatchScope)
+    private val streamCache = PlaybackSourceCache<String, CachedStream>({ android.os.SystemClock.elapsedRealtime() })
+    private val ytCache = PlaybackSourceCache<ResolutionKey, YTPlayerUtils.PlaybackData>({ android.os.SystemClock.elapsedRealtime() })
+    private val ytRequests = SharedResolution<ResolutionKey, YTPlayerUtils.PlaybackData?>(scope)
+    private val startup = PlaybackStartup({ android.os.SystemClock.elapsedRealtime() }) { Log.i("PlaybackTiming", it) }
+    private var startupWatchdog: kotlinx.coroutines.Job? = null
+    private val retryPlayback = PlaybackRetry()
+    private var recoveredToken: String? = null
+
+    private fun sourceScope(context: Context): SourceScope {
+        val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
+        return SourceScope(
+            cm?.activeNetwork?.toString().orEmpty(),
+            listOf(
+                com.music.spotui.data.preferences.currentStreamingQuality(context),
+                com.music.spotui.data.preferences.getPrimaryMusicSource(context),
+                youtubeEnabled, deezerEnabled, losslessStreaming, losslessHiRes,
+                com.music.spotui.data.preferences.isDeezerEnabled(context), YouTube.proxy,
+            ).joinToString("|"),
+            listOf(YouTube.cookie, com.music.spotui.data.preferences.getDeezerArl(context),
+                com.music.spotui.data.api.SpotifySession.spDc(context)),
+            sourceRevision.get(),
+        )
+    }
+
+    private fun cacheStream(song: String, url: String, source: String, quality: String, key: StreamScope, lifetimeMs: Long = 300_000) {
+        // Conservative cap for providers without explicit expiry; honor signed URL expiry too.
+        val expiry = runCatching {
+            java.net.URI(url).rawQuery?.split('&')?.firstOrNull { it.startsWith("expire=") }
+                ?.substringAfter('=')?.toLongOrNull()?.times(1000)
+        }.getOrNull()
+        val lifetime = minOf(lifetimeMs, expiry?.let { it - System.currentTimeMillis() - 30_000 } ?: 300_000L)
+        streamCache.put(song, CachedStream(url, source, quality), key, lifetime)
+        sourceCache[song] = source
+        qualityCache[song] = quality
+    }
+
+    private val preloader = BackgroundPreloader<String>(
+        scope,
+        canRun = { !startup.pending },
+        load = { song ->
+            val ctx = appCtx
+            if (ctx != null && com.music.spotui.data.preferences.isPreloadEnabled(ctx)) {
+                val url = resolveStreamUrl(song, ctx, forPlayback = false)
+                if (url != null && !startup.pending) cacheIntro(url, ctx)
+            }
+        },
+    )
     // Which engine each cached stream came from ("YouTube", "Lossless • …") so a
     // cache hit can restore the correct source badge.
     private val sourceCache = java.util.concurrent.ConcurrentHashMap<String, String>()
@@ -188,7 +255,7 @@ object SongPlayer {
     }
     // Tracks which query is the latest play request so a slow resolve for an old
     // tap doesn't clobber a newer one (fast switching).
-    @Volatile private var currentRequest: String = ""
+    private val currentRequest: String get() = ownership.current.request
 
     // Latest track metadata (title / artist / cover URL) so the MediaItem we build
     // carries it into the system media notification. Set via [setNowPlayingMeta]
@@ -240,22 +307,182 @@ object SongPlayer {
             ?: text.trim().takeIf { it.matches(Regex("""[A-Za-z0-9_-]{11}""")) }
 
     fun invalidateResolvedStream(song: String) {
+        sourceRevision.incrementAndGet()
+        discardCachedStream(song)
+    }
+
+    private fun discardCachedStream(song: String) {
         streamCache.remove(song)
         sourceCache.remove(song)
         qualityCache.remove(song)
     }
 
-    fun playSong(song: String, context: Context) {
+
+    private data class PlaybackItemTag(val token: String)
+
+    private fun itemToken(item: MediaItem?): String? = when (val tag = item?.localConfiguration?.tag) {
+        is PlaybackOwnership.Ticket -> tag.token
+        is PlaybackItemTag -> tag.token
+        else -> null
+    }
+
+    private fun ownsPlayerItem(token: String, p: ExoPlayer? = player): Boolean =
+        p != null && p === player && ownership.isCurrent(token) && itemToken(p.currentMediaItem) == token
+
+    private fun cancelPendingPlaybackWork() {
+        startupWatchdog?.cancel()
+        startupWatchdog = null
+        startup.cancel()
+        retryPlayback.clear()
+        preloader.clearQueued()
+        resolutionJob?.cancel()
+        resolutionJob = null
+        qualityUpgradeJob?.cancel()
+        qualityUpgradeJob = null
+        errorRecoveryJob?.cancel()
+        errorRecoveryJob = null
+        positionWatchJob?.cancel()
+        positionWatchJob = null
+        cancelCrossfade()
+    }
+
+    /** Capture the outgoing tagged owner even if UI/queue already moved to the next selection. */
+    internal fun saveCurrentPosition(completed: Boolean = false) {
+        val owner = ownership.active ?: return
+        val p = player ?: return
+        val ctx = appCtx ?: return
+        if (!ownsPlayerItem(owner.token, p) || p.playbackState == Player.STATE_IDLE) return
+        val model = owner.song ?: SongsModel().copy(
+            title = "Playback", url = owner.request, mediaType = owner.mediaType,
+        )
+        com.music.spotui.data.preferences.savePlaybackPosition(
+            ctx, model, p.currentPosition, completed, durationMs = p.duration,
+        )
+    }
+
+    /** Reserve external ownership before even identity lookup; an invalid request cannot resume old audio. */
+    internal fun beginExternalPlaybackRequest(context: Context) {
+        check(android.os.Looper.myLooper() == android.os.Looper.getMainLooper())
+        appCtx = context.applicationContext
+        pause()
+        ownership.begin("", MediaType.TRACK, external = true)
+        cancelPendingPlaybackWork()
+        restoreQuery = null
+    }
+
+    internal fun canControlSessionPlayer(base: Player): Boolean =
+        base === player && ownership.canControl(itemToken(base.currentMediaItem))
+
+    /** Invalidates the former owner before external source resolution. No source lookup or play here. */
+    internal fun beginExternalPlaybackTakeover(
+        song: SongsModel,
+        mediaId: String,
+        context: Context,
+    ): PlaybackOwnership.Ticket {
+        com.music.spotui.playback.RadioPreviewInterruption.mainCommand()
+        check(android.os.Looper.myLooper() == android.os.Looper.getMainLooper())
+        appCtx = context.applicationContext
+        saveCurrentPosition()
+        val ticket = ownership.begin(song.url, song.mediaType, song, external = true, mediaId = mediaId)
+        cancelPendingPlaybackWork()
+        restoreQuery = null
+        player?.pause()
+        return ticket
+    }
+
+    internal fun isExternalPlaybackCurrent(ticket: PlaybackOwnership.Ticket): Boolean =
+        ticket.external && ownership.isCurrent(ticket.token)
+
+    /** Called by the transition listener after Media3 has accepted the item on our ExoPlayer. */
+    internal fun adoptExternalPlayback(ticket: PlaybackOwnership.Ticket, item: MediaItem): Boolean {
+        check(android.os.Looper.myLooper() == android.os.Looper.getMainLooper())
+        if (!isExternalPlaybackCurrent(ticket) || item.mediaId != ticket.mediaId ||
+            itemToken(item) != ticket.token || !ownsPlayerItem(ticket.token)
+        ) return false
+        if (!ownership.activate(ticket.token, item.mediaId)) return false
+        val song = ticket.song ?: return false
+        currentSource = if (ticket.mediaType == MediaType.PODCAST_EPISODE) "Podcast" else "MediaSession"
+        currentQuality = item.localConfiguration?.mimeType.orEmpty()
+        setNowPlayingMeta(song.title, song.singer, song.coverUri)
+        startPositionWatch(ticket.token)
+        return true
+    }
+
+    /** A resolved item can wait in Media3's command queue while another request takes ownership. */
+    internal fun acceptsExternalMediaItems(items: List<MediaItem>): Boolean = items.isNotEmpty() && items.all {
+        val ticket = it.localConfiguration?.tag as? PlaybackOwnership.Ticket
+        ticket != null && isExternalPlaybackCurrent(ticket)
+    }
+
+
+    private suspend fun commitIfCurrent(token: String, action: () -> Unit) {
+        withContext(Dispatchers.Main) { ownership.runIfCurrent(token, action) }
+    }
+
+    /** Actual tagged Player ownership, never inferred from CurrentSongState. Main-thread only. */
+    internal fun ownedPlaybackSnapshot(): PlaybackSnapshot? {
+        val owner = ownership.active ?: return null
+        val model = owner.song ?: return null
+        val p = player ?: return null
+        if (!ownsPlayerItem(owner.token, p) || p.playerError != null ||
+            p.playbackState == Player.STATE_IDLE || p.playbackState == Player.STATE_ENDED) return null
+        return PlaybackSnapshot(model, p.currentPosition.coerceAtLeast(0))
+    }
+
+    internal fun resumeOwnedPlayback(token: String): Boolean {
+        com.music.spotui.playback.RadioPreviewInterruption.mainCommand()
+        if (!ownership.isCurrent(token) || ownedPlaybackSnapshot() == null) return false
+        player?.play()
+        return true
+    }
+
+    /** Resume an already verified full model without publishing queue/UI before source resolution. */
+    internal fun resumeResolvedPlayback(song: SongsModel, positionMs: Long?, context: Context, onPrepared: () -> Unit) {
+        registerMediaType(song.url, song.mediaType)
+        if (song.mediaType == MediaType.PODCAST_EPISODE) {
+            registerEpisodeModel(song.url, song)
+        } else {
+            registerLossless(listOf(song.url to song.spotifyTrackId))
+            registerAlternativeKeys(listOf(song.url to com.music.spotui.data.preferences.alternativeStreamKey(song)))
+            registerExplicit(listOf(song.url to song.explicit))
+            registerDuration(listOf(song.url to song.durationMs))
+            registerMetadata(listOf(song.url to TrackMatchMetadata(song.title, song.singer, song.album)))
+        }
+        playSong(song.url, context, song, positionMs?.coerceAtLeast(0), onPrepared)
+    }
+
+    fun playSong(song: String, context: Context) = playSong(song, context, null, null, null)
+
+    private fun playSong(
+        song: String, context: Context, resolvedSong: SongsModel?,
+        startPositionMs: Long?, onPrepared: (() -> Unit)?,
+    ) {
+        com.music.spotui.playback.RadioPreviewInterruption.mainCommand()
         val appContext = context.applicationContext
         appCtx = appContext
-        currentRequest = song
+        val model = resolvedSong ?: boundState?.queue?.value?.find { it.url == song } ?: episodeModelRegistry[song]
+        val type = if (model?.isPodcast() == true || song.startsWith("episode:") ||
+            mediaTypeRegistry[song] == MediaType.PODCAST_EPISODE) MediaType.PODCAST_EPISODE else MediaType.TRACK
+        saveCurrentPosition()
+        val progressModel = model ?: SongsModel().copy(title = "Playback", url = song, mediaType = type)
+        // A different selection immediately disarms the cold-start MiniPlayer bookmark,
+        // even if its preparation is cancelled before another song becomes ready.
+        if (song != restoreQuery) restoreQuery = null
+        val resumePosition = com.music.spotui.data.preferences.loadPlaybackPosition(
+            appContext, progressModel, startPositionMs ?: restorePositionMs.takeIf { song == restoreQuery },
+        )
+        val preparedToken = ownership.begin(song, type, model).token
         Log.i(TAG, "playSong: requested '$song'")
-        // Invalidate active playback token so cleanup of the previous track cannot fire track-ended callbacks
-        activePlaybackToken = null
-        val preparedToken = java.util.UUID.randomUUID().toString()
-        currentPlaybackToken = preparedToken
-        // A manual play (tap / next / prev) supersedes any in-flight crossfade.
-        cancelCrossfade()
+        cancelPendingPlaybackWork()
+        retryPlayback.set(preparedToken) { playSong(song, appContext, model, null, onPrepared) }
+        recoveredToken = null
+        if (type == MediaType.TRACK) {
+            startup.begin(preparedToken, ownership.current.generation)
+            startupWatchdog = scope.launch(Dispatchers.Main) {
+                delay(45_000)
+                if (startup.pending) failPlayback(preparedToken, appContext, PlaybackFailure.TIMEOUT)
+            }
+        }
         // Do not keep the previous track audible while this request resolves.
         // Otherwise the UI can show the newly tapped track while old audio keeps
         // playing for several seconds, or forever if resolution fails.
@@ -265,13 +492,13 @@ object SongPlayer {
 
         // Podcast episodes are routed directly to the EpisodePlaybackResolver (RSS / direct audio engine),
         // completely bypassing music track matching and YouTube search.
-        val isPodcast = mediaTypeRegistry[song] == MediaType.PODCAST_EPISODE || song.startsWith("episode:")
+        val isPodcast = type == MediaType.PODCAST_EPISODE
 
         if (isPodcast) {
             val startTimeMs = System.currentTimeMillis()
-            scope.launch {
+            resolutionJob = scope.launch {
                 try {
-                    val episodeModel = episodeModelRegistry[song] ?: run {
+                    val episodeModel = resolvedSong ?: episodeModelRegistry[song] ?: run {
                         val meta = metadataRegistry[song]
                         val epId = if (song.startsWith("episode:")) song.removePrefix("episode:") else ""
                         com.music.spotui.data.entity.SongsModel(
@@ -290,13 +517,13 @@ object SongPlayer {
                     val source = episodeResolver.resolve(episodeModel, appContext)
                     if (source == null) {
                         Log.w(TAG, "playSong: episodeResolver returned null for podcast episode '${episodeModel.title}'")
-                        if (currentRequest == song) withContext(Dispatchers.Main) {
+                        commitIfCurrent(preparedToken) {
                             android.widget.Toast.makeText(
                                 appContext,
                                 "Could not resolve podcast audio stream",
                                 android.widget.Toast.LENGTH_SHORT
                             ).show()
-                            onStreamFailed?.invoke(song)
+                            if (onPrepared == null) onStreamFailed?.invoke(song)
                         }
                         return@launch
                     }
@@ -304,25 +531,32 @@ object SongPlayer {
                     when (source) {
                         is PlaybackSource.DirectAudio -> {
                             Log.i(TAG, "playSong: resolved DirectAudio podcast stream: ${source.url}")
-                            if (currentRequest != song) return@launch
-                            withContext(Dispatchers.Main) {
-                                if (currentRequest != song) return@withContext
+                            if (!ownership.isCurrent(preparedToken)) return@launch
+                            commitIfCurrent(preparedToken) {
                                 currentSource = "Podcast"
                                 currentQuality = source.mimeType
                                 ensurePlayer(appContext)
+                                resolvedSong?.let { setNowPlayingMeta(it.title, it.singer, it.coverUri) }
                                 player!!.setMediaItem(buildMediaItem(source.url, source.mimeType))
                                 player!!.prepare()
+                                val position = resumePosition
+                                if (position > 0) player!!.seekTo(position)
+                                restoreQuery = null
+                                ownership.activate(preparedToken)
+                                saveCurrentPosition()
+                                onPrepared?.invoke()
                                 player!!.playWhenReady = true
-                                activePlaybackToken = preparedToken
                                 val elapsed = System.currentTimeMillis() - startTimeMs
                                 Log.i(TAG, "[PLAY_SPEED] Podcast episode '${episodeModel.title}' took $elapsed ms to start audio!")
                             }
-                            startPositionWatch()
+                            commitIfCurrent(preparedToken) { startPositionWatch(preparedToken) }
                         }
                         is PlaybackSource.YouTube -> {
                             Log.i(TAG, "playSong: resolved YouTube podcast stream videoId: ${source.videoId}")
                         }
                     }
+                } catch (e: kotlinx.coroutines.CancellationException) {
+                    throw e
                 } catch (e: Exception) {
                     Log.e(TAG, "playSong failed for podcast episode: $song", e)
                 }
@@ -334,7 +568,7 @@ object SongPlayer {
         // playback on. (Web is now the default and used to run first, so a
         // downloaded track streamed from Spotify instead of playing offline.)
         val downloadedPath = com.music.spotui.data.preferences.downloadedPathForQuery(appContext, song)
-        if (downloadedPath == null && webPlayerEnabled &&
+        if (resolvedSong == null && downloadedPath == null && webPlayerEnabled &&
             // Experimental: stream through Spotify's own web player (real Spotify audio,
             // no bypass) when enabled AND the device WebView has Widevine. Otherwise
             // fall through to the normal YouTube/FLAC engine so playback is never silent.
@@ -346,71 +580,65 @@ object SongPlayer {
                 runCatching { player?.pause() }
                 currentSource = "Spotify"
                 currentQuality = ""
+                startup.cancel()
+                startupWatchdog?.cancel()
                 SpotifyWebPlayer.play(spotifyId)
                 return
             }
             Log.w(TAG, "web playback on but no Spotify id for query: $song — using fallback engine")
         }
-        val startTimeMs = System.currentTimeMillis()
-        scope.launch {
+        resolutionJob = scope.launch {
             try {
                 Log.i(TAG, "playSong: resolving stream for '$song'...")
-                val streamUrl = resolveStreamUrl(song, appContext, forPlayback = true) ?: run {
+                val streamUrl = resolveStreamUrl(song, appContext, forPlayback = true, playbackToken = preparedToken) ?: run {
                     Log.w(TAG, "playSong: resolveStreamUrl returned null for '$song'")
-                    // Tell the user instead of silently leaving the request on.
-                    if (currentRequest == song) withContext(Dispatchers.Main) {
-                        android.widget.Toast.makeText(
-                            appContext, "Couldn't find a playable stream for this track",
-                            android.widget.Toast.LENGTH_SHORT,
-                        ).show()
-                        // Signal failure so the queue can advance past this track
-                        // instead of going silent (issue 3: playlist stalls on bad stream).
-                        onStreamFailed?.invoke(song)
+                    withContext(Dispatchers.Main) {
+                        failPlayback(preparedToken, appContext, PlaybackFailure.UNAVAILABLE)
                     }
                     return@launch
                 }
-                Log.i(TAG, "playSong: resolved streamUrl successfully, currentRequest='$currentRequest', song='$song'")
+                startup.stage(preparedToken, "source_resolved")
                 // A newer tap superseded this one while we were resolving — drop it.
-                if (currentRequest != song) {
+                if (!ownership.isCurrent(preparedToken)) {
                     Log.w(TAG, "playSong: DROPPED because currentRequest ('$currentRequest') != song ('$song')")
                     return@launch
                 }
-                withContext(Dispatchers.Main) {
-                    if (currentRequest != song) {
-                        Log.w(TAG, "playSong: DROPPED on Main because currentRequest != song")
-                        return@withContext
-                    }
-                    Log.i(TAG, "playSong: setting media item on ExoPlayer...")
+                commitIfCurrent(preparedToken) {
+                    startup.stage(preparedToken, "prepare")
                     ensurePlayer(appContext)
+                    resolvedSong?.let { setNowPlayingMeta(it.title, it.singer, it.coverUri) }
                     player!!.setMediaItem(buildMediaItem(streamUrl, streamMimeType(streamUrl)))
                     player!!.prepare()
                     // Restored session: continue from where the last run stopped.
-                    if (song == restoreQuery && restorePositionMs > 0) {
-                        player!!.seekTo(restorePositionMs)
-                    }
+                    val position = resumePosition
+                    if (position > 0) player!!.seekTo(position)
                     restoreQuery = null
+                    ownership.activate(preparedToken)
+                    saveCurrentPosition()
+                    onPrepared?.invoke()
                     player!!.playWhenReady = true
-                    // Playback has officially started for this token!
-                    activePlaybackToken = preparedToken
-                    val elapsed = System.currentTimeMillis() - startTimeMs
-                    Log.i(TAG, "[PLAY_SPEED] Track '$song' took $elapsed ms to start audio!")
                 }
-                startPositionWatch()
+                commitIfCurrent(preparedToken) { startPositionWatch(preparedToken) }
+            } catch (e: kotlinx.coroutines.CancellationException) {
+                throw e
             } catch (e: Exception) {
-                Log.e(TAG, "playSong failed for query: $song", e)
+                withContext(Dispatchers.Main) {
+                    failPlayback(preparedToken, appContext, PlaybackFailure.from(e))
+                }
             }
         }
     }
 
     // Build a MediaItem carrying the current track's metadata so the system media
     // notification (MediaSession) shows the right title / artist / artwork.
-    private fun buildMediaItem(streamUrl: String, mimeType: String? = null): MediaItem {
+    private fun buildMediaItem(streamUrl: String, mimeType: String? = null, token: String = currentPlaybackToken): MediaItem {
         val metadata = androidx.media3.common.MediaMetadata.Builder()
             .setTitle(metaTitle)
             .setArtist(metaArtist)
             .build()
         return MediaItem.Builder()
             .setUri(streamUrl)
+            .setTag(PlaybackItemTag(token))
             // Hint the container so ExoPlayer picks the right source/extractor even
             // when the URL has no extension: TIDAL lossless is a DASH .mpd manifest,
             // and single-file lossless is FLAC.
@@ -420,7 +648,7 @@ object SongPlayer {
     }
 
     /** MIME hint for a resolved stream: DASH manifest, single-file FLAC, or none. */
-    private fun streamMimeType(streamUrl: String): String? {
+    private fun streamMimeType(streamUrl: String, source: String = currentSource): String? {
         val bare = streamUrl.substringBefore('?').lowercase()
         return when {
             streamUrl.startsWith("deezer://") ->
@@ -429,52 +657,60 @@ object SongPlayer {
             streamUrl.startsWith("data:application/dash+xml") ||
                 bare.endsWith(".mpd") || streamUrl.contains("manifest.tidal.com") || streamUrl.contains("/manifests/") ->
                 androidx.media3.common.MimeTypes.APPLICATION_MPD
-            bare.endsWith(".flac") || currentSource.startsWith("Lossless") ->
+            bare.endsWith(".flac") || source.startsWith("Lossless") ->
                 androidx.media3.common.MimeTypes.AUDIO_FLAC
             else -> null
         }
     }
 
-    /** Warm the cache for an upcoming track (e.g. the next/previous queue item). */
+    /** Preview-only read of the existing source pipeline. Never publishes main-player state. */
+    internal suspend fun resolveRadioPreview(song: SongsModel, context: Context): com.music.spotui.playback.RadioPreviewSource? {
+        if (song.isPodcast() || song.url.isBlank()) return null
+        registerMetadata(listOf(song.url to TrackMatchMetadata(song.title, song.singer, song.album)))
+        registerDuration(listOf(song.url to song.durationMs))
+        registerExplicit(listOf(song.url to song.explicit))
+        registerLossless(listOf(song.url to song.spotifyTrackId))
+        registerAlternativeKeys(listOf(song.url to com.music.spotui.data.preferences.alternativeStreamKey(song)))
+        val url = resolveStreamUrl(song.url, context.applicationContext, forPlayback = false) ?: return null
+        val source = streamCache.get(song.url, streamScope(song.url, context))?.source.orEmpty()
+        return com.music.spotui.playback.RadioPreviewSource(url, streamMimeType(url, source))
+    }
+
+    /** Same headers/cache/decryption as music; no main listeners, session, filters or queue. */
+    internal fun createRadioPreviewPlayer(context: Context): ExoPlayer = ExoPlayer.Builder(context.applicationContext)
+        .setMediaSourceFactory(androidx.media3.exoplayer.source.DefaultMediaSourceFactory(
+            com.music.spotui.deezer.DeezerAwareDataSourceFactory(cacheDataSourceFactory(context.applicationContext)))
+            .setLoadErrorHandlingPolicy(PermanentAwareLoadErrorPolicy()))
+        .setAudioAttributes(buildAudioAttributes(), true)
+        .setHandleAudioBecomingNoisy(true)
+        .build()
+
+    /** Bound speculative work; resolution is shared with a tap on the same exact query. */
     fun prefetch(song: String, context: Context) {
-        if (song.isBlank() || streamCache.containsKey(song)) return
-        if (song.startsWith("episode:") || mediaTypeRegistry[song] == MediaType.PODCAST_EPISODE) return
-        val appContext = context.applicationContext
-        if (webPlaybackActive()) return
-        scope.launch {
-            val url = runCatching { resolveStreamUrl(song, appContext, forPlayback = false) }.getOrNull()
-            if (url != null) cacheIntro(url, appContext)
-        }
+        if (song.isBlank() || song.startsWith("episode:") ||
+            mediaTypeRegistry[song] == MediaType.PODCAST_EPISODE) return
+        appCtx = context.applicationContext
+        if (webPlaybackActive() || !com.music.spotui.data.preferences.isPreloadEnabled(context)) return
+        preloader.offer(listOf(song))
     }
 
-    /**
-     * Warm the cache for the first [count] tracks of a freshly-loaded list
-     * (album/artist/search). Resolves them sequentially in the background so
-     * taps start instantly without latency.
-     */
     fun prefetchList(songs: List<String>, context: Context, count: Int = 4) {
-        val eligibleSongs = songs.filterNot { it.startsWith("episode:") || mediaTypeRegistry[it] == MediaType.PODCAST_EPISODE }
-        if (eligibleSongs.isEmpty()) return
-        val appContext = context.applicationContext
-        if (webPlaybackActive()) return
-        scope.launch {
-            eligibleSongs.take(count).forEach { song ->
-                if (song.isNotBlank() && !streamCache.containsKey(song)) {
-                    runCatching {
-                        resolveVideoCandidates(song).firstOrNull()?.let { vid ->
-                            val quality = com.music.spotui.data.preferences.currentStreamingQuality(appContext)
-                            val playback = resolveYtPlayback(vid, quality.audioQuality, appContext)
-                            if (playback != null) {
-                                streamCache[song] = playback.streamUrl
-                                sourceCache[song] = "YouTube"
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        appCtx = context.applicationContext
+        if (webPlaybackActive() || !com.music.spotui.data.preferences.isPreloadEnabled(context)) return
+        preloader.offer(songs.filter { it.isNotBlank() && !it.startsWith("episode:") &&
+            mediaTypeRegistry[it] != MediaType.PODCAST_EPISODE }.take(count), replace = true)
     }
 
+    /** Register the same exact matching inputs that a later tap will use. */
+    fun prefetchSongs(songs: List<SongsModel>, context: Context, count: Int = 4) {
+        val tracks = songs.filterNot { it.isPodcast() }.take(count)
+        registerMetadata(tracks.map { it.url to TrackMatchMetadata(it.title, it.singer, it.album) })
+        registerDuration(tracks.map { it.url to it.durationMs })
+        registerExplicit(tracks.map { it.url to it.explicit })
+        registerLossless(tracks.map { it.url to it.spotifyTrackId })
+        registerAlternativeKeys(tracks.map { it.url to com.music.spotui.data.preferences.alternativeStreamKey(it) })
+        prefetchList(tracks.map { it.url }, context, count)
+    }
     // ── Intro preloading (instant playback) ──
     // Resolving the stream URL hides most latency, but ExoPlayer still has to open the
     // connection and buffer the first segment on tap. We pre-cache the first ~1 MB (≈20–40s
@@ -539,7 +775,8 @@ object SongPlayer {
     // prefetch of upcoming tracks doesn't clobber the current source badge (a
     // prefetch resolving the NEXT track via YouTube was flipping the badge to
     // "YouTube" while the current track streamed from Spotify).
-    private suspend fun resolveStreamUrl(song: String, appContext: Context, forPlayback: Boolean = false): String? {
+    private suspend fun resolveStreamUrl(song: String, appContext: Context, forPlayback: Boolean = false, playbackToken: String = currentPlaybackToken): String? {
+        val cacheScope = streamScope(song, appContext)
         // Podcast episodes are handled by EpisodePlaybackResolver and must never enter the music pipeline
         if (song.startsWith("episode:") || mediaTypeRegistry[song] == MediaType.PODCAST_EPISODE) {
             Log.d(TAG, "resolveStreamUrl: skipping music stream resolution for podcast episode '$song'")
@@ -548,7 +785,7 @@ object SongPlayer {
         // Imported local files: the play query IS the file's content:// / file:// URI.
         // ExoPlayer plays it directly (FLAC/MP3/WAV/… via its built-in extractors).
         if (song.startsWith("content://") || song.startsWith("file://")) {
-            if (forPlayback) {
+            if (forPlayback) ownership.runIfCurrent(playbackToken) {
                 currentSource = "Local file"
                 currentQuality = song.substringBefore('?').substringAfterLast('.', "")
                     .uppercase().takeIf { it.length in 2..5 }.orEmpty()
@@ -564,7 +801,7 @@ object SongPlayer {
         }
         if (directVideoId != null) {
             val quality = com.music.spotui.data.preferences.currentStreamingQuality(appContext)
-            if (forPlayback) {
+            if (forPlayback) ownership.runIfCurrent(playbackToken) {
                 currentSource = "YouTube"
                 currentQuality = ""
             }
@@ -575,25 +812,23 @@ object SongPlayer {
                     .uppercase()
                 val ytQuality = listOf(codec, "${playback.format.bitrate / 1000} kbps")
                     .filter { it.isNotBlank() }.joinToString(" ")
-                if (forPlayback) currentQuality = ytQuality
-                streamCache[song] = playback.streamUrl
-                sourceCache[song] = "YouTube"
-                qualityCache[song] = ytQuality
+                if (forPlayback) ownership.runIfCurrent(playbackToken) { currentQuality = ytQuality }
+                cacheStream(song, playback.streamUrl, "YouTube", ytQuality, cacheScope, playback.streamExpiresInSeconds.toLong() * 1000 - 30_000)
                 return playback.streamUrl
             }
         }
         alternativeStreamForPlayback(song, appContext)?.let { alt ->
-            invalidateResolvedStream(song)
+            discardCachedStream(song)
             return when {
                 alt.isLocal -> {
-                    if (forPlayback) {
+                    if (forPlayback) ownership.runIfCurrent(playbackToken) {
                         currentSource = "Alternative file"
                         currentQuality = alt.label.substringAfterLast('.', "").uppercase().takeIf { it.length in 2..5 }.orEmpty()
                     }
                     alt.value
                 }
                 alt.isYouTube -> {
-                    if (forPlayback) {
+                    if (forPlayback) ownership.runIfCurrent(playbackToken) {
                         currentSource = "Alternative YouTube"
                         currentQuality = ""
                     }
@@ -604,7 +839,7 @@ object SongPlayer {
                         .uppercase()
                     val ytQuality = listOf(codec, "${playback.format.bitrate / 1000} kbps")
                         .filter { it.isNotBlank() }.joinToString(" ")
-                    if (forPlayback) currentQuality = ytQuality
+                    if (forPlayback) ownership.runIfCurrent(playbackToken) { currentQuality = ytQuality }
                     playback.streamUrl
                 }
                 else -> null
@@ -612,16 +847,16 @@ object SongPlayer {
         }
         // Offline: if this track was downloaded, play the local file instead of the network.
         com.music.spotui.data.preferences.downloadedPathForQuery(appContext, song)?.let { path ->
-            if (forPlayback) {
+            if (forPlayback) ownership.runIfCurrent(playbackToken) {
                 currentSource = "Downloaded"
                 currentQuality = path.substringAfterLast('.', "").uppercase()
             }
             return android.net.Uri.fromFile(java.io.File(path)).toString()
         }
-        streamCache[song]?.let { cachedUrl ->
+        streamCache.get(song, cacheScope)?.let { cached ->
             // Source choices take effect immediately; never let a URL cached under the
             // previous choice silently keep using that provider.
-            val cachedSource = sourceCache[song]
+            val cachedSource = cached.source
             val selectedSource = com.music.spotui.data.preferences.getPrimaryMusicSource(appContext)
             val sourceStillSelected = when (cachedSource) {
                 "Deezer" -> selectedSource == com.music.spotui.data.preferences.MusicSource.DEEZER
@@ -629,15 +864,15 @@ object SongPlayer {
                 else -> true // local, downloaded, alternative and lossless sources are independent
             }
             if (!sourceStillSelected) {
-                invalidateResolvedStream(song)
+                discardCachedStream(song)
             } else {
             // Cache hits must still update the badge — returning early kept the
             // previous track's label (e.g. "Downloaded") on a streamed track.
-                if (forPlayback) {
-                    currentSource = cachedSource ?: "YouTube"
-                    currentQuality = qualityCache[song] ?: ""
+                if (forPlayback) ownership.runIfCurrent(playbackToken) {
+                    currentSource = cachedSource
+                    currentQuality = cached.quality
                 }
-                return cachedUrl
+                return cached.url
             }
         }
         // Quality for the current network (Wi-Fi vs cellular), from Settings.
@@ -657,10 +892,8 @@ object SongPlayer {
                 )
             }
             if (r is com.music.spotui.deezer.DeezerSource.Result.Success) {
-                if (forPlayback) { currentSource = "Deezer"; currentQuality = r.qualityLabel }
-                streamCache[song] = r.uri
-                sourceCache[song] = "Deezer"
-                qualityCache[song] = r.qualityLabel
+                if (forPlayback) ownership.runIfCurrent(playbackToken) { currentSource = "Deezer"; currentQuality = r.qualityLabel }
+                cacheStream(song, r.uri, "Deezer", r.qualityLabel, cacheScope)
                 return r.uri
             }
         }
@@ -668,23 +901,22 @@ object SongPlayer {
         // 2. Fast Path: Resolve YouTube stream IMMEDIATELY (< 200ms with TrackVideoCache + ANDROID_VR client)
         if (youtubeEnabled) {
             val playback = resolveYtPlayback(song, quality.audioQuality, appContext)
+            kotlinx.coroutines.currentCoroutineContext().ensureActive()
             if (playback != null) {
                 val codec = playback.format.mimeType
                     .substringAfter("codecs=\"", "").substringBefore('"').substringBefore('.')
                     .uppercase()
                 val ytQuality = listOf(codec, "${playback.format.bitrate / 1000} kbps")
                     .filter { it.isNotBlank() }.joinToString(" ")
-                if (forPlayback) {
+                if (forPlayback) ownership.runIfCurrent(playbackToken) {
                     currentSource = "YouTube"
                     currentQuality = ytQuality
                 }
-                streamCache[song] = playback.streamUrl
-                sourceCache[song] = "YouTube"
-                qualityCache[song] = ytQuality
+                cacheStream(song, playback.streamUrl, "YouTube", ytQuality, cacheScope, playback.streamExpiresInSeconds.toLong() * 1000 - 30_000)
 
                 // Seamless background upgrade to Lossless FLAC or Deezer if enabled, without delaying start
-                if (forPlayback && (losslessStreaming && quality.lossless || (deezerEnabled && com.music.spotui.data.preferences.isDeezerEnabled(appContext)))) {
-                    triggerBackgroundUpgrade(song, currentPlaybackToken, appContext)
+                if (forPlayback && ownership.isCurrent(playbackToken) && (losslessStreaming && quality.lossless || (deezerEnabled && com.music.spotui.data.preferences.isDeezerEnabled(appContext)))) {
+                    triggerBackgroundUpgrade(song, playbackToken, appContext)
                 }
 
                 return playback.streamUrl
@@ -704,10 +936,8 @@ object SongPlayer {
                 )
             }
             if (r is com.music.spotui.deezer.DeezerSource.Result.Success) {
-                if (forPlayback) { currentSource = "Deezer"; currentQuality = r.qualityLabel }
-                streamCache[song] = r.uri
-                sourceCache[song] = "Deezer"
-                qualityCache[song] = r.qualityLabel
+                if (forPlayback) ownership.runIfCurrent(playbackToken) { currentSource = "Deezer"; currentQuality = r.qualityLabel }
+                cacheStream(song, r.uri, "Deezer", r.qualityLabel, cacheScope)
                 return r.uri
             }
         }
@@ -719,13 +949,11 @@ object SongPlayer {
                 }
                 if (r is com.music.spotui.lossless.LosslessSource.Result.Success) {
                     val flacQuality = "FLAC ${r.track.quality}-bit"
-                    if (forPlayback) {
+                    if (forPlayback) ownership.runIfCurrent(playbackToken) {
                         currentSource = "Lossless • ${r.track.provider}"
                         currentQuality = flacQuality
                     }
-                    streamCache[song] = r.track.url
-                    sourceCache[song] = "Lossless • ${r.track.provider}"
-                    qualityCache[song] = flacQuality
+                    cacheStream(song, r.track.url, "Lossless • ${r.track.provider}", flacQuality, cacheScope)
                     return r.track.url
                 }
             }
@@ -735,12 +963,16 @@ object SongPlayer {
         return null
     }
 
-    private fun triggerBackgroundUpgrade(song: String, playbackToken: String, appContext: Context) {
-        scope.launch {
+    private suspend fun triggerBackgroundUpgrade(song: String, playbackToken: String, appContext: Context) = withContext(Dispatchers.Main) {
+        if (!ownership.isCurrent(playbackToken) || currentRequest != song) return@withContext
+        qualityUpgradeJob?.cancel()
+        val cacheScope = streamScope(song, appContext)
+        qualityUpgradeJob = scope.launch {
             try {
                 // Short delay to let the live track start playing smoothly without competing for initial bandwidth
                 delay(1_200)
-                if (currentRequest != song) return@launch
+                while (startup.pending && ownership.isCurrent(playbackToken)) delay(250)
+                if (!ownership.isCurrent(playbackToken) || currentRequest != song) return@launch
 
                 val spotifyId = trackIdRegistry[song] ?: spotifyTrackIdForPlayback(song)
                 val quality = com.music.spotui.data.preferences.currentStreamingQuality(appContext)
@@ -751,14 +983,13 @@ object SongPlayer {
                         com.music.spotui.lossless.LosslessSource.resolve(appContext, spotifyId, preferHiRes = losslessHiRes)
                     }
                     if (r is com.music.spotui.lossless.LosslessSource.Result.Success) {
-                        if (currentRequest != song) return@launch
+                        if (!ownership.isCurrent(playbackToken) || currentRequest != song) return@launch
                         val flacQuality = "FLAC ${r.track.quality}-bit"
                         Log.d(TAG, "Background upgrade to Lossless (${r.track.provider}): $song")
-                        streamCache[song] = r.track.url
-                        sourceCache[song] = "Lossless • ${r.track.provider}"
-                        qualityCache[song] = flacQuality
+                        cacheStream(song, r.track.url, "Lossless • ${r.track.provider}", flacQuality, cacheScope)
                         withContext(Dispatchers.Main) {
-                            if (currentRequest == song && player != null) {
+                            ownership.runIfCurrent(playbackToken) {
+                                if (!ownsPlayerItem(playbackToken)) return@runIfCurrent
                                 currentSource = "Lossless • ${r.track.provider}"
                                 currentQuality = flacQuality
                                 val curPos = player!!.currentPosition
@@ -784,13 +1015,12 @@ object SongPlayer {
                         )
                     }
                     if (r is com.music.spotui.deezer.DeezerSource.Result.Success && r.mimeFlac) {
-                        if (currentRequest != song) return@launch
+                        if (!ownership.isCurrent(playbackToken) || currentRequest != song) return@launch
                         Log.d(TAG, "Background upgrade to Deezer FLAC: $song")
-                        streamCache[song] = r.uri
-                        sourceCache[song] = "Deezer"
-                        qualityCache[song] = r.qualityLabel
+                        cacheStream(song, r.uri, "Deezer", r.qualityLabel, cacheScope)
                         withContext(Dispatchers.Main) {
-                            if (currentRequest == song && player != null) {
+                            ownership.runIfCurrent(playbackToken) {
+                                if (!ownsPlayerItem(playbackToken)) return@runIfCurrent
                                 currentSource = "Deezer"
                                 currentQuality = r.qualityLabel
                                 val curPos = player!!.currentPosition
@@ -802,6 +1032,8 @@ object SongPlayer {
                         }
                     }
                 }
+            } catch (e: kotlinx.coroutines.CancellationException) {
+                throw e
             } catch (e: Exception) {
                 Log.d(TAG, "Background upgrade skipped: ${e.message}")
             }
@@ -1606,6 +1838,23 @@ object SongPlayer {
      * 5 ranked video candidates when one has no obtainable stream.
      */
     private suspend fun resolveYtPlayback(
+        query: String, audioQuality: AudioQuality, appContext: Context,
+    ): YTPlayerUtils.PlaybackData? {
+        val key = ResolutionKey(query, audioQuality, sourceScope(appContext), matchScope(query))
+        ytCache.get(key, key.scope)?.let { return it }
+        val result = ytRequests.get(key) {
+            ytCache.get(key, key.scope) ?: kotlinx.coroutines.withTimeoutOrNull(30_000) {
+                resolveYtPlaybackUncached(query, audioQuality, appContext)
+            }?.also {
+                kotlinx.coroutines.currentCoroutineContext().ensureActive()
+                ytCache.put(key, it, key.scope, (it.streamExpiresInSeconds.toLong() * 1000 - 30_000).coerceAtMost(300_000))
+            }
+        }
+        kotlinx.coroutines.currentCoroutineContext().ensureActive()
+        if (key.scope != sourceScope(appContext)) throw java.io.IOException("Playback source context changed")
+        return result
+    }
+    private suspend fun resolveYtPlaybackUncached(
         query: String,
         audioQuality: com.metrolist.music.constants.AudioQuality,
         appContext: Context,
@@ -1636,7 +1885,7 @@ object SongPlayer {
             )
         }
 
-        val tried = mutableSetOf<String>()
+        val tried = mutableSetOf<String>().apply { if (directVid != null) add(directVid) }
         suspend fun tryIds(ids: List<String>): YTPlayerUtils.PlaybackData? {
             for (videoId in ids) {
                 if (!tried.add(videoId)) continue
@@ -1736,10 +1985,52 @@ object SongPlayer {
         return p to filter
     }
 
+    /** Read the final Player snapshot after a batch of callbacks, including external transport. */
+    private fun syncPlayingState(p: ExoPlayer) {
+        val state = boundState ?: return
+        val playing = PlaybackControlState.playing(
+            ownership, itemToken(p.currentMediaItem), p === player, p.playbackState, p.playWhenReady,
+        ) ?: return
+        if (state.playingState.value != playing) state.updatePlayingState(playing)
+    }
+
     private fun attachListener(p: ExoPlayer) {
         p.addListener(object : androidx.media3.common.Player.Listener {
+            override fun onPlayerError(error: PlaybackException) = handlePlayerError(p, error)
+
+            override fun onEvents(player: Player, events: Player.Events) {
+                // onIsPlayingChanged alone misses pause/play while already buffering.
+                // Read after transition callbacks have committed the accepted item's identity.
+                syncPlayingState(p)
+            }
+
+            override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
+                if (!playWhenReady && reason == Player.PLAY_WHEN_READY_CHANGE_REASON_USER_REQUEST &&
+                    ownsPlayerItem(currentPlaybackToken, p)) {
+                    if (startup.pending && errorRecoveryJob?.isActive == true) {
+                        // External pause must also cancel a pending automatic recovery.
+                        pause()
+                        return
+                    }
+                    startup.stage(currentPlaybackToken, "paused", terminal = true)
+                    startupWatchdog?.cancel()
+                }
+            }
+
             override fun onIsPlayingChanged(isPlaying: Boolean) {
+                if (!ownsPlayerItem(currentPlaybackToken, p)) return
+                if (!isPlaying) saveCurrentPosition()
+                if (isPlaying) {
+                    startup.stage(currentPlaybackToken, "first_playing", terminal = true)
+                    startupWatchdog?.cancel()
+                }
                 onIsPlayingChangedListener?.invoke(isPlaying)
+            }
+
+            override fun onPositionDiscontinuity(oldPosition: Player.PositionInfo, newPosition: Player.PositionInfo, reason: Int) {
+                if (reason == Player.DISCONTINUITY_REASON_SEEK && ownsPlayerItem(currentPlaybackToken, p)) {
+                    saveCurrentPosition()
+                }
             }
 
             override fun onPlaybackStateChanged(playbackState: Int) {
@@ -1748,7 +2039,7 @@ object SongPlayer {
                     // CRITICAL: Only fire if there is an active playing token, matching the current token,
                     // the player actually has media items, and playback reached near the duration end.
                     // This protects against spurious STATE_ENDED from clearMediaItems() or empty timeline.
-                    if (token != null &&
+                    if (token != null && ownsPlayerItem(token, p) &&
                         token == currentPlaybackToken &&
                         p.mediaItemCount > 0 &&
                         p.currentMediaItem != null
@@ -1757,7 +2048,8 @@ object SongPlayer {
                         val pos = runCatching { p.currentPosition }.getOrDefault(0L)
                         val reachedEnd = dur <= 0L || pos >= (dur - 2_000L).coerceAtLeast(0L)
                         if (reachedEnd) {
-                            activePlaybackToken = null
+                            saveCurrentPosition(completed = true)
+                            ownership.deactivate(token)
                             onTrackEndedListener?.invoke(token)
                         }
                     }
@@ -1772,7 +2064,6 @@ object SongPlayer {
             val (p, filter) = createPlayerWithFilter(context, handleAudioFocus = true)
             player = p
             currentPlayerFilter = filter
-            p.addListener(midPlayErrorListener)
             onPlayerCreated?.invoke(p)
         }
     }
@@ -1784,45 +2075,84 @@ object SongPlayer {
      *
      * IO errors (2xxx) get one re-resolve attempt: the cached URL is discarded and a
      * fresh one is fetched; if that succeeds we resume from where we left off.
-     * Non-IO errors (decode, DRM, etc.) skip straight to the next track.
+     * Exhausted recovery and non-IO errors stop with feedback and an explicit same-item retry.
      */
-    private val midPlayErrorListener = object : Player.Listener {
-        override fun onPlayerError(error: PlaybackException) {
-            val song = currentRequest.takeIf { it.isNotBlank() } ?: return
-            Log.w(TAG, "mid-play error for $song: ${error.errorCodeName} (code ${error.errorCode})")
-            // Drop the cached URL — it may have expired (Deezer CDN, YouTube signing).
-            streamCache.remove(song)
-            sourceCache.remove(song)
-            val ctx = appCtx ?: run { onStreamFailed?.invoke(song); return }
-            val isIoError = error.errorCode in 2000..2999
-            scope.launch {
+    private fun handlePlayerError(p: ExoPlayer, error: PlaybackException) {
+        val owner = ownership.active ?: return
+        val token = owner.token
+        if (!ownsPlayerItem(token, p)) return
+        Log.w(TAG, "mid-play error for ${owner.request}: ${error.errorCodeName} (code ${error.errorCode})")
+        // DirectAudio is owned by Media3. Keep its error visible; never run music recovery or skip
+        // into a music queue for a podcast (nor restart external playback through playSong).
+        if (!ownership.canRecoverMusic(token)) return
+        val song = owner.request
+        invalidateResolvedStream(song)
+        val ctx = appCtx ?: return
+        if (recoveredToken == token) {
+            failPlayback(token, ctx, PlaybackFailure.from(error))
+            return
+        }
+        recoveredToken = token
+        startup.begin(token, owner.generation)
+        startupWatchdog?.cancel()
+        startupWatchdog = scope.launch(Dispatchers.Main) {
+            delay(45_000)
+            if (startup.pending) failPlayback(token, ctx, PlaybackFailure.TIMEOUT)
+        }
+        val savedPos = p.currentPosition
+        val isIoError = error.errorCode in 2000..2999
+        errorRecoveryJob?.cancel()
+        errorRecoveryJob = scope.launch {
+            try {
                 if (isIoError) {
                     val cause = error.cause
                     val isPermanent = cause is androidx.media3.datasource.HttpDataSource.InvalidResponseCodeException &&
                         cause.responseCode in listOf(401, 403, 404, 410)
-                    if (!isPermanent) {
-                        delay(1_000L)
-                    }
-                    // User may have manually skipped while we were waiting — bail if so.
-                    if (currentRequest != song) return@launch
-                    val fresh = resolveStreamUrl(song, ctx, forPlayback = true)
-                    if (fresh != null && currentRequest == song) {
-                        val savedPos = withContext(Dispatchers.Main) { player?.currentPosition ?: 0L }
+                    if (!isPermanent) delay(1_000L)
+                    if (!ownership.canRecoverMusic(token)) return@launch
+                    val fresh = resolveStreamUrl(song, ctx, forPlayback = true, playbackToken = token)
+                    if (fresh != null) {
                         withContext(Dispatchers.Main) {
-                            player?.setMediaItem(buildMediaItem(fresh, streamMimeType(fresh)))
-                            player?.prepare()
-                            if (savedPos > 5_000L) player?.seekTo(savedPos)
-                            player?.play()
+                            ownership.runIfCurrent(token) {
+                                if (!ownsPlayerItem(token, p) || !ownership.canRecoverMusic(token)) return@runIfCurrent
+                                p.setMediaItem(buildMediaItem(fresh, streamMimeType(fresh), token))
+                                p.prepare()
+                                if (savedPos > 5_000L) p.seekTo(savedPos)
+                                p.play()
+                            }
                         }
                         return@launch
                     }
                 }
-                // Non-IO error or re-resolve failed — advance to the next track.
-                withContext(Dispatchers.Main) { onStreamFailed?.invoke(song) }
+                withContext(Dispatchers.Main) {
+                    ownership.runIfCurrent(token) {
+                        if (ownsPlayerItem(token, p) && ownership.canRecoverMusic(token)) failPlayback(token, ctx, PlaybackFailure.from(error))
+                    }
+                }
+            } catch (e: kotlinx.coroutines.CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) { failPlayback(token, ctx, PlaybackFailure.from(e)) }
             }
         }
     }
 
+    /** Terminal failure is generation guarded and never guesses the next song. Main-thread only. */
+    private fun failPlayback(token: String, context: Context, failure: PlaybackFailure) {
+        if (!ownership.isCurrent(token)) return
+        val owner = ownership.current
+        startup.stage(token, "failed_" + failure.name.lowercase(), terminal = true)
+        val retry = retryPlayback.get(token)
+        saveCurrentPosition()
+        player?.pause()
+        // Revoke the failed request before cancellation: a blocking resolver may finish late.
+        if (!ownership.revoke(token)) return
+        cancelPendingPlaybackWork()
+        retryPlayback.set(currentPlaybackToken, retry)
+        boundState?.updatePlayingState(false)
+        Log.w("PlaybackTiming", "generation=" + owner.generation + " failure=" + failure.name)
+        android.widget.Toast.makeText(context, failure.message, android.widget.Toast.LENGTH_LONG).show()
+    }
     /** The live ExoPlayer instance (may be null before first play). */
     val exoPlayer: ExoPlayer? get() = player
 
@@ -1865,44 +2195,67 @@ object SongPlayer {
     }
 
     fun play() {
+        com.music.spotui.playback.RadioPreviewInterruption.mainCommand()
+        retryPlayback.get(currentPlaybackToken)?.takeIf { ownership.current.external && ownership.active == null }?.let {
+            it()
+            return
+        }
         if (webPlaybackActive()) { SpotifyWebPlayer.resume(); return }
         // Fresh launch: nothing loaded yet — resume the restored session track.
-        if ((player?.mediaItemCount ?: 0) == 0) {
+        if ((player?.mediaItemCount ?: 0) == 0 && !ownership.current.external) {
             val q = restoreQuery
             val ctx = appCtx
             if (q != null && ctx != null) { playSong(q, ctx); return }
         }
-        player?.play()
+        val p = player ?: return
+        if (!ownership.canControl(itemToken(p.currentMediaItem))) return
+        ownership.activate(currentPlaybackToken, p.currentMediaItem?.mediaId)
+        p.play()
     }
 
     fun pause() {
+        com.music.spotui.playback.RadioPreviewInterruption.mainCommand()
         cancelCrossfade()
         if (webPlaybackActive()) { SpotifyWebPlayer.pause(); return }
+        if (startup.pending) {
+            val token = currentPlaybackToken
+            startup.stage(token, "paused", terminal = true)
+            startupWatchdog?.cancel()
+            if (!ownsPlayerItem(token) || errorRecoveryJob?.isActive == true) {
+                saveCurrentPosition()
+                val retry = retryPlayback.get(token)
+                ownership.revoke(token)
+                cancelPendingPlaybackWork()
+                retryPlayback.set(currentPlaybackToken, retry)
+            }
+        }
         player?.let {
             it.playWhenReady = false
-            // Remember where we stopped so a relaunch can resume mid-track.
-            appCtx?.let { ctx ->
-                val pos = it.currentPosition
-                if (pos > 0) com.music.spotui.data.preferences.saveLastPosition(ctx, pos)
-            }
+            saveCurrentPosition()
         }
     }
 
     fun stop() {
-        activePlaybackToken = null
-        cancelCrossfade()
+        com.music.spotui.playback.RadioPreviewInterruption.mainCommand()
+        saveCurrentPosition()
+        ownership.begin("", MediaType.TRACK)
+        cancelPendingPlaybackWork()
         player?.stop()
     }
 
     fun seekTo(position: Long) {
+        com.music.spotui.playback.RadioPreviewInterruption.mainCommand()
         cancelCrossfade()
         if (webPlaybackActive()) { SpotifyWebPlayer.seekTo(position); return }
         player?.seekTo(position)
+        saveCurrentPosition()
     }
 
     fun release() {
-        positionWatchJob?.cancel()
-        cancelCrossfade()
+        com.music.spotui.playback.RadioPreviewInterruption.mainCommand()
+        saveCurrentPosition()
+        ownership.begin("", MediaType.TRACK)
+        cancelPendingPlaybackWork()
         player?.release()
         player = null
     }
@@ -1942,6 +2295,7 @@ object SongPlayer {
     @Volatile private var secondaryPlayer: ExoPlayer? = null
     @Volatile private var secondaryPlayerFilter: com.music.spotui.audio.CrossfadeFilterAudioProcessor? = null
     @Volatile private var isCrossfading = false
+    @Volatile private var crossfadeGeneration = 0L
     @Volatile private var crossfadeJob: kotlinx.coroutines.Job? = null
     @Volatile private var positionWatchJob: kotlinx.coroutines.Job? = null
     @Volatile private var pendingNextSong: com.music.spotui.data.entity.SongsModel? = null
@@ -1953,7 +2307,10 @@ object SongPlayer {
 
     /** Give the player access to the shared queue/now-playing state so it can advance the
      *  app's notion of "current track" itself when a crossfade fires. Called once at startup. */
-    fun bindState(state: CurrentSongState) { boundState = state }
+    fun bindState(state: CurrentSongState) {
+        boundState = state
+        player?.let(::syncPlayingState)
+    }
 
     fun isCrossfadeActive(): Boolean = isCrossfading
 
@@ -1967,7 +2324,7 @@ object SongPlayer {
     /** Cancel an in-flight crossfade and tear down the secondary player, restoring the
      *  primary to full volume with its filter disabled. Safe to call when not crossfading. */
     private fun cancelCrossfade() {
-        if (!isCrossfading && secondaryPlayer == null) return
+        crossfadeGeneration++
         crossfadeJob?.cancel()
         crossfadeJob = null
         currentPlayerFilter?.enabled = false
@@ -2012,160 +2369,187 @@ object SongPlayer {
     /** (Re)start the loop that watches playback position and fires a crossfade as the
      *  current track approaches its end. */
     private var posSaveTick = 0
+    private val historyRecorder = com.music.spotui.playback.PlaybackHistoryRecorder()
 
-    private fun startPositionWatch() {
+    private fun startPositionWatch(token: String = currentPlaybackToken) {
+        if (!ownership.isCurrent(token)) return
         positionWatchJob?.cancel()
-        positionWatchJob = scope.launch {
-            while (isActive) {
-                kotlinx.coroutines.delay(250)
+        posSaveTick = 0
+        positionWatchJob = scope.launch(Dispatchers.Main) {
+            while (isActive && ownership.isCurrent(token)) {
+                delay(250)
                 val ctx = appCtx ?: continue
                 val status = getPlaybackPosition()
-
-                // Persist the position every ~3s so a relaunch resumes mid-track.
-                if (++posSaveTick % 12 == 0 && !webPlaybackActive()) {
-                    if (status.isPlaying && status.positionMs > 0) {
-                        com.music.spotui.data.preferences.saveLastPosition(ctx, status.positionMs)
+                ownership.runIfCurrent(token) {
+                    val owner = ownership.positionOwner(token) ?: return@runIfCurrent
+                    if (!ownsPlayerItem(token)) return@runIfCurrent
+                    historyRecorder.onPlayingSnapshot(ownership, token, ownsPlayerItem(token), status.isPlaying) { song ->
+                        com.music.spotui.data.preferences.addListeningHistory(
+                            ctx, com.music.spotui.data.preferences.HistoryEntry.fromSong(song),
+                        )
                     }
-                }
-
-                if (!status.isPlaying) continue
-                if (status.durationMs <= 0 || status.positionMs < 0) continue
-                positionListener?.invoke(status.positionMs, status.durationMs)
-
-                if (isCrossfading) continue
-                val crossfadeMs = com.music.spotui.data.preferences.getCrossfadeMs(ctx)
-                if (crossfadeMs <= 0) continue
-                val state = boundState ?: continue
-                if (state.repeat.value) continue // repeat-one loops the same track
-                if (status.positionMs >= status.durationMs - crossfadeMs) {
-                    triggerCrossfade(ctx, crossfadeMs)
+                    if (++posSaveTick % 4 == 0 && !webPlaybackActive() &&
+                        status.isPlaying && status.positionMs > 0
+                    ) {
+                        saveCurrentPosition()
+                    }
+                    if (!status.isPlaying || status.durationMs <= 0 || status.positionMs < 0) return@runIfCurrent
+                    positionListener?.invoke(status.positionMs, status.durationMs)
+                    // External DirectAudio never starts the music crossfade machinery.
+                    if (!ownership.isCurrent(token) || owner.external || owner.mediaType != MediaType.TRACK || isCrossfading) return@runIfCurrent
+                    val crossfadeMs = com.music.spotui.data.preferences.getCrossfadeMs(ctx)
+                    if (crossfadeMs <= 0) return@runIfCurrent
+                    val state = boundState ?: return@runIfCurrent
+                    if (state.repeat.value) return@runIfCurrent
+                    if (status.positionMs >= status.durationMs - crossfadeMs) triggerCrossfade(ctx, crossfadeMs)
                 }
             }
         }
     }
 
-    /** Begin blending the current track into the next queue item. */
+    private fun ownsCrossfade(token: String, generation: Long): Boolean =
+        ownership.isCurrent(token) && isCrossfading && crossfadeGeneration == generation
+
+    /** Resolution and the fade share one cancellable job and one owner. */
     private fun triggerCrossfade(ctx: Context, configuredMs: Int) {
         if (isCrossfading) return
+        val owner = ownership.active ?: return
+        if (owner.external || owner.mediaType != MediaType.TRACK) return
         val state = boundState ?: return
         val q = state.queue.value
-        if (q.isEmpty()) return
         val cur = q.indexOfFirst { it.id == state.songId.value }
-        if (cur < 0 || cur >= q.size - 1) return // last track ends normally
+        if (cur < 0 || cur >= q.size - 1) return
         val nextSong = q[cur + 1]
+        if (nextSong.isPodcast()) return
+        val token = owner.token
+        val generation = ++crossfadeGeneration
+        val nextToken = java.util.UUID.randomUUID().toString()
         isCrossfading = true
-        scope.launch {
+        crossfadeJob = scope.launch {
             try {
-                val nextUrl = resolveStreamUrl(nextSong.url, ctx, forPlayback = true) ?: run {
-                    isCrossfading = false; return@launch
+                val nextUrl = resolveStreamUrl(nextSong.url, ctx, forPlayback = false)
+                if (nextUrl == null) {
+                    withContext(Dispatchers.Main) {
+                        if (ownsCrossfade(token, generation)) cancelCrossfade()
+                    }
+                    return@launch
                 }
-                // Effective duration: never longer than the real time left on the outgoing track.
                 val remaining = withContext(Dispatchers.Main) {
-                    val p = player ?: return@withContext configuredMs.toLong()
-                    val d = p.duration; val ps = p.currentPosition
-                    if (d > 0 && ps >= 0) (d - ps) else configuredMs.toLong()
-                }
+                    if (!ownsCrossfade(token, generation)) return@withContext null
+                    val p = player ?: return@withContext null
+                    val d = p.duration
+                    if (d > 0 && p.currentPosition >= 0) d - p.currentPosition else configuredMs.toLong()
+                } ?: return@launch
                 val effectiveMs = minOf(configuredMs.toLong(), remaining).coerceAtLeast(1000L).toInt()
                 val djMode = com.music.spotui.data.preferences.isCrossfadeDjMode(ctx)
-
-                // Stash for finalizeCrossfade, which updates the UI when the new track
-                // is the sole audio source (not at blend-start while the old track fades).
-                pendingNextSong = nextSong
-                pendingNextSongIdx = cur + 1
-                // Pre-load metadata so buildMediaItem() tags the secondary player correctly.
-                setNowPlayingMeta(nextSong.title, nextSong.singer, nextSong.coverUri)
                 withContext(Dispatchers.Main) {
-                    val (sp, sf) = createPlayerWithFilter(ctx, handleAudioFocus = false)
-                    secondaryPlayer = sp
-                    secondaryPlayerFilter = sf
-                    sp.setMediaItem(buildMediaItem(nextUrl, streamMimeType(nextUrl)))
-                    sp.prepare()
-                    sp.volume = 0f
-                    sp.playWhenReady = true
-                }
-                performCrossfade(effectiveMs, djMode)
-            } catch (e: Exception) {
-                Log.e(TAG, "crossfade failed", e)
-                cancelCrossfade()
-            }
-        }
-    }
-
-    private suspend fun performCrossfade(effectiveMs: Int, djMode: Boolean) {
-        val steps = 50
-        val delayPerStep = (effectiveMs / steps).coerceAtLeast(20)
-        if (djMode) {
-            currentPlayerFilter?.apply {
-                filterType = com.music.spotui.audio.BiquadFilter.FilterType.LOW_PASS
-                cutoffFrequencyHz = CF_LPF_START_HZ; enabled = true
-            }
-            secondaryPlayerFilter?.apply {
-                filterType = com.music.spotui.audio.BiquadFilter.FilterType.HIGH_PASS
-                cutoffFrequencyHz = CF_HPF_START_HZ; enabled = true
-            }
-        }
-        crossfadeJob?.cancel()
-        val job = scope.launch {
-            try {
-                for (step in 0..steps) {
-                    if (!isActive) break
-                    val progress = step.toFloat() / steps
-                    val angle = (progress * PI / 2).toFloat()
-                    withContext(Dispatchers.Main) {
-                        player?.volume = cos(angle)
-                        secondaryPlayer?.volume = sin(angle)
-                        if (djMode) {
-                            val fp = sigmoid(progress)
-                            currentPlayerFilter?.cutoffFrequencyHz = expInterpolate(CF_LPF_START_HZ, CF_LPF_END_HZ, fp)
-                            secondaryPlayerFilter?.cutoffFrequencyHz = expInterpolate(CF_HPF_START_HZ, CF_HPF_END_HZ, fp)
-                        }
+                    ownership.runIfCurrent(token) {
+                        if (!ownsCrossfade(token, generation)) return@runIfCurrent
+                        pendingNextSong = nextSong
+                        pendingNextSongIdx = cur + 1
+                        setNowPlayingMeta(nextSong.title, nextSong.singer, nextSong.coverUri)
+                        val (sp, sf) = createPlayerWithFilter(ctx, handleAudioFocus = false)
+                        secondaryPlayer = sp
+                        secondaryPlayerFilter = sf
+                        sp.setMediaItem(buildMediaItem(nextUrl, streamMimeType(nextUrl, sourceCache[nextSong.url].orEmpty()), nextToken))
+                        sp.seekTo(com.music.spotui.data.preferences.loadPlaybackPosition(ctx, nextSong))
+                        sp.prepare()
+                        sp.volume = 0f
+                        sp.playWhenReady = true
                     }
-                    kotlinx.coroutines.delay(delayPerStep.toLong())
                 }
-                finalizeCrossfade()
+                performCrossfade(effectiveMs, djMode, token, generation, nextToken)
             } catch (e: kotlinx.coroutines.CancellationException) {
                 throw e
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    if (ownsCrossfade(token, generation)) {
+                        Log.e(TAG, "crossfade failed", e)
+                        cancelCrossfade()
+                    }
+                }
             }
         }
-        crossfadeJob = job
-        job.join()
     }
 
-    private suspend fun finalizeCrossfade() {
+    private suspend fun performCrossfade(
+        effectiveMs: Int, djMode: Boolean, token: String, generation: Long, nextToken: String,
+    ) {
+        val steps = 50
+        val delayPerStep = (effectiveMs / steps).coerceAtLeast(20)
         withContext(Dispatchers.Main) {
-            val incoming = secondaryPlayer ?: run { isCrossfading = false; return@withContext }
-            val old = player
-            // Promote the incoming (secondary) player to primary.
-            currentPlayerFilter?.enabled = false
-            secondaryPlayerFilter?.enabled = false
-            player = incoming
-            currentPlayerFilter = secondaryPlayerFilter
-            secondaryPlayer = null
-            secondaryPlayerFilter = null
-            incoming.volume = 1f
-            // The promoted player now owns audio focus / becoming-noisy handling.
-            incoming.setAudioAttributes(buildAudioAttributes(), /* handleAudioFocus = */ true)
-            incoming.setHandleAudioBecomingNoisy(true)
-            runCatching { old?.stop(); old?.release() }
-            isCrossfading = false
-            // Now that the new track is the sole audio source, switch the in-app UI
-            // (cover art, canvas, title) and update the playback identity for error recovery.
-            pendingNextSong?.let { next ->
-                currentRequest = next.url
-                val newToken = java.util.UUID.randomUUID().toString()
-                currentPlaybackToken = newToken
-                activePlaybackToken = newToken
+            if (!ownsCrossfade(token, generation)) return@withContext
+            if (djMode) {
+                currentPlayerFilter?.apply {
+                    filterType = com.music.spotui.audio.BiquadFilter.FilterType.LOW_PASS
+                    cutoffFrequencyHz = CF_LPF_START_HZ; enabled = true
+                }
+                secondaryPlayerFilter?.apply {
+                    filterType = com.music.spotui.audio.BiquadFilter.FilterType.HIGH_PASS
+                    cutoffFrequencyHz = CF_HPF_START_HZ; enabled = true
+                }
+            }
+        }
+        for (step in 0..steps) {
+            if (!ownsCrossfade(token, generation)) return
+            val progress = step.toFloat() / steps
+            val angle = (progress * PI / 2).toFloat()
+            withContext(Dispatchers.Main) {
+                ownership.runIfCurrent(token) {
+                    if (!ownsCrossfade(token, generation)) return@runIfCurrent
+                    player?.volume = cos(angle)
+                    secondaryPlayer?.volume = sin(angle)
+                    if (djMode) {
+                        val fp = sigmoid(progress)
+                        currentPlayerFilter?.cutoffFrequencyHz = expInterpolate(CF_LPF_START_HZ, CF_LPF_END_HZ, fp)
+                        secondaryPlayerFilter?.cutoffFrequencyHz = expInterpolate(CF_HPF_START_HZ, CF_HPF_END_HZ, fp)
+                    }
+                }
+            }
+            delay(delayPerStep.toLong())
+        }
+        finalizeCrossfade(token, generation, nextToken)
+    }
+
+    private suspend fun finalizeCrossfade(token: String, generation: Long, nextToken: String) {
+        withContext(Dispatchers.Main) {
+            ownership.runIfCurrent(token) {
+                if (!ownsCrossfade(token, generation)) return@runIfCurrent
+                val incoming = secondaryPlayer ?: return@runIfCurrent
+                val next = pendingNextSong ?: return@runIfCurrent
+                val old = player
+                saveCurrentPosition(completed = true)
+                ownership.begin(next.url, next.mediaType, next, token = nextToken)
+                qualityUpgradeJob?.cancel()
+                errorRecoveryJob?.cancel()
+                currentPlayerFilter?.enabled = false
+                secondaryPlayerFilter?.enabled = false
+                player = incoming
+                currentPlayerFilter = secondaryPlayerFilter
+                secondaryPlayer = null
+                secondaryPlayerFilter = null
+                incoming.volume = 1f
+                incoming.setAudioAttributes(buildAudioAttributes(), /* handleAudioFocus = */ true)
+                incoming.setHandleAudioBecomingNoisy(true)
+                runCatching { old?.stop(); old?.release() }
+                isCrossfading = false
+                ownership.activate(nextToken)
+                val context = appCtx
+                retryPlayback.set(nextToken, context?.let { ctx ->
+                    { playSong(next.url, ctx, next, null, null) }
+                })
+                currentSource = sourceCache[next.url] ?: currentSource
+                currentQuality = qualityCache[next.url].orEmpty()
                 boundState?.updateSongState(
                     next.coverUri, next.title, next.singer, true,
                     next.id, pendingNextSongIdx, next.album,
                 )
                 pendingNextSong = null
+                syncPlayingState(incoming)
+                onPlayerSwapped?.invoke(incoming)
+                startPositionWatch(nextToken)
             }
-            // Re-bind the media session to the new player.
-            onPlayerSwapped?.invoke(incoming)
         }
-        // Watch the newly-promoted track for its own end.
-        startPositionWatch()
     }
 
     // ── Sleep timer ──

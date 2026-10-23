@@ -27,6 +27,8 @@ fun saveCachedPodcastHubShows(
                     put("name", s.name)
                     put("publisher", s.publisher)
                     put("coverUri", s.coverUri)
+                    put("description", s.description)
+                    put("topics", JSONArray(s.topics))
                 })
             }
         }.toString()
@@ -54,7 +56,11 @@ fun getCachedPodcastHubShows(context: Context): Pair<Long, List<PodcastModel>>? 
             id = o.optString("id", ""),
             name = o.optString("name", ""),
             publisher = o.optString("publisher", ""),
-            coverUri = o.optString("coverUri", "")
+            coverUri = o.optString("coverUri", ""),
+            description = o.optString("description", ""),
+            topics = o.optJSONArray("topics")?.let { topics ->
+                (0 until topics.length()).map { topics.optString(it) }.filter { it.isNotBlank() }
+            }.orEmpty(),
         )
     }.filter { it.id.isNotBlank() && it.name.isNotBlank() }
     if (list.isEmpty()) null else Pair(ts, list)

@@ -12,18 +12,22 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -34,6 +38,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -51,6 +56,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -64,7 +70,6 @@ import com.music.spotui.data.entity.ArtistsModel
 import com.music.spotui.data.entity.HomeFeedModel
 import com.music.spotui.data.entity.HomeItem
 import com.music.spotui.data.entity.HomeSection
-import com.music.spotui.ui.components.Loader
 import com.music.spotui.ui.navigation.Routes
 import com.music.spotui.ui.navigation.albumRoute
 import com.music.spotui.ui.navigation.artistRoute
@@ -92,20 +97,24 @@ import androidx.compose.ui.text.style.TextOverflow
 import com.music.spotui.data.entity.HomeSectionIds
 import com.music.spotui.data.entity.HomeSectionType
 import java.time.LocalTime
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.tween
-import androidx.compose.animation.expandHorizontally
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.shrinkHorizontally
-import androidx.compose.animation.slideInHorizontally
-import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.offset
 import androidx.compose.ui.draw.rotate
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.layout.Layout
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.foundation.shape.CornerSize
+import androidx.compose.ui.unit.TextUnit
 
+private val HomeBackground = Color(0xFF121212)
+private val HomeFilterSelected = Color(0xFF1ED760)
+private val HomeFollowingSelected = Color(0xFF1ABC54)
+private val HomeFilterUnselected = Color(0xFF333333)
 
 
 @RequiresApi(Build.VERSION_CODES.O)
@@ -119,27 +128,54 @@ fun HomeScreen(navController: NavController){
     val albums by homeViewModel.albums.collectAsState()
     val artists by homeViewModel.artists.collectAsState()
     val currentFilter by homeViewModel.currentFilter.collectAsState()
+    val inPodcastModes = currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS ||
+        currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING
+    // Keep the same animation alive when switching between the feed/loading/fallback headers.
+    val followingReveal = followingRevealState(inPodcastModes)
+    androidx.activity.compose.BackHandler(
+        currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS || currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING
+    ) { homeViewModel.backFromPodcasts() }
     val followedPodcasts by homeViewModel.followedPodcasts.collectAsState()
     val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
 
     var menuSong by remember { mutableStateOf<SongsModel?>(null) }
-    var showPodcastsComingSoonDialog by remember { mutableStateOf(false) }
+    var menuCover by remember { mutableStateOf<HomeItem?>(null) }
     var showWhatsNewDialog by remember {
-        mutableStateOf(com.music.spotui.data.preferences.WhatsNewPref.shouldShow(context, 28))
+        mutableStateOf(com.music.spotui.data.preferences.WhatsNewPref.shouldShow(context))
+    }
+    var showWazeIntro by androidx.compose.runtime.saveable.rememberSaveable {
+        mutableStateOf(com.music.spotui.data.preferences.WhatsNewPref.shouldOfferWaze(context))
     }
 
     com.music.spotui.ui.components.WhatsNewDialog(
         showDialog = showWhatsNewDialog,
         onDismiss = {
             showWhatsNewDialog = false
-            com.music.spotui.data.preferences.WhatsNewPref.markSeen(context, 28)
+            com.music.spotui.data.preferences.WhatsNewPref.markSeen(context)
+        },
+        onContinue = {
+            showWhatsNewDialog = false
+            val offer = !(com.music.spotui.utils.WazeDetector.hasScreenDetectorPermission(context) &&
+                com.music.spotui.data.preferences.isWazeOverlayEnabled(context))
+            com.music.spotui.data.preferences.WhatsNewPref.markSeen(context, offerWaze = offer)
+            showWazeIntro = offer
         }
     )
+    if (showWazeIntro && !showWhatsNewDialog) {
+        WazeSetupDialog(onDismiss = {
+            showWazeIntro = false
+            com.music.spotui.data.preferences.WhatsNewPref.finishWazeOffer(context)
+        })
+    }
 
-    com.music.spotui.ui.components.PodcastsComingSoonDialog(
-        showDialog = showPodcastsComingSoonDialog,
-        onDismiss = { showPodcastsComingSoonDialog = false }
-    )
+    menuCover?.let { item ->
+        com.music.spotui.ui.components.HomeCoverMenuSheet(
+            item = item,
+            onOpen = { onHomeItemClick(context, navController, item, { homeViewModel.playTrack(it, context) }, HomeSurface.TOP_GRID) },
+            onSongOptions = { if (item is HomeItem.Track) menuSong = item.song },
+            onDismiss = { menuCover = null },
+        )
+    }
 
     menuSong?.let { sel ->
         com.music.spotui.ui.components.SongOptionsSheet(
@@ -151,6 +187,7 @@ fun HomeScreen(navController: NavController){
     }
 
     val lifecycleOwner = androidx.compose.ui.platform.LocalLifecycleOwner.current
+    HomeImageApprovalRefresh(lifecycleOwner)
     androidx.compose.runtime.DisposableEffect(lifecycleOwner) {
         val observer = androidx.lifecycle.LifecycleEventObserver { _, event ->
             if (event == androidx.lifecycle.Lifecycle.Event.ON_RESUME) {
@@ -166,9 +203,10 @@ fun HomeScreen(navController: NavController){
     }
 
     Surface(
+        color = HomeBackground,
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(AppBackground.toArgb()))
+            .background(HomeBackground)
             .statusBarsPadding()
     ) {
         val feed = (home as? Response.Success)?.data
@@ -178,67 +216,52 @@ fun HomeScreen(navController: NavController){
         val albumsList = (albums as? Response.Success)?.data.orEmpty()
         val artistsList = (artists as? Response.Success)?.data.orEmpty()
 
-        val inPodcastModes = currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS ||
-            currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING
-
         when {
-            inPodcastModes -> {
+            inPodcastModes || (feed != null && feed.sections.isNotEmpty()) -> {
                 HomeFeedContent(
                     navController = navController,
                     feed = feed ?: com.music.spotui.data.entity.HomeFeedModel(topGrid = emptyList(), sections = emptyList()),
                     currentFilter = currentFilter,
-                    onFilterSelected = { filter ->
-                        if (filter == com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS) {
-                            showPodcastsComingSoonDialog = true
-                        } else {
-                            homeViewModel.setFilter(filter)
-                        }
-                    },
+                    onFilterSelected = homeViewModel::setFilter,
                     followedPodcasts = followedPodcasts,
                     onPlayTrack = { song -> homeViewModel.playTrack(song, context) },
-                    onSongLongClick = { menuSong = it }
+                    onSongLongClick = { menuSong = it },
+                    onCoverLongClick = { menuCover = it },
+                    followingReveal = followingReveal,
                 )
             }
 
-            // Preferred: the real personalized Spotify home feed.
-            feed != null && feed.sections.isNotEmpty() -> {
-                HomeFeedContent(
-                    navController = navController,
-                    feed = feed,
-                    currentFilter = currentFilter,
-                    onFilterSelected = { filter ->
-                        if (filter == com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS) {
-                            showPodcastsComingSoonDialog = true
-                        } else {
-                            homeViewModel.setFilter(filter)
-                        }
-                    },
-                    followedPodcasts = followedPodcasts,
-                    onPlayTrack = { song -> homeViewModel.playTrack(song, context) },
-                    onSongLongClick = { menuSong = it }
-                )
-            }
-
-            // Still resolving the real personalized home feed. Show the loader even
-            // if the new-releases/artists fallbacks already arrived from cache —
-            // otherwise the old "Sum up" layout flashes for a beat before the real
-            // Spotify-style feed swaps in.
+            // Only the first local snapshot read needs this loader. Catalog network
+            // requests run after cached/Recents content has already been published.
             home is Response.Loading -> {
-                Loader()
+                Column {
+                    HomeHeaderRow(navController, currentFilter, homeViewModel::setFilter, followingReveal)
+                    Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
+                        androidx.compose.material3.CircularProgressIndicator(
+                            modifier = Modifier.size(28.dp), color = HomeFilterSelected, strokeWidth = 2.dp,
+                        )
+                    }
+                }
             }
 
             // Fallback: home feed errored but new-releases / artists came through.
             albumsList.isNotEmpty() || artistsList.isNotEmpty() -> {
-                SumUpHomeScreen(navController = navController, albums = albumsList, artists = artistsList)
+                Column {
+                    HomeHeaderRow(navController, currentFilter, homeViewModel::setFilter, followingReveal)
+                    Box(Modifier.weight(1f)) { SumUpHomeScreen(navController = navController, albums = albumsList, artists = artistsList, onCoverLongClick = { menuCover = it }) }
+                }
             }
 
             else -> {
-                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                Column {
+                    HomeHeaderRow(navController, currentFilter, homeViewModel::setFilter, followingReveal)
+                    Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                     Text(
                         text = "Couldn't load music.\nCheck your connection and try again.",
                         color = Color.White,
                         textAlign = TextAlign.Center,
                     )
+                    }
                 }
             }
         }
@@ -253,16 +276,18 @@ enum class HomeSurface {
 }
 
 private fun onHomeItemClick(
+    context: android.content.Context,
     navController: NavController,
     item: HomeItem,
     onPlayTrack: (SongsModel) -> Unit,
     surface: HomeSurface = HomeSurface.CATALOG_SECTION
 ) {
+    requestHomeCoverOnTap(context, item)
     when (item) {
         is HomeItem.Album -> navController.navigate(albumRoute(item.name, item.artists.ifBlank { item.subtitle }, item.imageUrl))
         is HomeItem.Artist -> navController.navigate(artistRoute(item.name, item.id))
         is HomeItem.Playlist ->
-            if (item.id.isNotBlank()) navController.navigate(playlistRoute(item.id, item.name))
+            if (item.id.isNotBlank()) navController.navigate(playlistRoute(item.id, item.name, item.imageUrl))
             else navController.navigate(albumRoute(item.name, cover = item.imageUrl))
         is HomeItem.LikedSongs -> navController.navigate(Routes.Liked.route)
         is HomeItem.Track -> {
@@ -316,27 +341,53 @@ fun HomeFeedContent(
     onFilterSelected: (com.music.spotui.ui.viewmodel.HomeTabFilter) -> Unit,
     followedPodcasts: List<com.music.spotui.data.preferences.FollowedPodcastShow>,
     onPlayTrack: (SongsModel) -> Unit,
-    onSongLongClick: (SongsModel) -> Unit
+    onSongLongClick: (SongsModel) -> Unit,
+    onCoverLongClick: (HomeItem) -> Unit,
+    followingReveal: State<Float>,
 ) {
     val topGridItems = feed.topGrid.take(4)
-    val sections = feed.sections
+    val sections = visibleHomeSections(feed.sections)
+    val inPodcasts = currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS || currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING
+    // Do not initialize the podcast disk catalog on the music Home startup path.
+    val podcastVm: com.music.spotui.ui.viewmodel.PodcastHomeViewModel? = if (inPodcasts) hiltViewModel() else null
+    val podcastState = podcastVm?.state?.collectAsState()?.value ?: com.music.spotui.ui.viewmodel.PodcastHomeState()
+    val lifecycle = androidx.compose.ui.platform.LocalLifecycleOwner.current.lifecycle
+    DisposableEffect(podcastVm, lifecycle) {
+        val observer = androidx.lifecycle.LifecycleEventObserver { _, event ->
+            if (event == androidx.lifecycle.Lifecycle.Event.ON_RESUME) podcastVm?.enter()
+        }
+        podcastVm?.enter()
+        lifecycle.addObserver(observer)
+        onDispose { lifecycle.removeObserver(observer); podcastVm?.leave() }
+    }
+    val allScroll = rememberLazyListState()
+    val musicScroll = rememberLazyListState()
+    val podcastScroll = rememberLazyListState()
+    val followingScroll = rememberLazyListState()
 
     LazyColumn(
+        state = when (currentFilter) {
+            com.music.spotui.ui.viewmodel.HomeTabFilter.ALL -> allScroll
+            com.music.spotui.ui.viewmodel.HomeTabFilter.MUSIC -> musicScroll
+            com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS -> podcastScroll
+            com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING -> followingScroll
+        },
         contentPadding = PaddingValues(bottom = 130.dp),
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(AppBackground.toArgb()))
+            .background(HomeBackground)
     ) {
         stickyHeader {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(AppBackground.toArgb()))
+                    .background(HomeBackground)
             ) {
                 HomeHeaderRow(
                     navController = navController,
                     currentFilter = currentFilter,
-                    onFilterSelected = onFilterSelected
+                    onFilterSelected = onFilterSelected,
+                    followingReveal = followingReveal,
                 )
             }
         }
@@ -346,56 +397,32 @@ fun HomeFeedContent(
             com.music.spotui.ui.viewmodel.HomeTabFilter.MUSIC -> {
                 if (topGridItems.isNotEmpty()) {
                     item(key = "top_grid") {
-                        HomeTopGrid(navController, topGridItems, onPlayTrack, onSongLongClick)
+                        HomeTopGrid(navController, topGridItems, onPlayTrack, onCoverLongClick)
                     }
                 }
                 items(sections.size, key = { i -> sections[i].id.ifBlank { "sec_$i" } }) { i ->
-                    HomeFeedSection(navController, sections[i], onPlayTrack, onSongLongClick)
+                    HomeFeedSection(navController, sections[i], onPlayTrack, onCoverLongClick)
                 }
             }
-            com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS -> {
-                if (followedPodcasts.isNotEmpty()) {
+            com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS,
+            com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING -> {
+                if (currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS && followedPodcasts.isNotEmpty()) {
                     item(key = "podcast_shortcuts") {
                         FollowedShowsShortcutsRow(
                             shows = followedPodcasts,
-                            onShowClick = { show ->
-                                navController.navigate(showRoute(show.showId, show.name))
-                            },
-                            onAddClick = {
-                                navController.navigate(podcastHubRoute())
-                            }
+                            onShowClick = { navController.navigate(showRoute(it.showId, it.name)) },
+                            onAddClick = { navController.navigate(Routes.PodcastChooser.route) },
                         )
                     }
                 }
-                item(key = "podcast_mode_content") {
-                    PodcastModeContent(
-                        followedPodcasts = followedPodcasts,
-                        onShowClick = { show ->
-                            navController.navigate(showRoute(show.showId, show.name))
-                        },
-                        onBrowsePodcasts = {
-                            navController.navigate(podcastHubRoute())
-                        }
-                    )
-                }
-            }
-            com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING -> {
-                if (followedPodcasts.isEmpty()) {
+                if (currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING && followedPodcasts.isEmpty()) {
                     item(key = "following_empty_state") {
-                        FollowingEmptyState(
-                            onBrowsePodcasts = {
-                                navController.navigate(podcastHubRoute())
-                            }
-                        )
+                        FollowingEmptyState(onBrowsePodcasts = { navController.navigate(Routes.PodcastChooser.route) })
                     }
                 } else {
-                    item(key = "following_shows_header") {
-                        FollowedShowsListContent(
-                            shows = followedPodcasts,
-                            onShowClick = { show ->
-                                navController.navigate(showRoute(show.showId, show.name))
-                            }
-                        )
+                    podcastVm?.let { vm ->
+                        podcastHomeItems(podcastState, currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING,
+                            vm, navController, onSongLongClick)
                     }
                 }
             }
@@ -410,6 +437,7 @@ private fun HomeHeaderRow(
     navController: NavController,
     currentFilter: com.music.spotui.ui.viewmodel.HomeTabFilter,
     onFilterSelected: (com.music.spotui.ui.viewmodel.HomeTabFilter) -> Unit,
+    followingReveal: State<Float>,
 ) {
     val context = androidx.compose.ui.platform.LocalContext.current
     androidx.compose.runtime.LaunchedEffect(Unit) {
@@ -419,7 +447,7 @@ private fun HomeHeaderRow(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 10.dp, bottom = 10.dp),
+            .padding(top = 8.dp, bottom = 8.dp),
     ) {
         val avatarUrl = com.music.spotui.data.api.ProfileCache.imageUrl
         val initial = com.music.spotui.data.api.ProfileCache.name
@@ -428,7 +456,7 @@ private fun HomeHeaderRow(
             contentAlignment = Alignment.Center,
             modifier = Modifier
                 .padding(start = 16.dp)
-                .size(34.dp)
+                .size(32.dp)
                 .clip(CircleShape)
                 .background(Color(0xFFE8622C))
                 .clickable(
@@ -441,7 +469,7 @@ private fun HomeHeaderRow(
                     model = avatarUrl,
                     contentScale = ContentScale.Crop,
                     contentDescription = "Profile",
-                    modifier = Modifier.size(34.dp),
+                    modifier = Modifier.size(32.dp),
                 )
             } else {
                 Text(
@@ -479,7 +507,8 @@ private fun HomeHeaderRow(
             PodcastFilterGroup(
                 currentFilter = currentFilter,
                 inPodcastModes = inPodcastModes,
-                onFilterSelected = onFilterSelected
+                onFilterSelected = onFilterSelected,
+                revealState = followingReveal,
             )
         }
     }
@@ -490,132 +519,79 @@ private fun FilterPill(
     label: String,
     isSelected: Boolean,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    fontSize: TextUnit = 14.sp,
 ) {
     Box(
         modifier = modifier
+            .heightIn(min = 32.dp)
             .clip(RoundedCornerShape(50))
-            .background(if (isSelected) Color(0xFF1ED760) else Color(0xFF2A2A2A))
+            .background(if (isSelected) HomeFilterSelected else HomeFilterUnselected)
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
                 onClick = onClick
             )
-            .padding(horizontal = 14.dp, vertical = 6.dp),
+            .padding(horizontal = 16.dp, vertical = 6.dp),
         contentAlignment = Alignment.Center
     ) {
         Text(
             text = label,
             color = if (isSelected) Color.Black else Color.White,
-            fontSize = 14.sp,
-            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+            fontSize = fontSize,
+            lineHeight = 20.sp,
+            fontWeight = FontWeight.Normal,
+            maxLines = 1,
         )
     }
 }
 
 @Composable
-private fun PodcastFilterGroup(
+private fun followingRevealState(inPodcastModes: Boolean): State<Float> =
+    animateFloatAsState(
+        targetValue = if (inPodcastModes) 1f else 0f,
+        animationSpec = tween(220, easing = FastOutSlowInEasing), label = "following-reveal",
+    )
+
+@Composable
+internal fun PodcastFilterGroup(
     currentFilter: com.music.spotui.ui.viewmodel.HomeTabFilter,
     inPodcastModes: Boolean,
     onFilterSelected: (com.music.spotui.ui.viewmodel.HomeTabFilter) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    revealState: State<Float>? = null,
 ) {
-    val isPodcastsActive = currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS
-    val isFollowingActive = currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING
-
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier
-    ) {
-        // Primary Podcast Pill: stays stable in place
-        Box(
-            modifier = Modifier
-                .clip(
-                    if (inPodcastModes) {
-                        RoundedCornerShape(
-                            topStart = 16.dp,
-                            bottomStart = 16.dp,
-                            topEnd = 0.dp,
-                            bottomEnd = 0.dp
-                        )
-                    } else {
-                        RoundedCornerShape(16.dp)
-                    }
-                )
-                .background(
-                    when {
-                        isPodcastsActive -> Color(0xFF1ED760)
-                        isFollowingActive -> Color(0xFF1AB252)
-                        else -> Color(0xFF2A2A2A)
-                    }
-                )
-                .clickable(
-                    interactionSource = remember { MutableInteractionSource() },
-                    indication = null,
-                    onClick = { onFilterSelected(com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS) }
-                )
-                .padding(horizontal = 14.dp, vertical = 6.dp),
-            contentAlignment = Alignment.Center
-        ) {
-            Text(
-                text = "פודקאסטים",
-                color = if (inPodcastModes) Color.Black else Color.White,
-                fontSize = 14.sp,
-                fontWeight = if (inPodcastModes) FontWeight.Bold else FontWeight.Medium,
-            )
-        }
-
-        // Animated Sub-Pill "במעקב": Slides in smoothly from Right to Left adjacent to "פודקאסטים"
-        AnimatedVisibility(
-            visible = inPodcastModes,
-            enter = fadeIn(animationSpec = tween(200)) +
-                    expandHorizontally(
-                        expandFrom = Alignment.Start,
-                        animationSpec = tween(220, easing = FastOutSlowInEasing)
-                    ) +
-                    slideInHorizontally(
-                        initialOffsetX = { fullWidth -> fullWidth },
-                        animationSpec = tween(220, easing = FastOutSlowInEasing)
-                    ),
-            exit = fadeOut(animationSpec = tween(150)) +
-                    shrinkHorizontally(
-                        shrinkTowards = Alignment.Start,
-                        animationSpec = tween(180, easing = FastOutSlowInEasing)
-                    ) +
-                    slideOutHorizontally(
-                        targetOffsetX = { fullWidth -> fullWidth },
-                        animationSpec = tween(180, easing = FastOutSlowInEasing)
-                    )
-        ) {
-            Box(
-                modifier = Modifier
-                    .clip(
-                        RoundedCornerShape(
-                            topEnd = 16.dp,
-                            bottomEnd = 16.dp,
-                            topStart = 0.dp,
-                            bottomStart = 0.dp
-                        )
-                    )
-                    .background(
-                        if (isFollowingActive) Color(0xFF1ED760)
-                        else Color(0xFF333333)
-                    )
-                    .clickable(
-                        interactionSource = remember { MutableInteractionSource() },
-                        indication = null,
-                        onClick = { onFilterSelected(com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING) }
-                    )
-                    .padding(horizontal = 14.dp, vertical = 6.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "במעקב",
-                    color = if (isFollowingActive) Color.Black else Color.White,
-                    fontSize = 14.sp,
-                    fontWeight = if (isFollowingActive) FontWeight.Bold else FontWeight.Medium,
-                )
+    val following = currentFilter == com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING
+    // Read the animation in measurement below, so each frame does not recompose the whole Home.
+    val reveal by revealState ?: followingRevealState(inPodcastModes)
+    // Place the following segment behind the fixed Podcasts pill. Relative placement mirrors in RTL.
+    Layout(modifier = modifier.clipToBounds().clip(RoundedCornerShape(50)), content = {
+        // The inner edge is covered by Podcasts; keep it square to avoid a notch at the join.
+        Box(Modifier.heightIn(min = 32.dp).clip(RoundedCornerShape(
+            topStart = CornerSize(0), topEnd = CornerSize(50),
+            bottomEnd = CornerSize(50), bottomStart = CornerSize(0)))
+            .background(if (following) HomeFollowingSelected else HomeFilterUnselected)
+            .then(if (!inPodcastModes) Modifier.clearAndSetSemantics {} else Modifier)
+            .clickable(enabled = inPodcastModes) {
+                onFilterSelected(if (following) com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS
+                    else com.music.spotui.ui.viewmodel.HomeTabFilter.FOLLOWING)
             }
+            .padding(start = 28.dp, end = 16.dp, top = 6.dp, bottom = 6.dp), contentAlignment = Alignment.Center) {
+            Text("במעקב", color = if (following) Color.Black else Color.White, fontSize = 13.5.sp,
+                lineHeight = 20.sp, fontWeight = FontWeight.Normal, maxLines = 1)
+        }
+        FilterPill("פודקאסטים", inPodcastModes,
+            { onFilterSelected(if (inPodcastModes) com.music.spotui.ui.viewmodel.HomeTabFilter.ALL
+                else com.music.spotui.ui.viewmodel.HomeTabFilter.PODCASTS) }, fontSize = 13.5.sp)
+    }) { measurables, constraints ->
+        val followingPill = measurables[0].measure(constraints.copy(minWidth = 0, minHeight = 0))
+        val primary = measurables[1].measure(constraints.copy(minWidth = 0, minHeight = 0))
+        val overlap = 16.dp.roundToPx()
+        val extra = ((followingPill.width - overlap).coerceAtLeast(0) * reveal).toInt()
+        val height = maxOf(primary.height, followingPill.height)
+        layout(primary.width + extra, height) {
+            followingPill.placeRelative(primary.width + extra - followingPill.width, (height - followingPill.height) / 2)
+            primary.placeRelative(0, (height - primary.height) / 2)
         }
     }
 }
@@ -628,6 +604,9 @@ private fun FollowedShowsShortcutsRow(
     onAddClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+    val whitelistVersion by com.music.spotui.util.KosherWhitelistManager.versionState
+
     LazyRow(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 10.dp),
         horizontalArrangement = Arrangement.spacedBy(14.dp),
@@ -681,7 +660,13 @@ private fun FollowedShowsShortcutsRow(
                     .clickable(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = null,
-                        onClick = { onShowClick(show) }
+                        onClick = {
+                            requestHomeCoverOnTap(context, show.name, show.imageUrl) {
+                                com.music.spotui.util.HomeArtworkPermissions.isApproved(show.imageUrl) ||
+                                    com.music.spotui.util.KosherWhitelistManager.isImageAllowed(show.imageUrl)
+                            }
+                            onShowClick(show)
+                        }
                     )
             ) {
                 Box(
@@ -693,6 +678,10 @@ private fun FollowedShowsShortcutsRow(
                     if (show.imageUrl.isNotBlank()) {
                         GlideImage(
                             model = show.imageUrl,
+                            isAllowed = com.music.spotui.util.HomeArtworkPermissions.isApproved(show.imageUrl) ||
+                                remember(show.imageUrl, whitelistVersion) {
+                                    com.music.spotui.util.KosherWhitelistManager.isImageAllowed(show.imageUrl)
+                                },
                             contentDescription = show.name,
                             contentScale = ContentScale.Crop,
                             modifier = Modifier.fillMaxSize()
@@ -721,173 +710,6 @@ private fun FollowedShowsShortcutsRow(
                     textAlign = TextAlign.Center
                 )
             }
-        }
-    }
-}
-
-@Composable
-private fun PodcastModeContent(
-    followedPodcasts: List<com.music.spotui.data.preferences.FollowedPodcastShow>,
-    onShowClick: (com.music.spotui.data.preferences.FollowedPodcastShow) -> Unit,
-    onBrowsePodcasts: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    Column(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 20.dp)
-    ) {
-        if (followedPodcasts.isEmpty()) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(12.dp))
-                    .background(Color(0xFF1E1E1E))
-                    .border(1.dp, Color(0xFF2C2C2C), RoundedCornerShape(12.dp))
-                    .padding(20.dp)
-            ) {
-                Column(horizontalAlignment = Alignment.Start) {
-                    Text(
-                        text = "פודקאסטים עבורכם",
-                        color = Color.White,
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Bold
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Text(
-                        text = "עקבו אחרי הפודקאסטים המועדפים עליכם כדי לקבל גישה מהירה ועדכונים שוטפים ישירות לכאן.",
-                        color = Color(0xFFB3B3B3),
-                        fontSize = 13.sp,
-                        lineHeight = 18.sp
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                    Button(
-                        onClick = onBrowsePodcasts,
-                        shape = RoundedCornerShape(20.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = Color.White,
-                            contentColor = Color.Black
-                        ),
-                        contentPadding = PaddingValues(horizontal = 20.dp, vertical = 8.dp)
-                    ) {
-                        Text(
-                            text = "עיון בפודקאסטים",
-                            color = Color.Black,
-                            fontSize = 13.sp,
-                            fontWeight = FontWeight.Bold
-                        )
-                    }
-                }
-            }
-        } else {
-            Text(
-                text = "הפודקאסטים שלכם",
-                color = Color.White,
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(bottom = 12.dp)
-            )
-            Column(
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                followedPodcasts.forEach { show ->
-                    FollowedShowCardRow(
-                        show = show,
-                        onClick = { onShowClick(show) }
-                    )
-                }
-            }
-        }
-    }
-}
-
-@Composable
-private fun FollowedShowsListContent(
-    shows: List<com.music.spotui.data.preferences.FollowedPodcastShow>,
-    onShowClick: (com.music.spotui.data.preferences.FollowedPodcastShow) -> Unit,
-    modifier: Modifier = Modifier
-) {
-    Column(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 16.dp)
-    ) {
-        Text(
-            text = "הפרקים האחרונים",
-            color = Color.White,
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(bottom = 6.dp)
-        )
-        Text(
-            text = "פודקאסטים במעקב (${shows.size})",
-            color = Color(0xFFB3B3B3),
-            fontSize = 13.sp,
-            modifier = Modifier.padding(bottom = 16.dp)
-        )
-
-        Column(
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            shows.forEach { show ->
-                FollowedShowCardRow(
-                    show = show,
-                    onClick = { onShowClick(show) }
-                )
-            }
-        }
-    }
-}
-
-@OptIn(ExperimentalGlideComposeApi::class)
-@Composable
-private fun FollowedShowCardRow(
-    show: com.music.spotui.data.preferences.FollowedPodcastShow,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(8.dp))
-            .background(Color(0xFF181818))
-            .clickable(onClick = onClick)
-            .padding(10.dp)
-    ) {
-        Box(
-            modifier = Modifier
-                .size(48.dp)
-                .clip(RoundedCornerShape(6.dp))
-                .background(Color(0xFF282828))
-        ) {
-            if (show.imageUrl.isNotBlank()) {
-                GlideImage(
-                    model = show.imageUrl,
-                    contentDescription = show.name,
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier.fillMaxSize()
-                )
-            }
-        }
-        Spacer(modifier = Modifier.width(12.dp))
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = show.name,
-                color = Color.White,
-                fontSize = 14.sp,
-                fontWeight = FontWeight.SemiBold,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis
-            )
-            Spacer(modifier = Modifier.height(2.dp))
-            Text(
-                text = "פודקאסט • במעקב",
-                color = Color(0xFF1ED760),
-                fontSize = 12.sp
-            )
         }
     }
 }
@@ -1081,7 +903,7 @@ private fun HomeTopGrid(
     navController: NavController,
     items: List<HomeItem>,
     onPlayTrack: (SongsModel) -> Unit,
-    onSongLongClick: (SongsModel) -> Unit
+    onCoverLongClick: (HomeItem) -> Unit
 ) {
     val four = items.take(4)
     Column(
@@ -1101,7 +923,7 @@ private fun HomeTopGrid(
                         item = item,
                         modifier = Modifier.weight(1f),
                         onPlayTrack = onPlayTrack,
-                        onSongLongClick = onSongLongClick
+                        onCoverLongClick = onCoverLongClick
                     )
                 }
                 if (rowItems.size == 1) {
@@ -1119,32 +941,32 @@ private fun HomeGridCard(
     item: HomeItem,
     modifier: Modifier = Modifier,
     onPlayTrack: (SongsModel) -> Unit,
-    onSongLongClick: (SongsModel) -> Unit
+    onCoverLongClick: (HomeItem) -> Unit
 ) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
-            .height(56.dp)
-            .clip(RoundedCornerShape(6.dp))
+            .height(48.dp)
+            .clip(RoundedCornerShape(4.dp))
             .background(Color(0xFF282828))
             .combinedClickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
                 onLongClick = {
-                    if (item is HomeItem.Track) {
-                        onSongLongClick(item.song)
-                    }
+                    onCoverLongClick(item)
                 },
-                onClick = { onHomeItemClick(navController, item, onPlayTrack, HomeSurface.TOP_GRID) }
+                onClick = { onHomeItemClick(context, navController, item, onPlayTrack, HomeSurface.TOP_GRID) }
             )
     ) {
         GlideImage(
-            modifier = Modifier.size(56.dp),
+            modifier = Modifier.size(48.dp),
             contentScale = ContentScale.Crop,
             model = item.imageUrl,
             loading = placeholder(R.drawable.placeholder),
             failure = placeholder(R.drawable.placeholder),
-            isAllowed = com.music.spotui.util.KosherWhitelistManager.isHomeItemWhitelisted(item),
+            isAllowed = com.music.spotui.util.HomeArtworkPermissions.isAllowedOnHome(item),
             contentDescription = item.name
         )
         Text(
@@ -1162,12 +984,14 @@ private fun HomeGridCard(
 }
 
 @Composable
-private fun HomeFeedSection(
+internal fun HomeFeedSection(
     navController: NavController,
     section: HomeSection,
     onPlayTrack: (SongsModel) -> Unit,
-    onSongLongClick: (SongsModel) -> Unit
+    onCoverLongClick: (HomeItem) -> Unit
 ) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+
     val surface = when (section.id) {
         HomeSectionIds.RECENTLY_PLAYED -> HomeSurface.RECENTS
         HomeSectionIds.RECOMMENDED_TODAY -> HomeSurface.RECOMMENDED
@@ -1175,44 +999,57 @@ private fun HomeFeedSection(
     }
 
     if (section.id == HomeSectionIds.SIMILAR_ARTISTS || section.headerArtist != null) {
-        ArtistSectionHeader(section) {
+        ArtistSectionHeader(section, onCoverLongClick) {
             section.headerArtist?.let { artist ->
+                requestHomeCoverOnTap(context, HomeItem.Artist(artist.name, artist.coverUri, artist.id))
                 navController.navigate(artistRoute(artist.name, artist.id))
             }
         }
     } else {
-        Text(
-            text = section.title,
-            color = Color.White,
-            fontSize = 21.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 22.dp, bottom = 10.dp)
-        )
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, top = 32.dp, bottom = 8.dp)
+        ) {
+            Text(section.title, color = Color.White, fontSize = 21.sp, fontWeight = FontWeight.Bold,
+                modifier = Modifier.weight(1f))
+            if (surface == HomeSurface.RECENTS) {
+                Text("הצגת כל האפשרויות", color = Color(0xFFB3B3B3), fontSize = 12.sp, fontWeight = FontWeight.Bold,
+                    modifier = Modifier.clickable { navController.navigate(Routes.History.route) }
+                        .padding(vertical = 12.dp, horizontal = 4.dp))
+            }
+        }
     }
 
-    LazyRow(
-        contentPadding = PaddingValues(horizontal = 12.dp),
-        horizontalArrangement = Arrangement.spacedBy(4.dp)
-    ) {
-        items(section.items.size) { i ->
-            val item = section.items[i]
-            when {
-                item is HomeItem.LikedSongs -> {
-                    LikedSongsCard(count = item.count) {
-                        onHomeItemClick(navController, item, onPlayTrack, surface)
+    BoxWithConstraints(Modifier.fillMaxWidth().padding(bottom = 16.dp)) {
+        val isRecent = surface == HomeSurface.RECENTS
+        // Reference covers are ~300px / 146px at 1.5x density. Constrain to the actual viewport.
+        val coverSize = minOf(if (isRecent) 98.dp else 200.dp, (maxWidth - 32.dp).coerceAtLeast(1.dp))
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            items(section.items.size) { i ->
+                val item = section.items[i]
+                when {
+                    item is HomeItem.LikedSongs -> {
+                        LikedSongsCard(count = item.count, coverSize = coverSize) {
+                            onHomeItemClick(context, navController, item, onPlayTrack, surface)
+                        }
                     }
-                }
-                section.type == HomeSectionType.ARTISTS && item is HomeItem.Artist -> {
-                    HomeArtistCircleCard(artist = item) {
-                        onHomeItemClick(navController, item, onPlayTrack, surface)
+                    section.type == HomeSectionType.ARTISTS && item is HomeItem.Artist -> {
+                        HomeArtistCircleCard(artist = item, coverSize = coverSize, onLongClick = { onCoverLongClick(item) }) {
+                            onHomeItemClick(context, navController, item, onPlayTrack, surface)
+                        }
                     }
-                }
-                else -> {
-                    HomeFeedCard(
-                        item = item,
-                        onSongLongClick = onSongLongClick
-                    ) {
-                        onHomeItemClick(navController, item, onPlayTrack, surface)
+                    else -> {
+                        HomeFeedCard(
+                            item = item,
+                            coverSize = coverSize,
+                            isRecent = isRecent,
+                            onCoverLongClick = onCoverLongClick
+                        ) {
+                            onHomeItemClick(context, navController, item, onPlayTrack, surface)
+                        }
                     }
                 }
             }
@@ -1221,21 +1058,24 @@ private fun HomeFeedSection(
 }
 
 /** Header with artist avatar next to "אמנים נוספים כמו" */
-@OptIn(ExperimentalGlideComposeApi::class)
+@OptIn(ExperimentalGlideComposeApi::class, ExperimentalFoundationApi::class)
 @Composable
 private fun ArtistSectionHeader(
     section: HomeSection,
+    onCoverLongClick: (HomeItem) -> Unit,
     onArtistClick: () -> Unit
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(start = 16.dp, end = 16.dp, top = 22.dp, bottom = 10.dp)
-            .clickable(
+            .padding(start = 16.dp, end = 16.dp, top = 32.dp, bottom = 8.dp)
+            .combinedClickable(
                 interactionSource = remember { MutableInteractionSource() },
-                indication = null
-            ) { onArtistClick() }
+                indication = null,
+                onLongClick = { section.headerArtist?.let { onCoverLongClick(HomeItem.Artist(it.name, it.coverUri, it.id)) } },
+                onClick = onArtistClick,
+            )
     ) {
         val artist = section.headerArtist
         if (artist != null && artist.coverUri.isNotBlank()) {
@@ -1247,7 +1087,7 @@ private fun ArtistSectionHeader(
                 model = artist.coverUri,
                 loading = placeholder(R.drawable.placeholder),
                 failure = placeholder(R.drawable.placeholder),
-                isAllowed = com.music.spotui.util.KosherWhitelistManager.isArtistModelWhitelisted(artist),
+                isAllowed = com.music.spotui.util.HomeArtworkPermissions.isApproved(artist.coverUri) || com.music.spotui.util.KosherWhitelistManager.isArtistModelWhitelisted(artist),
                 contentDescription = artist.name
             )
             Spacer(modifier = Modifier.width(12.dp))
@@ -1256,8 +1096,8 @@ private fun ArtistSectionHeader(
             Text(
                 text = section.subtitle ?: "אמנים נוספים כמו",
                 color = Color(0xFFB3B3B3),
-                fontSize = 11.sp,
-                fontWeight = FontWeight.SemiBold
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Normal
             )
             Text(
                 text = section.title,
@@ -1271,7 +1111,7 @@ private fun ArtistSectionHeader(
 
 /** Pinned card for "שירים שאהבתם" in Recently Played */
 @Composable
-private fun LikedSongsCard(count: Int, onClick: () -> Unit) {
+private fun LikedSongsCard(count: Int, coverSize: Dp, onClick: () -> Unit) {
     val context = androidx.compose.ui.platform.LocalContext.current
     val revision by com.music.spotui.data.preferences.likedSongsRevision.collectAsState()
     val liveCount = remember(revision) {
@@ -1280,8 +1120,7 @@ private fun LikedSongsCard(count: Int, onClick: () -> Unit) {
     val effectiveCount = liveCount
     Column(
         modifier = Modifier
-            .width(148.dp)
-            .padding(6.dp)
+            .width(coverSize)
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null
@@ -1289,8 +1128,8 @@ private fun LikedSongsCard(count: Int, onClick: () -> Unit) {
     ) {
         Box(
             modifier = Modifier
-                .size(148.dp)
-                .clip(RoundedCornerShape(8.dp))
+                .fillMaxWidth().aspectRatio(1f)
+                .clip(RoundedCornerShape(4.dp))
                 .background(
                     Brush.linearGradient(
                         colors = listOf(
@@ -1306,10 +1145,10 @@ private fun LikedSongsCard(count: Int, onClick: () -> Unit) {
                 imageVector = Icons.Default.Favorite,
                 contentDescription = "Liked Songs",
                 tint = Color.White,
-                modifier = Modifier.size(54.dp)
+                modifier = Modifier.size(coverSize * 0.34f)
             )
         }
-        Spacer(modifier = Modifier.height(6.dp))
+        Spacer(modifier = Modifier.height(12.dp))
         Text(
             text = "שירים שאהבתם",
             color = Color.White,
@@ -1322,20 +1161,7 @@ private fun LikedSongsCard(count: Int, onClick: () -> Unit) {
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.padding(top = 2.dp)
         ) {
-            Box(
-                contentAlignment = Alignment.Center,
-                modifier = Modifier
-                    .size(14.dp)
-                    .clip(CircleShape)
-                    .background(Color(0xFF1ED760))
-            ) {
-                Text(
-                    text = "✓",
-                    color = Color.Black,
-                    fontSize = 9.sp,
-                    fontWeight = FontWeight.Bold
-                )
-            }
+            com.music.spotui.ui.components.SavedCheckBadge()
             Spacer(modifier = Modifier.width(4.dp))
             Text(
                 text = if (effectiveCount == 1) "נוסף שיר 1" else "$effectiveCount שירים",
@@ -1349,28 +1175,29 @@ private fun LikedSongsCard(count: Int, onClick: () -> Unit) {
 }
 
 /** Circular card for "אמנים פופולריים" */
-@OptIn(ExperimentalGlideComposeApi::class)
+@OptIn(ExperimentalGlideComposeApi::class, ExperimentalFoundationApi::class)
 @Composable
-private fun HomeArtistCircleCard(artist: HomeItem.Artist, onClick: () -> Unit) {
+private fun HomeArtistCircleCard(artist: HomeItem.Artist, coverSize: Dp, onLongClick: () -> Unit, onClick: () -> Unit) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
-            .width(140.dp)
-            .padding(6.dp)
-            .clickable(
+            .width(coverSize)
+            .combinedClickable(
                 interactionSource = remember { MutableInteractionSource() },
-                indication = null
-            ) { onClick() }
+                indication = null,
+                onLongClick = onLongClick,
+                onClick = onClick,
+            )
     ) {
         GlideImage(
             modifier = Modifier
-                .size(130.dp)
+                .fillMaxWidth().aspectRatio(1f)
                 .clip(CircleShape),
             contentScale = ContentScale.Crop,
             model = artist.imageUrl,
             loading = placeholder(R.drawable.placeholder),
             failure = placeholder(R.drawable.placeholder),
-            isAllowed = com.music.spotui.util.KosherWhitelistManager.isHomeItemWhitelisted(artist),
+            isAllowed = com.music.spotui.util.HomeArtworkPermissions.isAllowedOnHome(artist),
             contentDescription = artist.name
         )
         Spacer(modifier = Modifier.height(8.dp))
@@ -1390,7 +1217,9 @@ private fun HomeArtistCircleCard(artist: HomeItem.Artist, onClick: () -> Unit) {
 @Composable
 private fun HomeFeedCard(
     item: HomeItem,
-    onSongLongClick: ((SongsModel) -> Unit)? = null,
+    coverSize: Dp,
+    isRecent: Boolean,
+    onCoverLongClick: (HomeItem) -> Unit,
     onClick: () -> Unit
 ) {
     val context = androidx.compose.ui.platform.LocalContext.current
@@ -1409,31 +1238,28 @@ private fun HomeFeedCard(
     Column(
         horizontalAlignment = if (isArtist) Alignment.CenterHorizontally else Alignment.Start,
         modifier = Modifier
-            .width(148.dp)
-            .padding(6.dp)
+            .width(coverSize)
             .combinedClickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
                 onLongClick = {
-                    if (item is HomeItem.Track && onSongLongClick != null) {
-                        onSongLongClick(item.song)
-                    }
+                    onCoverLongClick(item)
                 },
                 onClick = { onClick() },
             ),
     ) {
         GlideImage(
             modifier = Modifier
-                .size(148.dp)
-                .clip(if (isArtist) CircleShape else RoundedCornerShape(8.dp)),
+                .fillMaxWidth().aspectRatio(1f)
+                .clip(if (isArtist) CircleShape else RoundedCornerShape(4.dp)),
             contentScale = ContentScale.Crop,
             model = item.imageUrl,
             loading = placeholder(R.drawable.placeholder),
             failure = placeholder(R.drawable.placeholder),
-            isAllowed = com.music.spotui.util.KosherWhitelistManager.isHomeItemWhitelisted(item),
+            isAllowed = com.music.spotui.util.HomeArtworkPermissions.isAllowedOnHome(item),
             contentDescription = item.name,
         )
-        Spacer(modifier = Modifier.height(6.dp))
+        Spacer(modifier = Modifier.height(12.dp))
         Text(
             text = item.name,
             color = Color.White,
@@ -1443,20 +1269,45 @@ private fun HomeFeedCard(
             overflow = TextOverflow.Ellipsis,
             textAlign = if (isArtist) TextAlign.Center else TextAlign.Start,
         )
-        Text(
+        if (isRecent && item is HomeItem.Track && item.song.mediaType == MediaType.PODCAST_EPISODE) {
+            RecentPodcastProgress(item.song)
+        } else Text(
             text = subtitle,
             color = Color(0xFFB3B3B3),
-            fontSize = 11.sp,
-            maxLines = 2,
+            fontSize = 14.sp,
+            // LazyRow measures only the visible cards. Reserve the full caption slot
+            // so a two-line publisher entering/leaving view cannot move the next shelf.
+            minLines = if (isRecent) 1 else 2,
+            maxLines = if (isRecent) 1 else 2,
             overflow = TextOverflow.Ellipsis,
             textAlign = if (isArtist) TextAlign.Center else TextAlign.Start,
         )
     }
 }
 
+/** Subscribes only while the card is composed; playback remains the sole writer of progress. */
+@Composable
+private fun RecentPodcastProgress(song: SongsModel) {
+    val context = androidx.compose.ui.platform.LocalContext.current.applicationContext
+    val progress by remember(context, song) {
+        com.music.spotui.data.preferences.observePodcastProgress(context, song)
+    }.collectAsState(initial = null)
+    val value = progress
+    if (value == null) {
+        Text(song.singer, color = Color(0xFFB3B3B3), fontSize = 14.sp,
+            maxLines = 1, overflow = TextOverflow.Ellipsis)
+        return
+    }
+    com.music.spotui.ui.components.ListeningProgressBar(
+        value.fraction,
+        Modifier.fillMaxWidth().padding(top = 12.dp, bottom = 8.dp)
+            .height(4.dp)
+    )
+}
+
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
-fun SumUpHomeScreen(navController : NavController, albums: List<AlbumsModel>, artists: List<ArtistsModel>) {
+fun SumUpHomeScreen(navController : NavController, albums: List<AlbumsModel>, artists: List<ArtistsModel>, onCoverLongClick: (HomeItem) -> Unit = {}) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -1468,15 +1319,15 @@ fun SumUpHomeScreen(navController : NavController, albums: List<AlbumsModel>, ar
         //ChipSection(chip = listOf(" All ", "Music", "Podcasts"))
 
         if (albums.isNotEmpty()) {
-            HomePlaylistGrid(navController, albums)
-            HomeAlbums(album = albums, navController)
+            HomePlaylistGrid(navController, albums, onCoverLongClick)
+            HomeAlbums(album = albums, navController, onCoverLongClick)
         }
         //HomeRecentlyPlayed(navController, albums = listOf("karan aujla", "diljit", "fudfu", "frref", "frrf"))
         if (artists.isNotEmpty()) {
-            HomeArtists(artists = artists, navController)
+            HomeArtists(artists = artists, navController, onCoverLongClick)
         }
         if (albums.isNotEmpty()) {
-            ImageCard(navController, albums)
+            ImageCard(navController, albums, onCoverLongClick = onCoverLongClick)
         }
     }
 }
@@ -1547,9 +1398,11 @@ fun GreetingSection(name : String = "User") {
 //    }
 //}
 
-@OptIn(ExperimentalGlideComposeApi::class)
+@OptIn(ExperimentalGlideComposeApi::class, ExperimentalFoundationApi::class)
 @Composable
-fun HomePlaylistGrid(navController: NavController, albums: List<AlbumsModel>) {
+fun HomePlaylistGrid(navController: NavController, albums: List<AlbumsModel>, onCoverLongClick: (HomeItem) -> Unit = {}) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+
     // Use up to 8 albums, but don't assume there are at least 8 (rate-limited /
     // small feeds can return fewer) — that previously caused IndexOutOfBounds.
     val gridAlbums = albums.take(8)
@@ -1577,12 +1430,14 @@ fun HomePlaylistGrid(navController: NavController, albums: List<AlbumsModel>) {
                             .clip(RoundedCornerShape(5.dp))
                             .background(Color(GridBackground.toArgb()))
                             .width(180.dp)
-                            .clickable(
+                            .combinedClickable(
                                 interactionSource = remember { MutableInteractionSource() },
+                                onLongClick = { onCoverLongClick(chunkedAlbums[it][album].homeCover()) },
                                 indication = null
                             ) {
                                 val albumModel = chunkedAlbums[it][album]
                                 Log.d("check", albumModel.name)
+                                requestHomeCoverOnTap(context, albumModel.homeCover())
                                 navController.navigate(albumRoute(albumModel.name, albumModel.artists, albumModel.coverUri))
                             }
                     ) {
@@ -1593,7 +1448,7 @@ fun HomePlaylistGrid(navController: NavController, albums: List<AlbumsModel>) {
                             model = albItem.coverUri,
                             loading = placeholder(R.drawable.placeholder),
                             failure = placeholder(R.drawable.placeholder),
-                            isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(albItem),
+                            isAllowed = com.music.spotui.util.HomeArtworkPermissions.isApproved(albItem.coverUri) || com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(albItem),
                             contentDescription = "Profile")
                         Text(modifier = Modifier.padding(5.dp),
                             text = chunkedAlbums[it][album].name,
@@ -1612,12 +1467,15 @@ fun HomePlaylistGrid(navController: NavController, albums: List<AlbumsModel>) {
 }
 
 
-@OptIn(ExperimentalGlideComposeApi::class)
+@OptIn(ExperimentalGlideComposeApi::class, ExperimentalFoundationApi::class)
 @Composable
 fun HomeAlbums(
     album : List<AlbumsModel>,
-    navController: NavController
+    navController: NavController,
+    onCoverLongClick: (HomeItem) -> Unit = {}
 ) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+
     val reversedAlbum = album.reversed().dropLast(1)
     Text(modifier = Modifier
         .padding(20.dp, 10.dp, 0.dp, 0.dp),
@@ -1631,10 +1489,12 @@ fun HomeAlbums(
                     .padding(10.dp)
                     .width(150.dp)
                     .height(195.dp)
-                    .clickable(
+                    .combinedClickable(
                         interactionSource = remember { MutableInteractionSource() },
-                        indication = null
+                        onLongClick = { onCoverLongClick(reversedAlbum[album].homeCover()) },
+                                indication = null
                     ) {
+                        requestHomeCoverOnTap(context, reversedAlbum[album].homeCover())
                         navController.navigate(albumRoute(reversedAlbum[album].name, reversedAlbum[album].artists, reversedAlbum[album].coverUri))
                     }
             ){
@@ -1649,7 +1509,7 @@ fun HomeAlbums(
                         model = albItem.coverUri,
                         loading = placeholder(R.drawable.placeholder),
                         failure = placeholder(R.drawable.placeholder),
-                        isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(albItem),
+                        isAllowed = com.music.spotui.util.HomeArtworkPermissions.isApproved(albItem.coverUri) || com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(albItem),
                         contentDescription = "Albums")
                     Text(
                         fontSize = 13.sp,
@@ -1712,12 +1572,15 @@ fun HomeRecentlyPlayed(
     }
 }
 
-@OptIn(ExperimentalGlideComposeApi::class)
+@OptIn(ExperimentalGlideComposeApi::class, ExperimentalFoundationApi::class)
 @Composable
 fun HomeArtists(
     artists : List<ArtistsModel>,
-    navController: NavController
+    navController: NavController,
+    onCoverLongClick: (HomeItem) -> Unit = {}
 ) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+
     Text(modifier = Modifier
         .padding(20.dp, 10.dp, 0.dp, 0.dp),
         text = "Best of Artists",
@@ -1730,11 +1593,13 @@ fun HomeArtists(
                 .padding(10.dp)
                 .width(150.dp)
                 .height(200.dp)
-                .clickable(
+                .combinedClickable(
                     interactionSource = remember { MutableInteractionSource() },
-                    indication = null
+                    onLongClick = { onCoverLongClick(HomeItem.Artist(artists[artist].name, artists[artist].coverUri, artists[artist].id)) },
+                                indication = null
                 ) {
                     Log.d("check", artists[artist].name)
+                    requestHomeCoverOnTap(context, HomeItem.Artist(artists[artist].name, artists[artist].coverUri, artists[artist].id))
                     navController.navigate(artistRoute(artists[artist].name, artists[artist].id))
                 }
             ){
@@ -1749,7 +1614,7 @@ fun HomeArtists(
                         model = artistItem.coverUri,
                         loading = placeholder(R.drawable.placeholder),
                         failure = placeholder(R.drawable.placeholder),
-                        isAllowed = com.music.spotui.util.KosherWhitelistManager.isArtistModelWhitelisted(artistItem),
+                        isAllowed = com.music.spotui.util.HomeArtworkPermissions.isApproved(artistItem.coverUri) || com.music.spotui.util.KosherWhitelistManager.isArtistModelWhitelisted(artistItem),
                         contentDescription = "Albums")
                     Text(modifier = Modifier.padding(2.dp),
                         text = "This is ${artists[artist].name}",
@@ -1763,13 +1628,16 @@ fun HomeArtists(
 }
 
 
-@OptIn(ExperimentalGlideComposeApi::class)
+@OptIn(ExperimentalGlideComposeApi::class, ExperimentalFoundationApi::class)
 @Composable
 fun ImageCard(
     navController: NavController,
     allAlbums: List<AlbumsModel>,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onCoverLongClick: (HomeItem) -> Unit = {}
 ) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+
 
     val albums = allAlbums.takeLast(3)
     Text(modifier = Modifier
@@ -1791,10 +1659,12 @@ fun ImageCard(
                     .padding(15.dp)
                     .fillMaxWidth()
                     .height(380.dp)
-                    .clickable(
+                    .combinedClickable(
                         interactionSource = remember { MutableInteractionSource() },
-                        indication = null
+                        onLongClick = { onCoverLongClick(albums[album].homeCover()) },
+                                indication = null
                     ) {
+                        requestHomeCoverOnTap(context, albums[album].homeCover())
                         navController.navigate(albumRoute(albums[album].name, albums[album].artists, albums[album].coverUri))
                     }
             ) {
@@ -1809,7 +1679,7 @@ fun ImageCard(
                         contentDescription = "artists",
                         loading = placeholder(R.drawable.placeholder),
                         failure = placeholder(R.drawable.placeholder),
-                        isAllowed = com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(albumItem),
+                        isAllowed = com.music.spotui.util.HomeArtworkPermissions.isApproved(albumItem.coverUri) || com.music.spotui.util.KosherWhitelistManager.isAlbumWhitelisted(albumItem),
                         contentScale = ContentScale.Crop
                     )
                     Box(
@@ -1865,3 +1735,5 @@ fun ImageCard(
 
 
 
+
+private fun AlbumsModel.homeCover() = HomeItem.Album(name, coverUri, artists, artists, spotifyId)

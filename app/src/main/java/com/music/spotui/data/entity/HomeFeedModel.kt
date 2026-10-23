@@ -47,6 +47,7 @@ sealed class HomeItem {
         override val imageUrl: String,
         val subtitle: String,
         val artists: String = "",
+        val spotifyId: String = "",
     ) : HomeItem()
 
     data class Artist(

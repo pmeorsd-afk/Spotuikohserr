@@ -5,15 +5,15 @@
 -->
 <data-extraction-rules>
     <cloud-backup>
+        <exclude domain="sharedpref" path="app_update_download.xml" />
+        <exclude domain="external" path="Download/updates/" />
         <!-- TODO: Use <include> and <exclude> to control what is backed up.
         <include .../>
         <exclude .../>
         -->
     </cloud-backup>
-    <!--
     <device-transfer>
-        <include .../>
-        <exclude .../>
+        <exclude domain="sharedpref" path="app_update_download.xml" />
+        <exclude domain="external" path="Download/updates/" />
     </device-transfer>
-    -->
 </data-extraction-rules>

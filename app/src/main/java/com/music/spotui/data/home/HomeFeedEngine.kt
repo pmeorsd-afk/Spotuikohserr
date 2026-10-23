@@ -1,7 +1,6 @@
 package com.music.spotui.data.home
 
 import com.music.spotui.data.api.Response
-import com.music.spotui.data.entity.AlbumsModel
 import com.music.spotui.data.entity.ArtistsModel
 import com.music.spotui.data.entity.HomeFeedModel
 import com.music.spotui.data.entity.HomeItem
@@ -36,18 +35,20 @@ import javax.inject.Singleton
 class HomeFeedEngine @Inject constructor(
     private val repository: AppRepository,
     private val listeningTracker: LocalListeningTracker,
+    private val publicCatalog: PublicSpotifyHomeSource,
+    private val discovery: HomeDiscoveryRepository,
     @ApplicationContext private val context: Context
 ) {
 
-    private var cachedFeed: HomeFeedModel? = null
-    private var cachedAt: Long = 0L
+    @Volatile private var cachedFeed: HomeFeedModel? = null
+    @Volatile private var cachedAt: Long = 0L
+    private var diskCachedAt: Long = 0L
     private val cacheTtlMs = 2 * 60 * 1000L // 2 minutes in-memory cache
     private val mutex = Mutex()
     private val singleFlightMutex = Mutex()
     private var inFlightRefresh: Deferred<HomeFeedModel>? = null
 
     fun invalidate() {
-        cachedFeed = null
         cachedAt = 0L
     }
 
@@ -62,25 +63,11 @@ class HomeFeedEngine @Inject constructor(
     }
 
     fun patchLikedSongsCount(feed: HomeFeedModel): HomeFeedModel {
-        val currentCount = com.music.spotui.data.preferences.getLikedSongsCount(context)
-        val updatedSections = feed.sections.map { section ->
-            if (section.id == HomeSectionIds.RECENTLY_PLAYED) {
-                val updatedItems = section.items.map { item ->
-                    if (item is HomeItem.LikedSongs) {
-                        item.copy(count = currentCount)
-                    } else {
-                        item
-                    }
-                }
-                section.copy(items = updatedItems)
-            } else {
-                section
-            }
-        }
-        val patched = feed.copy(sections = updatedSections)
-        if (cachedFeed != null) {
-            cachedFeed = patched
-        }
+        val count = com.music.spotui.data.preferences.getLikedSongsCount(context)
+        val patched = HomeDiscoveryPresentation.withLikedCount(feed, count)
+        // The visible feed can deliberately have an older discovery snapshot.
+        // A count update must not write that older snapshot over prepared recommendations.
+        cachedFeed = cachedFeed?.let { HomeDiscoveryPresentation.withLikedCount(it, count) }
         return patched
     }
 
@@ -94,8 +81,8 @@ class HomeFeedEngine @Inject constructor(
             if (disk != null && disk.isHealthy()) {
                 val patched = patchLikedSongsCount(disk)
                 cachedFeed = patched
-                cachedAt = System.currentTimeMillis()
-                return patched
+                cachedAt = diskCachedAt
+                if (isCacheValid()) return patched
             }
         }
 
@@ -119,91 +106,106 @@ class HomeFeedEngine @Inject constructor(
         return job.await()
     }
 
-    private suspend fun doOrchestratedRefresh(): HomeFeedModel = mutex.withLock {
+    private suspend fun doOrchestratedRefresh(): HomeFeedModel {
+        // Cached/local Home must stay available while independent network sources are pending.
         val newFeed = buildOrchestratedFeed()
-        val finalFeed = if (newFeed.isHealthy()) {
-            newFeed
-        } else {
-            // Anti-degradation: Never replace a healthy feed with a degraded feed!
-            val healthyBase = when {
-                cachedFeed != null && cachedFeed!!.isHealthy() -> cachedFeed
-                else -> loadFromDisk()?.takeIf { it.isHealthy() }
-            }
-
-            if (healthyBase != null) {
-                val recentTracks = listeningTracker.recentTracks(limit = 10)
-                val likedSongs = loadLikedSongs()
-                mergeLocalRecent(healthyBase, recentTracks, likedSongs)
+        return mutex.withLock {
+            val previous = cachedFeed ?: loadFromDisk()
+            val recoveredFeed = HomeDiscoveryPresentation.retainKnownGeneral(newFeed, previous)
+            val finalFeed = if (recoveredFeed.isHealthy()) {
+                recoveredFeed
             } else {
-                newFeed
+                // A partial/offline refresh must not replace a healthy saved Home.
+                val healthyBase = previous?.takeIf { it.isHealthy() }
+                if (healthyBase != null) {
+                    val recentTracks = listeningTracker.recentTracks(limit = 10)
+                    val likedSongs = loadLikedSongs()
+                    mergeLocalRecent(healthyBase, recentTracks, likedSongs)
+                } else {
+                    recoveredFeed
+                }
             }
+            val patchedFeed = patchLikedSongsCount(finalFeed)
+            cachedFeed = patchedFeed
+            cachedAt = System.currentTimeMillis()
+            saveToDisk(patchedFeed)
+            patchedFeed
         }
-        val patchedFeed = patchLikedSongsCount(finalFeed)
-        cachedFeed = patchedFeed
-        cachedAt = System.currentTimeMillis()
-        saveToDisk(patchedFeed)
-        patchedFeed
     }
 
     /**
-     * Incremental update for local events (song played / liked) in <5ms without re-hitting network.
+     * Disk/local-only startup and incremental update. Network work never runs on this path.
      */
     suspend fun updateRecentListeningOnly(): HomeFeedModel = withContext(Dispatchers.IO) {
         mutex.withLock {
-            val base = cachedFeed ?: loadFromDisk()
+            val base = cachedFeed ?: loadFromDisk().also { if (it != null) cachedAt = diskCachedAt }
             val recentTracks = listeningTracker.recentTracks(limit = 10)
-            val likedSongs = loadLikedSongs()
-            val updated = if (base != null) {
-                mergeLocalRecent(base, recentTracks, likedSongs)
-            } else {
-                buildOrchestratedFeed()
-            }
+            val likedSongs = com.music.spotui.data.preferences.getLocallyLikedSongs(context)
+            val local = mergeLocalRecent(base ?: HomeFeedModel(), recentTracks, likedSongs)
+            val updated = HomeDiscoveryPresentation.apply(local, publicCatalog.cachedHome(),
+                discovery.cached(listeningTracker.recentTracks(limit = 100)))
             val patched = patchLikedSongsCount(updated)
             cachedFeed = patched
-            cachedAt = System.currentTimeMillis()
             saveToDisk(patched)
             patched
         }
     }
 
+    /** Expensive catalog work stays outside the feed mutex and never runs on the playback thread. */
+    suspend fun refreshDiscoveryRecommendations(onReady: suspend (HomeFeedModel) -> Unit = {}) = withContext(Dispatchers.IO) {
+        val history = listeningTracker.recentTracks(limit = 100)
+        val general = publicCatalog.home()
+        // Public shelves must not wait behind the longer personal playlist verification.
+        applyDiscovery(general, discovery.cached(history), history)?.let { onReady(it) }
+        val personal = discovery.refresh(history)
+        applyDiscovery(general, personal, history)?.let { onReady(it) }
+    }
+
+    private suspend fun applyDiscovery(general: PublicHomeCatalog, personal: PersonalHomeCatalog,
+                                       history: List<TrackListenStat>): HomeFeedModel? =
+        mutex.withLock {
+            val base = cachedFeed ?: loadFromDisk() ?: return@withLock null
+            val currentHistory = listeningTracker.recentTracks(limit = 100)
+            val currentPersonal = if (HomeRecommendationPolicy.fingerprint(history) ==
+                HomeRecommendationPolicy.fingerprint(currentHistory)) personal else discovery.cached(currentHistory)
+            val updated = HomeDiscoveryPresentation.apply(base, general, currentPersonal)
+            cachedFeed = updated
+            saveToDisk(updated)
+            updated
+        }
+
     /**
      * Non-destructive personalized patch: updates SIMILAR_ARTISTS, RECOMMENDED_TODAY,
-     * and HISTORY_BASED based on the latest listening tracker stats without destroying
-     * or rebuilding healthy base sections (albums, mixes, radio, popular artists).
+     * based on the latest listening tracker stats. Discovery shelves have their own
+     * bounded, exact-content refresh. Missing shelves publish during the current visit.
      */
     suspend fun updatePersonalizedRecommendations(): HomeFeedModel = withContext(Dispatchers.IO) {
+        val recentTracks = listeningTracker.recentTracks(limit = 10)
+        val topArtists = listeningTracker.topArtists(limit = 1)
+        val topArtist = topArtists.firstOrNull()
+
+        val seedIds = HomeRecommendationPolicy.musicHistory(recentTracks).take(5).map { it.trackId }
+
+        // Parallel network work must not block the local Home snapshot mutex.
+        val (recommendations, similarContent) = coroutineScope {
+            val recDeferred = if (seedIds.isNotEmpty()) {
+                async(Dispatchers.IO) { loadRecommendations(seedIds) }
+            } else null
+
+            val similarDeferred = if (topArtist != null && topArtist.artistName.isNotBlank()) {
+                async(Dispatchers.IO) { loadSimilarContent(topArtist.artistName) }
+            } else null
+
+            Pair(
+                recDeferred?.await().orEmpty(),
+                similarDeferred?.await()
+            )
+        }
+
         mutex.withLock {
-            val base = cachedFeed ?: loadFromDisk() ?: return@withLock updateRecentListeningOnly()
-            val recentTracks = listeningTracker.recentTracks(limit = 10)
-            val likedSongs = loadLikedSongs()
-            val topArtists = listeningTracker.topArtists(limit = 1)
-            val topArtist = topArtists.firstOrNull()
-
-            val seedIds = recentTracks.mapNotNull { it.trackId.takeIf { id -> id.isNotBlank() } }.take(5)
-
-            // Parallel fetch of personalized recommendations
-            val (recommendations, similarContent, tastePlaylists) = coroutineScope {
-                val recDeferred = if (seedIds.isNotEmpty()) {
-                    async(Dispatchers.IO) { loadRecommendations(seedIds) }
-                } else null
-
-                val similarDeferred = if (topArtist != null && topArtist.artistName.isNotBlank()) {
-                    async(Dispatchers.IO) { loadSimilarContent(topArtist.artistName) }
-                } else null
-
-                val tastePlaylistsDeferred = if (topArtist != null && topArtist.artistName.isNotBlank()) {
-                    async(Dispatchers.IO) { loadPlaylists("${topArtist.artistName} פלייליסט") }
-                } else null
-
-                Triple(
-                    recDeferred?.await().orEmpty(),
-                    similarDeferred?.await(),
-                    tastePlaylistsDeferred?.await().orEmpty()
-                )
-            }
-
-            // 1. Merge recent tracks and top grid first
-            val mergedWithRecent = mergeLocalRecent(base, recentTracks, likedSongs)
+            val base = cachedFeed ?: loadFromDisk() ?: return@withLock HomeFeedModel()
+            // Merge with the latest local history after the remote requests finish.
+            val mergedWithRecent = mergeLocalRecent(base, listeningTracker.recentTracks(limit = 10), loadLikedSongs())
             val updatedSections = mergedWithRecent.sections.toMutableList()
 
             // 2. Non-destructive patch: Replace section if new content arrived, else preserve existing!
@@ -241,22 +243,6 @@ class HomeFeedEngine @Inject constructor(
                 }
             }
 
-            // HISTORY_BASED
-            if (tastePlaylists.isNotEmpty()) {
-                val histSection = HomeSection(
-                    id = HomeSectionIds.HISTORY_BASED,
-                    title = "על סמך היסטוריית ההאזנה שלכם בזמן האחרון",
-                    type = HomeSectionType.HORIZONTAL,
-                    items = tastePlaylists
-                )
-                val idx = updatedSections.indexOfFirst { it.id == HomeSectionIds.HISTORY_BASED }
-                if (idx != -1) {
-                    updatedSections[idx] = histSection
-                } else {
-                    updatedSections.add(histSection)
-                }
-            }
-
             // 3. Sort sections according to canonical order
             val canonicalOrder = listOf(
                 HomeSectionIds.TOP_MIXES,
@@ -288,31 +274,25 @@ class HomeFeedEngine @Inject constructor(
         val recentDeferred = async(Dispatchers.IO) { listeningTracker.recentTracks(limit = 10) }
         val topArtistsDeferred = async(Dispatchers.IO) { listeningTracker.topArtists(limit = 1) }
         val spotifyHomeDeferred = async(Dispatchers.IO) { loadSpotifyHome() }
-        val albumsDeferred = async(Dispatchers.IO) { loadAlbums() }
+        val catalogDeferred = async(Dispatchers.IO) { publicCatalog.home() }
         val artistsDeferred = async(Dispatchers.IO) { loadArtists() }
         val likedSongsDeferred = async(Dispatchers.IO) { loadLikedSongs() }
         val mixesDeferred = async(Dispatchers.IO) { loadPlaylists("מיקס") }
-        val radioDeferred = async(Dispatchers.IO) { loadPlaylists("רדיו") }
         val fallbackSongsDeferred = async(Dispatchers.IO) { loadTopSongs() }
-        val fallbackAlbumsDeferred = async(Dispatchers.IO) { loadSearchAlbums("2024") }
-        val fallbackPlaylistsDeferred = async(Dispatchers.IO) { loadPlaylists("להיטים") }
         val fallbackArtistsDeferred = async(Dispatchers.IO) { loadSearchArtists("ישראלי") }
 
         val recentTracks = recentDeferred.await()
         val topArtists = topArtistsDeferred.await()
         val spotifyHome = spotifyHomeDeferred.await()
-        val albums = albumsDeferred.await()
+        val catalog = catalogDeferred.await()
         val artists = artistsDeferred.await()
         val likedSongs = likedSongsDeferred.await()
         val fallbackMixes = mixesDeferred.await()
-        val fallbackRadio = radioDeferred.await()
         val fallbackTopSongs = fallbackSongsDeferred.await()
-        val fallbackAlbums = fallbackAlbumsDeferred.await()
-        val fallbackPlaylists = fallbackPlaylistsDeferred.await()
         val fallbackArtists = fallbackArtistsDeferred.await()
 
         // Seeds for recommendations based on recent plays
-        val seedIds = recentTracks.mapNotNull { it.trackId.takeIf { id -> id.isNotBlank() } }.take(5)
+        val seedIds = HomeRecommendationPolicy.musicHistory(recentTracks).take(5).map { it.trackId }
         val recommendations = if (seedIds.isNotEmpty()) {
             loadRecommendations(seedIds)
         } else {
@@ -325,28 +305,21 @@ class HomeFeedEngine @Inject constructor(
             async(Dispatchers.IO) { loadSimilarContent(topArtist.artistName) }
         } else null
 
-        val tastePlaylistsDeferred = if (topArtist != null && topArtist.artistName.isNotBlank()) {
-            async(Dispatchers.IO) { loadPlaylists("${topArtist.artistName} פלייליסט") }
-        } else null
-
         val similarContent = similarDeferred?.await()
-        val tastePlaylists = tastePlaylistsDeferred?.await().orEmpty()
+        val personal = discovery.cached(listeningTracker.recentTracks(limit = 100))
 
         assembleFeed(
             recentTracks = recentTracks,
             topArtist = topArtist,
             spotifyHome = spotifyHome,
-            albums = albums,
-            fallbackAlbums = fallbackAlbums,
+            catalog = catalog,
+            personal = personal,
             artists = artists,
             fallbackArtists = fallbackArtists,
             likedSongs = likedSongs,
             recommendations = recommendations,
             fallbackTopSongs = fallbackTopSongs,
             fallbackMixes = fallbackMixes,
-            fallbackRadio = fallbackRadio,
-            fallbackPlaylists = fallbackPlaylists,
-            tastePlaylists = tastePlaylists,
             similarContent = similarContent
         )
     }
@@ -355,38 +328,30 @@ class HomeFeedEngine @Inject constructor(
         recentTracks: List<TrackListenStat>,
         topArtist: ArtistListenStat?,
         spotifyHome: HomeFeedModel?,
-        albums: List<AlbumsModel>,
-        fallbackAlbums: List<HomeItem.Album>,
+        catalog: PublicHomeCatalog,
+        personal: PersonalHomeCatalog,
         artists: List<ArtistsModel>,
         fallbackArtists: List<ArtistsModel>,
         likedSongs: List<SongsModel>,
         recommendations: List<SongsModel>,
         fallbackTopSongs: List<SongsModel>,
         fallbackMixes: List<HomeItem.Playlist>,
-        fallbackRadio: List<HomeItem.Playlist>,
-        fallbackPlaylists: List<HomeItem.Playlist>,
-        tastePlaylists: List<HomeItem.Playlist>,
         similarContent: SimilarArtistData?
     ): HomeFeedModel {
         val rawSections = spotifyHome?.sections.orEmpty()
         val sections = mutableListOf<HomeSection>()
 
         // ── Resolved Data Elements ──
-        val albumItems = if (albums.isNotEmpty()) {
-            albums.map { HomeItem.Album(name = it.name, imageUrl = it.coverUri, subtitle = it.artists, artists = it.artists) }
-        } else {
-            fallbackAlbums
-        }
+        val albumItems = catalog.albums
 
-        val mixItems = rawSections.firstOrNull { s ->
+        val generalMixes = rawSections.firstOrNull { s ->
             val t = s.title.lowercase()
             t.contains("מיקס") || t.contains("mix") || t.contains("daily")
-        }?.items?.takeIf { it.isNotEmpty() } ?: fallbackMixes
+        }?.items?.filterIsInstance<HomeItem.Playlist>()?.takeIf { it.isNotEmpty() }
+            ?: fallbackMixes.ifEmpty { catalog.discovery }
+        val mixItems = personal.mixes.ifEmpty { generalMixes }
 
-        val radioItems = rawSections.firstOrNull { s ->
-            val t = s.title.lowercase()
-            t.contains("רדיו") || t.contains("radio") || t.contains("station")
-        }?.items?.takeIf { it.isNotEmpty() } ?: fallbackRadio
+        val radioItems = personal.radio.ifEmpty { catalog.radio }
 
         // ── 0. Top 2x2 Grid (Guaranteed EXACTLY 4 items) ──
         val topGrid = mutableListOf<HomeItem>()
@@ -407,7 +372,7 @@ class HomeFeedEngine @Inject constructor(
             sections.add(
                 HomeSection(
                     id = HomeSectionIds.TOP_MIXES,
-                    title = "המיקסים המובילים שלכם",
+                    title = if (personal.mixes.isNotEmpty()) "המיקסים המובילים שלכם" else "פלייליסטים לגלות",
                     type = HomeSectionType.MIXES,
                     items = mixItems
                 )
@@ -419,7 +384,7 @@ class HomeFeedEngine @Inject constructor(
             sections.add(
                 HomeSection(
                     id = HomeSectionIds.POPULAR_RADIO,
-                    title = "רדיו פופולרי",
+                    title = if (personal.radio.isNotEmpty()) "רדיו בשבילכם" else "רדיו פופולרי",
                     type = HomeSectionType.HORIZONTAL,
                     items = radioItems
                 )
@@ -484,16 +449,7 @@ class HomeFeedEngine @Inject constructor(
         }
 
         // ── 6. על סמך היסטוריית ההאזנה שלכם בזמן האחרון ──
-        val historyItems = if (tastePlaylists.isNotEmpty()) {
-            tastePlaylists
-        } else {
-            val fromSpotify = rawSections.firstOrNull { s ->
-                val t = s.title.lowercase()
-                (t.contains("היסטוריית") || t.contains("האזנה") || t.contains("recent") || t.contains("jump back") || t.contains("חזרה")) &&
-                s.id != HomeSectionIds.TOP_MIXES && s.id != HomeSectionIds.POPULAR_RADIO
-            }?.items
-            fromSpotify?.takeIf { it.isNotEmpty() } ?: fallbackPlaylists
-        }
+        val historyItems = personal.history
         if (historyItems.isNotEmpty()) {
             sections.add(
                 HomeSection(
@@ -594,22 +550,6 @@ class HomeFeedEngine @Inject constructor(
         }
     }
 
-    private suspend fun loadSearchAlbums(query: String): List<HomeItem.Album> {
-        return try {
-            withTimeoutOrNull(5000L) {
-                val resp = repository.searchEverything(query)
-                    .filter { it !is Response.Loading }
-                    .firstOrNull()
-                val albums = (resp as? Response.Success)?.data?.albums.orEmpty()
-                albums.map {
-                    HomeItem.Album(name = it.name, imageUrl = it.coverUri, subtitle = it.artists, artists = it.artists)
-                }
-            } ?: emptyList()
-        } catch (e: Exception) {
-            emptyList()
-        }
-    }
-
     private suspend fun loadTopSongs(): List<SongsModel> {
         return try {
             withTimeoutOrNull(5000L) {
@@ -646,19 +586,6 @@ class HomeFeedEngine @Inject constructor(
             }
         } catch (e: Exception) {
             null
-        }
-    }
-
-    private suspend fun loadAlbums(): List<AlbumsModel> {
-        return try {
-            withTimeoutOrNull(5000L) {
-                val resp = repository.provideAlbums()
-                    .filter { it !is Response.Loading }
-                    .firstOrNull()
-                (resp as? Response.Success)?.data.orEmpty()
-            } ?: emptyList()
-        } catch (e: Exception) {
-            emptyList()
         }
     }
 
@@ -756,13 +683,13 @@ class HomeFeedEngine @Inject constructor(
     private fun saveToDisk(feed: HomeFeedModel) {
         runCatching {
             val root = JSONObject().apply {
-                put("version", 1)
-                put("cachedAt", System.currentTimeMillis())
+                put("version", 2)
+                put("cachedAt", cachedAt)
                 val feedObj = JSONObject().apply {
                     put("greeting", feed.greeting)
                     val gridArr = JSONArray()
                     feed.topGrid.forEach { item ->
-                        itemToJson(item)?.let { gridArr.put(it) }
+                        HomeFeedItemCodec.encode(item)?.let { gridArr.put(it) }
                     }
                     put("topGrid", gridArr)
 
@@ -782,7 +709,7 @@ class HomeFeedEngine @Inject constructor(
                             }
                             val itemsArr = JSONArray()
                             sec.items.forEach { item ->
-                                itemToJson(item)?.let { itemsArr.put(it) }
+                                HomeFeedItemCodec.encode(item)?.let { itemsArr.put(it) }
                             }
                             put("items", itemsArr)
                         }
@@ -802,6 +729,7 @@ class HomeFeedEngine @Inject constructor(
             val file = File(context.filesDir, "home_feed_cache.json")
             if (!file.exists()) return null
             val root = JSONObject(file.readText())
+            diskCachedAt = if (root.optInt("version") >= 2) root.optLong("cachedAt") else 0L
             val feedObj = root.optJSONObject("feed") ?: return null
             val greeting = feedObj.optString("greeting", "שלום")
 
@@ -809,7 +737,7 @@ class HomeFeedEngine @Inject constructor(
             val topGrid = mutableListOf<HomeItem>()
             if (gridArr != null) {
                 for (i in 0 until gridArr.length()) {
-                    gridArr.optJSONObject(i)?.let { jsonToItem(it)?.let { item -> topGrid.add(item) } }
+                    gridArr.optJSONObject(i)?.let { HomeFeedItemCodec.decode(it)?.let { item -> topGrid.add(item) } }
                 }
             }
 
@@ -833,7 +761,7 @@ class HomeFeedEngine @Inject constructor(
                     val items = mutableListOf<HomeItem>()
                     if (itemsArr != null) {
                         for (j in 0 until itemsArr.length()) {
-                            itemsArr.optJSONObject(j)?.let { jsonToItem(it)?.let { item -> items.add(item) } }
+                            itemsArr.optJSONObject(j)?.let { HomeFeedItemCodec.decode(it)?.let { item -> items.add(item) } }
                         }
                     }
 
@@ -841,100 +769,9 @@ class HomeFeedEngine @Inject constructor(
                 }
             }
 
-            HomeFeedModel(greeting, topGrid, sections)
+            val feed = HomeFeedModel(greeting, topGrid, sections)
+            if (root.optInt("version") < 2) HomeDiscoveryPresentation.migrateLegacy(feed) else feed
         }.getOrNull()
     }
 
-    private fun itemToJson(item: HomeItem): JSONObject? {
-        val o = JSONObject()
-        when (item) {
-            is HomeItem.Album -> {
-                o.put("itemType", "album")
-                o.put("name", item.name)
-                o.put("imageUrl", item.imageUrl)
-                o.put("subtitle", item.subtitle)
-                o.put("artists", item.artists)
-            }
-            is HomeItem.Artist -> {
-                o.put("itemType", "artist")
-                o.put("name", item.name)
-                o.put("imageUrl", item.imageUrl)
-                o.put("id", item.id)
-            }
-            is HomeItem.Playlist -> {
-                o.put("itemType", "playlist")
-                o.put("name", item.name)
-                o.put("imageUrl", item.imageUrl)
-                o.put("subtitle", item.subtitle)
-                o.put("id", item.id)
-            }
-            is HomeItem.Track -> {
-                o.put("itemType", "track")
-                val s = item.song
-                val songObj = JSONObject().apply {
-                    put("id", s.id)
-                    put("title", s.title)
-                    put("singer", s.singer)
-                    put("album", s.album)
-                    put("coverUri", s.coverUri)
-                    put("url", s.url)
-                    put("spotifyTrackId", s.spotifyTrackId)
-                    put("explicit", s.explicit)
-                    put("durationMs", s.durationMs)
-                }
-                o.put("song", songObj)
-            }
-            is HomeItem.LikedSongs -> {
-                o.put("itemType", "liked_songs")
-                o.put("count", item.count)
-                o.put("name", item.name)
-                o.put("imageUrl", item.imageUrl)
-            }
-        }
-        return o
-    }
-
-    private fun jsonToItem(o: JSONObject): HomeItem? {
-        return when (o.optString("itemType")) {
-            "album" -> HomeItem.Album(
-                name = o.optString("name"),
-                imageUrl = o.optString("imageUrl"),
-                subtitle = o.optString("subtitle"),
-                artists = o.optString("artists")
-            )
-            "artist" -> HomeItem.Artist(
-                name = o.optString("name"),
-                imageUrl = o.optString("imageUrl"),
-                id = o.optString("id")
-            )
-            "playlist" -> HomeItem.Playlist(
-                name = o.optString("name"),
-                imageUrl = o.optString("imageUrl"),
-                subtitle = o.optString("subtitle"),
-                id = o.optString("id")
-            )
-            "track" -> {
-                val s = o.optJSONObject("song") ?: return null
-                HomeItem.Track(
-                    SongsModel(
-                        id = s.optInt("id"),
-                        title = s.optString("title"),
-                        singer = s.optString("singer"),
-                        album = s.optString("album"),
-                        coverUri = s.optString("coverUri"),
-                        url = s.optString("url"),
-                        spotifyTrackId = s.optString("spotifyTrackId"),
-                        explicit = s.optBoolean("explicit"),
-                        durationMs = s.optInt("durationMs")
-                    )
-                )
-            }
-            "liked_songs" -> HomeItem.LikedSongs(
-                count = o.optInt("count"),
-                name = o.optString("name", "שירים שאהבתם"),
-                imageUrl = o.optString("imageUrl")
-            )
-            else -> null
-        }
-    }
 }
