@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1690,
-  "last_updated": "2026-10-23T10:17:55.742Z",
+  "version": 1691,
+  "last_updated": "2026-10-23T10:17:57.574Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "734AMCv7X6sufZrOLJV5ap",
+      "title": "עונג שבת",
+      "artist": "Shuli Rand, שרקי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T10:17:57.574Z"
+    },
     {
       "id": "1IoWTayUwddw0cYpQcOHDI",
       "title": "בליקישאג",
