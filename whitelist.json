@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1670,
-  "last_updated": "2026-10-23T05:33:54.810Z",
+  "version": 1671,
+  "last_updated": "2026-10-23T06:32:16.585Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3UHxqDCIyw3HICzznmbXck",
+      "title": "עטלף עיוור - מנורה Live",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T06:32:16.585Z"
+    },
     {
       "id": "3V1FEnWwoN0pt2n4F6JrNx",
       "title": "בין קודש לחול",
