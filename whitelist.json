@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1703,
-  "last_updated": "2026-10-23T11:13:36.230Z",
+  "version": 1704,
+  "last_updated": "2026-10-23T11:15:03.892Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4fLXr9DqOa2Z4CtDU1pr0T",
+      "title": "Think About the Way",
+      "artist": "Ice Mc",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T11:15:03.892Z"
+    },
     {
       "id": "5X17LHtqelmfoqM3HpLE1s",
       "title": "מרצדס",
