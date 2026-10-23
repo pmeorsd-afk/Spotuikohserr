@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1671,
-  "last_updated": "2026-10-23T06:32:16.585Z",
+  "version": 1672,
+  "last_updated": "2026-10-23T06:32:18.677Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4GxEcOzQx2tHPgO5vsf6xP",
+      "title": "מחרוזת שביל האושר - דיכאון חלק 2",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T06:32:18.677Z"
+    },
     {
       "id": "3UHxqDCIyw3HICzznmbXck",
       "title": "עטלף עיוור - מנורה Live",
