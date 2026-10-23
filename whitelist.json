@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1723,
-  "last_updated": "2026-10-23T12:18:38.746Z",
+  "version": 1724,
+  "last_updated": "2026-10-23T12:18:41.982Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "61fjeXSGKDkIUXw9yEDnRY",
+      "title": "Beggin'",
+      "artist": "Frankie Valli & The Four Seasons",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T12:18:41.982Z"
+    },
     {
       "id": "7CuCzFcemPckW014Zsi8Sm",
       "title": "Runaround Sue",
