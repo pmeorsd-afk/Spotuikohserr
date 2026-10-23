@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1734,
-  "last_updated": "2026-10-23T12:53:20.350Z",
+  "version": 1735,
+  "last_updated": "2026-10-23T12:54:27.615Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5WDLRQ3VCdVrKw0njWe5E5",
+      "title": "Careless Whisper",
+      "artist": "George Michael",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T12:54:27.615Z"
+    },
     {
       "id": "4dBeiZluj3dovByXXZXRWu",
       "title": "Time Itself",
