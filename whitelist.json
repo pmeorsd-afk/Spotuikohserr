@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1712,
-  "last_updated": "2026-10-23T11:53:02.171Z",
+  "version": 1713,
+  "last_updated": "2026-10-23T11:53:04.029Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6FplvPeXFwR3rVZDJFysc9",
+      "title": "Slide Power",
+      "artist": "Ron Turner",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T11:53:04.029Z"
+    },
     {
       "id": "6p8eFfPw3nQkf37aT3AkmK",
       "title": "Fear of the Dark - 2015 Remaster",
