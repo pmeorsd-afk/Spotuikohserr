@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1714,
-  "last_updated": "2026-10-23T11:53:05.769Z",
+  "version": 1715,
+  "last_updated": "2026-10-23T11:53:09.167Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1xkWTMhUSaeS4Zv9AhKhIn",
+      "title": "For Nothin",
+      "artist": "Fivio Foreign",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T11:53:09.167Z"
+    },
     {
       "id": "4DKH1iLhp007TVLURYtmeC",
       "title": "מה יהיה מחר",
