@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1684,
-  "last_updated": "2026-10-23T10:17:42.991Z",
+  "version": 1685,
+  "last_updated": "2026-10-23T10:17:45.113Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1CpvxUur1mhhAzI8reeLNS",
+      "title": "הכל עליי",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T10:17:45.113Z"
+    },
     {
       "id": "5Sx4hoWjcuHVtfl1I3dKtI",
       "title": "Destinée Égarée",
