@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1701,
-  "last_updated": "2026-10-23T11:13:29.954Z",
+  "version": 1702,
+  "last_updated": "2026-10-23T11:13:32.882Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "55vAraLCIsYMnakMHUUgvB",
+      "title": "Rhythm Is a Dancer (12'' Version)",
+      "artist": "SNAP!",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T11:13:32.882Z"
+    },
     {
       "id": "3BdmZgqVCALAjZSbt6k2U6",
       "title": "שתדעי",
