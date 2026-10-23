@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1732,
-  "last_updated": "2026-10-23T12:45:41.935Z",
+  "version": 1733,
+  "last_updated": "2026-10-23T12:51:26.067Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0D31sfCkQ945Y82JRg1jep",
+      "title": "Dirty Projecting",
+      "artist": "Astral Light",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T12:51:26.067Z"
+    },
     {
       "id": "1cguNFHEMGoylS6ynufDKE",
       "title": "TiK TAK",
