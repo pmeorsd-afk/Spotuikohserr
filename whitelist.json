@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1677,
-  "last_updated": "2026-10-23T09:03:55.897Z",
+  "version": 1678,
+  "last_updated": "2026-10-23T09:08:10.946Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3FlfALTooQeIT30pzgjpGY",
+      "title": "מקהלה עליזה",
+      "artist": "Hop! Channel, Sharonit Children Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T09:08:10.946Z"
+    },
     {
       "id": "3VB3zOYV5cXfs1huAABB7Z",
       "title": "והאמת",
