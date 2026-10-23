@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1716,
-  "last_updated": "2026-10-23T11:53:12.306Z",
+  "version": 1717,
+  "last_updated": "2026-10-23T11:53:15.760Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4b5dVRUzTCy0ngxobUX2DG",
+      "title": "חורף בחלון",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T11:53:15.760Z"
+    },
     {
       "id": "2rNoqRmOQfxAgJQQ0W70JH",
       "title": "דרך השלום",
