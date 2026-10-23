@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1726,
-  "last_updated": "2026-10-23T12:18:46.747Z",
+  "version": 1727,
+  "last_updated": "2026-10-23T12:20:05.385Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "627teoJpK7qZOxRRY8TNnv",
+      "title": "Let's Get It On",
+      "artist": "Marvin Gaye",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T12:20:05.385Z"
+    },
     {
       "id": "7zVpUAOuXY7pHHSm21jFEq",
       "title": "Wild Side",
