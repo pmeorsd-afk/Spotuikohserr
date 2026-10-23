@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1736,
-  "last_updated": "2026-10-23T13:05:09.045Z",
+  "version": 1737,
+  "last_updated": "2026-10-23T13:07:50.371Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5zCA71UDPv12dGHFmR4xTo",
+      "title": "יחפים",
+      "artist": "מתן חסן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T13:07:50.371Z"
+    },
     {
       "id": "0LqFPyHVwoYxJnZsa3Ji8x",
       "title": "נהר הדמעות",
