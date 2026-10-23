@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1694,
-  "last_updated": "2026-10-23T10:22:46.673Z",
+  "version": 1695,
+  "last_updated": "2026-10-23T10:24:46.453Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5lI4IPFOeeqlUw7FA2PHO8",
+      "title": "אם את כבר הולכת - Live",
+      "artist": "נדב חנציס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T10:24:46.453Z"
+    },
     {
       "id": "6LbSF1CuQI4Klotecass3l",
       "title": "מחרוזת שושנת ספרד - Live",
