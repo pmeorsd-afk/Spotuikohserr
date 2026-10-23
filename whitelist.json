@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1675,
-  "last_updated": "2026-10-23T08:57:24.802Z",
+  "version": 1676,
+  "last_updated": "2026-10-23T08:58:03.381Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6F2z1AOAQaD7KiPc4PmtZL",
+      "title": "על הראסי",
+      "artist": "Static",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T08:58:03.381Z"
+    },
     {
       "id": "196lkHGqjAKd2gwAGGt9XG",
       "title": "עטלף",
