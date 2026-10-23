@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1711,
-  "last_updated": "2026-10-23T11:53:00.057Z",
+  "version": 1712,
+  "last_updated": "2026-10-23T11:53:02.171Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6p8eFfPw3nQkf37aT3AkmK",
+      "title": "Fear of the Dark - 2015 Remaster",
+      "artist": "Iron Maiden",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T11:53:02.171Z"
+    },
     {
       "id": "4qW3BbQAwZsrnu8a3ZRdyT",
       "title": "Self Aware",
