@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1720,
-  "last_updated": "2026-10-23T12:02:14.298Z",
+  "version": 1721,
+  "last_updated": "2026-10-23T12:02:16.226Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7oHymG8r14Iv9zn5hFTNax",
+      "title": "Can't Take My Eyes Off You",
+      "artist": "Engelbert Humperdinck",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T12:02:16.226Z"
+    },
     {
       "id": "0Wr6wZgEP1npYg0vrsWPIZ",
       "title": "רוז",
