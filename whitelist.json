@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1721,
-  "last_updated": "2026-10-23T12:02:16.226Z",
+  "version": 1722,
+  "last_updated": "2026-10-23T12:04:07.879Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7aP8Zz9NMsVvOYdz65vbWf",
+      "title": "מתקשרת אליי",
+      "artist": "Idan Bakshi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T12:04:07.879Z"
+    },
     {
       "id": "7oHymG8r14Iv9zn5hFTNax",
       "title": "Can't Take My Eyes Off You",
