@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1692,
-  "last_updated": "2026-10-23T10:17:59.609Z",
+  "version": 1693,
+  "last_updated": "2026-10-23T10:18:01.584Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5GYgiqeQMSrvBy8oHzn6KY",
+      "title": "Juicy",
+      "artist": "Tzaguy Boy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T10:18:01.584Z"
+    },
     {
       "id": "3CjiQEVJ5luiAkzWcIIJWQ",
       "title": "טלי",
