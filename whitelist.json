@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1709,
-  "last_updated": "2026-10-23T11:38:24.633Z",
+  "version": 1710,
+  "last_updated": "2026-10-23T11:40:59.986Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Ma5wr8hndGkkjsk9rgVKS",
+      "title": "היא לא יודעת למה",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T11:40:59.986Z"
+    },
     {
       "id": "1qdXodVqWyuzRKMDzAz1Xe",
       "title": "Sabbra Cadabra (2009 Remaster)",
