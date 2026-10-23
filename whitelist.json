@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1687,
-  "last_updated": "2026-10-23T10:17:49.676Z",
+  "version": 1688,
+  "last_updated": "2026-10-23T10:17:51.615Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "17gq6XM69j9v60L3eSn1yc",
+      "title": "פרק אחד",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T10:17:51.615Z"
+    },
     {
       "id": "2l134v4jfDoipHvCfEbhlh",
       "title": "סתם",
