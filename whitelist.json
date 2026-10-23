@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1737,
-  "last_updated": "2026-10-23T13:07:50.371Z",
+  "version": 1738,
+  "last_updated": "2026-10-23T13:08:17.213Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:5pToEC5NNbo",
+      "title": "מקהלת מלכות, לוי פולקוביץ, מנדי וייס, מוישי ניילנדר - מחרוזת שבת | Malchus, Falkowitz, Weiss",
+      "artist": "בחזית",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T13:08:17.213Z"
+    },
     {
       "id": "5zCA71UDPv12dGHFmR4xTo",
       "title": "יחפים",
