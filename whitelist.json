@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1718,
-  "last_updated": "2026-10-23T12:02:10.557Z",
+  "version": 1719,
+  "last_updated": "2026-10-23T12:02:12.558Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Ttz2PpMy1uF6qQJ2TpEoh",
+      "title": "אחרי הנצח",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T12:02:12.558Z"
+    },
     {
       "id": "6WfCltcCByjVxbX7a9w2tU",
       "title": "פעם את אהבת אותי",
