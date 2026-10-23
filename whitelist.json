@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1682,
-  "last_updated": "2026-10-23T10:17:39.525Z",
+  "version": 1683,
+  "last_updated": "2026-10-23T10:17:41.372Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4R4gWf1OwHfei2ldfybUqn",
+      "title": "בודד בעיר הגדולה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T10:17:41.372Z"
+    },
     {
       "id": "3IQz49JrOqwhWoSF62zMgW",
       "title": "מחזיק לך את היד",
