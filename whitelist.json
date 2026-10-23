@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1705,
-  "last_updated": "2026-10-23T11:18:44.172Z",
+  "version": 1706,
+  "last_updated": "2026-10-23T11:22:42.969Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "72ljhnyuXwYCkt823FaBdx",
+      "title": "הטיפש הזה",
+      "artist": "Ilay Elmakys",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T11:22:42.969Z"
+    },
     {
       "id": "4fLXr9DqOa2Z4CtDU1pr0T",
       "title": "Think About the Way",
