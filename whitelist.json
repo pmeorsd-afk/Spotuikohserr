@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1731,
-  "last_updated": "2026-10-23T12:41:34.223Z",
+  "version": 1732,
+  "last_updated": "2026-10-23T12:45:41.935Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1cguNFHEMGoylS6ynufDKE",
+      "title": "TiK TAK",
+      "artist": "Eran Gordon, kupidox",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T12:45:41.935Z"
+    },
     {
       "id": "0Khk9aUGC8GQaLw9637kVr",
       "title": "Agressive",
