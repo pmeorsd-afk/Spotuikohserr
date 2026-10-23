@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1693,
-  "last_updated": "2026-10-23T10:18:01.584Z",
+  "version": 1694,
+  "last_updated": "2026-10-23T10:22:46.673Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6LbSF1CuQI4Klotecass3l",
+      "title": "מחרוזת שושנת ספרד - Live",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T10:22:46.673Z"
+    },
     {
       "id": "5GYgiqeQMSrvBy8oHzn6KY",
       "title": "Juicy",
