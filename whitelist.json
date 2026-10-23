@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1668,
-  "last_updated": "2026-10-22T22:53:03.018Z",
+  "version": 1669,
+  "last_updated": "2026-10-23T05:33:51.285Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3hay408PSjTAxPn5TPxzyh",
+      "title": "חלק מהזמן",
+      "artist": "Idan Amedi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T05:33:51.285Z"
+    },
     {
       "id": "youtube:tLTgCQovmpc",
       "title": "אבי הטחול (גרסת ברסלב)-דוד שרר",
