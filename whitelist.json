@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1698,
-  "last_updated": "2026-10-23T10:35:30.879Z",
+  "version": 1699,
+  "last_updated": "2026-10-23T10:56:33.041Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Yvn8uJcNE8WdCuxI8rwnI",
+      "title": "וודקה ראשן",
+      "artist": "רואי אדם",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T10:56:33.041Z"
+    },
     {
       "id": "7MPqymbi6q6Chnbi8SW5bq",
       "title": "אנא אלי",
