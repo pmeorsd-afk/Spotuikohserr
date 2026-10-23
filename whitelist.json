@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1729,
-  "last_updated": "2026-10-23T12:21:21.814Z",
+  "version": 1730,
+  "last_updated": "2026-10-23T12:41:32.308Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ckozbGmOusAnLT2LEbERy",
+      "title": "Fight Fire With Fire - Remastered",
+      "artist": "Metallica",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T12:41:32.308Z"
+    },
     {
       "id": "1kSSWsWZuCcrlgVpb5yKYn",
       "title": "Warrior Part 2",
