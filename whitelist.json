@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1686,
-  "last_updated": "2026-10-23T10:17:47.150Z",
+  "version": 1687,
+  "last_updated": "2026-10-23T10:17:49.676Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2l134v4jfDoipHvCfEbhlh",
+      "title": "סתם",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T10:17:49.676Z"
+    },
     {
       "id": "02JpyJyt92ylkUhfV4wQXC",
       "title": "LFP #3 - Brigade fantôme",
