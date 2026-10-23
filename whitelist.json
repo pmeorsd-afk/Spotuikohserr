@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1679,
-  "last_updated": "2026-10-23T09:15:22.502Z",
+  "version": 1680,
+  "last_updated": "2026-10-23T10:17:35.543Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2tsrc34zQtak5HfWriWTOP",
+      "title": "גשם בוא",
+      "artist": "Lehakat HaNachal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-23T10:17:35.543Z"
+    },
     {
       "id": "5EMV3fTrnULzv8j2Rgo9qy",
       "title": "אמא שלי",
