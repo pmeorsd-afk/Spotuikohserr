@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1767,
-  "last_updated": "2026-10-24T19:59:44.513Z",
+  "version": 1768,
+  "last_updated": "2026-10-24T19:59:46.737Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4NAxqoVkJY5QSi7OntU5hf",
+      "title": "לך עם האמת שלך",
+      "artist": "Eden Meiri",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T19:59:46.737Z"
+    },
     {
       "id": "0QDGzInNYjTlYI28Xq7slK",
       "title": "לאהוב אותך כל יום",
