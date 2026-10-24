@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1759,
-  "last_updated": "2026-10-24T19:09:41.703Z",
+  "version": 1760,
+  "last_updated": "2026-10-24T19:14:52.822Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0gdcqqYPbRyhDyPytayTVv",
+      "title": "לחזור הביתה",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T19:14:52.822Z"
+    },
     {
       "id": "18dKjJC84HdK7WarEW9XB2",
       "title": "רק לפעמים",
