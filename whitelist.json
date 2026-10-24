@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1745,
-  "last_updated": "2026-10-24T17:16:34.202Z",
+  "version": 1746,
+  "last_updated": "2026-10-24T17:18:30.277Z",
   "artists": [
+    {
+      "id": "36iTK1Rcl3A9pW9OOUaaN4",
+      "canonical_name": "יענקי דסקל",
+      "aliases": [
+        "יענקי דסקל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T17:18:30.277Z"
+    },
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
       "canonical_name": "רון לוי",
