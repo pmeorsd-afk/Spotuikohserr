@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1761,
-  "last_updated": "2026-10-24T19:15:51.863Z",
+  "version": 1762,
+  "last_updated": "2026-10-24T19:23:23.078Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0J0nsMyUp0McrVdoFcxCpu",
+      "title": "מעל המים",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T19:23:23.078Z"
+    },
     {
       "id": "6aEYl0QTCOJsCj4FJNTG47",
       "title": "תלויה באוויר",
