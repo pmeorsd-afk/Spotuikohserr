@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1773,
-  "last_updated": "2026-10-24T20:41:04.997Z",
+  "version": 1774,
+  "last_updated": "2026-10-24T20:42:29.510Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5l3t0lcQ6zXHHWb0e9qyJ7",
+      "title": "אנא ה' - DJ Niso Slob Remix",
+      "artist": "Pini Einhorn, דיג'יי ניסו סלוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T20:42:29.510Z"
+    },
     {
       "id": "48Jrrp0FG98uaF27lcXzgj",
       "title": "אבא אבא אבא",
