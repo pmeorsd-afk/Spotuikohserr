@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1763,
-  "last_updated": "2026-10-24T19:27:01.856Z",
+  "version": 1764,
+  "last_updated": "2026-10-24T19:30:40.183Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6A0tHZDcUZAcsZmJcMmZTv",
+      "title": "כמו ירח",
+      "artist": "Ron Buhnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T19:30:40.183Z"
+    },
     {
       "id": "60EMZ5Zl1bQ1ZSvCYWPXNu",
       "title": "דרמה (Prod. By Triangle)",
