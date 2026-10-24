@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1775,
-  "last_updated": "2026-10-24T20:45:07.679Z",
+  "version": 1776,
+  "last_updated": "2026-10-24T20:53:17.749Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7mzcjxiI5xEObeFWnoNTuj",
+      "title": "כל העולם - עם אילן כהן (אבא)",
+      "artist": "Osher Cohen, Ilan Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T20:53:17.749Z"
+    },
     {
       "id": "3M4DMso9aGasViwtJDbNv1",
       "title": "ובלילות אנחנו על זה",
