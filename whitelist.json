@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1783,
-  "last_updated": "2026-10-24T21:33:19.599Z",
+  "version": 1784,
+  "last_updated": "2026-10-24T21:33:22.294Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "046I7gtYpYJ3gvMUrTQnrq",
+      "title": "איזה יום היה לי סמואל",
+      "artist": "Hasmachot",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T21:33:22.294Z"
+    },
     {
       "id": "66CgXdOqK6ckS5tpbdDuUr",
       "title": "ענבי הגפן",
