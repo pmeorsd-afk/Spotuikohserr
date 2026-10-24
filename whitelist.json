@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1770,
-  "last_updated": "2026-10-24T20:18:03.430Z",
+  "version": 1771,
+  "last_updated": "2026-10-24T20:21:03.317Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7JthqxqRulP1lxrSM0fNlh",
+      "title": "תמיד רציתי עוד",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T20:21:03.317Z"
+    },
     {
       "id": "38TSTDBDkpYqT6hrEcIuK9",
       "title": "עשיתי מספיק",
