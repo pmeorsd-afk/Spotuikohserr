@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1739,
-  "last_updated": "2026-10-24T15:59:46.116Z",
+  "version": 1740,
+  "last_updated": "2026-10-24T17:16:16.540Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7pdniD9t65ZEuULdrpm7Sn",
+      "title": "כולי תפילה",
+      "artist": "Eden Hason, Meydad Tasa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T17:16:16.540Z"
+    },
     {
       "id": "7K7YEde0VzomPU0tlu7WAf",
       "title": "בזכות התורה - Live",
