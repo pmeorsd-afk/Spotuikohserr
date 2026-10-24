@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1740,
-  "last_updated": "2026-10-24T17:16:16.540Z",
+  "version": 1741,
+  "last_updated": "2026-10-24T17:16:19.257Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Z1BAd3mjLdCHUQCCZbPen",
+      "title": "K.O (נוקאאוט)",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T17:16:19.257Z"
+    },
     {
       "id": "7pdniD9t65ZEuULdrpm7Sn",
       "title": "כולי תפילה",
