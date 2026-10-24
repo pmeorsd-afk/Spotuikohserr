@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1769,
-  "last_updated": "2026-10-24T20:18:01.371Z",
+  "version": 1770,
+  "last_updated": "2026-10-24T20:18:03.430Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "38TSTDBDkpYqT6hrEcIuK9",
+      "title": "עשיתי מספיק",
+      "artist": "עידו מלכה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T20:18:03.430Z"
+    },
     {
       "id": "74MirAjh0L37YWTE2GWjfR",
       "title": "תן לנו שמחה",
