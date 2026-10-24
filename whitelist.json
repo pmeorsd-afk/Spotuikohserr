@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1772,
-  "last_updated": "2026-10-24T20:35:02.225Z",
+  "version": 1773,
+  "last_updated": "2026-10-24T20:41:04.997Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "48Jrrp0FG98uaF27lcXzgj",
+      "title": "אבא אבא אבא",
+      "artist": "משה כורסיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T20:41:04.997Z"
+    },
     {
       "id": "4ClnTW2iu1Ri1069Cu0DzH",
       "title": "אבא תחדש אותי",
