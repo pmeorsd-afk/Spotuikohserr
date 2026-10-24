@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1762,
-  "last_updated": "2026-10-24T19:23:23.078Z",
+  "version": 1763,
+  "last_updated": "2026-10-24T19:27:01.856Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "60EMZ5Zl1bQ1ZSvCYWPXNu",
+      "title": "דרמה (Prod. By Triangle)",
+      "artist": "ים רפאלי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T19:27:01.856Z"
+    },
     {
       "id": "0J0nsMyUp0McrVdoFcxCpu",
       "title": "מעל המים",
