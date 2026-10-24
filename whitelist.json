@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1757,
-  "last_updated": "2026-10-24T18:59:27.250Z",
+  "version": 1758,
+  "last_updated": "2026-10-24T19:06:29.568Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0EMfLhcfPFWdVQBCE1YXB0",
+      "title": "פסיכופט",
+      "artist": "עידו מלכה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T19:06:29.568Z"
+    },
     {
       "id": "4YxbUxQWmlwhGHBwXFiHPz",
       "title": "בשביל מה אני נלחם",
