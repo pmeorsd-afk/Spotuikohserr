@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1749,
-  "last_updated": "2026-10-24T17:19:02.193Z",
+  "version": 1750,
+  "last_updated": "2026-10-24T17:19:06.384Z",
   "artists": [
+    {
+      "id": "7lvt11JneBTQYAOuXv25Ed",
+      "canonical_name": "Beni Elbaz",
+      "aliases": [
+        "Beni Elbaz"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T17:19:06.384Z"
+    },
     {
       "id": "7yY8j0YkJmQA1i46x8XvvF",
       "canonical_name": "Yoni Genut",
