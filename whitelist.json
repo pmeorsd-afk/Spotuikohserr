@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1787,
-  "last_updated": "2026-10-24T22:19:46.521Z",
+  "version": 1788,
+  "last_updated": "2026-10-24T22:19:48.292Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7Mzl9bxKGHsIJ0We7dJheS",
+      "title": "עכשיו",
+      "artist": "Harel Skaat",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T22:19:48.292Z"
+    },
     {
       "id": "0vf2eBw2inhl8y61cYQMv2",
       "title": "Devil Town",
