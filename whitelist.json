@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1744,
-  "last_updated": "2026-10-24T17:16:30.755Z",
+  "version": 1745,
+  "last_updated": "2026-10-24T17:16:34.202Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4sfYpOI4olEEk7S4U7iFRw",
+      "title": "שיר האותיות",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T17:16:34.202Z"
+    },
     {
       "id": "2Hzb9LzlT2Et1aRuCtY9Mh",
       "title": "התנ\"ך",
