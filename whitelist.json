@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1764,
-  "last_updated": "2026-10-24T19:30:40.183Z",
+  "version": 1765,
+  "last_updated": "2026-10-24T19:42:47.388Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2QUuLcqNlQUFOuMm4osKdN",
+      "title": "38",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T19:42:47.388Z"
+    },
     {
       "id": "6A0tHZDcUZAcsZmJcMmZTv",
       "title": "כמו ירח",
