@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1750,
-  "last_updated": "2026-10-24T17:19:06.384Z",
+  "version": 1751,
+  "last_updated": "2026-10-24T17:19:23.589Z",
   "artists": [
+    {
+      "id": "3nJQGLyC7Fy6TWAWRoyE9B",
+      "canonical_name": "יוסלה קרישבסקי",
+      "aliases": [
+        "יוסלה קרישבסקי"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T17:19:23.589Z"
+    },
     {
       "id": "7lvt11JneBTQYAOuXv25Ed",
       "canonical_name": "Beni Elbaz",
