@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1741,
-  "last_updated": "2026-10-24T17:16:19.257Z",
+  "version": 1742,
+  "last_updated": "2026-10-24T17:16:21.621Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "48RrDBpOSSl1aLVCalGl5C",
+      "title": "The Monster",
+      "artist": "Eminem, Rihanna",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T17:16:21.621Z"
+    },
     {
       "id": "1Z1BAd3mjLdCHUQCCZbPen",
       "title": "K.O (נוקאאוט)",
