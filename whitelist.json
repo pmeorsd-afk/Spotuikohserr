@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1754,
-  "last_updated": "2026-10-24T18:42:36.447Z",
+  "version": 1755,
+  "last_updated": "2026-10-24T18:47:00.569Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7LigEjlDJzvkKh3uceK2sI",
+      "title": "סכין בלב",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T18:47:00.569Z"
+    },
     {
       "id": "5jsw9uXEGuKyJzs0boZ1bT",
       "title": "Stitches",
