@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1760,
-  "last_updated": "2026-10-24T19:14:52.822Z",
+  "version": 1761,
+  "last_updated": "2026-10-24T19:15:51.863Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6aEYl0QTCOJsCj4FJNTG47",
+      "title": "תלויה באוויר",
+      "artist": "The Ultras, The Ninth Floor, Eli Perez",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T19:15:51.863Z"
+    },
     {
       "id": "0gdcqqYPbRyhDyPytayTVv",
       "title": "לחזור הביתה",
