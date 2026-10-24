@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1784,
-  "last_updated": "2026-10-24T21:33:22.294Z",
+  "version": 1785,
+  "last_updated": "2026-10-24T22:10:37.073Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3O0MIRTFSMi715D4GCUJXt",
+      "title": "ימים טובים",
+      "artist": "Nimrod Lev",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T22:10:37.073Z"
+    },
     {
       "id": "046I7gtYpYJ3gvMUrTQnrq",
       "title": "איזה יום היה לי סמואל",
