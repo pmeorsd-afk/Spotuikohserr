@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1774,
-  "last_updated": "2026-10-24T20:42:29.510Z",
+  "version": 1775,
+  "last_updated": "2026-10-24T20:45:07.679Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3M4DMso9aGasViwtJDbNv1",
+      "title": "ובלילות אנחנו על זה",
+      "artist": "E-Z, Shir David Gadasi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T20:45:07.679Z"
+    },
     {
       "id": "5l3t0lcQ6zXHHWb0e9qyJ7",
       "title": "אנא ה' - DJ Niso Slob Remix",
