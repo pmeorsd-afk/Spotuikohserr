@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1742,
-  "last_updated": "2026-10-24T17:16:21.621Z",
+  "version": 1743,
+  "last_updated": "2026-10-24T17:16:28.837Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7JJmb5XwzOO8jgpou264Ml",
+      "title": "There's Nothing Holdin' Me Back",
+      "artist": "Shawn Mendes",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T17:16:28.837Z"
+    },
     {
       "id": "48RrDBpOSSl1aLVCalGl5C",
       "title": "The Monster",
