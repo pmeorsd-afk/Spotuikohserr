@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1782,
-  "last_updated": "2026-10-24T21:33:09.074Z",
+  "version": 1783,
+  "last_updated": "2026-10-24T21:33:19.599Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "66CgXdOqK6ckS5tpbdDuUr",
+      "title": "ענבי הגפן",
+      "artist": "יוחנן אורי, מוישי פרסברגר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T21:33:19.599Z"
+    },
     {
       "id": "33Tf0kBG65R66aKSRD44HG",
       "title": "הכוכב של מחוז גוש דן",
