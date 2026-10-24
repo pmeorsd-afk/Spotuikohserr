@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1746,
-  "last_updated": "2026-10-24T17:18:30.277Z",
+  "version": 1747,
+  "last_updated": "2026-10-24T17:18:33.322Z",
   "artists": [
+    {
+      "id": "3ibGiyGuFequohMQzXwC1e",
+      "canonical_name": "Liron Dekel",
+      "aliases": [
+        "Liron Dekel"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T17:18:33.322Z"
+    },
     {
       "id": "36iTK1Rcl3A9pW9OOUaaN4",
       "canonical_name": "יענקי דסקל",
