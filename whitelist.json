@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1758,
-  "last_updated": "2026-10-24T19:06:29.568Z",
+  "version": 1759,
+  "last_updated": "2026-10-24T19:09:41.703Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "18dKjJC84HdK7WarEW9XB2",
+      "title": "רק לפעמים",
+      "artist": "מתן חסן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T19:09:41.703Z"
+    },
     {
       "id": "0EMfLhcfPFWdVQBCE1YXB0",
       "title": "פסיכופט",
