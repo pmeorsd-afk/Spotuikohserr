@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1738,
-  "last_updated": "2026-10-23T13:08:17.213Z",
+  "version": 1739,
+  "last_updated": "2026-10-24T15:59:46.116Z",
   "artists": [
     {
       "id": "1wDW7J6Pa9f6kDw3g1EXiN",
@@ -1960,6 +1960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7K7YEde0VzomPU0tlu7WAf",
+      "title": "בזכות התורה - Live",
+      "artist": "דרשו, Motty Steinmetz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T15:59:46.116Z"
+    },
     {
       "id": "youtube:5pToEC5NNbo",
       "title": "מקהלת מלכות, לוי פולקוביץ, מנדי וייס, מוישי ניילנדר - מחרוזת שבת | Malchus, Falkowitz, Weiss",
