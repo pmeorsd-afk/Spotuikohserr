@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1768,
-  "last_updated": "2026-10-24T19:59:46.737Z",
+  "version": 1769,
+  "last_updated": "2026-10-24T20:18:01.371Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "74MirAjh0L37YWTE2GWjfR",
+      "title": "תן לנו שמחה",
+      "artist": "מתן חסן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T20:18:01.371Z"
+    },
     {
       "id": "4NAxqoVkJY5QSi7OntU5hf",
       "title": "לך עם האמת שלך",
