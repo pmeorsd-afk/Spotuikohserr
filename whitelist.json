@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1785,
-  "last_updated": "2026-10-24T22:10:37.073Z",
+  "version": 1786,
+  "last_updated": "2026-10-24T22:17:02.390Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2vorhXxv28sH6Al38hG2kJ",
+      "title": "חמימות חולפת",
+      "artist": "Dana Berger",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T22:17:02.390Z"
+    },
     {
       "id": "3O0MIRTFSMi715D4GCUJXt",
       "title": "ימים טובים",
