@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1780,
-  "last_updated": "2026-10-24T21:09:00.361Z",
+  "version": 1781,
+  "last_updated": "2026-10-24T21:11:41.128Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4NIezpEZv9xhIxZIjP2osL",
+      "title": "Drivers License",
+      "artist": "הכוכב הבא, Perfylove",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T21:11:41.128Z"
+    },
     {
       "id": "0qmJimv9uh5oiDEwmOrBk3",
       "title": "Paradise",
