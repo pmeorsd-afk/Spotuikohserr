@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1786,
-  "last_updated": "2026-10-24T22:17:02.390Z",
+  "version": 1787,
+  "last_updated": "2026-10-24T22:19:46.521Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0vf2eBw2inhl8y61cYQMv2",
+      "title": "Devil Town",
+      "artist": "Cavetown",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T22:19:46.521Z"
+    },
     {
       "id": "2vorhXxv28sH6Al38hG2kJ",
       "title": "חמימות חולפת",
