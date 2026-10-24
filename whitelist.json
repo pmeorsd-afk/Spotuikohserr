@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1781,
-  "last_updated": "2026-10-24T21:11:41.128Z",
+  "version": 1782,
+  "last_updated": "2026-10-24T21:33:09.074Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "33Tf0kBG65R66aKSRD44HG",
+      "title": "הכוכב של מחוז גוש דן",
+      "artist": "Ehud Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T21:33:09.074Z"
+    },
     {
       "id": "4NIezpEZv9xhIxZIjP2osL",
       "title": "Drivers License",
