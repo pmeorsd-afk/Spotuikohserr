@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1778,
-  "last_updated": "2026-10-24T20:55:21.072Z",
+  "version": 1779,
+  "last_updated": "2026-10-24T21:05:02.949Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1uPH22zsuNIYAgdLjAkhIe",
+      "title": "Yellow",
+      "artist": "דורין הירבי, הכוכב הבא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T21:05:02.949Z"
+    },
     {
       "id": "74kYHwU43s49Y5AukKArWQ",
       "title": "משהו אמיתי בעיניים",
