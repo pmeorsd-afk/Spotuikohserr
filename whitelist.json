@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1766,
-  "last_updated": "2026-10-24T19:53:48.478Z",
+  "version": 1767,
+  "last_updated": "2026-10-24T19:59:44.513Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0QDGzInNYjTlYI28Xq7slK",
+      "title": "לאהוב אותך כל יום",
+      "artist": "Doli & Penn, Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-24T19:59:44.513Z"
+    },
     {
       "id": "0cxPBhLV9g8YhhfQZsniSG",
       "title": "אני פה",
