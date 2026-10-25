@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1822,
-  "last_updated": "2026-10-25T08:29:08.423Z",
+  "version": 1823,
+  "last_updated": "2026-10-25T08:29:10.242Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3N4LOuz2JGG620DVzH22li",
+      "title": "הגולה",
+      "artist": "Haim Ifargan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T08:29:10.242Z"
+    },
     {
       "id": "2bLqfJjuC5syrsgDsZfGmn",
       "title": "The Way I Are",
