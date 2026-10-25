@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1793,
-  "last_updated": "2026-10-25T07:27:33.716Z",
+  "version": 1794,
+  "last_updated": "2026-10-25T07:27:39.626Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4b4Sb4EKt0HtPd7GMYZHJg",
+      "title": "אהבה",
+      "artist": "Daniel Salomon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:27:39.626Z"
+    },
     {
       "id": "2AjIzHg8fYcUVKZIr68vJU",
       "title": "כריש",
