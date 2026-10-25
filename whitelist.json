@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1891,
-  "last_updated": "2026-10-25T20:12:41.075Z",
+  "version": 1892,
+  "last_updated": "2026-10-25T20:12:44.636Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5STI4AAzr3uMvdpx4wUSGr",
+      "title": "חורף באוטו",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T20:12:44.636Z"
+    },
     {
       "id": "07YRh8SnGBOuiiLDM84FR7",
       "title": "לא לבד",
