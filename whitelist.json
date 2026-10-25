@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1795,
-  "last_updated": "2026-10-25T07:27:45.330Z",
+  "version": 1796,
+  "last_updated": "2026-10-25T07:27:47.112Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6jDEgEonMe0G9ysCeJH5eh",
+      "title": "בית מזכוכית",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:27:47.112Z"
+    },
     {
       "id": "1GjH5GMM070H9xIMt2k8Nt",
       "title": "מה עובר עליי",
