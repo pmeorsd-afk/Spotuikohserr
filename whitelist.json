@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1820,
-  "last_updated": "2026-10-25T08:13:27.873Z",
+  "version": 1821,
+  "last_updated": "2026-10-25T08:13:30.628Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "725hyNaW6DtJIrUtkk5K8o",
+      "title": "בעולם הזה",
+      "artist": "אליאן כהן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T08:13:30.628Z"
+    },
     {
       "id": "0KING5MxpAvRENMUzhkBtc",
       "title": "מפת העולם",
