@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1815,
-  "last_updated": "2026-10-25T07:46:54.579Z",
+  "version": 1816,
+  "last_updated": "2026-10-25T08:05:30.436Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "213Mylrx5qHJyxzpS5HxIm",
+      "title": "מה עם הלילות - קאבר",
+      "artist": "ליאור פינטו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T08:05:30.436Z"
+    },
     {
       "id": "78kQcHLlTgyDmsVox0v6OA",
       "title": "מבזבזת לי ת'לב",
