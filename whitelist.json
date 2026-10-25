@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1830,
-  "last_updated": "2026-10-25T09:18:47.801Z",
+  "version": 1831,
+  "last_updated": "2026-10-25T09:20:40.299Z",
   "artists": [
+    {
+      "id": "3Va6wWeDTKWSZyj4HWsJFK",
+      "canonical_name": "יוחנן אורי",
+      "aliases": [
+        "יוחנן אורי"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T09:20:40.299Z"
+    },
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
       "canonical_name": "יוסלה קרישבסקי",
