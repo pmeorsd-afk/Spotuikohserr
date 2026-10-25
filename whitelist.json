@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1882,
-  "last_updated": "2026-10-25T19:42:11.043Z",
+  "version": 1883,
+  "last_updated": "2026-10-25T19:42:13.570Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6lQr6w64v9yLD3NffUX5VF",
+      "title": "אני כבר מאושר",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:42:13.570Z"
+    },
     {
       "id": "2m39ynykzndRyyaBpoAOX7",
       "title": "כמו שאת",
