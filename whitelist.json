@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1859,
-  "last_updated": "2026-10-25T19:40:53.788Z",
+  "version": 1860,
+  "last_updated": "2026-10-25T19:40:58.026Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44NRdYQw7P0GWuiunRv3hr",
+      "title": "I Stand Alone",
+      "artist": "Godsmack",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:40:58.026Z"
+    },
     {
       "id": "5cexYtv51CMqLuUwC9J5dH",
       "title": "אין מילים איתך",
