@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1843,
-  "last_updated": "2026-10-25T19:39:36.736Z",
+  "version": 1844,
+  "last_updated": "2026-10-25T19:39:38.424Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3X0WwsNHfSqpd85A9Iggr2",
+      "title": "38 וחוץ מכדורגל",
+      "artist": "חנן בן ארי, פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:39:38.424Z"
+    },
     {
       "id": "6PYtJL4sPEDDe3OBt9DhdR",
       "title": "דייג המנגינות",
