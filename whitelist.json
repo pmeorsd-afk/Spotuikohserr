@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1799,
-  "last_updated": "2026-10-25T07:27:54.466Z",
+  "version": 1800,
+  "last_updated": "2026-10-25T07:27:56.375Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "03GxxMdrfA60RVzMav4cUv",
+      "title": "עזבי-קאבר",
+      "artist": "נהוראי תורג'מן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:27:56.375Z"
+    },
     {
       "id": "31HDrKLG70d8SY6UU4sl9l",
       "title": "עם ישראל חי",
