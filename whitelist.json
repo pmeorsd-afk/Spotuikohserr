@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1875,
-  "last_updated": "2026-10-25T19:41:50.848Z",
+  "version": 1876,
+  "last_updated": "2026-10-25T19:41:53.446Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7b0fw526QnQ9PoV2haJGHQ",
+      "title": "בנים וגם בנות",
+      "artist": "ליאור נרקיס, מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:41:53.446Z"
+    },
     {
       "id": "7iIa4oCi9Dw9N5DWlTUs4f",
       "title": "אחי",
