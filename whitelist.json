@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1796,
-  "last_updated": "2026-10-25T07:27:47.112Z",
+  "version": 1797,
+  "last_updated": "2026-10-25T07:27:49.287Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0QQZ2e7ejeeo2NbTAHAYAb",
+      "title": "באתי אלייך",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:27:49.287Z"
+    },
     {
       "id": "6jDEgEonMe0G9ysCeJH5eh",
       "title": "בית מזכוכית",
