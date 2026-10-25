@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1904,
-  "last_updated": "2026-10-25T21:33:26.409Z",
+  "version": 1905,
+  "last_updated": "2026-10-25T21:33:38.370Z",
   "artists": [
+    {
+      "id": "7Cyxb6EAI5TXiqNqefGp2x",
+      "canonical_name": "Yissachar Dror",
+      "aliases": [
+        "Yissachar Dror"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T21:33:38.370Z"
+    },
     {
       "id": "3DI41JkLg9HWHdnrmtiiyl",
       "canonical_name": "Zaltz Band",
