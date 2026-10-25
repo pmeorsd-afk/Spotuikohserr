@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1789,
-  "last_updated": "2026-10-25T07:27:11.736Z",
+  "version": 1790,
+  "last_updated": "2026-10-25T07:27:13.410Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1wPg49wXgp2Yw8X7sdKFW3",
+      "title": "געגוע",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:27:13.410Z"
+    },
     {
       "id": "1zn89wwqzG7EoXBsW1Vtao",
       "title": "יש לי חלום",
