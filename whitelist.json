@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1827,
-  "last_updated": "2026-10-25T08:30:03.370Z",
+  "version": 1828,
+  "last_updated": "2026-10-25T08:35:55.159Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4CLRLdxUDPNeO1xCW0U2zC",
+      "title": "Creeping Death - Remastered",
+      "artist": "Metallica",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T08:35:55.159Z"
+    },
     {
       "id": "10C83Ul1IxCyuoJRWtx5GN",
       "title": "Your Wife (feat. Dr. Dre)",
