@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1832,
-  "last_updated": "2026-10-25T09:20:43.269Z",
+  "version": 1833,
+  "last_updated": "2026-10-25T09:56:08.947Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5iZnWe6i4ZtE3VKqvW96eg",
+      "title": "אמא אל תבכי",
+      "artist": "ליאור נרקיס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T09:56:08.947Z"
+    },
     {
       "id": "239fGP1n8dR4MooQHGbUty",
       "title": "Batos Bendecidos",
