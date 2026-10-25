@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1878,
-  "last_updated": "2026-10-25T19:42:00.083Z",
+  "version": 1879,
+  "last_updated": "2026-10-25T19:42:02.499Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3uVJZyDu50OgL8kTm1LPsS",
+      "title": "שני אידיוטים",
+      "artist": "Idan Bakshi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:42:02.499Z"
+    },
     {
       "id": "2qromlkHDFXxm07yhpB63s",
       "title": "לא ביקשתי מלחמה",
