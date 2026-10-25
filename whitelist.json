@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1903,
-  "last_updated": "2026-10-25T21:11:59.266Z",
+  "version": 1904,
+  "last_updated": "2026-10-25T21:33:26.409Z",
   "artists": [
     {
       "id": "3DI41JkLg9HWHdnrmtiiyl",
@@ -2060,6 +2060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "09WNJRDIkr3U9sSW8fXOix",
+      "title": "Cholas Ahava",
+      "artist": "נפתלי קמפה, אהרלה סמט",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T21:33:26.409Z"
+    },
     {
       "id": "02mgxr6NgCwAVtuLtttDUB",
       "title": "מדאם",
