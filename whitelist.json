@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1833,
-  "last_updated": "2026-10-25T09:56:08.947Z",
+  "version": 1834,
+  "last_updated": "2026-10-25T10:43:17.035Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Hean3R0bokh8MFJyelfUC",
+      "title": "Go 2",
+      "artist": "LE RISQUE",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T10:43:17.035Z"
+    },
     {
       "id": "5iZnWe6i4ZtE3VKqvW96eg",
       "title": "אמא אל תבכי",
