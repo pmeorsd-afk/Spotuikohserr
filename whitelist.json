@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1797,
-  "last_updated": "2026-10-25T07:27:49.287Z",
+  "version": 1798,
+  "last_updated": "2026-10-25T07:27:51.686Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4HlTz1j67AGadbXBEFKbYU",
+      "title": "פרחים מנייר",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:27:51.686Z"
+    },
     {
       "id": "0QQZ2e7ejeeo2NbTAHAYAb",
       "title": "באתי אלייך",
