@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1810,
-  "last_updated": "2026-10-25T07:40:43.948Z",
+  "version": 1811,
+  "last_updated": "2026-10-25T07:41:18.594Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2lf9OAnFWq2lcxHDDBoGAf",
+      "title": "שפן נסיונות",
+      "artist": "אורי סבאן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:41:18.594Z"
+    },
     {
       "id": "7okk5gWoZqe1JlFvmjh5yc",
       "title": "הבאתי לך פרח",
