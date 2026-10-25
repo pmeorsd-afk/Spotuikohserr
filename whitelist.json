@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1791,
-  "last_updated": "2026-10-25T07:27:14.808Z",
+  "version": 1792,
+  "last_updated": "2026-10-25T07:27:20.977Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2AjIzHg8fYcUVKZIr68vJU",
+      "title": "כריש",
+      "artist": "Ariel Zilber",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:27:20.977Z"
+    },
     {
       "id": "5KeQdbv5GbeCAN6oXCoCnh",
       "title": "שבע שנים",
