@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1895,
-  "last_updated": "2026-10-25T20:18:41.004Z",
+  "version": 1896,
+  "last_updated": "2026-10-25T20:23:38.061Z",
   "artists": [
     {
       "id": "3DI41JkLg9HWHdnrmtiiyl",
@@ -2060,6 +2060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6AmFFsNvP9NoYDUWWcEV5W",
+      "title": "עם אחד",
+      "artist": "אריאל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T20:23:38.061Z"
+    },
     {
       "id": "3OiFlrXqZtDybOmfAvixcu",
       "title": "שלמים - מתוך חזרות למופע NEXT",
