@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1818,
-  "last_updated": "2026-10-25T08:05:35.488Z",
+  "version": 1819,
+  "last_updated": "2026-10-25T08:13:26.140Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6kgn8KjSiBGMNgOlDVR2cM",
+      "title": "בעולם שלה - קאבר",
+      "artist": "Ben Deri",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T08:13:26.140Z"
+    },
     {
       "id": "6T3o75bO0mdiiFjCyZigj9",
       "title": "הלב עובד שעות",
