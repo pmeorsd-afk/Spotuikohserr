@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1803,
-  "last_updated": "2026-10-25T07:28:05.850Z",
+  "version": 1804,
+  "last_updated": "2026-10-25T07:28:07.662Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0tz3QCsEBQDsXGqden3NEI",
+      "title": "עיר נמל",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:28:07.662Z"
+    },
     {
       "id": "1jvOVudNr77k5MvKI72HSq",
       "title": "שבועיים",
