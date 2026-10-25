@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1788,
-  "last_updated": "2026-10-24T22:19:48.292Z",
+  "version": 1789,
+  "last_updated": "2026-10-25T07:27:11.736Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1zn89wwqzG7EoXBsW1Vtao",
+      "title": "יש לי חלום",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:27:11.736Z"
+    },
     {
       "id": "7Mzl9bxKGHsIJ0We7dJheS",
       "title": "עכשיו",
