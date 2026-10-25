@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1847,
-  "last_updated": "2026-10-25T19:39:57.501Z",
+  "version": 1848,
+  "last_updated": "2026-10-25T19:40:04.530Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2h0at8S05OSQhqk6vx2I2q",
+      "title": "Nigun",
+      "artist": "Yosef Gutman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:40:04.530Z"
+    },
     {
       "id": "3aaaku70cinyBdwXOCcrlB",
       "title": "שלוש עשרה מידות",
