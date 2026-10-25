@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1804,
-  "last_updated": "2026-10-25T07:28:07.662Z",
+  "version": 1805,
+  "last_updated": "2026-10-25T07:28:10.236Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5pZEYAbL2DqU2dCGNRz2Tp",
+      "title": "בסוף כל ישיבה",
+      "artist": "דן ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:28:10.236Z"
+    },
     {
       "id": "0tz3QCsEBQDsXGqden3NEI",
       "title": "עיר נמל",
