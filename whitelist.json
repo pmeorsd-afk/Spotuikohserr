@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1839,
-  "last_updated": "2026-10-25T19:39:28.314Z",
+  "version": 1840,
+  "last_updated": "2026-10-25T19:39:30.365Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0bSinuuXcCYji6t6NzFWSn",
+      "title": "Dror Yikra",
+      "artist": "Yosef Gutman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:39:30.365Z"
+    },
     {
       "id": "6U5sR1NdQi2nZ22IR17tYK",
       "title": "הגן הנעול",
