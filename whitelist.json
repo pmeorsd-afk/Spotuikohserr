@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1800,
-  "last_updated": "2026-10-25T07:27:56.375Z",
+  "version": 1801,
+  "last_updated": "2026-10-25T07:27:59.432Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6JUr0dcODi8O2REZKrWjPD",
+      "title": "האור שבעיניים",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:27:59.432Z"
+    },
     {
       "id": "03GxxMdrfA60RVzMav4cUv",
       "title": "עזבי-קאבר",
