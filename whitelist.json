@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1835,
-  "last_updated": "2026-10-25T11:48:13.664Z",
+  "version": 1836,
+  "last_updated": "2026-10-25T11:48:18.951Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -8241,6 +8241,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-10-25T07:27:33.716Z"
+    },
+    {
+      "id": "e4b657be1b710806912f1053aa73d61e84f41c02ee1705f8",
+      "url": "https://charts-images.scdn.co/assets_generated/locale_iw/regional/weekly/region_global_default.jpg",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-10-25T11:48:18.951Z"
     }
   ],
   "search_images": [
