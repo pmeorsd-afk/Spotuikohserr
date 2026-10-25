@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1863,
-  "last_updated": "2026-10-25T19:41:05.114Z",
+  "version": 1864,
+  "last_updated": "2026-10-25T19:41:07.653Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5anCkDvJ17aznvK5TED5uo",
+      "title": "Hail to the King",
+      "artist": "Avenged Sevenfold",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:41:07.653Z"
+    },
     {
       "id": "3620P9KJS2PDebJ9ABFitc",
       "title": "18 and Life",
