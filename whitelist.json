@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1867,
-  "last_updated": "2026-10-25T19:41:27.134Z",
+  "version": 1868,
+  "last_updated": "2026-10-25T19:41:30.086Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5jnxxpX2834SB6LJ0S73Uz",
+      "title": "Lollipop",
+      "artist": "Lil Wayne, Static Major",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:41:30.086Z"
+    },
     {
       "id": "3rq6qVDZZtXgbNuT9b3D1H",
       "title": "מסע",
