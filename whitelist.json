@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1811,
-  "last_updated": "2026-10-25T07:41:18.594Z",
+  "version": 1812,
+  "last_updated": "2026-10-25T07:43:09.891Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6FjL4dobDicCtArPdiBoT2",
+      "title": "אלבי",
+      "artist": "אושר ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:43:09.891Z"
+    },
     {
       "id": "2lf9OAnFWq2lcxHDDBoGAf",
       "title": "שפן נסיונות",
