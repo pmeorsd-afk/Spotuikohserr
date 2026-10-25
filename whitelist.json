@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1907,
-  "last_updated": "2026-10-25T21:40:27.312Z",
+  "version": 1908,
+  "last_updated": "2026-10-25T21:41:53.777Z",
   "artists": [
     {
       "id": "7Cyxb6EAI5TXiqNqefGp2x",
@@ -2070,6 +2070,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1PjiB3wwbcQDTBObzsNuMV",
+      "title": "בין השפיות לשיגעון",
+      "artist": "Ben Chen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T21:41:53.777Z"
+    },
     {
       "id": "6kTyGUM34r1BiRP23a2ouF",
       "title": "תבדוק'תי",
