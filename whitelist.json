@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1798,
-  "last_updated": "2026-10-25T07:27:51.686Z",
+  "version": 1799,
+  "last_updated": "2026-10-25T07:27:54.466Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "31HDrKLG70d8SY6UU4sl9l",
+      "title": "עם ישראל חי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:27:54.466Z"
+    },
     {
       "id": "4HlTz1j67AGadbXBEFKbYU",
       "title": "פרחים מנייר",
