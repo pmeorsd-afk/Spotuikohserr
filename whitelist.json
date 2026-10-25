@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1877,
-  "last_updated": "2026-10-25T19:41:56.792Z",
+  "version": 1878,
+  "last_updated": "2026-10-25T19:42:00.083Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2qromlkHDFXxm07yhpB63s",
+      "title": "לא ביקשתי מלחמה",
+      "artist": "Kobi Maman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:42:00.083Z"
+    },
     {
       "id": "10Igtw8bSDyyFs7KIsKngZ",
       "title": "Freaky Friday (feat. Chris Brown)",
