@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1807,
-  "last_updated": "2026-10-25T07:30:30.329Z",
+  "version": 1808,
+  "last_updated": "2026-10-25T07:36:35.805Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3wkBKisXou96fnwJDVi4RD",
+      "title": "ארים ראשי - קאבר",
+      "artist": "Dudi Buzaglo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:36:35.805Z"
+    },
     {
       "id": "1mDt0pmhJF9snIc5ojVecw",
       "title": "חולה על מילים",
