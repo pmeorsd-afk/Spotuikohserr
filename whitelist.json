@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1816,
-  "last_updated": "2026-10-25T08:05:30.436Z",
+  "version": 1817,
+  "last_updated": "2026-10-25T08:05:33.255Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "75ixinBwKpfw66HYSlYrqk",
+      "title": "הוא כותב לי מאמי",
+      "artist": "אילון אלקיים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T08:05:33.255Z"
+    },
     {
       "id": "213Mylrx5qHJyxzpS5HxIm",
       "title": "מה עם הלילות - קאבר",
