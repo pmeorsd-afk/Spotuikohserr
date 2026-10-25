@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1844,
-  "last_updated": "2026-10-25T19:39:38.424Z",
+  "version": 1845,
+  "last_updated": "2026-10-25T19:39:44.738Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "32v2OUcwc3FS5EWryCB1TJ",
+      "title": "Sar Hamemunim",
+      "artist": "Yosef Gutman, Tal Yahalom",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:39:44.738Z"
+    },
     {
       "id": "3X0WwsNHfSqpd85A9Iggr2",
       "title": "38 וחוץ מכדורגל",
