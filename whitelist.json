@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1896,
-  "last_updated": "2026-10-25T20:23:38.061Z",
+  "version": 1897,
+  "last_updated": "2026-10-25T20:31:04.103Z",
   "artists": [
     {
       "id": "3DI41JkLg9HWHdnrmtiiyl",
@@ -2060,6 +2060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6W2tGdihSWtBIjooCZl35U",
+      "title": "בחורים טובים - Acoustic Live",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T20:31:04.103Z"
+    },
     {
       "id": "6AmFFsNvP9NoYDUWWcEV5W",
       "title": "עם אחד",
