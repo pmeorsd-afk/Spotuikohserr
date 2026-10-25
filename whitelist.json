@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1890,
-  "last_updated": "2026-10-25T19:43:29.882Z",
+  "version": 1891,
+  "last_updated": "2026-10-25T20:12:41.075Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "07YRh8SnGBOuiiLDM84FR7",
+      "title": "לא לבד",
+      "artist": "Omer Adam, Avraham Aviv Alush, ותן חלקנו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T20:12:41.075Z"
+    },
     {
       "id": "2UDumaw7osnyjH7RZ2DLpB",
       "title": "I Am Machine",
