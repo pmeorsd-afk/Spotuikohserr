@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1894,
-  "last_updated": "2026-10-25T20:14:44.271Z",
+  "version": 1895,
+  "last_updated": "2026-10-25T20:18:41.004Z",
   "artists": [
     {
       "id": "3DI41JkLg9HWHdnrmtiiyl",
@@ -2060,6 +2060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3OiFlrXqZtDybOmfAvixcu",
+      "title": "שלמים - מתוך חזרות למופע NEXT",
+      "artist": "Omer Adam, Idan Rafael Haviv",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T20:18:41.004Z"
+    },
     {
       "id": "5STI4AAzr3uMvdpx4wUSGr",
       "title": "חורף באוטו",
