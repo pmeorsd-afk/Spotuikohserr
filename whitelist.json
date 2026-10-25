@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1856,
-  "last_updated": "2026-10-25T19:40:46.452Z",
+  "version": 1857,
+  "last_updated": "2026-10-25T19:40:49.203Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4smgwC1GggQLS2IHU1Mrcy",
+      "title": "I Cried My Guts Out",
+      "artist": "Low Volts",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:40:49.203Z"
+    },
     {
       "id": "6s0NHplywwr1IjnQpUpWJk",
       "title": "Bad To The Bone",
