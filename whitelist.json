@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1824,
-  "last_updated": "2026-10-25T08:29:18.216Z",
+  "version": 1825,
+  "last_updated": "2026-10-25T08:29:20.178Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0VfXQxbM0doaDw2fMI8Ima",
+      "title": "Snowblind - 2009 Remaster",
+      "artist": "Black Sabbath",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T08:29:20.178Z"
+    },
     {
       "id": "2dGxjfhFXDIUX9h5ImyKkE",
       "title": "Sexy Bitch (feat. Akon)",
