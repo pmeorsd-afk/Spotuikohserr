@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1871,
-  "last_updated": "2026-10-25T19:41:39.326Z",
+  "version": 1872,
+  "last_updated": "2026-10-25T19:41:42.209Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6xFYaaRhzI7h3PPxBjhVBn",
+      "title": "לא מתעייף",
+      "artist": "Nizzani",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:41:42.209Z"
+    },
     {
       "id": "27aoZyxtzbkJxAtFO3ghdV",
       "title": "ארץ נהדרת",
