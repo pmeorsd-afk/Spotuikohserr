@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1868,
-  "last_updated": "2026-10-25T19:41:30.086Z",
+  "version": 1869,
+  "last_updated": "2026-10-25T19:41:33.907Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1RSgM5QrnmnqphjuhJQvX3",
+      "title": "זן נדיר",
+      "artist": "Osher Cohen, אמיר שורוש",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:41:33.907Z"
+    },
     {
       "id": "5jnxxpX2834SB6LJ0S73Uz",
       "title": "Lollipop",
