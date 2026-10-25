@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1861,
-  "last_updated": "2026-10-25T19:41:00.213Z",
+  "version": 1862,
+  "last_updated": "2026-10-25T19:41:02.387Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3giA44zxPL9lXeYhzdcMpX",
+      "title": "Walking By Myself",
+      "artist": "Gary Moore",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:41:02.387Z"
+    },
     {
       "id": "2YrxWsYpZBA9lMxpn3vHym",
       "title": "No Masters",
