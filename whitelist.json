@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1892,
-  "last_updated": "2026-10-25T20:12:44.636Z",
+  "version": 1893,
+  "last_updated": "2026-10-25T20:13:12.249Z",
   "artists": [
+    {
+      "id": "5hoXNR3dL6TafUYqk8b1m2",
+      "canonical_name": "Avraham Aviv Alush",
+      "aliases": [
+        "Avraham Aviv Alush"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T20:13:12.249Z"
+    },
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
       "canonical_name": "מוישי פרסברגר",
