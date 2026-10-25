@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1801,
-  "last_updated": "2026-10-25T07:27:59.432Z",
+  "version": 1802,
+  "last_updated": "2026-10-25T07:28:01.320Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2KGlQst2lnkS7rcRT35ZPF",
+      "title": "ימים יגידו",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:28:01.320Z"
+    },
     {
       "id": "6JUr0dcODi8O2REZKrWjPD",
       "title": "האור שבעיניים",
