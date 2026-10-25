@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1906,
-  "last_updated": "2026-10-25T21:36:40.409Z",
+  "version": 1907,
+  "last_updated": "2026-10-25T21:40:27.312Z",
   "artists": [
     {
       "id": "7Cyxb6EAI5TXiqNqefGp2x",
@@ -2070,6 +2070,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6kTyGUM34r1BiRP23a2ouF",
+      "title": "תבדוק'תי",
+      "artist": "דודא, ליעד מאיר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T21:40:27.312Z"
+    },
     {
       "id": "1Hag68pbHRlxW899wbMwP9",
       "title": "כביש 90",
