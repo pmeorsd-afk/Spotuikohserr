@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1819,
-  "last_updated": "2026-10-25T08:13:26.140Z",
+  "version": 1820,
+  "last_updated": "2026-10-25T08:13:27.873Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0KING5MxpAvRENMUzhkBtc",
+      "title": "מפת העולם",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T08:13:27.873Z"
+    },
     {
       "id": "6kgn8KjSiBGMNgOlDVR2cM",
       "title": "בעולם שלה - קאבר",
