@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1836,
-  "last_updated": "2026-10-25T11:48:18.951Z",
+  "version": 1837,
+  "last_updated": "2026-10-25T11:48:20.682Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4XQXKkVLWeGYZTPExuCNjJ",
+      "title": "רוז",
+      "artist": "The Voice Israel, Loai Ali",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T11:48:20.682Z"
+    },
     {
       "id": "26CvdJtOhLv6uE3sXuwXhX",
       "title": "יא מאמא",
