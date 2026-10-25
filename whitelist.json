@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1902,
-  "last_updated": "2026-10-25T21:11:46.607Z",
+  "version": 1903,
+  "last_updated": "2026-10-25T21:11:59.266Z",
   "artists": [
     {
       "id": "3DI41JkLg9HWHdnrmtiiyl",
@@ -2060,6 +2060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "02mgxr6NgCwAVtuLtttDUB",
+      "title": "מדאם",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T21:11:59.266Z"
+    },
     {
       "id": "4B0cJGASxVICLW2AsBZhiE",
       "title": "LABOUR - the cacophony",
