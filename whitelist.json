@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1826,
-  "last_updated": "2026-10-25T08:29:21.746Z",
+  "version": 1827,
+  "last_updated": "2026-10-25T08:30:03.370Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "10C83Ul1IxCyuoJRWtx5GN",
+      "title": "Your Wife (feat. Dr. Dre)",
+      "artist": "Nate Dogg, Dr. Dre",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T08:30:03.370Z"
+    },
     {
       "id": "7FDV5ELOJHCGLe52AnttEd",
       "title": "Angel",
