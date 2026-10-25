@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1817,
-  "last_updated": "2026-10-25T08:05:33.255Z",
+  "version": 1818,
+  "last_updated": "2026-10-25T08:05:35.488Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6T3o75bO0mdiiFjCyZigj9",
+      "title": "הלב עובד שעות",
+      "artist": "אבירם עמר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T08:05:35.488Z"
+    },
     {
       "id": "75ixinBwKpfw66HYSlYrqk",
       "title": "הוא כותב לי מאמי",
