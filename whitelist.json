@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1806,
-  "last_updated": "2026-10-25T07:28:12.087Z",
+  "version": 1807,
+  "last_updated": "2026-10-25T07:30:30.329Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1mDt0pmhJF9snIc5ojVecw",
+      "title": "חולה על מילים",
+      "artist": "דן ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:30:30.329Z"
+    },
     {
       "id": "28kOsP6T2T2Hsphv3J6lYG",
       "title": "חייאתי",
