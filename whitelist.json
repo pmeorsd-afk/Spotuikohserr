@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1828,
-  "last_updated": "2026-10-25T08:35:55.159Z",
+  "version": 1829,
+  "last_updated": "2026-10-25T09:01:37.933Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0nBMfqQFURDcKk2VTURgeS",
+      "title": "חלף הגעגוע",
+      "artist": "יוסף חיים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T09:01:37.933Z"
+    },
     {
       "id": "4CLRLdxUDPNeO1xCW0U2zC",
       "title": "Creeping Death - Remastered",
