@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1880,
-  "last_updated": "2026-10-25T19:42:05.469Z",
+  "version": 1881,
+  "last_updated": "2026-10-25T19:42:07.847Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7t81HPfmOcOpg0CMAItiIc",
+      "title": "פשוט יותר",
+      "artist": "Yossi Shitrit",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:42:07.847Z"
+    },
     {
       "id": "5vXLjeztGNF56ADALeKTtg",
       "title": "משחרר אותך",
