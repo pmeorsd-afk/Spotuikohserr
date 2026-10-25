@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1802,
-  "last_updated": "2026-10-25T07:28:01.320Z",
+  "version": 1803,
+  "last_updated": "2026-10-25T07:28:05.850Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1jvOVudNr77k5MvKI72HSq",
+      "title": "שבועיים",
+      "artist": "אורי סבאן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:28:05.850Z"
+    },
     {
       "id": "2KGlQst2lnkS7rcRT35ZPF",
       "title": "ימים יגידו",
