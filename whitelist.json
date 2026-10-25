@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1831,
-  "last_updated": "2026-10-25T09:20:40.299Z",
+  "version": 1832,
+  "last_updated": "2026-10-25T09:20:43.269Z",
   "artists": [
+    {
+      "id": "6EKINP9CYAj8ixa0SI4dMh",
+      "canonical_name": "מוישי פרסברגר",
+      "aliases": [
+        "מוישי פרסברגר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T09:20:43.269Z"
+    },
     {
       "id": "3Va6wWeDTKWSZyj4HWsJFK",
       "canonical_name": "יוחנן אורי",
