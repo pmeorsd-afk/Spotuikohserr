@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1870,
-  "last_updated": "2026-10-25T19:41:37.085Z",
+  "version": 1871,
+  "last_updated": "2026-10-25T19:41:39.326Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "27aoZyxtzbkJxAtFO3ghdV",
+      "title": "ארץ נהדרת",
+      "artist": "Bar Tzabary",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:41:39.326Z"
+    },
     {
       "id": "6dbSBQXCctYSVryynHXaZ4",
       "title": "Freaky Friday (feat. Chris Brown)",
