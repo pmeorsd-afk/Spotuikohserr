@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1898,
-  "last_updated": "2026-10-25T20:46:42.363Z",
+  "version": 1899,
+  "last_updated": "2026-10-25T20:54:57.284Z",
   "artists": [
     {
       "id": "3DI41JkLg9HWHdnrmtiiyl",
@@ -2060,6 +2060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0UhX68nsc5Ig0l8hvJxlYo",
+      "title": "אלפים",
+      "artist": "Peled, Eden Derso",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T20:54:57.284Z"
+    },
     {
       "id": "3xkHsmpQCBMytMJNiDf3Ii",
       "title": "Beautiful Things",
