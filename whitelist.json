@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1897,
-  "last_updated": "2026-10-25T20:31:04.103Z",
+  "version": 1898,
+  "last_updated": "2026-10-25T20:46:42.363Z",
   "artists": [
     {
       "id": "3DI41JkLg9HWHdnrmtiiyl",
@@ -2060,6 +2060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3xkHsmpQCBMytMJNiDf3Ii",
+      "title": "Beautiful Things",
+      "artist": "Benson Boone",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T20:46:42.363Z"
+    },
     {
       "id": "6W2tGdihSWtBIjooCZl35U",
       "title": "בחורים טובים - Acoustic Live",
