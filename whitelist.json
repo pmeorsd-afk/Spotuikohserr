@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1846,
-  "last_updated": "2026-10-25T19:39:55.506Z",
+  "version": 1847,
+  "last_updated": "2026-10-25T19:39:57.501Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3aaaku70cinyBdwXOCcrlB",
+      "title": "שלוש עשרה מידות",
+      "artist": "יוסף חיים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:39:57.501Z"
+    },
     {
       "id": "32v2OUcwc3FS5EWryCB1TJ",
       "title": "Sar Hamemunim",
