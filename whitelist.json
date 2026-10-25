@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1854,
-  "last_updated": "2026-10-25T19:40:38.243Z",
+  "version": 1855,
+  "last_updated": "2026-10-25T19:40:43.985Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7x8dCjCr0x6x2lXKujYD34",
+      "title": "The Pretender",
+      "artist": "Foo Fighters",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:40:43.985Z"
+    },
     {
       "id": "2P0pjiV5oWIheKjuOLLaiP",
       "title": "השפן הקטן",
