@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1809,
-  "last_updated": "2026-10-25T07:40:41.086Z",
+  "version": 1810,
+  "last_updated": "2026-10-25T07:40:43.948Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7okk5gWoZqe1JlFvmjh5yc",
+      "title": "הבאתי לך פרח",
+      "artist": "אילון אלקיים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:40:43.948Z"
+    },
     {
       "id": "56F2MMugqjh25DmGKk3j7g",
       "title": "אם אתה שלי",
