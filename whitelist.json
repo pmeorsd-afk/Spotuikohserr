@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1851,
-  "last_updated": "2026-10-25T19:40:24.888Z",
+  "version": 1852,
+  "last_updated": "2026-10-25T19:40:26.670Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2P0pjiV5oWIheKjuOLLaiP",
+      "title": "השפן הקטן",
+      "artist": "Hop! Channel, Sharonit Children Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:40:26.670Z"
+    },
     {
       "id": "1LNqr2FALBNFX1smNJcKD2",
       "title": "Moonlight Sonata (1st Movement)",
