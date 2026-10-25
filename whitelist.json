@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1813,
-  "last_updated": "2026-10-25T07:44:52.160Z",
+  "version": 1814,
+  "last_updated": "2026-10-25T07:44:53.741Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5uEYRdEIh9Bo4fpjDd4Na9",
+      "title": "Goosebumps - Remix",
+      "artist": "Travis Scott, HVME",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:44:53.741Z"
+    },
     {
       "id": "2QbTaqnI7RoOvJbBV7WePA",
       "title": "עד שתמצאי",
