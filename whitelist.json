@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1899,
-  "last_updated": "2026-10-25T20:54:57.284Z",
+  "version": 1900,
+  "last_updated": "2026-10-25T20:56:08.476Z",
   "artists": [
     {
       "id": "3DI41JkLg9HWHdnrmtiiyl",
@@ -2060,6 +2060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4I9NVCnjIRVriXfNE7VhE0",
+      "title": "עושה לי צרות",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T20:56:08.476Z"
+    },
     {
       "id": "0UhX68nsc5Ig0l8hvJxlYo",
       "title": "אלפים",
