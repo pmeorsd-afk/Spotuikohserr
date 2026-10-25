@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1838,
-  "last_updated": "2026-10-25T11:54:27.673Z",
+  "version": 1839,
+  "last_updated": "2026-10-25T19:39:28.314Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6U5sR1NdQi2nZ22IR17tYK",
+      "title": "הגן הנעול",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:39:28.314Z"
+    },
     {
       "id": "4g206RrkzqKSiQWr4xgoEN",
       "title": "מחרוזת בלילות - מנורה לייב 2026",
