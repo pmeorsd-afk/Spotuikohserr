@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1850,
-  "last_updated": "2026-10-25T19:40:22.894Z",
+  "version": 1851,
+  "last_updated": "2026-10-25T19:40:24.888Z",
   "artists": [
     {
       "id": "6EKINP9CYAj8ixa0SI4dMh",
@@ -2040,6 +2040,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1LNqr2FALBNFX1smNJcKD2",
+      "title": "Moonlight Sonata (1st Movement)",
+      "artist": "Junior dos Santos Silva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T19:40:24.888Z"
+    },
     {
       "id": "7hRoz2NwdjnJMxxMUGJWvL",
       "title": "The Four Seasons, Violin Concerto in E Major, Op. 8 No. 1, RV 269 \"Spring\": I. Allegro",
