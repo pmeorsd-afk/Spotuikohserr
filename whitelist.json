@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1805,
-  "last_updated": "2026-10-25T07:28:10.236Z",
+  "version": 1806,
+  "last_updated": "2026-10-25T07:28:12.087Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "28kOsP6T2T2Hsphv3J6lYG",
+      "title": "חייאתי",
+      "artist": "לאה מסיהיד",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:28:12.087Z"
+    },
     {
       "id": "5pZEYAbL2DqU2dCGNRz2Tp",
       "title": "בסוף כל ישיבה",
