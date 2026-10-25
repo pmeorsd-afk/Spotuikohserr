@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1812,
-  "last_updated": "2026-10-25T07:43:09.891Z",
+  "version": 1813,
+  "last_updated": "2026-10-25T07:44:52.160Z",
   "artists": [
     {
       "id": "3nJQGLyC7Fy6TWAWRoyE9B",
@@ -2020,6 +2020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2QbTaqnI7RoOvJbBV7WePA",
+      "title": "עד שתמצאי",
+      "artist": "אבירם עמר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T07:44:52.160Z"
+    },
     {
       "id": "6FjL4dobDicCtArPdiBoT2",
       "title": "אלבי",
