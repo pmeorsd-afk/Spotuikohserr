@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1893,
-  "last_updated": "2026-10-25T20:13:12.249Z",
+  "version": 1894,
+  "last_updated": "2026-10-25T20:14:44.271Z",
   "artists": [
+    {
+      "id": "3DI41JkLg9HWHdnrmtiiyl",
+      "canonical_name": "Zaltz Band",
+      "aliases": [
+        "Zaltz Band"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-25T20:14:44.271Z"
+    },
     {
       "id": "5hoXNR3dL6TafUYqk8b1m2",
       "canonical_name": "Avraham Aviv Alush",
