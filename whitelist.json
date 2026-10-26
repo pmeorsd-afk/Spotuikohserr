@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1910,
-  "last_updated": "2026-10-26T19:24:28.968Z",
+  "version": 1911,
+  "last_updated": "2026-10-26T19:24:42.754Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5cSZBSZya2qUrpP2PozxLh",
+      "title": "איילת חן",
+      "artist": "Tarante Groove Machine",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:24:42.754Z"
+    },
     {
       "id": "32qbOwgwTFD3P2agRLanrx",
       "title": "אוי למאן",
