@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1965,
-  "last_updated": "2026-10-26T20:24:01.421Z",
+  "version": 1966,
+  "last_updated": "2026-10-26T20:41:49.327Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3qOpvMuSUo9oDlD8fwg5g7",
+      "title": "הפוך",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:41:49.327Z"
+    },
     {
       "id": "0qA0e6WUwrYM0Zmnmz1niZ",
       "title": "השמחה שלנו",
