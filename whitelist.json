@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1960,
-  "last_updated": "2026-10-26T19:34:07.450Z",
+  "version": 1961,
+  "last_updated": "2026-10-26T20:03:11.603Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2aOdlTCwMRvM7pQlR8gc1W",
+      "title": "מיאמי",
+      "artist": "Eliad",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:03:11.603Z"
+    },
     {
       "id": "4S7379M3m7hmHmRHjn8TkA",
       "title": "פרק אחר",
