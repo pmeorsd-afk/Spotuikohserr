@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1977,
-  "last_updated": "2026-10-26T20:48:40.699Z",
+  "version": 1978,
+  "last_updated": "2026-10-26T20:48:44.408Z",
   "artists": [
+    {
+      "id": "2ATFGDoiBMz5aXNZRcnuC1",
+      "canonical_name": "Shlomo Simcha",
+      "aliases": [
+        "Shlomo Simcha"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:48:44.408Z"
+    },
     {
       "id": "25121FSeQqqD3El2C3t9L1",
       "canonical_name": "שילה בן סעדון",
