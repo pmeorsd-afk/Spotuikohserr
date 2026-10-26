@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1962,
-  "last_updated": "2026-10-26T20:13:21.089Z",
+  "version": 1963,
+  "last_updated": "2026-10-26T20:20:38.528Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1HNenJMB0Nyqhh8nPNAyZz",
+      "title": "מחרוזת שקטים סימפונית - Live",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:20:38.528Z"
+    },
     {
       "id": "4a79nfLv9E7yUT43oHtDs9",
       "title": "תגידו לה",
