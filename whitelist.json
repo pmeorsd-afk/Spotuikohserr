@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1963,
-  "last_updated": "2026-10-26T20:20:38.528Z",
+  "version": 1964,
+  "last_updated": "2026-10-26T20:23:59.050Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1946N277M0tygagJZxCP1f",
+      "title": "ה' יברך אותך",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:23:59.050Z"
+    },
     {
       "id": "1HNenJMB0Nyqhh8nPNAyZz",
       "title": "מחרוזת שקטים סימפונית - Live",
