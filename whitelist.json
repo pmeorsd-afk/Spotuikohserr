@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1931,
-  "last_updated": "2026-10-26T19:26:27.785Z",
+  "version": 1932,
+  "last_updated": "2026-10-26T19:26:30.948Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2eSJflipjhSKLExuSwuFrO",
+      "title": "What's Luv? (feat. Ashanti)",
+      "artist": "Fat Joe, Ashanti",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:26:30.948Z"
+    },
     {
       "id": "6wN4nT2qy3MQc098yL3Eu9",
       "title": "Deuces (feat. Tyga & Kevin McCall)",
