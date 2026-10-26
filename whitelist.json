@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1959,
-  "last_updated": "2026-10-26T19:34:04.758Z",
+  "version": 1960,
+  "last_updated": "2026-10-26T19:34:07.450Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4S7379M3m7hmHmRHjn8TkA",
+      "title": "פרק אחר",
+      "artist": "Haim Ifargan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:34:07.450Z"
+    },
     {
       "id": "0KF91a8SM6Q3mIa7QPzzbC",
       "title": "אולי תגידו",
