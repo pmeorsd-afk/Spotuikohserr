@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1971,
-  "last_updated": "2026-10-26T20:47:57.360Z",
+  "version": 1972,
+  "last_updated": "2026-10-26T20:48:09.827Z",
   "artists": [
+    {
+      "id": "2UYL2cf5ABvBJcNQoKWueQ",
+      "canonical_name": "אבי דרור",
+      "aliases": [
+        "אבי דרור"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:48:09.827Z"
+    },
     {
       "id": "6Zk2bFAmS91FYJuVuYsBWf",
       "canonical_name": "שמעון לוי",
