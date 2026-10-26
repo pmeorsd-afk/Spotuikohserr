@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1973,
-  "last_updated": "2026-10-26T20:48:11.535Z",
+  "version": 1974,
+  "last_updated": "2026-10-26T20:48:13.633Z",
   "artists": [
+    {
+      "id": "5agZ7EsKBjgzidTlWlyKam",
+      "canonical_name": "שמוליק לונגר",
+      "aliases": [
+        "שמוליק לונגר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:48:13.633Z"
+    },
     {
       "id": "0osOGcEjGhCwnOT9PW2QfL",
       "canonical_name": "Mendy Weiss",
