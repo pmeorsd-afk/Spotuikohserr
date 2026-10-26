@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1939,
-  "last_updated": "2026-10-26T19:27:39.434Z",
+  "version": 1940,
+  "last_updated": "2026-10-26T19:27:43.563Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "50tocVcym1wdVrIUzPNlKV",
+      "title": "מורידים את הירח",
+      "artist": "Shlomi Shabat, Eliad",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:27:43.563Z"
+    },
     {
       "id": "7o8fxpzCQ2jQMYq0zJbACg",
       "title": "אמן",
