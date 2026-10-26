@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1970,
-  "last_updated": "2026-10-26T20:47:55.361Z",
+  "version": 1971,
+  "last_updated": "2026-10-26T20:47:57.360Z",
   "artists": [
+    {
+      "id": "6Zk2bFAmS91FYJuVuYsBWf",
+      "canonical_name": "שמעון לוי",
+      "aliases": [
+        "שמעון לוי"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:47:57.360Z"
+    },
     {
       "id": "4hhhJ3AuqURLYob7xN60UH",
       "canonical_name": "Izzy Gilden",
