@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1938,
-  "last_updated": "2026-10-26T19:27:10.151Z",
+  "version": 1939,
+  "last_updated": "2026-10-26T19:27:39.434Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7o8fxpzCQ2jQMYq0zJbACg",
+      "title": "אמן",
+      "artist": "Aviv Bahar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:27:39.434Z"
+    },
     {
       "id": "4XVhvCZ61rqSeg6cgArJNz",
       "title": "ישנם ימים",
