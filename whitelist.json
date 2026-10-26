@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1930,
-  "last_updated": "2026-10-26T19:26:23.804Z",
+  "version": 1931,
+  "last_updated": "2026-10-26T19:26:27.785Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6wN4nT2qy3MQc098yL3Eu9",
+      "title": "Deuces (feat. Tyga & Kevin McCall)",
+      "artist": "Chris Brown, Tyga, Kevin McCall",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:26:27.785Z"
+    },
     {
       "id": "0wDbYIl4fN2mccHczCJqEf",
       "title": "Letting Go (Dutty Love) featuring Nicki Minaj (feat. Nicki Minaj)",
