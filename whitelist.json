@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1979,
-  "last_updated": "2026-10-26T20:48:47.593Z",
+  "version": 1980,
+  "last_updated": "2026-10-26T20:48:49.605Z",
   "artists": [
+    {
+      "id": "7vTuDQmVbG5GRBIu20kCw6",
+      "canonical_name": "מוטי כרמל",
+      "aliases": [
+        "מוטי כרמל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:48:49.605Z"
+    },
     {
       "id": "0rY17ktRdqQGPJSbcqpX2S",
       "canonical_name": "אביה שרמן",
