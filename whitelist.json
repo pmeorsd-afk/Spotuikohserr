@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1922,
-  "last_updated": "2026-10-26T19:25:11.877Z",
+  "version": 1923,
+  "last_updated": "2026-10-26T19:25:13.786Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1JIQaQJbF8Em7QeCf14pAm",
+      "title": "שיר הגשם",
+      "artist": "Yoel Lerner, Mazi Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:25:13.786Z"
+    },
     {
       "id": "6QTX5A4oH6AJ9s0m9qrTVp",
       "title": "שעון בן חיל",
