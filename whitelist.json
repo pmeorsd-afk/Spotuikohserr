@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1929,
-  "last_updated": "2026-10-26T19:26:20.529Z",
+  "version": 1930,
+  "last_updated": "2026-10-26T19:26:23.804Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0wDbYIl4fN2mccHczCJqEf",
+      "title": "Letting Go (Dutty Love) featuring Nicki Minaj (feat. Nicki Minaj)",
+      "artist": "Sean Kingston, Nicki Minaj",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:26:23.804Z"
+    },
     {
       "id": "4kOTDj4SiZPkW1p96WMDNv",
       "title": "We Be Burnin'",
