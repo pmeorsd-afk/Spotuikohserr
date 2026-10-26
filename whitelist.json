@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1916,
-  "last_updated": "2026-10-26T19:25:00.383Z",
+  "version": 1917,
+  "last_updated": "2026-10-26T19:25:02.384Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6NIJqFHB5cHAn064JCP7Li",
+      "title": "Move",
+      "artist": "Adam Port, Stryv, Keinemusik, Orso, Malachiii",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:25:02.384Z"
+    },
     {
       "id": "4TpofYIjlzhztvF8kWwPXi",
       "title": "Beni Al (Ta Ki Seni Görene Kadar) - Afro House Remix",
