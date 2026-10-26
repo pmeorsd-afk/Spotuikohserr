@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1937,
-  "last_updated": "2026-10-26T19:27:07.685Z",
+  "version": 1938,
+  "last_updated": "2026-10-26T19:27:10.151Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4XVhvCZ61rqSeg6cgArJNz",
+      "title": "ישנם ימים",
+      "artist": "יושי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:27:10.151Z"
+    },
     {
       "id": "0JtWMT1ZVmSGO6nNKivVXj",
       "title": "Yisroel Hee - ישראל הוא",
