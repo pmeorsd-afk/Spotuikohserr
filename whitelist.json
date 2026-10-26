@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1976,
-  "last_updated": "2026-10-26T20:48:17.691Z",
+  "version": 1977,
+  "last_updated": "2026-10-26T20:48:40.699Z",
   "artists": [
+    {
+      "id": "25121FSeQqqD3El2C3t9L1",
+      "canonical_name": "שילה בן סעדון",
+      "aliases": [
+        "שילה בן סעדון"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:48:40.699Z"
+    },
     {
       "id": "6YX85Vv8qA7JESOlxQZOWK",
       "canonical_name": "Eli Herzlich",
