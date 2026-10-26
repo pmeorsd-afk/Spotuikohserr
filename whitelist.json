@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1932,
-  "last_updated": "2026-10-26T19:26:30.948Z",
+  "version": 1933,
+  "last_updated": "2026-10-26T19:26:37.570Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Si6Jt7V8aieROWYeBJcTm",
+      "title": "רוצי ילדה",
+      "artist": "אודיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:26:37.570Z"
+    },
     {
       "id": "2eSJflipjhSKLExuSwuFrO",
       "title": "What's Luv? (feat. Ashanti)",
