@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1925,
-  "last_updated": "2026-10-26T19:25:33.610Z",
+  "version": 1926,
+  "last_updated": "2026-10-26T19:25:37.908Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0qOnSQQF0yzuPWsXrQ9paz",
+      "title": "Stereo Hearts (feat. Adam Levine)",
+      "artist": "Gym Class Heroes, Adam Levine",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:25:37.908Z"
+    },
     {
       "id": "3B54sVLJ402zGa6Xm4YGNe",
       "title": "Unforgettable",
