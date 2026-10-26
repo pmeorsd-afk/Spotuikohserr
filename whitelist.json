@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1949,
-  "last_updated": "2026-10-26T19:29:33.863Z",
+  "version": 1950,
+  "last_updated": "2026-10-26T19:29:35.911Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5JrE7nBoc0AiHqtLJvnn3H",
+      "title": "אחרי עשרים שנה",
+      "artist": "Shmulik Kraus",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:29:35.911Z"
+    },
     {
       "id": "0dhTeU87tEbBwplgPe2NVd",
       "title": "רוב השעות",
