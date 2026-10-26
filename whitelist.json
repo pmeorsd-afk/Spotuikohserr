@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1914,
-  "last_updated": "2026-10-26T19:24:51.938Z",
+  "version": 1915,
+  "last_updated": "2026-10-26T19:24:58.315Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1GBn2lt8KfovKFP5gHPgMt",
+      "title": "YAMA",
+      "artist": "DYSTINCT",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:24:58.315Z"
+    },
     {
       "id": "3N4CSkrXM2hjQbFljDRxJB",
       "title": "חנניה - Gil Lugasy Official Remix",
