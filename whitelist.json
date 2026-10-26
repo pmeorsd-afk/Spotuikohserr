@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1946,
-  "last_updated": "2026-10-26T19:29:00.384Z",
+  "version": 1947,
+  "last_updated": "2026-10-26T19:29:26.850Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3keaoblyiHupSJ2dRNzPkz",
+      "title": "עד מתי",
+      "artist": "Beit Habubot, אמיר אטיאס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:29:26.850Z"
+    },
     {
       "id": "4DEqXFBuMKWRSHCKaxgAv7",
       "title": "עכשיו טוב",
