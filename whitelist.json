@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1912,
-  "last_updated": "2026-10-26T19:24:46.038Z",
+  "version": 1913,
+  "last_updated": "2026-10-26T19:24:48.853Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2VSK2nIkTTucBWFwtqoreF",
+      "title": "אהלן ביכ Ahalan Bik",
+      "artist": "אלקנה מרציאנו, Walid Aljasim",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:24:48.853Z"
+    },
     {
       "id": "0LKE6e1uUtvfnzHla9pEhx",
       "title": "מי יגיד לך לא - Dalit Rechester Remix",
