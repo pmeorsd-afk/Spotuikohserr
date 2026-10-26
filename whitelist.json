@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1923,
-  "last_updated": "2026-10-26T19:25:13.786Z",
+  "version": 1924,
+  "last_updated": "2026-10-26T19:25:16.518Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "51lf90yQ4q7OFR6JlEtiAL",
+      "title": "אמא יקרה לי",
+      "artist": "Ruchama Raz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:25:16.518Z"
+    },
     {
       "id": "1JIQaQJbF8Em7QeCf14pAm",
       "title": "שיר הגשם",
