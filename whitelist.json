@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1952,
-  "last_updated": "2026-10-26T19:30:29.813Z",
+  "version": 1953,
+  "last_updated": "2026-10-26T19:33:32.114Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "39PQOgfUb56gl3gpGxLtU3",
+      "title": "ואפילו בהסתרה",
+      "artist": "Kobi Peretz, Yaakov Shwekey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:33:32.114Z"
+    },
     {
       "id": "3ozVNUrGPGGR2gY2uDpS4v",
       "title": "מילה טובה",
