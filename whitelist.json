@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1954,
-  "last_updated": "2026-10-26T19:33:41.933Z",
+  "version": 1955,
+  "last_updated": "2026-10-26T19:33:45.776Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2z10STt3w7tfPDZnZLeT8M",
+      "title": "שכחתי ממני",
+      "artist": "Eden Meiri",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:33:45.776Z"
+    },
     {
       "id": "3GKV2GgmO1ILINWs201SeM",
       "title": "Ma Vie",
