@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1934,
-  "last_updated": "2026-10-26T19:26:47.240Z",
+  "version": 1935,
+  "last_updated": "2026-10-26T19:26:49.060Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5csV1TznQ2300pi47WA9Ge",
+      "title": "שירים של עופר",
+      "artist": "אוריה אזערי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:26:49.060Z"
+    },
     {
       "id": "1Si6Jt7V8aieROWYeBJcTm",
       "title": "רוצי ילדה",
