@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1974,
-  "last_updated": "2026-10-26T20:48:13.633Z",
+  "version": 1975,
+  "last_updated": "2026-10-26T20:48:15.730Z",
   "artists": [
+    {
+      "id": "2gKyxOb8AlP3q7F3BjwmuJ",
+      "canonical_name": "אברימי לונגר",
+      "aliases": [
+        "אברימי לונגר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:48:15.730Z"
+    },
     {
       "id": "5agZ7EsKBjgzidTlWlyKam",
       "canonical_name": "שמוליק לונגר",
