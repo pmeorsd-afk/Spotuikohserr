@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1944,
-  "last_updated": "2026-10-26T19:28:54.947Z",
+  "version": 1945,
+  "last_updated": "2026-10-26T19:28:57.474Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6EyJ64gl4roFTAhqLIgnr1",
+      "title": "אבסורד",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:28:57.474Z"
+    },
     {
       "id": "3knXGCAaGa7evVYfinGcWF",
       "title": "היום",
