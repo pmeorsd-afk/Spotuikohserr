@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1968,
-  "last_updated": "2026-10-26T20:47:35.712Z",
+  "version": 1969,
+  "last_updated": "2026-10-26T20:47:38.766Z",
   "artists": [
+    {
+      "id": "2tWc3rHDPzB1HbJxHdinbY",
+      "canonical_name": "Yidi Bialostozky",
+      "aliases": [
+        "Yidi Bialostozky"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:47:38.766Z"
+    },
     {
       "id": "7nOfNTKBaCUnuFSawnOn9Y",
       "canonical_name": "Moshe Ginsberg",
