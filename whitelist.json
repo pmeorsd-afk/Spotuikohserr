@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1975,
-  "last_updated": "2026-10-26T20:48:15.730Z",
+  "version": 1976,
+  "last_updated": "2026-10-26T20:48:17.691Z",
   "artists": [
+    {
+      "id": "6YX85Vv8qA7JESOlxQZOWK",
+      "canonical_name": "Eli Herzlich",
+      "aliases": [
+        "Eli Herzlich"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:48:17.691Z"
+    },
     {
       "id": "2gKyxOb8AlP3q7F3BjwmuJ",
       "canonical_name": "אברימי לונגר",
