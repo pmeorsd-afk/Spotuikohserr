@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1951,
-  "last_updated": "2026-10-26T19:29:39.708Z",
+  "version": 1952,
+  "last_updated": "2026-10-26T19:30:29.813Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ozVNUrGPGGR2gY2uDpS4v",
+      "title": "מילה טובה",
+      "artist": "Eli Herzlich",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:30:29.813Z"
+    },
     {
       "id": "2tFX3wqEPyya8k2bS8pHqW",
       "title": "רוקנרול",
