@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1961,
-  "last_updated": "2026-10-26T20:03:11.603Z",
+  "version": 1962,
+  "last_updated": "2026-10-26T20:13:21.089Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4a79nfLv9E7yUT43oHtDs9",
+      "title": "תגידו לה",
+      "artist": "דודו אהרון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:13:21.089Z"
+    },
     {
       "id": "2aOdlTCwMRvM7pQlR8gc1W",
       "title": "מיאמי",
