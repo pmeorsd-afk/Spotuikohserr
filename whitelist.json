@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1972,
-  "last_updated": "2026-10-26T20:48:09.827Z",
+  "version": 1973,
+  "last_updated": "2026-10-26T20:48:11.535Z",
   "artists": [
+    {
+      "id": "0osOGcEjGhCwnOT9PW2QfL",
+      "canonical_name": "Mendy Weiss",
+      "aliases": [
+        "Mendy Weiss"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:48:11.535Z"
+    },
     {
       "id": "2UYL2cf5ABvBJcNQoKWueQ",
       "canonical_name": "אבי דרור",
