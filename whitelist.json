@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1953,
-  "last_updated": "2026-10-26T19:33:32.114Z",
+  "version": 1954,
+  "last_updated": "2026-10-26T19:33:41.933Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3GKV2GgmO1ILINWs201SeM",
+      "title": "Ma Vie",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:33:41.933Z"
+    },
     {
       "id": "39PQOgfUb56gl3gpGxLtU3",
       "title": "ואפילו בהסתרה",
