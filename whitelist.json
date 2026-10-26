@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1969,
-  "last_updated": "2026-10-26T20:47:38.766Z",
+  "version": 1970,
+  "last_updated": "2026-10-26T20:47:55.361Z",
   "artists": [
+    {
+      "id": "4hhhJ3AuqURLYob7xN60UH",
+      "canonical_name": "Izzy Gilden",
+      "aliases": [
+        "Izzy Gilden"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:47:55.361Z"
+    },
     {
       "id": "2tWc3rHDPzB1HbJxHdinbY",
       "canonical_name": "Yidi Bialostozky",
