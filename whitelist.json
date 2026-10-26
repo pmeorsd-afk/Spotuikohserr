@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1919,
-  "last_updated": "2026-10-26T19:25:06.156Z",
+  "version": 1920,
+  "last_updated": "2026-10-26T19:25:08.275Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4cgxP9QMOfWktCCA95uJ9y",
+      "title": "מי שטוב לו",
+      "artist": "Hop! Channel, Sharonit Children Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:25:08.275Z"
+    },
     {
       "id": "0WS1qLcXKsCGt5e3dqq30S",
       "title": "Forever (feat. Malou & Yuna)",
