@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1955,
-  "last_updated": "2026-10-26T19:33:45.776Z",
+  "version": 1956,
+  "last_updated": "2026-10-26T19:33:48.560Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3P7scMQbFy5ZlS77HxAqS4",
+      "title": "בעיה",
+      "artist": "רון חיון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:33:48.560Z"
+    },
     {
       "id": "2z10STt3w7tfPDZnZLeT8M",
       "title": "שכחתי ממני",
