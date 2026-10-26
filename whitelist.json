@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1909,
-  "last_updated": "2026-10-25T21:44:38.626Z",
+  "version": 1910,
+  "last_updated": "2026-10-26T19:24:28.968Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "32qbOwgwTFD3P2agRLanrx",
+      "title": "אוי למאן",
+      "artist": "צפריר יפרח",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:24:28.968Z"
+    },
     {
       "id": "1PjiB3wwbcQDTBObzsNuMV",
       "title": "בין השפיות לשיגעון",
