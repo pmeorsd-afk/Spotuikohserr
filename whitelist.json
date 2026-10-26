@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1950,
-  "last_updated": "2026-10-26T19:29:35.911Z",
+  "version": 1951,
+  "last_updated": "2026-10-26T19:29:39.708Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2tFX3wqEPyya8k2bS8pHqW",
+      "title": "רוקנרול",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:29:39.708Z"
+    },
     {
       "id": "5JrE7nBoc0AiHqtLJvnn3H",
       "title": "אחרי עשרים שנה",
