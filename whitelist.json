@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1920,
-  "last_updated": "2026-10-26T19:25:08.275Z",
+  "version": 1921,
+  "last_updated": "2026-10-26T19:25:10.257Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0RrM3P0mEkkbT7KHUWvlAg",
+      "title": "היום יום הולדת",
+      "artist": "Yoel Lerner, Mazi Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:25:10.257Z"
+    },
     {
       "id": "4cgxP9QMOfWktCCA95uJ9y",
       "title": "מי שטוב לו",
