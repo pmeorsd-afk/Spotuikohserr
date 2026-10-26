@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1957,
-  "last_updated": "2026-10-26T19:33:55.105Z",
+  "version": 1958,
+  "last_updated": "2026-10-26T19:33:58.654Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1O0A6Sw4YMeggGeHQf2Wti",
+      "title": "אל תדאגי לגורלנו",
+      "artist": "דודו אהרון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:33:58.654Z"
+    },
     {
       "id": "6gMor38fgBdx5EZYV3MJno",
       "title": "ניצחת איתי הכל לייב",
