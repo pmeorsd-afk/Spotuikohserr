@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1941,
-  "last_updated": "2026-10-26T19:27:51.612Z",
+  "version": 1942,
+  "last_updated": "2026-10-26T19:27:59.535Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6qWtMNbBTqDHrBPflMldR4",
+      "title": "Tiki - תקעו",
+      "artist": "Moishy Schwartz, Shmili Landau",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:27:59.535Z"
+    },
     {
       "id": "7zbafNBcq4ogAnWB0HAB2i",
       "title": "RTVT - ראטעוועט",
