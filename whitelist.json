@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 1978,
-  "last_updated": "2026-10-26T20:48:44.408Z",
+  "version": 1979,
+  "last_updated": "2026-10-26T20:48:47.593Z",
   "artists": [
+    {
+      "id": "0rY17ktRdqQGPJSbcqpX2S",
+      "canonical_name": "אביה שרמן",
+      "aliases": [
+        "אביה שרמן"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T20:48:47.593Z"
+    },
     {
       "id": "2ATFGDoiBMz5aXNZRcnuC1",
       "canonical_name": "Shlomo Simcha",
