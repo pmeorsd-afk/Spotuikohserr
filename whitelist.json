@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1927,
-  "last_updated": "2026-10-26T19:25:40.043Z",
+  "version": 1928,
+  "last_updated": "2026-10-26T19:25:42.250Z",
   "artists": [
     {
       "id": "5kM5liUUXRYg21olNfTyv2",
@@ -2080,6 +2080,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1XGmzt0PVuFgQYYnV2It7A",
+      "title": "Payphone",
+      "artist": "Maroon 5, Wiz Khalifa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-26T19:25:42.250Z"
+    },
     {
       "id": "2bL2gyO6kBdLkNSkxXNh6x",
       "title": "Animals",
