@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2104,
-  "last_updated": "2026-10-28T08:35:06.651Z",
+  "version": 2105,
+  "last_updated": "2026-10-28T08:35:22.061Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3jUO3ogwIsX79MKKOkSiNY",
+      "title": "בני היכלא",
+      "artist": "צמאה, Akiva, Motty Steinmetz, בניה ברבי, Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T08:35:22.061Z"
+    },
     {
       "id": "6p6G6vCCnEpzCkl5EyBWMS",
       "title": "כל החלומות שלי",
