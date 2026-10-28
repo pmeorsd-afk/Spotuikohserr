@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2170,
-  "last_updated": "2026-10-28T20:07:04.601Z",
+  "version": 2171,
+  "last_updated": "2026-10-28T20:07:07.229Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4bRmijiqGQQ9ean2MUPaS8",
+      "title": "לבד במדבר",
+      "artist": "Guy Mazig",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:07:07.229Z"
+    },
     {
       "id": "7nvEHgsQVMdgV6OpezFWwj",
       "title": "מנגינה רומנטית",
