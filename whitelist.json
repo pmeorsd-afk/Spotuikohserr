@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2027,
-  "last_updated": "2026-10-28T07:47:40.882Z",
+  "version": 2028,
+  "last_updated": "2026-10-28T07:47:44.202Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ii2QOkyimH9vy2IhjP1Te",
+      "title": "מה לך ילדה",
+      "artist": "Bar Tzabary",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:47:44.202Z"
+    },
     {
       "id": "4xMourqgOyjhZ3JcX4L9f0",
       "title": "ככה השם רצה",
