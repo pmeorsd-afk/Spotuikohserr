@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2127,
-  "last_updated": "2026-10-28T11:16:41.579Z",
+  "version": 2128,
+  "last_updated": "2026-10-28T11:16:44.909Z",
   "artists": [
+    {
+      "id": "16P1eQmEK45yrAj9j34qJk",
+      "canonical_name": "Chaim Horowitz",
+      "aliases": [
+        "Chaim Horowitz"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T11:16:44.909Z"
+    },
     {
       "id": "01NAsqNkFIjPYPo3wdXlwY",
       "canonical_name": "אלי ברזל",
