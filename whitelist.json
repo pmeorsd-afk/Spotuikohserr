@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2013,
-  "last_updated": "2026-10-28T07:46:36.604Z",
+  "version": 2014,
+  "last_updated": "2026-10-28T07:46:38.749Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3wA1Wb3WellDqAsBSMnN1x",
+      "title": "יש סיבה",
+      "artist": "Stav Beger",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:46:38.749Z"
+    },
     {
       "id": "5NjRrR74CrPrIdBSCvEHad",
       "title": "Baghdad Flow",
