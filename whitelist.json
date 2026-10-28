@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2132,
-  "last_updated": "2026-10-28T20:04:22.009Z",
+  "version": 2133,
+  "last_updated": "2026-10-28T20:04:24.511Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1N0NtmwQOltOv0egItt4fn",
+      "title": "רעש לבן עם מים לתינוקות לשינה",
+      "artist": "kfir kaikov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:04:24.511Z"
+    },
     {
       "id": "0BFI8bK1QaDPKqXI8YU8cM",
       "title": "רעש לבן",
