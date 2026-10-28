@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2011,
-  "last_updated": "2026-10-28T07:46:19.852Z",
+  "version": 2012,
+  "last_updated": "2026-10-28T07:46:22.407Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1WbAse04GTiqpZ4FFdjMtZ",
+      "title": "Avatar (feat. King Von)",
+      "artist": "Lil Loaded, King Von",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:46:22.407Z"
+    },
     {
       "id": "1Yh7Psm2YpciWqLtlNJumH",
       "title": "כל התפילות",
