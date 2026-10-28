@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2078,
-  "last_updated": "2026-10-28T07:58:18.022Z",
+  "version": 2079,
+  "last_updated": "2026-10-28T07:58:20.733Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "79zvVrn65ksbiGQxrtV4I5",
+      "title": "Guaya Guaya",
+      "artist": "Don Omar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:58:20.733Z"
+    },
     {
       "id": "737gzPI5VAmgUGWiJ9yXuu",
       "title": "1, 2, 3 (feat. Jason Derulo & De La Ghetto)",
