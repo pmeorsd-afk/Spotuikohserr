@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2113,
-  "last_updated": "2026-10-28T10:15:19.930Z",
+  "version": 2114,
+  "last_updated": "2026-10-28T10:37:03.884Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2yWtbIBhuwJ6GHR5X5qP4O",
+      "title": "Feel Good",
+      "artist": "Syn Cole",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T10:37:03.884Z"
+    },
     {
       "id": "64jC0Lq5bqmm8rsFMN1zXA",
       "title": "Symbolism",
