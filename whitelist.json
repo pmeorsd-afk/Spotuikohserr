@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2040,
-  "last_updated": "2026-10-28T07:48:33.059Z",
+  "version": 2041,
+  "last_updated": "2026-10-28T07:48:35.601Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6lIteF5qOoounQrDU8BEAR",
+      "title": "Wherever You Will Go",
+      "artist": "Ash Dean",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:48:35.601Z"
+    },
     {
       "id": "0Y2FHt8TQHbwc4kdpljjVa",
       "title": "Midnight Sun",
