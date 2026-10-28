@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2122,
-  "last_updated": "2026-10-28T11:16:27.461Z",
+  "version": 2123,
+  "last_updated": "2026-10-28T11:16:31.294Z",
   "artists": [
+    {
+      "id": "0W8VQuLpqUwFtNXUgPjwLW",
+      "canonical_name": "מקהלת הישל\"צ",
+      "aliases": [
+        "מקהלת הישל\"צ"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T11:16:31.294Z"
+    },
     {
       "id": "5pwiG0qIb6P0FALKgMyXkX",
       "canonical_name": "אילן דמרי",
