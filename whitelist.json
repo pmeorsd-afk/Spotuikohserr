@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2181,
-  "last_updated": "2026-10-28T20:39:41.337Z",
+  "version": 2182,
+  "last_updated": "2026-10-28T20:59:17.062Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7Dioip1P5B2xnN7am0sDXf",
+      "title": "מישהי אחרת",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:59:17.062Z"
+    },
     {
       "id": "1dkljZlzg37FoGtUJ1EsxQ",
       "title": "איפה אתה",
