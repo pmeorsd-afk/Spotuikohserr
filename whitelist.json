@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2169,
-  "last_updated": "2026-10-28T20:07:01.286Z",
+  "version": 2170,
+  "last_updated": "2026-10-28T20:07:04.601Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7nvEHgsQVMdgV6OpezFWwj",
+      "title": "מנגינה רומנטית",
+      "artist": "RW מוזיקה אינסטרומנטלית",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:07:04.601Z"
+    },
     {
       "id": "5302XMvKj2gb4beUbaKjUm",
       "title": "ילד זינו",
