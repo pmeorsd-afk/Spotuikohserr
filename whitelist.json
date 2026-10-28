@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2030,
-  "last_updated": "2026-10-28T07:47:51.842Z",
+  "version": 2031,
+  "last_updated": "2026-10-28T07:47:55.453Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5JDMaE2pFTToZ7spTl9svP",
+      "title": "Hakol Letova",
+      "artist": "Static & Ben El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:47:55.453Z"
+    },
     {
       "id": "07rEKsNhE4t3FJuBf19cBl",
       "title": "בלגן",
