@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2156,
-  "last_updated": "2026-10-28T20:05:44.274Z",
+  "version": 2157,
+  "last_updated": "2026-10-28T20:06:20.356Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1v7L65Lzy0j0vdpRjJewt1",
+      "title": "Lose Yourself",
+      "artist": "Eminem",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:06:20.356Z"
+    },
     {
       "id": "5vVkEI6kpnJgutJLtpv1Sa",
       "title": "פנקס הקטן",
