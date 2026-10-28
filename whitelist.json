@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2096,
-  "last_updated": "2026-10-28T07:59:54.602Z",
+  "version": 2097,
+  "last_updated": "2026-10-28T07:59:57.321Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1QqG2JgUWWlhgahIyah03i",
+      "title": "אסטרונאוט",
+      "artist": "סהר טויטו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:59:57.321Z"
+    },
     {
       "id": "3NZJlJemX3mzjf56MqC5ML",
       "title": "Forever",
