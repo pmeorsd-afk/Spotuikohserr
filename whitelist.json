@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1981,
-  "last_updated": "2026-10-26T21:24:41.082Z",
+  "version": 1982,
+  "last_updated": "2026-10-28T07:43:31.727Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5fv29V6DcGeEEWjDtiIMrL",
+      "title": "חברים",
+      "artist": "יגל אושרי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:43:31.727Z"
+    },
     {
       "id": "3qOpvMuSUo9oDlD8fwg5g7",
       "title": "הפוך",
