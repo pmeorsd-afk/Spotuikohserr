@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2185,
-  "last_updated": "2026-10-28T21:11:30.118Z",
+  "version": 2186,
+  "last_updated": "2026-10-28T21:11:32.021Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "32E54fBAbHcG9wWnN5LNHT",
+      "title": "ברסלב משוגעים",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T21:11:32.021Z"
+    },
     {
       "id": "7rNA5Jwu23g7PaXcMwfLdq",
       "title": "מדליקה לי הכל",
