@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2089,
-  "last_updated": "2026-10-28T07:59:23.835Z",
+  "version": 2090,
+  "last_updated": "2026-10-28T07:59:27.460Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0382guPH5wzOg7MDrYH7D0",
+      "title": "01",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:59:27.460Z"
+    },
     {
       "id": "5Kv2tRzjC2rclZQxVhS2zb",
       "title": "אל יקר - The Roni Meller Version",
