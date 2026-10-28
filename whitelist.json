@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2008,
-  "last_updated": "2026-10-28T07:46:11.269Z",
+  "version": 2009,
+  "last_updated": "2026-10-28T07:46:14.344Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Z6MCsocbP4NC73EhGBVf2",
+      "title": "Rumors",
+      "artist": "EBG Ejizzle",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:46:14.344Z"
+    },
     {
       "id": "7L0VvUpo3GH2ZSCGUXxEQP",
       "title": "Jizzle Flow",
