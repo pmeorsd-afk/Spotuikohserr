@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2064,
-  "last_updated": "2026-10-28T07:56:54.617Z",
+  "version": 2065,
+  "last_updated": "2026-10-28T07:56:56.553Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4XoF9s9DkvAyGEMc9fpsVn",
+      "title": "אף אחד לא יושב פה",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:56:56.553Z"
+    },
     {
       "id": "12mWjmboEcYGa99sFjVLAf",
       "title": "זנזיבר",
