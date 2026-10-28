@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2124,
-  "last_updated": "2026-10-28T11:16:33.551Z",
+  "version": 2125,
+  "last_updated": "2026-10-28T11:16:35.371Z",
   "artists": [
+    {
+      "id": "07DeYyQlbhUcySJCE0kI9p",
+      "canonical_name": "Sruli & Netanel",
+      "aliases": [
+        "Sruli & Netanel"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T11:16:35.371Z"
+    },
     {
       "id": "5qbR7oJ0ggBPRwJcAbMvkU",
       "canonical_name": "DJE Productions",
