@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2062,
-  "last_updated": "2026-10-28T07:56:49.286Z",
+  "version": 2063,
+  "last_updated": "2026-10-28T07:56:51.884Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2DDoVEpG9eKnWkP1XOBMoP",
+      "title": "חגיגה בישראל",
+      "artist": "דודו אהרון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:56:51.884Z"
+    },
     {
       "id": "6aYvWy72gVdkip3Yco9osi",
       "title": "חתולים",
