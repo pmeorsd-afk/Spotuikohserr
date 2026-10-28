@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1984,
-  "last_updated": "2026-10-28T07:43:41.707Z",
+  "version": 1985,
+  "last_updated": "2026-10-28T07:43:44.308Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2jbVboG5qksZtrHHBiLREM",
+      "title": "פתאום",
+      "artist": "Shir David Gadasi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:43:44.308Z"
+    },
     {
       "id": "0WS3pHso7moPHG8W2pbqPB",
       "title": "קפה וסיגריה",
