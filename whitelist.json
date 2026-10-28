@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1994,
-  "last_updated": "2026-10-28T07:44:36.207Z",
+  "version": 1995,
+  "last_updated": "2026-10-28T07:44:39.299Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6kz1cIxfR2SFBLVoYke0HR",
+      "title": "האישה הכי יפה בעולם",
+      "artist": "אושר ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:44:39.299Z"
+    },
     {
       "id": "2ab6rsQZVaLBTRH1fkMQ7J",
       "title": "הם לא יודעים",
