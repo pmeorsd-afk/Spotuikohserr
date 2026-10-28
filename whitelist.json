@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2099,
-  "last_updated": "2026-10-28T08:00:04.234Z",
+  "version": 2100,
+  "last_updated": "2026-10-28T08:00:07.269Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5HBIAwiRaxHE3hDfQBVJRn",
+      "title": "ככה מיום ליום (Kacha Mi'Yom Le'Yom)",
+      "artist": "Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T08:00:07.269Z"
+    },
     {
       "id": "595ojjhl4tSnHU32pQbU7l",
       "title": "כתוב מלמעלה",
