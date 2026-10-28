@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2184,
-  "last_updated": "2026-10-28T21:00:53.809Z",
+  "version": 2185,
+  "last_updated": "2026-10-28T21:11:30.118Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7rNA5Jwu23g7PaXcMwfLdq",
+      "title": "מדליקה לי הכל",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T21:11:30.118Z"
+    },
     {
       "id": "42alF4H6Fwc2cAElQV5mz0",
       "title": "רכבת הרים",
