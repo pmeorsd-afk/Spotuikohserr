@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2006,
-  "last_updated": "2026-10-28T07:46:05.050Z",
+  "version": 2007,
+  "last_updated": "2026-10-28T07:46:08.364Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "17Gbwxyhsj0dznw9DSruNC",
+      "title": "ראיתי עולם",
+      "artist": "Omer Adam, שרקי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:46:08.364Z"
+    },
     {
       "id": "135jCuXpxm4xhTy1v8VKrz",
       "title": "איפה האגודל",
