@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2068,
-  "last_updated": "2026-10-28T07:57:23.253Z",
+  "version": 2069,
+  "last_updated": "2026-10-28T07:57:39.381Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "561jH07mF1jHuk7KlaeF0s",
+      "title": "Mockingbird",
+      "artist": "Eminem",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:57:39.381Z"
+    },
     {
       "id": "3E1YcHHq6FaJIJsQRHQnfu",
       "title": "עם הזמן",
