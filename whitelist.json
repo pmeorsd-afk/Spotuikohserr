@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2118,
-  "last_updated": "2026-10-28T11:16:15.708Z",
+  "version": 2119,
+  "last_updated": "2026-10-28T11:16:18.176Z",
   "artists": [
+    {
+      "id": "1pK6FoZQVVMh3lueCsc8kz",
+      "canonical_name": "הרב שלמה נחמיאס shlomo nachmias",
+      "aliases": [
+        "הרב שלמה נחמיאס shlomo nachmias"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T11:16:18.176Z"
+    },
     {
       "id": "0Dw0rXlDOOTMx3wH3JWkfJ",
       "canonical_name": "עוזיאל סבתו",
