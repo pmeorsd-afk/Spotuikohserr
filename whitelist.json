@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2155,
-  "last_updated": "2026-10-28T20:05:39.947Z",
+  "version": 2156,
+  "last_updated": "2026-10-28T20:05:44.274Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5vVkEI6kpnJgutJLtpv1Sa",
+      "title": "פנקס הקטן",
+      "artist": "Sassi Keshet, Avirama Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:05:44.274Z"
+    },
     {
       "id": "1DIXPcTDzTj8ZMHt3PDt8p",
       "title": "Gangsta's Paradise",
