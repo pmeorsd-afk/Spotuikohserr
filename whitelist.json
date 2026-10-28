@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2121,
-  "last_updated": "2026-10-28T11:16:24.661Z",
+  "version": 2122,
+  "last_updated": "2026-10-28T11:16:27.461Z",
   "artists": [
+    {
+      "id": "5pwiG0qIb6P0FALKgMyXkX",
+      "canonical_name": "אילן דמרי",
+      "aliases": [
+        "אילן דמרי"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T11:16:27.461Z"
+    },
     {
       "id": "7eSQx8r64v2NZnYQ8ZUcmt",
       "canonical_name": "להקת מזמור שיר",
