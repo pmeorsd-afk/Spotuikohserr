@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2178,
-  "last_updated": "2026-10-28T20:07:50.881Z",
+  "version": 2179,
+  "last_updated": "2026-10-28T20:25:01.607Z",
   "artists": [
+    {
+      "id": "55Y3nx4GH1lH7WsDeuGuaw",
+      "canonical_name": "יהודה נר",
+      "aliases": [
+        "יהודה נר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:25:01.607Z"
+    },
     {
       "id": "5efH2osbH8NcF0NHcEqRZR",
       "canonical_name": "נותי ליברמן",
