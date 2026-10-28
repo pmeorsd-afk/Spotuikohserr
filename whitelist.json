@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2191,
-  "last_updated": "2026-10-28T22:12:16.919Z",
+  "version": 2192,
+  "last_updated": "2026-10-28T22:22:56.603Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6e8XFhPlunXlAZVgBLClq4",
+      "title": "Ich Vill",
+      "artist": "Shmili Landau, Ari Samet, Chilly Wagschal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T22:22:56.603Z"
+    },
     {
       "id": "0BQe8Hoa1FW2CBPbZkAytO",
       "title": "Ve'ashrei",
