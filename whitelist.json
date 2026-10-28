@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2048,
-  "last_updated": "2026-10-28T07:48:59.685Z",
+  "version": 2049,
+  "last_updated": "2026-10-28T07:49:02.189Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "24oP6d0wSnzSnggAI4gMIA",
+      "title": "אבא סלח לי",
+      "artist": "דודו אהרון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:49:02.189Z"
+    },
     {
       "id": "7pqQBilFcnZLaCvCfxVYXQ",
       "title": "סוף של כל סיפור",
