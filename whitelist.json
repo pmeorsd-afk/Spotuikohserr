@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1990,
-  "last_updated": "2026-10-28T07:44:03.144Z",
+  "version": 1991,
+  "last_updated": "2026-10-28T07:44:25.195Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7oOEFDLSQscl0uGulnIEmG",
+      "title": "Love & Hate",
+      "artist": "Michael Kiwanuka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:44:25.195Z"
+    },
     {
       "id": "48pn3XtPBklsN4IkZBMyA5",
       "title": "תפוח בדבש",
