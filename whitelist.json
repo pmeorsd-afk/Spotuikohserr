@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2041,
-  "last_updated": "2026-10-28T07:48:35.601Z",
+  "version": 2042,
+  "last_updated": "2026-10-28T07:48:39.443Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0RkDOLARox4oOOROF3acFV",
+      "title": "You Against My Love",
+      "artist": "Marc Atlas",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:48:39.443Z"
+    },
     {
       "id": "6lIteF5qOoounQrDU8BEAR",
       "title": "Wherever You Will Go",
