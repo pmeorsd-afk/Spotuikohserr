@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2192,
-  "last_updated": "2026-10-28T22:22:56.603Z",
+  "version": 2193,
+  "last_updated": "2026-10-28T22:41:45.134Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0auLq7aePfiNwd1YZNlC4S",
+      "title": "גברת אגו",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T22:41:45.134Z"
+    },
     {
       "id": "6e8XFhPlunXlAZVgBLClq4",
       "title": "Ich Vill",
