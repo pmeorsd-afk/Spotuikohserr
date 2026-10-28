@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2137,
-  "last_updated": "2026-10-28T20:04:39.529Z",
+  "version": 2138,
+  "last_updated": "2026-10-28T20:04:43.068Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6xjgjdunz6KkVOGgW81FEd",
+      "title": "בית ביפו",
+      "artist": "Dudu Tassa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:04:43.068Z"
+    },
     {
       "id": "5Ee4dJRJBcgkEkKrKWbBFe",
       "title": "אבודים בלעדיך",
