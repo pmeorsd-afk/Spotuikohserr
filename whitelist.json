@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2159,
-  "last_updated": "2026-10-28T20:06:25.529Z",
+  "version": 2160,
+  "last_updated": "2026-10-28T20:06:28.384Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4wiNFROgMACU9AdrWXj9OF",
+      "title": "בשעה טובה",
+      "artist": "Harel Skaat",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:06:28.384Z"
+    },
     {
       "id": "0M5qAmTr18FLTCD71kFMtp",
       "title": "כמה עוד אפשר",
