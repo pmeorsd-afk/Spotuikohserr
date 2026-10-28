@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2105,
-  "last_updated": "2026-10-28T08:35:22.061Z",
+  "version": 2106,
+  "last_updated": "2026-10-28T08:42:19.360Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1CvF1Lsiw1u42q8pCEoUWX",
+      "title": "ממקומך",
+      "artist": "Yonatan Razel, ישיבת אורות שאול",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T08:42:19.360Z"
+    },
     {
       "id": "3jUO3ogwIsX79MKKOkSiNY",
       "title": "בני היכלא",
