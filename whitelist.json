@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2130,
-  "last_updated": "2026-10-28T11:23:34.067Z",
+  "version": 2131,
+  "last_updated": "2026-10-28T20:04:17.732Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "63CYHmOW8MePf6duNnrGNw",
+      "title": "Meayin Yavo",
+      "artist": "iZZy D JaY",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:04:17.732Z"
+    },
     {
       "id": "3kygqQKhrJmKYvBG4JtqBH",
       "title": "פילפילון",
