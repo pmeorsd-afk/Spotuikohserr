@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1999,
-  "last_updated": "2026-10-28T07:45:36.095Z",
+  "version": 2000,
+  "last_updated": "2026-10-28T07:45:39.715Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Nl4WXAYf6dvZUiz0VIeIy",
+      "title": "כלב מי שלא אוהב אותך",
+      "artist": "Ravid Plotnik, Ron Bunker",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:45:39.715Z"
+    },
     {
       "id": "22P8dXsLh4lBcOTz84kiri",
       "title": "Dead Man",
