@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2028,
-  "last_updated": "2026-10-28T07:47:44.202Z",
+  "version": 2029,
+  "last_updated": "2026-10-28T07:47:47.594Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5J8K4ZGm7DuNnA8cdrGnWR",
+      "title": "River",
+      "artist": "Bjarne",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:47:47.594Z"
+    },
     {
       "id": "2ii2QOkyimH9vy2IhjP1Te",
       "title": "מה לך ילדה",
