@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2052,
-  "last_updated": "2026-10-28T07:49:27.767Z",
+  "version": 2053,
+  "last_updated": "2026-10-28T07:49:30.891Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6eKTQs8C5k4wvw5pqQF9tf",
+      "title": "Love Me Now Or Lose Me Later",
+      "artist": "Kygo, Matt Hansen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:49:30.891Z"
+    },
     {
       "id": "6WVUCSF2fDkuvvCRk7VFkF",
       "title": "I Hate That It's True",
