@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2034,
-  "last_updated": "2026-10-28T07:48:12.956Z",
+  "version": 2035,
+  "last_updated": "2026-10-28T07:48:16.818Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6I3mqTwhRpn34SLVafSH7G",
+      "title": "Ghost",
+      "artist": "Justin Bieber",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:48:16.818Z"
+    },
     {
       "id": "09CtPGIpYB4BrO8qb1RGsF",
       "title": "Sorry",
