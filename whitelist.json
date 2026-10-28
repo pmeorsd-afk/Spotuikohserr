@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2017,
-  "last_updated": "2026-10-28T07:46:57.626Z",
+  "version": 2018,
+  "last_updated": "2026-10-28T07:47:00.102Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6to1tNRE8t1WuTSdvDnsmw",
+      "title": "Down Me",
+      "artist": "King Von, Lil Durk",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:47:00.102Z"
+    },
     {
       "id": "6nGhBOSx3VQh2eUjYvQt9h",
       "title": "בת של מלך",
