@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2165,
-  "last_updated": "2026-10-28T20:06:43.956Z",
+  "version": 2166,
+  "last_updated": "2026-10-28T20:06:48.049Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "35Btzg9xOyTCWPwdMhxFSO",
+      "title": "רומנטיקה וסקס",
+      "artist": "גיל ואזנה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:06:48.049Z"
+    },
     {
       "id": "0yCJ5SWg9Z0ppEWDhfKY6c",
       "title": "כל העולם שלי",
