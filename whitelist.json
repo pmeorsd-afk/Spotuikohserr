@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2074,
-  "last_updated": "2026-10-28T07:58:06.064Z",
+  "version": 2075,
+  "last_updated": "2026-10-28T07:58:09.976Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5w9c2J52mkdntKOmRLeM2m",
+      "title": "Con Calma",
+      "artist": "Daddy Yankee, Snow",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:58:09.976Z"
+    },
     {
       "id": "4U0JLGFHJpEnDS5w8F7ngE",
       "title": "Calma - Remix",
