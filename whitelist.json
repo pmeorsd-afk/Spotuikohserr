@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2162,
-  "last_updated": "2026-10-28T20:06:35.594Z",
+  "version": 2163,
+  "last_updated": "2026-10-28T20:06:38.908Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0BTWs52yN9yFn58JRlxIbY",
+      "title": "מחפשת אהבה",
+      "artist": "אופק אדנק",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:06:38.908Z"
+    },
     {
       "id": "3nnOxTnWJDEiVZyAwDUGjn",
       "title": "קריסטל",
