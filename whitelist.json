@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1993,
-  "last_updated": "2026-10-28T07:44:33.192Z",
+  "version": 1994,
+  "last_updated": "2026-10-28T07:44:36.207Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ab6rsQZVaLBTRH1fkMQ7J",
+      "title": "הם לא יודעים",
+      "artist": "Nizzani",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:44:36.207Z"
+    },
     {
       "id": "3Cn7BZNoBC7c68Qja0XSpT",
       "title": "Don't Think I Can Forgive You",
