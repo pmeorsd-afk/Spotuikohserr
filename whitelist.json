@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2126,
-  "last_updated": "2026-10-28T11:16:38.443Z",
+  "version": 2127,
+  "last_updated": "2026-10-28T11:16:41.579Z",
   "artists": [
+    {
+      "id": "01NAsqNkFIjPYPo3wdXlwY",
+      "canonical_name": "אלי ברזל",
+      "aliases": [
+        "אלי ברזל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T11:16:41.579Z"
+    },
     {
       "id": "0RbB5habXE4KWvg1P3RA4h",
       "canonical_name": "יצחק צין",
