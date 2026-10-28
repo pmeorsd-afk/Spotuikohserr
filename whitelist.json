@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1988,
-  "last_updated": "2026-10-28T07:43:57.545Z",
+  "version": 1989,
+  "last_updated": "2026-10-28T07:44:00.183Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1NTYZLC9rfcrqDLIMZ4ilx",
+      "title": "מקהלה עליזה",
+      "artist": "Baby Oriental Ensemble",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:44:00.183Z"
+    },
     {
       "id": "3wpL3IltGGY98QtExjptzV",
       "title": "מקהלה עליזה",
