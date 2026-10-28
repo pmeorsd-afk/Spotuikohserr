@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2061,
-  "last_updated": "2026-10-28T07:56:46.204Z",
+  "version": 2062,
+  "last_updated": "2026-10-28T07:56:49.286Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6aYvWy72gVdkip3Yco9osi",
+      "title": "חתולים",
+      "artist": "Jimbo J, Ravid Plotnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:56:49.286Z"
+    },
     {
       "id": "7cBpZE2xovJFrdcdrEWR3a",
       "title": "שם טבעת עליה",
