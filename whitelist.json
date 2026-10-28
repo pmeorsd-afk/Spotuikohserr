@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2152,
-  "last_updated": "2026-10-28T20:05:32.998Z",
+  "version": 2153,
+  "last_updated": "2026-10-28T20:05:35.219Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7iXF2W9vKmDoGAhlHdpyIa",
+      "title": "Forgot About Dre",
+      "artist": "Dr. Dre, Eminem",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:05:35.219Z"
+    },
     {
       "id": "2kQuhkFX7uSVepCD3h29g5",
       "title": "Smack That",
