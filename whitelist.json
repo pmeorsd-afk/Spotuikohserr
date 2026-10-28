@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2060,
-  "last_updated": "2026-10-28T07:56:42.788Z",
+  "version": 2061,
+  "last_updated": "2026-10-28T07:56:46.204Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7cBpZE2xovJFrdcdrEWR3a",
+      "title": "שם טבעת עליה",
+      "artist": "דודו אהרון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:56:46.204Z"
+    },
     {
       "id": "4uhnhRlZ1Jq5zN7VOxqHeW",
       "title": "הכי ישראלי",
