@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2172,
-  "last_updated": "2026-10-28T20:07:10.284Z",
+  "version": 2173,
+  "last_updated": "2026-10-28T20:07:13.225Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7lE22Ehib2mKJxMIvodO4N",
+      "title": "Ayer - Yesterday",
+      "artist": "Ray Chesini",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:07:13.225Z"
+    },
     {
       "id": "28JwPUEjd6MNLJl1Cs6nvX",
       "title": "Tricáustico",
