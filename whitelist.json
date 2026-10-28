@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2128,
-  "last_updated": "2026-10-28T11:16:44.909Z",
+  "version": 2129,
+  "last_updated": "2026-10-28T11:16:47.403Z",
   "artists": [
+    {
+      "id": "7bgwCHzrBW9zLy9f9SrF7m",
+      "canonical_name": "Yitzchok Honig יצחק האניג",
+      "aliases": [
+        "Yitzchok Honig יצחק האניג"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T11:16:47.403Z"
+    },
     {
       "id": "16P1eQmEK45yrAj9j34qJk",
       "canonical_name": "Chaim Horowitz",
