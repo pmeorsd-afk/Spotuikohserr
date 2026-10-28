@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2021,
-  "last_updated": "2026-10-28T07:47:08.007Z",
+  "version": 2022,
+  "last_updated": "2026-10-28T07:47:11.026Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7bP9wQ5JUsShhp2CVzf52B",
+      "title": "Lost My Gun",
+      "artist": "Bloodhound Lil Jeff",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:47:11.026Z"
+    },
     {
       "id": "5xKshebW86YdwLgTFdNaOG",
       "title": "משאלת לב",
