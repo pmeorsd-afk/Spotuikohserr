@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2054,
-  "last_updated": "2026-10-28T07:49:33.672Z",
+  "version": 2055,
+  "last_updated": "2026-10-28T07:55:25.775Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ThWYhYQPACbiczlQw5VkO",
+      "title": "I'll Be There",
+      "artist": "Calum Scott",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:55:25.775Z"
+    },
     {
       "id": "4YBLRfiWPNv57mjbyxMAIx",
       "title": "Last Dance",
