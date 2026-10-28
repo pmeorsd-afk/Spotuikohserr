@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2134,
-  "last_updated": "2026-10-28T20:04:31.348Z",
+  "version": 2135,
+  "last_updated": "2026-10-28T20:04:34.565Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "19b2TOi8BFx7urxQHPhQ4q",
+      "title": "Stay With Me - with water sounds",
+      "artist": "JESSE, Posple",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:04:34.565Z"
+    },
     {
       "id": "1N0NtmwQOltOv0egItt4fn",
       "title": "רעש לבן עם מים לתינוקות לשינה",
