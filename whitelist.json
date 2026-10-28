@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1989,
-  "last_updated": "2026-10-28T07:44:00.183Z",
+  "version": 1990,
+  "last_updated": "2026-10-28T07:44:03.144Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "48pn3XtPBklsN4IkZBMyA5",
+      "title": "תפוח בדבש",
+      "artist": "HaGashash HaHiver",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:44:03.144Z"
+    },
     {
       "id": "1NTYZLC9rfcrqDLIMZ4ilx",
       "title": "מקהלה עליזה",
