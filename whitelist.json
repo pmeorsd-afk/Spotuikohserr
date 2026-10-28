@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2098,
-  "last_updated": "2026-10-28T08:00:00.649Z",
+  "version": 2099,
+  "last_updated": "2026-10-28T08:00:04.234Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "595ojjhl4tSnHU32pQbU7l",
+      "title": "כתוב מלמעלה",
+      "artist": "Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T08:00:04.234Z"
+    },
     {
       "id": "5yacEHJXwyUezjQyLxZcsI",
       "title": "Achshav Nish'arnu Shney'nu (Now There Are Only the Two of Us)",
