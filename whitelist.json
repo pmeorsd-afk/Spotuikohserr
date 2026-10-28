@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2123,
-  "last_updated": "2026-10-28T11:16:31.294Z",
+  "version": 2124,
+  "last_updated": "2026-10-28T11:16:33.551Z",
   "artists": [
+    {
+      "id": "5qbR7oJ0ggBPRwJcAbMvkU",
+      "canonical_name": "DJE Productions",
+      "aliases": [
+        "DJE Productions"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T11:16:33.551Z"
+    },
     {
       "id": "0W8VQuLpqUwFtNXUgPjwLW",
       "canonical_name": "מקהלת הישל\"צ",
