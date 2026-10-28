@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2063,
-  "last_updated": "2026-10-28T07:56:51.884Z",
+  "version": 2064,
+  "last_updated": "2026-10-28T07:56:54.617Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "12mWjmboEcYGa99sFjVLAf",
+      "title": "זנזיבר",
+      "artist": "טליסמאן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:56:54.617Z"
+    },
     {
       "id": "2DDoVEpG9eKnWkP1XOBMoP",
       "title": "חגיגה בישראל",
