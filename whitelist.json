@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2151,
-  "last_updated": "2026-10-28T20:05:29.974Z",
+  "version": 2152,
+  "last_updated": "2026-10-28T20:05:32.998Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2kQuhkFX7uSVepCD3h29g5",
+      "title": "Smack That",
+      "artist": "Akon, Eminem",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:05:32.998Z"
+    },
     {
       "id": "5XF583kr3Eojotxl6SOKF0",
       "title": "La",
