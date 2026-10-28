@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2016,
-  "last_updated": "2026-10-28T07:46:54.194Z",
+  "version": 2017,
+  "last_updated": "2026-10-28T07:46:57.626Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6nGhBOSx3VQh2eUjYvQt9h",
+      "title": "בת של מלך",
+      "artist": "רג'ה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:46:57.626Z"
+    },
     {
       "id": "7n8MZHeMdwK33akuwYXfVJ",
       "title": "Still Remember (feat. Pooh Shiesty)",
