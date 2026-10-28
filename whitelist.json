@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2085,
-  "last_updated": "2026-10-28T07:58:52.864Z",
+  "version": 2086,
+  "last_updated": "2026-10-28T07:59:00.579Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Kv2tRzjC2rclZQxVhS2zb",
+      "title": "אל יקר - The Roni Meller Version",
+      "artist": "Eden Hason, Roni Meller, Mor",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:59:00.579Z"
+    },
     {
       "id": "7kFo0ivGlvuzIWmODfmrjF",
       "title": "אחת ממיליון",
