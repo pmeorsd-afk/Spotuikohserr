@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2138,
-  "last_updated": "2026-10-28T20:04:43.068Z",
+  "version": 2139,
+  "last_updated": "2026-10-28T20:04:45.791Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1gsNht9gfzwifmcpbVY7Fv",
+      "title": "מחרוזת אמרי לי - Live",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:04:45.791Z"
+    },
     {
       "id": "6xjgjdunz6KkVOGgW81FEd",
       "title": "בית ביפו",
