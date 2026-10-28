@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2029,
-  "last_updated": "2026-10-28T07:47:47.594Z",
+  "version": 2030,
+  "last_updated": "2026-10-28T07:47:51.842Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "07rEKsNhE4t3FJuBf19cBl",
+      "title": "בלגן",
+      "artist": "Nizzani",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:47:51.842Z"
+    },
     {
       "id": "5J8K4ZGm7DuNnA8cdrGnWR",
       "title": "River",
