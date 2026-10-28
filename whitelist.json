@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2117,
-  "last_updated": "2026-10-28T10:50:00.187Z",
+  "version": 2118,
+  "last_updated": "2026-10-28T11:16:15.708Z",
   "artists": [
+    {
+      "id": "0Dw0rXlDOOTMx3wH3JWkfJ",
+      "canonical_name": "עוזיאל סבתו",
+      "aliases": [
+        "עוזיאל סבתו"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T11:16:15.708Z"
+    },
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
       "canonical_name": "מוטי כרמל",
