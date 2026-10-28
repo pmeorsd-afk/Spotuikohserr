@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2116,
-  "last_updated": "2026-10-28T10:47:00.344Z",
+  "version": 2117,
+  "last_updated": "2026-10-28T10:50:00.187Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0t6RYYaxS8jjKrNACsHxJb",
+      "title": "Songs of Soldiers 2",
+      "artist": "Thank You Hashem, 8th Day, DJ Farbreng",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T10:50:00.187Z"
+    },
     {
       "id": "4Vh7IKIcHoW8s8wwNnsdaP",
       "title": "Yidden - Upmix",
