@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2135,
-  "last_updated": "2026-10-28T20:04:34.565Z",
+  "version": 2136,
+  "last_updated": "2026-10-28T20:04:36.892Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0cxApO2rc8mZL4WbTPx0ja",
+      "title": "שחור לבן",
+      "artist": "young buta",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:04:36.892Z"
+    },
     {
       "id": "19b2TOi8BFx7urxQHPhQ4q",
       "title": "Stay With Me - with water sounds",
