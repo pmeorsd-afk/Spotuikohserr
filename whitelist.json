@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2143,
-  "last_updated": "2026-10-28T20:04:56.748Z",
+  "version": 2144,
+  "last_updated": "2026-10-28T20:05:00.044Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0PMhBcbq0a5EDngAlVQLAy",
+      "title": "Pilé",
+      "artist": "Mauvais djo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:05:00.044Z"
+    },
     {
       "id": "7esGtFDnsMBKjKKkq6QwzY",
       "title": "מתגעגעת",
