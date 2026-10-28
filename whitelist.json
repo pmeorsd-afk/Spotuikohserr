@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2019,
-  "last_updated": "2026-10-28T07:47:02.943Z",
+  "version": 2020,
+  "last_updated": "2026-10-28T07:47:05.631Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1YVhP58OOuJKDcwM7aO8K1",
+      "title": "3 A.M.",
+      "artist": "King Von",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:47:05.631Z"
+    },
     {
       "id": "1d0mYN9uK3m5W5GRTXoepf",
       "title": "Warzone",
