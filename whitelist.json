@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2115,
-  "last_updated": "2026-10-28T10:37:06.854Z",
+  "version": 2116,
+  "last_updated": "2026-10-28T10:47:00.344Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Vh7IKIcHoW8s8wwNnsdaP",
+      "title": "Yidden - Upmix",
+      "artist": "Thank You Hashem, DJ Farbreng, Chaim Ghoori, Mendy Worch",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T10:47:00.344Z"
+    },
     {
       "id": "6VKrZLNc7h8prbusz3lbZg",
       "title": "Adventure",
