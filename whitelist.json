@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2005,
-  "last_updated": "2026-10-28T07:46:01.770Z",
+  "version": 2006,
+  "last_updated": "2026-10-28T07:46:05.050Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "135jCuXpxm4xhTy1v8VKrz",
+      "title": "איפה האגודל",
+      "artist": "Iris Shemi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:46:05.050Z"
+    },
     {
       "id": "4rVFOjBflZND2sjORIjxyH",
       "title": "קחי אותי לטייל - בארבי Live",
