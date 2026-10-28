@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2176,
-  "last_updated": "2026-10-28T20:07:22.515Z",
+  "version": 2177,
+  "last_updated": "2026-10-28T20:07:46.075Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44N5oFmzQrbSpd8BzMYMwy",
+      "title": "חושב",
+      "artist": "פוצ'ו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:07:46.075Z"
+    },
     {
       "id": "1s99mhrrcpKW0F903dNA3H",
       "title": "חושב",
