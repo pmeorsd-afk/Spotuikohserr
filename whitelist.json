@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2111,
-  "last_updated": "2026-10-28T09:56:29.734Z",
+  "version": 2112,
+  "last_updated": "2026-10-28T10:14:00.105Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7haqksy0dxRS8W1GSqez6J",
+      "title": "Firefly",
+      "artist": "Jim Yosef",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T10:14:00.105Z"
+    },
     {
       "id": "62RVKcgQqb4QDcXuHC2Ahw",
       "title": "Where the mountains meet the ice",
