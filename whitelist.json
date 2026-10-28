@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2050,
-  "last_updated": "2026-10-28T07:49:07.287Z",
+  "version": 2051,
+  "last_updated": "2026-10-28T07:49:22.627Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:DYHFHPlZmuw",
+      "title": "ריח של שוקולד - שיר ילדים -  שירי ילדות ישראלית",
+      "artist": "ילדות ישראלית",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:49:22.627Z"
+    },
     {
       "id": "27T2ZnWeNP4R8ip56u7qU2",
       "title": "ילדה של אבא",
