@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2109,
-  "last_updated": "2026-10-28T09:47:48.026Z",
+  "version": 2110,
+  "last_updated": "2026-10-28T09:56:26.939Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5xgaXZ07aDjVFpzpKEZoUq",
+      "title": "Black Harbor",
+      "artist": "Burning Verse",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T09:56:26.939Z"
+    },
     {
       "id": "7gzyn2YaZWn5bdmJUR515k",
       "title": "Me Vs Me Every Day",
