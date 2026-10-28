@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2003,
-  "last_updated": "2026-10-28T07:45:55.657Z",
+  "version": 2004,
+  "last_updated": "2026-10-28T07:45:58.699Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3UkKnjU33EiKspyDjNPTOO",
+      "title": "Sonata for 2 Pianos in D Major, K. 448: I. Allegro con spirito",
+      "artist": "Wolfgang Amadeus Mozart, Ingrid Haebler, Ludwig Hoffmann",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:45:58.699Z"
+    },
     {
       "id": "51xHvAUYQfhY29GcGlBM0n",
       "title": "Piano Sonata No. 16 in C Major, K. 545 \"Sonata facile\": I. Allegro",
