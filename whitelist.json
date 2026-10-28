@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2171,
-  "last_updated": "2026-10-28T20:07:07.229Z",
+  "version": 2172,
+  "last_updated": "2026-10-28T20:07:10.284Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "28JwPUEjd6MNLJl1Cs6nvX",
+      "title": "Tricáustico",
+      "artist": "Gutmaind",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:07:10.284Z"
+    },
     {
       "id": "4bRmijiqGQQ9ean2MUPaS8",
       "title": "לבד במדבר",
