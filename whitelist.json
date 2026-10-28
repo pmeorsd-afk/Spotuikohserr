@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2147,
-  "last_updated": "2026-10-28T20:05:11.803Z",
+  "version": 2148,
+  "last_updated": "2026-10-28T20:05:14.447Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5hXEWgtPJU7Mb4Pxyy1I78",
+      "title": "DEMMI MARROKI",
+      "artist": "Bayadis, 3robi, Tawsen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:05:14.447Z"
+    },
     {
       "id": "0PuOGWvprX8jTodOX9mQsd",
       "title": "בואי",
