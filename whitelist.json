@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2002,
-  "last_updated": "2026-10-28T07:45:52.574Z",
+  "version": 2003,
+  "last_updated": "2026-10-28T07:45:55.657Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "51xHvAUYQfhY29GcGlBM0n",
+      "title": "Piano Sonata No. 16 in C Major, K. 545 \"Sonata facile\": I. Allegro",
+      "artist": "Wolfgang Amadeus Mozart, Lang Lang",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:45:55.657Z"
+    },
     {
       "id": "6uHHtRZqy1SeHNlGco0GS7",
       "title": "לב שבור ואלכוהול",
