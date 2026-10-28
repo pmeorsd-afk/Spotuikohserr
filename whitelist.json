@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2141,
-  "last_updated": "2026-10-28T20:04:51.479Z",
+  "version": 2142,
+  "last_updated": "2026-10-28T20:04:53.814Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "013aBFCob1CphH4p0amlLH",
+      "title": "אחים בדם",
+      "artist": "בנאל בן ציון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:04:53.814Z"
+    },
     {
       "id": "3vHT7xnWs8zUacYsJAdeOX",
       "title": "מחרוזת הנסיכה מתוך מופע זאפה LIVE",
