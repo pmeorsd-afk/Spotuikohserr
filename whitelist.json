@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2110,
-  "last_updated": "2026-10-28T09:56:26.939Z",
+  "version": 2111,
+  "last_updated": "2026-10-28T09:56:29.734Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "62RVKcgQqb4QDcXuHC2Ahw",
+      "title": "Where the mountains meet the ice",
+      "artist": "disclaimer without remarks",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T09:56:29.734Z"
+    },
     {
       "id": "5xgaXZ07aDjVFpzpKEZoUq",
       "title": "Black Harbor",
