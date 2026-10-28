@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2056,
-  "last_updated": "2026-10-28T07:55:45.296Z",
+  "version": 2057,
+  "last_updated": "2026-10-28T07:56:34.625Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "56eL304tRoeISk4BUxlVPZ",
+      "title": "Moten's Blues",
+      "artist": "As Long as I Love You",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:56:34.625Z"
+    },
     {
       "id": "0L8vrq07xNe5c7C6UrE7GZ",
       "title": "Unsteady hearts",
