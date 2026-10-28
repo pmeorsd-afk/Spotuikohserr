@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2177,
-  "last_updated": "2026-10-28T20:07:46.075Z",
+  "version": 2178,
+  "last_updated": "2026-10-28T20:07:50.881Z",
   "artists": [
+    {
+      "id": "5efH2osbH8NcF0NHcEqRZR",
+      "canonical_name": "נותי ליברמן",
+      "aliases": [
+        "נותי ליברמן"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:07:50.881Z"
+    },
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
       "canonical_name": "Yitzchok Honig יצחק האניג",
