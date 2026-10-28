@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2187,
-  "last_updated": "2026-10-28T21:16:10.830Z",
+  "version": 2188,
+  "last_updated": "2026-10-28T21:17:04.305Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0FEmTSrI0M8nImeYOrCaPi",
+      "title": "גיטרה ולנשום",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T21:17:04.305Z"
+    },
     {
       "id": "32E54fBAbHcG9wWnN5LNHT",
       "title": "ברסלב משוגעים",
