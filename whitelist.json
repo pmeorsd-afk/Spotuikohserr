@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2038,
-  "last_updated": "2026-10-28T07:48:25.634Z",
+  "version": 2039,
+  "last_updated": "2026-10-28T07:48:28.993Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "64z7HtT0PDMdlWaUwacAuz",
+      "title": "Fire To The Sky",
+      "artist": "ZIAN",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:48:28.993Z"
+    },
     {
       "id": "72PuJcr4LytN3HuArbezwt",
       "title": "Wasteland",
