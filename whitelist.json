@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2051,
-  "last_updated": "2026-10-28T07:49:22.627Z",
+  "version": 2052,
+  "last_updated": "2026-10-28T07:49:27.767Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6WVUCSF2fDkuvvCRk7VFkF",
+      "title": "I Hate That It's True",
+      "artist": "Dean Lewis",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:49:27.767Z"
+    },
     {
       "id": "youtube:DYHFHPlZmuw",
       "title": "ריח של שוקולד - שיר ילדים -  שירי ילדות ישראלית",
