@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1992,
-  "last_updated": "2026-10-28T07:44:29.907Z",
+  "version": 1993,
+  "last_updated": "2026-10-28T07:44:33.192Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Cn7BZNoBC7c68Qja0XSpT",
+      "title": "Don't Think I Can Forgive You",
+      "artist": "Triple S",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:44:33.192Z"
+    },
     {
       "id": "7t3ZUAq5yQ6QG4oIrx5mDO",
       "title": "צרות טובות - Live",
