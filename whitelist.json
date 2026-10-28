@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2032,
-  "last_updated": "2026-10-28T07:48:01.817Z",
+  "version": 2033,
+  "last_updated": "2026-10-28T07:48:04.188Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2PZ8BlakFfw8T8InWlkVLg",
+      "title": "איפה שתגידי",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:48:04.188Z"
+    },
     {
       "id": "0Yq16q9JjYcI3SrPLEc1ue",
       "title": "כמה עברנו",
