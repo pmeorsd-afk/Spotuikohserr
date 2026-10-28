@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2195,
-  "last_updated": "2026-10-28T22:41:59.261Z",
+  "version": 2196,
+  "last_updated": "2026-10-28T22:42:07.118Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3HkHwuHaOn1F9vEZxIEqCw",
+      "title": "להאמין",
+      "artist": "Doli & Penn, Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T22:42:07.118Z"
+    },
     {
       "id": "0ACFJm4VlgvdHs2qvHZ6yG",
       "title": "ואם תבואי אליי",
