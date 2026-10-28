@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2189,
-  "last_updated": "2026-10-28T21:23:08.708Z",
+  "version": 2190,
+  "last_updated": "2026-10-28T21:23:17.945Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "12QK8C8vIy8E0alKqNeK9L",
+      "title": "שובר שתיקה",
+      "artist": "Moshik Afia",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T21:23:17.945Z"
+    },
     {
       "id": "4iVVU8DyQvOVsKafv3KWIF",
       "title": "Leave a Light On",
