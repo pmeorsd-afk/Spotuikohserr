@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2059,
-  "last_updated": "2026-10-28T07:56:39.664Z",
+  "version": 2060,
+  "last_updated": "2026-10-28T07:56:42.788Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4uhnhRlZ1Jq5zN7VOxqHeW",
+      "title": "הכי ישראלי",
+      "artist": "Hatikva 6",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:56:42.788Z"
+    },
     {
       "id": "4nTjkWK590oBDcnIxTr1mI",
       "title": "Favorite Girl",
