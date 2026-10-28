@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2114,
-  "last_updated": "2026-10-28T10:37:03.884Z",
+  "version": 2115,
+  "last_updated": "2026-10-28T10:37:06.854Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6VKrZLNc7h8prbusz3lbZg",
+      "title": "Adventure",
+      "artist": "JJD",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T10:37:06.854Z"
+    },
     {
       "id": "2yWtbIBhuwJ6GHR5X5qP4O",
       "title": "Feel Good",
