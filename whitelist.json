@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2077,
-  "last_updated": "2026-10-28T07:58:15.362Z",
+  "version": 2078,
+  "last_updated": "2026-10-28T07:58:18.022Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "737gzPI5VAmgUGWiJ9yXuu",
+      "title": "1, 2, 3 (feat. Jason Derulo & De La Ghetto)",
+      "artist": "Sofía Reyes, Jason Derulo, De La Ghetto",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:58:18.022Z"
+    },
     {
       "id": "780be5fB7823aHG06mwTat",
       "title": "Baianá",
