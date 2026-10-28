@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1983,
-  "last_updated": "2026-10-28T07:43:36.597Z",
+  "version": 1984,
+  "last_updated": "2026-10-28T07:43:41.707Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0WS3pHso7moPHG8W2pbqPB",
+      "title": "קפה וסיגריה",
+      "artist": "Ravid Plotnik, ניר דנן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:43:41.707Z"
+    },
     {
       "id": "7rzM7yEF41S67WJvRP0KSJ",
       "title": "הטעות הכי יפה",
