@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2065,
-  "last_updated": "2026-10-28T07:56:56.553Z",
+  "version": 2066,
+  "last_updated": "2026-10-28T07:57:00.590Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Wq3yyNg0arlNd8fEruYF1",
+      "title": "אורות",
+      "artist": "Avraham Tal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:57:00.590Z"
+    },
     {
       "id": "4XoF9s9DkvAyGEMc9fpsVn",
       "title": "אף אחד לא יושב פה",
