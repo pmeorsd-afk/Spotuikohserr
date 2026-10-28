@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2076,
-  "last_updated": "2026-10-28T07:58:12.381Z",
+  "version": 2077,
+  "last_updated": "2026-10-28T07:58:15.362Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "780be5fB7823aHG06mwTat",
+      "title": "Baianá",
+      "artist": "Bakermat",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:58:15.362Z"
+    },
     {
       "id": "2j2fIJGh4PMdXt9ULI5Tlc",
       "title": "Dura",
