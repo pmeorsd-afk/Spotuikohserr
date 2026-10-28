@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2129,
-  "last_updated": "2026-10-28T11:16:47.403Z",
+  "version": 2130,
+  "last_updated": "2026-10-28T11:23:34.067Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3kygqQKhrJmKYvBG4JtqBH",
+      "title": "פילפילון",
+      "artist": "Hop! Channel, Sharonit Children Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T11:23:34.067Z"
+    },
     {
       "id": "0t6RYYaxS8jjKrNACsHxJb",
       "title": "Songs of Soldiers 2",
