@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2119,
-  "last_updated": "2026-10-28T11:16:18.176Z",
+  "version": 2120,
+  "last_updated": "2026-10-28T11:16:21.664Z",
   "artists": [
+    {
+      "id": "5jxVEdbBX8X3k6Vc7jd7au",
+      "canonical_name": "Aryekes",
+      "aliases": [
+        "Aryekes"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T11:16:21.664Z"
+    },
     {
       "id": "1pK6FoZQVVMh3lueCsc8kz",
       "canonical_name": "הרב שלמה נחמיאס shlomo nachmias",
