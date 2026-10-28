@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2066,
-  "last_updated": "2026-10-28T07:57:00.590Z",
+  "version": 2067,
+  "last_updated": "2026-10-28T07:57:02.774Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3E1YcHHq6FaJIJsQRHQnfu",
+      "title": "עם הזמן",
+      "artist": "Liran Danino",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:57:02.774Z"
+    },
     {
       "id": "1Wq3yyNg0arlNd8fEruYF1",
       "title": "אורות",
