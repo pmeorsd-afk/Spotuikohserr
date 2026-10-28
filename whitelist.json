@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2180,
-  "last_updated": "2026-10-28T20:39:39.181Z",
+  "version": 2181,
+  "last_updated": "2026-10-28T20:39:41.337Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1dkljZlzg37FoGtUJ1EsxQ",
+      "title": "איפה אתה",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:39:41.337Z"
+    },
     {
       "id": "7F1Gx6BQJdgn9y5OFJ4u8W",
       "title": "קווים לדמותו",
