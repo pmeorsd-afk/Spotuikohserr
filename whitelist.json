@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1982,
-  "last_updated": "2026-10-28T07:43:31.727Z",
+  "version": 1983,
+  "last_updated": "2026-10-28T07:43:36.597Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7rzM7yEF41S67WJvRP0KSJ",
+      "title": "הטעות הכי יפה",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:43:36.597Z"
+    },
     {
       "id": "5fv29V6DcGeEEWjDtiIMrL",
       "title": "חברים",
