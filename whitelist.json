@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2182,
-  "last_updated": "2026-10-28T20:59:17.062Z",
+  "version": 2183,
+  "last_updated": "2026-10-28T20:59:21.326Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3LX4lyucXM2OxPUjGMGYXj",
+      "title": "תמיד נשארת",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:59:21.326Z"
+    },
     {
       "id": "7Dioip1P5B2xnN7am0sDXf",
       "title": "מישהי אחרת",
