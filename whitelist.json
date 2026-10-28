@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2036,
-  "last_updated": "2026-10-28T07:48:19.715Z",
+  "version": 2037,
+  "last_updated": "2026-10-28T07:48:22.762Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4VzLCmWpoRxLUNtTw2ybgV",
+      "title": "Waiting",
+      "artist": "ZIAN",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:48:22.762Z"
+    },
     {
       "id": "2aL4lMGhWdPpyPL6COPou7",
       "title": "Soft Spot",
