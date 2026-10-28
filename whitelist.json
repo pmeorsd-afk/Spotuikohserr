@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2183,
-  "last_updated": "2026-10-28T20:59:21.326Z",
+  "version": 2184,
+  "last_updated": "2026-10-28T21:00:53.809Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "42alF4H6Fwc2cAElQV5mz0",
+      "title": "רכבת הרים",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T21:00:53.809Z"
+    },
     {
       "id": "3LX4lyucXM2OxPUjGMGYXj",
       "title": "תמיד נשארת",
