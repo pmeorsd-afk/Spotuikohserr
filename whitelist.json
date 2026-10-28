@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2100,
-  "last_updated": "2026-10-28T08:00:07.269Z",
+  "version": 2101,
+  "last_updated": "2026-10-28T08:34:28.314Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0hOEW1DOcq5pQdoSguJklk",
+      "title": "ערק",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T08:34:28.314Z"
+    },
     {
       "id": "5HBIAwiRaxHE3hDfQBVJRn",
       "title": "ככה מיום ליום (Kacha Mi'Yom Le'Yom)",
