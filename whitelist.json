@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2055,
-  "last_updated": "2026-10-28T07:55:25.775Z",
+  "version": 2056,
+  "last_updated": "2026-10-28T07:55:45.296Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0L8vrq07xNe5c7C6UrE7GZ",
+      "title": "Unsteady hearts",
+      "artist": "Kent Olsson, Josh Paulino",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:55:45.296Z"
+    },
     {
       "id": "3ThWYhYQPACbiczlQw5VkO",
       "title": "I'll Be There",
