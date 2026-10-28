@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2136,
-  "last_updated": "2026-10-28T20:04:36.892Z",
+  "version": 2137,
+  "last_updated": "2026-10-28T20:04:39.529Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Ee4dJRJBcgkEkKrKWbBFe",
+      "title": "אבודים בלעדיך",
+      "artist": "החללית, Offir Malol, Mor",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:04:39.529Z"
+    },
     {
       "id": "0cxApO2rc8mZL4WbTPx0ja",
       "title": "שחור לבן",
