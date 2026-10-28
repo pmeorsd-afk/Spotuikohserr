@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2175,
-  "last_updated": "2026-10-28T20:07:18.531Z",
+  "version": 2176,
+  "last_updated": "2026-10-28T20:07:22.515Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1s99mhrrcpKW0F903dNA3H",
+      "title": "חושב",
+      "artist": "פוצ'ו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:07:22.515Z"
+    },
     {
       "id": "2qKbVWJ12e6QbYvbXi3ghZ",
       "title": "זמנך עבר",
