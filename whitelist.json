@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2103,
-  "last_updated": "2026-10-28T08:34:34.294Z",
+  "version": 2104,
+  "last_updated": "2026-10-28T08:35:06.651Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2224,9 +2224,9 @@
       "id": "6p6G6vCCnEpzCkl5EyBWMS",
       "title": "כל החלומות שלי",
       "artist": "Mor",
-      "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-10-28T08:34:34.294Z"
+      "status": "blocked",
+      "notes": "blocked via telegram",
+      "updated_at": "2026-10-28T08:35:06.651Z"
     },
     {
       "id": "0iknUKhR2y8KnpFLILBRrF",
