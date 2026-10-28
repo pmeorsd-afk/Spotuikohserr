@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2163,
-  "last_updated": "2026-10-28T20:06:38.908Z",
+  "version": 2164,
+  "last_updated": "2026-10-28T20:06:40.955Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Opu79bU6NwS4PhL7mzQ7s",
+      "title": "יום שישי",
+      "artist": "Eden Manaiov, אביאל דה פרינס, באלישג",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:06:40.955Z"
+    },
     {
       "id": "0BTWs52yN9yFn58JRlxIbY",
       "title": "מחפשת אהבה",
