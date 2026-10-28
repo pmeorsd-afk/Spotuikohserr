@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2057,
-  "last_updated": "2026-10-28T07:56:34.625Z",
+  "version": 2058,
+  "last_updated": "2026-10-28T07:56:37.759Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0pwYLVXVknPSGUQb39cePC",
+      "title": "As Long As You Love Me",
+      "artist": "Justin Bieber, Big Sean",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:56:37.759Z"
+    },
     {
       "id": "56eL304tRoeISk4BUxlVPZ",
       "title": "Moten's Blues",
