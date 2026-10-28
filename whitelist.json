@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2154,
-  "last_updated": "2026-10-28T20:05:37.448Z",
+  "version": 2155,
+  "last_updated": "2026-10-28T20:05:39.947Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1DIXPcTDzTj8ZMHt3PDt8p",
+      "title": "Gangsta's Paradise",
+      "artist": "Coolio, L.V.",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:05:39.947Z"
+    },
     {
       "id": "7iL6o9tox1zgHpKUfh9vuC",
       "title": "In Da Club",
