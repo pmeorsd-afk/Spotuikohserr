@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2158,
-  "last_updated": "2026-10-28T20:06:22.870Z",
+  "version": 2159,
+  "last_updated": "2026-10-28T20:06:25.529Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0M5qAmTr18FLTCD71kFMtp",
+      "title": "כמה עוד אפשר",
+      "artist": "Harel Skaat",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:06:25.529Z"
+    },
     {
       "id": "2tWpGexLmGbQbWE22dh9nr",
       "title": "ואת",
