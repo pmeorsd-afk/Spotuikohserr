@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2037,
-  "last_updated": "2026-10-28T07:48:22.762Z",
+  "version": 2038,
+  "last_updated": "2026-10-28T07:48:25.634Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "72PuJcr4LytN3HuArbezwt",
+      "title": "Wasteland",
+      "artist": "ZIAN",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:48:25.634Z"
+    },
     {
       "id": "4VzLCmWpoRxLUNtTw2ybgV",
       "title": "Waiting",
