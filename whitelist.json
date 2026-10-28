@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1986,
-  "last_updated": "2026-10-28T07:43:50.039Z",
+  "version": 1987,
+  "last_updated": "2026-10-28T07:43:53.268Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0a4IST2YqIBAvCFMoXKIu6",
+      "title": "טוב מושך אליו טוב",
+      "artist": "Eden Meiri",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:43:53.268Z"
+    },
     {
       "id": "4WRGh3HSkl8TMlobE7oG6U",
       "title": "כולי עלמא",
