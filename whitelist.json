@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2072,
-  "last_updated": "2026-10-28T07:58:00.232Z",
+  "version": 2073,
+  "last_updated": "2026-10-28T07:58:02.891Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "03aENfSuuy3VS0sbgH7u1D",
+      "title": "Mi Gente",
+      "artist": "J Balvin, Willy William",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:58:02.891Z"
+    },
     {
       "id": "7qBznnzSCbTrgTpQeua7Tz",
       "title": "Despacito",
