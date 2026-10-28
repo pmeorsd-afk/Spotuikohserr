@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2097,
-  "last_updated": "2026-10-28T07:59:57.321Z",
+  "version": 2098,
+  "last_updated": "2026-10-28T08:00:00.649Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5yacEHJXwyUezjQyLxZcsI",
+      "title": "Achshav Nish'arnu Shney'nu (Now There Are Only the Two of Us)",
+      "artist": "Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T08:00:00.649Z"
+    },
     {
       "id": "1QqG2JgUWWlhgahIyah03i",
       "title": "אסטרונאוט",
