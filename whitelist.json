@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2026,
-  "last_updated": "2026-10-28T07:47:32.438Z",
+  "version": 2027,
+  "last_updated": "2026-10-28T07:47:40.882Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4xMourqgOyjhZ3JcX4L9f0",
+      "title": "ככה השם רצה",
+      "artist": "אושר ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:47:40.882Z"
+    },
     {
       "id": "3UaGmscn7h78ifxPQ5pjpN",
       "title": "מתגעגע לתקופה",
