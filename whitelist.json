@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2023,
-  "last_updated": "2026-10-28T07:47:20.020Z",
+  "version": 2024,
+  "last_updated": "2026-10-28T07:47:23.196Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "37ZPaitKESRLXRkjrvJVTb",
+      "title": "נרקומן של בדידות",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:47:23.196Z"
+    },
     {
       "id": "7bP9wQ5JUsShhp2CVzf52B",
       "title": "Lost My Gun",
