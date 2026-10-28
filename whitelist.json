@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2083,
-  "last_updated": "2026-10-28T07:58:44.629Z",
+  "version": 2084,
+  "last_updated": "2026-10-28T07:58:47.919Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "66yefnmjUf8GOqIwhfbpCk",
+      "title": "לילות יפים",
+      "artist": "Omer Adam, Gal Adam, רואי אדם",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:58:47.919Z"
+    },
     {
       "id": "5omHkj4qY0A8f6mE4T3fAH",
       "title": "היה טוב",
