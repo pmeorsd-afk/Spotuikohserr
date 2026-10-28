@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2043,
-  "last_updated": "2026-10-28T07:48:42.799Z",
+  "version": 2044,
+  "last_updated": "2026-10-28T07:48:45.224Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6JSs3QQHVSzESwrU7muOdx",
+      "title": "Yellow",
+      "artist": "Alex laray",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:48:45.224Z"
+    },
     {
       "id": "6xpkpD7V7lSFvRBa9XzA2Z",
       "title": "Second Chance",
