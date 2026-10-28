@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2047,
-  "last_updated": "2026-10-28T07:48:52.868Z",
+  "version": 2048,
+  "last_updated": "2026-10-28T07:48:59.685Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7pqQBilFcnZLaCvCfxVYXQ",
+      "title": "סוף של כל סיפור",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:48:59.685Z"
+    },
     {
       "id": "2S8OUCLGAQKJ5ZaWBXbEDh",
       "title": "Just To Love You",
