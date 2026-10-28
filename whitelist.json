@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 1985,
-  "last_updated": "2026-10-28T07:43:44.308Z",
+  "version": 1986,
+  "last_updated": "2026-10-28T07:43:50.039Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4WRGh3HSkl8TMlobE7oG6U",
+      "title": "כולי עלמא",
+      "artist": "נדב חנציס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:43:50.039Z"
+    },
     {
       "id": "2jbVboG5qksZtrHHBiLREM",
       "title": "פתאום",
