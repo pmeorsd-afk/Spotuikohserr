@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2086,
-  "last_updated": "2026-10-28T07:59:00.579Z",
+  "version": 2087,
+  "last_updated": "2026-10-28T07:59:08.824Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -10219,13 +10219,6 @@
       "updated_at": "2026-10-28T07:47:20.020Z"
     },
     {
-      "id": "060e3c7f8d2ddae12d41eb2dab5c5cd1964a091efd94fd37",
-      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/0UaHRQkfX3cJ90fsXYvjjG/he",
-      "scope": "home",
-      "status": "approved",
-      "updated_at": "2026-10-28T07:57:23.253Z"
-    },
-    {
       "id": "7dd97061b7dbb7a5dc29aaffa80006c68378e16e4664977a",
       "url": "https://i.scdn.co/image/ab6761610000e5ebf5f7b6ff980d23654dca1706",
       "scope": "home",
@@ -10259,6 +10252,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-10-28T07:58:44.629Z"
+    },
+    {
+      "id": "060e3c7f8d2ddae12d41eb2dab5c5cd1964a091efd94fd37",
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/0UaHRQkfX3cJ90fsXYvjjG/he",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-10-28T07:59:08.824Z"
     }
   ],
   "search_images": [
