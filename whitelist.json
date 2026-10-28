@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2079,
-  "last_updated": "2026-10-28T07:58:20.733Z",
+  "version": 2080,
+  "last_updated": "2026-10-28T07:58:26.524Z",
   "artists": [
     {
       "id": "7vTuDQmVbG5GRBIu20kCw6",
@@ -2220,6 +2220,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5omHkj4qY0A8f6mE4T3fAH",
+      "title": "היה טוב",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T07:58:26.524Z"
+    },
     {
       "id": "79zvVrn65ksbiGQxrtV4I5",
       "title": "Guaya Guaya",
