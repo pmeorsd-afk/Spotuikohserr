@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2139,
-  "last_updated": "2026-10-28T20:04:45.791Z",
+  "version": 2140,
+  "last_updated": "2026-10-28T20:04:48.168Z",
   "artists": [
     {
       "id": "7bgwCHzrBW9zLy9f9SrF7m",
@@ -2340,6 +2340,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4V3QWZg5Pyu4GtQkqhKUzN",
+      "title": "ילדה של אב",
+      "artist": "Shimon Buskila",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T20:04:48.168Z"
+    },
     {
       "id": "1gsNht9gfzwifmcpbVY7Fv",
       "title": "מחרוזת אמרי לי - Live",
