@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2190,
-  "last_updated": "2026-10-28T21:23:17.945Z",
+  "version": 2191,
+  "last_updated": "2026-10-28T22:12:16.919Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0BQe8Hoa1FW2CBPbZkAytO",
+      "title": "Ve'ashrei",
+      "artist": "ancii, Ari Samet",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-28T22:12:16.919Z"
+    },
     {
       "id": "12QK8C8vIy8E0alKqNeK9L",
       "title": "שובר שתיקה",
