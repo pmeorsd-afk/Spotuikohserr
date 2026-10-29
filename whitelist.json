@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2201,
-  "last_updated": "2026-10-29T12:03:50.618Z",
+  "version": 2202,
+  "last_updated": "2026-10-29T12:03:52.866Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4LS1Vcj9RgVcVr1u2Bgwdp",
+      "title": "Rabos Machshovos",
+      "artist": "Baruch Chait",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:03:52.866Z"
+    },
     {
       "id": "3ATycYVTfVITtTFGaGBvRD",
       "title": "Yaish Sachar",
