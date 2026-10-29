@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2197,
-  "last_updated": "2026-10-29T12:03:29.055Z",
+  "version": 2198,
+  "last_updated": "2026-10-29T12:03:31.049Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6fNhZRFEkBfgW39W3wKARJ",
+      "title": "Pompeii",
+      "artist": "Bastille",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:03:31.049Z"
+    },
     {
       "id": "2h5GmtRRjVlqxHVIT0Q6cN",
       "title": "מבט כואב",
