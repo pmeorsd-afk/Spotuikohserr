@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2251,
-  "last_updated": "2026-10-29T16:28:34.582Z",
+  "version": 2252,
+  "last_updated": "2026-10-29T16:52:05.463Z",
   "artists": [
     {
       "id": "70O3p0FKlb3VJ9hwUbZlV6",
@@ -2520,6 +2520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5HQVUIKwCEXpe7JIHyY734",
+      "title": "Young, Wild & Free (feat. Bruno Mars)",
+      "artist": "Snoop Dogg, Wiz Khalifa, Bruno Mars",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T16:52:05.463Z"
+    },
     {
       "id": "1dwAkdGHpc4CVfJeqitQSr",
       "title": "רק האהבה",
