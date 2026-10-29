@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2200,
-  "last_updated": "2026-10-29T12:03:48.497Z",
+  "version": 2201,
+  "last_updated": "2026-10-29T12:03:50.618Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ATycYVTfVITtTFGaGBvRD",
+      "title": "Yaish Sachar",
+      "artist": "Yehuda!",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:03:50.618Z"
+    },
     {
       "id": "3Ng0zyr8FgKhr93QySZrwn",
       "title": "אחים בדם",
