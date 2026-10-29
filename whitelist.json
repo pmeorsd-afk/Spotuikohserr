@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2224,
-  "last_updated": "2026-10-29T12:21:27.052Z",
+  "version": 2225,
+  "last_updated": "2026-10-29T12:21:30.173Z",
   "artists": [
+    {
+      "id": "6s2HLzlqGE56ToNhMvWu7Q",
+      "canonical_name": "Yerachmiel Begun & The Miami Boys Choir",
+      "aliases": [
+        "Yerachmiel Begun & The Miami Boys Choir"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:21:30.173Z"
+    },
     {
       "id": "5pcHEBADhfupMP8IGd1uYp",
       "canonical_name": "משולם זושא",
