@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2205,
-  "last_updated": "2026-10-29T12:04:09.925Z",
+  "version": 2206,
+  "last_updated": "2026-10-29T12:04:17.020Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5mZrOQKaKNjqZOpm1rUWKW",
+      "title": "רחם עלי",
+      "artist": "Nathan Goshen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:04:17.020Z"
+    },
     {
       "id": "54cnTAWl7hZQx5AmgV2Wq8",
       "title": "פצוע",
