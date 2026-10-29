@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2268,
-  "last_updated": "2026-10-29T18:36:08.203Z",
+  "version": 2269,
+  "last_updated": "2026-10-29T18:36:10.958Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6G0UYhwXqh7njbEbNnIPjX",
+      "title": "שלום לכם (שיר פגישה)",
+      "artist": "Participants of 'Parpar Nehmad'",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T18:36:10.958Z"
+    },
     {
       "id": "3wvmfRZsk2BA7PXRmRHSBJ",
       "title": "בסוף הכול עובר",
