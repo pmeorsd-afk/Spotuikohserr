@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2246,
-  "last_updated": "2026-10-29T15:33:43.037Z",
+  "version": 2247,
+  "last_updated": "2026-10-29T16:28:26.137Z",
   "artists": [
+    {
+      "id": "1QgYDZ9piOPDBHe4mgltjn",
+      "canonical_name": "Meilech Braunstein",
+      "aliases": [
+        "Meilech Braunstein"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T16:28:26.137Z"
+    },
     {
       "id": "3R2P104vRSQZYUFAglhq9q",
       "canonical_name": "Benjamin Bouzaglo",
