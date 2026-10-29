@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2241,
-  "last_updated": "2026-10-29T14:49:54.928Z",
+  "version": 2242,
+  "last_updated": "2026-10-29T14:49:57.368Z",
   "artists": [
     {
       "id": "3R2P104vRSQZYUFAglhq9q",
@@ -2470,6 +2470,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "15scHQhFam9KWtT1HTonlt",
+      "title": "כוכבי לכת",
+      "artist": "עידו מלכה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T14:49:57.368Z"
+    },
     {
       "id": "617PmmsrRatBBPRfWJI7lM",
       "title": "אני ואתה",
