@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2258,
-  "last_updated": "2026-10-29T16:57:37.996Z",
+  "version": 2259,
+  "last_updated": "2026-10-29T16:58:26.096Z",
   "artists": [
     {
       "id": "70O3p0FKlb3VJ9hwUbZlV6",
@@ -2520,6 +2520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3qT4bUD1MaWpGrTwcvguhb",
+      "title": "Black Dog - Remaster",
+      "artist": "Led Zeppelin",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T16:58:26.096Z"
+    },
     {
       "id": "youtube:kwTqWtuuhTQ",
       "title": "Abale",
