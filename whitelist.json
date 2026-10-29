@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2227,
-  "last_updated": "2026-10-29T12:21:36.380Z",
+  "version": 2228,
+  "last_updated": "2026-10-29T12:21:40.077Z",
   "artists": [
+    {
+      "id": "7Kiuogqs6SelvHjOWXbEmp",
+      "canonical_name": "Yoeli Klein",
+      "aliases": [
+        "Yoeli Klein"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:21:40.077Z"
+    },
     {
       "id": "1lRVCNFEvvnYdl6tiofGme",
       "canonical_name": "Yehezkel Zion Ephraim Avidani",
