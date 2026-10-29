@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2256,
-  "last_updated": "2026-10-29T16:57:30.864Z",
+  "version": 2257,
+  "last_updated": "2026-10-29T16:57:32.695Z",
   "artists": [
     {
       "id": "70O3p0FKlb3VJ9hwUbZlV6",
@@ -2520,6 +2520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3RY8eLO0P0eiQawOR7iGVH",
+      "title": "ירח",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T16:57:32.695Z"
+    },
     {
       "id": "5ENroY5nUL7Cs68QBGbtB4",
       "title": "Turn Me On",
