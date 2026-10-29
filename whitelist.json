@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2221,
-  "last_updated": "2026-10-29T12:21:18.051Z",
+  "version": 2222,
+  "last_updated": "2026-10-29T12:21:20.160Z",
   "artists": [
+    {
+      "id": "62P9csosUkcSrmMdD8YTkR",
+      "canonical_name": "Ari Samet",
+      "aliases": [
+        "Ari Samet"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:21:20.160Z"
+    },
     {
       "id": "29HriYh2NE8upfce5wgY07",
       "canonical_name": "Avrumi Berko",
