@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2225,
-  "last_updated": "2026-10-29T12:21:30.173Z",
+  "version": 2226,
+  "last_updated": "2026-10-29T12:21:33.259Z",
   "artists": [
+    {
+      "id": "1TLyaKXygEOM6JT9ONa7MC",
+      "canonical_name": "YOSSI FRIED",
+      "aliases": [
+        "YOSSI FRIED"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:21:33.259Z"
+    },
     {
       "id": "6s2HLzlqGE56ToNhMvWu7Q",
       "canonical_name": "Yerachmiel Begun & The Miami Boys Choir",
