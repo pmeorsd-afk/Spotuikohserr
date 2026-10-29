@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2219,
-  "last_updated": "2026-10-29T12:07:45.933Z",
+  "version": 2220,
+  "last_updated": "2026-10-29T12:18:55.129Z",
   "artists": [
+    {
+      "id": "1Y3vIGSQ0s9UVj30eAjc4B",
+      "canonical_name": "ancii",
+      "aliases": [
+        "ancii"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:18:55.129Z"
+    },
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
       "canonical_name": "יהודה נר",
