@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2229,
-  "last_updated": "2026-10-29T12:36:57.259Z",
+  "version": 2230,
+  "last_updated": "2026-10-29T12:47:51.036Z",
   "artists": [
     {
       "id": "7Kiuogqs6SelvHjOWXbEmp",
@@ -2450,6 +2450,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Z3Rj68CMTfdDNZZT1Smip",
+      "title": "עוד אחד ששר לך",
+      "artist": "Guy Mazig, Elai Botner",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:47:51.036Z"
+    },
     {
       "id": "4YU1mrZgA1nNOG8wzXPvSN",
       "title": "משהו נעים לנשמה",
