@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2247,
-  "last_updated": "2026-10-29T16:28:26.137Z",
+  "version": 2248,
+  "last_updated": "2026-10-29T16:28:28.370Z",
   "artists": [
+    {
+      "id": "2iLw0WXjml6CzZWZjBzPEB",
+      "canonical_name": "Ahrele Samet",
+      "aliases": [
+        "Ahrele Samet"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T16:28:28.370Z"
+    },
     {
       "id": "1QgYDZ9piOPDBHe4mgltjn",
       "canonical_name": "Meilech Braunstein",
