@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2236,
-  "last_updated": "2026-10-29T13:24:32.872Z",
+  "version": 2237,
+  "last_updated": "2026-10-29T13:50:43.293Z",
   "artists": [
     {
       "id": "6JSY4KALHquv62jtOUqBKc",
@@ -2460,6 +2460,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6WVcHTkdlgkGSA3tB7HHId",
+      "title": "אדם צובר זכרונות - הופעה חיה",
+      "artist": "Avraham Tal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T13:50:43.293Z"
+    },
     {
       "id": "3FPe27lSkhBon4fcIGkMW4",
       "title": "קופנגן",
