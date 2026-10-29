@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2275,
-  "last_updated": "2026-10-29T20:26:18.979Z",
+  "version": 2276,
+  "last_updated": "2026-10-29T21:08:52.354Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "696N3tAlvCf5yyxNGphdUy",
+      "title": "לא סתם",
+      "artist": "חן פורתי, Galdi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T21:08:52.354Z"
+    },
     {
       "id": "07fOAKzUAkbiDs5KHWqTCn",
       "title": "The last Dance",
