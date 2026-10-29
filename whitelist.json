@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2278,
-  "last_updated": "2026-10-29T21:17:16.374Z",
+  "version": 2279,
+  "last_updated": "2026-10-29T21:17:30.365Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "13SIikUYVFJB5cFGC1yov2",
+      "title": "יוסי בניון/לברון ג'יימס",
+      "artist": "Yishay Swissa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T21:17:30.365Z"
+    },
     {
       "id": "3cD8KLeuMWGtHxGpVmu2a0",
       "title": "פוזיטיב",
