@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2274,
-  "last_updated": "2026-10-29T18:57:54.172Z",
+  "version": 2275,
+  "last_updated": "2026-10-29T20:26:18.979Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "07fOAKzUAkbiDs5KHWqTCn",
+      "title": "The last Dance",
+      "artist": "Donald Happiness",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T20:26:18.979Z"
+    },
     {
       "id": "6Rc5boKJDErHgjO52ht0qB",
       "title": "ימים יפים",
