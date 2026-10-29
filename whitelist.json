@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2218,
-  "last_updated": "2026-10-29T12:05:16.036Z",
+  "version": 2219,
+  "last_updated": "2026-10-29T12:07:45.933Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3rmK8ExTmmhmfUsXnJO17y",
+      "title": "מקולות",
+      "artist": "R' Cheskie Weisz, Ari Samet, Yoeli Klein",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:07:45.933Z"
+    },
     {
       "id": "4QplKjJgHySvduWAx8l9KQ",
       "title": "Ahava",
