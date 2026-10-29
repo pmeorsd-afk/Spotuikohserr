@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2254,
-  "last_updated": "2026-10-29T16:57:27.458Z",
+  "version": 2255,
+  "last_updated": "2026-10-29T16:57:29.327Z",
   "artists": [
     {
       "id": "70O3p0FKlb3VJ9hwUbZlV6",
@@ -2520,6 +2520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0CgiwDmWBRlmD4wYXBsQ5I",
+      "title": "תתארו לכם",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T16:57:29.327Z"
+    },
     {
       "id": "6LwrEZNkvFTOypNwSLjuaJ",
       "title": "2 Of Amerikaz Most Wanted (ft. Snoop Doggy Dogg)",
