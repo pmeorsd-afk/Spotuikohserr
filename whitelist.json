@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2226,
-  "last_updated": "2026-10-29T12:21:33.259Z",
+  "version": 2227,
+  "last_updated": "2026-10-29T12:21:36.380Z",
   "artists": [
+    {
+      "id": "1lRVCNFEvvnYdl6tiofGme",
+      "canonical_name": "Yehezkel Zion Ephraim Avidani",
+      "aliases": [
+        "Yehezkel Zion Ephraim Avidani"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:21:36.380Z"
+    },
     {
       "id": "1TLyaKXygEOM6JT9ONa7MC",
       "canonical_name": "YOSSI FRIED",
