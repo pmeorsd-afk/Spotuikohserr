@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2228,
-  "last_updated": "2026-10-29T12:21:40.077Z",
+  "version": 2229,
+  "last_updated": "2026-10-29T12:36:57.259Z",
   "artists": [
     {
       "id": "7Kiuogqs6SelvHjOWXbEmp",
@@ -2450,6 +2450,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4YU1mrZgA1nNOG8wzXPvSN",
+      "title": "משהו נעים לנשמה",
+      "artist": "Hatikva 6",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:36:57.259Z"
+    },
     {
       "id": "3rmK8ExTmmhmfUsXnJO17y",
       "title": "מקולות",
