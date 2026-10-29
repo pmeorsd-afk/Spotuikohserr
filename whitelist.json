@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2208,
-  "last_updated": "2026-10-29T12:04:21.696Z",
+  "version": 2209,
+  "last_updated": "2026-10-29T12:04:24.512Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Km47j6jGFN3fcIDktVsVD",
+      "title": "בסוף הכל עובר",
+      "artist": "Nathan Goshen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:04:24.512Z"
+    },
     {
       "id": "12ZMWkKmPoNsQLzUyI2cco",
       "title": "מי יציל אותי",
