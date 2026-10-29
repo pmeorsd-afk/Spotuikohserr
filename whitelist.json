@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2265,
-  "last_updated": "2026-10-29T17:19:35.117Z",
+  "version": 2266,
+  "last_updated": "2026-10-29T18:07:20.139Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3QGsuHI8jO1Rx4JWLUh9jd",
+      "title": "Treat You Better",
+      "artist": "Shawn Mendes",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T18:07:20.139Z"
+    },
     {
       "id": "3TEBbK6nTBFIIWFnGPlXaI",
       "title": "Joe Dimmaggios' Card",
