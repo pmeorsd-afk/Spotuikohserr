@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2220,
-  "last_updated": "2026-10-29T12:18:55.129Z",
+  "version": 2221,
+  "last_updated": "2026-10-29T12:21:18.051Z",
   "artists": [
+    {
+      "id": "29HriYh2NE8upfce5wgY07",
+      "canonical_name": "Avrumi Berko",
+      "aliases": [
+        "Avrumi Berko"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:21:18.051Z"
+    },
     {
       "id": "1Y3vIGSQ0s9UVj30eAjc4B",
       "canonical_name": "ancii",
