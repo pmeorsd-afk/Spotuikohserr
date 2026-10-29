@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2269,
-  "last_updated": "2026-10-29T18:36:10.958Z",
+  "version": 2270,
+  "last_updated": "2026-10-29T18:45:00.763Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2yZbmWD7KirD5pS4e1Sk4U",
+      "title": "על האדמה",
+      "artist": "מוסיקה אורגנית",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T18:45:00.763Z"
+    },
     {
       "id": "6G0UYhwXqh7njbEbNnIPjX",
       "title": "שלום לכם (שיר פגישה)",
