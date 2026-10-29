@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2204,
-  "last_updated": "2026-10-29T12:04:08.296Z",
+  "version": 2205,
+  "last_updated": "2026-10-29T12:04:09.925Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "54cnTAWl7hZQx5AmgV2Wq8",
+      "title": "פצוע",
+      "artist": "Nathan Goshen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:04:09.925Z"
+    },
     {
       "id": "66LQkHS38PqBwy97zJZuGY",
       "title": "ניצחונות קטנים",
