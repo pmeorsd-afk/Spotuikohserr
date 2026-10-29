@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2267,
-  "last_updated": "2026-10-29T18:07:22.425Z",
+  "version": 2268,
+  "last_updated": "2026-10-29T18:36:08.203Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3wvmfRZsk2BA7PXRmRHSBJ",
+      "title": "בסוף הכול עובר",
+      "artist": "Maor Ashkenazi, רואי אדם, נעם כהן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T18:36:08.203Z"
+    },
     {
       "id": "3P3pw6C19j31Rnzgo3JG7o",
       "title": "Perfect Strangers",
