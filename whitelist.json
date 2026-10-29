@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2235,
-  "last_updated": "2026-10-29T13:24:29.855Z",
+  "version": 2236,
+  "last_updated": "2026-10-29T13:24:32.872Z",
   "artists": [
+    {
+      "id": "6JSY4KALHquv62jtOUqBKc",
+      "canonical_name": "ישיבת ירושלים לצעירים",
+      "aliases": [
+        "ישיבת ירושלים לצעירים"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T13:24:32.872Z"
+    },
     {
       "id": "7Kiuogqs6SelvHjOWXbEmp",
       "canonical_name": "Yoeli Klein",
