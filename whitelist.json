@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2232,
-  "last_updated": "2026-10-29T13:12:56.812Z",
+  "version": 2233,
+  "last_updated": "2026-10-29T13:24:24.815Z",
   "artists": [
     {
       "id": "7Kiuogqs6SelvHjOWXbEmp",
@@ -2450,6 +2450,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2qDIJBdE5sVg6VogtC7ht2",
+      "title": "Bijela Zvuk Buke",
+      "artist": "bijeli šum, Bijeli Šum Za Bebe, Ambijentalne Buke",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T13:24:24.815Z"
+    },
     {
       "id": "3JnbfNvV1yMv4ve6Ncy2B1",
       "title": "רעש לבן לתינוקות",
