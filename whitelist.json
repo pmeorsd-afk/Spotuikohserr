@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2279,
-  "last_updated": "2026-10-29T21:17:30.365Z",
+  "version": 2280,
+  "last_updated": "2026-10-29T21:24:50.608Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6TbPvBmgwJbqVjQC00fjaF",
+      "title": "בא לי עוד",
+      "artist": "Yishay Swissa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T21:24:50.608Z"
+    },
     {
       "id": "13SIikUYVFJB5cFGC1yov2",
       "title": "יוסי בניון/לברון ג'יימס",
