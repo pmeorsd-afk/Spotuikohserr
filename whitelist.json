@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2273,
-  "last_updated": "2026-10-29T18:57:51.260Z",
+  "version": 2274,
+  "last_updated": "2026-10-29T18:57:54.172Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Rc5boKJDErHgjO52ht0qB",
+      "title": "ימים יפים",
+      "artist": "Avihu Pinhasov Rhythm Club",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T18:57:54.172Z"
+    },
     {
       "id": "58gjKhdAyYFvtuw0sGn95e",
       "title": "ארץ ישראל שלי",
