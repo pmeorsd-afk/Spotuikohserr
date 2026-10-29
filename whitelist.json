@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2263,
-  "last_updated": "2026-10-29T17:19:29.470Z",
+  "version": 2264,
+  "last_updated": "2026-10-29T17:19:31.716Z",
   "artists": [
+    {
+      "id": "02uC7PMc664MCuLgkz41DU",
+      "canonical_name": "Itzik Orlev",
+      "aliases": [
+        "Itzik Orlev"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T17:19:31.716Z"
+    },
     {
       "id": "19ByPeu8kk31IAUDIsv6if",
       "canonical_name": "Meir Green",
