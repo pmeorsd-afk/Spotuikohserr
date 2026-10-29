@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2245,
-  "last_updated": "2026-10-29T15:33:39.268Z",
+  "version": 2246,
+  "last_updated": "2026-10-29T15:33:43.037Z",
   "artists": [
     {
       "id": "3R2P104vRSQZYUFAglhq9q",
@@ -2470,6 +2470,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1dwAkdGHpc4CVfJeqitQSr",
+      "title": "רק האהבה",
+      "artist": "Tomer Adaddi, Tzachi Halevi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T15:33:43.037Z"
+    },
     {
       "id": "2afCBiru10AFckfOa49wIa",
       "title": "You & I",
