@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2262,
-  "last_updated": "2026-10-29T17:08:08.304Z",
+  "version": 2263,
+  "last_updated": "2026-10-29T17:19:29.470Z",
   "artists": [
+    {
+      "id": "19ByPeu8kk31IAUDIsv6if",
+      "canonical_name": "Meir Green",
+      "aliases": [
+        "Meir Green"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T17:19:29.470Z"
+    },
     {
       "id": "70O3p0FKlb3VJ9hwUbZlV6",
       "canonical_name": "Shlomo Yehuda Rechnitz",
