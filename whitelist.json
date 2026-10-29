@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2215,
-  "last_updated": "2026-10-29T12:05:04.125Z",
+  "version": 2216,
+  "last_updated": "2026-10-29T12:05:08.012Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7K3uzgPalhcWONGYPoHbRn",
+      "title": "Parentches",
+      "artist": "Ari Samet, ancii",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:05:08.012Z"
+    },
     {
       "id": "7x5xYW5W42OGPAdHUyyguy",
       "title": "Locked Away (feat. Adam Levine)",
