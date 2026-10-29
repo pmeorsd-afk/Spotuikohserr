@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2272,
-  "last_updated": "2026-10-29T18:45:05.296Z",
+  "version": 2273,
+  "last_updated": "2026-10-29T18:57:51.260Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "58gjKhdAyYFvtuw0sGn95e",
+      "title": "ארץ ישראל שלי",
+      "artist": "נירה רבינוביץ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T18:57:51.260Z"
+    },
     {
       "id": "6v6urW2xdD8HCNhxs5FBle",
       "title": "בוקר טוב",
