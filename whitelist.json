@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2253,
-  "last_updated": "2026-10-29T16:52:07.850Z",
+  "version": 2254,
+  "last_updated": "2026-10-29T16:57:27.458Z",
   "artists": [
     {
       "id": "70O3p0FKlb3VJ9hwUbZlV6",
@@ -2520,6 +2520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6LwrEZNkvFTOypNwSLjuaJ",
+      "title": "2 Of Amerikaz Most Wanted (ft. Snoop Doggy Dogg)",
+      "artist": "2Pac, Snoop Dogg",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T16:57:27.458Z"
+    },
     {
       "id": "5STdMlrBf6pqWiNE7WqxSi",
       "title": "Many Men (Wish Death)",
