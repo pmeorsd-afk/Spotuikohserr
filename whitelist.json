@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2213,
-  "last_updated": "2026-10-29T12:04:55.702Z",
+  "version": 2214,
+  "last_updated": "2026-10-29T12:04:59.593Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0lYBSQXN6rCTvUZvg9S0lU",
+      "title": "Let Me Love You",
+      "artist": "DJ Snake, Justin Bieber",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:04:59.593Z"
+    },
     {
       "id": "4iifwG6rYofQqvDjGmvfyM",
       "title": "Time to Forgive",
