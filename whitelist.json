@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2244,
-  "last_updated": "2026-10-29T14:55:54.655Z",
+  "version": 2245,
+  "last_updated": "2026-10-29T15:33:39.268Z",
   "artists": [
     {
       "id": "3R2P104vRSQZYUFAglhq9q",
@@ -2470,6 +2470,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2afCBiru10AFckfOa49wIa",
+      "title": "You & I",
+      "artist": "One Direction",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T15:33:39.268Z"
+    },
     {
       "id": "5h5CQwgjgQrBUacsqR2zR7",
       "title": "A Thousand Years",
