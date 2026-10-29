@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2198,
-  "last_updated": "2026-10-29T12:03:31.049Z",
+  "version": 2199,
+  "last_updated": "2026-10-29T12:03:33.687Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7syE8MkrzicpZaMTg7nJf1",
+      "title": "Al Hatzadikim",
+      "artist": "Abie Rotenberg, Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:03:33.687Z"
+    },
     {
       "id": "6fNhZRFEkBfgW39W3wKARJ",
       "title": "Pompeii",
