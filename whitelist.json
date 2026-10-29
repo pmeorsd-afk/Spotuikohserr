@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2249,
-  "last_updated": "2026-10-29T16:28:30.414Z",
+  "version": 2250,
+  "last_updated": "2026-10-29T16:28:32.309Z",
   "artists": [
+    {
+      "id": "3mQ5gAjDU5h7I6LvMjVgrg",
+      "canonical_name": "ישיבות תפארת ישראל",
+      "aliases": [
+        "ישיבות תפארת ישראל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T16:28:32.309Z"
+    },
     {
       "id": "17ekDRJyywgcOk6eCFWg4x",
       "canonical_name": "שרוליק קלצקין",
