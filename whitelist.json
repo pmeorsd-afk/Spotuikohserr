@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2231,
-  "last_updated": "2026-10-29T13:12:50.410Z",
+  "version": 2232,
+  "last_updated": "2026-10-29T13:12:56.812Z",
   "artists": [
     {
       "id": "7Kiuogqs6SelvHjOWXbEmp",
@@ -2450,6 +2450,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3JnbfNvV1yMv4ve6Ncy2B1",
+      "title": "רעש לבן לתינוקות",
+      "artist": "רפואה מרגיעה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T13:12:56.812Z"
+    },
     {
       "id": "4FudXH3Ej7pMFT9jFprb6A",
       "title": "אברהם יצחק יעקב",
