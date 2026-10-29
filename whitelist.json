@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2234,
-  "last_updated": "2026-10-29T13:24:26.838Z",
+  "version": 2235,
+  "last_updated": "2026-10-29T13:24:29.855Z",
   "artists": [
     {
       "id": "7Kiuogqs6SelvHjOWXbEmp",
@@ -2450,6 +2450,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3FPe27lSkhBon4fcIGkMW4",
+      "title": "קופנגן",
+      "artist": "Hatikva 6, Infected Mushroom",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T13:24:29.855Z"
+    },
     {
       "id": "47L02Dk5iJxF9zO6BqR2H2",
       "title": "אדם צובר זיכרונות",
