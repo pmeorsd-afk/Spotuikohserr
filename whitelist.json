@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2230,
-  "last_updated": "2026-10-29T12:47:51.036Z",
+  "version": 2231,
+  "last_updated": "2026-10-29T13:12:50.410Z",
   "artists": [
     {
       "id": "7Kiuogqs6SelvHjOWXbEmp",
@@ -2450,6 +2450,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4FudXH3Ej7pMFT9jFprb6A",
+      "title": "אברהם יצחק יעקב",
+      "artist": "בניה ברבי, Bar Tzabary, ותן חלקנו, Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T13:12:50.410Z"
+    },
     {
       "id": "0Z3Rj68CMTfdDNZZT1Smip",
       "title": "עוד אחד ששר לך",
