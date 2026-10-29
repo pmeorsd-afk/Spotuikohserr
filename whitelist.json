@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2271,
-  "last_updated": "2026-10-29T18:45:03.070Z",
+  "version": 2272,
+  "last_updated": "2026-10-29T18:45:05.296Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6v6urW2xdD8HCNhxs5FBle",
+      "title": "בוקר טוב",
+      "artist": "Ariela Savir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T18:45:05.296Z"
+    },
     {
       "id": "4rVQ4RxX0vl7sdAh7FSxar",
       "title": "חבר בתוך ראי",
