@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2222,
-  "last_updated": "2026-10-29T12:21:20.160Z",
+  "version": 2223,
+  "last_updated": "2026-10-29T12:21:24.588Z",
   "artists": [
+    {
+      "id": "7nuNBeNEXffOC2DRh29jhQ",
+      "canonical_name": "Shmelka Posen",
+      "aliases": [
+        "Shmelka Posen"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:21:24.588Z"
+    },
     {
       "id": "62P9csosUkcSrmMdD8YTkR",
       "canonical_name": "Ari Samet",
