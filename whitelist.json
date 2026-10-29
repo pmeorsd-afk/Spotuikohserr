@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2237,
-  "last_updated": "2026-10-29T13:50:43.293Z",
+  "version": 2238,
+  "last_updated": "2026-10-29T14:16:04.377Z",
   "artists": [
     {
       "id": "6JSY4KALHquv62jtOUqBKc",
@@ -2460,6 +2460,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "323MBUmKhqQe8LJHujdodY",
+      "title": "האהבה הישנה שלי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T14:16:04.377Z"
+    },
     {
       "id": "6WVcHTkdlgkGSA3tB7HHId",
       "title": "אדם צובר זכרונות - הופעה חיה",
