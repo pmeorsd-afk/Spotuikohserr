@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2217,
-  "last_updated": "2026-10-29T12:05:13.370Z",
+  "version": 2218,
+  "last_updated": "2026-10-29T12:05:16.036Z",
   "artists": [
     {
       "id": "55Y3nx4GH1lH7WsDeuGuaw",
@@ -2360,6 +2360,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4QplKjJgHySvduWAx8l9KQ",
+      "title": "Ahava",
+      "artist": "Ari Samet",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T12:05:16.036Z"
+    },
     {
       "id": "4ra4WsUIRDxIQ6p0l5t276",
       "title": "רוקד עם הכאב",
