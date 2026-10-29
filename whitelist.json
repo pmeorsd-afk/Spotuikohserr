@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2264,
-  "last_updated": "2026-10-29T17:19:31.716Z",
+  "version": 2265,
+  "last_updated": "2026-10-29T17:19:35.117Z",
   "artists": [
+    {
+      "id": "1TmsjyiPsSlW5mtioUPjFX",
+      "canonical_name": "Hamenagnim Orchestra, MBD & Dovid Gabay",
+      "aliases": [
+        "Hamenagnim Orchestra, MBD & Dovid Gabay"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-29T17:19:35.117Z"
+    },
     {
       "id": "02uC7PMc664MCuLgkz41DU",
       "canonical_name": "Itzik Orlev",
