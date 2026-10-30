@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2370,
-  "last_updated": "2026-10-30T13:08:21.343Z",
+  "version": 2371,
+  "last_updated": "2026-10-30T13:13:17.969Z",
   "artists": [
     {
       "id": "7nAL6HRisO90oRTDWIF2IC",
@@ -2620,6 +2620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5GLmwnGKi99r3p7aJKQsc1",
+      "title": "טירוף",
+      "artist": "ים רפאלי, Orr Amrami Brockman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T13:13:17.969Z"
+    },
     {
       "id": "0UaByuABJpHpNDa3ytSXqx",
       "title": "הילדה הכי יפה בגן",
