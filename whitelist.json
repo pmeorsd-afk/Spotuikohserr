@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2302,
-  "last_updated": "2026-10-30T08:09:04.220Z",
+  "version": 2303,
+  "last_updated": "2026-10-30T08:09:09.414Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7aS5hPz9Erfd2rmUjCrBTY",
+      "title": "חוויות מרמזור אדום",
+      "artist": "אורי חזקיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:09:09.414Z"
+    },
     {
       "id": "0VfDI5HwYi3hej0mWgYO9m",
       "title": "שיחות עם בעלי מקצוע",
