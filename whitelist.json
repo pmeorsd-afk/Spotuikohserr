@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2287,
-  "last_updated": "2026-10-30T08:08:16.215Z",
+  "version": 2288,
+  "last_updated": "2026-10-30T08:08:18.951Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3eD8AySTsxNcSnJ9wO0sXw",
+      "title": "אל תירא ישראל",
+      "artist": "Subliminal, The Shadow, Itzik Shamli",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:08:18.951Z"
+    },
     {
       "id": "4Skkx52Dh8yo4G1ijAEGs3",
       "title": "Solo",
