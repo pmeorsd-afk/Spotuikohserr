@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2346,
-  "last_updated": "2026-10-30T12:19:37.288Z",
+  "version": 2347,
+  "last_updated": "2026-10-30T12:22:30.143Z",
   "artists": [
     {
       "id": "2E3KwjG9lqO6mC9laxOxgj",
@@ -2610,6 +2610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0MfWHHhwbngtVNrHc5Nzra",
+      "title": "לב אחר",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:22:30.143Z"
+    },
     {
       "id": "0VzfpwlCGWAnkpqLERPvpB",
       "title": "Don't Start",
