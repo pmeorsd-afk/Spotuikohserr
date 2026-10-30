@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2365,
-  "last_updated": "2026-10-30T13:02:50.685Z",
+  "version": 2366,
+  "last_updated": "2026-10-30T13:02:53.705Z",
   "artists": [
     {
       "id": "7nAL6HRisO90oRTDWIF2IC",
@@ -2620,6 +2620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0E3ixJlAAvnssJR1Cj7Hu4",
+      "title": "צעירים לנצח",
+      "artist": "Doli & Penn, Liran Danino, רביב כנר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T13:02:53.705Z"
+    },
     {
       "id": "3mlsYNI3s8njOxTqgf7DHG",
       "title": "מה עושות האיילות",
