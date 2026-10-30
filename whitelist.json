@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2371,
-  "last_updated": "2026-10-30T13:13:17.969Z",
+  "version": 2372,
+  "last_updated": "2026-10-30T13:13:29.738Z",
   "artists": [
     {
       "id": "7nAL6HRisO90oRTDWIF2IC",
@@ -2620,6 +2620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0qYTdtFha4PIKFgDMprRlk",
+      "title": "7 לילות",
+      "artist": "ליאם גולן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T13:13:29.738Z"
+    },
     {
       "id": "5GLmwnGKi99r3p7aJKQsc1",
       "title": "טירוף",
