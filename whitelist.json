@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2342,
-  "last_updated": "2026-10-30T12:04:57.801Z",
+  "version": 2343,
+  "last_updated": "2026-10-30T12:04:59.818Z",
   "artists": [
+    {
+      "id": "3x1Pm0HhOfBF3rItgOOgH3",
+      "canonical_name": "Rabbi Yehuda Razel",
+      "aliases": [
+        "Rabbi Yehuda Razel"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:04:59.818Z"
+    },
     {
       "id": "3DFP1zzuV8OC4q8Q7jsedr",
       "canonical_name": "Mendy Wald",
