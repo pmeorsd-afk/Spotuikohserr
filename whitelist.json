@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2374,
-  "last_updated": "2026-10-30T13:39:21.966Z",
+  "version": 2375,
+  "last_updated": "2026-10-30T13:45:08.681Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5iUJXYGYEqJEegcGipV1Vz",
+      "title": "ציפור מדבר - Remix",
+      "artist": "Neevos, אתניקס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T13:45:08.681Z"
+    },
     {
       "id": "5SN7WxRYfSLDxluO2m6L2b",
       "title": "יגדל אלוהים חי",
