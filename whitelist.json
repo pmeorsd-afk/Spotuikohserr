@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2334,
-  "last_updated": "2026-10-30T12:04:30.083Z",
+  "version": 2335,
+  "last_updated": "2026-10-30T12:04:32.133Z",
   "artists": [
     {
       "id": "3DFP1zzuV8OC4q8Q7jsedr",
@@ -2590,6 +2590,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2s3eyOn5GpLcPNc9a35UIx",
+      "title": "ואז תבואי",
+      "artist": "Harel Moyal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:04:32.133Z"
+    },
     {
       "id": "44a0iyAfqhRnL5IV0oMPEx",
       "title": "מישהו פעם",
