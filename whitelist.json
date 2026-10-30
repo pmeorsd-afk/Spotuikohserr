@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2327,
-  "last_updated": "2026-10-30T10:20:10.570Z",
+  "version": 2328,
+  "last_updated": "2026-10-30T10:20:12.459Z",
   "artists": [
     {
       "id": "3DFP1zzuV8OC4q8Q7jsedr",
@@ -2590,6 +2590,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0nCerLFUNyaQEYYZw14i9l",
+      "title": "שובבים במיטה",
+      "artist": "Ofra Weingarten, Dudu Zar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T10:20:12.459Z"
+    },
     {
       "id": "1rt4VDztGxNBV8CeXqqMt9",
       "title": "בוקר טוב",
