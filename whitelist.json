@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2369,
-  "last_updated": "2026-10-30T13:06:49.471Z",
+  "version": 2370,
+  "last_updated": "2026-10-30T13:08:21.343Z",
   "artists": [
     {
       "id": "7nAL6HRisO90oRTDWIF2IC",
@@ -2620,6 +2620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0UaByuABJpHpNDa3ytSXqx",
+      "title": "הילדה הכי יפה בגן",
+      "artist": "Yehudit Ravitz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T13:08:21.343Z"
+    },
     {
       "id": "1A9DDWsYDW226lhPIKAQM2",
       "title": "מעיין - Live",
