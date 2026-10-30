@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2280,
-  "last_updated": "2026-10-29T21:24:50.608Z",
+  "version": 2281,
+  "last_updated": "2026-10-30T08:07:58.803Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "698ItKASDavgwZ3WjaWjtz",
+      "title": "Faded",
+      "artist": "Alan Walker",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:07:58.803Z"
+    },
     {
       "id": "6TbPvBmgwJbqVjQC00fjaF",
       "title": "בא לי עוד",
