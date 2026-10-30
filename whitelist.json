@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2306,
-  "last_updated": "2026-10-30T08:09:18.759Z",
+  "version": 2307,
+  "last_updated": "2026-10-30T08:09:21.427Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Hv4suMQTzRKHBt2fVYmXN",
+      "title": "חלון קטן בהגזמה",
+      "artist": "אורי חזקיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:09:21.427Z"
+    },
     {
       "id": "7kfYFoZxGtQO53YbsEkmvN",
       "title": "יש לי תאומים",
