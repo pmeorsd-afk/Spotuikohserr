@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2326,
-  "last_updated": "2026-10-30T10:12:11.714Z",
+  "version": 2327,
+  "last_updated": "2026-10-30T10:20:10.570Z",
   "artists": [
     {
       "id": "3DFP1zzuV8OC4q8Q7jsedr",
@@ -2590,6 +2590,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1rt4VDztGxNBV8CeXqqMt9",
+      "title": "בוקר טוב",
+      "artist": "יעל ארנון ורד, אורי ביתן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T10:20:10.570Z"
+    },
     {
       "id": "66EEumUcLSo6a7heNxpcM7",
       "title": "היום יום הולדת",
