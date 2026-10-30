@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2303,
-  "last_updated": "2026-10-30T08:09:09.414Z",
+  "version": 2304,
+  "last_updated": "2026-10-30T08:09:13.226Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "38NIUJ0D0SlSSGb72HXomm",
+      "title": "סליחה טעיתי",
+      "artist": "אורי חזקיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:09:13.226Z"
+    },
     {
       "id": "7aS5hPz9Erfd2rmUjCrBTY",
       "title": "חוויות מרמזור אדום",
