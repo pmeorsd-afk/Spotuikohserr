@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2356,
-  "last_updated": "2026-10-30T12:44:04.293Z",
+  "version": 2357,
+  "last_updated": "2026-10-30T12:51:39.316Z",
   "artists": [
     {
       "id": "2E3KwjG9lqO6mC9laxOxgj",
@@ -2610,6 +2610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0gTXUkFAYj5io3fLtzNNKG",
+      "title": "יש לנו תיש",
+      "artist": "100 First Songs' Participants",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:51:39.316Z"
+    },
     {
       "id": "4K6OfLRSruLoE9mERGEXeF",
       "title": "שירי ילדות",
