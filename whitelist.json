@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2372,
-  "last_updated": "2026-10-30T13:13:29.738Z",
+  "version": 2373,
+  "last_updated": "2026-10-30T13:38:59.823Z",
   "artists": [
     {
       "id": "7nAL6HRisO90oRTDWIF2IC",
@@ -2620,6 +2620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5SN7WxRYfSLDxluO2m6L2b",
+      "title": "יגדל אלוהים חי",
+      "artist": "Yuval Dayan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T13:38:59.823Z"
+    },
     {
       "id": "0qYTdtFha4PIKFgDMprRlk",
       "title": "7 לילות",
