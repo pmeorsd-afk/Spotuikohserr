@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2347,
-  "last_updated": "2026-10-30T12:22:30.143Z",
+  "version": 2348,
+  "last_updated": "2026-10-30T12:36:08.898Z",
   "artists": [
     {
       "id": "2E3KwjG9lqO6mC9laxOxgj",
@@ -2610,6 +2610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "48Mfam49eeVvcmxB5TU9lg",
+      "title": "מי",
+      "artist": "נתנאל ששון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:36:08.898Z"
+    },
     {
       "id": "0MfWHHhwbngtVNrHc5Nzra",
       "title": "לב אחר",
