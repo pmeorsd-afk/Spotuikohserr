@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2293,
-  "last_updated": "2026-10-30T08:08:36.038Z",
+  "version": 2294,
+  "last_updated": "2026-10-30T08:08:38.825Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7EL0ojVU0xQMnY9lf7iOaD",
+      "title": "אור בשיגעון",
+      "artist": "Avihai Hollender",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:08:38.825Z"
+    },
     {
       "id": "5AapMePzeQgSgSqOSILU0L",
       "title": "לבד במדבר",
