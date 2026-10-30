@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2300,
-  "last_updated": "2026-10-30T08:08:57.676Z",
+  "version": 2301,
+  "last_updated": "2026-10-30T08:09:00.326Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4mQVg3cdNBL0RBIbjTxa7n",
+      "title": "הלוואי",
+      "artist": "Vic Ohana Jan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:09:00.326Z"
+    },
     {
       "id": "4SPzavyUne1VQihJqYN3RG",
       "title": "טובי",
