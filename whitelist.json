@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2354,
-  "last_updated": "2026-10-30T12:36:22.688Z",
+  "version": 2355,
+  "last_updated": "2026-10-30T12:39:10.028Z",
   "artists": [
     {
       "id": "2E3KwjG9lqO6mC9laxOxgj",
@@ -2610,6 +2610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2RkgKQJO3ySwHTD1GvPeR7",
+      "title": "רק שמתגעגעת",
+      "artist": "Moti Taka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:39:10.028Z"
+    },
     {
       "id": "70j0levi0vPvQB5okEwZvm",
       "title": "סיבות להישאר",
