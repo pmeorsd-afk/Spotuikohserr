@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2298,
-  "last_updated": "2026-10-30T08:08:51.881Z",
+  "version": 2299,
+  "last_updated": "2026-10-30T08:08:54.778Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7uwbkdstWT7e5Tl70aPOnG",
+      "title": "ראפ מטורף",
+      "artist": "Tuna, Ravid Plotnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:08:54.778Z"
+    },
     {
       "id": "25GDF4UyofWajEFuJVCRON",
       "title": "גיבור של אמא",
