@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2339,
-  "last_updated": "2026-10-30T12:04:45.780Z",
+  "version": 2340,
+  "last_updated": "2026-10-30T12:04:52.461Z",
   "artists": [
     {
       "id": "3DFP1zzuV8OC4q8Q7jsedr",
@@ -2590,6 +2590,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4GmQBXKgDqPpUQXXxp1ceH",
+      "title": "מתי את חוזרת",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:04:52.461Z"
+    },
     {
       "id": "4gb0rBrEWVEXnEzG0EhTcM",
       "title": "שוב אני בדד",
