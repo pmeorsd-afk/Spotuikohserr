@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2304,
-  "last_updated": "2026-10-30T08:09:13.226Z",
+  "version": 2305,
+  "last_updated": "2026-10-30T08:09:16.335Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2gn9lmFAX8lJ0ztjpMX3ca",
+      "title": "נחמדים עם אינטרס",
+      "artist": "אורי חזקיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:09:16.335Z"
+    },
     {
       "id": "38NIUJ0D0SlSSGb72HXomm",
       "title": "סליחה טעיתי",
