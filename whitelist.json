@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2333,
-  "last_updated": "2026-10-30T12:04:27.183Z",
+  "version": 2334,
+  "last_updated": "2026-10-30T12:04:30.083Z",
   "artists": [
     {
       "id": "3DFP1zzuV8OC4q8Q7jsedr",
@@ -2590,6 +2590,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44a0iyAfqhRnL5IV0oMPEx",
+      "title": "מישהו פעם",
+      "artist": "Ivri Lider",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:04:30.083Z"
+    },
     {
       "id": "4zXfQYhcSboWEOAwIQST9N",
       "title": "רק שלך",
