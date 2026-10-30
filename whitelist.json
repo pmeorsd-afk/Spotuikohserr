@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2284,
-  "last_updated": "2026-10-30T08:08:06.170Z",
+  "version": 2285,
+  "last_updated": "2026-10-30T08:08:09.747Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0gongWVNRJmap1KKaplB5v",
+      "title": "את אותי שופטת - Live",
+      "artist": "Subliminal, מלך הקסטות, The Shadow, Shar-El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:08:09.747Z"
+    },
     {
       "id": "1UArL3p8ikilNaCMousXZ8",
       "title": "Womb Glow",
