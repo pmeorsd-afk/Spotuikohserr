@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2352,
-  "last_updated": "2026-10-30T12:36:18.606Z",
+  "version": 2353,
+  "last_updated": "2026-10-30T12:36:20.469Z",
   "artists": [
     {
       "id": "2E3KwjG9lqO6mC9laxOxgj",
@@ -2610,6 +2610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7iyrgGwEfgyz5PlNGyA0wM",
+      "title": "על משכבי",
+      "artist": "Moshe Perez, חנן בן ארי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:36:20.469Z"
+    },
     {
       "id": "3BpC9IGSrMtbDDnKrkXTev",
       "title": "גבולות היגיון",
