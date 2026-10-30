@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2350,
-  "last_updated": "2026-10-30T12:36:14.017Z",
+  "version": 2351,
+  "last_updated": "2026-10-30T12:36:16.029Z",
   "artists": [
     {
       "id": "2E3KwjG9lqO6mC9laxOxgj",
@@ -2610,6 +2610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5R4rR056ymeA26u2pOBNmF",
+      "title": "בורח מהכל",
+      "artist": "Shir Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:36:16.029Z"
+    },
     {
       "id": "2fAggPbEZsrecBmsfbhY9B",
       "title": "פחד מפרידות",
