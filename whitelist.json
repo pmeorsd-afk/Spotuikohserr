@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2348,
-  "last_updated": "2026-10-30T12:36:08.898Z",
+  "version": 2349,
+  "last_updated": "2026-10-30T12:36:12.058Z",
   "artists": [
     {
       "id": "2E3KwjG9lqO6mC9laxOxgj",
@@ -2610,6 +2610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4mcOEZ4RNkD4RXEc4xBceS",
+      "title": "נר לכל לילה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:36:12.058Z"
+    },
     {
       "id": "48Mfam49eeVvcmxB5TU9lg",
       "title": "מי",
