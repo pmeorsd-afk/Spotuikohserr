@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2295,
-  "last_updated": "2026-10-30T08:08:41.560Z",
+  "version": 2296,
+  "last_updated": "2026-10-30T08:08:44.779Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3HoMRJB12mrQAul7hwfRQv",
+      "title": "לקום",
+      "artist": "Avihai Hollender",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:08:44.779Z"
+    },
     {
       "id": "2ZcFkY00Y2zSARYfhBYxFM",
       "title": "אמא",
