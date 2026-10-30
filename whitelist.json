@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2368,
-  "last_updated": "2026-10-30T13:06:28.112Z",
+  "version": 2369,
+  "last_updated": "2026-10-30T13:06:49.471Z",
   "artists": [
     {
       "id": "7nAL6HRisO90oRTDWIF2IC",
@@ -2620,6 +2620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1A9DDWsYDW226lhPIKAQM2",
+      "title": "מעיין - Live",
+      "artist": "צאן ברזל מוזיקה, Eviatar Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T13:06:49.471Z"
+    },
     {
       "id": "43RLvK8Nlkl25h21w91PXq",
       "title": "אצלי הכול בסדר",
