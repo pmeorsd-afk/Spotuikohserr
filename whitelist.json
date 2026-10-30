@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2318,
-  "last_updated": "2026-10-30T09:49:55.644Z",
+  "version": 2319,
+  "last_updated": "2026-10-30T09:49:57.591Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1kGABmrz5j0k2bGES7bAXK",
+      "title": "Higher and Higher",
+      "artist": "Moshav",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T09:49:57.591Z"
+    },
     {
       "id": "7xSRAkFFuCp5gAy0sks1PH",
       "title": "ירושלים",
