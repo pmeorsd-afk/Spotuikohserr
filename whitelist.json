@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2344,
-  "last_updated": "2026-10-30T12:05:02.400Z",
+  "version": 2345,
+  "last_updated": "2026-10-30T12:10:13.318Z",
   "artists": [
     {
       "id": "2E3KwjG9lqO6mC9laxOxgj",
@@ -2610,6 +2610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0VzfpwlCGWAnkpqLERPvpB",
+      "title": "Don't Start",
+      "artist": "Bizzy Banks",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:10:13.318Z"
+    },
     {
       "id": "6VyockgkLKCpigtLna4cTG",
       "title": "מפחד להתגבר עלייך?",
