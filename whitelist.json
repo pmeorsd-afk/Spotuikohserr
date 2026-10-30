@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2364,
-  "last_updated": "2026-10-30T13:02:39.334Z",
+  "version": 2365,
+  "last_updated": "2026-10-30T13:02:50.685Z",
   "artists": [
     {
       "id": "7nAL6HRisO90oRTDWIF2IC",
@@ -2620,6 +2620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3mlsYNI3s8njOxTqgf7DHG",
+      "title": "מה עושות האיילות",
+      "artist": "Yoni Rechter, Yehudit Ravitz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T13:02:50.685Z"
+    },
     {
       "id": "2cZtX94TdAdC5w0tdAXLY6",
       "title": "יש לי גלידה",
