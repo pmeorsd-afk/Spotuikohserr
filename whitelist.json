@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2328,
-  "last_updated": "2026-10-30T10:20:12.459Z",
+  "version": 2329,
+  "last_updated": "2026-10-30T10:20:14.906Z",
   "artists": [
     {
       "id": "3DFP1zzuV8OC4q8Q7jsedr",
@@ -2590,6 +2590,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2E6Rxv8qKgGj1ZL9rAuuSX",
+      "title": "מי שטוב לו",
+      "artist": "נירה רבינוביץ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T10:20:14.906Z"
+    },
     {
       "id": "0nCerLFUNyaQEYYZw14i9l",
       "title": "שובבים במיטה",
