@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2341,
-  "last_updated": "2026-10-30T12:04:55.171Z",
+  "version": 2342,
+  "last_updated": "2026-10-30T12:04:57.801Z",
   "artists": [
     {
       "id": "3DFP1zzuV8OC4q8Q7jsedr",
@@ -2590,6 +2590,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6VyockgkLKCpigtLna4cTG",
+      "title": "מפחד להתגבר עלייך?",
+      "artist": "נדב חנציס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:04:57.801Z"
+    },
     {
       "id": "68CDBQCrbfDlk9WBRLfMz2",
       "title": "חצי לב",
