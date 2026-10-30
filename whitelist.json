@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2307,
-  "last_updated": "2026-10-30T08:09:21.427Z",
+  "version": 2308,
+  "last_updated": "2026-10-30T08:09:24.501Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "28tCQKMuSmbrGKgBVwDON0",
+      "title": "אם מחר אני מת",
+      "artist": "Liran Danino",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:09:24.501Z"
+    },
     {
       "id": "3Hv4suMQTzRKHBt2fVYmXN",
       "title": "חלון קטן בהגזמה",
