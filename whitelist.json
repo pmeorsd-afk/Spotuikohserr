@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2349,
-  "last_updated": "2026-10-30T12:36:12.058Z",
+  "version": 2350,
+  "last_updated": "2026-10-30T12:36:14.017Z",
   "artists": [
     {
       "id": "2E3KwjG9lqO6mC9laxOxgj",
@@ -2610,6 +2610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2fAggPbEZsrecBmsfbhY9B",
+      "title": "פחד מפרידות",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:36:14.017Z"
+    },
     {
       "id": "4mcOEZ4RNkD4RXEc4xBceS",
       "title": "נר לכל לילה",
