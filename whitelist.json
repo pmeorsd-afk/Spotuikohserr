@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2363,
-  "last_updated": "2026-10-30T12:58:31.913Z",
+  "version": 2364,
+  "last_updated": "2026-10-30T13:02:39.334Z",
   "artists": [
     {
       "id": "7nAL6HRisO90oRTDWIF2IC",
@@ -2620,6 +2620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2cZtX94TdAdC5w0tdAXLY6",
+      "title": "יש לי גלידה",
+      "artist": "100 First Songs' Participants",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T13:02:39.334Z"
+    },
     {
       "id": "4Of7rzpRpV1mWRbhp5rAqG",
       "title": "Bruises",
