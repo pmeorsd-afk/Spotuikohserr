@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2289,
-  "last_updated": "2026-10-30T08:08:22.291Z",
+  "version": 2290,
+  "last_updated": "2026-10-30T08:08:25.701Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7xmBJqHpKERV8Pf0rMljjF",
+      "title": "חי מיום ליום - מתוך מופע האיחוד בקיסריה",
+      "artist": "Subliminal, The Shadow",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:08:25.701Z"
+    },
     {
       "id": "792FHkvZbBQuWWM1a4TfL8",
       "title": "Before You Leave Me",
