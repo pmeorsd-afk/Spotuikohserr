@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2310,
-  "last_updated": "2026-10-30T08:09:34.306Z",
+  "version": 2311,
+  "last_updated": "2026-10-30T08:09:37.469Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3i7hZUtOpGMTF0fOhBwmcy",
+      "title": "מכתב לאחי",
+      "artist": "Elai Botner, Kobi Aflalo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:09:37.469Z"
+    },
     {
       "id": "5K5iAy34HkAPOovaNREVFm",
       "title": "עניין של זמן",
