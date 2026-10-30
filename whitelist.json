@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2373,
-  "last_updated": "2026-10-30T13:38:59.823Z",
+  "version": 2374,
+  "last_updated": "2026-10-30T13:39:21.966Z",
   "artists": [
+    {
+      "id": "65khIlz70BvoqhoZaIz4ao",
+      "canonical_name": "דורשי ה' וחברים",
+      "aliases": [
+        "דורשי ה' וחברים"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T13:39:21.966Z"
+    },
     {
       "id": "7nAL6HRisO90oRTDWIF2IC",
       "canonical_name": "100 First Songs' Participants",
