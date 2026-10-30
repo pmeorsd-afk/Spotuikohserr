@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2345,
-  "last_updated": "2026-10-30T12:10:13.318Z",
+  "version": 2346,
+  "last_updated": "2026-10-30T12:19:37.288Z",
   "artists": [
     {
       "id": "2E3KwjG9lqO6mC9laxOxgj",
@@ -12126,13 +12126,6 @@
       "updated_at": "2026-10-21T19:00:23.613Z"
     },
     {
-      "id": "1c14c8372b7f8df800bff27c11fd384319e112ca24b62b98",
-      "url": "https://i.scdn.co/image/ab67706f00000002472aa0a59f778d417bc62ed4",
-      "scope": "home",
-      "status": "blocked",
-      "updated_at": "2026-10-21T19:00:30.624Z"
-    },
-    {
       "id": "f20709eb13b8f1a72ea4cf153aa48237650cc7a40b2328e3",
       "url": "https://i.scdn.co/image/ab67616d00001e022792b2b2ce51429bb9c72994",
       "scope": "home",
@@ -12376,6 +12369,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-10-29T21:17:16.374Z"
+    },
+    {
+      "id": "1c14c8372b7f8df800bff27c11fd384319e112ca24b62b98",
+      "url": "https://i.scdn.co/image/ab67706f00000002472aa0a59f778d417bc62ed4",
+      "scope": "home",
+      "status": "blocked",
+      "updated_at": "2026-10-30T12:19:37.288Z"
     }
   ],
   "search_images": [
