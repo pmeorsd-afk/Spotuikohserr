@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2321,
-  "last_updated": "2026-10-30T10:09:53.213Z",
+  "version": 2322,
+  "last_updated": "2026-10-30T10:12:03.984Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "66EEumUcLSo6a7heNxpcM7",
+      "title": "היום יום הולדת",
+      "artist": "Hop! Channel, Orit Shalom, Ariel Levin, Yali Watson, Tal Blecharovitz, Ziv Shalit",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T10:12:03.984Z"
+    },
     {
       "id": "5geGjhHEcR76iJ4SH64S7I",
       "title": "Send Me an Angel",
