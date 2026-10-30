@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2335,
-  "last_updated": "2026-10-30T12:04:32.133Z",
+  "version": 2336,
+  "last_updated": "2026-10-30T12:04:35.649Z",
   "artists": [
     {
       "id": "3DFP1zzuV8OC4q8Q7jsedr",
@@ -2590,6 +2590,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4rIPvA6THvsVs7zMIeYxv9",
+      "title": "הכוכבים בוכים בלילה",
+      "artist": "Doli & Penn, Shiri Maimon, דודו אהרון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:04:35.649Z"
+    },
     {
       "id": "2s3eyOn5GpLcPNc9a35UIx",
       "title": "ואז תבואי",
