@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2305,
-  "last_updated": "2026-10-30T08:09:16.335Z",
+  "version": 2306,
+  "last_updated": "2026-10-30T08:09:18.759Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7kfYFoZxGtQO53YbsEkmvN",
+      "title": "יש לי תאומים",
+      "artist": "אורי חזקיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:09:18.759Z"
+    },
     {
       "id": "2gn9lmFAX8lJ0ztjpMX3ca",
       "title": "נחמדים עם אינטרס",
