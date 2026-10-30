@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2313,
-  "last_updated": "2026-10-30T08:09:45.609Z",
+  "version": 2314,
+  "last_updated": "2026-10-30T08:29:55.091Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0tlJOV3vOt399JuloDxbk0",
+      "title": "מחרוזת שירי אתניקס - Live",
+      "artist": "Eyal Golan, Ethnix",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:29:55.091Z"
+    },
     {
       "id": "2yFVHu7k1zCn0hZBVqIIKK",
       "title": "Malyoun",
