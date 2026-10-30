@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2338,
-  "last_updated": "2026-10-30T12:04:43.695Z",
+  "version": 2339,
+  "last_updated": "2026-10-30T12:04:45.780Z",
   "artists": [
     {
       "id": "3DFP1zzuV8OC4q8Q7jsedr",
@@ -2590,6 +2590,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4gb0rBrEWVEXnEzG0EhTcM",
+      "title": "שוב אני בדד",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:04:45.780Z"
+    },
     {
       "id": "5sUTab2UduAG5tZSjrFsaN",
       "title": "פזמון אחר",
