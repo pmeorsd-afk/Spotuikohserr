@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2331,
-  "last_updated": "2026-10-30T10:24:41.025Z",
+  "version": 2332,
+  "last_updated": "2026-10-30T10:31:35.344Z",
   "artists": [
     {
       "id": "3DFP1zzuV8OC4q8Q7jsedr",
@@ -2590,6 +2590,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7D9SA930v2PGOEmQEBYwrs",
+      "title": "משהו ממני",
+      "artist": "Harel Skaat",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T10:31:35.344Z"
+    },
     {
       "id": "6LCbJAn167GOV0qverLYJA",
       "title": "השור",
