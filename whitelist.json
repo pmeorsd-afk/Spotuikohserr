@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2359,
-  "last_updated": "2026-10-30T12:52:01.656Z",
+  "version": 2360,
+  "last_updated": "2026-10-30T12:52:38.857Z",
   "artists": [
     {
       "id": "7nAL6HRisO90oRTDWIF2IC",
@@ -2620,6 +2620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7l0LDXTObfCys2klWOKs7L",
+      "title": "הופה היי",
+      "artist": "Gidi Gov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:52:38.857Z"
+    },
     {
       "id": "6DqT5ZKuDWs630LyTJW53e",
       "title": "ברקים ורעמים",
