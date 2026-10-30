@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2315,
-  "last_updated": "2026-10-30T08:40:53.196Z",
+  "version": 2316,
+  "last_updated": "2026-10-30T08:44:20.930Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2TwvrGEg8qLj2TIYd5PmpQ",
+      "title": "דוד ושאול - Remastered",
+      "artist": "Ehud Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:44:20.930Z"
+    },
     {
       "id": "46pgmjw6L4MMP9tQJ4K4ep",
       "title": "היום - Live",
