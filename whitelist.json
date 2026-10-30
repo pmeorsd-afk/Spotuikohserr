@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2299,
-  "last_updated": "2026-10-30T08:08:54.778Z",
+  "version": 2300,
+  "last_updated": "2026-10-30T08:08:57.676Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4SPzavyUne1VQihJqYN3RG",
+      "title": "טובי",
+      "artist": "Ron Sky Nesher, Vic Ohana Jan, Jah B",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:08:57.676Z"
+    },
     {
       "id": "7uwbkdstWT7e5Tl70aPOnG",
       "title": "ראפ מטורף",
