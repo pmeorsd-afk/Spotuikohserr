@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2324,
-  "last_updated": "2026-10-30T10:12:07.879Z",
+  "version": 2325,
+  "last_updated": "2026-10-30T10:12:09.737Z",
   "artists": [
+    {
+      "id": "0mYZQjyiH68vdWkZTgZ0vQ",
+      "canonical_name": "נהוראי בוכריץ",
+      "aliases": [
+        "נהוראי בוכריץ"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T10:12:09.737Z"
+    },
     {
       "id": "1U8ahAvgCwrmGhKDOcjoDP",
       "canonical_name": "ישי טהרני",
