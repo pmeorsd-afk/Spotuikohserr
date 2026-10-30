@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2366,
-  "last_updated": "2026-10-30T13:02:53.705Z",
+  "version": 2367,
+  "last_updated": "2026-10-30T13:04:29.088Z",
   "artists": [
     {
       "id": "7nAL6HRisO90oRTDWIF2IC",
@@ -2620,6 +2620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1q1ZSCYH3Va33oeiR8PrtH",
+      "title": "ילדים ומטריה",
+      "artist": "Ofra Weingarten, Dudu Zar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T13:04:29.088Z"
+    },
     {
       "id": "0E3ixJlAAvnssJR1Cj7Hu4",
       "title": "צעירים לנצח",
