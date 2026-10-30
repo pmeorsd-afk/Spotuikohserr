@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2286,
-  "last_updated": "2026-10-30T08:08:12.582Z",
+  "version": 2287,
+  "last_updated": "2026-10-30T08:08:16.215Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Skkx52Dh8yo4G1ijAEGs3",
+      "title": "Solo",
+      "artist": "Myles Smith",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:08:16.215Z"
+    },
     {
       "id": "6Jw2pp1L8MMasiBb3DE99v",
       "title": "עם הנצח",
