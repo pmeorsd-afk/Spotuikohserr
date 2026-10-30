@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2332,
-  "last_updated": "2026-10-30T10:31:35.344Z",
+  "version": 2333,
+  "last_updated": "2026-10-30T12:04:27.183Z",
   "artists": [
     {
       "id": "3DFP1zzuV8OC4q8Q7jsedr",
@@ -2590,6 +2590,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4zXfQYhcSboWEOAwIQST9N",
+      "title": "רק שלך",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:04:27.183Z"
+    },
     {
       "id": "7D9SA930v2PGOEmQEBYwrs",
       "title": "משהו ממני",
