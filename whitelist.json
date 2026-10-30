@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2312,
-  "last_updated": "2026-10-30T08:09:42.562Z",
+  "version": 2313,
+  "last_updated": "2026-10-30T08:09:45.609Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2yFVHu7k1zCn0hZBVqIIKK",
+      "title": "Malyoun",
+      "artist": "Jadal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:09:45.609Z"
+    },
     {
       "id": "3sOhPhkh90qwth6euAShhH",
       "title": "חיכיתי",
