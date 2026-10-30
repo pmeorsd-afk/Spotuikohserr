@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2301,
-  "last_updated": "2026-10-30T08:09:00.326Z",
+  "version": 2302,
+  "last_updated": "2026-10-30T08:09:04.220Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0VfDI5HwYi3hej0mWgYO9m",
+      "title": "שיחות עם בעלי מקצוע",
+      "artist": "אורי חזקיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:09:04.220Z"
+    },
     {
       "id": "4mQVg3cdNBL0RBIbjTxa7n",
       "title": "הלוואי",
