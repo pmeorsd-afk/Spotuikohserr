@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2355,
-  "last_updated": "2026-10-30T12:39:10.028Z",
+  "version": 2356,
+  "last_updated": "2026-10-30T12:44:04.293Z",
   "artists": [
     {
       "id": "2E3KwjG9lqO6mC9laxOxgj",
@@ -2610,6 +2610,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4K6OfLRSruLoE9mERGEXeF",
+      "title": "שירי ילדות",
+      "artist": "Uzi Hitman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:44:04.293Z"
+    },
     {
       "id": "2RkgKQJO3ySwHTD1GvPeR7",
       "title": "רק שמתגעגעת",
