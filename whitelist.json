@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2281,
-  "last_updated": "2026-10-30T08:07:58.803Z",
+  "version": 2282,
+  "last_updated": "2026-10-30T08:08:01.239Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7BhmwvCdQZNwuQXSHw5TzP",
+      "title": "Headlights (feat. KIDDO)",
+      "artist": "Alok, Alan Walker, KIDDO",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:08:01.239Z"
+    },
     {
       "id": "698ItKASDavgwZ3WjaWjtz",
       "title": "Faded",
