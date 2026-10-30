@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2336,
-  "last_updated": "2026-10-30T12:04:35.649Z",
+  "version": 2337,
+  "last_updated": "2026-10-30T12:04:38.022Z",
   "artists": [
     {
       "id": "3DFP1zzuV8OC4q8Q7jsedr",
@@ -2590,6 +2590,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ep8xPs6CUqvcxAKTypQ3b",
+      "title": "שכחתי מזמן",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:04:38.022Z"
+    },
     {
       "id": "4rIPvA6THvsVs7zMIeYxv9",
       "title": "הכוכבים בוכים בלילה",
