@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2294,
-  "last_updated": "2026-10-30T08:08:38.825Z",
+  "version": 2295,
+  "last_updated": "2026-10-30T08:08:41.560Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ZcFkY00Y2zSARYfhBYxFM",
+      "title": "אמא",
+      "artist": "Static",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:08:41.560Z"
+    },
     {
       "id": "7EL0ojVU0xQMnY9lf7iOaD",
       "title": "אור בשיגעון",
