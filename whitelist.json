@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2358,
-  "last_updated": "2026-10-30T12:51:41.443Z",
+  "version": 2359,
+  "last_updated": "2026-10-30T12:52:01.656Z",
   "artists": [
+    {
+      "id": "7nAL6HRisO90oRTDWIF2IC",
+      "canonical_name": "100 First Songs' Participants",
+      "aliases": [
+        "100 First Songs' Participants"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:52:01.656Z"
+    },
     {
       "id": "2E3KwjG9lqO6mC9laxOxgj",
       "canonical_name": "Rabbi Micha Razel",
