@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2291,
-  "last_updated": "2026-10-30T08:08:28.863Z",
+  "version": 2292,
+  "last_updated": "2026-10-30T08:08:31.974Z",
   "artists": [
     {
       "id": "1TmsjyiPsSlW5mtioUPjFX",
@@ -2550,6 +2550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1zNnG4BzPCFh7evzhKeYvm",
+      "title": "דמוקרטיה",
+      "artist": "Subliminal, The Shadow",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T08:08:31.974Z"
+    },
     {
       "id": "3GizIK4OiQeU86V6Lu7sYC",
       "title": "טורו - מתוך מופע האיחוד במנורה",
