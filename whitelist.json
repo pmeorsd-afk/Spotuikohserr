@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2361,
-  "last_updated": "2026-10-30T12:55:39.465Z",
+  "version": 2362,
+  "last_updated": "2026-10-30T12:57:44.596Z",
   "artists": [
     {
       "id": "7nAL6HRisO90oRTDWIF2IC",
@@ -2620,6 +2620,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2gMXnyrvIjhVBUZwvLZDMP",
+      "title": "Before You Go",
+      "artist": "Lewis Capaldi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:57:44.596Z"
+    },
     {
       "id": "3EvjnMmHplWaRoBoWw1uak",
       "title": "קן לציפור",
