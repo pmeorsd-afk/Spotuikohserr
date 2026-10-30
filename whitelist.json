@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2343,
-  "last_updated": "2026-10-30T12:04:59.818Z",
+  "version": 2344,
+  "last_updated": "2026-10-30T12:05:02.400Z",
   "artists": [
+    {
+      "id": "2E3KwjG9lqO6mC9laxOxgj",
+      "canonical_name": "Rabbi Micha Razel",
+      "aliases": [
+        "Rabbi Micha Razel"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-30T12:05:02.400Z"
+    },
     {
       "id": "3x1Pm0HhOfBF3rItgOOgH3",
       "canonical_name": "Rabbi Yehuda Razel",
