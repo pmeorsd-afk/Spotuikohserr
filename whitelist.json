@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2383,
-  "last_updated": "2026-10-31T16:51:43.396Z",
+  "version": 2384,
+  "last_updated": "2026-10-31T16:51:47.076Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "79CN8AKlwkxrB3xsQlNvmS",
+      "title": "משום",
+      "artist": "Avihu Pinhasov Rhythm Club",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T16:51:47.076Z"
+    },
     {
       "id": "183rnfbCaoktTQ0Pf1jtKj",
       "title": "עדיין ריק",
