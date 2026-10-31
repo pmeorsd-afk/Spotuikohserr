@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2439,
-  "last_updated": "2026-10-31T21:12:34.315Z",
+  "version": 2440,
+  "last_updated": "2026-10-31T21:48:24.098Z",
   "artists": [
     {
       "id": "48uve5oQZGuhUZoBD5zj1E",
@@ -2650,6 +2650,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7AoF9a3b7ur0vUHQX4UeTx",
+      "title": "רודף אהבה בימים",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T21:48:24.098Z"
+    },
     {
       "id": "6WbkWjIqcMxRzkJYzMZUpX",
       "title": "ורוד שחור",
