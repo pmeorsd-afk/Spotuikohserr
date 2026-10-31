@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2385,
-  "last_updated": "2026-10-31T16:51:49.486Z",
+  "version": 2386,
+  "last_updated": "2026-10-31T16:57:42.662Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2HK6jOmXb7vyqtstptpi4T",
+      "title": "קחי אותי לטייל",
+      "artist": "Dudu Tassa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T16:57:42.662Z"
+    },
     {
       "id": "7abXNRK8tyaOSb7P0eCvOo",
       "title": "הגולה",
