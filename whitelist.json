@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2390,
-  "last_updated": "2026-10-31T17:36:20.659Z",
+  "version": 2391,
+  "last_updated": "2026-10-31T17:36:24.267Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1zf3h6fvmNJyUE3sG6LbWs",
+      "title": "הנך יפה",
+      "artist": "Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T17:36:24.267Z"
+    },
     {
       "id": "6VhdWiz7GI2eaYcGSsaY7w",
       "title": "לולה",
