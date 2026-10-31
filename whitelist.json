@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2393,
-  "last_updated": "2026-10-31T17:36:49.040Z",
+  "version": 2394,
+  "last_updated": "2026-10-31T18:28:02.557Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4QDPzbvvoLr5EhsRO0n4KX",
+      "title": "צריך אותך",
+      "artist": "Full Trunk",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T18:28:02.557Z"
+    },
     {
       "id": "3HBMPTdsZQNO24vbrgcJKZ",
       "title": "מה את מרגישה",
