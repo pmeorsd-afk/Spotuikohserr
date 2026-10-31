@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2403,
-  "last_updated": "2026-10-31T19:27:21.384Z",
+  "version": 2404,
+  "last_updated": "2026-10-31T19:27:24.051Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "73P7EtIcLu156xghPbjGQO",
+      "title": "משמרת לילה",
+      "artist": "אורי חזקיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T19:27:24.051Z"
+    },
     {
       "id": "0mDveLtHsGegDFoKOXUj2Z",
       "title": "תינוק וי איי פי",
