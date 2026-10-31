@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2441,
-  "last_updated": "2026-10-31T21:49:29.521Z",
+  "version": 2442,
+  "last_updated": "2026-10-31T21:49:42.005Z",
   "artists": [
+    {
+      "id": "5j9zBZnCbTlGV6l9cGovLZ",
+      "canonical_name": "Ruli Dikman",
+      "aliases": [
+        "Ruli Dikman"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T21:49:42.005Z"
+    },
     {
       "id": "48uve5oQZGuhUZoBD5zj1E",
       "canonical_name": "Gil Israelov",
