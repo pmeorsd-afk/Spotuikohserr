@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2418,
-  "last_updated": "2026-10-31T20:14:28.761Z",
+  "version": 2419,
+  "last_updated": "2026-10-31T20:14:31.672Z",
   "artists": [
     {
       "id": "2qLBZhmkfxI1LD0r02VilM",
@@ -2640,6 +2640,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1YJYTqt7oze2DEP1zEJnbE",
+      "title": "על מה את חולמת",
+      "artist": "Dudu Tassa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:14:31.672Z"
+    },
     {
       "id": "4Btyxfypvub6XpVxS6pXf4",
       "title": "יכול להיות",
