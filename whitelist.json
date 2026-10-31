@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2421,
-  "last_updated": "2026-10-31T20:14:36.193Z",
+  "version": 2422,
+  "last_updated": "2026-10-31T20:14:38.995Z",
   "artists": [
     {
       "id": "2qLBZhmkfxI1LD0r02VilM",
@@ -2640,6 +2640,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0GeM7Vxdp3bRquzIABkQWu",
+      "title": "הכי חכם על כדור הארץ",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:14:38.995Z"
+    },
     {
       "id": "14IfynYZcEUgd1Jd5wWXrd",
       "title": "אתה בשידור",
