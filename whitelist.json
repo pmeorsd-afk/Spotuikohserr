@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2423,
-  "last_updated": "2026-10-31T20:14:42.279Z",
+  "version": 2424,
+  "last_updated": "2026-10-31T20:14:44.611Z",
   "artists": [
+    {
+      "id": "48uve5oQZGuhUZoBD5zj1E",
+      "canonical_name": "Gil Israelov",
+      "aliases": [
+        "Gil Israelov"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:14:44.611Z"
+    },
     {
       "id": "2qLBZhmkfxI1LD0r02VilM",
       "canonical_name": "פורת נוב",
