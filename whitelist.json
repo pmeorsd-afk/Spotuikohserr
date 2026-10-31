@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2429,
-  "last_updated": "2026-10-31T20:22:49.594Z",
+  "version": 2430,
+  "last_updated": "2026-10-31T20:25:40.809Z",
   "artists": [
     {
       "id": "48uve5oQZGuhUZoBD5zj1E",
@@ -2650,6 +2650,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3pQyEDHwgxiK3z0j2jIZKW",
+      "title": "דברי איתי יותר",
+      "artist": "Nathan Goshen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:25:40.809Z"
+    },
     {
       "id": "0qBJIWn5J0Mnmr6qoiNZdg",
       "title": "מתישהו",
