@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2433,
-  "last_updated": "2026-10-31T20:42:26.086Z",
+  "version": 2434,
+  "last_updated": "2026-10-31T20:48:44.144Z",
   "artists": [
     {
       "id": "48uve5oQZGuhUZoBD5zj1E",
@@ -2650,6 +2650,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3JvKfv6T31zO0ini8iNItO",
+      "title": "Another Love",
+      "artist": "Tom Odell",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:48:44.144Z"
+    },
     {
       "id": "7fImIGSYBybHzMdDz9KSNq",
       "title": "רוצה אליך",
