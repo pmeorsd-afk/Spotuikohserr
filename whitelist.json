@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2394,
-  "last_updated": "2026-10-31T18:28:02.557Z",
+  "version": 2395,
+  "last_updated": "2026-10-31T18:29:40.898Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "576UCYUxW1xQzKUCFzoQdZ",
+      "title": "איזה מזל",
+      "artist": "Hatikva 6, Ravid Plotnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T18:29:40.898Z"
+    },
     {
       "id": "4QDPzbvvoLr5EhsRO0n4KX",
       "title": "צריך אותך",
