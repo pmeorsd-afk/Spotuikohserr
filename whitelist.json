@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2440,
-  "last_updated": "2026-10-31T21:48:24.098Z",
+  "version": 2441,
+  "last_updated": "2026-10-31T21:49:29.521Z",
   "artists": [
     {
       "id": "48uve5oQZGuhUZoBD5zj1E",
@@ -2650,6 +2650,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5ANQ0oXjOueYMbvjYL4iBp",
+      "title": "אין מקום לדאגה",
+      "artist": "Beit Habubot, אמיר אטיאס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T21:49:29.521Z"
+    },
     {
       "id": "7AoF9a3b7ur0vUHQX4UeTx",
       "title": "רודף אהבה בימים",
