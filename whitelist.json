@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2427,
-  "last_updated": "2026-10-31T20:18:25.957Z",
+  "version": 2428,
+  "last_updated": "2026-10-31T20:21:07.643Z",
   "artists": [
     {
       "id": "48uve5oQZGuhUZoBD5zj1E",
@@ -2650,6 +2650,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5K3fJmFEJZltzsH89Ggvn9",
+      "title": "שאריות מעצמי",
+      "artist": "Shir Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:21:07.643Z"
+    },
     {
       "id": "7glM2ZkHs4z1HU7lvDtXEV",
       "title": "זה שלנו",
