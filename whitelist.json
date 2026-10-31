@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2408,
-  "last_updated": "2026-10-31T19:35:46.349Z",
+  "version": 2409,
+  "last_updated": "2026-10-31T20:13:59.704Z",
   "artists": [
+    {
+      "id": "2qLBZhmkfxI1LD0r02VilM",
+      "canonical_name": "פורת נוב",
+      "aliases": [
+        "פורת נוב"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:13:59.704Z"
+    },
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
       "canonical_name": "דורשי ה' וחברים",
