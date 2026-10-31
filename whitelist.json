@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2426,
-  "last_updated": "2026-10-31T20:18:23.426Z",
+  "version": 2427,
+  "last_updated": "2026-10-31T20:18:25.957Z",
   "artists": [
     {
       "id": "48uve5oQZGuhUZoBD5zj1E",
@@ -2650,6 +2650,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7glM2ZkHs4z1HU7lvDtXEV",
+      "title": "זה שלנו",
+      "artist": "Nathan Goshen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:18:25.957Z"
+    },
     {
       "id": "5mBEIBx8LMIedsrnRmejCG",
       "title": "תכתוב לאל מכתב",
