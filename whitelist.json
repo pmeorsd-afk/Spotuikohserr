@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2388,
-  "last_updated": "2026-10-31T17:36:14.009Z",
+  "version": 2389,
+  "last_updated": "2026-10-31T17:36:16.821Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0JuS8TKOYVQZda9c5EBSm7",
+      "title": "בייבי",
+      "artist": "Avihu Pinhasov Rhythm Club",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T17:36:16.821Z"
+    },
     {
       "id": "5FVrwp7UF8YfkUvsvs2mz2",
       "title": "ליד הדלת",
