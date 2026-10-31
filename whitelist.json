@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2405,
-  "last_updated": "2026-10-31T19:27:27.588Z",
+  "version": 2406,
+  "last_updated": "2026-10-31T19:27:29.999Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Q3XpBpODf3wTase1AInzL",
+      "title": "מרדים את התינוקי",
+      "artist": "אורי חזקיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T19:27:29.999Z"
+    },
     {
       "id": "5JNJ9RvPmNTOFapoCZ8Qsl",
       "title": "בקבוק באמצע הלילה",
