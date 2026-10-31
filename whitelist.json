@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2389,
-  "last_updated": "2026-10-31T17:36:16.821Z",
+  "version": 2390,
+  "last_updated": "2026-10-31T17:36:20.659Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6VhdWiz7GI2eaYcGSsaY7w",
+      "title": "לולה",
+      "artist": "Dudu Tassa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T17:36:20.659Z"
+    },
     {
       "id": "0JuS8TKOYVQZda9c5EBSm7",
       "title": "בייבי",
