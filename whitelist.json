@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2391,
-  "last_updated": "2026-10-31T17:36:24.267Z",
+  "version": 2392,
+  "last_updated": "2026-10-31T17:36:26.342Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2KsXsTj4c0lHDUIHqydxEB",
+      "title": "משום מה",
+      "artist": "Idan Amedi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T17:36:26.342Z"
+    },
     {
       "id": "1zf3h6fvmNJyUE3sG6LbWs",
       "title": "הנך יפה",
