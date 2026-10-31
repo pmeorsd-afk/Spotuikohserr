@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2380,
-  "last_updated": "2026-10-31T16:46:10.446Z",
+  "version": 2381,
+  "last_updated": "2026-10-31T16:46:12.433Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "09H4gNbw73LIF7yoBLsY0W",
+      "title": "מה שנשאר",
+      "artist": "Idan Amedi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T16:46:12.433Z"
+    },
     {
       "id": "3uskMB8ZTrbo3NkguBM2JV",
       "title": "עושה שלום",
