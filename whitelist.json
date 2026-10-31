@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2413,
-  "last_updated": "2026-10-31T20:14:13.030Z",
+  "version": 2414,
+  "last_updated": "2026-10-31T20:14:16.874Z",
   "artists": [
     {
       "id": "2qLBZhmkfxI1LD0r02VilM",
@@ -2640,6 +2640,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6EKpMJ9rh4H3tJX925XHha",
+      "title": "אלוף בשחור",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:14:16.874Z"
+    },
     {
       "id": "26zUaVJ8T1ddEwYtJdqcEt",
       "title": "איך יורדים למטה",
