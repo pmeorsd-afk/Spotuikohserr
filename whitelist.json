@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2424,
-  "last_updated": "2026-10-31T20:14:44.611Z",
+  "version": 2425,
+  "last_updated": "2026-10-31T20:14:49.085Z",
   "artists": [
     {
       "id": "48uve5oQZGuhUZoBD5zj1E",
@@ -2650,6 +2650,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Po1x9y7SCwmLfiXIfBSvC",
+      "title": "מתנות קטנות",
+      "artist": "Rami Kleinstein",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:14:49.085Z"
+    },
     {
       "id": "3ywndcTvau3UA6SMgDpSMI",
       "title": "אלא במה שבתוכו",
