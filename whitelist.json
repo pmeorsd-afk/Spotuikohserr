@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2398,
-  "last_updated": "2026-10-31T18:57:04.901Z",
+  "version": 2399,
+  "last_updated": "2026-10-31T19:27:05.164Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1HzrNvgVZBerBXdBBteFrG",
+      "title": "שום דבר אחר",
+      "artist": "Idan Amedi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T19:27:05.164Z"
+    },
     {
       "id": "01E3qXKdUNr6dEIiGX6RKb",
       "title": "לא טובים בסליחות",
