@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2416,
-  "last_updated": "2026-10-31T20:14:23.613Z",
+  "version": 2417,
+  "last_updated": "2026-10-31T20:14:26.537Z",
   "artists": [
     {
       "id": "2qLBZhmkfxI1LD0r02VilM",
@@ -2640,6 +2640,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5laYghFXYxThvG9t2BQUVS",
+      "title": "ברוך ה' שאי אפשר",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:14:26.537Z"
+    },
     {
       "id": "3AH6gK1IawshZxhFlWJx4l",
       "title": "ארבעים יום וארבעים לילה",
