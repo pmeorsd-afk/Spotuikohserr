@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2420,
-  "last_updated": "2026-10-31T20:14:33.920Z",
+  "version": 2421,
+  "last_updated": "2026-10-31T20:14:36.193Z",
   "artists": [
     {
       "id": "2qLBZhmkfxI1LD0r02VilM",
@@ -2640,6 +2640,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "14IfynYZcEUgd1Jd5wWXrd",
+      "title": "אתה בשידור",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:14:36.193Z"
+    },
     {
       "id": "5xrZpr1va5sIWMb5ndfgQP",
       "title": "ילדים כאלה",
