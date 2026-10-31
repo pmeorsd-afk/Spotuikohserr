@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2410,
-  "last_updated": "2026-10-31T20:14:01.785Z",
+  "version": 2411,
+  "last_updated": "2026-10-31T20:14:07.288Z",
   "artists": [
     {
       "id": "2qLBZhmkfxI1LD0r02VilM",
@@ -2640,6 +2640,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6qjaig93ttQIljljFKfalF",
+      "title": "כשאת עצובה",
+      "artist": "Amir Benayoun, תומר מתנה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:14:07.288Z"
+    },
     {
       "id": "07Ky4tA13JTbXlVLIGOmn7",
       "title": "בשבילך (עם מרגי)",
