@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2431,
-  "last_updated": "2026-10-31T20:25:43.331Z",
+  "version": 2432,
+  "last_updated": "2026-10-31T20:42:23.602Z",
   "artists": [
     {
       "id": "48uve5oQZGuhUZoBD5zj1E",
@@ -2650,6 +2650,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3IUhryPmcd7VgryuPB30VD",
+      "title": "תמיד ידעתי",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:42:23.602Z"
+    },
     {
       "id": "1ojYrJCWrcx2qKYYCM3F7C",
       "title": "ניצחת איתי הכל",
