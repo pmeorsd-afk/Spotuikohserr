@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2397,
-  "last_updated": "2026-10-31T18:57:02.378Z",
+  "version": 2398,
+  "last_updated": "2026-10-31T18:57:04.901Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "01E3qXKdUNr6dEIiGX6RKb",
+      "title": "לא טובים בסליחות",
+      "artist": "אורי חזקיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T18:57:04.901Z"
+    },
     {
       "id": "0ZiIbJQCk9Tp4WmokRCgLe",
       "title": "רק תודה",
