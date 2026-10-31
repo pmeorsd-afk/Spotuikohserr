@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2437,
-  "last_updated": "2026-10-31T21:12:30.317Z",
+  "version": 2438,
+  "last_updated": "2026-10-31T21:12:32.362Z",
   "artists": [
     {
       "id": "48uve5oQZGuhUZoBD5zj1E",
@@ -2650,6 +2650,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "19Stbl4WvuvNSKwLxzIudF",
+      "title": "אהובתי",
+      "artist": "Uzi Hitman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T21:12:32.362Z"
+    },
     {
       "id": "1GYLJ9KP6rOR4meWFiuK32",
       "title": "עכשיו התור לאהבה",
