@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2446,
-  "last_updated": "2026-10-31T22:12:28.021Z",
+  "version": 2447,
+  "last_updated": "2026-10-31T22:20:40.667Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5MxWTfmlmRDx6VZHvB9xV8",
+      "title": "Stay With Me",
+      "artist": "Sam Smith",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T22:20:40.667Z"
+    },
     {
       "id": "7DFNE7NO0raLIUbgzY2rzm",
       "title": "Let Her Go",
