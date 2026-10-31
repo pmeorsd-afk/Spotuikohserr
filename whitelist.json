@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2425,
-  "last_updated": "2026-10-31T20:14:49.085Z",
+  "version": 2426,
+  "last_updated": "2026-10-31T20:18:23.426Z",
   "artists": [
     {
       "id": "48uve5oQZGuhUZoBD5zj1E",
@@ -2650,6 +2650,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5mBEIBx8LMIedsrnRmejCG",
+      "title": "תכתוב לאל מכתב",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:18:23.426Z"
+    },
     {
       "id": "1Po1x9y7SCwmLfiXIfBSvC",
       "title": "מתנות קטנות",
