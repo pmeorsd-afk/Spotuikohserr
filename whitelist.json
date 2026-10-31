@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2411,
-  "last_updated": "2026-10-31T20:14:07.288Z",
+  "version": 2412,
+  "last_updated": "2026-10-31T20:14:10.054Z",
   "artists": [
     {
       "id": "2qLBZhmkfxI1LD0r02VilM",
@@ -2640,6 +2640,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "56krM32OEJdS1nxOb0ZjMN",
+      "title": "פתיחה",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:14:10.054Z"
+    },
     {
       "id": "6qjaig93ttQIljljFKfalF",
       "title": "כשאת עצובה",
