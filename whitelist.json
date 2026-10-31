@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2396,
-  "last_updated": "2026-10-31T18:33:23.627Z",
+  "version": 2397,
+  "last_updated": "2026-10-31T18:57:02.378Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0ZiIbJQCk9Tp4WmokRCgLe",
+      "title": "רק תודה",
+      "artist": "David Taub, Gil Israelov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T18:57:02.378Z"
+    },
     {
       "id": "576UCYUxW1xQzKUCFzoQdZ",
       "title": "איזה מזל",
