@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2444,
-  "last_updated": "2026-10-31T21:58:13.237Z",
+  "version": 2445,
+  "last_updated": "2026-10-31T22:05:08.617Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2kJwzbxV2ppxnQoYw4GLBZ",
+      "title": "If the World Was Ending (feat. Julia Michaels)",
+      "artist": "JP Saxe, Julia Michaels",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T22:05:08.617Z"
+    },
     {
       "id": "0NdV41q6lBoO4WyCaZmIJU",
       "title": "רק אני יודע",
