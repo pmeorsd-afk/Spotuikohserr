@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2382,
-  "last_updated": "2026-10-31T16:47:45.571Z",
+  "version": 2383,
+  "last_updated": "2026-10-31T16:51:43.396Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "183rnfbCaoktTQ0Pf1jtKj",
+      "title": "עדיין ריק",
+      "artist": "Liran Danino",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T16:51:43.396Z"
+    },
     {
       "id": "6kcfc8HRcuX5a6eUoJ7GC2",
       "title": "אם את הולכת",
