@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2414,
-  "last_updated": "2026-10-31T20:14:16.874Z",
+  "version": 2415,
+  "last_updated": "2026-10-31T20:14:20.626Z",
   "artists": [
     {
       "id": "2qLBZhmkfxI1LD0r02VilM",
@@ -2640,6 +2640,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4iwkMmC3e6mmAp7tdemeEL",
+      "title": "כמה שתביט מהחלון",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:14:20.626Z"
+    },
     {
       "id": "6EKpMJ9rh4H3tJX925XHha",
       "title": "אלוף בשחור",
