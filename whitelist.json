@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2381,
-  "last_updated": "2026-10-31T16:46:12.433Z",
+  "version": 2382,
+  "last_updated": "2026-10-31T16:47:45.571Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6kcfc8HRcuX5a6eUoJ7GC2",
+      "title": "אם את הולכת",
+      "artist": "Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T16:47:45.571Z"
+    },
     {
       "id": "09H4gNbw73LIF7yoBLsY0W",
       "title": "מה שנשאר",
