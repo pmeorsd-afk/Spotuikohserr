@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2447,
-  "last_updated": "2026-10-31T22:20:40.667Z",
+  "version": 2448,
+  "last_updated": "2026-10-31T22:49:18.692Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "77T238OKRU5wnu4g1JDzNc",
+      "title": "טאטע",
+      "artist": "קובי מירסקי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T22:49:18.692Z"
+    },
     {
       "id": "5MxWTfmlmRDx6VZHvB9xV8",
       "title": "Stay With Me",
