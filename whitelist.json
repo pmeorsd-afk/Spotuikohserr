@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2379,
-  "last_updated": "2026-10-31T16:20:46.918Z",
+  "version": 2380,
+  "last_updated": "2026-10-31T16:46:10.446Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3uskMB8ZTrbo3NkguBM2JV",
+      "title": "עושה שלום",
+      "artist": "מתן לוי, Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T16:46:10.446Z"
+    },
     {
       "id": "1MeHefixUEAolPSBeDKLMx",
       "title": "על כפיו יביא",
