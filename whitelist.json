@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2435,
-  "last_updated": "2026-10-31T21:05:58.506Z",
+  "version": 2436,
+  "last_updated": "2026-10-31T21:12:28.547Z",
   "artists": [
     {
       "id": "48uve5oQZGuhUZoBD5zj1E",
@@ -2650,6 +2650,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0M49qBoYRI7ICdw1XJyqpN",
+      "title": "שירת הסטיקר",
+      "artist": "Hadag Nahash",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T21:12:28.547Z"
+    },
     {
       "id": "0rhJ30qQSus6Ckn3hKZ6Hr",
       "title": "Another Love - Live from Spotify (SXSW)",
