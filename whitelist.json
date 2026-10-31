@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2407,
-  "last_updated": "2026-10-31T19:27:33.073Z",
+  "version": 2408,
+  "last_updated": "2026-10-31T19:35:46.349Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5xvzN9tprEU16VYxgZ9he4",
+      "title": "Sevilla",
+      "artist": "Henrique Camacho, Fatality",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T19:35:46.349Z"
+    },
     {
       "id": "23vi5hcuApXEjQ5C9AcBqE",
       "title": "השליח בבנק",
