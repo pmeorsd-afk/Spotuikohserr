@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2409,
-  "last_updated": "2026-10-31T20:13:59.704Z",
+  "version": 2410,
+  "last_updated": "2026-10-31T20:14:01.785Z",
   "artists": [
     {
       "id": "2qLBZhmkfxI1LD0r02VilM",
@@ -2640,6 +2640,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "07Ky4tA13JTbXlVLIGOmn7",
+      "title": "בשבילך (עם מרגי)",
+      "artist": "Doli & Penn",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:14:01.785Z"
+    },
     {
       "id": "5xvzN9tprEU16VYxgZ9he4",
       "title": "Sevilla",
