@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2442,
-  "last_updated": "2026-10-31T21:49:42.005Z",
+  "version": 2443,
+  "last_updated": "2026-10-31T21:54:51.098Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7COIcTryrlJl5aSAEOHJmV",
+      "title": "רץ אל האור",
+      "artist": "Idan Amedi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T21:54:51.098Z"
+    },
     {
       "id": "5ANQ0oXjOueYMbvjYL4iBp",
       "title": "אין מקום לדאגה",
