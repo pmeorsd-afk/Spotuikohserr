@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2399,
-  "last_updated": "2026-10-31T19:27:05.164Z",
+  "version": 2400,
+  "last_updated": "2026-10-31T19:27:10.310Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2L3A98iQyTHeQRjCSabaeb",
+      "title": "חוויות מהלידה",
+      "artist": "אורי חזקיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T19:27:10.310Z"
+    },
     {
       "id": "1HzrNvgVZBerBXdBBteFrG",
       "title": "שום דבר אחר",
