@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2443,
-  "last_updated": "2026-10-31T21:54:51.098Z",
+  "version": 2444,
+  "last_updated": "2026-10-31T21:58:13.237Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0NdV41q6lBoO4WyCaZmIJU",
+      "title": "רק אני יודע",
+      "artist": "Stephane Legar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T21:58:13.237Z"
+    },
     {
       "id": "7COIcTryrlJl5aSAEOHJmV",
       "title": "רץ אל האור",
