@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2386,
-  "last_updated": "2026-10-31T16:57:42.662Z",
+  "version": 2387,
+  "last_updated": "2026-10-31T17:36:10.373Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5zCSq9aMsNZ6h6tRM7eL0h",
+      "title": "תשליך",
+      "artist": "Idan Amedi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T17:36:10.373Z"
+    },
     {
       "id": "2HK6jOmXb7vyqtstptpi4T",
       "title": "קחי אותי לטייל",
