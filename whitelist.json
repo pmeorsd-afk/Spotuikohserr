@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2417,
-  "last_updated": "2026-10-31T20:14:26.537Z",
+  "version": 2418,
+  "last_updated": "2026-10-31T20:14:28.761Z",
   "artists": [
     {
       "id": "2qLBZhmkfxI1LD0r02VilM",
@@ -2640,6 +2640,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Btyxfypvub6XpVxS6pXf4",
+      "title": "יכול להיות",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T20:14:28.761Z"
+    },
     {
       "id": "5laYghFXYxThvG9t2BQUVS",
       "title": "ברוך ה' שאי אפשר",
