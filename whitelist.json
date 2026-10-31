@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2375,
-  "last_updated": "2026-10-30T13:45:08.681Z",
+  "version": 2376,
+  "last_updated": "2026-10-31T16:20:36.033Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0fTaMgQdylocjG3IGPFd30",
+      "title": "השבת כבר נכנסת",
+      "artist": "Shlomi Shabat, Yuval Dayan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T16:20:36.033Z"
+    },
     {
       "id": "5iUJXYGYEqJEegcGipV1Vz",
       "title": "ציפור מדבר - Remix",
