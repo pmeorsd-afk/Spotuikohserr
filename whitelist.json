@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2404,
-  "last_updated": "2026-10-31T19:27:24.051Z",
+  "version": 2405,
+  "last_updated": "2026-10-31T19:27:27.588Z",
   "artists": [
     {
       "id": "65khIlz70BvoqhoZaIz4ao",
@@ -2630,6 +2630,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5JNJ9RvPmNTOFapoCZ8Qsl",
+      "title": "בקבוק באמצע הלילה",
+      "artist": "אורי חזקיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-10-31T19:27:27.588Z"
+    },
     {
       "id": "73P7EtIcLu156xghPbjGQO",
       "title": "משמרת לילה",
