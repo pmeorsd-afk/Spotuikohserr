@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2472,
-  "last_updated": "2026-11-01T10:55:15.733Z",
+  "version": 2473,
+  "last_updated": "2026-11-01T10:55:17.856Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7uKGOWCx5fH8xdSBZHaC2B",
+      "title": "אמא יקרה",
+      "artist": "דודו אהרון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T10:55:17.856Z"
+    },
     {
       "id": "6u6UlmTvM8EHZTxcNkpnPe",
       "title": "07",
