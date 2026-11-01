@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2454,
-  "last_updated": "2026-11-01T07:22:42.059Z",
+  "version": 2455,
+  "last_updated": "2026-11-01T07:22:45.452Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2fNUUEJm0EdIckj9uykklv",
+      "title": "זה לא עושה לי כלום",
+      "artist": "Stalos & Oren Chen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T07:22:45.452Z"
+    },
     {
       "id": "0h2aLAyXpYOwjZiEgZH3JT",
       "title": "Système",
