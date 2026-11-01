@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2519,
-  "last_updated": "2026-11-01T19:41:38.849Z",
+  "version": 2520,
+  "last_updated": "2026-11-01T19:41:41.907Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5nhdL0kvFVnRLIuygOcfQ9",
+      "title": "מחשבות",
+      "artist": "Yossi Shitrit",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T19:41:41.907Z"
+    },
     {
       "id": "0Lt4PJwNvLZ4BkTBSBLYMw",
       "title": "אל תשברי לי את הלב",
