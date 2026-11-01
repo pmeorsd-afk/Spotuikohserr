@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2563,
-  "last_updated": "2026-11-01T21:14:37.156Z",
+  "version": 2564,
+  "last_updated": "2026-11-01T21:14:39.734Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0hdDyhwaJpNW5nsJC3qYPe",
+      "title": "מלודי",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T21:14:39.734Z"
+    },
     {
       "id": "6gDb8gPgdv49sJJ0VpqEMp",
       "title": "חייזרית",
