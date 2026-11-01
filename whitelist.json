@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2474,
-  "last_updated": "2026-11-01T10:55:23.944Z",
+  "version": 2475,
+  "last_updated": "2026-11-01T10:58:10.887Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3rTOpZeq73e1zfNsP75rt2",
+      "title": "בשבילך נוצרתי",
+      "artist": "Lior Farhi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T10:58:10.887Z"
+    },
     {
       "id": "5FQCwtsC3YanKJzpfkvnDt",
       "title": "שותפה שלי",
