@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2489,
-  "last_updated": "2026-11-01T12:21:00.152Z",
+  "version": 2490,
+  "last_updated": "2026-11-01T12:21:02.561Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4NrfATELzMK7sJdg87aHZM",
+      "title": "אתיופיה",
+      "artist": "DieWelt",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T12:21:02.561Z"
+    },
     {
       "id": "7oQIBdTFQmaOKV1o8jp7Uk",
       "title": "עובד בכפר",
