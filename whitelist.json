@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2569,
-  "last_updated": "2026-11-01T21:50:57.269Z",
+  "version": 2570,
+  "last_updated": "2026-11-01T21:53:13.369Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0PjynQqdwAZD2SbzobRWoh",
+      "title": "שיקסע",
+      "artist": "Ron Sky Nesher, Kasey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T21:53:13.369Z"
+    },
     {
       "id": "4YyFXfbzdTgEsfJizluBq2",
       "title": "כולי בהיי",
