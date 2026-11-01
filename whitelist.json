@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2558,
-  "last_updated": "2026-11-01T20:26:23.099Z",
+  "version": 2559,
+  "last_updated": "2026-11-01T20:28:52.060Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7yiooam67CLH7w35PpUHMD",
+      "title": "Lose Control",
+      "artist": "The Voice Israel, תמיר סרי, האורקסטרה של דה וויס ישראל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:28:52.060Z"
+    },
     {
       "id": "6tXaY73mwfbv7f5l3hfs9o",
       "title": "עומד בשער",
