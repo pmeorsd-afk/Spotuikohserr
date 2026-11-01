@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2565,
-  "last_updated": "2026-11-01T21:14:42.046Z",
+  "version": 2566,
+  "last_updated": "2026-11-01T21:14:45.756Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1jMMfyWmwvJGRksruSApR4",
+      "title": "מי להשם אלי - Remix",
+      "artist": "Pini Einhorn, Djs נשמת קול חי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T21:14:45.756Z"
+    },
     {
       "id": "3Dx920qUWdBswFizsT1PxR",
       "title": "באמת של האמת",
