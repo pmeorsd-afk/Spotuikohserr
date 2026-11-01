@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2556,
-  "last_updated": "2026-11-01T20:20:13.996Z",
+  "version": 2557,
+  "last_updated": "2026-11-01T20:20:17.492Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0yXa5Yaw6LTroggWvtl9PO",
+      "title": "ארבעת המנטורים",
+      "artist": "The Voice Israel, Idan Raichel, Eden Ben Zaken, Noa Kirel, Static",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:20:17.492Z"
+    },
     {
       "id": "4jKB9rAbnzlt9gukEYyPZj",
       "title": "Girl On Fire",
