@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2487,
-  "last_updated": "2026-11-01T12:05:31.165Z",
+  "version": 2488,
+  "last_updated": "2026-11-01T12:07:02.881Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "122Lcb0e2kgFX0IcnZEiz7",
+      "title": "מחר",
+      "artist": "Aviv Geffen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T12:07:02.881Z"
+    },
     {
       "id": "7AM7tbc8zWlK46S5CrCjFX",
       "title": "מה לי ולך",
