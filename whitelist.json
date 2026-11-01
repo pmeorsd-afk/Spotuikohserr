@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2567,
-  "last_updated": "2026-11-01T21:19:49.866Z",
+  "version": 2568,
+  "last_updated": "2026-11-01T21:47:44.871Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5I0WaR0LpN4Kn1zwbvd145",
+      "title": "גושפנקא",
+      "artist": "E-Z, Noa Kirel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T21:47:44.871Z"
+    },
     {
       "id": "5uLNn4hkEhUIT50jyus1Lf",
       "title": "חלליות",
