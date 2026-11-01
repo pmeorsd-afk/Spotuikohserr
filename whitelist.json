@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2559,
-  "last_updated": "2026-11-01T20:28:52.060Z",
+  "version": 2560,
+  "last_updated": "2026-11-01T20:41:12.145Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3U4isOIWM3VvDubwSI3y7a",
+      "title": "All of Me",
+      "artist": "John Legend",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:41:12.145Z"
+    },
     {
       "id": "7yiooam67CLH7w35PpUHMD",
       "title": "Lose Control",
