@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2543,
-  "last_updated": "2026-11-01T20:09:12.133Z",
+  "version": 2544,
+  "last_updated": "2026-11-01T20:09:17.650Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5FnKgNM48sIbfy6j43kOqS",
+      "title": "Fear",
+      "artist": "Disturbed",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:09:17.650Z"
+    },
     {
       "id": "6xL9MJ2yt39HPPZPyGkRy8",
       "title": "Untouchable",
