@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2544,
-  "last_updated": "2026-11-01T20:09:17.650Z",
+  "version": 2545,
+  "last_updated": "2026-11-01T20:09:21.017Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7hXbQF3dEMtWAqdv7g86l6",
+      "title": "עיישה",
+      "artist": "היוצרים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:09:21.017Z"
+    },
     {
       "id": "5FnKgNM48sIbfy6j43kOqS",
       "title": "Fear",
