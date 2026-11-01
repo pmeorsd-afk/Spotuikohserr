@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2561,
-  "last_updated": "2026-11-01T21:14:31.671Z",
+  "version": 2562,
+  "last_updated": "2026-11-01T21:14:34.466Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4g8QLZzFAEGSEsDXfLx1ux",
+      "title": "אבא לא ישאיר אותי לבד",
+      "artist": "ים רפאלי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T21:14:34.466Z"
+    },
     {
       "id": "2BOqDYLOJBiMOXShCV1neZ",
       "title": "Dancing On My Own",
