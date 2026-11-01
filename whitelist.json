@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2509,
-  "last_updated": "2026-11-01T19:40:54.348Z",
+  "version": 2510,
+  "last_updated": "2026-11-01T19:40:57.442Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "444Z34Utuhvi4P7gPONLLj",
+      "title": "את המחר שלי",
+      "artist": "Shimon Buskila",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T19:40:57.442Z"
+    },
     {
       "id": "7kvoW8VymsqhxgW8fwJDEr",
       "title": "נלחם",
