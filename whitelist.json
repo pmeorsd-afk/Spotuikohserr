@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2486,
-  "last_updated": "2026-11-01T12:05:29.590Z",
+  "version": 2487,
+  "last_updated": "2026-11-01T12:05:31.165Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7AM7tbc8zWlK46S5CrCjFX",
+      "title": "מה לי ולך",
+      "artist": "Moti Taka, KatriX, Doron Biton",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T12:05:31.165Z"
+    },
     {
       "id": "03OURUAbIZlbQwZyK7YjWS",
       "title": "בלבלה",
