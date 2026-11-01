@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2452,
-  "last_updated": "2026-11-01T07:22:32.322Z",
+  "version": 2453,
+  "last_updated": "2026-11-01T07:22:35.395Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Keul7V4tLUmyPoUQ2VRWh",
+      "title": "Went Silly",
+      "artist": "King Von",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T07:22:35.395Z"
+    },
     {
       "id": "3oCeb6aBNbR0aw0UOgu5Mm",
       "title": "דיבר טוב",
