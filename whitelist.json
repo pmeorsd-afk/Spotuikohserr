@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2470,
-  "last_updated": "2026-11-01T10:43:20.325Z",
+  "version": 2471,
+  "last_updated": "2026-11-01T10:55:13.682Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3vHArkErHpDGirLJpgS0aX",
+      "title": "Shir Shel Ga'agua",
+      "artist": "Yossi Shitrit",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T10:55:13.682Z"
+    },
     {
       "id": "6SdvcOhSrYgaEbz5aMfluR",
       "title": "מחרוזת משה כהן נוסטלגיה",
