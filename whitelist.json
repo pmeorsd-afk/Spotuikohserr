@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2492,
-  "last_updated": "2026-11-01T12:21:06.556Z",
+  "version": 2493,
+  "last_updated": "2026-11-01T12:21:09.036Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5NVKNU9KhGzf4zTmv2ZPCO",
+      "title": "מאוהבת",
+      "artist": "נתנאל ששון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T12:21:09.036Z"
+    },
     {
       "id": "4GIeSBN7KoOhIO4pScdXL7",
       "title": "סיפור אהבה",
