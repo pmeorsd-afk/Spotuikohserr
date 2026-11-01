@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2502,
-  "last_updated": "2026-11-01T19:40:11.392Z",
+  "version": 2503,
+  "last_updated": "2026-11-01T19:40:24.565Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "38ZV8riXgCOUHjc83BlwlL",
+      "title": "Karvah",
+      "artist": "Eitan Katz, Zusha",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T19:40:24.565Z"
+    },
     {
       "id": "4AmG0YXtz2PmY7QltAgxjZ",
       "title": "מספרים עלייך",
