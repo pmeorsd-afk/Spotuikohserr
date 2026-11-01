@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2522,
-  "last_updated": "2026-11-01T19:41:52.371Z",
+  "version": 2523,
+  "last_updated": "2026-11-01T19:41:55.067Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0R4v266ch8HV3PT0FNDHBf",
+      "title": "ילד בשדות",
+      "artist": "Adir Getz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T19:41:55.067Z"
+    },
     {
       "id": "5QFQMEywSpfQsWLZ8TXjV9",
       "title": "Send Him - שיק אים",
