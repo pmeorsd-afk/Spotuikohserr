@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2545,
-  "last_updated": "2026-11-01T20:09:21.017Z",
+  "version": 2546,
+  "last_updated": "2026-11-01T20:09:23.864Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5yriBaBAgiRDoTVVWazMuv",
+      "title": "Changes (Live From Villa Park) Back To The Beginning (feat. Nuno Bettencourt, Frank Bello, Adam Wakeman, II)",
+      "artist": "YUNGBLUD, Nuno Bettencourt, Frank Bello, Adam Wakeman, II",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:09:23.864Z"
+    },
     {
       "id": "7hXbQF3dEMtWAqdv7g86l6",
       "title": "עיישה",
