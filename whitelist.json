@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2499,
-  "last_updated": "2026-11-01T12:25:01.897Z",
+  "version": 2500,
+  "last_updated": "2026-11-01T12:26:31.671Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2S8wxDFED8PAo4ZqhyMRh2",
+      "title": "L'enfoiré",
+      "artist": "Heuss L'enfoiré",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T12:26:31.671Z"
+    },
     {
       "id": "5KtNRmoj6ZG7Ns5iD0eH0j",
       "title": "מבט שנוגע",
