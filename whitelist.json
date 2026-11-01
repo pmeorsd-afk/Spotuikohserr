@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2521,
-  "last_updated": "2026-11-01T19:41:44.717Z",
+  "version": 2522,
+  "last_updated": "2026-11-01T19:41:52.371Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5QFQMEywSpfQsWLZ8TXjV9",
+      "title": "Send Him - שיק אים",
+      "artist": "Duvid Feder, Sruly Green",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T19:41:52.371Z"
+    },
     {
       "id": "7ASi7ezK3VWIgVSKHXgTCC",
       "title": "מתפוצץ לי הראש",
