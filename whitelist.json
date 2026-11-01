@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2484,
-  "last_updated": "2026-11-01T12:00:29.512Z",
+  "version": 2485,
+  "last_updated": "2026-11-01T12:00:32.019Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "11SoPMvpzHqMYHUSlXLKhl",
+      "title": "קשר רציני",
+      "artist": "Moti Taka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T12:00:32.019Z"
+    },
     {
       "id": "5W7sTWQ6sHfl8eeS45Guha",
       "title": "עיניים רווקות",
