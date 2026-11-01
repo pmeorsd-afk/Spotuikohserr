@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2548,
-  "last_updated": "2026-11-01T20:09:29.783Z",
+  "version": 2549,
+  "last_updated": "2026-11-01T20:09:33.310Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3hgqGe9MSz4FXMGY21Up4K",
+      "title": "יום בלי עבודה",
+      "artist": "Shaked Komemy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:09:33.310Z"
+    },
     {
       "id": "61zDwmHFXYYNjKTTpT5GOR",
       "title": "Wheels of Confusion - 2009 Remaster",
