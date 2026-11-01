@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2465,
-  "last_updated": "2026-11-01T10:11:38.625Z",
+  "version": 2466,
+  "last_updated": "2026-11-01T10:11:40.460Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3mymPVa008JBK89mhgDgoY",
+      "title": "עולה לי הסטלה",
+      "artist": "Idan Bakshi, Dudi Buzaglo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T10:11:40.460Z"
+    },
     {
       "id": "1klF2rAOesyjy4x3zeRRUB",
       "title": "אולי אהיה שמח",
