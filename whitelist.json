@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2514,
-  "last_updated": "2026-11-01T19:41:22.633Z",
+  "version": 2515,
+  "last_updated": "2026-11-01T19:41:25.311Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4PhlTB0QUaB7jPqdmM8Wz6",
+      "title": "קומה 34",
+      "artist": "ים רפאלי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T19:41:25.311Z"
+    },
     {
       "id": "2tStuSHiCM6nJSK5Hy2iOg",
       "title": "לא יודע לשקר",
