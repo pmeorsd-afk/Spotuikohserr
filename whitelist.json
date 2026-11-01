@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2463,
-  "last_updated": "2026-11-01T10:01:15.800Z",
+  "version": 2464,
+  "last_updated": "2026-11-01T10:01:18.026Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4kjf2ldnVol7O1xblQ4oUr",
+      "title": "מלאך",
+      "artist": "בניה ברבי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T10:01:18.026Z"
+    },
     {
       "id": "176ig4GxbfWnSxYCQS7dac",
       "title": "Hanichi Li",
