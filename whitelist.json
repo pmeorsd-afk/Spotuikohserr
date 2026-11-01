@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2517,
-  "last_updated": "2026-11-01T19:41:32.123Z",
+  "version": 2518,
+  "last_updated": "2026-11-01T19:41:36.264Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "13dz8meqaaQ39pRZ28gg9x",
+      "title": "עיניים",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T19:41:36.264Z"
+    },
     {
       "id": "6j8JqkDNLwuEJdsIaDf5D3",
       "title": "‎⁨כשזה נגמר",
