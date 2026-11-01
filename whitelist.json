@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2550,
-  "last_updated": "2026-11-01T20:09:36.038Z",
+  "version": 2551,
+  "last_updated": "2026-11-01T20:09:40.085Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0tqldrIhaskYRImTDWzf46",
+      "title": "שעתיים",
+      "artist": "אופק אדנק",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:09:40.085Z"
+    },
     {
       "id": "5FGZ7S2rqgXeqkPR2jyO1R",
       "title": "טן טן טן",
