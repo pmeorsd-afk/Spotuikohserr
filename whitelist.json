@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2498,
-  "last_updated": "2026-11-01T12:23:52.440Z",
+  "version": 2499,
+  "last_updated": "2026-11-01T12:25:01.897Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5KtNRmoj6ZG7Ns5iD0eH0j",
+      "title": "מבט שנוגע",
+      "artist": "Moshik Afia",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T12:25:01.897Z"
+    },
     {
       "id": "6jZpNqE6eaHjPUgiuZ0rgI",
       "title": "J'aime bien",
