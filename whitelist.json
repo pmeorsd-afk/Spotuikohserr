@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2466,
-  "last_updated": "2026-11-01T10:11:40.460Z",
+  "version": 2467,
+  "last_updated": "2026-11-01T10:19:24.600Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7qFBRs8xLXxSxRm8HBcVIn",
+      "title": "כמעט שיר אהבה",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T10:19:24.600Z"
+    },
     {
       "id": "3mymPVa008JBK89mhgDgoY",
       "title": "עולה לי הסטלה",
