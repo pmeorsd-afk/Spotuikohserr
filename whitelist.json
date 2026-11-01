@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2541,
-  "last_updated": "2026-11-01T20:09:06.142Z",
+  "version": 2542,
+  "last_updated": "2026-11-01T20:09:09.144Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7nHEBVBVeyaLYmLiXHtcXL",
+      "title": "שיר לאמא",
+      "artist": "ים רפאלי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:09:09.144Z"
+    },
     {
       "id": "2uc7p6ly1p6mJt01GtBSrZ",
       "title": "לכובע שלי",
