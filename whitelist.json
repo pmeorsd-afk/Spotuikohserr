@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2568,
-  "last_updated": "2026-11-01T21:47:44.871Z",
+  "version": 2569,
+  "last_updated": "2026-11-01T21:50:57.269Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4YyFXfbzdTgEsfJizluBq2",
+      "title": "כולי בהיי",
+      "artist": "E-Z",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T21:50:57.269Z"
+    },
     {
       "id": "5I0WaR0LpN4Kn1zwbvd145",
       "title": "גושפנקא",
