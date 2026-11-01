@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2534,
-  "last_updated": "2026-11-01T20:08:45.449Z",
+  "version": 2535,
+  "last_updated": "2026-11-01T20:08:48.286Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7ulkEuhd3SbdxSFXpplMT9",
+      "title": "פעם הייתי",
+      "artist": "Riki Manor, Oshik Levy, Sherri, DUDU ZAKAI, DORIT REUVENI, Uzi Meiri, Zipi Shavit",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:08:48.286Z"
+    },
     {
       "id": "2DYu0c3YDfIHDvf7vIGfUM",
       "title": "כל יום כמו נס",
