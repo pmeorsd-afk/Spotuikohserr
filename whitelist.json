@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2451,
-  "last_updated": "2026-11-01T07:22:28.854Z",
+  "version": 2452,
+  "last_updated": "2026-11-01T07:22:32.322Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3oCeb6aBNbR0aw0UOgu5Mm",
+      "title": "דיבר טוב",
+      "artist": "קובי גרינבוים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T07:22:32.322Z"
+    },
     {
       "id": "6FUS9A5cVHAHenMxMszfIL",
       "title": "בעיר שלי",
