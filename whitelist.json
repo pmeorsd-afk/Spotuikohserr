@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2560,
-  "last_updated": "2026-11-01T20:41:12.145Z",
+  "version": 2561,
+  "last_updated": "2026-11-01T21:14:31.671Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2BOqDYLOJBiMOXShCV1neZ",
+      "title": "Dancing On My Own",
+      "artist": "Calum Scott",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T21:14:31.671Z"
+    },
     {
       "id": "3U4isOIWM3VvDubwSI3y7a",
       "title": "All of Me",
