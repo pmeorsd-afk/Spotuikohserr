@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2491,
-  "last_updated": "2026-11-01T12:21:04.295Z",
+  "version": 2492,
+  "last_updated": "2026-11-01T12:21:06.556Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4GIeSBN7KoOhIO4pScdXL7",
+      "title": "סיפור אהבה",
+      "artist": "Moti Taka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T12:21:06.556Z"
+    },
     {
       "id": "3wDPIk7vUhhtyiT5jkzHgD",
       "title": "כל העיר יודעת",
