@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2448,
-  "last_updated": "2026-10-31T22:49:18.692Z",
+  "version": 2449,
+  "last_updated": "2026-11-01T07:22:20.559Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4wJ1UD97EMj2FrS4QdF8JX",
+      "title": "האבנים מדברות",
+      "artist": "Uzi Hitman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T07:22:20.559Z"
+    },
     {
       "id": "77T238OKRU5wnu4g1JDzNc",
       "title": "טאטע",
