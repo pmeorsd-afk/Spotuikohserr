@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2485,
-  "last_updated": "2026-11-01T12:00:32.019Z",
+  "version": 2486,
+  "last_updated": "2026-11-01T12:05:29.590Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "03OURUAbIZlbQwZyK7YjWS",
+      "title": "בלבלה",
+      "artist": "Moti Taka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T12:05:29.590Z"
+    },
     {
       "id": "11SoPMvpzHqMYHUSlXLKhl",
       "title": "קשר רציני",
