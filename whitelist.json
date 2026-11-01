@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2459,
-  "last_updated": "2026-11-01T07:49:46.773Z",
+  "version": 2460,
+  "last_updated": "2026-11-01T07:56:53.203Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1IkYhtyGKCboRbVxnJjHW3",
+      "title": "אורות",
+      "artist": "אבירם עמר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T07:56:53.203Z"
+    },
     {
       "id": "1UazrkVzO1ZVI3LaWORUIz",
       "title": "פילפילון",
