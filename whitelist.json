@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2531,
-  "last_updated": "2026-11-01T19:54:25.518Z",
+  "version": 2532,
+  "last_updated": "2026-11-01T20:08:27.403Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3EBNtBsHnAi84YSAZkz55M",
+      "title": "הבה נגילה",
+      "artist": "Riki Manor, Oshik Levy, Sherri, DUDU ZAKAI, DORIT REUVENI, Uzi Meiri, Zipi Shavit",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:08:27.403Z"
+    },
     {
       "id": "3s13Ypsdj82Uolj75MBE5f",
       "title": "היום",
