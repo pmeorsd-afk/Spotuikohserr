@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2554,
-  "last_updated": "2026-11-01T20:10:38.920Z",
+  "version": 2555,
+  "last_updated": "2026-11-01T20:10:41.608Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "315aBOUD3xtj7sUMXtRgMV",
+      "title": "In The Stars",
+      "artist": "Benson Boone",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:10:41.608Z"
+    },
     {
       "id": "7LVHVU3tWfcxj5aiPFEW4Q",
       "title": "Fix You",
