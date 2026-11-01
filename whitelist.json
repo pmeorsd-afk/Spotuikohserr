@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2457,
-  "last_updated": "2026-11-01T07:37:32.889Z",
+  "version": 2458,
+  "last_updated": "2026-11-01T07:37:54.401Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "45RofBu3lT38IX9iCWypQA",
+      "title": "השפן הקטן",
+      "artist": "Yoel Lerner, Mazi Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T07:37:54.401Z"
+    },
     {
       "id": "7yAziIVkn0K7nvK1yySlJi",
       "title": "מחרוזת: לעולם לא נפרד",
