@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2450,
-  "last_updated": "2026-11-01T07:22:26.431Z",
+  "version": 2451,
+  "last_updated": "2026-11-01T07:22:28.854Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6FUS9A5cVHAHenMxMszfIL",
+      "title": "בעיר שלי",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T07:22:28.854Z"
+    },
     {
       "id": "4wJ1UD97EMj2FrS4QdF8JX",
       "title": "האבנים מדברות",
