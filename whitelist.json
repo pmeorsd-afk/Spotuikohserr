@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2469,
-  "last_updated": "2026-11-01T10:41:06.245Z",
+  "version": 2470,
+  "last_updated": "2026-11-01T10:43:20.325Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6SdvcOhSrYgaEbz5aMfluR",
+      "title": "מחרוזת משה כהן נוסטלגיה",
+      "artist": "ברק אוגלבו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T10:43:20.325Z"
+    },
     {
       "id": "7nnMm2BtnUG3U5NN1YYBoO",
       "title": "מאז הלכת",
