@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2549,
-  "last_updated": "2026-11-01T20:09:33.310Z",
+  "version": 2550,
+  "last_updated": "2026-11-01T20:09:36.038Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5FGZ7S2rqgXeqkPR2jyO1R",
+      "title": "טן טן טן",
+      "artist": "אופק אדנק",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:09:36.038Z"
+    },
     {
       "id": "3hgqGe9MSz4FXMGY21Up4K",
       "title": "יום בלי עבודה",
