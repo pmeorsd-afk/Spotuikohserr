@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2478,
-  "last_updated": "2026-11-01T11:40:28.530Z",
+  "version": 2479,
+  "last_updated": "2026-11-01T11:40:30.953Z",
   "artists": [
+    {
+      "id": "07iurSYNSanBQURPYWVTdy",
+      "canonical_name": "קובי מירסקי",
+      "aliases": [
+        "קובי מירסקי"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T11:40:30.953Z"
+    },
     {
       "id": "0Qkuz2SMiyifAgOwsT9TeB",
       "canonical_name": "Yehuda Freundlich",
