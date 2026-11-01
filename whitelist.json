@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2482,
-  "last_updated": "2026-11-01T11:45:21.815Z",
+  "version": 2483,
+  "last_updated": "2026-11-01T11:48:29.710Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0rjVfohT8R1jeSO0huzUxV",
+      "title": "חדר מדרגות",
+      "artist": "Avi Aburomi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T11:48:29.710Z"
+    },
     {
       "id": "0Az44AzfqsWh3eGzkcdowb",
       "title": "אחת המטורפות",
