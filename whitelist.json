@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2537,
-  "last_updated": "2026-11-01T20:08:54.125Z",
+  "version": 2538,
+  "last_updated": "2026-11-01T20:08:57.205Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Gdja6gwg8ZJ2QiMI3Ggn9",
+      "title": "כבר סידרנו הרכבת",
+      "artist": "Riki Manor, Oshik Levy, Sherri, DUDU ZAKAI, DORIT REUVENI, Uzi Meiri, Zipi Shavit",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:08:57.205Z"
+    },
     {
       "id": "3FoVkQMAgy7JfnFi0RpDBP",
       "title": "מי שטוב לו",
