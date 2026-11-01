@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2464,
-  "last_updated": "2026-11-01T10:01:18.026Z",
+  "version": 2465,
+  "last_updated": "2026-11-01T10:11:38.625Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1klF2rAOesyjy4x3zeRRUB",
+      "title": "אולי אהיה שמח",
+      "artist": "Dudi Buzaglo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T10:11:38.625Z"
+    },
     {
       "id": "4kjf2ldnVol7O1xblQ4oUr",
       "title": "מלאך",
