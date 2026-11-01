@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2488,
-  "last_updated": "2026-11-01T12:07:02.881Z",
+  "version": 2489,
+  "last_updated": "2026-11-01T12:21:00.152Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7oQIBdTFQmaOKV1o8jp7Uk",
+      "title": "עובד בכפר",
+      "artist": "Moti Taka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T12:21:00.152Z"
+    },
     {
       "id": "122Lcb0e2kgFX0IcnZEiz7",
       "title": "מחר",
