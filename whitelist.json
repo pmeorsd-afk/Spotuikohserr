@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2508,
-  "last_updated": "2026-11-01T19:40:51.924Z",
+  "version": 2509,
+  "last_updated": "2026-11-01T19:40:54.348Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7kvoW8VymsqhxgW8fwJDEr",
+      "title": "נלחם",
+      "artist": "Avihai Hollender, Ron Buhnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T19:40:54.348Z"
+    },
     {
       "id": "6iXogu7NKsViSzpd2Xk576",
       "title": "זה הכל מאהבה",
