@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2529,
-  "last_updated": "2026-11-01T19:42:16.449Z",
+  "version": 2530,
+  "last_updated": "2026-11-01T19:42:20.095Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1yqZFP3vIMg9QThGZwj0Xk",
+      "title": "רותי תשיר לנו סולו",
+      "artist": "Riki Manor, Oshik Levy, Sherri, DUDU ZAKAI, DORIT REUVENI, Uzi Meiri, Zipi Shavit",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T19:42:20.095Z"
+    },
     {
       "id": "0Q041j1LG3KkKvoCLB3agq",
       "title": "הנה מה טוב",
