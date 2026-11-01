@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2479,
-  "last_updated": "2026-11-01T11:40:30.953Z",
+  "version": 2480,
+  "last_updated": "2026-11-01T11:40:32.903Z",
   "artists": [
+    {
+      "id": "2FFO1HXAlbq0XxJHgDl4e1",
+      "canonical_name": "Shia Berko",
+      "aliases": [
+        "Shia Berko"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T11:40:32.903Z"
+    },
     {
       "id": "07iurSYNSanBQURPYWVTdy",
       "canonical_name": "קובי מירסקי",
