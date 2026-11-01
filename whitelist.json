@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2551,
-  "last_updated": "2026-11-01T20:09:40.085Z",
+  "version": 2552,
+  "last_updated": "2026-11-01T20:09:44.744Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0kJKxWySifao1vj5vFrplt",
+      "title": "VeUhavtu - ואהבת",
+      "artist": "Meilech Kohn",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T20:09:44.744Z"
+    },
     {
       "id": "0tqldrIhaskYRImTDWzf46",
       "title": "שעתיים",
