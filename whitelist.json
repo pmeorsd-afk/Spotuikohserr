@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2505,
-  "last_updated": "2026-11-01T19:40:43.553Z",
+  "version": 2506,
+  "last_updated": "2026-11-01T19:40:45.972Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Pppae3uUUwtIr6xD0l2ZW",
+      "title": "לבד יושבת",
+      "artist": "Avihu Medina",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T19:40:45.972Z"
+    },
     {
       "id": "4kmZuWisvnKyUZ8dCFTiCx",
       "title": "מחרוזת יוונית - Live",
