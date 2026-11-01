@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2526,
-  "last_updated": "2026-11-01T19:42:03.547Z",
+  "version": 2527,
+  "last_updated": "2026-11-01T19:42:07.329Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0YCk7WVTX7MlKNfUxU5RQG",
+      "title": "סבא בא, אבא בא",
+      "artist": "Lior Elbo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T19:42:07.329Z"
+    },
     {
       "id": "79eXInBJRFdgtJEKfCLXrj",
       "title": "מחרוזת: יום הולדת",
