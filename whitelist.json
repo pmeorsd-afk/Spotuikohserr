@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2461,
-  "last_updated": "2026-11-01T08:36:39.537Z",
+  "version": 2462,
+  "last_updated": "2026-11-01T08:36:45.037Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ZEpO3dv4MfA39M6BvrbyR",
+      "title": "Hoidee Lashem",
+      "artist": "Yitzchok Honig יצחק האניג, Gershi Uri, Shia Berko",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T08:36:45.037Z"
+    },
     {
       "id": "1IkYhtyGKCboRbVxnJjHW3",
       "title": "אורות",
