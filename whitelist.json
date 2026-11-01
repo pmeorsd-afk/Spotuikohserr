@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2473,
-  "last_updated": "2026-11-01T10:55:17.856Z",
+  "version": 2474,
+  "last_updated": "2026-11-01T10:55:23.944Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5FQCwtsC3YanKJzpfkvnDt",
+      "title": "שותפה שלי",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T10:55:23.944Z"
+    },
     {
       "id": "7uKGOWCx5fH8xdSBZHaC2B",
       "title": "אמא יקרה",
