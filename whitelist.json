@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2455,
-  "last_updated": "2026-11-01T07:22:45.452Z",
+  "version": 2456,
+  "last_updated": "2026-11-01T07:22:48.608Z",
   "artists": [
     {
       "id": "5j9zBZnCbTlGV6l9cGovLZ",
@@ -2660,6 +2660,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7yAziIVkn0K7nvK1yySlJi",
+      "title": "מחרוזת: לעולם לא נפרד",
+      "artist": "Avi Sinvani",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T07:22:48.608Z"
+    },
     {
       "id": "2fNUUEJm0EdIckj9uykklv",
       "title": "זה לא עושה לי כלום",
