@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2507,
-  "last_updated": "2026-11-01T19:40:48.945Z",
+  "version": 2508,
+  "last_updated": "2026-11-01T19:40:51.924Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6iXogu7NKsViSzpd2Xk576",
+      "title": "זה הכל מאהבה",
+      "artist": "ים רפאלי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T19:40:51.924Z"
+    },
     {
       "id": "3Z9ijHfpJVaosKXqQDaLpK",
       "title": "שירי דיכאון",
