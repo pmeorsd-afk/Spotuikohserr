@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2516,
-  "last_updated": "2026-11-01T19:41:28.584Z",
+  "version": 2517,
+  "last_updated": "2026-11-01T19:41:32.123Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6j8JqkDNLwuEJdsIaDf5D3",
+      "title": "‎⁨כשזה נגמר",
+      "artist": "Ron Buhnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T19:41:32.123Z"
+    },
     {
       "id": "7n3A7FUiSuOKC7OyVorqMg",
       "title": "אש ותמרות עשן",
