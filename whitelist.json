@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2480,
-  "last_updated": "2026-11-01T11:40:32.903Z",
+  "version": 2481,
+  "last_updated": "2026-11-01T11:45:10.799Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6d8ZHsSyTg6ABLkWNCZdSy",
+      "title": "מה עובר לך בראש",
+      "artist": "Avi Aburomi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T11:45:10.799Z"
+    },
     {
       "id": "6rlXgQ761EmcIDnMWk7esr",
       "title": "מסובבת אותי",
