@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2494,
-  "last_updated": "2026-11-01T12:21:10.831Z",
+  "version": 2495,
+  "last_updated": "2026-11-01T12:21:35.747Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1ZMCodyYPn50GZ3qL2HQOK",
+      "title": "La Vie de Crimi",
+      "artist": "ADM81",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-01T12:21:35.747Z"
+    },
     {
       "id": "4s6Hdg0Z36cqfEATkH24ld",
       "title": "את אומרת",
