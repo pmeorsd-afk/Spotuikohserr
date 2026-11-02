@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2620,
-  "last_updated": "2026-11-02T12:25:16.423Z",
+  "version": 2621,
+  "last_updated": "2026-11-02T12:25:18.794Z",
   "artists": [
+    {
+      "id": "1sQgQ7NSPks2KIrPPm6aDJ",
+      "canonical_name": "Ariel Zilber",
+      "aliases": [
+        "Ariel Zilber"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:25:18.794Z"
+    },
     {
       "id": "622WLnH4jDUjGjsnXCB7Kr",
       "canonical_name": "roimemu choir",
