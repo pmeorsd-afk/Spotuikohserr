@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2574,
-  "last_updated": "2026-11-02T12:19:08.364Z",
+  "version": 2575,
+  "last_updated": "2026-11-02T12:19:10.376Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5yJaXWIErrrsjQ3J0eR5aK",
+      "title": "The Night We Met",
+      "artist": "Lord Huron",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:10.376Z"
+    },
     {
       "id": "09QrTRuhR23VBNt4n8xuFg",
       "title": "רק ההתחלה (SKIT) - Live",
