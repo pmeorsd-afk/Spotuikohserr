@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2628,
-  "last_updated": "2026-11-02T23:08:36.656Z",
+  "version": 2629,
+  "last_updated": "2026-11-02T23:08:40.211Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1FWatwpJvWjt5A3DJt39cX",
+      "title": "נופל בפח",
+      "artist": "Idan Bakshi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:08:40.211Z"
+    },
     {
       "id": "7LegYLbISvXJFtAr4xDljO",
       "title": "על מה בנות חושבות בלילה",
