@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2584,
-  "last_updated": "2026-11-02T12:19:38.178Z",
+  "version": 2585,
+  "last_updated": "2026-11-02T12:19:40.006Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0YSR0iVIHh4UfV18qd4GxU",
+      "title": "סיבה טובה",
+      "artist": "Arik Sinai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:40.006Z"
+    },
     {
       "id": "7pojjbZAyaEs28gCbV55xT",
       "title": "שושו",
