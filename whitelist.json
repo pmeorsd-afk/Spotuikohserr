@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2597,
-  "last_updated": "2026-11-02T12:20:16.931Z",
+  "version": 2598,
+  "last_updated": "2026-11-02T12:20:19.731Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2KnLkZ3z7PO3kgVGHGqDpD",
+      "title": "It'll Be Okay",
+      "artist": "Shawn Mendes",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:20:19.731Z"
+    },
     {
       "id": "51eSHglvG1RJXtL3qI5trr",
       "title": "Slow It Down",
