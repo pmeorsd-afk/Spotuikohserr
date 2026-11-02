@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2673,
-  "last_updated": "2026-11-02T23:11:54.707Z",
+  "version": 2674,
+  "last_updated": "2026-11-02T23:12:05.849Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5690Ojekxupk1p7Py30iNo",
+      "title": "Spread Light",
+      "artist": "Avrumi Rosenfeld, Sruly Green, Pini Einhorn",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:12:05.849Z"
+    },
     {
       "id": "4VDzpbSEVR7jCVKKNjJNWo",
       "title": "Golden Afternoon - with water sounds",
