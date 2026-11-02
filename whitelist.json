@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2593,
-  "last_updated": "2026-11-02T12:20:05.581Z",
+  "version": 2594,
+  "last_updated": "2026-11-02T12:20:09.023Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5zFZAHRjxLs7JQ35GHvQg3",
+      "title": "לא תירא",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:20:09.023Z"
+    },
     {
       "id": "3w3e9YDWzPzkP2MMWQtJUq",
       "title": "La vie rapide",
