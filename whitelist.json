@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2674,
-  "last_updated": "2026-11-02T23:12:05.849Z",
+  "version": 2675,
+  "last_updated": "2026-11-02T23:12:20.485Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2G9RE0OpT3zneGHRwN6whJ",
+      "title": "רק ביחד",
+      "artist": "Ari Hill, אביאל גראוכר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:12:20.485Z"
+    },
     {
       "id": "5690Ojekxupk1p7Py30iNo",
       "title": "Spread Light",
