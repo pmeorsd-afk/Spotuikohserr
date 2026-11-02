@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2580,
-  "last_updated": "2026-11-02T12:19:20.344Z",
+  "version": 2581,
+  "last_updated": "2026-11-02T12:19:22.368Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2sh8lkOMzHpUe8ouEsosNO",
+      "title": "אוהב גם כשאת לא איתי",
+      "artist": "אברהם חתומה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:22.368Z"
+    },
     {
       "id": "58B9ZJ07YEPU4gXrb6wzoB",
       "title": "על מה בנים חושבים בלילה - Club Edit",
