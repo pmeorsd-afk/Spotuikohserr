@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2627,
-  "last_updated": "2026-11-02T23:08:30.764Z",
+  "version": 2628,
+  "last_updated": "2026-11-02T23:08:36.656Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7LegYLbISvXJFtAr4xDljO",
+      "title": "על מה בנות חושבות בלילה",
+      "artist": "Omer Adam, Doli & Penn",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:08:36.656Z"
+    },
     {
       "id": "0khHbDpJa3eb7wfL8gadnw",
       "title": "אחשלי",
