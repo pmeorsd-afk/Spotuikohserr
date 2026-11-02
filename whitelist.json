@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2675,
-  "last_updated": "2026-11-02T23:12:20.485Z",
+  "version": 2676,
+  "last_updated": "2026-11-02T23:12:27.145Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4IcT3k4zVxSj51cNQkDpfp",
+      "title": "Deera",
+      "artist": "Motty Ilowitz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:12:27.145Z"
+    },
     {
       "id": "2G9RE0OpT3zneGHRwN6whJ",
       "title": "רק ביחד",
