@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2636,
-  "last_updated": "2026-11-02T23:09:04.833Z",
+  "version": 2637,
+  "last_updated": "2026-11-02T23:09:12.903Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ivmchbeyb0iXJpXj2n1oB",
+      "title": "רץ שוב",
+      "artist": "וואן דאן, אבוצ'י, אל סי איי, Balishag",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:09:12.903Z"
+    },
     {
       "id": "1AZnLAnZYaZRnfclYfbJvM",
       "title": "פעם בחיים",
