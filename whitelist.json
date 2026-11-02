@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2587,
-  "last_updated": "2026-11-02T12:19:48.056Z",
+  "version": 2588,
+  "last_updated": "2026-11-02T12:19:51.575Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "72jbDTw1piOOj770jWNeaG",
+      "title": "Paris",
+      "artist": "The Chainsmokers",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:51.575Z"
+    },
     {
       "id": "6nxQdXa1uAL0rY72wPZu89",
       "title": "Love Me Now",
