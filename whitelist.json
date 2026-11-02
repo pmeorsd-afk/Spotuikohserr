@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2683,
-  "last_updated": "2026-11-02T23:12:49.864Z",
+  "version": 2684,
+  "last_updated": "2026-11-02T23:13:01.546Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6xoDRN0T8lObi9KQfjgGwD",
+      "title": "בלי לומר מילה",
+      "artist": "ליאם גולן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:13:01.546Z"
+    },
     {
       "id": "4IfDzapLNDPaDZ3t9GLkVd",
       "title": "צליל מיתר",
