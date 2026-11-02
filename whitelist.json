@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2583,
-  "last_updated": "2026-11-02T12:19:36.269Z",
+  "version": 2584,
+  "last_updated": "2026-11-02T12:19:38.178Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7pojjbZAyaEs28gCbV55xT",
+      "title": "שושו",
+      "artist": "Omer Adam, אודיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:38.178Z"
+    },
     {
       "id": "14uCYjc3tEJmK61fWQl3KK",
       "title": "בחורות טובות",
