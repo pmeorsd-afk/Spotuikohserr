@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2588,
-  "last_updated": "2026-11-02T12:19:51.575Z",
+  "version": 2589,
+  "last_updated": "2026-11-02T12:19:53.717Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "286aALKIEttePZozisCvdo",
+      "title": "זרה 2026",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:53.717Z"
+    },
     {
       "id": "72jbDTw1piOOj770jWNeaG",
       "title": "Paris",
