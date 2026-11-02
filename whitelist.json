@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2658,
-  "last_updated": "2026-11-02T23:11:10.247Z",
+  "version": 2659,
+  "last_updated": "2026-11-02T23:11:12.536Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3lILO5vJRUjnUIMqPRFZQO",
+      "title": "The Sleeping Forest - with water sounds",
+      "artist": "Felix Meadow",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:11:12.536Z"
+    },
     {
       "id": "6mudHjRQ5QuFD6rnHtdLDi",
       "title": "All Is Well - with water sounds",
