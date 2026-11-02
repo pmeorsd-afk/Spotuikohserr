@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2578,
-  "last_updated": "2026-11-02T12:19:16.262Z",
+  "version": 2579,
+  "last_updated": "2026-11-02T12:19:18.211Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "72l6Gsn2SLQV0gioCgud1V",
+      "title": "רואים רחוק רואים שקוף",
+      "artist": "Shmulik Kraus, Ilan Virtzberg",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:18.211Z"
+    },
     {
       "id": "15UmT9W65ccmBbdjFRRqmE",
       "title": "דרך הכורכר",
