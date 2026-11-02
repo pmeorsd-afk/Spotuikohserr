@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2640,
-  "last_updated": "2026-11-02T23:09:38.994Z",
+  "version": 2641,
+  "last_updated": "2026-11-02T23:09:51.764Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Q68zjoMQbETlcSMEYpcac",
+      "title": "שיר החתונות - רמיקס",
+      "artist": "שוקי סלומון, Nissim Black",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:09:51.764Z"
+    },
     {
       "id": "5lSuALrsZ6StkXRhq2yQkH",
       "title": "Lo Ira - Upmix",
