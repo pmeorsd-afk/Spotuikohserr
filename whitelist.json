@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2612,
-  "last_updated": "2026-11-02T12:21:37.432Z",
+  "version": 2613,
+  "last_updated": "2026-11-02T12:21:39.991Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5xzBjwCJLdIKtIXQZ06RXj",
+      "title": "שמש שזורחת עליי",
+      "artist": "Ravid Plotnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:21:39.991Z"
+    },
     {
       "id": "1MjYqTNBHVDtonApb1Mtbw",
       "title": "מחכה בחדר",
