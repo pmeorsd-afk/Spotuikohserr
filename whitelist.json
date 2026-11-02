@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2621,
-  "last_updated": "2026-11-02T12:25:18.794Z",
+  "version": 2622,
+  "last_updated": "2026-11-02T13:04:20.235Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2M4swhF7COFFPeUbKgruAD",
+      "title": "היסטוריה כואבת",
+      "artist": "ישראל אס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T13:04:20.235Z"
+    },
     {
       "id": "1ChZJDdEU5tR4ZrLeuDh5u",
       "title": "לופ",
