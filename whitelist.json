@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2599,
-  "last_updated": "2026-11-02T12:20:23.177Z",
+  "version": 2600,
+  "last_updated": "2026-11-02T12:20:32.403Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "523f4oSjrZx83XDtRLnsIw",
+      "title": "Before You",
+      "artist": "Benson Boone",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:20:32.403Z"
+    },
     {
       "id": "6cLrGfKIIRHYQw7S0mCDhA",
       "title": "All That Really Matters",
