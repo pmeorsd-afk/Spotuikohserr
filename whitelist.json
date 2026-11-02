@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2582,
-  "last_updated": "2026-11-02T12:19:24.486Z",
+  "version": 2583,
+  "last_updated": "2026-11-02T12:19:36.269Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "14uCYjc3tEJmK61fWQl3KK",
+      "title": "בחורות טובות",
+      "artist": "Sarit Hadad, אודיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:36.269Z"
+    },
     {
       "id": "2jMgv2F3fWC8FKRueqia6z",
       "title": "ערב של יום בהיר",
