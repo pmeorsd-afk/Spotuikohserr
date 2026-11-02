@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2692,
-  "last_updated": "2026-11-02T23:13:38.647Z",
+  "version": 2693,
+  "last_updated": "2026-11-02T23:13:44.183Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4UdGR9jmLpJ3HyUMafxqTo",
+      "title": "עינייך",
+      "artist": "יניב בר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:13:44.183Z"
+    },
     {
       "id": "4r37fzPMmUxFXZf5clGVNp",
       "title": "כשאלך",
