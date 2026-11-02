@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2665,
-  "last_updated": "2026-11-02T23:11:26.246Z",
+  "version": 2666,
+  "last_updated": "2026-11-02T23:11:31.744Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1HbA4N1MiOsPthALesGFR1",
+      "title": "Monster (Shawn Mendes & Justin Bieber)",
+      "artist": "Shawn Mendes, Justin Bieber",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:11:31.744Z"
+    },
     {
       "id": "4YqWwGiEkqJHaKZAguQhwn",
       "title": "Fresh Air - Water Sounds Version",
