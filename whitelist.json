@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2570,
-  "last_updated": "2026-11-01T21:53:13.369Z",
+  "version": 2571,
+  "last_updated": "2026-11-02T12:19:02.251Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1saT4tObMScARIwT4wTv0W",
+      "title": "נתראה בגלגול הבא",
+      "artist": "Ravid Plotnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:02.251Z"
+    },
     {
       "id": "0PjynQqdwAZD2SbzobRWoh",
       "title": "שיקסע",
