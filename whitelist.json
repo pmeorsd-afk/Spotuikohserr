@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2677,
-  "last_updated": "2026-11-02T23:12:31.455Z",
+  "version": 2678,
+  "last_updated": "2026-11-02T23:12:34.513Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ppkbNWqmZuzEiOTm5KM5C",
+      "title": "בחלומות שלי יש ים",
+      "artist": "Elai Botner, Shimon Buskila",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:12:34.513Z"
+    },
     {
       "id": "35nA0vuPtz2IrQ1R2hq2ch",
       "title": "עכשיו אני חוזר",
