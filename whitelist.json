@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2576,
-  "last_updated": "2026-11-02T12:19:12.569Z",
+  "version": 2577,
+  "last_updated": "2026-11-02T12:19:14.489Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44oIXnHokEg3rK7d1Kpm6P",
+      "title": "לא נרדמת תל אביב",
+      "artist": "Danny Robas",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:14.489Z"
+    },
     {
       "id": "4QU4yTWATuYAOd025b4H4P",
       "title": "Panda - IVY Remix",
