@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2606,
-  "last_updated": "2026-11-02T12:21:17.815Z",
+  "version": 2607,
+  "last_updated": "2026-11-02T12:21:20.823Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7owAy4b9jUAiNDNi0bJ9rW",
+      "title": "למי את מתקשרת",
+      "artist": "ליאם גולן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:21:20.823Z"
+    },
     {
       "id": "3EIpvMJo4sqVVqDQx9H4Zj",
       "title": "מלך אחד לעולם",
