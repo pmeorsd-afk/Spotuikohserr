@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2645,
-  "last_updated": "2026-11-02T23:10:20.574Z",
+  "version": 2646,
+  "last_updated": "2026-11-02T23:10:29.938Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6bDD9MwLc9RP1DvlUCCfxh",
+      "title": "This Is My Home",
+      "artist": "Duvie Shapiro",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:10:29.938Z"
+    },
     {
       "id": "0x5qVoUtDxGsv9QNSkdou4",
       "title": "צמאה לך נפשי",
