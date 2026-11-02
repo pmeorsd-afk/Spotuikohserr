@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2638,
-  "last_updated": "2026-11-02T23:09:22.608Z",
+  "version": 2639,
+  "last_updated": "2026-11-02T23:09:26.442Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5lSuALrsZ6StkXRhq2yQkH",
+      "title": "Lo Ira - Upmix",
+      "artist": "Thank You Hashem, DJ Farbreng, Moshe Storch, Mendy Worch",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:09:26.442Z"
+    },
     {
       "id": "1IoosVlTJ6vuC59q4DpFQh",
       "title": "כשאת לא כאן",
