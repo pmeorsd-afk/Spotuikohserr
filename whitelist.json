@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2623,
-  "last_updated": "2026-11-02T13:04:22.200Z",
+  "version": 2624,
+  "last_updated": "2026-11-02T23:08:06.489Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "551OQVQgAauIwNb56FZkWq",
+      "title": "מפחד להתאהב",
+      "artist": "מושיקו ינגילוב, Zohar Ashirov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:08:06.489Z"
+    },
     {
       "id": "0LACk9piv7rkKSVCT8YPfS",
       "title": "את שלי אני שלך",
