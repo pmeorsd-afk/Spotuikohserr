@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2661,
-  "last_updated": "2026-11-02T23:11:16.791Z",
+  "version": 2662,
+  "last_updated": "2026-11-02T23:11:19.291Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Kb4QA9yLzUJsx0bapy7dg",
+      "title": "The Sea is Calling",
+      "artist": "Center of Attention, Lore",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:11:19.291Z"
+    },
     {
       "id": "28BKsAykzdIHIJdcUj9MY8",
       "title": "The Empty Path - with water sounds",
