@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2598,
-  "last_updated": "2026-11-02T12:20:19.731Z",
+  "version": 2599,
+  "last_updated": "2026-11-02T12:20:23.177Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6cLrGfKIIRHYQw7S0mCDhA",
+      "title": "All That Really Matters",
+      "artist": "ILLENIUM, Teddy Swims",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:20:23.177Z"
+    },
     {
       "id": "2KnLkZ3z7PO3kgVGHGqDpD",
       "title": "It'll Be Okay",
