@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2590,
-  "last_updated": "2026-11-02T12:19:56.318Z",
+  "version": 2591,
+  "last_updated": "2026-11-02T12:19:58.411Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2I7Qxu7gER4KLvmFKo4x29",
+      "title": "לב אחרון - STUDIO 08 SESSIONS",
+      "artist": "ים רפאלי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:58.411Z"
+    },
     {
       "id": "6Ix2MJMdzccf5gVosUYG0r",
       "title": "יש מישהו ששר לך",
