@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2579,
-  "last_updated": "2026-11-02T12:19:18.211Z",
+  "version": 2580,
+  "last_updated": "2026-11-02T12:19:20.344Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "58B9ZJ07YEPU4gXrb6wzoB",
+      "title": "על מה בנים חושבים בלילה - Club Edit",
+      "artist": "Doli & Penn, אודיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:20.344Z"
+    },
     {
       "id": "72l6Gsn2SLQV0gioCgud1V",
       "title": "רואים רחוק רואים שקוף",
