@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2681,
-  "last_updated": "2026-11-02T23:12:41.912Z",
+  "version": 2682,
+  "last_updated": "2026-11-02T23:12:47.213Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0iBMxZn5ENxNozVqUYbDZt",
+      "title": "אל תשחקי לי בלב",
+      "artist": "נדב חנציס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:12:47.213Z"
+    },
     {
       "id": "7HU6XTkOuaEZgtbWhaVCpn",
       "title": "I Am Eternity",
