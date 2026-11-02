@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2624,
-  "last_updated": "2026-11-02T23:08:06.489Z",
+  "version": 2625,
+  "last_updated": "2026-11-02T23:08:10.529Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2AAXOLGMnTBoTkBC2FgBDs",
+      "title": "מחרוזת אהבה מטורפת",
+      "artist": "ראובן המלאך, מיכאל המלאך",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:08:10.529Z"
+    },
     {
       "id": "551OQVQgAauIwNb56FZkWq",
       "title": "מפחד להתאהב",
