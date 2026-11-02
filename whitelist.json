@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2631,
-  "last_updated": "2026-11-02T23:08:47.997Z",
+  "version": 2632,
+  "last_updated": "2026-11-02T23:08:51.804Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1dpzj7TV180jZ3aLZgnCYC",
+      "title": "השמיים נעולים",
+      "artist": "Doli & Penn, Ivri Lider, Peled, Ella Lee",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:08:51.804Z"
+    },
     {
       "id": "7CS9J7LEIIvppOvvdsENqO",
       "title": "אל תכעס",
