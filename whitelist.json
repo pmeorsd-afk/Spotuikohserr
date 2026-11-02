@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2586,
-  "last_updated": "2026-11-02T12:19:44.091Z",
+  "version": 2587,
+  "last_updated": "2026-11-02T12:19:48.056Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6nxQdXa1uAL0rY72wPZu89",
+      "title": "Love Me Now",
+      "artist": "John Legend",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:48.056Z"
+    },
     {
       "id": "42NSgpNPeNEqPpTJXTHxZ3",
       "title": "אין לי אף אחת",
