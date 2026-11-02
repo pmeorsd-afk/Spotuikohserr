@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2669,
-  "last_updated": "2026-11-02T23:11:39.513Z",
+  "version": 2670,
+  "last_updated": "2026-11-02T23:11:43.010Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3J1I5mr8CuEcqXfM70mLln",
+      "title": "Bajo la Sombra",
+      "artist": "Cehuana",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:11:43.010Z"
+    },
     {
       "id": "1V5ZgtMRpoKlqhesnvSyEG",
       "title": "Calm Night",
