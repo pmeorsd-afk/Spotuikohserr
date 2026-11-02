@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2602,
-  "last_updated": "2026-11-02T12:20:42.539Z",
+  "version": 2603,
+  "last_updated": "2026-11-02T12:20:44.496Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1NnY5I4sl6jaTMXxy8daBW",
+      "title": "תחת שמי ים התיכון",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:20:44.496Z"
+    },
     {
       "id": "1aOl53hkZGHkl2Snhr7opL",
       "title": "How Do I Say Goodbye",
