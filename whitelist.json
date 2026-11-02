@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2577,
-  "last_updated": "2026-11-02T12:19:14.489Z",
+  "version": 2578,
+  "last_updated": "2026-11-02T12:19:16.262Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "15UmT9W65ccmBbdjFRRqmE",
+      "title": "דרך הכורכר",
+      "artist": "Arik Sinai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:16.262Z"
+    },
     {
       "id": "44oIXnHokEg3rK7d1Kpm6P",
       "title": "לא נרדמת תל אביב",
