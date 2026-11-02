@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2682,
-  "last_updated": "2026-11-02T23:12:47.213Z",
+  "version": 2683,
+  "last_updated": "2026-11-02T23:12:49.864Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4IfDzapLNDPaDZ3t9GLkVd",
+      "title": "צליל מיתר",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:12:49.864Z"
+    },
     {
       "id": "0iBMxZn5ENxNozVqUYbDZt",
       "title": "אל תשחקי לי בלב",
