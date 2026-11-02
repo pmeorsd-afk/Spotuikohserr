@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2601,
-  "last_updated": "2026-11-02T12:20:36.488Z",
+  "version": 2602,
+  "last_updated": "2026-11-02T12:20:42.539Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1aOl53hkZGHkl2Snhr7opL",
+      "title": "How Do I Say Goodbye",
+      "artist": "Dean Lewis",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:20:42.539Z"
+    },
     {
       "id": "6OVPuT8LP83moqJYC1GpDm",
       "title": "שער הרחמים",
