@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2643,
-  "last_updated": "2026-11-02T23:10:03.449Z",
+  "version": 2644,
+  "last_updated": "2026-11-02T23:10:09.930Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5V8d8fQGZrGmDxAj9RaKMW",
+      "title": "כנפי רוח",
+      "artist": "Tuval Haim, Berry Sakharof, Pulkes",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:10:09.930Z"
+    },
     {
       "id": "0d833jgyg50OyIjDbVN2Zs",
       "title": "אדמה ושמיים",
