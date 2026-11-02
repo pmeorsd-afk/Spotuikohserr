@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2613,
-  "last_updated": "2026-11-02T12:21:39.991Z",
+  "version": 2614,
+  "last_updated": "2026-11-02T12:21:44.026Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1ChZJDdEU5tR4ZrLeuDh5u",
+      "title": "לופ",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:21:44.026Z"
+    },
     {
       "id": "5xzBjwCJLdIKtIXQZ06RXj",
       "title": "שמש שזורחת עליי",
