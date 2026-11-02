@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2581,
-  "last_updated": "2026-11-02T12:19:22.368Z",
+  "version": 2582,
+  "last_updated": "2026-11-02T12:19:24.486Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2jMgv2F3fWC8FKRueqia6z",
+      "title": "ערב של יום בהיר",
+      "artist": "Efraim Shamir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:24.486Z"
+    },
     {
       "id": "2sh8lkOMzHpUe8ouEsosNO",
       "title": "אוהב גם כשאת לא איתי",
