@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2637,
-  "last_updated": "2026-11-02T23:09:12.903Z",
+  "version": 2638,
+  "last_updated": "2026-11-02T23:09:22.608Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1IoosVlTJ6vuC59q4DpFQh",
+      "title": "כשאת לא כאן",
+      "artist": "Kobi Maman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:09:22.608Z"
+    },
     {
       "id": "4ivmchbeyb0iXJpXj2n1oB",
       "title": "רץ שוב",
