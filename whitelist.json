@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2695,
-  "last_updated": "2026-11-02T23:13:51.724Z",
+  "version": 2696,
+  "last_updated": "2026-11-02T23:30:13.093Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3DHWoG3OcPsfvlqgBEssX4",
+      "title": "קחי ת׳לב שלי",
+      "artist": "Gal Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:30:13.093Z"
+    },
     {
       "id": "39t38GtdW3bHWcYxAl1Vqv",
       "title": "מבזבזת לי ת'לב",
