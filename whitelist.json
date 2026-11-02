@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2685,
-  "last_updated": "2026-11-02T23:13:04.335Z",
+  "version": 2686,
+  "last_updated": "2026-11-02T23:13:15.188Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4IVs6BwSEkpqPd14yaXeVe",
+      "title": "ניגון ברדיטשוב",
+      "artist": "ישיבת רמת גן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:13:15.188Z"
+    },
     {
       "id": "2O1af1DbXF7paOr7O5CRst",
       "title": "ספרי להם הכל",
