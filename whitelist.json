@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2646,
-  "last_updated": "2026-11-02T23:10:29.938Z",
+  "version": 2647,
+  "last_updated": "2026-11-02T23:10:33.514Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "62AuGbAkt8Ox2IrFFb8GKV",
+      "title": "Sweet Caroline",
+      "artist": "Neil Diamond",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:10:33.514Z"
+    },
     {
       "id": "6bDD9MwLc9RP1DvlUCCfxh",
       "title": "This Is My Home",
