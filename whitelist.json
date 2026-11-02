@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2573,
-  "last_updated": "2026-11-02T12:19:06.374Z",
+  "version": 2574,
+  "last_updated": "2026-11-02T12:19:08.364Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "09QrTRuhR23VBNt4n8xuFg",
+      "title": "רק ההתחלה (SKIT) - Live",
+      "artist": "Subliminal, Mooki",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:08.364Z"
+    },
     {
       "id": "0PfvEnfj3hHl7zlc0WcfGY",
       "title": "‏שלווה בארמונותייך",
