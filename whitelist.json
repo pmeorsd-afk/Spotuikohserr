@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2664,
-  "last_updated": "2026-11-02T23:11:23.980Z",
+  "version": 2665,
+  "last_updated": "2026-11-02T23:11:26.246Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4YqWwGiEkqJHaKZAguQhwn",
+      "title": "Fresh Air - Water Sounds Version",
+      "artist": "Tsuki An",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:11:26.246Z"
+    },
     {
       "id": "5mo3svAjRR1MMcRrSDaBVD",
       "title": "Catberry Hill - with water sounds",
