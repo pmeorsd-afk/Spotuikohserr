@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2571,
-  "last_updated": "2026-11-02T12:19:02.251Z",
+  "version": 2572,
+  "last_updated": "2026-11-02T12:19:04.350Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "60GvepzSwgGx8kaZNln4L0",
+      "title": "כל הזמן הזה",
+      "artist": "Ravid Plotnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:04.350Z"
+    },
     {
       "id": "1saT4tObMScARIwT4wTv0W",
       "title": "נתראה בגלגול הבא",
