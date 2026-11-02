@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2616,
-  "last_updated": "2026-11-02T12:24:39.329Z",
+  "version": 2617,
+  "last_updated": "2026-11-02T12:25:10.150Z",
   "artists": [
+    {
+      "id": "15aGGshlU3E4knbko1puTX",
+      "canonical_name": "Meilech Kohn",
+      "aliases": [
+        "Meilech Kohn"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:25:10.150Z"
+    },
     {
       "id": "6oDsYfBJxdK445B8xXyR8o",
       "canonical_name": "Eitan Katz",
