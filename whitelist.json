@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2611,
-  "last_updated": "2026-11-02T12:21:32.132Z",
+  "version": 2612,
+  "last_updated": "2026-11-02T12:21:37.432Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1MjYqTNBHVDtonApb1Mtbw",
+      "title": "מחכה בחדר",
+      "artist": "ליאם גולן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:21:37.432Z"
+    },
     {
       "id": "5LoTA1AAQFQq6IBFmEy1Vq",
       "title": "לאן שלא תלכי אני אבוא",
