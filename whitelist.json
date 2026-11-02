@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2693,
-  "last_updated": "2026-11-02T23:13:44.183Z",
+  "version": 2694,
+  "last_updated": "2026-11-02T23:13:47.945Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2nNCXUBWfua0kdqqFdC59l",
+      "title": "לראות את האור - קאבר",
+      "artist": "Dudi Buzaglo, חיים דדון, Sarit Avitan, Idan Bakshi, אלקנה מרציאנו, Meir Alfi, אושר ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:13:47.945Z"
+    },
     {
       "id": "4UdGR9jmLpJ3HyUMafxqTo",
       "title": "עינייך",
