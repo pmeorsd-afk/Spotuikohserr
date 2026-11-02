@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2622,
-  "last_updated": "2026-11-02T13:04:20.235Z",
+  "version": 2623,
+  "last_updated": "2026-11-02T13:04:22.200Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0LACk9piv7rkKSVCT8YPfS",
+      "title": "את שלי אני שלך",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T13:04:22.200Z"
+    },
     {
       "id": "2M4swhF7COFFPeUbKgruAD",
       "title": "היסטוריה כואבת",
