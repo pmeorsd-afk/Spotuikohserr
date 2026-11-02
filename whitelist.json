@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2647,
-  "last_updated": "2026-11-02T23:10:33.514Z",
+  "version": 2648,
+  "last_updated": "2026-11-02T23:10:38.584Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "61uyGDPJ06MkxJtHgPmuyO",
+      "title": "Company",
+      "artist": "Justin Bieber",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:10:38.584Z"
+    },
     {
       "id": "62AuGbAkt8Ox2IrFFb8GKV",
       "title": "Sweet Caroline",
