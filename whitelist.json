@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2585,
-  "last_updated": "2026-11-02T12:19:40.006Z",
+  "version": 2586,
+  "last_updated": "2026-11-02T12:19:44.091Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "42NSgpNPeNEqPpTJXTHxZ3",
+      "title": "אין לי אף אחת",
+      "artist": "רואי אדם",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:19:44.091Z"
+    },
     {
       "id": "0YSR0iVIHh4UfV18qd4GxU",
       "title": "סיבה טובה",
