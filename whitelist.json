@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2649,
-  "last_updated": "2026-11-02T23:10:41.845Z",
+  "version": 2650,
+  "last_updated": "2026-11-02T23:10:44.330Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6rPO02ozF3bM7NnOV4h6s2",
+      "title": "Despacito - Remix",
+      "artist": "Luis Fonsi, Daddy Yankee, Justin Bieber",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:10:44.330Z"
+    },
     {
       "id": "6qzGmqDra7fZhmvKt3FH87",
       "title": "The Paper Moon - with water sounds",
