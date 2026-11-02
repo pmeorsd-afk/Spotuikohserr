@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2617,
-  "last_updated": "2026-11-02T12:25:10.150Z",
+  "version": 2618,
+  "last_updated": "2026-11-02T12:25:12.177Z",
   "artists": [
+    {
+      "id": "0uTnEXRJZKscfQpiwrsGdL",
+      "canonical_name": "Djs נשמת קול חי",
+      "aliases": [
+        "Djs נשמת קול חי"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:25:12.177Z"
+    },
     {
       "id": "15aGGshlU3E4knbko1puTX",
       "canonical_name": "Meilech Kohn",
