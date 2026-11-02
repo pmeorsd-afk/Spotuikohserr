@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2656,
-  "last_updated": "2026-11-02T23:11:05.108Z",
+  "version": 2657,
+  "last_updated": "2026-11-02T23:11:07.908Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3NgbFSuOoRf0CfNF68TEck",
+      "title": "Wash - Instrumental",
+      "artist": "Mark Bic",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:11:07.908Z"
+    },
     {
       "id": "5jehKL15utCDJljhLwqmUd",
       "title": "Golden Petals - Water Sounds Version",
