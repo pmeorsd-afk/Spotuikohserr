@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2607,
-  "last_updated": "2026-11-02T12:21:20.823Z",
+  "version": 2608,
+  "last_updated": "2026-11-02T12:21:23.215Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2qoRwe8PrkRaY9J3g4Ek9I",
+      "title": "אין מה להציל",
+      "artist": "רוי סופר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:21:23.215Z"
+    },
     {
       "id": "7owAy4b9jUAiNDNi0bJ9rW",
       "title": "למי את מתקשרת",
