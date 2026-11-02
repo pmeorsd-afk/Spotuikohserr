@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2678,
-  "last_updated": "2026-11-02T23:12:34.513Z",
+  "version": 2679,
+  "last_updated": "2026-11-02T23:12:36.732Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6MDq9IYFLYBPxjQqGAa6qJ",
+      "title": "לנשום",
+      "artist": "Eliad, Shimon Buskila",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:12:36.732Z"
+    },
     {
       "id": "2ppkbNWqmZuzEiOTm5KM5C",
       "title": "בחלומות שלי יש ים",
