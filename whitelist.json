@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2615,
-  "last_updated": "2026-11-02T12:22:57.543Z",
+  "version": 2616,
+  "last_updated": "2026-11-02T12:24:39.329Z",
   "artists": [
+    {
+      "id": "6oDsYfBJxdK445B8xXyR8o",
+      "canonical_name": "Eitan Katz",
+      "aliases": [
+        "Eitan Katz"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:24:39.329Z"
+    },
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
       "canonical_name": "Shia Berko",
