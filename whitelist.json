@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2633,
-  "last_updated": "2026-11-02T23:08:54.746Z",
+  "version": 2634,
+  "last_updated": "2026-11-02T23:08:57.813Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "66gfCK33XxturQQD1qWId0",
+      "title": "שגרה מפוארת",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T23:08:57.813Z"
+    },
     {
       "id": "7G8nafLvBEtBaENvr3gs7V",
       "title": "חוץ ממך",
