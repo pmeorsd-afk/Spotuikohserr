@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2603,
-  "last_updated": "2026-11-02T12:20:44.496Z",
+  "version": 2604,
+  "last_updated": "2026-11-02T12:20:47.304Z",
   "artists": [
     {
       "id": "2FFO1HXAlbq0XxJHgDl4e1",
@@ -2690,6 +2690,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "17phhZDn6oGtzMe56NuWvj",
+      "title": "Lose Control",
+      "artist": "Teddy Swims",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-02T12:20:47.304Z"
+    },
     {
       "id": "1NnY5I4sl6jaTMXxy8daBW",
       "title": "תחת שמי ים התיכון",
