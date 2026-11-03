@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2810,
-  "last_updated": "2026-11-03T20:21:29.298Z",
+  "version": 2811,
+  "last_updated": "2026-11-03T20:21:37.150Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:0sWkhy35ddA",
+      "title": "סתלבט בקיבוץ (עם ג'ימבו ג'יי)",
+      "artist": "פול טראנק",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:21:37.150Z"
+    },
     {
       "id": "44pgKXuq0EdcCtBSwSGRl7",
       "title": "סמוראי",
