@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2779,
-  "last_updated": "2026-11-03T20:18:43.335Z",
+  "version": 2780,
+  "last_updated": "2026-11-03T20:18:47.689Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4WoKmBYVGyrf7t0SkHhMQ1",
+      "title": "אין כבוד",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:18:47.689Z"
+    },
     {
       "id": "1tL5smcRMRzNbFViusb884",
       "title": "דבר איתי חופש",
