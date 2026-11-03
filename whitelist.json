@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2747,
-  "last_updated": "2026-11-03T12:11:54.718Z",
+  "version": 2748,
+  "last_updated": "2026-11-03T20:16:10.746Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2iJuuzV8P9Yz0VSurttIV5",
+      "title": "Scream & Shout",
+      "artist": "will.i.am, Britney Spears",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:16:10.746Z"
+    },
     {
       "id": "20aMDAxaW8ioXBlkdRqqHl",
       "title": "ניגון ארבע בבות - Nigun Daled Bavos",
