@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2820,
-  "last_updated": "2026-11-03T20:22:06.628Z",
+  "version": 2821,
+  "last_updated": "2026-11-03T20:22:09.970Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6A8dnC0xkiuWN4BshmTB2I",
+      "title": "Oceans Away",
+      "artist": "A R I Z O N A",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:22:09.970Z"
+    },
     {
       "id": "04boE4u1AupbrGlI62WvoO",
       "title": "White Noise 3 Hour Long",
