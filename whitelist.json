@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2719,
-  "last_updated": "2026-11-03T10:21:05.668Z",
+  "version": 2720,
+  "last_updated": "2026-11-03T10:21:10.383Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5KBmlBwzwmZs2LL5emBy6i",
+      "title": "ממעמקים",
+      "artist": "Haim Israel, Yoav Itzhak",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:21:10.383Z"
+    },
     {
       "id": "4J3DEELmLz02PLbxEz7qiv",
       "title": "מאתיים מחזרים",
