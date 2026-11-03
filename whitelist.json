@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2760,
-  "last_updated": "2026-11-03T20:17:18.573Z",
+  "version": 2761,
+  "last_updated": "2026-11-03T20:17:38.379Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4THsTdLvNHp4Q0NMgPyYm6",
+      "title": "למטה למעלה",
+      "artist": "בניה שאנני",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:17:38.379Z"
+    },
     {
       "id": "201Z1pKjLdAVIxbIBZrvLE",
       "title": "ניגון קבלת שבת - Live",
