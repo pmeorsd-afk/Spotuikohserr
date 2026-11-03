@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2756,
-  "last_updated": "2026-11-03T20:16:59.474Z",
+  "version": 2757,
+  "last_updated": "2026-11-03T20:17:02.579Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6jtkSTuNLsQiTnvI27wTtK",
+      "title": "מחרוזת עופר לוי - זאפה חיפה LIVE",
+      "artist": "היוצרים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:17:02.579Z"
+    },
     {
       "id": "4qh5dRJmZIWe1GnbqFO2bd",
       "title": "האור יופיע",
