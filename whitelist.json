@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2780,
-  "last_updated": "2026-11-03T20:18:47.689Z",
+  "version": 2781,
+  "last_updated": "2026-11-03T20:18:49.623Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6AdcYXhW4HsOP8dWqJa8i6",
+      "title": "אחרי הנצח - Live",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:18:49.623Z"
+    },
     {
       "id": "4WoKmBYVGyrf7t0SkHhMQ1",
       "title": "אין כבוד",
