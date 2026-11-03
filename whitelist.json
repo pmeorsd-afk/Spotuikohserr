@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2800,
-  "last_updated": "2026-11-03T20:20:01.847Z",
+  "version": 2801,
+  "last_updated": "2026-11-03T20:20:16.043Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:xIfPQ3YwqXs",
+      "title": "דקלון ואהרון ירימי",
+      "artist": "קובי אחרק",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:20:16.043Z"
+    },
     {
       "id": "7jEyX4bqaCSdMN4D4JNnVj",
       "title": "Mama",
