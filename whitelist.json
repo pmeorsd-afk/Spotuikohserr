@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2844,
-  "last_updated": "2026-11-03T21:12:53.504Z",
+  "version": 2845,
+  "last_updated": "2026-11-03T21:49:11.573Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5r0tKUiNlSHJttCtuR7fLK",
+      "title": "Let her go",
+      "artist": "Itay Benda",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T21:49:11.573Z"
+    },
     {
       "id": "1QEWjFZaTOhKhZEGFJEXqU",
       "title": "מגיע לי יותר",
