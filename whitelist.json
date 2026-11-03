@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2737,
-  "last_updated": "2026-11-03T11:54:54.874Z",
+  "version": 2738,
+  "last_updated": "2026-11-03T12:08:38.035Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "20aMDAxaW8ioXBlkdRqqHl",
+      "title": "ניגון ארבע בבות - Nigun Daled Bavos",
+      "artist": "Chabad Music - חב׳׳ד מיוזיק",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T12:08:38.035Z"
+    },
     {
       "id": "68eF9Wd0CDrizcyzkyoMXp",
       "title": "צ'או בייבי Live - Live",
