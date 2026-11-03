@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2754,
-  "last_updated": "2026-11-03T20:16:46.635Z",
+  "version": 2755,
+  "last_updated": "2026-11-03T20:16:49.413Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5HbAnqUETKiwAcB8ZKejcT",
+      "title": "עומר אצילי - שיר שחקן",
+      "artist": "אדיר ניזרי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:16:49.413Z"
+    },
     {
       "id": "4aFIgS342EDJGX2QSuiHTn",
       "title": "ניגוני הינוקא - ניגון לראות את הטוב",
