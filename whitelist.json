@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2825,
-  "last_updated": "2026-11-03T20:22:21.736Z",
+  "version": 2826,
+  "last_updated": "2026-11-03T20:27:39.581Z",
   "artists": [
+    {
+      "id": "1co0pRiRxNAmM51ZVvQvU6",
+      "canonical_name": "Udi Damari",
+      "aliases": [
+        "Udi Damari"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:27:39.581Z"
+    },
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
       "canonical_name": "ישיבת רמת גן",
