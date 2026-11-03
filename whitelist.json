@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2828,
-  "last_updated": "2026-11-03T20:27:46.912Z",
+  "version": 2829,
+  "last_updated": "2026-11-03T20:28:28.814Z",
   "artists": [
+    {
+      "id": "5dbAOhbGceNaKmoTn7xnv6",
+      "canonical_name": "Aharon Yaremi",
+      "aliases": [
+        "Aharon Yaremi"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:28:28.814Z"
+    },
     {
       "id": "0ZB31CtQsWrsyfJJMRZeS3",
       "canonical_name": "נעם שפייר",
