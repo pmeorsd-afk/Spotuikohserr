@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2697,
-  "last_updated": "2026-11-03T10:19:38.257Z",
+  "version": 2698,
+  "last_updated": "2026-11-03T10:19:43.506Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0FmfIapcM2oc8mt9glRW5u",
+      "title": "רוקד עם הפחד",
+      "artist": "משה כורסיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:19:43.506Z"
+    },
     {
       "id": "4EAtV2TNaxXfsmlDCtchIF",
       "title": "אל תשאלי (מארח את בניה ברבי)",
