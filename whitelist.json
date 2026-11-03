@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2802,
-  "last_updated": "2026-11-03T20:20:20.218Z",
+  "version": 2803,
+  "last_updated": "2026-11-03T20:20:25.016Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:QsHkA5Rkybw",
+      "title": "אהרון ירימי הרועה 2012",
+      "artist": "RT3D1970",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:20:25.016Z"
+    },
     {
       "id": "youtube:JdLWX0ZtZJk",
       "title": "אלירן אלבז ואהרון ירימי - מחרוזת צא מזה | Eliran Elbaz Ft Aharon Yarimi - Tzeh Mizeh Medley",
