@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2771,
-  "last_updated": "2026-11-03T20:18:10.968Z",
+  "version": 2772,
+  "last_updated": "2026-11-03T20:18:13.832Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6llk5jFidJwLVXOz2zH6jJ",
+      "title": "שושנים עצובות & מכל האהבות - Live",
+      "artist": "Eden Hason, Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:18:13.832Z"
+    },
     {
       "id": "10GsfggkORXTRVaIHvA7y3",
       "title": "שושנים עצובות",
