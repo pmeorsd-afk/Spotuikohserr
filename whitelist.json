@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2759,
-  "last_updated": "2026-11-03T20:17:07.182Z",
+  "version": 2760,
+  "last_updated": "2026-11-03T20:17:18.573Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "201Z1pKjLdAVIxbIBZrvLE",
+      "title": "ניגון קבלת שבת - Live",
+      "artist": "נעם שפייר, Maor Sabag",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:17:18.573Z"
+    },
     {
       "id": "5Zsn3XqsglrhaxNuJBmWTO",
       "title": "Esa Einai",
