@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2758,
-  "last_updated": "2026-11-03T20:17:04.993Z",
+  "version": 2759,
+  "last_updated": "2026-11-03T20:17:07.182Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Zsn3XqsglrhaxNuJBmWTO",
+      "title": "Esa Einai",
+      "artist": "Yitzchak Rosenthal, Shalsheles",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:17:07.182Z"
+    },
     {
       "id": "1uIRqXgEs2Usgn9ekfL7Vk",
       "title": "Rafani",
