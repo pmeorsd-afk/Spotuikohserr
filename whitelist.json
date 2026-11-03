@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2722,
-  "last_updated": "2026-11-03T10:21:16.875Z",
+  "version": 2723,
+  "last_updated": "2026-11-03T10:21:20.921Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "478Ixn9m7mZDVdV80VNjvH",
+      "title": "חיים שכאלה",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:21:20.921Z"
+    },
     {
       "id": "3pvBB4oPXTaHV403msHYF0",
       "title": "גן עדן של משוגעים",
