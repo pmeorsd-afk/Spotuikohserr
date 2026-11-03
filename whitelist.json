@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2807,
-  "last_updated": "2026-11-03T20:21:02.102Z",
+  "version": 2808,
+  "last_updated": "2026-11-03T20:21:09.466Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:qL0G2mQ0QlU",
+      "title": "תאג\"ד 2  | חלב אם - הקליפ הרשמי!",
+      "artist": "yes tv (יס)",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:21:09.466Z"
+    },
     {
       "id": "2vfEo2ThJX9AYSl0h0P7jE",
       "title": "מנגן ושר",
