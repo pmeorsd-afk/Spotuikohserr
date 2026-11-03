@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2703,
-  "last_updated": "2026-11-03T10:20:01.707Z",
+  "version": 2704,
+  "last_updated": "2026-11-03T10:20:04.593Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "318nfosyorMlmjZq1m1Uh4",
+      "title": "כשיגמר לכם הקיץ",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:20:04.593Z"
+    },
     {
       "id": "1IfYPTWvjcozVjQvz9bC5N",
       "title": "את החיים שלי",
