@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2836,
-  "last_updated": "2026-11-03T20:28:51.394Z",
+  "version": 2837,
+  "last_updated": "2026-11-03T20:28:53.857Z",
   "artists": [
+    {
+      "id": "1k8sIESDVitP38QJAjAtHf",
+      "canonical_name": "Ben Snof",
+      "aliases": [
+        "Ben Snof"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:28:53.857Z"
+    },
     {
       "id": "0Yf1L7t9gEfZfbzVtxK8rV",
       "canonical_name": "Yitzchak Meir",
