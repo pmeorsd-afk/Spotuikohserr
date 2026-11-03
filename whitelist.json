@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2831,
-  "last_updated": "2026-11-03T20:28:36.622Z",
+  "version": 2832,
+  "last_updated": "2026-11-03T20:28:39.623Z",
   "artists": [
+    {
+      "id": "7FzE4eNjEPQU9c61oq5sCC",
+      "canonical_name": "משה בן מוש",
+      "aliases": [
+        "משה בן מוש"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:28:39.623Z"
+    },
     {
       "id": "0b5e6C0jEdrXKbS9MbUtb3",
       "canonical_name": "גיל נגר",
