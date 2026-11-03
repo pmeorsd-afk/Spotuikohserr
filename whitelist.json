@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2764,
-  "last_updated": "2026-11-03T20:17:46.941Z",
+  "version": 2765,
+  "last_updated": "2026-11-03T20:17:50.580Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0qpEELCqaaHG0g3fxiMcPL",
+      "title": "חברות שלך",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:17:50.580Z"
+    },
     {
       "id": "6FbmUqAPNiQ5IXxMTNKV3u",
       "title": "לילה",
