@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2726,
-  "last_updated": "2026-11-03T10:21:32.003Z",
+  "version": 2727,
+  "last_updated": "2026-11-03T10:31:33.064Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1GODZl0cB9rbCT9MMlE2Xp",
+      "title": "שני זרים",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:31:33.064Z"
+    },
     {
       "id": "7kpa6MWRrPaF3b6C0DgioK",
       "title": "Always",
