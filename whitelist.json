@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2835,
-  "last_updated": "2026-11-03T20:28:48.715Z",
+  "version": 2836,
+  "last_updated": "2026-11-03T20:28:51.394Z",
   "artists": [
+    {
+      "id": "0Yf1L7t9gEfZfbzVtxK8rV",
+      "canonical_name": "Yitzchak Meir",
+      "aliases": [
+        "Yitzchak Meir"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:28:51.394Z"
+    },
     {
       "id": "6bmvwsCMADDrWtvzr4WrnA",
       "canonical_name": "רבי שלום שטיסל",
