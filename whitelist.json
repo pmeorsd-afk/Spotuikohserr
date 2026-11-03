@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2766,
-  "last_updated": "2026-11-03T20:17:53.937Z",
+  "version": 2767,
+  "last_updated": "2026-11-03T20:17:56.601Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2LdUmQdymO99riYOVCrUPK",
+      "title": "שתי טיפות",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:17:56.601Z"
+    },
     {
       "id": "3Nkgj2fda76qTOJFXP9h48",
       "title": "קווקז",
