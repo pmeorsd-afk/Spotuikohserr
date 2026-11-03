@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2801,
-  "last_updated": "2026-11-03T20:20:16.043Z",
+  "version": 2802,
+  "last_updated": "2026-11-03T20:20:20.218Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:JdLWX0ZtZJk",
+      "title": "אלירן אלבז ואהרון ירימי - מחרוזת צא מזה | Eliran Elbaz Ft Aharon Yarimi - Tzeh Mizeh Medley",
+      "artist": "אלירן אלבז",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:20:20.218Z"
+    },
     {
       "id": "youtube:xIfPQ3YwqXs",
       "title": "דקלון ואהרון ירימי",
