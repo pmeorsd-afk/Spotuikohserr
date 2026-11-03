@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2696,
-  "last_updated": "2026-11-02T23:30:13.093Z",
+  "version": 2697,
+  "last_updated": "2026-11-03T10:19:38.257Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4EAtV2TNaxXfsmlDCtchIF",
+      "title": "אל תשאלי (מארח את בניה ברבי)",
+      "artist": "Gil Vain, בניה ברבי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:19:38.257Z"
+    },
     {
       "id": "3DHWoG3OcPsfvlqgBEssX4",
       "title": "קחי ת׳לב שלי",
