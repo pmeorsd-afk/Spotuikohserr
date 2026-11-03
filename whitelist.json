@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2724,
-  "last_updated": "2026-11-03T10:21:23.476Z",
+  "version": 2725,
+  "last_updated": "2026-11-03T10:21:28.254Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0c9Sq3RDqb8sd6N9B8yM4v",
+      "title": "סולמות ונחשים",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:21:28.254Z"
+    },
     {
       "id": "5imQxc93MlMISeCUBSwP1j",
       "title": "פרחים במדבר",
