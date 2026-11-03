@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2773,
-  "last_updated": "2026-11-03T20:18:18.319Z",
+  "version": 2774,
+  "last_updated": "2026-11-03T20:18:20.379Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4hkMyg8evAQqIjs49YbZ9t",
+      "title": "Mon Amour",
+      "artist": "Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:18:20.379Z"
+    },
     {
       "id": "2BbVYYhqwP31quPAq9zqwX",
       "title": "Mi’Col Ha’A’havot (Of All The Loves)",
