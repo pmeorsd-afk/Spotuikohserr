@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2711,
-  "last_updated": "2026-11-03T10:20:27.690Z",
+  "version": 2712,
+  "last_updated": "2026-11-03T10:20:31.233Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6fxVffaTuwjgEk5h9QyRjy",
+      "title": "Photograph",
+      "artist": "Ed Sheeran",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:20:31.233Z"
+    },
     {
       "id": "7E5IjUGyRmwo2E2pqGqji9",
       "title": "אש",
