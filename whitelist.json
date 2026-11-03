@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2739,
-  "last_updated": "2026-11-03T12:09:51.898Z",
+  "version": 2740,
+  "last_updated": "2026-11-03T12:11:36.785Z",
   "artists": [
+    {
+      "id": "0XepJkzpgWouPZNcCcflut",
+      "canonical_name": "שלומי אזריאל",
+      "aliases": [
+        "שלומי אזריאל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T12:11:36.785Z"
+    },
     {
       "id": "6U6GMiXIVrkY9qJ64D4aV0",
       "canonical_name": "Chabad Music - חב׳׳ד מיוזיק",
