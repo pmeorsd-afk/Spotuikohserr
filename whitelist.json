@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2808,
-  "last_updated": "2026-11-03T20:21:09.466Z",
+  "version": 2809,
+  "last_updated": "2026-11-03T20:21:25.923Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2RNGK9C5zMQhKMTiPL5Q0T",
+      "title": "מאחל לך טוב",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:21:25.923Z"
+    },
     {
       "id": "youtube:qL0G2mQ0QlU",
       "title": "תאג\"ד 2  | חלב אם - הקליפ הרשמי!",
