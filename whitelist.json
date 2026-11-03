@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2819,
-  "last_updated": "2026-11-03T20:22:01.549Z",
+  "version": 2820,
+  "last_updated": "2026-11-03T20:22:06.628Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "04boE4u1AupbrGlI62WvoO",
+      "title": "White Noise 3 Hour Long",
+      "artist": "White Noise Therapy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:22:06.628Z"
+    },
     {
       "id": "4keoy2fqgwGnbWlm3ZVZFa",
       "title": "Happy Now",
