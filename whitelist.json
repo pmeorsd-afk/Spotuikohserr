@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2762,
-  "last_updated": "2026-11-03T20:17:41.684Z",
+  "version": 2763,
+  "last_updated": "2026-11-03T20:17:44.511Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1SAkL1mYNJlaqnBQxVZrRl",
+      "title": "Baby Got Back",
+      "artist": "Sir Mix-A-Lot",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:17:44.511Z"
+    },
     {
       "id": "5K6bbAFdcqwPVnpfNzQ47B",
       "title": "חוזר מאהבה",
