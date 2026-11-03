@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2790,
-  "last_updated": "2026-11-03T20:19:22.247Z",
+  "version": 2791,
+  "last_updated": "2026-11-03T20:19:25.106Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0OlnLZY4cmQzT6ZGttvWBM",
+      "title": "So Far Away (feat. Jamie Scott & Romy Dya)",
+      "artist": "Martin Garrix, David Guetta, Jamie Scott, Romy Dya",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:19:25.106Z"
+    },
     {
       "id": "6HSI3AtcweujUPmx9Ijirn",
       "title": "בורח",
