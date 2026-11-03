@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2777,
-  "last_updated": "2026-11-03T20:18:34.255Z",
+  "version": 2778,
+  "last_updated": "2026-11-03T20:18:37.254Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2JzZzZUQj3Qff7wapcbKjc",
+      "title": "See You Again (feat. Charlie Puth)",
+      "artist": "Wiz Khalifa, Charlie Puth",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:18:37.254Z"
+    },
     {
       "id": "3IfCJv04AMdg13Pxmsna1e",
       "title": "מסיבה בחיפה",
