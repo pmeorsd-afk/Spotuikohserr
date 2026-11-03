@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2795,
-  "last_updated": "2026-11-03T20:19:47.761Z",
+  "version": 2796,
+  "last_updated": "2026-11-03T20:19:49.916Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6CgocBDUdJx21ehn3tN5M2",
+      "title": "מחרוזת: שורשים",
+      "artist": "Aharon Yaremi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:19:49.916Z"
+    },
     {
       "id": "0mzNfOREy9UgZGZ8HGsgGj",
       "title": "קומו נעלה",
