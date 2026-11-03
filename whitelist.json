@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2811,
-  "last_updated": "2026-11-03T20:21:37.150Z",
+  "version": 2812,
+  "last_updated": "2026-11-03T20:21:40.219Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4yXVMtshq607khzobLyo9C",
+      "title": "לאן הולכים מכאן",
+      "artist": "Hatikva 6",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:21:40.219Z"
+    },
     {
       "id": "youtube:0sWkhy35ddA",
       "title": "סתלבט בקיבוץ (עם ג'ימבו ג'יי)",
