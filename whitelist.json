@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2804,
-  "last_updated": "2026-11-03T20:20:28.430Z",
+  "version": 2805,
+  "last_updated": "2026-11-03T20:20:31.957Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:M9BPBBjMCZI",
+      "title": "יא-היזארי - אהרון ירימי",
+      "artist": "chen0006",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:20:31.957Z"
+    },
     {
       "id": "youtube:sUSLmYWPX3A",
       "title": "אהרון ירימי - הרמטכ\"ל התימני",
