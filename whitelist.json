@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2796,
-  "last_updated": "2026-11-03T20:19:49.916Z",
+  "version": 2797,
+  "last_updated": "2026-11-03T20:19:52.861Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7fhvXsr3GarG2IfMwc7eiZ",
+      "title": "רק אלוהים יודע",
+      "artist": "Avihu Medina, פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:19:52.861Z"
+    },
     {
       "id": "6CgocBDUdJx21ehn3tN5M2",
       "title": "מחרוזת: שורשים",
