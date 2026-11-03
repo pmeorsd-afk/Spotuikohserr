@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2738,
-  "last_updated": "2026-11-03T12:08:38.035Z",
+  "version": 2739,
+  "last_updated": "2026-11-03T12:09:51.898Z",
   "artists": [
+    {
+      "id": "6U6GMiXIVrkY9qJ64D4aV0",
+      "canonical_name": "Chabad Music - חב׳׳ד מיוזיק",
+      "aliases": [
+        "Chabad Music - חב׳׳ד מיוזיק"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T12:09:51.898Z"
+    },
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
       "canonical_name": "Ariel Zilber",
