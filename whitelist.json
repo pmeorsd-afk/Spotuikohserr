@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2813,
-  "last_updated": "2026-11-03T20:21:44.033Z",
+  "version": 2814,
+  "last_updated": "2026-11-03T20:21:46.802Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5UEnnrjmKyyReW8OY8FuvN",
+      "title": "ללכת",
+      "artist": "Liran Danino",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:21:46.802Z"
+    },
     {
       "id": "18ljxDm42G5YuQtWZElFSZ",
       "title": "מלכת הדור & אחת למיליון & לא להמציא - מיוחד למצעד הישראלי השנתי",
