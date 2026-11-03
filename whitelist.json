@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2721,
-  "last_updated": "2026-11-03T10:21:13.883Z",
+  "version": 2722,
+  "last_updated": "2026-11-03T10:21:16.875Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3pvBB4oPXTaHV403msHYF0",
+      "title": "גן עדן של משוגעים",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:21:16.875Z"
+    },
     {
       "id": "1nW1SVsdxVipJn5tFFrpHP",
       "title": "עברו חודשיים",
