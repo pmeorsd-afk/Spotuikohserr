@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2840,
-  "last_updated": "2026-11-03T20:49:36.972Z",
+  "version": 2841,
+  "last_updated": "2026-11-03T20:52:12.353Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Zhm8qMnDwXR3soSSurN8T",
+      "title": "Stay Young",
+      "artist": "Mike Perry, Tessa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:52:12.353Z"
+    },
     {
       "id": "5RLtWBTTnFzouvkuYDANq1",
       "title": "Cruel Hearts",
