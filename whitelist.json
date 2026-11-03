@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2806,
-  "last_updated": "2026-11-03T20:20:57.470Z",
+  "version": 2807,
+  "last_updated": "2026-11-03T20:21:02.102Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2vfEo2ThJX9AYSl0h0P7jE",
+      "title": "מנגן ושר",
+      "artist": "Bar Tzabary",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:21:02.102Z"
+    },
     {
       "id": "1K4B8txQg7prX0eNSDPdzu",
       "title": "לילה טוב",
