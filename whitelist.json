@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2748,
-  "last_updated": "2026-11-03T20:16:10.746Z",
+  "version": 2749,
+  "last_updated": "2026-11-03T20:16:13.140Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1WLj5Ajqc1ulCpwsNXH5t3",
+      "title": "בקרוב",
+      "artist": "Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:16:13.140Z"
+    },
     {
       "id": "2iJuuzV8P9Yz0VSurttIV5",
       "title": "Scream & Shout",
