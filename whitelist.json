@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2707,
-  "last_updated": "2026-11-03T10:20:16.543Z",
+  "version": 2708,
+  "last_updated": "2026-11-03T10:20:18.756Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Ap742kKOE7chXEdDZWvOq",
+      "title": "מי לא יבוא",
+      "artist": "Avraham Tal, בניה ברבי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:20:18.756Z"
+    },
     {
       "id": "7GRcmARLbammALnyTrJcYB",
       "title": "עכשיו הלב פתוח",
