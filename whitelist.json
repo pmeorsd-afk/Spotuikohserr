@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2815,
-  "last_updated": "2026-11-03T20:21:49.591Z",
+  "version": 2816,
+  "last_updated": "2026-11-03T20:21:53.117Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5ZUKmKKOAKEIqAebzXF617",
+      "title": "רקדנית",
+      "artist": "Ori Ben Ari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:21:53.117Z"
+    },
     {
       "id": "7mddq84umaaly723Nttfmu",
       "title": "שמלה אדומה",
