@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2704,
-  "last_updated": "2026-11-03T10:20:04.593Z",
+  "version": 2705,
+  "last_updated": "2026-11-03T10:20:07.958Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4MJTje9YlG7SeCl25xxNus",
+      "title": "מתוך מחשבות",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:20:07.958Z"
+    },
     {
       "id": "318nfosyorMlmjZq1m1Uh4",
       "title": "כשיגמר לכם הקיץ",
