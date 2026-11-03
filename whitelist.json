@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2832,
-  "last_updated": "2026-11-03T20:28:39.623Z",
+  "version": 2833,
+  "last_updated": "2026-11-03T20:28:42.650Z",
   "artists": [
+    {
+      "id": "4e0bmlKrQqotanYC1hAXHs",
+      "canonical_name": "Roy Yadid",
+      "aliases": [
+        "Roy Yadid"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:28:42.650Z"
+    },
     {
       "id": "7FzE4eNjEPQU9c61oq5sCC",
       "canonical_name": "משה בן מוש",
