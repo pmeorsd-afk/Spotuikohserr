@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2717,
-  "last_updated": "2026-11-03T10:20:58.400Z",
+  "version": 2718,
+  "last_updated": "2026-11-03T10:21:01.278Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4J3DEELmLz02PLbxEz7qiv",
+      "title": "מאתיים מחזרים",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:21:01.278Z"
+    },
     {
       "id": "75uMlPnxVOffnHDuw4TnT0",
       "title": "Perfect",
