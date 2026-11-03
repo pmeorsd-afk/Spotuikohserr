@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2750,
-  "last_updated": "2026-11-03T20:16:15.548Z",
+  "version": 2751,
+  "last_updated": "2026-11-03T20:16:18.410Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7hyle4lmxpFkhKOv2NxTiL",
+      "title": "כמו כל יום",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:16:18.410Z"
+    },
     {
       "id": "2yH03a0XgThy4Q9OCT6b0W",
       "title": "מי כמוך",
