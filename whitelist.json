@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2823,
-  "last_updated": "2026-11-03T20:22:17.220Z",
+  "version": 2824,
+  "last_updated": "2026-11-03T20:22:19.751Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4QTuyRQshEZYurtIDfE6g0",
+      "title": "By Your Side",
+      "artist": "Jonas Blue, RAYE",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:22:19.751Z"
+    },
     {
       "id": "6jA8HL9i4QGzsj6fjoxp8Y",
       "title": "There for You",
