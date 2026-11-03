@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2708,
-  "last_updated": "2026-11-03T10:20:18.756Z",
+  "version": 2709,
+  "last_updated": "2026-11-03T10:20:22.225Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3E5sVhV262CxsgYwTruluJ",
+      "title": "אבא (מתוך טקס ערב יום הזיכרון 2026)",
+      "artist": "Shlomi Shabat, בן צור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:20:22.225Z"
+    },
     {
       "id": "0Ap742kKOE7chXEdDZWvOq",
       "title": "מי לא יבוא",
