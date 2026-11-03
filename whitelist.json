@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2734,
-  "last_updated": "2026-11-03T11:54:42.235Z",
+  "version": 2735,
+  "last_updated": "2026-11-03T11:54:44.313Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5lvggSrVvmTdZw7UnJDqnq",
+      "title": "אל תגידי לא",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T11:54:44.313Z"
+    },
     {
       "id": "2TlbpPgFuDkTqYNv01Amcv",
       "title": "מקום לשנינו & השם יברך אותך - מתוך חזרות לפסטיבל התמר 2025",
