@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2752,
-  "last_updated": "2026-11-03T20:16:21.871Z",
+  "version": 2753,
+  "last_updated": "2026-11-03T20:16:32.284Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3NoL2TD3oY2bCHrzM93rwG",
+      "title": "תפילת הדרך",
+      "artist": "Itzik Kala",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:16:32.284Z"
+    },
     {
       "id": "05iw1Zb7Lp5DNUSvDhBRk6",
       "title": "נגנב ממך",
