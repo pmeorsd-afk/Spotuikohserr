@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2725,
-  "last_updated": "2026-11-03T10:21:28.254Z",
+  "version": 2726,
+  "last_updated": "2026-11-03T10:21:32.003Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7kpa6MWRrPaF3b6C0DgioK",
+      "title": "Always",
+      "artist": "Saliva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:21:32.003Z"
+    },
     {
       "id": "0c9Sq3RDqb8sd6N9B8yM4v",
       "title": "סולמות ונחשים",
