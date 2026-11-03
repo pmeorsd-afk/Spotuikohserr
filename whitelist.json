@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2741,
-  "last_updated": "2026-11-03T12:11:39.622Z",
+  "version": 2742,
+  "last_updated": "2026-11-03T12:11:41.358Z",
   "artists": [
+    {
+      "id": "0shqzmR8BOgm36KdqKH1nL",
+      "canonical_name": "Roi Harush",
+      "aliases": [
+        "Roi Harush"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T12:11:41.358Z"
+    },
     {
       "id": "04QgfIIHBRS0b6XiY3kYYy",
       "canonical_name": "Nissim Black",
