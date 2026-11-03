@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2824,
-  "last_updated": "2026-11-03T20:22:19.751Z",
+  "version": 2825,
+  "last_updated": "2026-11-03T20:22:21.736Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "70eFcWOvlMObDhURTqT4Fv",
+      "title": "Beautiful People (feat. Khalid)",
+      "artist": "Ed Sheeran, Khalid",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:22:21.736Z"
+    },
     {
       "id": "4QTuyRQshEZYurtIDfE6g0",
       "title": "By Your Side",
