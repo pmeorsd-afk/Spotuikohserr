@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2833,
-  "last_updated": "2026-11-03T20:28:42.650Z",
+  "version": 2834,
+  "last_updated": "2026-11-03T20:28:46.891Z",
   "artists": [
+    {
+      "id": "2Y0QXftOZ8qP3OWXdz5MEf",
+      "canonical_name": "Ruby Hen",
+      "aliases": [
+        "Ruby Hen"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:28:46.891Z"
+    },
     {
       "id": "4e0bmlKrQqotanYC1hAXHs",
       "canonical_name": "Roy Yadid",
