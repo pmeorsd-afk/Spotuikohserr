@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2838,
-  "last_updated": "2026-11-03T20:39:53.739Z",
+  "version": 2839,
+  "last_updated": "2026-11-03T20:46:58.350Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0GxQ1A5L9xnMOytbP6eKBG",
+      "title": "What Lovers Do (feat. SZA)",
+      "artist": "Maroon 5, SZA",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:46:58.350Z"
+    },
     {
       "id": "7KPcippmg9MvPzb3dzNpQW",
       "title": "Angels For Each Other",
