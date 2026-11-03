@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2744,
-  "last_updated": "2026-11-03T12:11:47.448Z",
+  "version": 2745,
+  "last_updated": "2026-11-03T12:11:49.564Z",
   "artists": [
+    {
+      "id": "7cVrrU2OVNUDZeLLdqa7qe",
+      "canonical_name": "אביאל גראוכר",
+      "aliases": [
+        "אביאל גראוכר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T12:11:49.564Z"
+    },
     {
       "id": "6Z2iUTWbJn00vlJDPfpnBa",
       "canonical_name": "Avrumi Rosenfeld",
