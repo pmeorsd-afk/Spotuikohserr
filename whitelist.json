@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2712,
-  "last_updated": "2026-11-03T10:20:31.233Z",
+  "version": 2713,
+  "last_updated": "2026-11-03T10:20:34.237Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2v0mzLuFNbiEj3lOGUraFp",
+      "title": "ילדה קטנה",
+      "artist": "Moshe Perez, Agam Buhbut",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:20:34.237Z"
+    },
     {
       "id": "6fxVffaTuwjgEk5h9QyRjy",
       "title": "Photograph",
