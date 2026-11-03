@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2757,
-  "last_updated": "2026-11-03T20:17:02.579Z",
+  "version": 2758,
+  "last_updated": "2026-11-03T20:17:04.993Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1uIRqXgEs2Usgn9ekfL7Vk",
+      "title": "Rafani",
+      "artist": "Itzik Kala",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:17:04.993Z"
+    },
     {
       "id": "6jtkSTuNLsQiTnvI27wTtK",
       "title": "מחרוזת עופר לוי - זאפה חיפה LIVE",
