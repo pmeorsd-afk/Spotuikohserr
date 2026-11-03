@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2845,
-  "last_updated": "2026-11-03T21:49:11.573Z",
+  "version": 2846,
+  "last_updated": "2026-11-03T22:07:57.037Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1UhJSSUaWCuXTLcUhCFvYG",
+      "title": "סוודר - קאבר",
+      "artist": "Naor Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T22:07:57.037Z"
+    },
     {
       "id": "5r0tKUiNlSHJttCtuR7fLK",
       "title": "Let her go",
