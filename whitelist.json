@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2837,
-  "last_updated": "2026-11-03T20:28:53.857Z",
+  "version": 2838,
+  "last_updated": "2026-11-03T20:39:53.739Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7KPcippmg9MvPzb3dzNpQW",
+      "title": "Angels For Each Other",
+      "artist": "Martin Garrix, Arijit Singh",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:39:53.739Z"
+    },
     {
       "id": "70eFcWOvlMObDhURTqT4Fv",
       "title": "Beautiful People (feat. Khalid)",
