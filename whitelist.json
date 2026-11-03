@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2745,
-  "last_updated": "2026-11-03T12:11:49.564Z",
+  "version": 2746,
+  "last_updated": "2026-11-03T12:11:52.520Z",
   "artists": [
+    {
+      "id": "061ZYcM8w2gxyfPcPa7mJK",
+      "canonical_name": "Motty Ilowitz",
+      "aliases": [
+        "Motty Ilowitz"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T12:11:52.520Z"
+    },
     {
       "id": "7cVrrU2OVNUDZeLLdqa7qe",
       "canonical_name": "אביאל גראוכר",
