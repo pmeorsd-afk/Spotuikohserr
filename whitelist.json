@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2699,
-  "last_updated": "2026-11-03T10:19:47.121Z",
+  "version": 2700,
+  "last_updated": "2026-11-03T10:19:52.811Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0yPZl4yrryonpmh8S1HwWI",
+      "title": "חוזר אלייך",
+      "artist": "Itay Levi, ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:19:52.811Z"
+    },
     {
       "id": "65fqMohPaZb7b9iuczlts8",
       "title": "שימו לב",
