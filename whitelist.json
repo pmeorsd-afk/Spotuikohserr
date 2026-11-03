@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2709,
-  "last_updated": "2026-11-03T10:20:22.225Z",
+  "version": 2710,
+  "last_updated": "2026-11-03T10:20:25.115Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Pnsm3hJtTb43aPPSPCtGU",
+      "title": "Let Her Go - Anniversary Edition",
+      "artist": "Passenger, Ed Sheeran",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:20:25.115Z"
+    },
     {
       "id": "3E5sVhV262CxsgYwTruluJ",
       "title": "אבא (מתוך טקס ערב יום הזיכרון 2026)",
