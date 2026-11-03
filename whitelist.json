@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2770,
-  "last_updated": "2026-11-03T20:18:05.496Z",
+  "version": 2771,
+  "last_updated": "2026-11-03T20:18:10.968Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "10GsfggkORXTRVaIHvA7y3",
+      "title": "שושנים עצובות",
+      "artist": "Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:18:10.968Z"
+    },
     {
       "id": "0gtfpoHNi1DGfunG6xX0vV",
       "title": "מה נהיה",
