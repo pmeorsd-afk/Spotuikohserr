@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2716,
-  "last_updated": "2026-11-03T10:20:55.695Z",
+  "version": 2717,
+  "last_updated": "2026-11-03T10:20:58.400Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "75uMlPnxVOffnHDuw4TnT0",
+      "title": "Perfect",
+      "artist": "Pablo Cepeda",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:20:58.400Z"
+    },
     {
       "id": "4ZNJ0Mda6oR0mP9NRUhesZ",
       "title": "כשזה עמוק",
