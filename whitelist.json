@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2839,
-  "last_updated": "2026-11-03T20:46:58.350Z",
+  "version": 2840,
+  "last_updated": "2026-11-03T20:49:36.972Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5RLtWBTTnFzouvkuYDANq1",
+      "title": "Cruel Hearts",
+      "artist": "MÖWE",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:49:36.972Z"
+    },
     {
       "id": "0GxQ1A5L9xnMOytbP6eKBG",
       "title": "What Lovers Do (feat. SZA)",
