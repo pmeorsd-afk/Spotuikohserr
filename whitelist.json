@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2794,
-  "last_updated": "2026-11-03T20:19:44.510Z",
+  "version": 2795,
+  "last_updated": "2026-11-03T20:19:47.761Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0mzNfOREy9UgZGZ8HGsgGj",
+      "title": "קומו נעלה",
+      "artist": "Aharon Yaremi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:19:47.761Z"
+    },
     {
       "id": "4lE8GSU11j65kTIit0ex4J",
       "title": "היום הרת עולם",
