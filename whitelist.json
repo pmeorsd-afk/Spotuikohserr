@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2701,
-  "last_updated": "2026-11-03T10:19:55.827Z",
+  "version": 2702,
+  "last_updated": "2026-11-03T10:19:59.020Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4dl5zTcADt0JrdjdIORMcI",
+      "title": "השירים הישנים",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:19:59.020Z"
+    },
     {
       "id": "4Mqdq8j0FgG2BoTXy4ZdkD",
       "title": "תמיד שמח",
