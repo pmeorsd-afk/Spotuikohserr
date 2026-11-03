@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2774,
-  "last_updated": "2026-11-03T20:18:20.379Z",
+  "version": 2775,
+  "last_updated": "2026-11-03T20:18:27.725Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3qvzygQ5NA1bZ3OUxlOiV4",
+      "title": "סטלות - לייב סשן",
+      "artist": "שרקי, גפן גרינברג",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:18:27.725Z"
+    },
     {
       "id": "4hkMyg8evAQqIjs49YbZ9t",
       "title": "Mon Amour",
