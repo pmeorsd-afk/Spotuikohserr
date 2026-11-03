@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2723,
-  "last_updated": "2026-11-03T10:21:20.921Z",
+  "version": 2724,
+  "last_updated": "2026-11-03T10:21:23.476Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5imQxc93MlMISeCUBSwP1j",
+      "title": "פרחים במדבר",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:21:23.476Z"
+    },
     {
       "id": "478Ixn9m7mZDVdV80VNjvH",
       "title": "חיים שכאלה",
