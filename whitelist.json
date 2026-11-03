@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2755,
-  "last_updated": "2026-11-03T20:16:49.413Z",
+  "version": 2756,
+  "last_updated": "2026-11-03T20:16:59.474Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4qh5dRJmZIWe1GnbqFO2bd",
+      "title": "האור יופיע",
+      "artist": "הינוקא - הרב שלמה יהודה בארי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:16:59.474Z"
+    },
     {
       "id": "5HbAnqUETKiwAcB8ZKejcT",
       "title": "עומר אצילי - שיר שחקן",
