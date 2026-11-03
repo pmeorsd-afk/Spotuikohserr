@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2736,
-  "last_updated": "2026-11-03T11:54:51.932Z",
+  "version": 2737,
+  "last_updated": "2026-11-03T11:54:54.874Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "68eF9Wd0CDrizcyzkyoMXp",
+      "title": "צ'או בייבי Live - Live",
+      "artist": "Bar Tzabary",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T11:54:54.874Z"
+    },
     {
       "id": "5lvggSrVvmTdZw7UnJDqnq",
       "title": "אל תגידי לא",
