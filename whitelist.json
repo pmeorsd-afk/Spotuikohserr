@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2714,
-  "last_updated": "2026-11-03T10:20:42.873Z",
+  "version": 2715,
+  "last_updated": "2026-11-03T10:20:48.207Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ZNJ0Mda6oR0mP9NRUhesZ",
+      "title": "כשזה עמוק",
+      "artist": "Korin Allal, Eviatar Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:20:48.207Z"
+    },
     {
       "id": "2v0mzLuFNbiEj3lOGUraFp",
       "title": "ילדה קטנה",
