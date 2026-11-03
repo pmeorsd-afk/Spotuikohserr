@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2792,
-  "last_updated": "2026-11-03T20:19:28.053Z",
+  "version": 2793,
+  "last_updated": "2026-11-03T20:19:31.430Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2OALaHcDdKkjYEpAr0Qzab",
+      "title": "Lonely Together (feat. Rita Ora)",
+      "artist": "Avicii, Rita Ora",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:19:31.430Z"
+    },
     {
       "id": "2M3g1eQZvnmsi8iMESZYY9",
       "title": "Don't Leave Me Alone (feat. Anne-Marie)",
