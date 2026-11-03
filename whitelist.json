@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2731,
-  "last_updated": "2026-11-03T11:09:05.465Z",
+  "version": 2732,
+  "last_updated": "2026-11-03T11:09:09.304Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2gSvshAOH2NFmzpAJhdrGY",
+      "title": "כל כולי",
+      "artist": "מאור אדרי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T11:09:09.304Z"
+    },
     {
       "id": "5c9EHx6BmAIFNcBIOu6PJq",
       "title": "היית לי העולם",
