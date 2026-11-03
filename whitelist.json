@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2767,
-  "last_updated": "2026-11-03T20:17:56.601Z",
+  "version": 2768,
+  "last_updated": "2026-11-03T20:17:59.440Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6MMdE5BMuM0BTjw2vOU96D",
+      "title": "נחום וציונה",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:17:59.440Z"
+    },
     {
       "id": "2LdUmQdymO99riYOVCrUPK",
       "title": "שתי טיפות",
