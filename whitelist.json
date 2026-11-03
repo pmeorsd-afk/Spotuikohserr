@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2786,
-  "last_updated": "2026-11-03T20:19:07.655Z",
+  "version": 2787,
+  "last_updated": "2026-11-03T20:19:10.831Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7xluxbbxxQ8ovB6xrJUlim",
+      "title": "הכי קרוב אלייך",
+      "artist": "Elai Botner, Avraham Aviv Alush",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:19:10.831Z"
+    },
     {
       "id": "3q7gVLxICVVaIBg66gMfQM",
       "title": "אבי הטחול - מנורה לייב",
