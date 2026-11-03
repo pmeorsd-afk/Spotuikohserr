@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2740,
-  "last_updated": "2026-11-03T12:11:36.785Z",
+  "version": 2741,
+  "last_updated": "2026-11-03T12:11:39.622Z",
   "artists": [
+    {
+      "id": "04QgfIIHBRS0b6XiY3kYYy",
+      "canonical_name": "Nissim Black",
+      "aliases": [
+        "Nissim Black"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T12:11:39.622Z"
+    },
     {
       "id": "0XepJkzpgWouPZNcCcflut",
       "canonical_name": "שלומי אזריאל",
