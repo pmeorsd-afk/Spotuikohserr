@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2817,
-  "last_updated": "2026-11-03T20:21:55.831Z",
+  "version": 2818,
+  "last_updated": "2026-11-03T20:21:58.803Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2pidN3222oGN50vyioNICP",
+      "title": "רעש לבן ששש לתינוקות לשינה",
+      "artist": "kfir kaikov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:21:58.803Z"
+    },
     {
       "id": "5fkb7gwbpcXIxpflMAm4XC",
       "title": "רוצה שלום",
