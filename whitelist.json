@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2700,
-  "last_updated": "2026-11-03T10:19:52.811Z",
+  "version": 2701,
+  "last_updated": "2026-11-03T10:19:55.827Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Mqdq8j0FgG2BoTXy4ZdkD",
+      "title": "תמיד שמח",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:19:55.827Z"
+    },
     {
       "id": "0yPZl4yrryonpmh8S1HwWI",
       "title": "חוזר אלייך",
