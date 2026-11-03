@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2751,
-  "last_updated": "2026-11-03T20:16:18.410Z",
+  "version": 2752,
+  "last_updated": "2026-11-03T20:16:21.871Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "05iw1Zb7Lp5DNUSvDhBRk6",
+      "title": "נגנב ממך",
+      "artist": "Full Trunk, Ninet Tayeb",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:16:21.871Z"
+    },
     {
       "id": "7hyle4lmxpFkhKOv2NxTiL",
       "title": "כמו כל יום",
