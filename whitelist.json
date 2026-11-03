@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2742,
-  "last_updated": "2026-11-03T12:11:41.358Z",
+  "version": 2743,
+  "last_updated": "2026-11-03T12:11:45.408Z",
   "artists": [
+    {
+      "id": "5NtnFNy7UeT5UoqIlaJ28G",
+      "canonical_name": "Duvie Shapiro",
+      "aliases": [
+        "Duvie Shapiro"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T12:11:45.408Z"
+    },
     {
       "id": "0shqzmR8BOgm36KdqKH1nL",
       "canonical_name": "Roi Harush",
