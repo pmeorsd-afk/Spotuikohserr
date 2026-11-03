@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2827,
-  "last_updated": "2026-11-03T20:27:41.901Z",
+  "version": 2828,
+  "last_updated": "2026-11-03T20:27:46.912Z",
   "artists": [
+    {
+      "id": "0ZB31CtQsWrsyfJJMRZeS3",
+      "canonical_name": "נעם שפייר",
+      "aliases": [
+        "נעם שפייר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:27:46.912Z"
+    },
     {
       "id": "2EXzeh4o9vfGDsO5F4R8B3",
       "canonical_name": "הינוקא - הרב שלמה יהודה בארי",
