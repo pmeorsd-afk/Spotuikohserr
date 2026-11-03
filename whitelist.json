@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2784,
-  "last_updated": "2026-11-03T20:19:02.443Z",
+  "version": 2785,
+  "last_updated": "2026-11-03T20:19:04.615Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0SMDtYt5HghaTMFc61nCnP",
+      "title": "ואיך שלא",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:19:04.615Z"
+    },
     {
       "id": "3Q6d64XJr20cHQtRd07YGj",
       "title": "סיגליות",
