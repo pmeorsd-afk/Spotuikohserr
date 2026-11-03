@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2706,
-  "last_updated": "2026-11-03T10:20:12.825Z",
+  "version": 2707,
+  "last_updated": "2026-11-03T10:20:16.543Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7GRcmARLbammALnyTrJcYB",
+      "title": "עכשיו הלב פתוח",
+      "artist": "בניה ברבי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:20:16.543Z"
+    },
     {
       "id": "4MJTje9YlG7SeCl25xxNus",
       "title": "מתוך מחשבות",
