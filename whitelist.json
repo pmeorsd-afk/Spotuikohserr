@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2826,
-  "last_updated": "2026-11-03T20:27:39.581Z",
+  "version": 2827,
+  "last_updated": "2026-11-03T20:27:41.901Z",
   "artists": [
+    {
+      "id": "2EXzeh4o9vfGDsO5F4R8B3",
+      "canonical_name": "הינוקא - הרב שלמה יהודה בארי",
+      "aliases": [
+        "הינוקא - הרב שלמה יהודה בארי"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:27:41.901Z"
+    },
     {
       "id": "1co0pRiRxNAmM51ZVvQvU6",
       "canonical_name": "Udi Damari",
