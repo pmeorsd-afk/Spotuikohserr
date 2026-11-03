@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2710,
-  "last_updated": "2026-11-03T10:20:25.115Z",
+  "version": 2711,
+  "last_updated": "2026-11-03T10:20:27.690Z",
   "artists": [
     {
       "id": "1sQgQ7NSPks2KIrPPm6aDJ",
@@ -2750,6 +2750,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7E5IjUGyRmwo2E2pqGqji9",
+      "title": "אש",
+      "artist": "Moshe Perez",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T10:20:27.690Z"
+    },
     {
       "id": "2Pnsm3hJtTb43aPPSPCtGU",
       "title": "Let Her Go - Anniversary Edition",
