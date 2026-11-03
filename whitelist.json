@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2834,
-  "last_updated": "2026-11-03T20:28:46.891Z",
+  "version": 2835,
+  "last_updated": "2026-11-03T20:28:48.715Z",
   "artists": [
+    {
+      "id": "6bmvwsCMADDrWtvzr4WrnA",
+      "canonical_name": "רבי שלום שטיסל",
+      "aliases": [
+        "רבי שלום שטיסל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:28:48.715Z"
+    },
     {
       "id": "2Y0QXftOZ8qP3OWXdz5MEf",
       "canonical_name": "Ruby Hen",
