@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2816,
-  "last_updated": "2026-11-03T20:21:53.117Z",
+  "version": 2817,
+  "last_updated": "2026-11-03T20:21:55.831Z",
   "artists": [
     {
       "id": "2CIxElOpGEiUrBECXpXVHD",
@@ -2840,6 +2840,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5fkb7gwbpcXIxpflMAm4XC",
+      "title": "רוצה שלום",
+      "artist": "רביב כנר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-03T20:21:55.831Z"
+    },
     {
       "id": "5ZUKmKKOAKEIqAebzXF617",
       "title": "רקדנית",
