@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2944,
-  "last_updated": "2026-11-04T19:49:42.222Z",
+  "version": 2945,
+  "last_updated": "2026-11-04T19:49:52.713Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6i2SQujw0VIv4LPkF5oFqB",
+      "title": "תמיד שלך",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:49:52.713Z"
+    },
     {
       "id": "3AoeaZs8dFemFJr3JdzOL0",
       "title": "You Are Not Alone",
