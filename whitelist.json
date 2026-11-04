@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2919,
-  "last_updated": "2026-11-04T19:33:39.359Z",
+  "version": 2920,
+  "last_updated": "2026-11-04T19:33:42.417Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1m69ELEgE6k5ZWsap40ozt",
+      "title": "Se Preparó",
+      "artist": "Ozuna",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:33:42.417Z"
+    },
     {
       "id": "0KkIkfsLEJbrcIhYsCL7L5",
       "title": "China",
