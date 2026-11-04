@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2974,
-  "last_updated": "2026-11-04T21:32:43.878Z",
+  "version": 2975,
+  "last_updated": "2026-11-04T21:37:52.242Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4UKDofNkhQqL0j3An4p4X8",
+      "title": "03 - Live",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T21:37:52.242Z"
+    },
     {
       "id": "3BQHpFgAp4l80e1XslIjNI",
       "title": "Yesterday - Remastered 2009",
