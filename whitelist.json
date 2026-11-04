@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2946,
-  "last_updated": "2026-11-04T19:49:56.655Z",
+  "version": 2947,
+  "last_updated": "2026-11-04T19:50:00.165Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7FLWyTcWqdRXgfdfetlkGq",
+      "title": "מחול",
+      "artist": "Static",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:50:00.165Z"
+    },
     {
       "id": "08YvUaUsZktAG6zEMDwUqO",
       "title": "Sprinter",
