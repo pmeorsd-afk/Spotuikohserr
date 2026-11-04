@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2865,
-  "last_updated": "2026-11-04T07:50:22.688Z",
+  "version": 2866,
+  "last_updated": "2026-11-04T07:50:26.018Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5D5HGHY0OsQCXFxEbIdxf8",
+      "title": "דרך",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:50:26.018Z"
+    },
     {
       "id": "50WKoTNhJtVnWy6z2QmLgX",
       "title": "תנין",
