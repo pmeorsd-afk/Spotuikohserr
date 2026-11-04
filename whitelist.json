@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2884,
-  "last_updated": "2026-11-04T12:06:46.160Z",
+  "version": 2885,
+  "last_updated": "2026-11-04T12:06:49.047Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3VnYSB6Mf5hx0GNYPcqbOl",
+      "title": "אחרי החתונה",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T12:06:49.047Z"
+    },
     {
       "id": "6cI32QFeKG5pHP6gUP3pkg",
       "title": "הכל זה לטובה",
