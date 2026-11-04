@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2958,
-  "last_updated": "2026-11-04T20:09:05.062Z",
+  "version": 2959,
+  "last_updated": "2026-11-04T20:09:19.149Z",
   "artists": [
+    {
+      "id": "4PY5OwRvrbqH8V7qzl2CGB",
+      "canonical_name": "עמי מימון",
+      "aliases": [
+        "עמי מימון"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T20:09:19.149Z"
+    },
     {
       "id": "7LwJZpfbPiZTmK9VCIhhID",
       "canonical_name": "אוף שימחעס",
