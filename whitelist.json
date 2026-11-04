@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2893,
-  "last_updated": "2026-11-04T19:31:41.324Z",
+  "version": 2894,
+  "last_updated": "2026-11-04T19:31:47.824Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0GN47IVwnsoTxyOtrQTrOp",
+      "title": "Return To Me",
+      "artist": "Jeremy Zuckerman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:31:47.824Z"
+    },
     {
       "id": "4wtt6YFwvzryeM6u42SWpn",
       "title": "עינייך החומות",
