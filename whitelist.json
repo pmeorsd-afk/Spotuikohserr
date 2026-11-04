@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2887,
-  "last_updated": "2026-11-04T12:07:04.184Z",
+  "version": 2888,
+  "last_updated": "2026-11-04T12:07:06.993Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0h8eZd7eqwZISaz9bkj1zV",
+      "title": "מערב ראשון",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T12:07:06.993Z"
+    },
     {
       "id": "0XQS7cG5wcnmgOE9jaielG",
       "title": "אדיר ונאור",
