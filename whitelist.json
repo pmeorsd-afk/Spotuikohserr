@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2951,
-  "last_updated": "2026-11-04T19:50:20.061Z",
+  "version": 2952,
+  "last_updated": "2026-11-04T19:50:24.314Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Lh2JK9deXfrwPUhfZ0Eq5",
+      "title": "Big Climate",
+      "artist": "Simba Chill Dog",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:50:24.314Z"
+    },
     {
       "id": "4pCNGhJ1p3pDEjdIpt59X0",
       "title": "קללה",
