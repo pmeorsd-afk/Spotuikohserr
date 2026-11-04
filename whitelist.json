@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2962,
-  "last_updated": "2026-11-04T20:09:27.490Z",
+  "version": 2963,
+  "last_updated": "2026-11-04T20:09:40.834Z",
   "artists": [
+    {
+      "id": "0zQ5PXV7sxw2LAwMJusZog",
+      "canonical_name": "Micha Gamerman",
+      "aliases": [
+        "Micha Gamerman"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T20:09:40.834Z"
+    },
     {
       "id": "3lehqCnY6BrpnjVWrhIIjB",
       "canonical_name": "Assaf Harush",
