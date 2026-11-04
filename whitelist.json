@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2947,
-  "last_updated": "2026-11-04T19:50:00.165Z",
+  "version": 2948,
+  "last_updated": "2026-11-04T19:50:04.662Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5AQKEqF8klLRyF5jlCicUF",
+      "title": "My Love",
+      "artist": "Dudi Bar David, רוני דלומי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:50:04.662Z"
+    },
     {
       "id": "7FLWyTcWqdRXgfdfetlkGq",
       "title": "מחול",
