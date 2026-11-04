@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2930,
-  "last_updated": "2026-11-04T19:47:03.689Z",
+  "version": 2931,
+  "last_updated": "2026-11-04T19:47:13.615Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1tptf3TGrxpQPJW9GtdMU2",
+      "title": "את לא בראש שלי",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:47:13.615Z"
+    },
     {
       "id": "3X5M53Xi5k1SijRtZMM3TA",
       "title": "Te Boté - Remix",
