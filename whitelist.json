@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2922,
-  "last_updated": "2026-11-04T19:37:42.427Z",
+  "version": 2923,
+  "last_updated": "2026-11-04T19:46:24.661Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0OMRAvrtLWE2TvcXorRiB9",
+      "title": "La Gozadera (feat. Marc Anthony)",
+      "artist": "Gente De Zona, Marc Anthony",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:46:24.661Z"
+    },
     {
       "id": "3AEZUABDXNtecAOSC1qTfo",
       "title": "Reggaetón Lento (Bailemos)",
