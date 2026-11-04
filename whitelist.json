@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2975,
-  "last_updated": "2026-11-04T21:37:52.242Z",
+  "version": 2976,
+  "last_updated": "2026-11-04T22:00:23.215Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3O4fGfNsRLpR1cpIdTnsW3",
+      "title": "קוסמת",
+      "artist": "ליאם גולן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T22:00:23.215Z"
+    },
     {
       "id": "4UKDofNkhQqL0j3An4p4X8",
       "title": "03 - Live",
