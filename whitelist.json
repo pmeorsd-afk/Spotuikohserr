@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2950,
-  "last_updated": "2026-11-04T19:50:16.126Z",
+  "version": 2951,
+  "last_updated": "2026-11-04T19:50:20.061Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4pCNGhJ1p3pDEjdIpt59X0",
+      "title": "קללה",
+      "artist": "נתנאל ששון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:50:20.061Z"
+    },
     {
       "id": "1UDqfIstvOO8cgyv43Ct6O",
       "title": "החייםשליסופ\"שארוך",
