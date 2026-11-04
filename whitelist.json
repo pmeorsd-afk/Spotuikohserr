@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2896,
-  "last_updated": "2026-11-04T19:31:54.799Z",
+  "version": 2897,
+  "last_updated": "2026-11-04T19:31:57.410Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4h3zmQgsPhPxOTCkJwtPLM",
+      "title": "ברית",
+      "artist": "Avihai Hollender",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:31:57.410Z"
+    },
     {
       "id": "2N7QzR3apiElswYtxm1Jsu",
       "title": "סיפור ישן",
