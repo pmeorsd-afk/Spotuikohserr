@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2925,
-  "last_updated": "2026-11-04T19:46:33.372Z",
+  "version": 2926,
+  "last_updated": "2026-11-04T19:46:38.276Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ZLiEoLaWDwXqdfv3R9EVy",
+      "title": "מישהו יקרא לך אמא",
+      "artist": "משה כורסיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:46:38.276Z"
+    },
     {
       "id": "5ogS9Gv62PA9a8h3nL2bEX",
       "title": "אבל את",
