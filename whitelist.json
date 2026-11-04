@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2857,
-  "last_updated": "2026-11-04T07:49:49.601Z",
+  "version": 2858,
+  "last_updated": "2026-11-04T07:49:52.427Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Be9Xv3UUpPPRnaHARlpVi",
+      "title": "לא אכפת לי מבנות",
+      "artist": "Moti Taka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:49:52.427Z"
+    },
     {
       "id": "7uRLWN1v5AtgrJaMU0bnWO",
       "title": "מודעות עצמית",
