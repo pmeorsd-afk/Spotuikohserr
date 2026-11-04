@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2897,
-  "last_updated": "2026-11-04T19:31:57.410Z",
+  "version": 2898,
+  "last_updated": "2026-11-04T19:32:00.636Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "32cxBlyObu13PWyMyxJaZv",
+      "title": "אבוד בעולם",
+      "artist": "Zohar Ashirov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:32:00.636Z"
+    },
     {
       "id": "4h3zmQgsPhPxOTCkJwtPLM",
       "title": "ברית",
