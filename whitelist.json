@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2870,
-  "last_updated": "2026-11-04T07:50:38.526Z",
+  "version": 2871,
+  "last_updated": "2026-11-04T07:50:41.575Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "65NZVpPwg2r2OZKGpX0zOd",
+      "title": "עשיתי טעות",
+      "artist": "דן ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:50:41.575Z"
+    },
     {
       "id": "6lv2XtXYcbfZnVgBBpYveK",
       "title": "עוד יום שעובר",
