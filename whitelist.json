@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2899,
-  "last_updated": "2026-11-04T19:32:03.999Z",
+  "version": 2900,
+  "last_updated": "2026-11-04T19:32:06.724Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4jF2KwFgnuwvAk1rHbCBx7",
+      "title": "שמלה כחולה",
+      "artist": "Liran Danino",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:32:06.724Z"
+    },
     {
       "id": "6wixBosOU75SdIAvYe51IP",
       "title": "לילות עצובים",
