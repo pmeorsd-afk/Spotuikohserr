@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2917,
-  "last_updated": "2026-11-04T19:33:14.284Z",
+  "version": 2918,
+  "last_updated": "2026-11-04T19:33:35.525Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4NAtw6gIwdYBh0u98sAXfE",
+      "title": "Rak Simcha",
+      "artist": "Micha Gamerman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:33:35.525Z"
+    },
     {
       "id": "1oIQeCsNhbSh2brqncCjzZ",
       "title": "לחיות עוד פעם",
