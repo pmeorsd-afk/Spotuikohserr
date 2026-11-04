@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2877,
-  "last_updated": "2026-11-04T09:55:06.680Z",
+  "version": 2878,
+  "last_updated": "2026-11-04T10:14:42.807Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "02g6e5xP9RDfj5W1eBtQAD",
+      "title": "ילדות נשכחת",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T10:14:42.807Z"
+    },
     {
       "id": "103BGZwMQDMgu8dB04b5wB",
       "title": "משירי ארץ אהבתי",
