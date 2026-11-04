@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2955,
-  "last_updated": "2026-11-04T20:08:21.403Z",
+  "version": 2956,
+  "last_updated": "2026-11-04T20:08:30.914Z",
   "artists": [
+    {
+      "id": "0iLVOAsyj1ZTCut4YVXlCO",
+      "canonical_name": "Chasdei Lev",
+      "aliases": [
+        "Chasdei Lev"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T20:08:30.914Z"
+    },
     {
       "id": "5HI2HmU3dABwcmTKQxKfks",
       "canonical_name": "ידידיה",
