@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2968,
-  "last_updated": "2026-11-04T20:51:22.391Z",
+  "version": 2969,
+  "last_updated": "2026-11-04T20:55:07.136Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3hv6T6xuDW6c9uuTNHayx7",
+      "title": "סבבה 5",
+      "artist": "Peled",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T20:55:07.136Z"
+    },
     {
       "id": "34KzX8fwFPLchmOvYBDap0",
       "title": "אין אותי",
