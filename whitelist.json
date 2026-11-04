@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2859,
-  "last_updated": "2026-11-04T07:49:55.248Z",
+  "version": 2860,
+  "last_updated": "2026-11-04T07:50:00.108Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:aDPMNJoSako",
+      "title": "Deep Sleep Piano Music & Soothing Piano for Insomnia Relief | Healing Mind",
+      "artist": "🆔 מזהה ספוטיפיי: youtube:aDPMNJoSako",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:50:00.108Z"
+    },
     {
       "id": "7GZeKoFB1q6OkXao9dMWl9",
       "title": "מיניוואן",
