@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2941,
-  "last_updated": "2026-11-04T19:49:25.276Z",
+  "version": 2942,
+  "last_updated": "2026-11-04T19:49:30.401Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "01fDwCBu6RZCnwBvB7TxrN",
+      "title": "מלכת האכזבות",
+      "artist": "ליאם גולן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:49:30.401Z"
+    },
     {
       "id": "5P70c9xE2bBiU3JiWu5KZC",
       "title": "בניתי לך בית",
