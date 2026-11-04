@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2846,
-  "last_updated": "2026-11-03T22:07:57.037Z",
+  "version": 2847,
+  "last_updated": "2026-11-04T07:48:43.979Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3GoD2nHjNeuhVsUm6Z50VV",
+      "title": "בשעות הבודדות",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:48:43.979Z"
+    },
     {
       "id": "1UhJSSUaWCuXTLcUhCFvYG",
       "title": "סוודר - קאבר",
