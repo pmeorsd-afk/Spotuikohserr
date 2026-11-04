@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2881,
-  "last_updated": "2026-11-04T12:06:14.627Z",
+  "version": 2882,
+  "last_updated": "2026-11-04T12:06:27.796Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3X5shhNKrcgMgYbJJSQfpq",
+      "title": "אני מאמין",
+      "artist": "פן חזות, שמואל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T12:06:27.796Z"
+    },
     {
       "id": "6WfZyavJPXkpPpLCG3HAoy",
       "title": "די לך",
