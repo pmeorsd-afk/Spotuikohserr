@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2973,
-  "last_updated": "2026-11-04T21:32:38.187Z",
+  "version": 2974,
+  "last_updated": "2026-11-04T21:32:43.878Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -17450,6 +17450,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-11-04T19:50:16.126Z"
+    },
+    {
+      "id": "74a283c4335b0fb8d000001a6e39784076b3e38af0eda957",
+      "url": "https://d3wo5wojvuv7l.cloudfront.net/t_rss_itunes_square_1400/images.spreaker.com/original/d61f4225e4df332c90b73b9b59a04cbe.jpg",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-11-04T21:32:43.878Z"
     }
   ],
   "search_images": [
