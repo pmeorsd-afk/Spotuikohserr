@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2959,
-  "last_updated": "2026-11-04T20:09:19.149Z",
+  "version": 2960,
+  "last_updated": "2026-11-04T20:09:21.950Z",
   "artists": [
+    {
+      "id": "1YaPVGgLPvHiWmDgClM4Lm",
+      "canonical_name": "David Dery",
+      "aliases": [
+        "David Dery"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T20:09:21.950Z"
+    },
     {
       "id": "4PY5OwRvrbqH8V7qzl2CGB",
       "canonical_name": "עמי מימון",
