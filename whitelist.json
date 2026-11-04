@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2932,
-  "last_updated": "2026-11-04T19:47:17.834Z",
+  "version": 2933,
+  "last_updated": "2026-11-04T19:47:22.800Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5I9mSjiYH7253stPG9uQn8",
+      "title": "כלום לא טעים",
+      "artist": "Eldad Cohen, Keren Peles",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:47:22.800Z"
+    },
     {
       "id": "6RCxgLA7IVZjO5aPHEWNRC",
       "title": "אמן אמן אמן",
