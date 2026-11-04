@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2854,
-  "last_updated": "2026-11-04T07:49:33.643Z",
+  "version": 2855,
+  "last_updated": "2026-11-04T07:49:38.967Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1kXjfQEUgbOiMHGtcRNZm1",
+      "title": "השטויות שלנו",
+      "artist": "Zohar Ashirov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:49:38.967Z"
+    },
     {
       "id": "1wKXbVFAyTYGIbprLvQZ8K",
       "title": "אפס מאופס קאבר",
