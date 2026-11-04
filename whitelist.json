@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2972,
-  "last_updated": "2026-11-04T21:32:29.486Z",
+  "version": 2973,
+  "last_updated": "2026-11-04T21:32:38.187Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3BQHpFgAp4l80e1XslIjNI",
+      "title": "Yesterday - Remastered 2009",
+      "artist": "The Beatles",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T21:32:38.187Z"
+    },
     {
       "id": "5WdPCWyCAwnjA62wtaDtMu",
       "title": "חבר במשבר / 2",
