@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2924,
-  "last_updated": "2026-11-04T19:46:29.204Z",
+  "version": 2925,
+  "last_updated": "2026-11-04T19:46:33.372Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5ogS9Gv62PA9a8h3nL2bEX",
+      "title": "אבל את",
+      "artist": "Meir Banai, Eviatar Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:46:33.372Z"
+    },
     {
       "id": "7qCAVkHWZkF44OzOUKf8Cr",
       "title": "El Perdón (with Enrique Iglesias)",
