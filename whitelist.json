@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2905,
-  "last_updated": "2026-11-04T19:32:22.478Z",
+  "version": 2906,
+  "last_updated": "2026-11-04T19:32:28.012Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5k38wzpLb15YgncyWdTZE4",
+      "title": "Him & I (with Halsey)",
+      "artist": "G-Eazy, Halsey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:32:28.012Z"
+    },
     {
       "id": "2gx3UivMRRuTt9U1SY6siG",
       "title": "חייל של אכזבה",
