@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2976,
-  "last_updated": "2026-11-04T22:00:23.215Z",
+  "version": 2977,
+  "last_updated": "2026-11-04T22:00:27.210Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44y5azT1YRCRUqM6WVipIA",
+      "title": "יש לך אותך",
+      "artist": "Miri Mesika, Mika Moshe",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T22:00:27.210Z"
+    },
     {
       "id": "3O4fGfNsRLpR1cpIdTnsW3",
       "title": "קוסמת",
