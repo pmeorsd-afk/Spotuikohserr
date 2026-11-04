@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2909,
-  "last_updated": "2026-11-04T19:32:42.802Z",
+  "version": 2910,
+  "last_updated": "2026-11-04T19:32:46.837Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2pAombGD2E4luR6lArQHCJ",
+      "title": "KO",
+      "artist": "NLE The Great, NLE Choppa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:32:46.837Z"
+    },
     {
       "id": "4a9tbd947vo9K8Vti9JwcI",
       "title": "Boy With Luv (feat. Halsey)",
