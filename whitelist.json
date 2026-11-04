@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2939,
-  "last_updated": "2026-11-04T19:48:01.253Z",
+  "version": 2940,
+  "last_updated": "2026-11-04T19:49:11.694Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3HzOHkpNuAW4L28SZD8Ton",
+      "title": "הדרך שלי",
+      "artist": "יובל המבולבל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:49:11.694Z"
+    },
     {
       "id": "6mB4M77tjw2PyhxPCabIgW",
       "title": "הקרקס של רואיקו",
