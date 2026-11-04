@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2883,
-  "last_updated": "2026-11-04T12:06:37.081Z",
+  "version": 2884,
+  "last_updated": "2026-11-04T12:06:46.160Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6cI32QFeKG5pHP6gUP3pkg",
+      "title": "הכל זה לטובה",
+      "artist": "David Dery, עמי מימון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T12:06:46.160Z"
+    },
     {
       "id": "0laW6qya4fALtCR5Pt5x4I",
       "title": "פיה פתחה",
