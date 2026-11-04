@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2886,
-  "last_updated": "2026-11-04T12:06:51.247Z",
+  "version": 2887,
+  "last_updated": "2026-11-04T12:07:04.184Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0XQS7cG5wcnmgOE9jaielG",
+      "title": "אדיר ונאור",
+      "artist": "Yaniv Madar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T12:07:04.184Z"
+    },
     {
       "id": "1UIowhAnt85hpdW38VSL0v",
       "title": "קרב אותי אליך",
