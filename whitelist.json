@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2860,
-  "last_updated": "2026-11-04T07:50:00.108Z",
+  "version": 2861,
+  "last_updated": "2026-11-04T07:50:11.095Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6HyVyXrpJM4semhtdnKl54",
+      "title": "עיניה",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:50:11.095Z"
+    },
     {
       "id": "youtube:aDPMNJoSako",
       "title": "Deep Sleep Piano Music & Soothing Piano for Insomnia Relief | Healing Mind",
