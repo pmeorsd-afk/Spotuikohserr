@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2954,
-  "last_updated": "2026-11-04T20:08:02.681Z",
+  "version": 2955,
+  "last_updated": "2026-11-04T20:08:21.403Z",
   "artists": [
+    {
+      "id": "5HI2HmU3dABwcmTKQxKfks",
+      "canonical_name": "ידידיה",
+      "aliases": [
+        "ידידיה"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T20:08:21.403Z"
+    },
     {
       "id": "11rC7bGY1k8QzrJZiuY61e",
       "canonical_name": "אברהם יוסף הירש",
