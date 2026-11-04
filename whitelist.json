@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2866,
-  "last_updated": "2026-11-04T07:50:26.018Z",
+  "version": 2867,
+  "last_updated": "2026-11-04T07:50:28.596Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5UEER4Qa0x3yp1TViJSTa7",
+      "title": "עומד בשער",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:50:28.596Z"
+    },
     {
       "id": "5D5HGHY0OsQCXFxEbIdxf8",
       "title": "דרך",
