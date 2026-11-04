@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2942,
-  "last_updated": "2026-11-04T19:49:30.401Z",
+  "version": 2943,
+  "last_updated": "2026-11-04T19:49:36.624Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5aZdVXDb4BpJLGDSaaTjDe",
+      "title": "אוהב או שונא",
+      "artist": "ליאם גולן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:49:36.624Z"
+    },
     {
       "id": "01fDwCBu6RZCnwBvB7TxrN",
       "title": "מלכת האכזבות",
