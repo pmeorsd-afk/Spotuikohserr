@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2861,
-  "last_updated": "2026-11-04T07:50:11.095Z",
+  "version": 2862,
+  "last_updated": "2026-11-04T07:50:14.340Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2o51qoQ2lyWXG6okFaDGwq",
+      "title": "קצת לבד",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:50:14.340Z"
+    },
     {
       "id": "6HyVyXrpJM4semhtdnKl54",
       "title": "עיניה",
