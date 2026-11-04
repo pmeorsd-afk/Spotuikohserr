@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2965,
-  "last_updated": "2026-11-04T20:51:10.878Z",
+  "version": 2966,
+  "last_updated": "2026-11-04T20:51:14.697Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4qTBx7xZDqEKQP6zZlbrqP",
+      "title": "מקלט לדמעותי",
+      "artist": "אליה והב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T20:51:14.697Z"
+    },
     {
       "id": "6v3PbYatyLJ6quCd490OdQ",
       "title": "אני מבולבל",
