@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2863,
-  "last_updated": "2026-11-04T07:50:17.095Z",
+  "version": 2864,
+  "last_updated": "2026-11-04T07:50:19.878Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2VICxsAkxXu0qHXxtcL8LQ",
+      "title": "התגלות הנפש",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:50:19.878Z"
+    },
     {
       "id": "3RsjdQMPdT4Jr9Z5AajuhI",
       "title": "את אינך",
