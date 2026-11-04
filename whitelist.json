@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2871,
-  "last_updated": "2026-11-04T07:50:41.575Z",
+  "version": 2872,
+  "last_updated": "2026-11-04T07:50:43.782Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "206JJ6QBekSXa6WOt7okzq",
+      "title": "מאושרת",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:50:43.782Z"
+    },
     {
       "id": "65NZVpPwg2r2OZKGpX0zOd",
       "title": "עשיתי טעות",
