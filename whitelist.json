@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2960,
-  "last_updated": "2026-11-04T20:09:21.950Z",
+  "version": 2961,
+  "last_updated": "2026-11-04T20:09:24.620Z",
   "artists": [
+    {
+      "id": "0Qp9hNbP4wZNJwA6eYE6vB",
+      "canonical_name": "Yaniv Madar",
+      "aliases": [
+        "Yaniv Madar"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T20:09:24.620Z"
+    },
     {
       "id": "1YaPVGgLPvHiWmDgClM4Lm",
       "canonical_name": "David Dery",
