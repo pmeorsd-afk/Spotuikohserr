@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2929,
-  "last_updated": "2026-11-04T19:46:56.101Z",
+  "version": 2930,
+  "last_updated": "2026-11-04T19:47:03.689Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3X5M53Xi5k1SijRtZMM3TA",
+      "title": "Te Boté - Remix",
+      "artist": "Nio Garcia, Casper Magico, Bad Bunny, Darell, Ozuna, Nicky Jam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:47:03.689Z"
+    },
     {
       "id": "0Gx4VrHzS7pZOEAGrmXXBH",
       "title": "La Bicicleta",
