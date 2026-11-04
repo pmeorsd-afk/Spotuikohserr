@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2914,
-  "last_updated": "2026-11-04T19:33:01.336Z",
+  "version": 2915,
+  "last_updated": "2026-11-04T19:33:04.539Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2r7mfzeXCzyrysTya4Onwk",
+      "title": "Yo Voy (feat. Daddy Yankee)",
+      "artist": "Zion & Lennox, Daddy Yankee",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:33:04.539Z"
+    },
     {
       "id": "4t9a07PAghtQMRAIP9FQ7Z",
       "title": "Soltera (Remix)",
