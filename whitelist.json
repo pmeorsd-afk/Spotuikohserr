@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2916,
-  "last_updated": "2026-11-04T19:33:07.695Z",
+  "version": 2917,
+  "last_updated": "2026-11-04T19:33:14.284Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1oIQeCsNhbSh2brqncCjzZ",
+      "title": "לחיות עוד פעם",
+      "artist": "Assaf Harush",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:33:14.284Z"
+    },
     {
       "id": "0mnAmQX1pciMncT2qFCNmK",
       "title": "SUBEME LA RADIO",
