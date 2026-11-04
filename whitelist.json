@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2921,
-  "last_updated": "2026-11-04T19:33:46.777Z",
+  "version": 2922,
+  "last_updated": "2026-11-04T19:37:42.427Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3AEZUABDXNtecAOSC1qTfo",
+      "title": "Reggaetón Lento (Bailemos)",
+      "artist": "CNCO",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:37:42.427Z"
+    },
     {
       "id": "5YoITs1m0q8UOQ4AW7N5ga",
       "title": "Gasolina",
