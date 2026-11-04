@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2952,
-  "last_updated": "2026-11-04T19:50:24.314Z",
+  "version": 2953,
+  "last_updated": "2026-11-04T20:07:56.767Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1laTXG5RqKmkc7E7Ia5iX2",
+      "title": "חזק בפסנתר",
+      "artist": "ליאם גולן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T20:07:56.767Z"
+    },
     {
       "id": "4Lh2JK9deXfrwPUhfZ0Eq5",
       "title": "Big Climate",
