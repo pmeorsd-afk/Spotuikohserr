@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2966,
-  "last_updated": "2026-11-04T20:51:14.697Z",
+  "version": 2967,
+  "last_updated": "2026-11-04T20:51:19.422Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "78Wu7Y2s6agIhfgoNyAeGg",
+      "title": "רסיסים",
+      "artist": "רביב כנר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T20:51:19.422Z"
+    },
     {
       "id": "4qTBx7xZDqEKQP6zZlbrqP",
       "title": "מקלט לדמעותי",
