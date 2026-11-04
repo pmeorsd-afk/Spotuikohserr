@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2879,
-  "last_updated": "2026-11-04T10:43:53.852Z",
+  "version": 2880,
+  "last_updated": "2026-11-04T11:04:33.618Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2du9tO5DrUF7QMiNbjHNV3",
+      "title": "אבינו מלכנו",
+      "artist": "Yair Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T11:04:33.618Z"
+    },
     {
       "id": "02hXZxgl6XwtAdK9y2sb6B",
       "title": "כפיות",
