@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2908,
-  "last_updated": "2026-11-04T19:32:39.678Z",
+  "version": 2909,
+  "last_updated": "2026-11-04T19:32:42.802Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4a9tbd947vo9K8Vti9JwcI",
+      "title": "Boy With Luv (feat. Halsey)",
+      "artist": "BTS, Halsey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:32:42.802Z"
+    },
     {
       "id": "31lopd32BkJBTSgYE16c5e",
       "title": "In A Minute",
