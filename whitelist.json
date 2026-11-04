@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2935,
-  "last_updated": "2026-11-04T19:47:31.831Z",
+  "version": 2936,
+  "last_updated": "2026-11-04T19:47:40.115Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0SDMqZRfsGAr8SgvWPysxA",
+      "title": "מסיבת ציפורים (The Zurna Song)",
+      "artist": "בן צור, Vini Vici",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:47:40.115Z"
+    },
     {
       "id": "0sRvlpbMEY5k4kaHCZ0vrm",
       "title": "אולי תגידו X סודות (מתוך חדר חזרות)",
