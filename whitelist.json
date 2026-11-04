@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2903,
-  "last_updated": "2026-11-04T19:32:15.604Z",
+  "version": 2904,
+  "last_updated": "2026-11-04T19:32:18.519Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7xZ5nSNL666RpILjmffVEU",
+      "title": "יש ימים",
+      "artist": "Liran Danino",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:32:18.519Z"
+    },
     {
       "id": "1LKw6C9ihJDZMEigTGkGdB",
       "title": "כל המילים",
