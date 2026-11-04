@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2906,
-  "last_updated": "2026-11-04T19:32:28.012Z",
+  "version": 2907,
+  "last_updated": "2026-11-04T19:32:30.518Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7MYVsIwf4KgVGI2kvsGFtL",
+      "title": "The Avatar Revealed (Pavi Saves Jae) - from Avatar: Seven Havens",
+      "artist": "Tom Dabrowski",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:32:30.518Z"
+    },
     {
       "id": "5k38wzpLb15YgncyWdTZE4",
       "title": "Him & I (with Halsey)",
