@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2936,
-  "last_updated": "2026-11-04T19:47:40.115Z",
+  "version": 2937,
+  "last_updated": "2026-11-04T19:47:46.616Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4qtCuuWcbgNtt5Fz1Ome3r",
+      "title": "ויהי אור | Be Light - מתוך פסטיבל התמר",
+      "artist": "Hatikva 6, Vini Vici, Darwish",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:47:46.616Z"
+    },
     {
       "id": "0SDMqZRfsGAr8SgvWPysxA",
       "title": "מסיבת ציפורים (The Zurna Song)",
