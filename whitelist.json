@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2892,
-  "last_updated": "2026-11-04T19:31:38.496Z",
+  "version": 2893,
+  "last_updated": "2026-11-04T19:31:41.324Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4wtt6YFwvzryeM6u42SWpn",
+      "title": "עינייך החומות",
+      "artist": "The Voice Israel, אושר ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:31:41.324Z"
+    },
     {
       "id": "4QVJcfpltUb6enr4nruDPE",
       "title": "סליחה שהתאהבתי בך",
