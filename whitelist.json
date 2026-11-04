@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2957,
-  "last_updated": "2026-11-04T20:08:50.754Z",
+  "version": 2958,
+  "last_updated": "2026-11-04T20:09:05.062Z",
   "artists": [
+    {
+      "id": "7LwJZpfbPiZTmK9VCIhhID",
+      "canonical_name": "אוף שימחעס",
+      "aliases": [
+        "אוף שימחעס"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T20:09:05.062Z"
+    },
     {
       "id": "74AQHelhpYwe2w5FhSDpTI",
       "canonical_name": "פן חזות",
