@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2862,
-  "last_updated": "2026-11-04T07:50:14.340Z",
+  "version": 2863,
+  "last_updated": "2026-11-04T07:50:17.095Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3RsjdQMPdT4Jr9Z5AajuhI",
+      "title": "את אינך",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:50:17.095Z"
+    },
     {
       "id": "2o51qoQ2lyWXG6okFaDGwq",
       "title": "קצת לבד",
