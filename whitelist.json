@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2926,
-  "last_updated": "2026-11-04T19:46:38.276Z",
+  "version": 2927,
+  "last_updated": "2026-11-04T19:46:46.892Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3rK30dzS17JWgft6PIvEjt",
+      "title": "Gyal You a Party Animal - Remix",
+      "artist": "Charly Black, Daddy Yankee",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:46:46.892Z"
+    },
     {
       "id": "6ZLiEoLaWDwXqdfv3R9EVy",
       "title": "מישהו יקרא לך אמא",
