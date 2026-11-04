@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 2953,
-  "last_updated": "2026-11-04T20:07:56.767Z",
+  "version": 2954,
+  "last_updated": "2026-11-04T20:08:02.681Z",
   "artists": [
+    {
+      "id": "11rC7bGY1k8QzrJZiuY61e",
+      "canonical_name": "אברהם יוסף הירש",
+      "aliases": [
+        "אברהם יוסף הירש"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T20:08:02.681Z"
+    },
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
       "canonical_name": "Ben Snof",
