@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2898,
-  "last_updated": "2026-11-04T19:32:00.636Z",
+  "version": 2899,
+  "last_updated": "2026-11-04T19:32:03.999Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6wixBosOU75SdIAvYe51IP",
+      "title": "לילות עצובים",
+      "artist": "Elior Zandani",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:32:03.999Z"
+    },
     {
       "id": "32cxBlyObu13PWyMyxJaZv",
       "title": "אבוד בעולם",
