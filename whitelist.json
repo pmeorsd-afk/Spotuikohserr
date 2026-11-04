@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2864,
-  "last_updated": "2026-11-04T07:50:19.878Z",
+  "version": 2865,
+  "last_updated": "2026-11-04T07:50:22.688Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "50WKoTNhJtVnWy6z2QmLgX",
+      "title": "תנין",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:50:22.688Z"
+    },
     {
       "id": "2VICxsAkxXu0qHXxtcL8LQ",
       "title": "התגלות הנפש",
