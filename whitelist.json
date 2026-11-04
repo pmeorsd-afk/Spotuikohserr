@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2869,
-  "last_updated": "2026-11-04T07:50:35.659Z",
+  "version": 2870,
+  "last_updated": "2026-11-04T07:50:38.526Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6lv2XtXYcbfZnVgBBpYveK",
+      "title": "עוד יום שעובר",
+      "artist": "אילון אלקיים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:50:38.526Z"
+    },
     {
       "id": "7LU8QAGkouPpEEVwApuToj",
       "title": "כשאת עצובה",
