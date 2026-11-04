@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2880,
-  "last_updated": "2026-11-04T11:04:33.618Z",
+  "version": 2881,
+  "last_updated": "2026-11-04T12:06:14.627Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6WfZyavJPXkpPpLCG3HAoy",
+      "title": "די לך",
+      "artist": "ישי לוי, Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T12:06:14.627Z"
+    },
     {
       "id": "2du9tO5DrUF7QMiNbjHNV3",
       "title": "אבינו מלכנו",
