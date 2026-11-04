@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2850,
-  "last_updated": "2026-11-04T07:49:14.239Z",
+  "version": 2851,
+  "last_updated": "2026-11-04T07:49:16.967Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6iUKf4rpN29EbrjCabXVu7",
+      "title": "הניגון שבלב",
+      "artist": "Shilo gnatek",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:49:16.967Z"
+    },
     {
       "id": "5JyVP8jJBnTbBSg2c97hhJ",
       "title": "זמן",
