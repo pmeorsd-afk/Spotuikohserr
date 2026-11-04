@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2849,
-  "last_updated": "2026-11-04T07:49:02.316Z",
+  "version": 2850,
+  "last_updated": "2026-11-04T07:49:14.239Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5JyVP8jJBnTbBSg2c97hhJ",
+      "title": "זמן",
+      "artist": "Ben El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T07:49:14.239Z"
+    },
     {
       "id": "0in6cZKDWOicaL7A4qgQ1P",
       "title": "ניגון חופה",
