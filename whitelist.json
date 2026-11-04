@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2928,
-  "last_updated": "2026-11-04T19:46:51.088Z",
+  "version": 2929,
+  "last_updated": "2026-11-04T19:46:56.101Z",
   "artists": [
     {
       "id": "1k8sIESDVitP38QJAjAtHf",
@@ -2960,6 +2960,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Gx4VrHzS7pZOEAGrmXXBH",
+      "title": "La Bicicleta",
+      "artist": "Carlos Vives, Shakira",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-04T19:46:56.101Z"
+    },
     {
       "id": "3pDhN3qB33AOPhQEkUCaWt",
       "title": "Limbo",
