@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3025,
-  "last_updated": "2026-11-05T18:53:41.873Z",
+  "version": 3026,
+  "last_updated": "2026-11-05T18:53:46.288Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2zeLv6ZQ8tZubSjnAR6EhD",
+      "title": "אסתדר לבד",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:53:46.288Z"
+    },
     {
       "id": "4Y0iwlzcm81LvEtDdAY62J",
       "title": "צעיר אבל חכם",
