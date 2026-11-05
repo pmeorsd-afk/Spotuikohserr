@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3099,
-  "last_updated": "2026-11-05T22:04:19.774Z",
+  "version": 3100,
+  "last_updated": "2026-11-05T22:08:08.081Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5oEnmRwyqnKIbztZD4oFC2",
+      "title": "עומד מולך היום",
+      "artist": "משה כורסיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T22:08:08.081Z"
+    },
     {
       "id": "0pSoTVlPIRlAwtcwsyNpFG",
       "title": "פול גז",
