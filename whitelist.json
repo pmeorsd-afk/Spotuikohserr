@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3093,
-  "last_updated": "2026-11-05T22:03:57.495Z",
+  "version": 3094,
+  "last_updated": "2026-11-05T22:04:01.264Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6QiQ6kF4UfNrNVnlHCJnX6",
+      "title": "לא לבד",
+      "artist": "קובי ברומר, ים רפאלי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T22:04:01.264Z"
+    },
     {
       "id": "4agsnDQ4PUchkCfmziYZBl",
       "title": "נקום",
