@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3096,
-  "last_updated": "2026-11-05T22:04:07.669Z",
+  "version": 3097,
+  "last_updated": "2026-11-05T22:04:09.868Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "675Zp3W44r2qtc1NwDyZH9",
+      "title": "אזעקות של אמונה",
+      "artist": "קובי ברומר, בני הורביץ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T22:04:09.868Z"
+    },
     {
       "id": "3xSB6U8w734u4Fb3vNB6rm",
       "title": "לילה אגדי",
