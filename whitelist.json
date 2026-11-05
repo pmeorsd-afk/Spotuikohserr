@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3064,
-  "last_updated": "2026-11-05T18:57:01.939Z",
+  "version": 3065,
+  "last_updated": "2026-11-05T18:57:04.523Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6sWsJFiZ7LJm6BqHCpy46V",
+      "title": "Satellites",
+      "artist": "GAMPER & DADONI, Joe Jury",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:57:04.523Z"
+    },
     {
       "id": "3nUWVwxxaowk4x0ZSFBY1K",
       "title": "מחרוזת סליחות",
