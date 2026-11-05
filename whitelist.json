@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3056,
-  "last_updated": "2026-11-05T18:56:10.961Z",
+  "version": 3057,
+  "last_updated": "2026-11-05T18:56:14.042Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "09XpZey0NDo3fwf4o6QC25",
+      "title": "המונית העצובה",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:56:14.042Z"
+    },
     {
       "id": "6ooAcKlKU2NyLJbwKTK3LX",
       "title": "נתראה בגלגול הבא",
