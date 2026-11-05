@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2982,
-  "last_updated": "2026-11-05T18:34:16.762Z",
+  "version": 2983,
+  "last_updated": "2026-11-05T18:34:23.158Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5uk5mjBizZT6ak2uXjdAtA",
+      "title": "מכות חשמל",
+      "artist": "Gal Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:34:23.158Z"
+    },
     {
       "id": "6rRXCqsR3kzGPWKbo0yWbj",
       "title": "סוכריות קופצות",
