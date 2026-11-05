@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2985,
-  "last_updated": "2026-11-05T18:34:50.155Z",
+  "version": 2986,
+  "last_updated": "2026-11-05T18:34:53.293Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2xqMifKIz1qVTElCZPkyRH",
+      "title": "לילה כיום יאיר",
+      "artist": "Eviatar Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:34:53.293Z"
+    },
     {
       "id": "13ymq7rmsv9OjsRum7V0ET",
       "title": "רולטה רוסית",
