@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3061,
-  "last_updated": "2026-11-05T18:56:33.082Z",
+  "version": 3062,
+  "last_updated": "2026-11-05T18:56:37.056Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5knQS93QZNKLw8DO8aYal6",
+      "title": "Mazal",
+      "artist": "Eyal Golan, Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:56:37.056Z"
+    },
     {
       "id": "2qn9LaJ9fY85cxFs1kpR0o",
       "title": "Barcelona",
