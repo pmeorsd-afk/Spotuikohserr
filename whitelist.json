@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2992,
-  "last_updated": "2026-11-05T18:35:19.573Z",
+  "version": 2993,
+  "last_updated": "2026-11-05T18:35:22.398Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4E5fqKktoOAT3shxlolPBm",
+      "title": "אינטלקטוערסית",
+      "artist": "אודיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:35:22.398Z"
+    },
     {
       "id": "6AI3ezQ4o3HUoP6Dhudph3",
       "title": "Not Like Us",
