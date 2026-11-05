@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3104,
-  "last_updated": "2026-11-05T22:21:47.305Z",
+  "version": 3105,
+  "last_updated": "2026-11-05T22:21:53.376Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "31VLQciLv1PbK2IJUtXLgj",
+      "title": "לורו פיאנה",
+      "artist": "רואי אדם",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T22:21:53.376Z"
+    },
     {
       "id": "7Ll4r8LMu7muIEG0i7PF7t",
       "title": "נסיכה של אבא",
