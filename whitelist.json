@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3101,
-  "last_updated": "2026-11-05T22:08:11.168Z",
+  "version": 3102,
+  "last_updated": "2026-11-05T22:21:40.855Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7vFoFDWqTX0mHzLfrF1Cfy",
+      "title": "Cheerleader (Felix Jaehn Remix) - Radio Edit",
+      "artist": "OMI, felix jaehn",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T22:21:40.855Z"
+    },
     {
       "id": "06AMPOXCcckUPVoP8MYYaj",
       "title": "טינאנאי",
