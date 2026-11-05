@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3047,
-  "last_updated": "2026-11-05T18:55:29.087Z",
+  "version": 3048,
+  "last_updated": "2026-11-05T18:55:32.444Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5VI08qNue9MYd5BHxvtdCR",
+      "title": "Tattoo",
+      "artist": "Johnny Huynh",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:55:32.444Z"
+    },
     {
       "id": "1MtOPpL3jV7FmvsduiQqGE",
       "title": "לב שביר",
