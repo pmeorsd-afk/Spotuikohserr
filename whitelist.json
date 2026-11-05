@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3013,
-  "last_updated": "2026-11-05T18:36:52.929Z",
+  "version": 3014,
+  "last_updated": "2026-11-05T18:52:56.176Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4mOZt2iB5GbDzgpa0DJqCN",
+      "title": "באתי עד אליך",
+      "artist": "Mor",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:52:56.176Z"
+    },
     {
       "id": "1HRZs4WiP76qDiJsycnK6t",
       "title": "ואת אינך",
