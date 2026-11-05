@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3082,
-  "last_updated": "2026-11-05T19:51:41.869Z",
+  "version": 3083,
+  "last_updated": "2026-11-05T19:53:54.601Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0smyCrJiibi2uwCiq5R1vj",
+      "title": "Save Tonight",
+      "artist": "Eagle-Eye Cherry",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T19:53:54.601Z"
+    },
     {
       "id": "1dLzUm8Hnzl0wgRDt09fdL",
       "title": "פרחים בקנה",
