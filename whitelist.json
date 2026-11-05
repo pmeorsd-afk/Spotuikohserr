@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3017,
-  "last_updated": "2026-11-05T18:53:09.302Z",
+  "version": 3018,
+  "last_updated": "2026-11-05T18:53:12.318Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1E2dVHpOJSyXJLEVbC6Z08",
+      "title": "אני גיטרה",
+      "artist": "Dudu Tassa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:53:12.318Z"
+    },
     {
       "id": "0hJx2GjkrZFdJcMz8zDwvO",
       "title": "אבן ספיר",
