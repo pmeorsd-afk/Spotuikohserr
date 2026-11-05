@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3023,
-  "last_updated": "2026-11-05T18:53:34.754Z",
+  "version": 3024,
+  "last_updated": "2026-11-05T18:53:38.172Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "26bMgT9GJJwfyMwRlXhh01",
+      "title": "שאת זזה",
+      "artist": "אופק אדנק",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:53:38.172Z"
+    },
     {
       "id": "6T42tPi7HAuZN0IkDh6gHJ",
       "title": "Mehamatok El Hamar",
