@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2989,
-  "last_updated": "2026-11-05T18:35:07.436Z",
+  "version": 2990,
+  "last_updated": "2026-11-05T18:35:11.395Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0xcWxI1fUxfD6LrrljUH7L",
+      "title": "Love of My Life",
+      "artist": "Queen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:35:11.395Z"
+    },
     {
       "id": "7mjSHL2Eb0kAwiKbvNNyD9",
       "title": "Wild World",
