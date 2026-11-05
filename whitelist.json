@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3067,
-  "last_updated": "2026-11-05T18:57:09.736Z",
+  "version": 3068,
+  "last_updated": "2026-11-05T18:57:12.808Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0XJUlFtz2y9AHOlqBtVjzW",
+      "title": "don't leave",
+      "artist": "LSR/CITY, Gareth Emery, Annabel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:57:12.808Z"
+    },
     {
       "id": "3ScJy88F8KqGDfWu8XJhHx",
       "title": "If I Lose Myself - Alesso vs OneRepublic",
