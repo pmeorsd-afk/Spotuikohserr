@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3092,
-  "last_updated": "2026-11-05T21:09:35.220Z",
+  "version": 3093,
+  "last_updated": "2026-11-05T22:03:57.495Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4agsnDQ4PUchkCfmziYZBl",
+      "title": "נקום",
+      "artist": "Harel Skaat",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T22:03:57.495Z"
+    },
     {
       "id": "7cXibp6egWFcZ1kGagI0od",
       "title": "ואת & 08 - Live",
