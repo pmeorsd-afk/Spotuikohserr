@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2993,
-  "last_updated": "2026-11-05T18:35:22.398Z",
+  "version": 2994,
+  "last_updated": "2026-11-05T18:35:25.872Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6hyYsvMuxHuQf4baCz9Z5B",
+      "title": "LFP #1 (Cocaïne)",
+      "artist": "Pato",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:35:25.872Z"
+    },
     {
       "id": "4E5fqKktoOAT3shxlolPBm",
       "title": "אינטלקטוערסית",
