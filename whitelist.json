@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3072,
-  "last_updated": "2026-11-05T19:39:23.698Z",
+  "version": 3073,
+  "last_updated": "2026-11-05T19:41:14.947Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2374M0fQpWi3dLnB54qaLX",
+      "title": "Africa",
+      "artist": "TOTO",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T19:41:14.947Z"
+    },
     {
       "id": "4jLv3tDBu8ww2R07DvL12s",
       "title": "Man On The Moon",
