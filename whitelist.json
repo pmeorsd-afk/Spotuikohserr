@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3085,
-  "last_updated": "2026-11-05T20:04:40.918Z",
+  "version": 3086,
+  "last_updated": "2026-11-05T20:42:07.649Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4eUvdMN4L9N5ci9bcT1M5n",
+      "title": "VATOS LOCOS (ידיים באוויר) - Instrumental",
+      "artist": "Subliminal, The Shadow, אלמוג קפח, Moran Mazor, חננאל אדרי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T20:42:07.649Z"
+    },
     {
       "id": "0Frry5AN3ncx1UriNvPx3v",
       "title": "חי מיום ליום",
