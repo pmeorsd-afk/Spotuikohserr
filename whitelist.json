@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3032,
-  "last_updated": "2026-11-05T18:54:09.897Z",
+  "version": 3033,
+  "last_updated": "2026-11-05T18:54:12.591Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7LHluPVySLDmqEvzsQVsYQ",
+      "title": "בואי בובה",
+      "artist": "אופק אדנק",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:54:12.591Z"
+    },
     {
       "id": "5C6ZYeFnQkSqSnG0EuevpI",
       "title": "נתתי ת'לב",
