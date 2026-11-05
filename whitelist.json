@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3051,
-  "last_updated": "2026-11-05T18:55:52.695Z",
+  "version": 3052,
+  "last_updated": "2026-11-05T18:55:55.650Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1k91FYQpWr3WNuRfT3hI9N",
+      "title": "קשה בכדור הארץ",
+      "artist": "Tuna",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:55:55.650Z"
+    },
     {
       "id": "6XyrxwPuhXhjCBn36odtkc",
       "title": "תן לי מנגינה",
