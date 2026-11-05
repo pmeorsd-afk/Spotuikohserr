@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3043,
-  "last_updated": "2026-11-05T18:54:59.261Z",
+  "version": 3044,
+  "last_updated": "2026-11-05T18:55:02.384Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6wNhCQ8lwBvDtWrQi6V5ho",
+      "title": "שיווי משקל",
+      "artist": "נהוראי אריאלי, נתנאל ישראל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:55:02.384Z"
+    },
     {
       "id": "3R3Xt6xezZFHSopwjyyuxC",
       "title": "יום הרווקים",
