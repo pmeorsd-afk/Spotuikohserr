@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3084,
-  "last_updated": "2026-11-05T20:01:25.043Z",
+  "version": 3085,
+  "last_updated": "2026-11-05T20:04:40.918Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Frry5AN3ncx1UriNvPx3v",
+      "title": "חי מיום ליום",
+      "artist": "Subliminal, The Shadow",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T20:04:40.918Z"
+    },
     {
       "id": "1nEanHVz0wXBCupdK4E42H",
       "title": "הסוד",
