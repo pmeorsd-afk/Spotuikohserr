@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3078,
-  "last_updated": "2026-11-05T19:51:30.170Z",
+  "version": 3079,
+  "last_updated": "2026-11-05T19:51:32.767Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ZmTyN7TD1nKm3adAUUFzE",
+      "title": "וידוי",
+      "artist": "בניה ברבי, Daniel Zamir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T19:51:32.767Z"
+    },
     {
       "id": "2M9ro2krNb7nr7HSprkEgo",
       "title": "Fast Car",
