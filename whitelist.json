@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3070,
-  "last_updated": "2026-11-05T18:57:25.204Z",
+  "version": 3071,
+  "last_updated": "2026-11-05T18:57:33.389Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1XjHrZfLIWQraTuXH1LyvT",
+      "title": "געגועים",
+      "artist": "Shir David Gadasi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:57:33.389Z"
+    },
     {
       "id": "5Zj7nQgikLMlf2Gc8ss0BE",
       "title": "Back To Paradise",
