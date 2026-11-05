@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3062,
-  "last_updated": "2026-11-05T18:56:37.056Z",
+  "version": 3063,
+  "last_updated": "2026-11-05T18:56:53.789Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6rvremaQY7wpv2QdxKSmDb",
+      "title": "V'at Alis",
+      "artist": "Baruch Levine",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:56:53.789Z"
+    },
     {
       "id": "5knQS93QZNKLw8DO8aYal6",
       "title": "Mazal",
