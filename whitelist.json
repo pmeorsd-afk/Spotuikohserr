@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2994,
-  "last_updated": "2026-11-05T18:35:25.872Z",
+  "version": 2995,
+  "last_updated": "2026-11-05T18:35:29.049Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4MwXuOyte7BBkhPGMDpCvB",
+      "title": "L'hiver",
+      "artist": "Saïf",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:35:29.049Z"
+    },
     {
       "id": "6hyYsvMuxHuQf4baCz9Z5B",
       "title": "LFP #1 (Cocaïne)",
