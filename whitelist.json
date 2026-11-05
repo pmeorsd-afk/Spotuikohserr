@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3106,
-  "last_updated": "2026-11-05T22:21:56.583Z",
+  "version": 3107,
+  "last_updated": "2026-11-05T22:26:32.261Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Jtw1SsDKKL3OS1msNT8Z6",
+      "title": "חצי פארנויה",
+      "artist": "עילי צ'פמן, Nadav Guedj",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T22:26:32.261Z"
+    },
     {
       "id": "51ghqqIf8SixdZsPxGdhCT",
       "title": "היא לא דומה",
