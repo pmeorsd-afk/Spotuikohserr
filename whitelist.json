@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3044,
-  "last_updated": "2026-11-05T18:55:02.384Z",
+  "version": 3045,
+  "last_updated": "2026-11-05T18:55:16.294Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5cF0dROlMOK5uNZtivgu50",
+      "title": "Attention",
+      "artist": "Charlie Puth",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:55:16.294Z"
+    },
     {
       "id": "6wNhCQ8lwBvDtWrQi6V5ho",
       "title": "שיווי משקל",
