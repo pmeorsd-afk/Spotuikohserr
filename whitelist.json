@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3042,
-  "last_updated": "2026-11-05T18:54:56.555Z",
+  "version": 3043,
+  "last_updated": "2026-11-05T18:54:59.261Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3R3Xt6xezZFHSopwjyyuxC",
+      "title": "יום הרווקים",
+      "artist": "Ofer Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:54:59.261Z"
+    },
     {
       "id": "7q65CsLl5Hvo9NBc27IzT8",
       "title": "Big Vibes Mixtape Volume 2",
