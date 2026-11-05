@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3035,
-  "last_updated": "2026-11-05T18:54:25.680Z",
+  "version": 3036,
+  "last_updated": "2026-11-05T18:54:28.472Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ROZKSId37XnvaAWlz6pOB",
+      "title": "שישה",
+      "artist": "Vibe Ish, Ayallew",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:54:28.472Z"
+    },
     {
       "id": "0B3FovCVaGKS5w1FTidEUP",
       "title": "BROWN SKIN GIRL",
