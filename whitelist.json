@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3081,
-  "last_updated": "2026-11-05T19:51:39.531Z",
+  "version": 3082,
+  "last_updated": "2026-11-05T19:51:41.869Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1dLzUm8Hnzl0wgRDt09fdL",
+      "title": "פרחים בקנה",
+      "artist": "Subliminal, Gavriel Butler, Itzik Shamli, Sivan, The Shadow",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T19:51:41.869Z"
+    },
     {
       "id": "72Z17vmmeQKAg8bptWvpVG",
       "title": "Space Oddity - 2015 Remaster",
