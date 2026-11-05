@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3053,
-  "last_updated": "2026-11-05T18:56:01.296Z",
+  "version": 3054,
+  "last_updated": "2026-11-05T18:56:03.759Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5VPKxYzBFf3HUhtcrwsQJ0",
+      "title": "אחת ממיליון (מיוחד למצעד הישראלי השנתי תשפ\"ה)",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:56:03.759Z"
+    },
     {
       "id": "5yBEMBo9K2w1DJBYxna1aj",
       "title": "מחוזקים לעולם",
