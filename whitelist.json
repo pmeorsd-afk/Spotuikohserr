@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3073,
-  "last_updated": "2026-11-05T19:41:14.947Z",
+  "version": 3074,
+  "last_updated": "2026-11-05T19:41:17.487Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7xANRiY9KEPylLrpAz2HpC",
+      "title": "Sunrise - Adam Ten Remix",
+      "artist": "Shouse, Adam Ten",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T19:41:17.487Z"
+    },
     {
       "id": "2374M0fQpWi3dLnB54qaLX",
       "title": "Africa",
