@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3100,
-  "last_updated": "2026-11-05T22:08:08.081Z",
+  "version": 3101,
+  "last_updated": "2026-11-05T22:08:11.168Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "06AMPOXCcckUPVoP8MYYaj",
+      "title": "טינאנאי",
+      "artist": "Shi 360, Booskills",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T22:08:11.168Z"
+    },
     {
       "id": "5oEnmRwyqnKIbztZD4oFC2",
       "title": "עומד מולך היום",
