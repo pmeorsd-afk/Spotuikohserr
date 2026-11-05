@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3091,
-  "last_updated": "2026-11-05T21:09:02.539Z",
+  "version": 3092,
+  "last_updated": "2026-11-05T21:09:35.220Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7cXibp6egWFcZ1kGagI0od",
+      "title": "ואת & 08 - Live",
+      "artist": "Itay Levi, Harel Skaat",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T21:09:35.220Z"
+    },
     {
       "id": "1OBCwLvGUq9G0fwmZiRfY1",
       "title": "פתיחת מופע / 01 - Live",
