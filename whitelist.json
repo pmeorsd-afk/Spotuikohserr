@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3029,
-  "last_updated": "2026-11-05T18:53:59.810Z",
+  "version": 3030,
+  "last_updated": "2026-11-05T18:54:03.562Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6paq7NGkEVcf258iHoWLUd",
+      "title": "היפ הופי",
+      "artist": "KGC, ישראל אלמו, BAZZI B, שאנטי וטזרה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:54:03.562Z"
+    },
     {
       "id": "6qvXtHvPjeqINPkbQ1knyo",
       "title": "פנומנלי",
