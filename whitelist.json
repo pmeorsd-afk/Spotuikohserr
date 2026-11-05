@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3069,
-  "last_updated": "2026-11-05T18:57:22.440Z",
+  "version": 3070,
+  "last_updated": "2026-11-05T18:57:25.204Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Zj7nQgikLMlf2Gc8ss0BE",
+      "title": "Back To Paradise",
+      "artist": "Ferry Corsten, Haris",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:57:25.204Z"
+    },
     {
       "id": "0LbUHTnGtCQdMndMJVJtsN",
       "title": "שלום עליכם",
