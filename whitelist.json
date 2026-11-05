@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3109,
-  "last_updated": "2026-11-05T22:26:39.597Z",
+  "version": 3110,
+  "last_updated": "2026-11-05T22:26:41.662Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4GkHuUzgDxh1zRh9RS1k1B",
+      "title": "אהבה ממבט ראשון",
+      "artist": "Idan Amedi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T22:26:41.662Z"
+    },
     {
       "id": "1CEfVBj4EGVmUg2zTJdlDS",
       "title": "במרחק נגיעה מכאן",
