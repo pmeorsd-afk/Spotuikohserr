@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3090,
-  "last_updated": "2026-11-05T21:07:11.190Z",
+  "version": 3091,
+  "last_updated": "2026-11-05T21:09:02.539Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1OBCwLvGUq9G0fwmZiRfY1",
+      "title": "פתיחת מופע / 01 - Live",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T21:09:02.539Z"
+    },
     {
       "id": "7yAq2KQUDfMWqFNHPq4jBy",
       "title": "לאבא שלי יש סולם",
