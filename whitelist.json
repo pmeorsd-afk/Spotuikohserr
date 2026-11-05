@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2996,
-  "last_updated": "2026-11-05T18:35:33.446Z",
+  "version": 2997,
+  "last_updated": "2026-11-05T18:35:36.258Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1CZ9GgZQpkWmOpXDVC3mOp",
+      "title": "Hakayet",
+      "artist": "VEN1",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:35:36.258Z"
+    },
     {
       "id": "19Oorjix0E7FiD7mC4FEKx",
       "title": "Audi Sport",
