@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2987,
-  "last_updated": "2026-11-05T18:34:56.655Z",
+  "version": 2988,
+  "last_updated": "2026-11-05T18:35:04.110Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "38zsOOcu31XbbYj9BIPUF1",
+      "title": "Your Song",
+      "artist": "Elton John",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:35:04.110Z"
+    },
     {
       "id": "1n9zaKqmOEnvt4KZC49n8t",
       "title": "אין הגיון באהבה",
