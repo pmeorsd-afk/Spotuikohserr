@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3076,
-  "last_updated": "2026-11-05T19:43:43.615Z",
+  "version": 3077,
+  "last_updated": "2026-11-05T19:51:27.602Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7FrhwOIrUFQPqVxWOshqOt",
+      "title": "Let It Go - From \"Frozen\"/Soundtrack Version",
+      "artist": "Idina Menzel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T19:51:27.602Z"
+    },
     {
       "id": "1QEEqeFIZktqIpPI4jSVSF",
       "title": "More Than a Feeling",
