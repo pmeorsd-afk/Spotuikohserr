@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3050,
-  "last_updated": "2026-11-05T18:55:50.214Z",
+  "version": 3051,
+  "last_updated": "2026-11-05T18:55:52.695Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6XyrxwPuhXhjCBn36odtkc",
+      "title": "תן לי מנגינה",
+      "artist": "Avraham Tal, Hadag Nahash",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:55:52.695Z"
+    },
     {
       "id": "4cfeBYYN0GrxgtxEFi0ZAL",
       "title": "הולך על מים",
