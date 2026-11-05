@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3068,
-  "last_updated": "2026-11-05T18:57:12.808Z",
+  "version": 3069,
+  "last_updated": "2026-11-05T18:57:22.440Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0LbUHTnGtCQdMndMJVJtsN",
+      "title": "שלום עליכם",
+      "artist": "Daniel Ben Haim",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:57:22.440Z"
+    },
     {
       "id": "0XJUlFtz2y9AHOlqBtVjzW",
       "title": "don't leave",
