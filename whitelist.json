@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2997,
-  "last_updated": "2026-11-05T18:35:36.258Z",
+  "version": 2998,
+  "last_updated": "2026-11-05T18:35:40.654Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ez7VrE1IlqfDD0J2vnRdO",
+      "title": "Instanonymat #3",
+      "artist": "Saïf",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:35:40.654Z"
+    },
     {
       "id": "1CZ9GgZQpkWmOpXDVC3mOp",
       "title": "Hakayet",
