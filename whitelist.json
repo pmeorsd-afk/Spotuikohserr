@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3001,
-  "last_updated": "2026-11-05T18:36:04.413Z",
+  "version": 3002,
+  "last_updated": "2026-11-05T18:36:08.526Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6dGnYIeXmHdcikdzNNDMm2",
+      "title": "Here Comes The Sun - Remastered 2009",
+      "artist": "The Beatles",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:36:08.526Z"
+    },
     {
       "id": "6KDhQY44lGn8ONjFumFOEk",
       "title": "בוקר טוב (טאטע טנקיו)",
