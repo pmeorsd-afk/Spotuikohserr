@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3066,
-  "last_updated": "2026-11-05T18:57:06.998Z",
+  "version": 3067,
+  "last_updated": "2026-11-05T18:57:09.736Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ScJy88F8KqGDfWu8XJhHx",
+      "title": "If I Lose Myself - Alesso vs OneRepublic",
+      "artist": "OneRepublic, Alesso",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:57:09.736Z"
+    },
     {
       "id": "0OTxyXl67uf77d553TRLZZ",
       "title": "Through The Night",
