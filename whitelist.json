@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2990,
-  "last_updated": "2026-11-05T18:35:11.395Z",
+  "version": 2991,
+  "last_updated": "2026-11-05T18:35:16.522Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3m7V717IKZqZLW5qUIOxdD",
+      "title": "Hey Jude - Remastered 2009",
+      "artist": "The Beatles",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:35:16.522Z"
+    },
     {
       "id": "0xcWxI1fUxfD6LrrljUH7L",
       "title": "Love of My Life",
