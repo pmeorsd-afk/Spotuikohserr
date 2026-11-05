@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3011,
-  "last_updated": "2026-11-05T18:36:46.467Z",
+  "version": 3012,
+  "last_updated": "2026-11-05T18:36:49.544Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3bq1JNx723C0EGA1ODFpar",
+      "title": "Aadesh | Mahakal ka aadesh | bhajan | alakhaniranjan",
+      "artist": "NCS MUSIC",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:36:49.544Z"
+    },
     {
       "id": "4Rp37LMOzgytCIZq129IuU",
       "title": "Dopamine | gym motivation song | new songs 2026",
