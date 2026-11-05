@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3086,
-  "last_updated": "2026-11-05T20:42:07.649Z",
+  "version": 3087,
+  "last_updated": "2026-11-05T20:42:51.143Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4MOVTxsYpN1r9GaoNu0ARe",
+      "title": "Moonrise",
+      "artist": "Clovis XIV, Safe Travel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T20:42:51.143Z"
+    },
     {
       "id": "4eUvdMN4L9N5ci9bcT1M5n",
       "title": "VATOS LOCOS (ידיים באוויר) - Instrumental",
