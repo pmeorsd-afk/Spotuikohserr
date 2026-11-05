@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3009,
-  "last_updated": "2026-11-05T18:36:37.831Z",
+  "version": 3010,
+  "last_updated": "2026-11-05T18:36:40.373Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0kHyKhJMukHEPfeh8s7rdM",
+      "title": "Born To Be Yours",
+      "artist": "Kygo, Imagine Dragons",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:36:40.373Z"
+    },
     {
       "id": "6kXNnS7JJz0nAv4XEwEmQJ",
       "title": "Heart Upon My Sleeve (feat. Imagine Dragons)",
