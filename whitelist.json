@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3012,
-  "last_updated": "2026-11-05T18:36:49.544Z",
+  "version": 3013,
+  "last_updated": "2026-11-05T18:36:52.929Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1HRZs4WiP76qDiJsycnK6t",
+      "title": "ואת אינך",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:36:52.929Z"
+    },
     {
       "id": "3bq1JNx723C0EGA1ODFpar",
       "title": "Aadesh | Mahakal ka aadesh | bhajan | alakhaniranjan",
