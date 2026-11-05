@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3088,
-  "last_updated": "2026-11-05T20:48:29.559Z",
+  "version": 3089,
+  "last_updated": "2026-11-05T20:55:30.330Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4JcSqA9bEBtKSqxaKNv7aT",
+      "title": "הו מותק - גרסה קצת אחרת",
+      "artist": "Loren Peled",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T20:55:30.330Z"
+    },
     {
       "id": "45VMkekXR1gHqOOQrItBZj",
       "title": "תזהר ממנה",
