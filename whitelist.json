@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3065,
-  "last_updated": "2026-11-05T18:57:04.523Z",
+  "version": 3066,
+  "last_updated": "2026-11-05T18:57:06.998Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0OTxyXl67uf77d553TRLZZ",
+      "title": "Through The Night",
+      "artist": "MashBit, LAERZ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:57:06.998Z"
+    },
     {
       "id": "6sWsJFiZ7LJm6BqHCpy46V",
       "title": "Satellites",
