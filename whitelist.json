@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3094,
-  "last_updated": "2026-11-05T22:04:01.264Z",
+  "version": 3095,
+  "last_updated": "2026-11-05T22:04:03.774Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2bo0oXoAftSf3CQ8bLaIpr",
+      "title": "דגל על הגב",
+      "artist": "משה כורסיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T22:04:03.774Z"
+    },
     {
       "id": "6QiQ6kF4UfNrNVnlHCJnX6",
       "title": "לא לבד",
