@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3037,
-  "last_updated": "2026-11-05T18:54:31.296Z",
+  "version": 3038,
+  "last_updated": "2026-11-05T18:54:33.942Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6JPnchFjZVGCXpEKkcFdUc",
+      "title": "Sof Shavua",
+      "artist": "Café Shahor Hazak",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:54:33.942Z"
+    },
     {
       "id": "6ekFjZhtQxRUAdgBqJaLbK",
       "title": "קודם כל",
