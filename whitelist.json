@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3057,
-  "last_updated": "2026-11-05T18:56:14.042Z",
+  "version": 3058,
+  "last_updated": "2026-11-05T18:56:16.917Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4C7LPGCce5AI0O6glhDf1Y",
+      "title": "Good Boys (Hide Away)",
+      "artist": "Daya, Albi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:56:16.917Z"
+    },
     {
       "id": "09XpZey0NDo3fwf4o6QC25",
       "title": "המונית העצובה",
