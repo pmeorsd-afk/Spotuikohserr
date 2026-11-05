@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3010,
-  "last_updated": "2026-11-05T18:36:40.373Z",
+  "version": 3011,
+  "last_updated": "2026-11-05T18:36:46.467Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Rp37LMOzgytCIZq129IuU",
+      "title": "Dopamine | gym motivation song | new songs 2026",
+      "artist": "NCS MUSIC",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:36:46.467Z"
+    },
     {
       "id": "0kHyKhJMukHEPfeh8s7rdM",
       "title": "Born To Be Yours",
