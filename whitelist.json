@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3087,
-  "last_updated": "2026-11-05T20:42:51.143Z",
+  "version": 3088,
+  "last_updated": "2026-11-05T20:48:29.559Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "45VMkekXR1gHqOOQrItBZj",
+      "title": "תזהר ממנה",
+      "artist": "Lior Farhi, Subliminal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T20:48:29.559Z"
+    },
     {
       "id": "4MOVTxsYpN1r9GaoNu0ARe",
       "title": "Moonrise",
