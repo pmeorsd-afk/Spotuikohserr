@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3102,
-  "last_updated": "2026-11-05T22:21:40.855Z",
+  "version": 3103,
+  "last_updated": "2026-11-05T22:21:43.882Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0JwpAEy2Hpxzcb6wiXeQBi",
+      "title": "תן למוזיקה לדבר",
+      "artist": "Subliminal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T22:21:43.882Z"
+    },
     {
       "id": "7vFoFDWqTX0mHzLfrF1Cfy",
       "title": "Cheerleader (Felix Jaehn Remix) - Radio Edit",
