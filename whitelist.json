@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2988,
-  "last_updated": "2026-11-05T18:35:04.110Z",
+  "version": 2989,
+  "last_updated": "2026-11-05T18:35:07.436Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7mjSHL2Eb0kAwiKbvNNyD9",
+      "title": "Wild World",
+      "artist": "Yusuf / Cat Stevens",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:35:07.436Z"
+    },
     {
       "id": "38zsOOcu31XbbYj9BIPUF1",
       "title": "Your Song",
