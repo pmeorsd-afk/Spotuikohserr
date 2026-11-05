@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2980,
-  "last_updated": "2026-11-04T22:04:38.190Z",
+  "version": 2981,
+  "last_updated": "2026-11-05T18:34:13.081Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7suhmQxCAs2r1wmUQh3G9x",
+      "title": "כפרה",
+      "artist": "Kevin Rubin, Rotem Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:34:13.081Z"
+    },
     {
       "id": "7DfW6Jg6cRCi0OtRHpOSqX",
       "title": "תבואי היום",
