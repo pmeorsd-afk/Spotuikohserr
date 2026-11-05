@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3033,
-  "last_updated": "2026-11-05T18:54:12.591Z",
+  "version": 3034,
+  "last_updated": "2026-11-05T18:54:16.450Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "56qiAh3R5y85Ng26tkAUD3",
+      "title": "TGIF",
+      "artist": "GloRilla",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:54:16.450Z"
+    },
     {
       "id": "7LHluPVySLDmqEvzsQVsYQ",
       "title": "בואי בובה",
