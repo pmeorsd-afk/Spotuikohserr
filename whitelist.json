@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3048,
-  "last_updated": "2026-11-05T18:55:32.444Z",
+  "version": 3049,
+  "last_updated": "2026-11-05T18:55:47.263Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0m2fwQU4xd5peuRnxpaRMx",
+      "title": "לנסות - רמיקס",
+      "artist": "משה קליין, Gad Elbaz, Romano",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:55:47.263Z"
+    },
     {
       "id": "5VI08qNue9MYd5BHxvtdCR",
       "title": "Tattoo",
