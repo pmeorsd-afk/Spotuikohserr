@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3052,
-  "last_updated": "2026-11-05T18:55:55.650Z",
+  "version": 3053,
+  "last_updated": "2026-11-05T18:56:01.296Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5yBEMBo9K2w1DJBYxna1aj",
+      "title": "מחוזקים לעולם",
+      "artist": "Avraham Tal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:56:01.296Z"
+    },
     {
       "id": "1k91FYQpWr3WNuRfT3hI9N",
       "title": "קשה בכדור הארץ",
