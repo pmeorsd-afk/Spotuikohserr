@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3006,
-  "last_updated": "2026-11-05T18:36:26.859Z",
+  "version": 3007,
+  "last_updated": "2026-11-05T18:36:29.882Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6yvpM77HwmFWSSDa6KKMhQ",
+      "title": "Teterouchka",
+      "artist": "Slava Ardachev, Skazka, Olga Velitchkina, Katia Lubinskaia",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:36:29.882Z"
+    },
     {
       "id": "2RkZ5LkEzeHGRsmDqKwmaJ",
       "title": "Ordinary",
