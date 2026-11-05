@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3105,
-  "last_updated": "2026-11-05T22:21:53.376Z",
+  "version": 3106,
+  "last_updated": "2026-11-05T22:21:56.583Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "51ghqqIf8SixdZsPxGdhCT",
+      "title": "היא לא דומה",
+      "artist": "Arkadi Duchin",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T22:21:56.583Z"
+    },
     {
       "id": "31VLQciLv1PbK2IJUtXLgj",
       "title": "לורו פיאנה",
