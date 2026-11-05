@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3038,
-  "last_updated": "2026-11-05T18:54:33.942Z",
+  "version": 3039,
+  "last_updated": "2026-11-05T18:54:39.221Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3yGe0vP1gk840xlAov2PUo",
+      "title": "הגבר שלך",
+      "artist": "אברהם איילאו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:54:39.221Z"
+    },
     {
       "id": "6JPnchFjZVGCXpEKkcFdUc",
       "title": "Sof Shavua",
