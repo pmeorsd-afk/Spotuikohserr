@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3040,
-  "last_updated": "2026-11-05T18:54:42.114Z",
+  "version": 3041,
+  "last_updated": "2026-11-05T18:54:44.982Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7nSqbeZ3Y7V9eXta3hfZJU",
+      "title": "הסטיגמה של הגיל",
+      "artist": "אופק אדנק, גי׳מי ג׳אן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:54:44.982Z"
+    },
     {
       "id": "2DAzl5LVw2AydwiMR249PW",
       "title": "אנסטגרם / זו את",
