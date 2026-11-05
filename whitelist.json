@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3079,
-  "last_updated": "2026-11-05T19:51:32.767Z",
+  "version": 3080,
+  "last_updated": "2026-11-05T19:51:37.012Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3fbnbn6A5O5RNb08tlUEgd",
+      "title": "Streets of Philadelphia - Single Edit",
+      "artist": "Bruce Springsteen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T19:51:37.012Z"
+    },
     {
       "id": "6ZmTyN7TD1nKm3adAUUFzE",
       "title": "וידוי",
