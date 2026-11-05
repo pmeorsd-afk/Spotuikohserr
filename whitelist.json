@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3021,
-  "last_updated": "2026-11-05T18:53:23.262Z",
+  "version": 3022,
+  "last_updated": "2026-11-05T18:53:27.024Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6T42tPi7HAuZN0IkDh6gHJ",
+      "title": "Mehamatok El Hamar",
+      "artist": "KGC, Avior Malasa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:53:27.024Z"
+    },
     {
       "id": "54R7eRaEw7t8l8b4JGGyih",
       "title": "כדור הרגעה",
