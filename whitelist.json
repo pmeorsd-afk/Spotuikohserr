@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 2983,
-  "last_updated": "2026-11-05T18:34:23.158Z",
+  "version": 2984,
+  "last_updated": "2026-11-05T18:34:37.984Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7jaWgWOuSxTNsdrlEYCTx5",
+      "title": "מוזיקה לשחרור מתח נפשי ופיזי, לרגיעה, פוקוס וריכוז, שירים רגועים ללימודים, שיעורי בית ועבודה",
+      "artist": "Teramid Music.",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:34:37.984Z"
+    },
     {
       "id": "5uk5mjBizZT6ak2uXjdAtA",
       "title": "מכות חשמל",
