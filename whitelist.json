@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3019,
-  "last_updated": "2026-11-05T18:53:15.472Z",
+  "version": 3020,
+  "last_updated": "2026-11-05T18:53:19.782Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6f8sag9SfIF5v1RqfnbkFt",
+      "title": "כל תזוזה",
+      "artist": "אבוצ'י",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:53:19.782Z"
+    },
     {
       "id": "1OLYG0mnPdJss9KUuirECw",
       "title": "Fiesta",
