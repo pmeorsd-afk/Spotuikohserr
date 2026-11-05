@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3031,
-  "last_updated": "2026-11-05T18:54:06.978Z",
+  "version": 3032,
+  "last_updated": "2026-11-05T18:54:09.897Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5C6ZYeFnQkSqSnG0EuevpI",
+      "title": "נתתי ת'לב",
+      "artist": "אופק אדנק",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:54:09.897Z"
+    },
     {
       "id": "2JkDn1ForCuju79tHS7fii",
       "title": "השער לגן עדן",
