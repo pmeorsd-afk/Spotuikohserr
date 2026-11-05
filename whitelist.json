@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3028,
-  "last_updated": "2026-11-05T18:53:54.146Z",
+  "version": 3029,
+  "last_updated": "2026-11-05T18:53:59.810Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6qvXtHvPjeqINPkbQ1knyo",
+      "title": "פנומנלי",
+      "artist": "BAZZI B",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:53:59.810Z"
+    },
     {
       "id": "01ztiqwdbVTTd8l4JwTpr9",
       "title": "עושים ת'בלאגן",
