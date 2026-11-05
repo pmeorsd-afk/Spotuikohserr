@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3016,
-  "last_updated": "2026-11-05T18:53:04.167Z",
+  "version": 3017,
+  "last_updated": "2026-11-05T18:53:09.302Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0hJx2GjkrZFdJcMz8zDwvO",
+      "title": "אבן ספיר",
+      "artist": "Ehud Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-05T18:53:09.302Z"
+    },
     {
       "id": "67gvqVQXUDDNlbODcDnesV",
       "title": "Diskeeper",
