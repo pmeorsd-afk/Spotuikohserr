@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3160,
-  "last_updated": "2026-11-06T12:51:13.259Z",
+  "version": 3161,
+  "last_updated": "2026-11-06T12:51:15.636Z",
   "artists": [
     {
       "id": "6uJma0iVi87ZW5QwzxijcI",
@@ -3978,9 +3978,9 @@
       "id": "7nSqbeZ3Y7V9eXta3hfZJU",
       "title": "הסטיגמה של הגיל",
       "artist": "אופק אדנק, גי׳מי ג׳אן",
-      "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-11-05T18:54:44.982Z"
+      "status": "blocked",
+      "notes": "blocked via telegram",
+      "updated_at": "2026-11-06T12:51:15.636Z"
     },
     {
       "id": "2DAzl5LVw2AydwiMR249PW",
