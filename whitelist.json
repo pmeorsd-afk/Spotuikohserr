@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3130,
-  "last_updated": "2026-11-06T10:23:43.290Z",
+  "version": 3131,
+  "last_updated": "2026-11-06T10:23:48.677Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1pnmasvxNw9NHsRjZHrE4t",
+      "title": "זכיתי לאהוב",
+      "artist": "Ivri Lider",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T10:23:48.677Z"
+    },
     {
       "id": "3dTOO0ebNTy82CELpxXU2T",
       "title": "מקום לצידך",
