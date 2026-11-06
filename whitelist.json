@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3172,
-  "last_updated": "2026-11-06T12:53:19.964Z",
+  "version": 3173,
+  "last_updated": "2026-11-06T12:53:22.824Z",
   "artists": [
+    {
+      "id": "5Jualeg8TZMful1rBYOx3T",
+      "canonical_name": "Haim Ulliel",
+      "aliases": [
+        "Haim Ulliel"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:53:22.824Z"
+    },
     {
       "id": "0L2hAWLVW3Zhot3CaS50Ab",
       "canonical_name": "Shimon Sibony",
