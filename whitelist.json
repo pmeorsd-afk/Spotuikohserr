@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3125,
-  "last_updated": "2026-11-06T09:14:31.442Z",
+  "version": 3126,
+  "last_updated": "2026-11-06T09:33:09.377Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7jdvibTKMCbIP2B77ayD8Q",
+      "title": "עד המדבר",
+      "artist": "Gil Vain, טליסמאן, Omri Sabach",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T09:33:09.377Z"
+    },
     {
       "id": "0jjx6ndYMHFg326tdzutyE",
       "title": "את יודעת אמא",
