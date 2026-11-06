@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3120,
-  "last_updated": "2026-11-06T09:14:05.178Z",
+  "version": 3121,
+  "last_updated": "2026-11-06T09:14:08.357Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3c9ZZUtHhAJltvbUW0tDJe",
+      "title": "שבת במעלה אפרים - מחרוזת שירי שבת שלוחת 'בני דוד ' הבקעה",
+      "artist": "בני דוד מעלה אפרים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T09:14:08.357Z"
+    },
     {
       "id": "6MiqrwQzziE3cZ3Jsednfe",
       "title": "A Doctor's Prayer",
