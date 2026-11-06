@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3127,
-  "last_updated": "2026-11-06T09:37:12.881Z",
+  "version": 3128,
+  "last_updated": "2026-11-06T09:42:46.352Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2jQfozDpitT8lVEYoOjmeR",
+      "title": "Leave Me Alone - 2012 Remaster",
+      "artist": "Michael Jackson",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T09:42:46.352Z"
+    },
     {
       "id": "youtube:VHPAVQhVC9Q",
       "title": "יחיאל נהרי מישל כהן בדואט ישמח משה",
