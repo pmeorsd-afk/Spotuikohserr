@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3111,
-  "last_updated": "2026-11-05T22:33:11.091Z",
+  "version": 3112,
+  "last_updated": "2026-11-06T09:12:35.612Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6aUI4q6CoYBYSKdFL0yCeX",
+      "title": "ילד ואבא ואמא (אתה שם)",
+      "artist": "Elai Botner and Yaldei Hachutz, Harel Skaat",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T09:12:35.612Z"
+    },
     {
       "id": "69FbMVWzn2hcK3xCvTt1Pa",
       "title": "צילו של יום קיץ",
