@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3145,
-  "last_updated": "2026-11-06T11:05:27.419Z",
+  "version": 3146,
+  "last_updated": "2026-11-06T11:05:30.099Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5rg4MXC9LBysvrBLrt6i3O",
+      "title": "אני שלך",
+      "artist": "Avraham Tal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T11:05:30.099Z"
+    },
     {
       "id": "0IAFVsYRUu3Qw8a0WvcxiP",
       "title": "המשפחה שלי",
