@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3156,
-  "last_updated": "2026-11-06T11:31:31.473Z",
+  "version": 3157,
+  "last_updated": "2026-11-06T12:04:12.099Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6hZCJMsWQ8YFy5qOP6mYY5",
+      "title": "מעגלים",
+      "artist": "Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:04:12.099Z"
+    },
     {
       "id": "51uSHxonxi4BegDmnNJw7k",
       "title": "עב\"מ",
