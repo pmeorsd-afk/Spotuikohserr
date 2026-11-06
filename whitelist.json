@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3113,
-  "last_updated": "2026-11-06T09:12:41.303Z",
+  "version": 3114,
+  "last_updated": "2026-11-06T09:12:43.816Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5OLFgqtdjdZJVByMwUEZfg",
+      "title": "ים הרחמים",
+      "artist": "Kobi Aflalo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T09:12:43.816Z"
+    },
     {
       "id": "61oFJCocFDxZaQgT5qKpac",
       "title": "ניפגש בחלומות",
