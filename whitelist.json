@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3135,
-  "last_updated": "2026-11-06T10:26:12.990Z",
+  "version": 3136,
+  "last_updated": "2026-11-06T11:04:56.457Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Ue0iOB133zXtJ3Ul8CNoP",
+      "title": "Toda Lach",
+      "artist": "Raz Hadad",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T11:04:56.457Z"
+    },
     {
       "id": "0F8352RJs3KYaMPIKlAuGQ",
       "title": "הולך קדימה (מתוך הסרט בחורים טובים)",
