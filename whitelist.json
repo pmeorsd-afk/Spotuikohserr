@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3128,
-  "last_updated": "2026-11-06T09:42:46.352Z",
+  "version": 3129,
+  "last_updated": "2026-11-06T09:42:48.552Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "77KWLGuKJTk5OtE0mmQ7KT",
+      "title": "רבות הדרכים",
+      "artist": "Daniel Salomon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T09:42:48.552Z"
+    },
     {
       "id": "2jQfozDpitT8lVEYoOjmeR",
       "title": "Leave Me Alone - 2012 Remaster",
