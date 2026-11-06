@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3159,
-  "last_updated": "2026-11-06T12:50:55.724Z",
+  "version": 3160,
+  "last_updated": "2026-11-06T12:51:13.259Z",
   "artists": [
     {
       "id": "6uJma0iVi87ZW5QwzxijcI",
@@ -3070,6 +3070,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6zlKez2Pe3IXGX3RuIu3KP",
+      "title": "יש בליבי כינור",
+      "artist": "Yaniv D'or",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:51:13.259Z"
+    },
     {
       "id": "796mZPbO1B9S1B42DXVmTj",
       "title": "אין כבר סתם",
