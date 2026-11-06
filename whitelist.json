@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3157,
-  "last_updated": "2026-11-06T12:04:12.099Z",
+  "version": 3158,
+  "last_updated": "2026-11-06T12:04:15.956Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "796mZPbO1B9S1B42DXVmTj",
+      "title": "אין כבר סתם",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:04:15.956Z"
+    },
     {
       "id": "6hZCJMsWQ8YFy5qOP6mYY5",
       "title": "מעגלים",
