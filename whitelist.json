@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3174,
-  "last_updated": "2026-11-06T12:53:26.571Z",
+  "version": 3175,
+  "last_updated": "2026-11-06T12:53:29.234Z",
   "artists": [
+    {
+      "id": "3bObbcW07jQ9wCwRAE5ARj",
+      "canonical_name": "Eli Sprei",
+      "aliases": [
+        "Eli Sprei"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:53:29.234Z"
+    },
     {
       "id": "26aVqMmur8olsc1iqQRbWQ",
       "canonical_name": "Lior Elmaleh",
