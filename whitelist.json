@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3129,
-  "last_updated": "2026-11-06T09:42:48.552Z",
+  "version": 3130,
+  "last_updated": "2026-11-06T10:23:43.290Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3dTOO0ebNTy82CELpxXU2T",
+      "title": "מקום לצידך",
+      "artist": "Dor Daniel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T10:23:43.290Z"
+    },
     {
       "id": "77KWLGuKJTk5OtE0mmQ7KT",
       "title": "רבות הדרכים",
