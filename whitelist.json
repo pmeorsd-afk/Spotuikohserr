@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3153,
-  "last_updated": "2026-11-06T11:23:48.168Z",
+  "version": 3154,
+  "last_updated": "2026-11-06T11:31:21.712Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1eT2CjXwFXNx6oY5ydvzKU",
+      "title": "Hey Jude",
+      "artist": "The Beatles",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T11:31:21.712Z"
+    },
     {
       "id": "2YPsQ3Zydd4IKP6gw9a1Fj",
       "title": "שיר חדש",
