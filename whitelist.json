@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3173,
-  "last_updated": "2026-11-06T12:53:22.824Z",
+  "version": 3174,
+  "last_updated": "2026-11-06T12:53:26.571Z",
   "artists": [
+    {
+      "id": "26aVqMmur8olsc1iqQRbWQ",
+      "canonical_name": "Lior Elmaleh",
+      "aliases": [
+        "Lior Elmaleh"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:53:26.571Z"
+    },
     {
       "id": "5Jualeg8TZMful1rBYOx3T",
       "canonical_name": "Haim Ulliel",
