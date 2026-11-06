@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3164,
-  "last_updated": "2026-11-06T12:51:57.396Z",
+  "version": 3165,
+  "last_updated": "2026-11-06T12:52:02.746Z",
   "artists": [
+    {
+      "id": "10qJQbmWuYCtjBXv5yyBLE",
+      "canonical_name": "Baruch Levine",
+      "aliases": [
+        "Baruch Levine"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:52:02.746Z"
+    },
     {
       "id": "4RZRtf09nYwrQUD6ohzCQX",
       "canonical_name": "Shir David Gadasi",
