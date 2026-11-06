@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3163,
-  "last_updated": "2026-11-06T12:51:51.631Z",
+  "version": 3164,
+  "last_updated": "2026-11-06T12:51:57.396Z",
   "artists": [
+    {
+      "id": "4RZRtf09nYwrQUD6ohzCQX",
+      "canonical_name": "Shir David Gadasi",
+      "aliases": [
+        "Shir David Gadasi"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:51:57.396Z"
+    },
     {
       "id": "6u3f9mIm9CziqD1NzHr2Fl",
       "canonical_name": "Romano",
