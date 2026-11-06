@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3112,
-  "last_updated": "2026-11-06T09:12:35.612Z",
+  "version": 3113,
+  "last_updated": "2026-11-06T09:12:41.303Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "61oFJCocFDxZaQgT5qKpac",
+      "title": "ניפגש בחלומות",
+      "artist": "Elai Botner and Yaldei Hachutz, Elai Botner",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T09:12:41.303Z"
+    },
     {
       "id": "6aUI4q6CoYBYSKdFL0yCeX",
       "title": "ילד ואבא ואמא (אתה שם)",
