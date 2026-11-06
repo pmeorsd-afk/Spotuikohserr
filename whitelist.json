@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3149,
-  "last_updated": "2026-11-06T11:12:42.029Z",
+  "version": 3150,
+  "last_updated": "2026-11-06T11:19:53.327Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "79frUUdqTcE1Qll6Twt8Ds",
+      "title": "לב יפה",
+      "artist": "Ron Buhnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T11:19:53.327Z"
+    },
     {
       "id": "1lHlKCdVZ4CGbbkTuG6LfT",
       "title": "יחפים",
