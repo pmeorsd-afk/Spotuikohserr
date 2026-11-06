@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3169,
-  "last_updated": "2026-11-06T12:53:02.277Z",
+  "version": 3170,
+  "last_updated": "2026-11-06T12:53:05.362Z",
   "artists": [
+    {
+      "id": "15i1niWKFEj0zqnhtYAv7D",
+      "canonical_name": "8th Day",
+      "aliases": [
+        "8th Day"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:53:05.362Z"
+    },
     {
       "id": "1exPGIrEqwNmz1YHNepdAm",
       "canonical_name": "Elikam Buta",
