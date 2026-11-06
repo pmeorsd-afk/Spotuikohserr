@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3123,
-  "last_updated": "2026-11-06T09:14:22.143Z",
+  "version": 3124,
+  "last_updated": "2026-11-06T09:14:25.579Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6GAnQIWEYex0bNLTuRs4YE",
+      "title": "נפרדנו כך",
+      "artist": "Avner Gadasi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T09:14:25.579Z"
+    },
     {
       "id": "37DrhomAqDdPXHN5BBXVbX",
       "title": "צלצולי פעמונים",
