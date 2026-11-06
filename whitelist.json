@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3162,
-  "last_updated": "2026-11-06T12:51:33.754Z",
+  "version": 3163,
+  "last_updated": "2026-11-06T12:51:51.631Z",
   "artists": [
+    {
+      "id": "6u3f9mIm9CziqD1NzHr2Fl",
+      "canonical_name": "Romano",
+      "aliases": [
+        "Romano"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:51:51.631Z"
+    },
     {
       "id": "6c6KXXZhQBsCKUWZRsatPA",
       "canonical_name": "נתנאל ישראל",
