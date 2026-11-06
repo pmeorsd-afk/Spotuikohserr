@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3167,
-  "last_updated": "2026-11-06T12:52:47.558Z",
+  "version": 3168,
+  "last_updated": "2026-11-06T12:52:59.171Z",
   "artists": [
+    {
+      "id": "7L7CLFK7qnPvtam4m9J8s9",
+      "canonical_name": "Yechiel Schron",
+      "aliases": [
+        "Yechiel Schron"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:52:59.171Z"
+    },
     {
       "id": "44oG7Li01TfhbvFKS2cc5B",
       "canonical_name": "Abie Rotenberg",
