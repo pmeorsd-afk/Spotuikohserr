@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3132,
-  "last_updated": "2026-11-06T10:23:54.406Z",
+  "version": 3133,
+  "last_updated": "2026-11-06T10:24:12.658Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7ATf4cbQytQ6itLAbtwS7p",
+      "title": "ציפור קטנה בלב",
+      "artist": "Yigal Bashan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T10:24:12.658Z"
+    },
     {
       "id": "27HgfYDO5pM4ZTyshecBFN",
       "title": "רונה",
