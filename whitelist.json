@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3166,
-  "last_updated": "2026-11-06T12:52:06.676Z",
+  "version": 3167,
+  "last_updated": "2026-11-06T12:52:47.558Z",
   "artists": [
+    {
+      "id": "44oG7Li01TfhbvFKS2cc5B",
+      "canonical_name": "Abie Rotenberg",
+      "aliases": [
+        "Abie Rotenberg"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:52:47.558Z"
+    },
     {
       "id": "0bIARrGK0Z6b2gmVL9FDmS",
       "canonical_name": "Reb Meilich Biderman",
