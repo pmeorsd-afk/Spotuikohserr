@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3122,
-  "last_updated": "2026-11-06T09:14:17.153Z",
+  "version": 3123,
+  "last_updated": "2026-11-06T09:14:22.143Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "37DrhomAqDdPXHN5BBXVbX",
+      "title": "צלצולי פעמונים",
+      "artist": "Ahuva Ozeri",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T09:14:22.143Z"
+    },
     {
       "id": "0YYJM1i20mRvb1YY7bOeKI",
       "title": "Wake up Yidden",
