@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3131,
-  "last_updated": "2026-11-06T10:23:48.677Z",
+  "version": 3132,
+  "last_updated": "2026-11-06T10:23:54.406Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "27HgfYDO5pM4ZTyshecBFN",
+      "title": "רונה",
+      "artist": "Samir Shukri",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T10:23:54.406Z"
+    },
     {
       "id": "1pnmasvxNw9NHsRjZHrE4t",
       "title": "זכיתי לאהוב",
