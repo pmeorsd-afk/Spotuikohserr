@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3175,
-  "last_updated": "2026-11-06T12:53:29.234Z",
+  "version": 3176,
+  "last_updated": "2026-11-06T12:53:37.047Z",
   "artists": [
+    {
+      "id": "7JBFLkMbFdatYc6CmmqEbB",
+      "canonical_name": "Israel Mithazeket",
+      "aliases": [
+        "Israel Mithazeket"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:53:37.047Z"
+    },
     {
       "id": "3bObbcW07jQ9wCwRAE5ARj",
       "canonical_name": "Eli Sprei",
