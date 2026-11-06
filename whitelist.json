@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3134,
-  "last_updated": "2026-11-06T10:24:53.394Z",
+  "version": 3135,
+  "last_updated": "2026-11-06T10:26:12.990Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0F8352RJs3KYaMPIKlAuGQ",
+      "title": "הולך קדימה (מתוך הסרט בחורים טובים)",
+      "artist": "Avraham Tal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T10:26:12.990Z"
+    },
     {
       "id": "3a1aLlAckoP3VffBFO1c3g",
       "title": "Derech Emunah",
