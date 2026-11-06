@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3146,
-  "last_updated": "2026-11-06T11:05:30.099Z",
+  "version": 3147,
+  "last_updated": "2026-11-06T11:05:32.776Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "61FUSd9G0WOxHEgWs7iMc7",
+      "title": "הילד הכי קטן",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T11:05:32.776Z"
+    },
     {
       "id": "5rg4MXC9LBysvrBLrt6i3O",
       "title": "אני שלך",
