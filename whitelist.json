@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3115,
-  "last_updated": "2026-11-06T09:12:47.787Z",
+  "version": 3116,
+  "last_updated": "2026-11-06T09:13:14.967Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3I4Ut6r5O3wR9AcLIG2Pch",
+      "title": "בוקר טוב",
+      "artist": "בניה ברבי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T09:13:14.967Z"
+    },
     {
       "id": "2WqZYfSeozPYN9bX8tWPyT",
       "title": "ארים ראשי",
