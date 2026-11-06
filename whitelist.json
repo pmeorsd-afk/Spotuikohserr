@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3140,
-  "last_updated": "2026-11-06T11:05:07.209Z",
+  "version": 3141,
+  "last_updated": "2026-11-06T11:05:13.935Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4CKEggUbji2grqaqNNsrS1",
+      "title": "ניצחת איתי הכל Live",
+      "artist": "Ishay Ribo, Amir Benayoun, Amir Dadon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T11:05:13.935Z"
+    },
     {
       "id": "5LOVRjpSLIYIEJtBG8iezI",
       "title": "אני מנגן",
