@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3165,
-  "last_updated": "2026-11-06T12:52:02.746Z",
+  "version": 3166,
+  "last_updated": "2026-11-06T12:52:06.676Z",
   "artists": [
+    {
+      "id": "0bIARrGK0Z6b2gmVL9FDmS",
+      "canonical_name": "Reb Meilich Biderman",
+      "aliases": [
+        "Reb Meilich Biderman"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:52:06.676Z"
+    },
     {
       "id": "10qJQbmWuYCtjBXv5yyBLE",
       "canonical_name": "Baruch Levine",
