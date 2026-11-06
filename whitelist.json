@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3161,
-  "last_updated": "2026-11-06T12:51:15.636Z",
+  "version": 3162,
+  "last_updated": "2026-11-06T12:51:33.754Z",
   "artists": [
+    {
+      "id": "6c6KXXZhQBsCKUWZRsatPA",
+      "canonical_name": "נתנאל ישראל",
+      "aliases": [
+        "נתנאל ישראל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:51:33.754Z"
+    },
     {
       "id": "6uJma0iVi87ZW5QwzxijcI",
       "canonical_name": "אביעד",
