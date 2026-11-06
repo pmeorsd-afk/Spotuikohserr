@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3138,
-  "last_updated": "2026-11-06T11:05:01.750Z",
+  "version": 3139,
+  "last_updated": "2026-11-06T11:05:04.140Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5zDUqrKXGcidiD8YHv8KES",
+      "title": "בסבוסה",
+      "artist": "שריף",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T11:05:04.140Z"
+    },
     {
       "id": "4f0MvVAvgjSWJnY9k8g7zo",
       "title": "מתוקה שלי",
