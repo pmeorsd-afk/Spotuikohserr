@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3171,
-  "last_updated": "2026-11-06T12:53:16.374Z",
+  "version": 3172,
+  "last_updated": "2026-11-06T12:53:19.964Z",
   "artists": [
+    {
+      "id": "0L2hAWLVW3Zhot3CaS50Ab",
+      "canonical_name": "Shimon Sibony",
+      "aliases": [
+        "Shimon Sibony"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T12:53:19.964Z"
+    },
     {
       "id": "15i1niWKFEj0zqnhtYAv7D",
       "canonical_name": "8th Day",
