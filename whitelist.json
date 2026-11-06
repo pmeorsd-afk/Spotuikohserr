@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3147,
-  "last_updated": "2026-11-06T11:05:32.776Z",
+  "version": 3148,
+  "last_updated": "2026-11-06T11:12:39.213Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "08rV6cJNjWjgDHIXwi94zV",
+      "title": "ואז את תראי - גרסת הבית הגנוז",
+      "artist": "Doli & Penn",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T11:12:39.213Z"
+    },
     {
       "id": "61FUSd9G0WOxHEgWs7iMc7",
       "title": "הילד הכי קטן",
