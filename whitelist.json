@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3141,
-  "last_updated": "2026-11-06T11:05:13.935Z",
+  "version": 3142,
+  "last_updated": "2026-11-06T11:05:19.025Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1mZL8bpZ92BBAwhOcYkslm",
+      "title": "והאמת Live",
+      "artist": "Ishay Ribo, Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T11:05:19.025Z"
+    },
     {
       "id": "4CKEggUbji2grqaqNNsrS1",
       "title": "ניצחת איתי הכל Live",
