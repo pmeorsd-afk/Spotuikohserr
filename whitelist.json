@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3133,
-  "last_updated": "2026-11-06T10:24:12.658Z",
+  "version": 3134,
+  "last_updated": "2026-11-06T10:24:53.394Z",
   "artists": [
     {
       "id": "0zQ5PXV7sxw2LAwMJusZog",
@@ -3060,6 +3060,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3a1aLlAckoP3VffBFO1c3g",
+      "title": "Derech Emunah",
+      "artist": "Waterbury Mesivta Unplugged",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-06T10:24:53.394Z"
+    },
     {
       "id": "7ATf4cbQytQ6itLAbtwS7p",
       "title": "ציפור קטנה בלב",
