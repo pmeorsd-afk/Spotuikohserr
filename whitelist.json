@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3204,
-  "last_updated": "2026-11-08T19:48:43.308Z",
+  "version": 3205,
+  "last_updated": "2026-11-08T19:48:46.519Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5gdKaAkYMDJCEOFSgjx0Wd",
+      "title": "בחורים טובים",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:48:46.519Z"
+    },
     {
       "id": "1yaOECQyHIyuLScFJiieor",
       "title": "בואי נעזוב",
