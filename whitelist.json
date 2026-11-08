@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3231,
-  "last_updated": "2026-11-08T20:24:27.704Z",
+  "version": 3232,
+  "last_updated": "2026-11-08T20:24:29.700Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "76HKOVWqsEg26SECtmw7Rz",
+      "title": "The Way You Make Me Feel - 2012 Remaster",
+      "artist": "Michael Jackson",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:24:29.700Z"
+    },
     {
       "id": "71dzlq7tY68jHPVoBe2CaC",
       "title": "אצו רצו גמדים - פוזי - רימאסטרינג",
