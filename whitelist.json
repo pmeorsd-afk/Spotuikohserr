@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3323,
-  "last_updated": "2026-11-08T21:55:20.571Z",
+  "version": 3325,
+  "last_updated": "2026-11-08T21:55:23.460Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4K1tIgGH3tAfWWB1xCNqLy",
+      "title": "אחלה חמודה",
+      "artist": "Beni Bashan, Boom Pam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:55:23.460Z"
+    },
+    {
+      "id": "57Nu20Y6mKQ08KxYp4bauL",
+      "title": "פה זה לא אירופה",
+      "artist": "Margalit Tzan'ani, אריסה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:55:23.460Z"
+    },
     {
       "id": "0rnYNcE6aaOtVS22dKAPxA",
       "title": "לילה לא לילה",
