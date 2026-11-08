@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3254,
-  "last_updated": "2026-11-08T20:27:23.682Z",
+  "version": 3255,
+  "last_updated": "2026-11-08T20:27:26.428Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3wPPWcVuinAU7dXcJXtCID",
+      "title": "La La La",
+      "artist": "Naughty Boy, Sam Smith",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:27:26.428Z"
+    },
     {
       "id": "6Ndn9KEtL5d5DbBIhvAHV2",
       "title": "תחזרי",
