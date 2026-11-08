@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3194,
-  "last_updated": "2026-11-08T19:47:48.133Z",
+  "version": 3195,
+  "last_updated": "2026-11-08T19:47:58.039Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6dOtVTDdiauQNBQEDOtlAB",
+      "title": "BIRDS OF A FEATHER",
+      "artist": "Billie Eilish",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:47:58.039Z"
+    },
     {
       "id": "7bxaFZ1O3cHkgLKMsdC3xR",
       "title": "Loser",
