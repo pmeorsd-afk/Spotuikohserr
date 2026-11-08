@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3336,
-  "last_updated": "2026-11-08T21:55:59.222Z",
+  "version": 3338,
+  "last_updated": "2026-11-08T21:56:02.615Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6cpk00i5TxCqSeqNi2HuIe",
+      "title": "One More Night",
+      "artist": "Maroon 5",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:56:02.615Z"
+    },
+    {
+      "id": "5IxLvieYg1eXp4U7bD5aWx",
+      "title": "Strip For Me",
+      "artist": "Noizy, Guè, Light",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:56:02.615Z"
+    },
     {
       "id": "46Bm6sh2zZRXdBON5QIzIu",
       "title": "Nothin' Like Me (feat. Ty Dolla $ign)",
