@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3202,
-  "last_updated": "2026-11-08T19:48:36.768Z",
+  "version": 3203,
+  "last_updated": "2026-11-08T19:48:40.096Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6xhxulJ4BXNlnDmw3KpDP0",
+      "title": "קריוקי",
+      "artist": "Tuna, פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:48:40.096Z"
+    },
     {
       "id": "7mBGGsJwx4o8NiqWfmAJ96",
       "title": "כפרה שלי",
