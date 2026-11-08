@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3316,
-  "last_updated": "2026-11-08T21:30:24.347Z",
+  "version": 3317,
+  "last_updated": "2026-11-08T21:30:36.497Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4xqrdfXkTW4T0RauPLv3WA",
+      "title": "Heather",
+      "artist": "Conan Gray",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:30:36.497Z"
+    },
     {
       "id": "4nGqm53X6SZS1RTMhvVzde",
       "title": "Bergele - בערגעלע",
