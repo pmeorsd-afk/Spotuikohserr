@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3265,
-  "last_updated": "2026-11-08T20:30:12.405Z",
+  "version": 3266,
+  "last_updated": "2026-11-08T20:30:15.257Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5WyfEwfoichk7dCxfpD733",
+      "title": "כוחה של אהבה",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:30:15.257Z"
+    },
     {
       "id": "699DxgFOo2p6wCC4Fhwsr7",
       "title": "בזמן אחר",
