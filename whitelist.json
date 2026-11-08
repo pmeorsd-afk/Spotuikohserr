@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3246,
-  "last_updated": "2026-11-08T20:26:58.768Z",
+  "version": 3247,
+  "last_updated": "2026-11-08T20:27:00.920Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4tqtvqbMAlP9nRMd0kc1Eu",
+      "title": "השירים המשחקים (שירי ילדות)",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:27:00.920Z"
+    },
     {
       "id": "51pYi11Q3FmsEHkKsFtYge",
       "title": "מהצוואר שלך",
