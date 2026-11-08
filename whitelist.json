@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3319,
-  "last_updated": "2026-11-08T21:55:06.079Z",
+  "version": 3320,
+  "last_updated": "2026-11-08T21:55:11.020Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6eLuJOmiWn4mFGupRJvCKN",
+      "title": "בא לה לרקוד",
+      "artist": "DJ Malka, Static",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:55:11.020Z"
+    },
     {
       "id": "6unndO70DvZfnXYcYQMyQJ",
       "title": "Never Felt So Alone",
