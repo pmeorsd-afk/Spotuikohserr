@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3345,
-  "last_updated": "2026-11-08T21:56:28.463Z",
+  "version": 3346,
+  "last_updated": "2026-11-08T21:56:31.623Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7IdEJ2X5xG71APeCkbGtH8",
+      "title": "Hatixhe",
+      "artist": "Mixey, Capital T",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:56:31.623Z"
+    },
     {
       "id": "67rwGZvhXq4xDjMeBaKdSr",
       "title": "Bella",
