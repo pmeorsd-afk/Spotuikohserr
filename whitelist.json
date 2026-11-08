@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3264,
-  "last_updated": "2026-11-08T20:30:09.460Z",
+  "version": 3265,
+  "last_updated": "2026-11-08T20:30:12.405Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "699DxgFOo2p6wCC4Fhwsr7",
+      "title": "בזמן אחר",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:30:12.405Z"
+    },
     {
       "id": "2SAee7Sl9y6xcMjVuTZ6we",
       "title": "לבד לבד",
