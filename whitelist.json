@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3351,
-  "last_updated": "2026-11-08T21:56:54.240Z",
+  "version": 3352,
+  "last_updated": "2026-11-08T21:56:59.970Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0aQsZZj2KS2RDNjXytJGhB",
+      "title": "אחרי הכל מתגעגע - Live",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:56:59.970Z"
+    },
     {
       "id": "5BE2POJU6BSKvaY8o0n9DY",
       "title": "כל המשמח",
