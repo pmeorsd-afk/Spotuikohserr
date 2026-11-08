@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3294,
-  "last_updated": "2026-11-08T20:48:04.843Z",
+  "version": 3295,
+  "last_updated": "2026-11-08T20:48:11.454Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5kKme9GCKnjKWC16Lb8cER",
+      "title": "עוד סיפור אחד של אהבה",
+      "artist": "Shimi Tavori",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:48:11.454Z"
+    },
     {
       "id": "0cIFfkUic24Y1j9R795D3W",
       "title": "ימים לבנים",
