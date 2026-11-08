@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3239,
-  "last_updated": "2026-11-08T20:26:28.358Z",
+  "version": 3240,
+  "last_updated": "2026-11-08T20:26:31.667Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3lyXTRSjk1ZcEcWZYMYxpW",
+      "title": "שבורי לב",
+      "artist": "מתן חסן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:26:31.667Z"
+    },
     {
       "id": "10Bm7ESWhMeBFRtIj4x2Gb",
       "title": "אוזניות - Radio Edit",
