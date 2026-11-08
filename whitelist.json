@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3298,
-  "last_updated": "2026-11-08T20:48:29.900Z",
+  "version": 3299,
+  "last_updated": "2026-11-08T20:48:34.810Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0ru5MK7F8NtCKR6PYux9Q6",
+      "title": "Put Your Head on My Shoulder",
+      "artist": "Frank Davis Orchestra",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:48:34.810Z"
+    },
     {
       "id": "7bV02PyhN7Y2SI6SmtZVbg",
       "title": "When I Fall in Love",
