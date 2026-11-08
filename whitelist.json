@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3177,
-  "last_updated": "2026-11-08T19:46:26.747Z",
+  "version": 3178,
+  "last_updated": "2026-11-08T19:46:30.320Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Segdevn6t0qcfbEnUSWnx",
+      "title": "Yihyu Lerutzoin",
+      "artist": "R' Cheskie Weisz, Motty Steinmatz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:46:30.320Z"
+    },
     {
       "id": "6dMsWeQ2vCXOroR5dL84Wf",
       "title": "זה הכל בשבילך",
