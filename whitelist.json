@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3274,
-  "last_updated": "2026-11-08T20:30:37.995Z",
+  "version": 3275,
+  "last_updated": "2026-11-08T20:30:44.139Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "11j86L1EiVCn1LVZPErJVf",
+      "title": "לא עזבת אותי",
+      "artist": "אילן יעקב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:30:44.139Z"
+    },
     {
       "id": "5TLBeIhwEVDiBrvtEqBwhz",
       "title": "Fantasia in D Minor",
