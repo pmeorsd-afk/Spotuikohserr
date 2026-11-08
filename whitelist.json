@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3272,
-  "last_updated": "2026-11-08T20:30:32.885Z",
+  "version": 3273,
+  "last_updated": "2026-11-08T20:30:35.508Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0nKmmLUl7dQX5QTgHe9gT7",
+      "title": "בלעדייך",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:30:35.508Z"
+    },
     {
       "id": "70NMmSvCpYbYmC0lacAnBY",
       "title": "נשל הנחש",
