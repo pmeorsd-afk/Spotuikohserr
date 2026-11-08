@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3281,
-  "last_updated": "2026-11-08T20:31:07.438Z",
+  "version": 3282,
+  "last_updated": "2026-11-08T20:31:11.465Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5K21qAGew4Pq3UqAwgOOxb",
+      "title": "יש לך אותי",
+      "artist": "Lior Farhi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:31:11.465Z"
+    },
     {
       "id": "4NQj7dqFZCM2xySU0vmwyQ",
       "title": "ברקים ורעמים",
