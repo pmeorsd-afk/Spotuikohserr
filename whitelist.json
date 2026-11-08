@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3226,
-  "last_updated": "2026-11-08T20:24:13.720Z",
+  "version": 3227,
+  "last_updated": "2026-11-08T20:24:16.955Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "27DDGAEGdbZBt13QwJhN72",
+      "title": "Don't Cry For Me Argentina",
+      "artist": "Maria Saldo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:24:16.955Z"
+    },
     {
       "id": "4nXawbtVUyBXCwU95nhTNO",
       "title": "Ballade Pour Adeline",
