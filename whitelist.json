@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3282,
-  "last_updated": "2026-11-08T20:31:11.465Z",
+  "version": 3283,
+  "last_updated": "2026-11-08T20:31:14.083Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3KfbEIOC7YIv90FIfNSZpo",
+      "title": "In My Life - Remastered 2009",
+      "artist": "The Beatles",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:31:14.083Z"
+    },
     {
       "id": "5K21qAGew4Pq3UqAwgOOxb",
       "title": "יש לך אותי",
