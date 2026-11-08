@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3357,
-  "last_updated": "2026-11-08T21:57:13.576Z",
+  "version": 3358,
+  "last_updated": "2026-11-08T21:57:17.818Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0wmlo7aL8mlGRzLuC10rhb",
+      "title": "Am Echad",
+      "artist": "Ari Goldwag",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:57:17.818Z"
+    },
     {
       "id": "3zw6xVQoWAOtWSjd5mAEAg",
       "title": "מחרוזת מאוהב בגשם",
