@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3322,
-  "last_updated": "2026-11-08T21:55:14.020Z",
+  "version": 3323,
+  "last_updated": "2026-11-08T21:55:20.571Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0rnYNcE6aaOtVS22dKAPxA",
+      "title": "לילה לא לילה",
+      "artist": "Ofer Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:55:20.571Z"
+    },
     {
       "id": "7DS5SpsWS7rtKeAfe9rbfn",
       "title": "Cute Boy",
