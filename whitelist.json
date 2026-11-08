@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3216,
-  "last_updated": "2026-11-08T19:49:37.436Z",
+  "version": 3217,
+  "last_updated": "2026-11-08T19:49:44.941Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "58a5YfSglxFQsiF8GIRPjB",
+      "title": "Smoke Gets in Your Eyes",
+      "artist": "Frank Davis Orchestra",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:49:44.941Z"
+    },
     {
       "id": "4xMKmYe5Msjc64f3TGLHRe",
       "title": "בחלומות שלי",
