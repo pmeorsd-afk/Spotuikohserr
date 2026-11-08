@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3219,
-  "last_updated": "2026-11-08T19:49:51.710Z",
+  "version": 3220,
+  "last_updated": "2026-11-08T20:23:46.855Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3sXFtEFOAKB39OHo2YoTrs",
+      "title": "שארם-א-שייך",
+      "artist": "Ran Eliran",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:23:46.855Z"
+    },
     {
       "id": "74qdsbboX5dO0wYrCAQJVt",
       "title": "שיר שבת",
