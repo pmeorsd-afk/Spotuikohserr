@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3241,
-  "last_updated": "2026-11-08T20:26:34.357Z",
+  "version": 3242,
+  "last_updated": "2026-11-08T20:26:37.713Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Q2pJOkYvFJg0tWHgYf4In",
+      "title": "וזה קיץ",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:26:37.713Z"
+    },
     {
       "id": "7BJlAU2Zu5jgNCQZTZg5Fb",
       "title": "אדם שחקן",
