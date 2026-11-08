@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3277,
-  "last_updated": "2026-11-08T20:30:55.301Z",
+  "version": 3278,
+  "last_updated": "2026-11-08T20:30:57.756Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0B4PQqinKt1quID4qgcP2E",
+      "title": "לבד יושבת",
+      "artist": "Yehuda Keisar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:30:57.756Z"
+    },
     {
       "id": "3z5ZUdSHuLPkJ4qhOg9pY9",
       "title": "עוד מעט את נאלמת",
