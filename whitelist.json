@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3355,
-  "last_updated": "2026-11-08T21:57:06.727Z",
+  "version": 3356,
+  "last_updated": "2026-11-08T21:57:09.901Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3zw6xVQoWAOtWSjd5mAEAg",
+      "title": "מחרוזת מאוהב בגשם",
+      "artist": "Ofer Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:57:09.901Z"
+    },
     {
       "id": "6W82WdWySu7rYFwBuJ2lJd",
       "title": "מחרוזת מסיבה בחיפה - Live",
