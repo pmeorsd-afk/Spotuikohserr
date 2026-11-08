@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3342,
-  "last_updated": "2026-11-08T21:56:13.670Z",
+  "version": 3343,
+  "last_updated": "2026-11-08T21:56:16.913Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "47Slg6LuqLaX0VodpSCvPt",
+      "title": "Just the Way You Are",
+      "artist": "Bruno Mars",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:56:16.913Z"
+    },
     {
       "id": "5SCQGwucVoomjrSNOiG2Oo",
       "title": "הגוף שלה עליי",
