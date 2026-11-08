@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3332,
-  "last_updated": "2026-11-08T21:55:45.984Z",
+  "version": 3333,
+  "last_updated": "2026-11-08T21:55:49.481Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Kz4RdRCceaA9VgTqBhBfa",
+      "title": "The Motto",
+      "artist": "Drake, Lil Wayne",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:55:49.481Z"
+    },
     {
       "id": "71iUuNOpvs0diCqBEWEWDp",
       "title": "Shqipet e marr",
