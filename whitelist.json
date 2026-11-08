@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3185,
-  "last_updated": "2026-11-08T19:47:11.063Z",
+  "version": 3186,
+  "last_updated": "2026-11-08T19:47:14.065Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6qB33ch9RK0aoMfxfnlXa1",
+      "title": "פלסטרים",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:47:14.065Z"
+    },
     {
       "id": "youtube:UORWfs-Lxck",
       "title": "את לי הכל (גאליס)",
