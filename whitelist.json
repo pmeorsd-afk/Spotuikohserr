@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3207,
-  "last_updated": "2026-11-08T19:48:56.021Z",
+  "version": 3208,
+  "last_updated": "2026-11-08T19:49:10.985Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4L6Hzpe3Y2ndPvxqSjrEWy",
+      "title": "חשמל באויר",
+      "artist": "Lior Farhi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:49:10.985Z"
+    },
     {
       "id": "2QfcRm7xqiZpbc50sCT6AD",
       "title": "My name is",
