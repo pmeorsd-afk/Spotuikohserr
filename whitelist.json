@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3320,
-  "last_updated": "2026-11-08T21:55:11.020Z",
+  "version": 3322,
+  "last_updated": "2026-11-08T21:55:14.020Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7DS5SpsWS7rtKeAfe9rbfn",
+      "title": "Cute Boy",
+      "artist": "Nunu, Sagi Kariv, Forever Tel Aviv",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:55:14.020Z"
+    },
+    {
+      "id": "7uUUtCQYzbE917JnobCtDy",
+      "title": "היא רק רוצה לרקוד",
+      "artist": "Omer Adam, Moshe Perez",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:55:14.020Z"
+    },
     {
       "id": "6eLuJOmiWn4mFGupRJvCKN",
       "title": "בא לה לרקוד",
