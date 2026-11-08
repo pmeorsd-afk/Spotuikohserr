@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3200,
-  "last_updated": "2026-11-08T19:48:30.163Z",
+  "version": 3201,
+  "last_updated": "2026-11-08T19:48:33.567Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2jG3x1HHjUeA6AtJHFrogg",
+      "title": "מפרש לבן",
+      "artist": "Jimbo J",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:48:33.567Z"
+    },
     {
       "id": "2qnB3tUs34n0e00kp1t7ar",
       "title": "יא בבא",
