@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3350,
-  "last_updated": "2026-11-08T21:56:51.150Z",
+  "version": 3351,
+  "last_updated": "2026-11-08T21:56:54.240Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5BE2POJU6BSKvaY8o0n9DY",
+      "title": "כל המשמח",
+      "artist": "נתי לוין",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:56:54.240Z"
+    },
     {
       "id": "4V3dk4PjJAa1KYL71vGp2L",
       "title": "הלילה הזה",
