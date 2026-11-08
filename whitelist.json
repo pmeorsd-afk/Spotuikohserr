@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3215,
-  "last_updated": "2026-11-08T19:49:34.530Z",
+  "version": 3216,
+  "last_updated": "2026-11-08T19:49:37.436Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4xMKmYe5Msjc64f3TGLHRe",
+      "title": "בחלומות שלי",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:49:37.436Z"
+    },
     {
       "id": "4iTXVDvJIcFtSqvshO4JPA",
       "title": "ב.מ.וו. שחורה",
