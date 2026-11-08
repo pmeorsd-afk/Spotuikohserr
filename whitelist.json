@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3363,
-  "last_updated": "2026-11-08T21:57:49.941Z",
+  "version": 3364,
+  "last_updated": "2026-11-08T22:04:26.565Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "691Tx41oL0SPUv0kUAVmmn",
+      "title": "מישהו איתי כאן",
+      "artist": "בניה ברבי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T22:04:26.565Z"
+    },
     {
       "id": "2GFZ1EWtGPNOBmkanFXxcK",
       "title": "Goa In My Mind",
