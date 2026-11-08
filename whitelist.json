@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3230,
-  "last_updated": "2026-11-08T20:24:25.902Z",
+  "version": 3231,
+  "last_updated": "2026-11-08T20:24:27.704Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "71dzlq7tY68jHPVoBe2CaC",
+      "title": "אצו רצו גמדים - פוזי - רימאסטרינג",
+      "artist": "Arik Einstein",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:24:27.704Z"
+    },
     {
       "id": "3RTVsltq7FSxwt75VWCd4B",
       "title": "כשאת בוכה את לא יפה - פוזי - רימאסטרינג",
