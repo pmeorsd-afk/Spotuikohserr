@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3293,
-  "last_updated": "2026-11-08T20:47:59.717Z",
+  "version": 3294,
+  "last_updated": "2026-11-08T20:48:04.843Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0cIFfkUic24Y1j9R795D3W",
+      "title": "ימים לבנים",
+      "artist": "Shlomo Ydov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:48:04.843Z"
+    },
     {
       "id": "4nVBt6MZDDP6tRVdQTgxJg",
       "title": "Story of My Life",
