@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3295,
-  "last_updated": "2026-11-08T20:48:11.454Z",
+  "version": 3296,
+  "last_updated": "2026-11-08T20:48:16.295Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6RUKPb4LETWmmr3iAEQktW",
+      "title": "Something Just Like This",
+      "artist": "The Chainsmokers, Coldplay",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:48:16.295Z"
+    },
     {
       "id": "5kKme9GCKnjKWC16Lb8cER",
       "title": "עוד סיפור אחד של אהבה",
