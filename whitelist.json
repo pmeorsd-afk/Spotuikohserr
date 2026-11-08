@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3251,
-  "last_updated": "2026-11-08T20:27:10.516Z",
+  "version": 3252,
+  "last_updated": "2026-11-08T20:27:18.086Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1mfM9mXj9fydNRzzS7LwBP",
+      "title": "דפיקות הלב",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:27:18.086Z"
+    },
     {
       "id": "3n3YLcQYa2HFoxiIeaXgoM",
       "title": "חולפות השנים",
