@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3199,
-  "last_updated": "2026-11-08T19:48:21.319Z",
+  "version": 3200,
+  "last_updated": "2026-11-08T19:48:30.163Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2qnB3tUs34n0e00kp1t7ar",
+      "title": "יא בבא",
+      "artist": "מיכאל פרץ, Lior Elmaleh, בנימין בוזגלו, מיק קרוצ'י, אריק משעלי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:48:30.163Z"
+    },
     {
       "id": "4mRreSUqP7waa2jT5ul41T",
       "title": "יום חדש",
