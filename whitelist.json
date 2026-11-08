@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3260,
-  "last_updated": "2026-11-08T20:29:57.961Z",
+  "version": 3261,
+  "last_updated": "2026-11-08T20:30:00.492Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5SAyKRFGn57bmVjP3rrg1m",
+      "title": "הכל יכול",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:30:00.492Z"
+    },
     {
       "id": "2jk4fL6o7dNWIwxlC8aS4f",
       "title": "יא מחג'ה يا محجة Ya Mehaja",
