@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3326,
-  "last_updated": "2026-11-08T21:55:26.426Z",
+  "version": 3328,
+  "last_updated": "2026-11-08T21:55:29.385Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3EpMAUHtgcLteDy4ue6f0r",
+      "title": "להאמין",
+      "artist": "Adi Avrahami",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:55:29.385Z"
+    },
+    {
+      "id": "6ZB0zVefedvrmjnXRaxLYl",
+      "title": "Show Me the Way",
+      "artist": "Michoel Pruzansky",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:55:29.385Z"
+    },
     {
       "id": "6DQGLVBxBFkoXzJG36BOCO",
       "title": "Hoshia",
