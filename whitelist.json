@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3339,
-  "last_updated": "2026-11-08T21:56:06.975Z",
+  "version": 3341,
+  "last_updated": "2026-11-08T21:56:10.304Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7fzdfIyhv9coYcrrXXi6gI",
+      "title": "Telefono",
+      "artist": "Hazy, Olsi Bylyku",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:56:10.304Z"
+    },
+    {
+      "id": "48QmG1dfvMuYLxMPt7KSRA",
+      "title": "No Lie",
+      "artist": "Sean Paul, Dua Lipa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:56:10.304Z"
+    },
     {
       "id": "6cpk00i5TxCqSeqNi2HuIe",
       "title": "One More Night",
