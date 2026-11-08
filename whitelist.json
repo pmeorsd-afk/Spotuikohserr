@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3268,
-  "last_updated": "2026-11-08T20:30:22.432Z",
+  "version": 3269,
+  "last_updated": "2026-11-08T20:30:25.304Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Eb3cCasFNJNNiedWRp2Ct",
+      "title": "יפה שלי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:30:25.304Z"
+    },
     {
       "id": "6a7VDg5yi6RLug2hiRTP4R",
       "title": "Twinkle Twinkle Little Star",
