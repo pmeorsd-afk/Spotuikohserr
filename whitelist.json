@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3344,
-  "last_updated": "2026-11-08T21:56:20.002Z",
+  "version": 3345,
+  "last_updated": "2026-11-08T21:56:28.463Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "67rwGZvhXq4xDjMeBaKdSr",
+      "title": "Bella",
+      "artist": "Butrint Imeri",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:56:28.463Z"
+    },
     {
       "id": "5A6OHHy73AR5tLxgTc98zz",
       "title": "Black and Yellow",
