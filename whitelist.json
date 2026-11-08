@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3240,
-  "last_updated": "2026-11-08T20:26:31.667Z",
+  "version": 3241,
+  "last_updated": "2026-11-08T20:26:34.357Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7BJlAU2Zu5jgNCQZTZg5Fb",
+      "title": "אדם שחקן",
+      "artist": "Zohar Argov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:26:34.357Z"
+    },
     {
       "id": "3lyXTRSjk1ZcEcWZYMYxpW",
       "title": "שבורי לב",
