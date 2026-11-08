@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3197,
-  "last_updated": "2026-11-08T19:48:08.087Z",
+  "version": 3198,
+  "last_updated": "2026-11-08T19:48:18.021Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5aDaDlIrhFeXUPcBqxGisR",
+      "title": "אחרי כל השנים",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:48:18.021Z"
+    },
     {
       "id": "7BRD7x5pt8Lqa1eGYC4dzj",
       "title": "CHIHIRO",
