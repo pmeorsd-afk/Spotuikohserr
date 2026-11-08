@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3353,
-  "last_updated": "2026-11-08T21:57:03.360Z",
+  "version": 3355,
+  "last_updated": "2026-11-08T21:57:06.727Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6W82WdWySu7rYFwBuJ2lJd",
+      "title": "מחרוזת מסיבה בחיפה - Live",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:57:06.727Z"
+    },
+    {
+      "id": "1RrHboADOZac05zurP5Rsf",
+      "title": "חיוך קטן - Live",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:57:06.727Z"
+    },
     {
       "id": "7inrxaqi8AkVXvzePF4yvP",
       "title": "שורדים אהבה - Live",
