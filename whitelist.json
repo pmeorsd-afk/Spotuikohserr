@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3257,
-  "last_updated": "2026-11-08T20:27:31.633Z",
+  "version": 3258,
+  "last_updated": "2026-11-08T20:29:51.895Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7BLMiNjKYt4lQ7wL8O84Cc",
+      "title": "Ya Mama Ya Baba",
+      "artist": "Zehavi, Zehava Ben",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:29:51.895Z"
+    },
     {
       "id": "3qhlB30KknSejmIvZZLjOD",
       "title": "End of Beginning",
