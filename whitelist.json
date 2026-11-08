@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3330,
-  "last_updated": "2026-11-08T21:55:36.376Z",
+  "version": 3331,
+  "last_updated": "2026-11-08T21:55:39.243Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "71iUuNOpvs0diCqBEWEWDp",
+      "title": "Shqipet e marr",
+      "artist": "Vinz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:55:39.243Z"
+    },
     {
       "id": "2wlcn9zL9vWvanmVGQgCBU",
       "title": "צאי אל החלון",
