@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3210,
-  "last_updated": "2026-11-08T19:49:18.106Z",
+  "version": 3211,
+  "last_updated": "2026-11-08T19:49:21.299Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6zKZZueJvTYEqtJdKuhmXo",
+      "title": "תיזהר ממנה",
+      "artist": "Subliminal, Lior Farhi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:49:21.299Z"
+    },
     {
       "id": "1GuPMQpcXukhoxnoTh1dcS",
       "title": "עד מתי אלוהי",
