@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3287,
-  "last_updated": "2026-11-08T20:31:28.586Z",
+  "version": 3288,
+  "last_updated": "2026-11-08T20:31:31.254Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3NLrRZoMF0Lx6zTlYqeIo4",
+      "title": "Here Without You",
+      "artist": "3 Doors Down",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:31:31.254Z"
+    },
     {
       "id": "5e8NqrsSc46CK74AOQX2R5",
       "title": "גל עיניי - Liam Elbaz Remix",
