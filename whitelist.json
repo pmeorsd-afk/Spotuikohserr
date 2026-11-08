@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3360,
-  "last_updated": "2026-11-08T21:57:27.215Z",
+  "version": 3361,
+  "last_updated": "2026-11-08T21:57:38.544Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2GFZ1EWtGPNOBmkanFXxcK",
+      "title": "Goa In My Mind",
+      "artist": "Akajani",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:57:38.544Z"
+    },
     {
       "id": "5ta3lDTbDDHFKhghYkos6d",
       "title": "היי גייאל",
