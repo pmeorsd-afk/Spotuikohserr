@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3248,
-  "last_updated": "2026-11-08T20:27:03.496Z",
+  "version": 3249,
+  "last_updated": "2026-11-08T20:27:06.091Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4WF1lxm42M5ifzlAcLxkQp",
+      "title": "עודני ילד",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:27:06.091Z"
+    },
     {
       "id": "7KPpdUrJ0M6CstBggarDEr",
       "title": "ברבאבא",
