@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3299,
-  "last_updated": "2026-11-08T20:48:34.810Z",
+  "version": 3300,
+  "last_updated": "2026-11-08T20:48:40.336Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3JTmcZmo7IJq997wH67aZv",
+      "title": "Cry",
+      "artist": "Frank Davis Orchestra",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:48:40.336Z"
+    },
     {
       "id": "0ru5MK7F8NtCKR6PYux9Q6",
       "title": "Put Your Head on My Shoulder",
