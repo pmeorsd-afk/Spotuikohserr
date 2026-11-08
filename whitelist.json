@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3188,
-  "last_updated": "2026-11-08T19:47:22.249Z",
+  "version": 3189,
+  "last_updated": "2026-11-08T19:47:26.647Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:FAhLl12gQ0M",
+      "title": "עוד יאיר לי",
+      "artist": "הראל סקעת",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:47:26.647Z"
+    },
     {
       "id": "youtube:viC6ogwSrLQ",
       "title": "אהבה מסובבת הכל",
