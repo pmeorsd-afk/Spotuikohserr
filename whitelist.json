@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3234,
-  "last_updated": "2026-11-08T20:24:43.080Z",
+  "version": 3235,
+  "last_updated": "2026-11-08T20:25:44.454Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3hCzJOHgr2mZZKG6k3pk8Y",
+      "title": "מפונקת",
+      "artist": "Stalos & Oren Chen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:25:44.454Z"
+    },
     {
       "id": "7LAsDdinXejDwodvelVVTa",
       "title": "Greenfields",
