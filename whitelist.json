@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3190,
-  "last_updated": "2026-11-08T19:47:30.819Z",
+  "version": 3191,
+  "last_updated": "2026-11-08T19:47:35.162Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "04C2l0GMFK3o7xuVtknHk2",
+      "title": "ניצחת איתי הכל - מוסיקה",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:47:35.162Z"
+    },
     {
       "id": "youtube:qt9CG2uFDeI",
       "title": "אמרת שהשמש",
