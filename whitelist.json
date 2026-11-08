@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3300,
-  "last_updated": "2026-11-08T20:48:40.336Z",
+  "version": 3301,
+  "last_updated": "2026-11-08T20:48:45.823Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6utbguakdJG8TboXKbCnfF",
+      "title": "Dancin'",
+      "artist": "Frank Davis Orchestra",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:48:45.823Z"
+    },
     {
       "id": "3JTmcZmo7IJq997wH67aZv",
       "title": "Cry",
