@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3286,
-  "last_updated": "2026-11-08T20:31:25.748Z",
+  "version": 3287,
+  "last_updated": "2026-11-08T20:31:28.586Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5e8NqrsSc46CK74AOQX2R5",
+      "title": "גל עיניי - Liam Elbaz Remix",
+      "artist": "חנן בן ארי, Liam Elbaz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:31:28.586Z"
+    },
     {
       "id": "4A34YhE6juaYXBWuglCe0n",
       "title": "חיים פשוטים",
