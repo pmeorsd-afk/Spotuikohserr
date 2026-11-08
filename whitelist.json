@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3176,
-  "last_updated": "2026-11-06T12:53:37.047Z",
+  "version": 3177,
+  "last_updated": "2026-11-08T19:46:26.747Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6dMsWeQ2vCXOroR5dL84Wf",
+      "title": "זה הכל בשבילך",
+      "artist": "Danny Sanderson, Mazi Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:46:26.747Z"
+    },
     {
       "id": "6zlKez2Pe3IXGX3RuIu3KP",
       "title": "יש בליבי כינור",
