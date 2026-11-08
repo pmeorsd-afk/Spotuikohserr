@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3208,
-  "last_updated": "2026-11-08T19:49:10.985Z",
+  "version": 3209,
+  "last_updated": "2026-11-08T19:49:14.259Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1oXZSpIbbrGxpbRTxwot24",
+      "title": "מהשמיים",
+      "artist": "Moshe Perez",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:49:14.259Z"
+    },
     {
       "id": "4L6Hzpe3Y2ndPvxqSjrEWy",
       "title": "חשמל באויר",
