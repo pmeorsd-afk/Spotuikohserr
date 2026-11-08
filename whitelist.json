@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3201,
-  "last_updated": "2026-11-08T19:48:33.567Z",
+  "version": 3202,
+  "last_updated": "2026-11-08T19:48:36.768Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7mBGGsJwx4o8NiqWfmAJ96",
+      "title": "כפרה שלי",
+      "artist": "Ravid Plotnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:48:36.768Z"
+    },
     {
       "id": "2jG3x1HHjUeA6AtJHFrogg",
       "title": "מפרש לבן",
