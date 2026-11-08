@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3346,
-  "last_updated": "2026-11-08T21:56:31.623Z",
+  "version": 3347,
+  "last_updated": "2026-11-08T21:56:39.665Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4HsoDPL8OIpbWvIRbuxZ82",
+      "title": "שיר המשאלות",
+      "artist": "שוקי סלומון, Yehuda Green",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:56:39.665Z"
+    },
     {
       "id": "7IdEJ2X5xG71APeCkbGtH8",
       "title": "Hatixhe",
