@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3253,
-  "last_updated": "2026-11-08T20:27:21.181Z",
+  "version": 3254,
+  "last_updated": "2026-11-08T20:27:23.682Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Ndn9KEtL5d5DbBIhvAHV2",
+      "title": "תחזרי",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:27:23.682Z"
+    },
     {
       "id": "2zqTaXmMP8NGqmBX1gh7N8",
       "title": "A Teardrop and a Lollipop",
