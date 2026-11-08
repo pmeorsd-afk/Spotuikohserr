@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3352,
-  "last_updated": "2026-11-08T21:56:59.970Z",
+  "version": 3353,
+  "last_updated": "2026-11-08T21:57:03.360Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7inrxaqi8AkVXvzePF4yvP",
+      "title": "שורדים אהבה - Live",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:57:03.360Z"
+    },
     {
       "id": "0aQsZZj2KS2RDNjXytJGhB",
       "title": "אחרי הכל מתגעגע - Live",
