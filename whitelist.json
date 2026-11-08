@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3275,
-  "last_updated": "2026-11-08T20:30:44.139Z",
+  "version": 3276,
+  "last_updated": "2026-11-08T20:30:52.679Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7kTr3ezPaHMeQfQ9BHLrOF",
+      "title": "להיות לבד",
+      "artist": "Yehuda Keisar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:30:52.679Z"
+    },
     {
       "id": "11j86L1EiVCn1LVZPErJVf",
       "title": "לא עזבת אותי",
