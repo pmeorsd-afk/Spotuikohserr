@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3189,
-  "last_updated": "2026-11-08T19:47:26.647Z",
+  "version": 3190,
+  "last_updated": "2026-11-08T19:47:30.819Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:qt9CG2uFDeI",
+      "title": "אמרת שהשמש",
+      "artist": "הראל סקעת",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:47:30.819Z"
+    },
     {
       "id": "youtube:FAhLl12gQ0M",
       "title": "עוד יאיר לי",
