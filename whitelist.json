@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3270,
-  "last_updated": "2026-11-08T20:30:27.464Z",
+  "version": 3271,
+  "last_updated": "2026-11-08T20:30:30.171Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6z6qswe3H3s5OCzzP02AVB",
+      "title": "לב חופשי",
+      "artist": "Mooki",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:30:30.171Z"
+    },
     {
       "id": "5UkGEhwleMVFgDM0rv4yiW",
       "title": "מחרוזת כמו שיכור",
