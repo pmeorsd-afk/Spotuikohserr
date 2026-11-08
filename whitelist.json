@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3179,
-  "last_updated": "2026-11-08T19:46:34.131Z",
+  "version": 3180,
+  "last_updated": "2026-11-08T19:46:38.557Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "71sbeH40YqtI7OG0dBvqnw",
+      "title": "לוחמת",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:46:38.557Z"
+    },
     {
       "id": "0KpRklQy5rorqtOWeip9E0",
       "title": "שמישהו יעצור אותי",
