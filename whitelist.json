@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3212,
-  "last_updated": "2026-11-08T19:49:24.353Z",
+  "version": 3213,
+  "last_updated": "2026-11-08T19:49:26.803Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0nRGshDlBZRZXWRXl0xbni",
+      "title": "את לי לילה",
+      "artist": "Yehuda Keisar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:49:26.803Z"
+    },
     {
       "id": "43dcPAf3mzSsl8dRWXjZgF",
       "title": "אהבה בקרטונים",
