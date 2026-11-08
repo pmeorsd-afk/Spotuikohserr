@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3205,
-  "last_updated": "2026-11-08T19:48:46.519Z",
+  "version": 3206,
+  "last_updated": "2026-11-08T19:48:48.855Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2QfcRm7xqiZpbc50sCT6AD",
+      "title": "My name is",
+      "artist": "מאור אדרי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:48:48.855Z"
+    },
     {
       "id": "5gdKaAkYMDJCEOFSgjx0Wd",
       "title": "בחורים טובים",
