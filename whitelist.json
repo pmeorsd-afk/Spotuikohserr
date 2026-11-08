@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3279,
-  "last_updated": "2026-11-08T20:30:59.922Z",
+  "version": 3280,
+  "last_updated": "2026-11-08T20:31:04.510Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3DS53bhMWnWmQWxuMESGUs",
+      "title": "אל העולם שלך",
+      "artist": "Rotem Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:31:04.510Z"
+    },
     {
       "id": "522rqRXmUy3Mi3oZaFlkGY",
       "title": "מה לך ילדה",
