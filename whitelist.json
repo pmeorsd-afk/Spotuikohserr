@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3184,
-  "last_updated": "2026-11-08T19:47:05.579Z",
+  "version": 3185,
+  "last_updated": "2026-11-08T19:47:11.063Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:UORWfs-Lxck",
+      "title": "את לי הכל (גאליס)",
+      "artist": "הראל סקעת",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:47:11.063Z"
+    },
     {
       "id": "youtube:VbWh76FHEXk",
       "title": "הראל סקעת - בוקר טוב מותק ( קליפ מילים )",
