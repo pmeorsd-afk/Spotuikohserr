@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3180,
-  "last_updated": "2026-11-08T19:46:38.557Z",
+  "version": 3181,
+  "last_updated": "2026-11-08T19:46:50.239Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0ZFQYK9u8C1nGLXXb4y17W",
+      "title": "קירות",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:46:50.239Z"
+    },
     {
       "id": "71sbeH40YqtI7OG0dBvqnw",
       "title": "לוחמת",
