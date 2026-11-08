@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3288,
-  "last_updated": "2026-11-08T20:31:31.254Z",
+  "version": 3289,
+  "last_updated": "2026-11-08T20:31:34.022Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7gVe5xtwu7mPnnYcUxyhlQ",
+      "title": "במדבר שלי בלב",
+      "artist": "Guy & Yahel, Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:31:34.022Z"
+    },
     {
       "id": "3NLrRZoMF0Lx6zTlYqeIo4",
       "title": "Here Without You",
