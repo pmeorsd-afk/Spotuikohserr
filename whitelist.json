@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3292,
-  "last_updated": "2026-11-08T20:47:54.755Z",
+  "version": 3293,
+  "last_updated": "2026-11-08T20:47:59.717Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4nVBt6MZDDP6tRVdQTgxJg",
+      "title": "Story of My Life",
+      "artist": "One Direction",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:47:59.717Z"
+    },
     {
       "id": "4Dvkj6JhhA12EX05fT7y2e",
       "title": "As It Was",
