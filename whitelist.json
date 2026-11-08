@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3358,
-  "last_updated": "2026-11-08T21:57:17.818Z",
+  "version": 3359,
+  "last_updated": "2026-11-08T21:57:21.183Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5ta3lDTbDDHFKhghYkos6d",
+      "title": "היי גייאל",
+      "artist": "אופק אדנק, שאנטי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:57:21.183Z"
+    },
     {
       "id": "0wmlo7aL8mlGRzLuC10rhb",
       "title": "Am Echad",
