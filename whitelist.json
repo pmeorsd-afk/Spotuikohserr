@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3214,
-  "last_updated": "2026-11-08T19:49:31.495Z",
+  "version": 3215,
+  "last_updated": "2026-11-08T19:49:34.530Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4iTXVDvJIcFtSqvshO4JPA",
+      "title": "ב.מ.וו. שחורה",
+      "artist": "Ethnix",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:49:34.530Z"
+    },
     {
       "id": "0nRGshDlBZRZXWRXl0xbni",
       "title": "את לי לילה",
