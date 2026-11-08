@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3263,
-  "last_updated": "2026-11-08T20:30:07.024Z",
+  "version": 3264,
+  "last_updated": "2026-11-08T20:30:09.460Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2SAee7Sl9y6xcMjVuTZ6we",
+      "title": "לבד לבד",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:30:09.460Z"
+    },
     {
       "id": "2SHgmGUeF1WnoS4N37waU6",
       "title": "בואי ניפגש",
