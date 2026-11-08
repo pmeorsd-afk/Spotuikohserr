@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3271,
-  "last_updated": "2026-11-08T20:30:30.171Z",
+  "version": 3272,
+  "last_updated": "2026-11-08T20:30:32.885Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "70NMmSvCpYbYmC0lacAnBY",
+      "title": "נשל הנחש",
+      "artist": "Lior Farhi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:30:32.885Z"
+    },
     {
       "id": "6z6qswe3H3s5OCzzP02AVB",
       "title": "לב חופשי",
