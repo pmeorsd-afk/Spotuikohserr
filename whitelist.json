@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3221,
-  "last_updated": "2026-11-08T20:23:56.639Z",
+  "version": 3222,
+  "last_updated": "2026-11-08T20:24:00.302Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5bRXJOcBL9NwrbYv1jeEqA",
+      "title": "נערה לחורף",
+      "artist": "ברון, Moshe Hillel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:24:00.302Z"
+    },
     {
       "id": "7xGgANBaLKzl4Nh7YtaHH1",
       "title": "אל תירא ישראל (יעקב התמים)",
