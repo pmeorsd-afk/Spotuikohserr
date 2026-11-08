@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3196,
-  "last_updated": "2026-11-08T19:48:01.728Z",
+  "version": 3197,
+  "last_updated": "2026-11-08T19:48:08.087Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7BRD7x5pt8Lqa1eGYC4dzj",
+      "title": "CHIHIRO",
+      "artist": "Billie Eilish",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:48:08.087Z"
+    },
     {
       "id": "3QaPy1KgI7nu9FJEQUgn6h",
       "title": "WILDFLOWER",
