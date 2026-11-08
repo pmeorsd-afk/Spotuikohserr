@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3310,
-  "last_updated": "2026-11-08T21:19:15.119Z",
+  "version": 3311,
+  "last_updated": "2026-11-08T21:19:18.054Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2j5b2HDp4vlz6ThfhnG5DD",
+      "title": "Crazy",
+      "artist": "Frank Davis Orchestra",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:19:18.054Z"
+    },
     {
       "id": "6x2HTGDtNjvMgkzPYbzfAk",
       "title": "Let It Be Me",
