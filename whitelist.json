@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3193,
-  "last_updated": "2026-11-08T19:47:41.721Z",
+  "version": 3194,
+  "last_updated": "2026-11-08T19:47:48.133Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7bxaFZ1O3cHkgLKMsdC3xR",
+      "title": "Loser",
+      "artist": "Tame Impala",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:47:48.133Z"
+    },
     {
       "id": "0zuBLNyOTEzm9CvOg2Qt6z",
       "title": "תן לי",
