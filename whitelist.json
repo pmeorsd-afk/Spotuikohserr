@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3235,
-  "last_updated": "2026-11-08T20:25:44.454Z",
+  "version": 3236,
+  "last_updated": "2026-11-08T20:25:51.343Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:jE2dNSDOgnc",
+      "title": "לא מעניין אותי",
+      "artist": "שיר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:25:51.343Z"
+    },
     {
       "id": "3hCzJOHgr2mZZKG6k3pk8Y",
       "title": "מפונקת",
