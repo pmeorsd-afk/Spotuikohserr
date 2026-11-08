@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3186,
-  "last_updated": "2026-11-08T19:47:14.065Z",
+  "version": 3187,
+  "last_updated": "2026-11-08T19:47:17.144Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ljrK8ZNWR7nt8eoVWFwWn",
+      "title": "רק את",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:47:17.144Z"
+    },
     {
       "id": "6qB33ch9RK0aoMfxfnlXa1",
       "title": "פלסטרים",
