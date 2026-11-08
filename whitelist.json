@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3269,
-  "last_updated": "2026-11-08T20:30:25.304Z",
+  "version": 3270,
+  "last_updated": "2026-11-08T20:30:27.464Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5UkGEhwleMVFgDM0rv4yiW",
+      "title": "מחרוזת כמו שיכור",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:30:27.464Z"
+    },
     {
       "id": "4Eb3cCasFNJNNiedWRp2Ct",
       "title": "יפה שלי",
