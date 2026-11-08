@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3243,
-  "last_updated": "2026-11-08T20:26:41.336Z",
+  "version": 3244,
+  "last_updated": "2026-11-08T20:26:52.086Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2CUwpTA4gOSouCTyRN1vnE",
+      "title": "אין לי מקום אחר",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:26:52.086Z"
+    },
     {
       "id": "2Q2pJOkYvFJg0tWHgYf4In",
       "title": "וזה קיץ",
