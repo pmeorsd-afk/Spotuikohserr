@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3236,
-  "last_updated": "2026-11-08T20:25:51.343Z",
+  "version": 3237,
+  "last_updated": "2026-11-08T20:26:01.726Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5p6lB4iIBg74vM4hP12hUy",
+      "title": "באת לי פתאום",
+      "artist": "הכוכב הבא, אלונה ארז, שירה זלוף",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:26:01.726Z"
+    },
     {
       "id": "youtube:jE2dNSDOgnc",
       "title": "לא מעניין אותי",
