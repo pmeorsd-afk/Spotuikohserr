@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3280,
-  "last_updated": "2026-11-08T20:31:04.510Z",
+  "version": 3281,
+  "last_updated": "2026-11-08T20:31:07.438Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4NQj7dqFZCM2xySU0vmwyQ",
+      "title": "ברקים ורעמים",
+      "artist": "David Broza, Yehonatan Geffen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:31:07.438Z"
+    },
     {
       "id": "3DS53bhMWnWmQWxuMESGUs",
       "title": "אל העולם שלך",
