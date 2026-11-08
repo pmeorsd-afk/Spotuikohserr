@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3284,
-  "last_updated": "2026-11-08T20:31:19.661Z",
+  "version": 3285,
+  "last_updated": "2026-11-08T20:31:22.697Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5jgFfDIR6FR0gvlA56Nakr",
+      "title": "Blackbird - Remastered 2009",
+      "artist": "The Beatles",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:31:22.697Z"
+    },
     {
       "id": "2EqlS6tkEnglzr7tkKAAYD",
       "title": "Come Together - Remastered 2009",
