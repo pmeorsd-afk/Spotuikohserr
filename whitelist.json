@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3203,
-  "last_updated": "2026-11-08T19:48:40.096Z",
+  "version": 3204,
+  "last_updated": "2026-11-08T19:48:43.308Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1yaOECQyHIyuLScFJiieor",
+      "title": "בואי נעזוב",
+      "artist": "Elai Botner, Ran Danker",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:48:43.308Z"
+    },
     {
       "id": "6xhxulJ4BXNlnDmw3KpDP0",
       "title": "קריוקי",
