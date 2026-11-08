@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3217,
-  "last_updated": "2026-11-08T19:49:44.941Z",
+  "version": 3218,
+  "last_updated": "2026-11-08T19:49:47.766Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "74qdsbboX5dO0wYrCAQJVt",
+      "title": "שיר שבת",
+      "artist": "Moshe Hillel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:49:47.766Z"
+    },
     {
       "id": "58a5YfSglxFQsiF8GIRPjB",
       "title": "Smoke Gets in Your Eyes",
