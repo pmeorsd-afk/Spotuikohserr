@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3349,
-  "last_updated": "2026-11-08T21:56:47.804Z",
+  "version": 3350,
+  "last_updated": "2026-11-08T21:56:51.150Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4V3dk4PjJAa1KYL71vGp2L",
+      "title": "הלילה הזה",
+      "artist": "Eyal Twito",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:56:51.150Z"
+    },
     {
       "id": "0ETfTCk5UMnX2WJDtphDhu",
       "title": "חתן וכלה",
