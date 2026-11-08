@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3238,
-  "last_updated": "2026-11-08T20:26:07.286Z",
+  "version": 3239,
+  "last_updated": "2026-11-08T20:26:28.358Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "10Bm7ESWhMeBFRtIj4x2Gb",
+      "title": "אוזניות - Radio Edit",
+      "artist": "עוז, שירה זלוף",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:26:28.358Z"
+    },
     {
       "id": "5p6lB4iIBg74vM4hP12hUy",
       "title": "באת לי פתאום",
