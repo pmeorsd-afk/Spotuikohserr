@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3278,
-  "last_updated": "2026-11-08T20:30:57.756Z",
+  "version": 3279,
+  "last_updated": "2026-11-08T20:30:59.922Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "522rqRXmUy3Mi3oZaFlkGY",
+      "title": "מה לך ילדה",
+      "artist": "Yehuda Keisar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T20:30:59.922Z"
+    },
     {
       "id": "0B4PQqinKt1quID4qgcP2E",
       "title": "לבד יושבת",
