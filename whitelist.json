@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3192,
-  "last_updated": "2026-11-08T19:47:39.353Z",
+  "version": 3193,
+  "last_updated": "2026-11-08T19:47:41.721Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0zuBLNyOTEzm9CvOg2Qt6z",
+      "title": "תן לי",
+      "artist": "Yigal Bashan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T19:47:41.721Z"
+    },
     {
       "id": "youtube:SM3v_n37L_Q",
       "title": "אלף",
