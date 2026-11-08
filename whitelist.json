@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3312,
-  "last_updated": "2026-11-08T21:30:11.257Z",
+  "version": 3313,
+  "last_updated": "2026-11-08T21:30:15.238Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2SKD74oDzQzHluo6fXk7Is",
+      "title": "Little Things Mean a Lot",
+      "artist": "Frank Davis Orchestra",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-08T21:30:15.238Z"
+    },
     {
       "id": "3nzCrEEPuNwrb8Kq3yyJn6",
       "title": "Instanonymat #1",
