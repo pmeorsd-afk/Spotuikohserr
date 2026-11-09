@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3434,
-  "last_updated": "2026-11-09T20:46:32.136Z",
+  "version": 3435,
+  "last_updated": "2026-11-09T20:46:36.441Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:kHn-c4KTTns",
+      "title": "פועם בי מחדש",
+      "artist": "Mosh Ben Ari, Aviv Bahar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:46:36.441Z"
+    },
     {
       "id": "youtube:5WufK2KJHYQ",
       "title": "מה התכלית",
