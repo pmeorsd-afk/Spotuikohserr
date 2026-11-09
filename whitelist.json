@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3378,
-  "last_updated": "2026-11-09T07:37:44.241Z",
+  "version": 3379,
+  "last_updated": "2026-11-09T07:37:47.458Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "72ldHFK6MHpmaXTlShHYJN",
+      "title": "כמו שאת",
+      "artist": "Doron Mazar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:37:47.458Z"
+    },
     {
       "id": "51XDPGyuq8EgHSXwKCn8CQ",
       "title": "שווארמה ודמעה",
