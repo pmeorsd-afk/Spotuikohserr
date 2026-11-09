@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3478,
-  "last_updated": "2026-11-09T20:49:15.252Z",
+  "version": 3479,
+  "last_updated": "2026-11-09T20:49:19.010Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4GBn4QhxRsIvQkpJyp43Nk",
+      "title": "יש עניין שנתהפך - הרמיקס הרשמי",
+      "artist": "ניסים סבג, נחמן סבג, דיג'יי ניסו סלוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:49:19.010Z"
+    },
     {
       "id": "7de4HYDV9tiAjnTlmpSKHt",
       "title": "ככה השם רצה - רמיקס",
