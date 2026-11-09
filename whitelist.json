@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3364,
-  "last_updated": "2026-11-08T22:04:26.565Z",
+  "version": 3365,
+  "last_updated": "2026-11-09T04:02:28.689Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3QA599capcsQEvh952BNYx",
+      "title": "Real Love (2025 Mix)",
+      "artist": "The Beatles",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T04:02:28.689Z"
+    },
     {
       "id": "691Tx41oL0SPUv0kUAVmmn",
       "title": "מישהו איתי כאן",
