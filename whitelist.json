@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3438,
-  "last_updated": "2026-11-09T20:46:47.630Z",
+  "version": 3439,
+  "last_updated": "2026-11-09T20:46:51.094Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ZFHXndMK4u7ayoiMVPVY2",
+      "title": "Tirons Kahone",
+      "artist": "Olsi Bylyku, Vani Gjuzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:46:51.094Z"
+    },
     {
       "id": "7lYo07T2WhMvizQyo4yuG6",
       "title": "DASMA",
