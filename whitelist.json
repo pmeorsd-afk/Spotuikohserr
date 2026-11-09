@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3424,
-  "last_updated": "2026-11-09T20:45:46.814Z",
+  "version": 3425,
+  "last_updated": "2026-11-09T20:45:53.201Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "43iX3UlWxn6I88tBv47f3d",
+      "title": "ושבו בנים",
+      "artist": "איצי אקרמן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:45:53.201Z"
+    },
     {
       "id": "1pLuwTM29WhZ9TWsZxiZon",
       "title": "A PE DIN QYSH",
