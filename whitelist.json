@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3476,
-  "last_updated": "2026-11-09T20:49:01.384Z",
+  "version": 3477,
+  "last_updated": "2026-11-09T20:49:08.962Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0yNyZcYdbyeRfygTZrK1Rv",
+      "title": "אחד מי יודע",
+      "artist": "חברותא, David Taub, משה שניידר, Gil Israelov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:49:08.962Z"
+    },
     {
       "id": "youtube:hyW4vIb1yvQ",
       "title": "עברתי בחושך",
