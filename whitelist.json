@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3368,
-  "last_updated": "2026-11-09T04:48:18.115Z",
+  "version": 3369,
+  "last_updated": "2026-11-09T04:48:21.333Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6FPLnbcf5UmJxHKDAlKJLa",
+      "title": "מחרוזת אש",
+      "artist": "The Revivo Project, Kobi Peretz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T04:48:21.333Z"
+    },
     {
       "id": "2wO9Ccvm5Dufz62ZUZj3UW",
       "title": "מחרוזת עוד יום יבוא",
