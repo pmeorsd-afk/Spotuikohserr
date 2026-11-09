@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3366,
-  "last_updated": "2026-11-09T04:02:41.404Z",
+  "version": 3367,
+  "last_updated": "2026-11-09T04:02:44.731Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0LLUCA7kUAgbxIASev4oWX",
+      "title": "האחת שלי",
+      "artist": "ישי לוי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T04:02:44.731Z"
+    },
     {
       "id": "4rQOpu34WFMZFGaoHcO8d0",
       "title": "אני לא מפסיק להתרגש ממך",
