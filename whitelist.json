@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3375,
-  "last_updated": "2026-11-09T07:37:38.308Z",
+  "version": 3376,
+  "last_updated": "2026-11-09T07:37:41.242Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3pTsE064ZTJ1n8bP3VAm2c",
+      "title": "תהום",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:37:41.242Z"
+    },
     {
       "id": "6v3ukAlP4RuzL6RySnwuHw",
       "title": "אלוהי נשמה",
