@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3423,
-  "last_updated": "2026-11-09T20:45:43.175Z",
+  "version": 3424,
+  "last_updated": "2026-11-09T20:45:46.814Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1pLuwTM29WhZ9TWsZxiZon",
+      "title": "A PE DIN QYSH",
+      "artist": "Fero",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:45:46.814Z"
+    },
     {
       "id": "6T62pc7rRB10o0ryUa1SeS",
       "title": "AJENU JAIALIM - אחינו חיילים",
