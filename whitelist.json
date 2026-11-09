@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3393,
-  "last_updated": "2026-11-09T07:38:27.995Z",
+  "version": 3394,
+  "last_updated": "2026-11-09T07:38:31.188Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3BZGi1yUqQyCNC868AqUGG",
+      "title": "Big in Japan",
+      "artist": "Alphaville",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:38:31.188Z"
+    },
     {
       "id": "612bl0KHzyyxEhPzuMqM6e",
       "title": "Golden Brown - Slowed Down Version",
