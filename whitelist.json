@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3386,
-  "last_updated": "2026-11-09T07:38:09.112Z",
+  "version": 3387,
+  "last_updated": "2026-11-09T07:38:12.489Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Pk4Syzj6jaTYijHYChvhm",
+      "title": "כבר עברו השנים",
+      "artist": "Zohar Argov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:38:12.489Z"
+    },
     {
       "id": "14SqqBpEw2cALZbJsJX7GU",
       "title": "כתם הפרי",
