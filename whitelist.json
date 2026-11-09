@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3419,
-  "last_updated": "2026-11-09T20:45:23.667Z",
+  "version": 3420,
+  "last_updated": "2026-11-09T20:45:27.202Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7LsigELFVRu0KbI55dVhtn",
+      "title": "פעם תורי ופעם תורך",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:45:27.202Z"
+    },
     {
       "id": "7nAhHhBWnOO5uDeGxXJUfZ",
       "title": "ואלס בחמש ושלושים",
