@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3421,
-  "last_updated": "2026-11-09T20:45:30.550Z",
+  "version": 3422,
+  "last_updated": "2026-11-09T20:45:38.114Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5trRXLRfnEzm4QwvG9qCVQ",
+      "title": "אתה מיוחד",
+      "artist": "איצי אקרמן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:45:38.114Z"
+    },
     {
       "id": "1Dwfs0nJhtGRIY402KxH84",
       "title": "ערב בלי ירח",
