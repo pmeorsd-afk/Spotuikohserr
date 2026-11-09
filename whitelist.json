@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3407,
-  "last_updated": "2026-11-09T20:44:51.142Z",
+  "version": 3408,
+  "last_updated": "2026-11-09T20:44:54.913Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5PKTLEpR4NjDs47YGnxJ1A",
+      "title": "שאלתי מה קרה",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:44:54.913Z"
+    },
     {
       "id": "1hsF6utdvgoC24t6cBTPvg",
       "title": "סופה",
