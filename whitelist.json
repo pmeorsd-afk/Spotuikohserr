@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3387,
-  "last_updated": "2026-11-09T07:38:12.489Z",
+  "version": 3389,
+  "last_updated": "2026-11-09T07:38:15.582Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2mqyZ5GwzDepXCljNwkCcv",
+      "title": "תרוצי אליו",
+      "artist": "Doli & Penn, Beit Habubot, Rotem Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:38:15.582Z"
+    },
+    {
+      "id": "2ov7yLChJ8mutwGj5w2Ljd",
+      "title": "בת שישים",
+      "artist": "HaGevatron",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:38:15.582Z"
+    },
     {
       "id": "3Pk4Syzj6jaTYijHYChvhm",
       "title": "כבר עברו השנים",
