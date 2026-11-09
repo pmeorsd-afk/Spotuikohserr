@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3417,
-  "last_updated": "2026-11-09T20:45:20.322Z",
+  "version": 3419,
+  "last_updated": "2026-11-09T20:45:23.667Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7nAhHhBWnOO5uDeGxXJUfZ",
+      "title": "ואלס בחמש ושלושים",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:45:23.667Z"
+    },
+    {
+      "id": "31AOj9sFz2gM0O3hMARRBx",
+      "title": "Losing My Religion",
+      "artist": "R.E.M.",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:45:23.667Z"
+    },
     {
       "id": "754kgU5rWscRTfvlsuEwFp",
       "title": "Kiss Me",
