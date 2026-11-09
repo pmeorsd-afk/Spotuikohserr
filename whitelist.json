@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3401,
-  "last_updated": "2026-11-09T20:44:32.667Z",
+  "version": 3403,
+  "last_updated": "2026-11-09T20:44:36.106Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0AzAr9imCHXnxYxRq9KQMa",
+      "title": "רק הלב יודע",
+      "artist": "Pablo Rosenberg",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:44:36.106Z"
+    },
+    {
+      "id": "6YPvfYozRdNM5KZU8cXRW8",
+      "title": "בא להציע את לבי",
+      "artist": "Pablo Rosenberg",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:44:36.106Z"
+    },
     {
       "id": "1H48b9cQDpzi6Vs9crPBJG",
       "title": "בין ערביים",
