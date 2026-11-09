@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3371,
-  "last_updated": "2026-11-09T04:48:24.667Z",
+  "version": 3372,
+  "last_updated": "2026-11-09T04:48:28.248Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1ffZ9wRZPx1xNjSY0VskNS",
+      "title": "יותר מוארת",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T04:48:28.248Z"
+    },
     {
       "id": "4wKGZOYydvPg6QBtkmqwzU",
       "title": "מחרוזת אוהב לחיות",
