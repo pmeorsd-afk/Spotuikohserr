@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3480,
-  "last_updated": "2026-11-09T20:49:30.328Z",
+  "version": 3481,
+  "last_updated": "2026-11-09T20:49:33.875Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3WB4cI9RY26rOVhXxyHDLR",
+      "title": "ואם תבואי אלי - Afro Remix",
+      "artist": "Neevos, עידן רייכל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:49:33.875Z"
+    },
     {
       "id": "5MJ55cItCagp8f76cMyjIH",
       "title": "תן לי אור - רמיקס",
