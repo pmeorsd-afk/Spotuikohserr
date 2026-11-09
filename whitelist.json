@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3379,
-  "last_updated": "2026-11-09T07:37:47.458Z",
+  "version": 3380,
+  "last_updated": "2026-11-09T07:37:50.468Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7ytiL1dGuLmlt4ujTf1eOE",
+      "title": "בואי נעשה לנו חג",
+      "artist": "Yigal Bashan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:37:50.468Z"
+    },
     {
       "id": "72ldHFK6MHpmaXTlShHYJN",
       "title": "כמו שאת",
