@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3489,
-  "last_updated": "2026-11-09T22:10:14.952Z",
+  "version": 3490,
+  "last_updated": "2026-11-09T22:10:18.600Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0u5vITbNoSNGiG2uEwc5f5",
+      "title": "6,000 מייל",
+      "artist": "ליאור נרקיס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T22:10:18.600Z"
+    },
     {
       "id": "76xvoUo25NRHiJt7JU6W1Y",
       "title": "פנתרה",
