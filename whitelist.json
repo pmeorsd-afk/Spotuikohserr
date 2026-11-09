@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3474,
-  "last_updated": "2026-11-09T20:48:49.114Z",
+  "version": 3475,
+  "last_updated": "2026-11-09T20:48:52.938Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2AuNE08sO70ocGflV9VOT8",
+      "title": "עיגול",
+      "artist": "טל שבח",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:48:52.938Z"
+    },
     {
       "id": "1yeQgSEUYAu46yPERtCvVU",
       "title": "זמן של מספרים",
