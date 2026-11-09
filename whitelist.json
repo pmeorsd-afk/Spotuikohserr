@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3373,
-  "last_updated": "2026-11-09T07:37:20.267Z",
+  "version": 3374,
+  "last_updated": "2026-11-09T07:37:35.358Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5dvvTKx1cBA9j4WoLY4eqb",
+      "title": "רבונו של עולם",
+      "artist": "Seder Nigunim, Shlomo Simcha",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:37:35.358Z"
+    },
     {
       "id": "1ffZ9wRZPx1xNjSY0VskNS",
       "title": "יותר מוארת",
