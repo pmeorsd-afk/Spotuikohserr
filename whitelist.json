@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3367,
-  "last_updated": "2026-11-09T04:02:44.731Z",
+  "version": 3368,
+  "last_updated": "2026-11-09T04:48:18.115Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2wO9Ccvm5Dufz62ZUZj3UW",
+      "title": "מחרוזת עוד יום יבוא",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T04:48:18.115Z"
+    },
     {
       "id": "0LLUCA7kUAgbxIASev4oWX",
       "title": "האחת שלי",
