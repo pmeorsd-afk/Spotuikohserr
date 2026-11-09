@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3374,
-  "last_updated": "2026-11-09T07:37:35.358Z",
+  "version": 3375,
+  "last_updated": "2026-11-09T07:37:38.308Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6v3ukAlP4RuzL6RySnwuHw",
+      "title": "אלוהי נשמה",
+      "artist": "אבישי, האחים בכר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:37:38.308Z"
+    },
     {
       "id": "5dvvTKx1cBA9j4WoLY4eqb",
       "title": "רבונו של עולם",
