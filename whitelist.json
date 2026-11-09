@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3385,
-  "last_updated": "2026-11-09T07:38:06.026Z",
+  "version": 3386,
+  "last_updated": "2026-11-09T07:38:09.112Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "14SqqBpEw2cALZbJsJX7GU",
+      "title": "כתם הפרי",
+      "artist": "Ethnix",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:38:09.112Z"
+    },
     {
       "id": "0oyU35Wv8MFHHahJ2S0vcj",
       "title": "אתמול היית שונה",
