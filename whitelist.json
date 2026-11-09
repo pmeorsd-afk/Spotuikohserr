@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3404,
-  "last_updated": "2026-11-09T20:44:39.984Z",
+  "version": 3405,
+  "last_updated": "2026-11-09T20:44:43.625Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6NGuZ4oz3LWEr3xfPOj5tU",
+      "title": "כמו אז",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:44:43.625Z"
+    },
     {
       "id": "0zEG3KuozqsQrzFJpaqEwU",
       "title": "כשאת איתי",
