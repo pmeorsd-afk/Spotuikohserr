@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3395,
-  "last_updated": "2026-11-09T07:38:34.314Z",
+  "version": 3397,
+  "last_updated": "2026-11-09T07:38:37.565Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3U1voPJN8NBSR96Ry0WJiF",
+      "title": "מלכת הדור",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:38:37.565Z"
+    },
+    {
+      "id": "5Sn3aXG5AWFmd1ij2PTisj",
+      "title": "השיר שאת אהבת",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:38:37.565Z"
+    },
     {
       "id": "3BZGi1yUqQyCNC868AqUGG",
       "title": "Big in Japan",
