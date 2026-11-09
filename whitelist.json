@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3392,
-  "last_updated": "2026-11-09T07:38:24.864Z",
+  "version": 3393,
+  "last_updated": "2026-11-09T07:38:27.995Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "612bl0KHzyyxEhPzuMqM6e",
+      "title": "Golden Brown - Slowed Down Version",
+      "artist": "The Stranglers",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:38:27.995Z"
+    },
     {
       "id": "0w0wMOJHMD7FyKPWhOFu6z",
       "title": "Espera",
