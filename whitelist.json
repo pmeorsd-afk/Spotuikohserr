@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3369,
-  "last_updated": "2026-11-09T04:48:21.333Z",
+  "version": 3371,
+  "last_updated": "2026-11-09T04:48:24.667Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4wKGZOYydvPg6QBtkmqwzU",
+      "title": "מחרוזת אוהב לחיות",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T04:48:24.667Z"
+    },
+    {
+      "id": "7t4aOeYAfBiStG6dxp5q1a",
+      "title": "המענטזת",
+      "artist": "Jeki Mekayten",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T04:48:24.667Z"
+    },
     {
       "id": "6FPLnbcf5UmJxHKDAlKJLa",
       "title": "מחרוזת אש",
