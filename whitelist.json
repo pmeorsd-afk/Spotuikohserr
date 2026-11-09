@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3445,
-  "last_updated": "2026-11-09T20:47:14.414Z",
+  "version": 3446,
+  "last_updated": "2026-11-09T20:47:17.776Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "68lkrTfiE10lZr7JE6eDdq",
+      "title": "מה עשית לי",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:47:17.776Z"
+    },
     {
       "id": "7lnNjPaViS9sAJwOyXXcIE",
       "title": "Yachad",
