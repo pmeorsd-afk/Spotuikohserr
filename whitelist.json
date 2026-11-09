@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3437,
-  "last_updated": "2026-11-09T20:46:44.026Z",
+  "version": 3438,
+  "last_updated": "2026-11-09T20:46:47.630Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7lYo07T2WhMvizQyo4yuG6",
+      "title": "DASMA",
+      "artist": "Mateus Frroku, Gjovalin Shani",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:46:47.630Z"
+    },
     {
       "id": "1oWXK7pfhqXRfksgxd8BjZ",
       "title": "אגו",
