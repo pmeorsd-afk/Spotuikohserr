@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3429,
-  "last_updated": "2026-11-09T20:46:09.776Z",
+  "version": 3431,
+  "last_updated": "2026-11-09T20:46:13.801Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "00CWomZ6cLGl4VknkJ8aKe",
+      "title": "דאווין",
+      "artist": "מבוא הדודאים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:46:13.801Z"
+    },
+    {
+      "id": "6C7BEJPsYZBI7O6gIyZgSR",
+      "title": "משהו טוב מחכה לך",
+      "artist": "מתן חסן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:46:13.801Z"
+    },
     {
       "id": "7k9qtw7neW04O2xpwmJ4wT",
       "title": "פרנויה",
