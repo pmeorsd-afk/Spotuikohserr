@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3461,
-  "last_updated": "2026-11-09T20:48:01.343Z",
+  "version": 3462,
+  "last_updated": "2026-11-09T20:48:07.845Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4KO1zi2sp4jU3V6M23cbLr",
+      "title": "פרופיל 97",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:48:07.845Z"
+    },
     {
       "id": "6qyiSMNEAnNKuYGVvjBaZB",
       "title": "חומות",
