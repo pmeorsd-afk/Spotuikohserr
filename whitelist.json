@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3397,
-  "last_updated": "2026-11-09T07:38:37.565Z",
+  "version": 3398,
+  "last_updated": "2026-11-09T07:38:41.140Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0piPunlUN9Zx5KwJqHHPKA",
+      "title": "גשם, גשם",
+      "artist": "Oshik Levy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:38:41.140Z"
+    },
     {
       "id": "3U1voPJN8NBSR96Ry0WJiF",
       "title": "מלכת הדור",
