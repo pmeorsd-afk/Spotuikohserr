@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3410,
-  "last_updated": "2026-11-09T20:44:58.626Z",
+  "version": 3411,
+  "last_updated": "2026-11-09T20:45:02.138Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5ZuzsLP6N5T7VS4ke3mOzl",
+      "title": "הסכין הרובה והאבן",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:45:02.138Z"
+    },
     {
       "id": "04zzLfNeUIhKf8g1ZpWswr",
       "title": "תגידי",
