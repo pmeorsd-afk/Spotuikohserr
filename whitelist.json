@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3446,
-  "last_updated": "2026-11-09T20:47:17.776Z",
+  "version": 3448,
+  "last_updated": "2026-11-09T20:47:21.232Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4dtV8SXlsVR0B0lk9mIPWw",
+      "title": "טבריה",
+      "artist": "Micha Shitrit",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:47:21.232Z"
+    },
+    {
+      "id": "4lcBSfRoXkkb88ZlUPLkQG",
+      "title": "Min Hametzar",
+      "artist": "Label Sharfman & Abie Rotenberg",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:47:21.232Z"
+    },
     {
       "id": "68lkrTfiE10lZr7JE6eDdq",
       "title": "מה עשית לי",
