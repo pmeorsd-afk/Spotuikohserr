@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3487,
-  "last_updated": "2026-11-09T20:49:55.074Z",
+  "version": 3488,
+  "last_updated": "2026-11-09T20:50:00.644Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -21520,6 +21520,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-11-09T20:49:55.074Z"
+    },
+    {
+      "id": "fe3c6b5970eac06a12da150338e41e3a315de6a4155a9dc2",
+      "url": "https://www.omnycontent.com/d/clips/6dcbc33f-1fb6-49de-9ae2-ad8a00c01523/d5d069e1-e403-4369-8c7c-b09d013d9169/43d7d34a-a9db-4eba-bd8b-b18700c3c32d/image.jpg?t=1717674801&size=Large",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-11-09T20:50:00.644Z"
     }
   ],
   "search_images": [
