@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3444,
-  "last_updated": "2026-11-09T20:47:10.653Z",
+  "version": 3445,
+  "last_updated": "2026-11-09T20:47:14.414Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7lnNjPaViS9sAJwOyXXcIE",
+      "title": "Yachad",
+      "artist": "Shlomo Carlebach",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:47:14.414Z"
+    },
     {
       "id": "4BoqXwkcDcsADs23JhsxyJ",
       "title": "הפרח לפרפר",
