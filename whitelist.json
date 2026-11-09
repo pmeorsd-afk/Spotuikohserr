@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3408,
-  "last_updated": "2026-11-09T20:44:54.913Z",
+  "version": 3410,
+  "last_updated": "2026-11-09T20:44:58.626Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "04zzLfNeUIhKf8g1ZpWswr",
+      "title": "תגידי",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:44:58.626Z"
+    },
+    {
+      "id": "03NTz1yCqbPlDg2tZFEBxc",
+      "title": "Hakol Ad Lekan",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:44:58.626Z"
+    },
     {
       "id": "5PKTLEpR4NjDs47YGnxJ1A",
       "title": "שאלתי מה קרה",
