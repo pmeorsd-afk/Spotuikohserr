@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3382,
-  "last_updated": "2026-11-09T07:37:53.680Z",
+  "version": 3383,
+  "last_updated": "2026-11-09T07:37:57.769Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "41vdFnIxcR3sqgWtJP7Ujs",
+      "title": "אולי עוד קיץ",
+      "artist": "חלב ודבש, Lea Lupatin",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:37:57.769Z"
+    },
     {
       "id": "4S1VYqwfkLit9mKVY3MXoo",
       "title": "Forever Young",
