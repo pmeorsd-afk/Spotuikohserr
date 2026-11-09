@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3406,
-  "last_updated": "2026-11-09T20:44:47.350Z",
+  "version": 3407,
+  "last_updated": "2026-11-09T20:44:51.142Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1hsF6utdvgoC24t6cBTPvg",
+      "title": "סופה",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:44:51.142Z"
+    },
     {
       "id": "6zfvNhTJAtVbDbL5C3mZu4",
       "title": "קצת משונה שלא נשארת",
