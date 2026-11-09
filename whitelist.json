@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3428,
-  "last_updated": "2026-11-09T20:46:05.964Z",
+  "version": 3429,
+  "last_updated": "2026-11-09T20:46:09.776Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7k9qtw7neW04O2xpwmJ4wT",
+      "title": "פרנויה",
+      "artist": "young buta",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:46:09.776Z"
+    },
     {
       "id": "4MBYWTrpVLY29mb5pBeBcW",
       "title": "Vasha",
