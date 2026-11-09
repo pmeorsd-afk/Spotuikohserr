@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3365,
-  "last_updated": "2026-11-09T04:02:28.689Z",
+  "version": 3366,
+  "last_updated": "2026-11-09T04:02:41.404Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4rQOpu34WFMZFGaoHcO8d0",
+      "title": "אני לא מפסיק להתרגש ממך",
+      "artist": "Danny Robas",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T04:02:41.404Z"
+    },
     {
       "id": "3QA599capcsQEvh952BNYx",
       "title": "Real Love (2025 Mix)",
