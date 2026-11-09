@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3415,
-  "last_updated": "2026-11-09T20:45:12.860Z",
+  "version": 3416,
+  "last_updated": "2026-11-09T20:45:16.825Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "23pJRMIfJc9QmpetRDU05g",
+      "title": "אחרת אתה מת",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:45:16.825Z"
+    },
     {
       "id": "0gmbgwZ8iqyMPmXefof8Yf",
       "title": "How You Remind Me",
