@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3484,
-  "last_updated": "2026-11-09T20:49:44.194Z",
+  "version": 3485,
+  "last_updated": "2026-11-09T20:49:47.891Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6lrLTyagMN7HgKUxzpwRsA",
+      "title": "ראפר מגניב",
+      "artist": "E-Z",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:49:47.891Z"
+    },
     {
       "id": "4yWcJioFuyKnn4hphX4JE3",
       "title": "כל החבר'ה",
