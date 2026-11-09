@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3436,
-  "last_updated": "2026-11-09T20:46:40.380Z",
+  "version": 3437,
+  "last_updated": "2026-11-09T20:46:44.026Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1oWXK7pfhqXRfksgxd8BjZ",
+      "title": "אגו",
+      "artist": "מבוא הדודאים, Hoodyman, ליברה, דראפט, זולוד אדם",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:46:44.026Z"
+    },
     {
       "id": "4ZLp40CPFDmp2XcaZccu6Q",
       "title": "Lule Mali",
