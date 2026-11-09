@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3486,
-  "last_updated": "2026-11-09T20:49:51.106Z",
+  "version": 3487,
+  "last_updated": "2026-11-09T20:49:55.074Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -21513,6 +21513,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-11-09T20:49:41.114Z"
+    },
+    {
+      "id": "52b0e09d7c34e20ff82a2c31798e89efca4a30ca24edf513",
+      "url": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/46293615/46293615-1783146766376-933f8d9145d12.jpg",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-11-09T20:49:55.074Z"
     }
   ],
   "search_images": [
