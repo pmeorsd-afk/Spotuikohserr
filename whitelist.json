@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3470,
-  "last_updated": "2026-11-09T20:48:33.158Z",
+  "version": 3471,
+  "last_updated": "2026-11-09T20:48:36.468Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0ogpb0K0y3AwfHkgMSTGUG",
+      "title": "A Better Way",
+      "artist": "MrWhite, WINARTA, Borned",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:48:36.468Z"
+    },
     {
       "id": "1yI0dZ1ApJfFXt2nInIx8w",
       "title": "תחזור",
