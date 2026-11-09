@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3426,
-  "last_updated": "2026-11-09T20:45:58.202Z",
+  "version": 3427,
+  "last_updated": "2026-11-09T20:46:01.556Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1I1mqnHNsrU0VfPObhMJ2P",
+      "title": "Vajzo",
+      "artist": "Alban Skenderaj",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:46:01.556Z"
+    },
     {
       "id": "43iX3UlWxn6I88tBv47f3d",
       "title": "ושבו בנים",
