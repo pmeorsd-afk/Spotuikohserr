@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3398,
-  "last_updated": "2026-11-09T07:38:41.140Z",
+  "version": 3399,
+  "last_updated": "2026-11-09T20:44:25.943Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3BD9Su37Hc20B0rYL3s1wG",
+      "title": "נר על החלון",
+      "artist": "Pablo Rosenberg",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:44:25.943Z"
+    },
     {
       "id": "0piPunlUN9Zx5KwJqHHPKA",
       "title": "גשם, גשם",
