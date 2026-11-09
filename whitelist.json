@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3456,
-  "last_updated": "2026-11-09T20:47:47.762Z",
+  "version": 3457,
+  "last_updated": "2026-11-09T20:47:51.202Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3eNp25VPeqvYS1RrGhGcVY",
+      "title": "עד שנגמר",
+      "artist": "Kobi Maman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:47:51.202Z"
+    },
     {
       "id": "2qLhiLwb6zSMpr2zwb0XeT",
       "title": "Torah Today",
