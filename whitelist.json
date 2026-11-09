@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3468,
-  "last_updated": "2026-11-09T20:48:29.866Z",
+  "version": 3470,
+  "last_updated": "2026-11-09T20:48:33.158Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1yI0dZ1ApJfFXt2nInIx8w",
+      "title": "תחזור",
+      "artist": "Idan Raichel for Babies",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:48:33.158Z"
+    },
+    {
+      "id": "2T6eLMNWo2Ag8kxxkjXW4w",
+      "title": "ילדה שלי קטנה",
+      "artist": "Idan Raichel for Babies",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:48:33.158Z"
+    },
     {
       "id": "7jBrBNxVNsek9Ep5f4cXd9",
       "title": "Highway To Heaven - Radio Edit",
