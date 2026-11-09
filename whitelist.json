@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3422,
-  "last_updated": "2026-11-09T20:45:38.114Z",
+  "version": 3423,
+  "last_updated": "2026-11-09T20:45:43.175Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6T62pc7rRB10o0ryUa1SeS",
+      "title": "AJENU JAIALIM - אחינו חיילים",
+      "artist": "Shelo Chirazi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:45:43.175Z"
+    },
     {
       "id": "5trRXLRfnEzm4QwvG9qCVQ",
       "title": "אתה מיוחד",
