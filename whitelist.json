@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3462,
-  "last_updated": "2026-11-09T20:48:07.845Z",
+  "version": 3464,
+  "last_updated": "2026-11-09T20:48:11.751Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5eKMrWBAOfHIs3PlnuNkjE",
+      "title": "איך שיר נולד",
+      "artist": "Yehonatan Geffen, Gidi Gov, Yoni Rechter",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:48:11.751Z"
+    },
+    {
+      "id": "4kIgClxDoBV0nyC5gWvCyb",
+      "title": "הסבון בכה מאוד",
+      "artist": "Hop! Channel, Sharonit Children Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:48:11.751Z"
+    },
     {
       "id": "4KO1zi2sp4jU3V6M23cbLr",
       "title": "פרופיל 97",
