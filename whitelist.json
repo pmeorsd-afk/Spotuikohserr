@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3488,
-  "last_updated": "2026-11-09T20:50:00.644Z",
+  "version": 3489,
+  "last_updated": "2026-11-09T22:10:14.952Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "76xvoUo25NRHiJt7JU6W1Y",
+      "title": "פנתרה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T22:10:14.952Z"
+    },
     {
       "id": "2VXfWrAtxfRk2htJGv86a2",
       "title": "שעטנז על הכיכר",
