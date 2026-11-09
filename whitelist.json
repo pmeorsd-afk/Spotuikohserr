@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3477,
-  "last_updated": "2026-11-09T20:49:08.962Z",
+  "version": 3478,
+  "last_updated": "2026-11-09T20:49:15.252Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7de4HYDV9tiAjnTlmpSKHt",
+      "title": "ככה השם רצה - רמיקס",
+      "artist": "ישראל אס, דיג'יי ניסו סלוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:49:15.252Z"
+    },
     {
       "id": "0yNyZcYdbyeRfygTZrK1Rv",
       "title": "אחד מי יודע",
