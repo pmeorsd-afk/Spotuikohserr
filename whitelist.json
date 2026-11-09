@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3405,
-  "last_updated": "2026-11-09T20:44:43.625Z",
+  "version": 3406,
+  "last_updated": "2026-11-09T20:44:47.350Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6zfvNhTJAtVbDbL5C3mZu4",
+      "title": "קצת משונה שלא נשארת",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:44:47.350Z"
+    },
     {
       "id": "6NGuZ4oz3LWEr3xfPOj5tU",
       "title": "כמו אז",
