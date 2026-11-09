@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3389,
-  "last_updated": "2026-11-09T07:38:15.582Z",
+  "version": 3390,
+  "last_updated": "2026-11-09T07:38:18.866Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0ZqlFwhPTmSXojrAe2EAmM",
+      "title": "יום השישי",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:38:18.866Z"
+    },
     {
       "id": "2mqyZ5GwzDepXCljNwkCcv",
       "title": "תרוצי אליו",
