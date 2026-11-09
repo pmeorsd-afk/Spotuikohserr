@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3433,
-  "last_updated": "2026-11-09T20:46:26.654Z",
+  "version": 3434,
+  "last_updated": "2026-11-09T20:46:32.136Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:5WufK2KJHYQ",
+      "title": "מה התכלית",
+      "artist": "שולי רנד",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:46:32.136Z"
+    },
     {
       "id": "7aBsSd56fQnPkYr0mXG4sI",
       "title": "קומזיץ 5 הימים הנוראים",
