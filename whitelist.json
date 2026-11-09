@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3449,
-  "last_updated": "2026-11-09T20:47:25.471Z",
+  "version": 3450,
+  "last_updated": "2026-11-09T20:47:28.574Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4p0y0eoHXqjpuHGWLcnLJP",
+      "title": "Someday",
+      "artist": "JEP",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:47:28.574Z"
+    },
     {
       "id": "5XdTi10SQziiyjGgewEKhh",
       "title": "02 / בשעות הבודדות - Live",
