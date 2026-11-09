@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3380,
-  "last_updated": "2026-11-09T07:37:50.468Z",
+  "version": 3382,
+  "last_updated": "2026-11-09T07:37:53.680Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4S1VYqwfkLit9mKVY3MXoo",
+      "title": "Forever Young",
+      "artist": "Alphaville",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:37:53.680Z"
+    },
+    {
+      "id": "3zYufmyv6HOuiHn1eMR6Ja",
+      "title": "Desert Rose",
+      "artist": "Sting, Cheb Mami",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:37:53.680Z"
+    },
     {
       "id": "7ytiL1dGuLmlt4ujTf1eOE",
       "title": "בואי נעשה לנו חג",
