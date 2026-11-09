@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3453,
-  "last_updated": "2026-11-09T20:47:40.795Z",
+  "version": 3455,
+  "last_updated": "2026-11-09T20:47:44.218Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5msPQ3bdVwW8rWa3bBgTJw",
+      "title": "B'Syata D'Shmaya",
+      "artist": "Yerachmiel Begun & The Miami Boys Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:47:44.218Z"
+    },
+    {
+      "id": "1zgr81geg4N4zzLrkcMCni",
+      "title": "The Simcha Song",
+      "artist": "Yerachmiel Begun & The Miami Boys Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:47:44.218Z"
+    },
     {
       "id": "70tAyUQbKJMgvfoQ6WRprP",
       "title": "Would You Please",
