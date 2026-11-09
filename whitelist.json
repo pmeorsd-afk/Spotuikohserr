@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3390,
-  "last_updated": "2026-11-09T07:38:18.866Z",
+  "version": 3391,
+  "last_updated": "2026-11-09T07:38:21.821Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Sy4Mpq5f9pmj7B3bVoUbO",
+      "title": "קפה אצל ברטה",
+      "artist": "Yigal Bashan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T07:38:21.821Z"
+    },
     {
       "id": "0ZqlFwhPTmSXojrAe2EAmM",
       "title": "יום השישי",
