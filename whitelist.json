@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3466,
-  "last_updated": "2026-11-09T20:48:20.276Z",
+  "version": 3467,
+  "last_updated": "2026-11-09T20:48:25.123Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "29K1qhBpp78VJiWRksuIHr",
+      "title": "מאה אלף",
+      "artist": "טל בן גיגי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:48:25.123Z"
+    },
     {
       "id": "6b2AYwiedA9mcB9W6Kfxay",
       "title": "יושבת לי בול",
