@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3420,
-  "last_updated": "2026-11-09T20:45:27.202Z",
+  "version": 3421,
+  "last_updated": "2026-11-09T20:45:30.550Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Dwfs0nJhtGRIY402KxH84",
+      "title": "ערב בלי ירח",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:45:30.550Z"
+    },
     {
       "id": "7LsigELFVRu0KbI55dVhtn",
       "title": "פעם תורי ופעם תורך",
