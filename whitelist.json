@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3464,
-  "last_updated": "2026-11-09T20:48:11.751Z",
+  "version": 3465,
+  "last_updated": "2026-11-09T20:48:15.129Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2cctzW70t4uxMtljQYXvBS",
+      "title": "אינדסטריט",
+      "artist": "Balishag",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:48:15.129Z"
+    },
     {
       "id": "5eKMrWBAOfHIs3PlnuNkjE",
       "title": "איך שיר נולד",
