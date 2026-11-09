@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3485,
-  "last_updated": "2026-11-09T20:49:47.891Z",
+  "version": 3486,
+  "last_updated": "2026-11-09T20:49:51.106Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2VXfWrAtxfRk2htJGv86a2",
+      "title": "שעטנז על הכיכר",
+      "artist": "E-Z, Peled",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:49:51.106Z"
+    },
     {
       "id": "6lrLTyagMN7HgKUxzpwRsA",
       "title": "ראפר מגניב",
