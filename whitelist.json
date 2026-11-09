@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3452,
-  "last_updated": "2026-11-09T20:47:35.816Z",
+  "version": 3453,
+  "last_updated": "2026-11-09T20:47:40.795Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "70tAyUQbKJMgvfoQ6WRprP",
+      "title": "Would You Please",
+      "artist": "Yerachmiel Begun & The Miami Boys Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-09T20:47:40.795Z"
+    },
     {
       "id": "0x6J8fJxnI8fv1iny96m3x",
       "title": "Stand Up",
