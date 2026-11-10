@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3518,
-  "last_updated": "2026-11-10T20:00:20.220Z",
+  "version": 3519,
+  "last_updated": "2026-11-10T20:00:25.605Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0v8qYqiSshuN8W2zg29r9k",
+      "title": "Nuk Eshte Njejte",
+      "artist": "Kaltrina Selimi, Genc Prelvukaj",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:00:25.605Z"
+    },
     {
       "id": "4zTmb9eTSoeIAFeFgzwMxu",
       "title": "Me Ty Dua Te Jem",
