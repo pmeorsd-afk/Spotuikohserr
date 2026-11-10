@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3506,
-  "last_updated": "2026-11-10T19:59:22.403Z",
+  "version": 3507,
+  "last_updated": "2026-11-10T19:59:26.137Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "557CJdchRFIqWE0V5iUR8A",
+      "title": "היא ברזילאית",
+      "artist": "אדם זרו, יאיר לוגסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:59:26.137Z"
+    },
     {
       "id": "2dpe4tyuC0d9ofnOlCMFpC",
       "title": "המצב של היום",
