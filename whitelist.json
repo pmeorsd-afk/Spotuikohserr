@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3521,
-  "last_updated": "2026-11-10T20:00:33.517Z",
+  "version": 3523,
+  "last_updated": "2026-11-10T20:00:37.775Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "04cJYrXIk61x1Uqxwyogkt",
+      "title": "Hold Me (In the Fire)",
+      "artist": "LAV x MKEY, Kanslor, feva.",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:00:37.775Z"
+    },
+    {
+      "id": "3RWOajPikv8N6nQ5Nh2klY",
+      "title": "Still Here",
+      "artist": "SVALAN",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:00:37.775Z"
+    },
     {
       "id": "39Ij5D1t7I36PTW27IJ24L",
       "title": "שיר התקווה",
