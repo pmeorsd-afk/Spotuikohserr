@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3597,
-  "last_updated": "2026-11-10T20:05:18.666Z",
+  "version": 3598,
+  "last_updated": "2026-11-10T20:05:22.102Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4rXLjWdF2ZZpXCVTfWcshS",
+      "title": "fukumean",
+      "artist": "Gunna",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:05:22.102Z"
+    },
     {
       "id": "5ikDKRaK06bF2k62YJqn35",
       "title": "שמע ישראל (כשהלב בוכה)",
