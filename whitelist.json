@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3515,
-  "last_updated": "2026-11-10T20:00:11.402Z",
+  "version": 3517,
+  "last_updated": "2026-11-10T20:00:15.641Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7xjI4f3kISo4Sd5UCcUGFv",
+      "title": "Me Fal",
+      "artist": "Elita 5",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:00:15.641Z"
+    },
+    {
+      "id": "68OmKUJWzxu9jMtuGJzJQD",
+      "title": "במבי אדומה",
+      "artist": "Avi Aburomi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:00:15.641Z"
+    },
     {
       "id": "2J9eOkgJgqO9RZildWbsYu",
       "title": "Pianisti",
