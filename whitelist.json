@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3507,
-  "last_updated": "2026-11-10T19:59:26.137Z",
+  "version": 3508,
+  "last_updated": "2026-11-10T19:59:29.638Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6szX23Ov6W8CYt8XwuQkPH",
+      "title": "רציתי לספר לך",
+      "artist": "Yagel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:59:29.638Z"
+    },
     {
       "id": "557CJdchRFIqWE0V5iUR8A",
       "title": "היא ברזילאית",
