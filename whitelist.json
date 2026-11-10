@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3563,
-  "last_updated": "2026-11-10T20:03:05.464Z",
+  "version": 3564,
+  "last_updated": "2026-11-10T20:03:09.189Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7cP1di0NqgWKJJeH08H4Sb",
+      "title": "Sa e dua Shqiperine",
+      "artist": "Ylli Baka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:09.189Z"
+    },
     {
       "id": "4leWpxXrE56dV1DbNl1hV5",
       "title": "Rruget e Fatit",
