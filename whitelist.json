@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3554,
-  "last_updated": "2026-11-10T20:02:31.537Z",
+  "version": 3555,
+  "last_updated": "2026-11-10T20:02:35.421Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2jjsIpj4OG68TpojNlZcE6",
+      "title": "Flowers (Say My Name)",
+      "artist": "ArrDee",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:35.421Z"
+    },
     {
       "id": "1wUpbNyIar4OFPM1Fg3R3j",
       "title": "Let’s Go (feat. Aitch)",
