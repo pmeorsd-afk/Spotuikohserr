@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3605,
-  "last_updated": "2026-11-10T20:05:44.333Z",
+  "version": 3606,
+  "last_updated": "2026-11-10T20:05:50.142Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1DeWE32KEqhxdsMNh8BbcV",
+      "title": "Korim Lerabenu",
+      "artist": "Nerya Engel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:05:50.142Z"
+    },
     {
       "id": "63dUCpX5wpsCsEZ83C1aUi",
       "title": "כמו שאני",
