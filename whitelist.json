@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3564,
-  "last_updated": "2026-11-10T20:03:09.189Z",
+  "version": 3565,
+  "last_updated": "2026-11-10T20:03:12.449Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6qsB9E0eM0eqkpWghGBroa",
+      "title": "מישהו אחר",
+      "artist": "ים רפאלי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:12.449Z"
+    },
     {
       "id": "7cP1di0NqgWKJJeH08H4Sb",
       "title": "Sa e dua Shqiperine",
