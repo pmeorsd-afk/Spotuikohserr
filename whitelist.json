@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3623,
-  "last_updated": "2026-11-10T20:56:04.715Z",
+  "version": 3624,
+  "last_updated": "2026-11-10T20:57:34.345Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "18qzPNrPLF6SI2DBn174zM",
+      "title": "את",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:57:34.345Z"
+    },
     {
       "id": "4igpslTqYWspfws3blGsRM",
       "title": "אם רק תדברי",
