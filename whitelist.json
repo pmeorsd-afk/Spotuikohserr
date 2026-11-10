@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3523,
-  "last_updated": "2026-11-10T20:00:37.775Z",
+  "version": 3524,
+  "last_updated": "2026-11-10T20:00:41.009Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1tR8hiXhloHvk1U2Lsd3Fn",
+      "title": "ציוד כבד",
+      "artist": "Tuna",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:00:41.009Z"
+    },
     {
       "id": "04cJYrXIk61x1Uqxwyogkt",
       "title": "Hold Me (In the Fire)",
