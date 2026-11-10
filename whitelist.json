@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3545,
-  "last_updated": "2026-11-10T20:02:04.318Z",
+  "version": 3546,
+  "last_updated": "2026-11-10T20:02:10.798Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0NZPBYD5qbEWRs3PrGiRkT",
+      "title": "Unholy (feat. Kim Petras)",
+      "artist": "Sam Smith, Kim Petras",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:10.798Z"
+    },
     {
       "id": "4wHkV6OpCanrNg2PRNhWjM",
       "title": "Baby (feat. Ashanti)",
