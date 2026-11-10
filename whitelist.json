@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3627,
-  "last_updated": "2026-11-10T21:24:48.856Z",
+  "version": 3628,
+  "last_updated": "2026-11-10T21:24:52.815Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7li6nY5P3kEVbfRUBkRnKu",
+      "title": "בדד",
+      "artist": "Zohar Argov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T21:24:52.815Z"
+    },
     {
       "id": "3O6lvNbXuFYBHz7pmrbBqX",
       "title": "פמלה חלק 1",
