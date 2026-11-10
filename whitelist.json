@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3513,
-  "last_updated": "2026-11-10T20:00:03.024Z",
+  "version": 3514,
+  "last_updated": "2026-11-10T20:00:06.965Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6OtcwmjGXoJ354KXT944XX",
+      "title": "החיוך האלגנטי",
+      "artist": "Avi Aburomi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:00:06.965Z"
+    },
     {
       "id": "3DEEHW4kkYezUPYB8nwpMt",
       "title": "אהבה של כאב",
