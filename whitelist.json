@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3591,
-  "last_updated": "2026-11-10T20:04:48.703Z",
+  "version": 3592,
+  "last_updated": "2026-11-10T20:04:52.112Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "65OVbaJR5O1RmwOQx0875b",
+      "title": "Wants and Needs (feat. Lil Baby)",
+      "artist": "Drake, Lil Baby",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:04:52.112Z"
+    },
     {
       "id": "4Kj4MFA1ks8ztmdCTDNcpu",
       "title": "פדה בשלום - יוסף יצחק בן אפרים",
