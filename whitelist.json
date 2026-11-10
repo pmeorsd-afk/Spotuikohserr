@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3531,
-  "last_updated": "2026-11-10T20:00:59.865Z",
+  "version": 3532,
+  "last_updated": "2026-11-10T20:01:03.509Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0afhq8XCExXpqazXczTSve",
+      "title": "Galway Girl",
+      "artist": "Ed Sheeran",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:01:03.509Z"
+    },
     {
       "id": "5fZJQrFKWQLb7FpJXZ1g7K",
       "title": "A Bar Song (Tipsy)",
