@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3578,
-  "last_updated": "2026-11-10T20:04:02.420Z",
+  "version": 3580,
+  "last_updated": "2026-11-10T20:04:06.590Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "58NBSNdG8s0jSikjPRmdjS",
+      "title": "סביבון סוב סוב סוב",
+      "artist": "Hana Laszlo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:04:06.590Z"
+    },
+    {
+      "id": "3K6JDi9KNpX4T4xgrgCD82",
+      "title": "יום שישי הגיע",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:04:06.590Z"
+    },
     {
       "id": "2uZgji0m6WVPMkv1Hykf16",
       "title": "אל תענה",
