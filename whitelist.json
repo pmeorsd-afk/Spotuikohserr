@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3556,
-  "last_updated": "2026-11-10T20:02:40.209Z",
+  "version": 3557,
+  "last_updated": "2026-11-10T20:02:47.484Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "40t1Zri59UBrjidQ6tlpvE",
+      "title": "Shakah Chamah",
+      "artist": "שלמה יהודה רכניץ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:47.484Z"
+    },
     {
       "id": "2jjsIpj4OG68TpojNlZcE6",
       "title": "Flowers (Say My Name)",
