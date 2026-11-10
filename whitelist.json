@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3617,
-  "last_updated": "2026-11-10T20:15:59.675Z",
+  "version": 3618,
+  "last_updated": "2026-11-10T20:46:51.015Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "63SQIcJn4v1qRkkWAGgkm6",
+      "title": "רק רוצה לרקוד - הופעה חיה",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:46:51.015Z"
+    },
     {
       "id": "2T8q8Jbb113gOkHtLMfvmv",
       "title": "מחרוזת:מהשמים",
