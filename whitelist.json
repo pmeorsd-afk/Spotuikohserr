@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3547,
-  "last_updated": "2026-11-10T20:02:14.377Z",
+  "version": 3548,
+  "last_updated": "2026-11-10T20:02:17.593Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0H8Tclo4x4kbZruQtZFNSX",
+      "title": "I Just Called",
+      "artist": "NEIKED, Anne-Marie, Latto",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:17.593Z"
+    },
     {
       "id": "5HeJByGM7j6zu77LnD6VqV",
       "title": "War",
