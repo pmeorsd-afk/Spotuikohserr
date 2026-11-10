@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3570,
-  "last_updated": "2026-11-10T20:03:32.907Z",
+  "version": 3572,
+  "last_updated": "2026-11-10T20:03:36.515Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3TdFEPoKQDuyW2NCiOMrz0",
+      "title": "בוא תכיר את אבא",
+      "artist": "הרב יגאל כהן, Idan Bakshi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:36.515Z"
+    },
+    {
+      "id": "4SioD9ZlVugOFEc9s7tH2V",
+      "title": "תסלחי",
+      "artist": "Ron Buhnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:36.515Z"
+    },
     {
       "id": "40JpsHk5riP6KNPHY9kwh9",
       "title": "בואי לתמיד",
