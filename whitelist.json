@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3494,
-  "last_updated": "2026-11-10T19:58:54.153Z",
+  "version": 3496,
+  "last_updated": "2026-11-10T19:58:57.642Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2m9axSosHP92250FvnnobM",
+      "title": "Slime Mentality",
+      "artist": "YoungBoy Never Broke Again",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:58:57.642Z"
+    },
+    {
+      "id": "5zRPYlxK5EtXMKbflBKovY",
+      "title": "Survivor",
+      "artist": "YoungBoy Never Broke Again",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:58:57.642Z"
+    },
     {
       "id": "0fLIDxLGhb0JvyVMcnQ6Ey",
       "title": "ריל שיט",
