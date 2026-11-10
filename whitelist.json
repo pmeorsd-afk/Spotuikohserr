@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3492,
-  "last_updated": "2026-11-09T22:11:17.949Z",
+  "version": 3493,
+  "last_updated": "2026-11-10T19:58:43.862Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0RWdychiKtWwOlbtcjW21c",
+      "title": "Gustavo Gaviria",
+      "artist": "Lacrim",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:58:43.862Z"
+    },
     {
       "id": "3xhB4jhZE9u6e0FqRdjt3a",
       "title": "Basof Haparparim Metim",
