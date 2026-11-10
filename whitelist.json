@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3638,
-  "last_updated": "2026-11-10T21:57:02.659Z",
+  "version": 3640,
+  "last_updated": "2026-11-10T21:57:06.481Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6r9DYAeSXuDNIqtH2pEFSj",
+      "title": "Люби меня",
+      "artist": "MiyaGi & Endspiel, Sимптом",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T21:57:06.481Z"
+    },
+    {
+      "id": "5zuex7tbGFz0gSHlrMvQdu",
+      "title": "COULD BE WRONG",
+      "artist": "LOSTBOYJAY",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T21:57:06.481Z"
+    },
     {
       "id": "2TZtVPdqYRWIg06mq8GcGI",
       "title": "bring it fine - tekkno",
