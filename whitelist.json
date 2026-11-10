@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3616,
-  "last_updated": "2026-11-10T20:06:57.172Z",
+  "version": 3617,
+  "last_updated": "2026-11-10T20:15:59.675Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2T8q8Jbb113gOkHtLMfvmv",
+      "title": "מחרוזת:מהשמים",
+      "artist": "Moshe Perez",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:15:59.675Z"
+    },
     {
       "id": "7iZmW7pQTFw1WcxoMJit8F",
       "title": "Entre mis recuerdos - Piano Version",
