@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3562,
-  "last_updated": "2026-11-10T20:03:00.910Z",
+  "version": 3563,
+  "last_updated": "2026-11-10T20:03:05.464Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4leWpxXrE56dV1DbNl1hV5",
+      "title": "Rruget e Fatit",
+      "artist": "Ylli Baka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:05.464Z"
+    },
     {
       "id": "4b8yHMs59Wjk8MSn3MBZJU",
       "title": "כלום לא טעים - לייב",
