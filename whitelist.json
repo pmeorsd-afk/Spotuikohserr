@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3551,
-  "last_updated": "2026-11-10T20:02:25.140Z",
+  "version": 3552,
+  "last_updated": "2026-11-10T20:02:28.334Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "47VxpRcw9dskdWkW0PlBym",
+      "title": "abcdefu (angrier)",
+      "artist": "GAYLE",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:28.334Z"
+    },
     {
       "id": "2PPD8ikfbuuTyx3kglvJJs",
       "title": "Fuego",
