@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3609,
-  "last_updated": "2026-11-10T20:06:11.955Z",
+  "version": 3610,
+  "last_updated": "2026-11-10T20:06:15.454Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5og1clKNQeNMxAUx3Zaib6",
+      "title": "אני היהלום",
+      "artist": "יוסף נטיב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:06:15.454Z"
+    },
     {
       "id": "4OhkMdiM3DmQGwMdCmD5Jg",
       "title": "מחרוזת להיטים",
