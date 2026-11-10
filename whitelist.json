@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3646,
-  "last_updated": "2026-11-10T22:30:16.992Z",
+  "version": 3647,
+  "last_updated": "2026-11-10T22:30:20.526Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "48ssE5wlutXIiCiRvUKC89",
+      "title": "אל תעזבי ידיים Live",
+      "artist": "Ishay Ribo, Akiva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T22:30:20.526Z"
+    },
     {
       "id": "6gc16DyFA3zMhExB4u9W9E",
       "title": "Tefillin",
