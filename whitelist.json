@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3633,
-  "last_updated": "2026-11-10T21:26:56.963Z",
+  "version": 3634,
+  "last_updated": "2026-11-10T21:46:51.642Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0cGG2EouYCEEC3xfa0tDFV",
+      "title": "Tainted Love",
+      "artist": "Soft Cell",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T21:46:51.642Z"
+    },
     {
       "id": "5XbEfvWwz8LBXvf3ArRPAq",
       "title": "סוכר",
