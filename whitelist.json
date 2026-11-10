@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3644,
-  "last_updated": "2026-11-10T22:30:07.952Z",
+  "version": 3645,
+  "last_updated": "2026-11-10T22:30:11.851Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7njURvjupS753AfJ7RUkP7",
+      "title": "הסטייל שלי",
+      "artist": "חן פורתי, Tzaguy Boy, Tzukush",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T22:30:11.851Z"
+    },
     {
       "id": "4WbQaxKI0R0SmWNZvgUDNz",
       "title": "בוקר טוב חיים שלי",
