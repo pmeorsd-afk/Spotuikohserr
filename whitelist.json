@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3548,
-  "last_updated": "2026-11-10T20:02:17.593Z",
+  "version": 3549,
+  "last_updated": "2026-11-10T20:02:21.578Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2BJQsC2t9a5t6jINRicoi9",
+      "title": "אני משקרת?",
+      "artist": "Eden Ben Zaken, Noa Kirel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:21.578Z"
+    },
     {
       "id": "0H8Tclo4x4kbZruQtZFNSX",
       "title": "I Just Called",
