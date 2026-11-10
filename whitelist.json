@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3621,
-  "last_updated": "2026-11-10T20:47:02.533Z",
+  "version": 3622,
+  "last_updated": "2026-11-10T20:47:09.729Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3pfLXI427a5jGdtwnoLBVl",
+      "title": "מעליי דממה",
+      "artist": "Shai Tsabari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:47:09.729Z"
+    },
     {
       "id": "5rvHgNOGAK2IlKsPeMo0cM",
       "title": "באסים בבגאז'",
