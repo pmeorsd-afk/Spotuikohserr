@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3600,
-  "last_updated": "2026-11-10T20:05:29.986Z",
+  "version": 3601,
+  "last_updated": "2026-11-10T20:05:33.795Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1vlnRiWMNcOBzpMuDF2oUG",
+      "title": "יום גדול",
+      "artist": "Subliminal, Hezi Shaked",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:05:33.795Z"
+    },
     {
       "id": "2TdbCVtJ74INhpit6FtIJM",
       "title": "Abba",
