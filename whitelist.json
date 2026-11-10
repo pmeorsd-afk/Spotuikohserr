@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3647,
-  "last_updated": "2026-11-10T22:30:20.526Z",
+  "version": 3648,
+  "last_updated": "2026-11-10T22:30:24.740Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2xKHYKKDAzaPj7VtdbrNwd",
+      "title": "B'Karov Mamash - בקרוב ממש",
+      "artist": "Mendy Hershkowitz Band, Shmueli Ungar, Lev Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T22:30:24.740Z"
+    },
     {
       "id": "48ssE5wlutXIiCiRvUKC89",
       "title": "אל תעזבי ידיים Live",
