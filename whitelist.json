@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3612,
-  "last_updated": "2026-11-10T20:06:24.561Z",
+  "version": 3613,
+  "last_updated": "2026-11-10T20:06:32.995Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "082FxtXuNdKmhpJgx6V9RM",
+      "title": "ממה את מפחדת",
+      "artist": "פרויקט שרים קריוקי, עידן שרון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:06:32.995Z"
+    },
     {
       "id": "5fwSHlTEWpluwOM0Sxnh5k",
       "title": "Pepas",
