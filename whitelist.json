@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3584,
-  "last_updated": "2026-11-10T20:04:22.984Z",
+  "version": 3586,
+  "last_updated": "2026-11-10T20:04:26.263Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "38weg8UtFTFYvNonT4h7vv",
+      "title": "אללה מעק",
+      "artist": "מאור אדרי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:04:26.263Z"
+    },
+    {
+      "id": "1IkLm6ZYkn0okGpUumuDAx",
+      "title": "האוטו שלי, היופי שלך",
+      "artist": "דודו אהרון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:04:26.263Z"
+    },
     {
       "id": "4j6zwZXmowzteSNjeqq1np",
       "title": "איך את אוהבת",
