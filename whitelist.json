@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3567,
-  "last_updated": "2026-11-10T20:03:19.372Z",
+  "version": 3568,
+  "last_updated": "2026-11-10T20:03:25.994Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -22157,6 +22157,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-11-10T20:02:40.209Z"
+    },
+    {
+      "id": "47f4c10dcfb8f5a1a6932aab86205ffa03f8564aa135f517",
+      "url": "https://mosaic.scdn.co/640/ab67616d00001e020867e5eb7b18c4afffd4388cab67616d00001e023815dde9aa7d9e59324a12caab67616d00001e02b27b98e0a933097e7e092c17ab67616d00001e02ef69a7c0d44ad56fd664d987",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-11-10T20:03:25.994Z"
     }
   ],
   "search_images": [
