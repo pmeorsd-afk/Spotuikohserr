@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3511,
-  "last_updated": "2026-11-10T19:59:47.726Z",
+  "version": 3512,
+  "last_updated": "2026-11-10T19:59:51.407Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7HOY13l7GrAQPs04EUG5Z3",
+      "title": "יה שמע",
+      "artist": "היוצרים, שילה אליה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:59:51.407Z"
+    },
     {
       "id": "17iXrbrkHCoARMLcL9Ws9p",
       "title": "ילדה של מלך",
