@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3580,
-  "last_updated": "2026-11-10T20:04:06.590Z",
+  "version": 3581,
+  "last_updated": "2026-11-10T20:04:10.233Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5R5wL4rbWPKeUrFGyvc5Nu",
+      "title": "בסוף הכל חולף",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:04:10.233Z"
+    },
     {
       "id": "58NBSNdG8s0jSikjPRmdjS",
       "title": "סביבון סוב סוב סוב",
