@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3572,
-  "last_updated": "2026-11-10T20:03:36.515Z",
+  "version": 3573,
+  "last_updated": "2026-11-10T20:03:39.549Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2dNqsY3YrTLDOivziWYF3p",
+      "title": "כמה קל לך",
+      "artist": "נדב חנציס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:39.549Z"
+    },
     {
       "id": "3TdFEPoKQDuyW2NCiOMrz0",
       "title": "בוא תכיר את אבא",
