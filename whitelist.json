@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3636,
-  "last_updated": "2026-11-10T21:56:52.914Z",
+  "version": 3637,
+  "last_updated": "2026-11-10T21:56:58.721Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5CkagnykIgnpOEorVEHgCF",
+      "title": "בדיוק כמו שאני",
+      "artist": "Ravid Plotnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T21:56:58.721Z"
+    },
     {
       "id": "2zCTIniS5dXTgnLrIjn9Ov",
       "title": "Хулиган",
