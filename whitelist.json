@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3575,
-  "last_updated": "2026-11-10T20:03:48.294Z",
+  "version": 3576,
+  "last_updated": "2026-11-10T20:03:55.276Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1RgcguEJ0u7iERSNP8jyZQ",
+      "title": "חברים שלי",
+      "artist": "ליעד מאיר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:55.276Z"
+    },
     {
       "id": "7DD0aprQ1h0of82fvxFkJt",
       "title": "מביט מהצד",
