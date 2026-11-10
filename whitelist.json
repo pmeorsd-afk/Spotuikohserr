@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3618,
-  "last_updated": "2026-11-10T20:46:51.015Z",
+  "version": 3619,
+  "last_updated": "2026-11-10T20:46:55.260Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6QddT6zw4XJc8qEfKNncNE",
+      "title": "רוח ים",
+      "artist": "Ofer Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:46:55.260Z"
+    },
     {
       "id": "63SQIcJn4v1qRkkWAGgkm6",
       "title": "רק רוצה לרקוד - הופעה חיה",
