@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3525,
-  "last_updated": "2026-11-10T20:00:44.528Z",
+  "version": 3526,
+  "last_updated": "2026-11-10T20:00:48.056Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6WRb5VxXEUmctfrCjwLWTS",
+      "title": "מונו",
+      "artist": "Shlomi Saranga",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:00:48.056Z"
+    },
     {
       "id": "2d8JP84HNLKhmd6IYOoupQ",
       "title": "Trap Queen",
