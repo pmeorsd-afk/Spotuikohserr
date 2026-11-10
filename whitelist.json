@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3645,
-  "last_updated": "2026-11-10T22:30:11.851Z",
+  "version": 3646,
+  "last_updated": "2026-11-10T22:30:16.992Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6gc16DyFA3zMhExB4u9W9E",
+      "title": "Tefillin",
+      "artist": "Sruli & Netanel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T22:30:16.992Z"
+    },
     {
       "id": "7njURvjupS753AfJ7RUkP7",
       "title": "הסטייל שלי",
