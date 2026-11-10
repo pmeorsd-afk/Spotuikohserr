@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3510,
-  "last_updated": "2026-11-10T19:59:38.619Z",
+  "version": 3511,
+  "last_updated": "2026-11-10T19:59:47.726Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "17iXrbrkHCoARMLcL9Ws9p",
+      "title": "ילדה של מלך",
+      "artist": "סאלי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:59:47.726Z"
+    },
     {
       "id": "6RsytNrIoSHxSI1kd9jU3N",
       "title": "אתה הולך איתי",
