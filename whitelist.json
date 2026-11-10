@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3611,
-  "last_updated": "2026-11-10T20:06:19.599Z",
+  "version": 3612,
+  "last_updated": "2026-11-10T20:06:24.561Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5fwSHlTEWpluwOM0Sxnh5k",
+      "title": "Pepas",
+      "artist": "Farruko",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:06:24.561Z"
+    },
     {
       "id": "6CAdEnpqO9gNJvpO2mw5Xt",
       "title": "אם תלך",
