@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3631,
-  "last_updated": "2026-11-10T21:24:59.791Z",
+  "version": 3632,
+  "last_updated": "2026-11-10T21:26:53.828Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2RSHsoi04658QL5xgQVov3",
+      "title": "Bad Liar",
+      "artist": "Imagine Dragons",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T21:26:53.828Z"
+    },
     {
       "id": "00qgS209onbQOaNgygnEY2",
       "title": "מלך השטויות",
