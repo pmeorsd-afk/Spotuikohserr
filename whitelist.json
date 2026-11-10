@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3577,
-  "last_updated": "2026-11-10T20:03:58.974Z",
+  "version": 3578,
+  "last_updated": "2026-11-10T20:04:02.420Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2uZgji0m6WVPMkv1Hykf16",
+      "title": "אל תענה",
+      "artist": "Tamir Bar, שם טוב האבי, ליעד מאיר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:04:02.420Z"
+    },
     {
       "id": "7CvSFDE8Bhjf7CooDTkfcN",
       "title": "עוד יום יבוא",
