@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3625,
-  "last_updated": "2026-11-10T21:05:28.533Z",
+  "version": 3626,
+  "last_updated": "2026-11-10T21:05:31.944Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Eubuce7IyguQzI5vaMAHl",
+      "title": "צליל ענבלים",
+      "artist": "ישי לוי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T21:05:31.944Z"
+    },
     {
       "id": "1oRsIlMA0T7jphxwP6mz8o",
       "title": "האהבה הישנה",
