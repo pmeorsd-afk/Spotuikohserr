@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3524,
-  "last_updated": "2026-11-10T20:00:41.009Z",
+  "version": 3525,
+  "last_updated": "2026-11-10T20:00:44.528Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2d8JP84HNLKhmd6IYOoupQ",
+      "title": "Trap Queen",
+      "artist": "Fetty Wap",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:00:44.528Z"
+    },
     {
       "id": "1tR8hiXhloHvk1U2Lsd3Fn",
       "title": "ציוד כבד",
