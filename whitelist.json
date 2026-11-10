@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3500,
-  "last_updated": "2026-11-10T19:59:08.308Z",
+  "version": 3502,
+  "last_updated": "2026-11-10T19:59:11.423Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4KiuCliJXTD5rvIy9GdzEl",
+      "title": "קאש קאש מאני",
+      "artist": "Balishag, La R.O.D",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:59:11.423Z"
+    },
+    {
+      "id": "5bxx3Iz8jfEoGXYJbQH8ZJ",
+      "title": "No Flaws",
+      "artist": "King Von",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:59:11.423Z"
+    },
     {
       "id": "23TwR29GSeJBfXnXhmDlwR",
       "title": "Crazy Story, Pt. 3",
