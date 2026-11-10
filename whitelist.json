@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3508,
-  "last_updated": "2026-11-10T19:59:29.638Z",
+  "version": 3509,
+  "last_updated": "2026-11-10T19:59:35.281Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4s47dTM3AcLhNlgU49mXN4",
+      "title": "מחרוזת מנגנת את חיי - Live",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:59:35.281Z"
+    },
     {
       "id": "6szX23Ov6W8CYt8XwuQkPH",
       "title": "רציתי לספר לך",
