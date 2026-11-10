@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3606,
-  "last_updated": "2026-11-10T20:05:50.142Z",
+  "version": 3607,
+  "last_updated": "2026-11-10T20:06:02.480Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6e2PwbkSf3U8uBNk8drGnC",
+      "title": "Ahavat Chinam - Yochanan Remix",
+      "artist": "Sruli & Netanel, Yochanan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:06:02.480Z"
+    },
     {
       "id": "1DeWE32KEqhxdsMNh8BbcV",
       "title": "Korim Lerabenu",
