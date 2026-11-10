@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3622,
-  "last_updated": "2026-11-10T20:47:09.729Z",
+  "version": 3623,
+  "last_updated": "2026-11-10T20:56:04.715Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4igpslTqYWspfws3blGsRM",
+      "title": "אם רק תדברי",
+      "artist": "Guy Mazig",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:56:04.715Z"
+    },
     {
       "id": "3pfLXI427a5jGdtwnoLBVl",
       "title": "מעליי דממה",
