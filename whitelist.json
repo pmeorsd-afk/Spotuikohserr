@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3557,
-  "last_updated": "2026-11-10T20:02:47.484Z",
+  "version": 3558,
+  "last_updated": "2026-11-10T20:02:50.540Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7z5G2LOdV8okZn4yWg3q5g",
+      "title": "Night Away (Dance) (feat. Tion Wayne)",
+      "artist": "A1 x J1, Tion Wayne",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:50.540Z"
+    },
     {
       "id": "40t1Zri59UBrjidQ6tlpvE",
       "title": "Shakah Chamah",
