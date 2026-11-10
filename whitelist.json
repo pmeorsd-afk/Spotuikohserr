@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3589,
-  "last_updated": "2026-11-10T20:04:38.961Z",
+  "version": 3590,
+  "last_updated": "2026-11-10T20:04:42.068Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "78QR3Wp35dqAhFEc2qAGjE",
+      "title": "Drip Too Hard (Lil Baby & Gunna)",
+      "artist": "Lil Baby, Gunna",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:04:42.068Z"
+    },
     {
       "id": "6kWd7ann82aIFmtaMWGaOr",
       "title": "ניגון ראש חודש כסלו",
