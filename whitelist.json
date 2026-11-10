@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3565,
-  "last_updated": "2026-11-10T20:03:12.449Z",
+  "version": 3566,
+  "last_updated": "2026-11-10T20:03:15.784Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2spXGaBLZqm3DbWqIAYuVE",
+      "title": "למרות הכל",
+      "artist": "Nathan Goshen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:15.784Z"
+    },
     {
       "id": "6qsB9E0eM0eqkpWghGBroa",
       "title": "מישהו אחר",
