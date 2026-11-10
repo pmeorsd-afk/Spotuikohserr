@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3581,
-  "last_updated": "2026-11-10T20:04:10.233Z",
+  "version": 3582,
+  "last_updated": "2026-11-10T20:04:13.363Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "74pFL7BKjs1DYDi6Sdgt11",
+      "title": "השיר הכי יפה שלך",
+      "artist": "Bar Tzabary",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:04:13.363Z"
+    },
     {
       "id": "5R5wL4rbWPKeUrFGyvc5Nu",
       "title": "בסוף הכל חולף",
