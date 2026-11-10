@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3568,
-  "last_updated": "2026-11-10T20:03:25.994Z",
+  "version": 3569,
+  "last_updated": "2026-11-10T20:03:29.730Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7kdaKTSGpqF2s6xwPsrjCN",
+      "title": "גבולות הגיון",
+      "artist": "Nathan Goshen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:29.730Z"
+    },
     {
       "id": "7rJlOmce09zyby9rxC6ozT",
       "title": "אושר לדקה",
