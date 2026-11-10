@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3549,
-  "last_updated": "2026-11-10T20:02:21.578Z",
+  "version": 3551,
+  "last_updated": "2026-11-10T20:02:25.140Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2PPD8ikfbuuTyx3kglvJJs",
+      "title": "Fuego",
+      "artist": "Aitch",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:25.140Z"
+    },
+    {
+      "id": "01pswLkpYoIr2aPIjSEOJ2",
+      "title": "Victoria's Secret",
+      "artist": "Jax",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:25.140Z"
+    },
     {
       "id": "2BJQsC2t9a5t6jINRicoi9",
       "title": "אני משקרת?",
