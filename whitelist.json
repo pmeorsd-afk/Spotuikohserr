@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3587,
-  "last_updated": "2026-11-10T20:04:29.562Z",
+  "version": 3588,
+  "last_updated": "2026-11-10T20:04:35.701Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3NH03H21lT822daMIUj4NM",
+      "title": "זירת אגרוף",
+      "artist": "Adir Getz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:04:35.701Z"
+    },
     {
       "id": "4JkX2aIE18SSvZ75JP0zr9",
       "title": "שתיתי",
