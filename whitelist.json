@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3552,
-  "last_updated": "2026-11-10T20:02:28.334Z",
+  "version": 3554,
+  "last_updated": "2026-11-10T20:02:31.537Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1wUpbNyIar4OFPM1Fg3R3j",
+      "title": "Let’s Go (feat. Aitch)",
+      "artist": "Tion Wayne, Aitch",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:31.537Z"
+    },
+    {
+      "id": "5TVZxju3wm7QBFneagDGP8",
+      "title": "נשבר לי",
+      "artist": "Avi Aburomi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:31.537Z"
+    },
     {
       "id": "47VxpRcw9dskdWkW0PlBym",
       "title": "abcdefu (angrier)",
