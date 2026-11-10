@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3628,
-  "last_updated": "2026-11-10T21:24:52.815Z",
+  "version": 3630,
+  "last_updated": "2026-11-10T21:24:56.468Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5IjG5I04MpsRiXdqF2Dh4V",
+      "title": "קטורנה מסאלה",
+      "artist": "Ethnix",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T21:24:56.468Z"
+    },
+    {
+      "id": "0J7zmRI6sleoO6O60Ijq6m",
+      "title": "בשכונה של איב אנד ליר",
+      "artist": "Eve And Lear",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T21:24:56.468Z"
+    },
     {
       "id": "7li6nY5P3kEVbfRUBkRnKu",
       "title": "בדד",
