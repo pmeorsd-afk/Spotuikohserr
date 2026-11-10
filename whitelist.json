@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3534,
-  "last_updated": "2026-11-10T20:01:10.573Z",
+  "version": 3535,
+  "last_updated": "2026-11-10T20:01:14.166Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1WoOzgvz6CgH4pX6a1RKGp",
+      "title": "My Way (feat. Monty)",
+      "artist": "Fetty Wap, Monty",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:01:14.166Z"
+    },
     {
       "id": "6ML1r69f9svzuFz3MGfqNM",
       "title": "נעימת השיכורים",
