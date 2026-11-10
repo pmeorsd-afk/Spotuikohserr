@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3546,
-  "last_updated": "2026-11-10T20:02:10.798Z",
+  "version": 3547,
+  "last_updated": "2026-11-10T20:02:14.377Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5HeJByGM7j6zu77LnD6VqV",
+      "title": "War",
+      "artist": "ArrDee, Aitch",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:14.377Z"
+    },
     {
       "id": "0NZPBYD5qbEWRs3PrGiRkT",
       "title": "Unholy (feat. Kim Petras)",
