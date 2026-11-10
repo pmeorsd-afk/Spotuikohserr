@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3608,
-  "last_updated": "2026-11-10T20:06:06.173Z",
+  "version": 3609,
+  "last_updated": "2026-11-10T20:06:11.955Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4OhkMdiM3DmQGwMdCmD5Jg",
+      "title": "מחרוזת להיטים",
+      "artist": "משה קליין, דוד ביתן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:06:11.955Z"
+    },
     {
       "id": "37gLDbIhRwpzuGirzYeU8y",
       "title": "הבל הבלים",
