@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3528,
-  "last_updated": "2026-11-10T20:00:52.234Z",
+  "version": 3530,
+  "last_updated": "2026-11-10T20:00:56.007Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "250nV95gsFq0bcaICqQFg4",
+      "title": "כינור דוד",
+      "artist": "Shimi Tavori",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:00:56.007Z"
+    },
+    {
+      "id": "0rtDE9zfXbamTlRUSwY7zy",
+      "title": "Belong Together",
+      "artist": "Mark Ambor",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:00:56.007Z"
+    },
     {
       "id": "7hk9hVBgdKCbkQOnjxl8bC",
       "title": "Stargazing",
