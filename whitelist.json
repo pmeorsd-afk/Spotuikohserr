@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3504,
-  "last_updated": "2026-11-10T19:59:19.013Z",
+  "version": 3506,
+  "last_updated": "2026-11-10T19:59:22.403Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2dpe4tyuC0d9ofnOlCMFpC",
+      "title": "המצב של היום",
+      "artist": "אופק אדנק",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:59:22.403Z"
+    },
+    {
+      "id": "2GF6npOyqbAwVGTIiRI4gC",
+      "title": "סטייל חו\"ל",
+      "artist": "אופק אדנק",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:59:22.403Z"
+    },
     {
       "id": "5D6L2WSgeKk5j3c3qsccSC",
       "title": "כמעט מלאכים",
