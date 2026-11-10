@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3561,
-  "last_updated": "2026-11-10T20:02:57.714Z",
+  "version": 3562,
+  "last_updated": "2026-11-10T20:03:00.910Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4b8yHMs59Wjk8MSn3MBZJU",
+      "title": "כלום לא טעים - לייב",
+      "artist": "X Factor Israel to the Eurovision, Ilay Elmakys",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:00.910Z"
+    },
     {
       "id": "44SNWKN1OIsZbQRVjI7hbu",
       "title": "תפלי אליי",
