@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3590,
-  "last_updated": "2026-11-10T20:04:42.068Z",
+  "version": 3591,
+  "last_updated": "2026-11-10T20:04:48.703Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Kj4MFA1ks8ztmdCTDNcpu",
+      "title": "פדה בשלום - יוסף יצחק בן אפרים",
+      "artist": "ניגוני חבד",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:04:48.703Z"
+    },
     {
       "id": "78QR3Wp35dqAhFEc2qAGjE",
       "title": "Drip Too Hard (Lil Baby & Gunna)",
