@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3599,
-  "last_updated": "2026-11-10T20:05:25.799Z",
+  "version": 3600,
+  "last_updated": "2026-11-10T20:05:29.986Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2TdbCVtJ74INhpit6FtIJM",
+      "title": "Abba",
+      "artist": "Sruli & Netanel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:05:29.986Z"
+    },
     {
       "id": "5d01AUplB1QOZY3kPrAuot",
       "title": "UK Rap",
