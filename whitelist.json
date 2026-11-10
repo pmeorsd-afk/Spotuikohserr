@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3586,
-  "last_updated": "2026-11-10T20:04:26.263Z",
+  "version": 3587,
+  "last_updated": "2026-11-10T20:04:29.562Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4JkX2aIE18SSvZ75JP0zr9",
+      "title": "שתיתי",
+      "artist": "פאר טסי, Alon De Loco",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:04:29.562Z"
+    },
     {
       "id": "38weg8UtFTFYvNonT4h7vv",
       "title": "אללה מעק",
