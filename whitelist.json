@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3642,
-  "last_updated": "2026-11-10T21:58:25.882Z",
+  "version": 3643,
+  "last_updated": "2026-11-10T22:30:03.953Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4WbQaxKI0R0SmWNZvgUDNz",
+      "title": "בוקר טוב חיים שלי",
+      "artist": "Ravid Plotnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T22:30:03.953Z"
+    },
     {
       "id": "3kdxURFWsMaY9Hw34Nk5zU",
       "title": "Nostalgia",
