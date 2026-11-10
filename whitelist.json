@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3569,
-  "last_updated": "2026-11-10T20:03:29.730Z",
+  "version": 3570,
+  "last_updated": "2026-11-10T20:03:32.907Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "40JpsHk5riP6KNPHY9kwh9",
+      "title": "בואי לתמיד",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:32.907Z"
+    },
     {
       "id": "7kdaKTSGpqF2s6xwPsrjCN",
       "title": "גבולות הגיון",
