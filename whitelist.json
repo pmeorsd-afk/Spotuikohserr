@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3566,
-  "last_updated": "2026-11-10T20:03:15.784Z",
+  "version": 3567,
+  "last_updated": "2026-11-10T20:03:19.372Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7rJlOmce09zyby9rxC6ozT",
+      "title": "אושר לדקה",
+      "artist": "Ori Ben Ari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:19.372Z"
+    },
     {
       "id": "2spXGaBLZqm3DbWqIAYuVE",
       "title": "למרות הכל",
