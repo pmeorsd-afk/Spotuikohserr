@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3512,
-  "last_updated": "2026-11-10T19:59:51.407Z",
+  "version": 3513,
+  "last_updated": "2026-11-10T20:00:03.024Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3DEEHW4kkYezUPYB8nwpMt",
+      "title": "אהבה של כאב",
+      "artist": "החללית, Avi Aburomi, Idan Bakshi, Offir Malol",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:00:03.024Z"
+    },
     {
       "id": "7HOY13l7GrAQPs04EUG5Z3",
       "title": "יה שמע",
