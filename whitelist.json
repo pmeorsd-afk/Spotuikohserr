@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3520,
-  "last_updated": "2026-11-10T20:00:29.977Z",
+  "version": 3521,
+  "last_updated": "2026-11-10T20:00:33.517Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "39Ij5D1t7I36PTW27IJ24L",
+      "title": "שיר התקווה",
+      "artist": "שוקי סלומון, שמוליק ברגר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:00:33.517Z"
+    },
     {
       "id": "32gF8Kc8bjRqeFSzTMKJ1G",
       "title": "צל עץ תמר ואור ירח",
