@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3604,
-  "last_updated": "2026-11-10T20:05:40.728Z",
+  "version": 3605,
+  "last_updated": "2026-11-10T20:05:44.333Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "63dUCpX5wpsCsEZ83C1aUi",
+      "title": "כמו שאני",
+      "artist": "Maya Dadon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:05:44.333Z"
+    },
     {
       "id": "5EiwK6dVYxQaAE2rSL2GU9",
       "title": "אלף כוכבים",
