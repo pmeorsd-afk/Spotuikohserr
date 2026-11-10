@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3573,
-  "last_updated": "2026-11-10T20:03:39.549Z",
+  "version": 3574,
+  "last_updated": "2026-11-10T20:03:42.744Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5qAtFFVdoR5M0WD53LPvaa",
+      "title": "כמעט שנתיים",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:42.744Z"
+    },
     {
       "id": "2dNqsY3YrTLDOivziWYF3p",
       "title": "כמה קל לך",
