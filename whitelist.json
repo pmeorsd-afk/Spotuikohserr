@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3624,
-  "last_updated": "2026-11-10T20:57:34.345Z",
+  "version": 3625,
+  "last_updated": "2026-11-10T21:05:28.533Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1oRsIlMA0T7jphxwP6mz8o",
+      "title": "האהבה הישנה",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T21:05:28.533Z"
+    },
     {
       "id": "18qzPNrPLF6SI2DBn174zM",
       "title": "את",
