@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3544,
-  "last_updated": "2026-11-10T20:02:00.980Z",
+  "version": 3545,
+  "last_updated": "2026-11-10T20:02:04.318Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4wHkV6OpCanrNg2PRNhWjM",
+      "title": "Baby (feat. Ashanti)",
+      "artist": "Aitch, Ashanti",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:04.318Z"
+    },
     {
       "id": "1iuljeYz6ZG3GTJOZZkoer",
       "title": "RGF Island",
