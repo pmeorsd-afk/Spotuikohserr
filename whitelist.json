@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3538,
-  "last_updated": "2026-11-10T20:01:20.811Z",
+  "version": 3539,
+  "last_updated": "2026-11-10T20:01:24.567Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6xUTtAMPEFbHsFCbhhfpvU",
+      "title": "Party Girl (feat. Fetty Wap)",
+      "artist": "Bankhead, Fetty Wap",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:01:24.567Z"
+    },
     {
       "id": "6SQxBmC6MxS4apXSmJQXwT",
       "title": "השיר האחרון (by Offir Malol)",
