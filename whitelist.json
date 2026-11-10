@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3576,
-  "last_updated": "2026-11-10T20:03:55.276Z",
+  "version": 3577,
+  "last_updated": "2026-11-10T20:03:58.974Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7CvSFDE8Bhjf7CooDTkfcN",
+      "title": "עוד יום יבוא",
+      "artist": "Shlomi Saranga, Zohar Argov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:03:58.974Z"
+    },
     {
       "id": "1RgcguEJ0u7iERSNP8jyZQ",
       "title": "חברים שלי",
