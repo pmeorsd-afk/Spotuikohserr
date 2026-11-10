@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3536,
-  "last_updated": "2026-11-10T20:01:17.370Z",
+  "version": 3538,
+  "last_updated": "2026-11-10T20:01:20.811Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6SQxBmC6MxS4apXSmJQXwT",
+      "title": "השיר האחרון (by Offir Malol)",
+      "artist": "החללית, Avi Aburomi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:01:20.811Z"
+    },
+    {
+      "id": "5IZc3KIVFhjzJ0L2kiXzUl",
+      "title": "Promise (feat. Fetty Wap)",
+      "artist": "Kid Ink, Fetty Wap",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:01:20.811Z"
+    },
     {
       "id": "7ubH9FrQCQF5AHJmfX1uS9",
       "title": "Sunshine for Two - with water sounds",
