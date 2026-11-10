@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3602,
-  "last_updated": "2026-11-10T20:05:37.059Z",
+  "version": 3604,
+  "last_updated": "2026-11-10T20:05:40.728Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5EiwK6dVYxQaAE2rSL2GU9",
+      "title": "אלף כוכבים",
+      "artist": "Subliminal, The Shadow, Avi Aburomi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:05:40.728Z"
+    },
+    {
+      "id": "2Kw8l7MB6V3h72on6BLaM2",
+      "title": "יום גדול - Instrumental",
+      "artist": "Subliminal, Hezi Shaked",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:05:40.728Z"
+    },
     {
       "id": "1L2V5XdQNcOKP7HxFJw066",
       "title": "יום גדול",
