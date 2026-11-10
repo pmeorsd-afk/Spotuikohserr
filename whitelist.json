@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3499,
-  "last_updated": "2026-11-10T19:59:04.758Z",
+  "version": 3500,
+  "last_updated": "2026-11-10T19:59:08.308Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "23TwR29GSeJBfXnXhmDlwR",
+      "title": "Crazy Story, Pt. 3",
+      "artist": "King Von",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:59:08.308Z"
+    },
     {
       "id": "5ajv8r9vHuNKRqmiOhQCpr",
       "title": "חבילה בתיק",
