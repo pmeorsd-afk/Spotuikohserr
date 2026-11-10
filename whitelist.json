@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3610,
-  "last_updated": "2026-11-10T20:06:15.454Z",
+  "version": 3611,
+  "last_updated": "2026-11-10T20:06:19.599Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6CAdEnpqO9gNJvpO2mw5Xt",
+      "title": "אם תלך",
+      "artist": "Idan Raichel for Babies",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:06:19.599Z"
+    },
     {
       "id": "5og1clKNQeNMxAUx3Zaib6",
       "title": "אני היהלום",
