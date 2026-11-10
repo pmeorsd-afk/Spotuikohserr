@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3496,
-  "last_updated": "2026-11-10T19:58:57.642Z",
+  "version": 3497,
+  "last_updated": "2026-11-10T19:59:00.909Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0CVHlWoRDl05QJ4wgfXh9x",
+      "title": "Slide (feat. King Von)",
+      "artist": "Yak Yola, King Von",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T19:59:00.909Z"
+    },
     {
       "id": "2m9axSosHP92250FvnnobM",
       "title": "Slime Mentality",
