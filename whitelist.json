@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3607,
-  "last_updated": "2026-11-10T20:06:02.480Z",
+  "version": 3608,
+  "last_updated": "2026-11-10T20:06:06.173Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "37gLDbIhRwpzuGirzYeU8y",
+      "title": "הבל הבלים",
+      "artist": "יהודה מור, ישראלי'ק בש",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:06:06.173Z"
+    },
     {
       "id": "6e2PwbkSf3U8uBNk8drGnC",
       "title": "Ahavat Chinam - Yochanan Remix",
