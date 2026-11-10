@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3533,
-  "last_updated": "2026-11-10T20:01:06.826Z",
+  "version": 3534,
+  "last_updated": "2026-11-10T20:01:10.573Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ML1r69f9svzuFz3MGfqNM",
+      "title": "נעימת השיכורים",
+      "artist": "Yoni Roeh",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:01:10.573Z"
+    },
     {
       "id": "1cS0TgbR263ey9jn0MwD2s",
       "title": "River (feat. Ed Sheeran)",
