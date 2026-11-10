@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3559,
-  "last_updated": "2026-11-10T20:02:54.107Z",
+  "version": 3561,
+  "last_updated": "2026-11-10T20:02:57.714Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44SNWKN1OIsZbQRVjI7hbu",
+      "title": "תפלי אליי",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:57.714Z"
+    },
+    {
+      "id": "7xauFnLzc3aepYInfPEHIq",
+      "title": "מזל שיש לי אותך",
+      "artist": "gal goldstein",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:02:57.714Z"
+    },
     {
       "id": "5dA83d8LVoTXIX035X2LqW",
       "title": "סופרמן",
