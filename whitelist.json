@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3595,
-  "last_updated": "2026-11-10T20:04:58.928Z",
+  "version": 3596,
+  "last_updated": "2026-11-10T20:05:07.652Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2CSPaUCuLVo6aZOGv8I2qV",
+      "title": "ניגון התוועדות מחסידי הצמח צדק",
+      "artist": "Seder Nigunim, Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:05:07.652Z"
+    },
     {
       "id": "3zkyus0njMCL6phZmNNEeN",
       "title": "LET GO",
