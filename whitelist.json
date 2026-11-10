@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3596,
-  "last_updated": "2026-11-10T20:05:07.652Z",
+  "version": 3597,
+  "last_updated": "2026-11-10T20:05:18.666Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5ikDKRaK06bF2k62YJqn35",
+      "title": "שמע ישראל (כשהלב בוכה)",
+      "artist": "Amiran Dvir, דוד ד'אור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-10T20:05:18.666Z"
+    },
     {
       "id": "2CSPaUCuLVo6aZOGv8I2qV",
       "title": "ניגון התוועדות מחסידי הצמח צדק",
