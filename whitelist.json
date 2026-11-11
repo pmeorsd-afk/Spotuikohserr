@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3688,
-  "last_updated": "2026-11-11T20:43:52.845Z",
+  "version": 3689,
+  "last_updated": "2026-11-11T20:43:56.335Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6kPhTUEv1rlkPWw6pD8rwe",
+      "title": "נועדנו",
+      "artist": "Gilad Segev",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:43:56.335Z"
+    },
     {
       "id": "2aibwv5hGXSgw7Yru8IYTO",
       "title": "Snow (Hey Oh)",
