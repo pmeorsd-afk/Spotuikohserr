@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3823,
-  "last_updated": "2026-11-11T21:21:55.833Z",
+  "version": 3824,
+  "last_updated": "2026-11-11T21:22:12.832Z",
   "artists": [
+    {
+      "id": "28i2gpreu0V4UjxNHzzw17",
+      "canonical_name": "Pinky Weber",
+      "aliases": [
+        "Pinky Weber"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:22:12.832Z"
+    },
     {
       "id": "7r9AW25laBl7Rc8r2F9qz2",
       "canonical_name": "להקת שיר חדש Shir Hadash band",
