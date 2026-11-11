@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3794,
-  "last_updated": "2026-11-11T21:19:46.490Z",
+  "version": 3795,
+  "last_updated": "2026-11-11T21:19:49.741Z",
   "artists": [
+    {
+      "id": "10jxIFH8Iu77bdcyEXUVB8",
+      "canonical_name": "הרשי סגל",
+      "aliases": [
+        "הרשי סגל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:19:49.741Z"
+    },
     {
       "id": "0XLxEO23ZPW4CbiUrT6c3C",
       "canonical_name": "שוכי גולדשטיין",
