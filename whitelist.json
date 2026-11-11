@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3672,
-  "last_updated": "2026-11-11T20:40:59.841Z",
+  "version": 3673,
+  "last_updated": "2026-11-11T20:41:06.519Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3z2ESdXO3OkQss2bKlVYvz",
+      "title": "אשת חיל",
+      "artist": "נעם שפייר, אור שפייר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:41:06.519Z"
+    },
     {
       "id": "3dmQQleuNJM4WW0ocY1Z3n",
       "title": "קול ביער",
