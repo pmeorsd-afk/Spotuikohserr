@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3776,
-  "last_updated": "2026-11-11T20:55:03.098Z",
+  "version": 3777,
+  "last_updated": "2026-11-11T20:55:09.367Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2wBnZdVWa5jVpvYRfGU7rP",
+      "title": "Mary On A Cross",
+      "artist": "Ghost",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:55:09.367Z"
+    },
     {
       "id": "1r1fPuhj9H4VdXr7OK6FL5",
       "title": "CASTLE OF GLASS",
