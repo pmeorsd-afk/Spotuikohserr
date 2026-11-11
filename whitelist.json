@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3781,
-  "last_updated": "2026-11-11T20:55:19.581Z",
+  "version": 3782,
+  "last_updated": "2026-11-11T20:55:23.007Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7AYHViJJinWbat9PPc1DGn",
+      "title": "Jump Slowed",
+      "artist": "Hevvy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:55:23.007Z"
+    },
     {
       "id": "6wi3c0sHfbLi7E5ighjFnq",
       "title": "MAN1C BATMAN",
