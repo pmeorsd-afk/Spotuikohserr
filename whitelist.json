@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3664,
-  "last_updated": "2026-11-11T20:40:03.599Z",
+  "version": 3665,
+  "last_updated": "2026-11-11T20:40:06.516Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2SkP7mDgRy2DaPs9wiSld4",
+      "title": "חופשי ומאושר",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:40:06.516Z"
+    },
     {
       "id": "3ejfcz0QPyV717Vd3ta04V",
       "title": "My Way",
