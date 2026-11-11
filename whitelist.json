@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3802,
-  "last_updated": "2026-11-11T21:20:26.696Z",
+  "version": 3803,
+  "last_updated": "2026-11-11T21:20:30.368Z",
   "artists": [
+    {
+      "id": "3HpzgdOCu0X0YQN9XdMnb2",
+      "canonical_name": "נתי לוין",
+      "aliases": [
+        "נתי לוין"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:20:30.368Z"
+    },
     {
       "id": "1d5nwfdjD8W5Z0v5opp1aE",
       "canonical_name": "Eyal Twito",
