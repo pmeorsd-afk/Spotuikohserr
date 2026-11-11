@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3738,
-  "last_updated": "2026-11-11T20:48:58.618Z",
+  "version": 3739,
+  "last_updated": "2026-11-11T20:49:01.600Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "50Or7niXp29xwKc8F9pLQA",
+      "title": "לונדון דובאי",
+      "artist": "קפליו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:49:01.600Z"
+    },
     {
       "id": "02fioXgiXg9NwaZjFrVbU1",
       "title": "אוהבת אותי",
