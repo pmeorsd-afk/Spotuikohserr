@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3741,
-  "last_updated": "2026-11-11T20:49:08.497Z",
+  "version": 3742,
+  "last_updated": "2026-11-11T20:50:43.591Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Tv4MBAWmEK1e8GYXAP6w9",
+      "title": "קלאסה",
+      "artist": "אברהם איילאו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:50:43.591Z"
+    },
     {
       "id": "2nWiVQa2P5stCzpwlHI72Z",
       "title": "Mood#",
