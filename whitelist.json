@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3774,
-  "last_updated": "2026-11-11T20:54:57.224Z",
+  "version": 3775,
+  "last_updated": "2026-11-11T20:55:00.030Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3a9TMd2Yrza6HXqqlfMtfy",
+      "title": "Est-ce que tu m'aimes ? - Pilule bleue",
+      "artist": "GIMS",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:55:00.030Z"
+    },
     {
       "id": "0pbQdFuD2p3iDa2YwqgSWT",
       "title": "Shivti",
