@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3692,
-  "last_updated": "2026-11-11T20:44:02.594Z",
+  "version": 3693,
+  "last_updated": "2026-11-11T20:44:09.574Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7fwiU1ZnmaakUJdhk4TIkY",
+      "title": "Althuiz Nigun",
+      "artist": "Nadav Bachar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:44:09.574Z"
+    },
     {
       "id": "5lqyqPU3JkpCbUbLmTVQPW",
       "title": "The Unforgiven - Remastered 2021",
