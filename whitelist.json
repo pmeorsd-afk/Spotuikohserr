@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3806,
-  "last_updated": "2026-11-11T21:20:41.545Z",
+  "version": 3807,
+  "last_updated": "2026-11-11T21:20:45.237Z",
   "artists": [
+    {
+      "id": "3EJbtD7nRKjJl97tsHRxQg",
+      "canonical_name": "אורייתא נוקדים",
+      "aliases": [
+        "אורייתא נוקדים"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:20:45.237Z"
+    },
     {
       "id": "7GLqWuCVBOv0HM8908jYlB",
       "canonical_name": "איצי אקרמן",
