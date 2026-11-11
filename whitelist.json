@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3790,
-  "last_updated": "2026-11-11T20:56:04.880Z",
+  "version": 3791,
+  "last_updated": "2026-11-11T21:19:31.371Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4De1gbKBTMKTIODMN2b0L7",
+      "title": "בדרך אמונה בחרתי",
+      "artist": "Moshe Perez",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:19:31.371Z"
+    },
     {
       "id": "5TbzAWWc5eJaANpA9kfGCd",
       "title": "Love Me Again",
