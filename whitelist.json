@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3801,
-  "last_updated": "2026-11-11T21:20:21.326Z",
+  "version": 3802,
+  "last_updated": "2026-11-11T21:20:26.696Z",
   "artists": [
+    {
+      "id": "1d5nwfdjD8W5Z0v5opp1aE",
+      "canonical_name": "Eyal Twito",
+      "aliases": [
+        "Eyal Twito"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:20:26.696Z"
+    },
     {
       "id": "1eEoKm2pLWGRPgwnxkCi3R",
       "canonical_name": "Yehuda Green",
