@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3650,
-  "last_updated": "2026-11-11T20:39:06.577Z",
+  "version": 3651,
+  "last_updated": "2026-11-11T20:39:09.748Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2JkViQcDQT1ks7zPTHOqyL",
+      "title": "נפלתי איתך",
+      "artist": "אלקנה מרציאנו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:39:09.748Z"
+    },
     {
       "id": "264TWa7KES3bmCDgsEVuH2",
       "title": "הילה",
