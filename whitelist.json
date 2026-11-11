@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3667,
-  "last_updated": "2026-11-11T20:40:13.899Z",
+  "version": 3668,
+  "last_updated": "2026-11-11T20:40:25.604Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5lu2SL5ONx2FHsj9Eh7xFn",
+      "title": "יש בי אמונה - DJ Niso Slob Remix",
+      "artist": "ארי גולד, דיג'יי ניסו סלוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:40:25.604Z"
+    },
     {
       "id": "5HNUTNNpyjpfhfQ6iIjeSY",
       "title": "אח יא עיוני",
