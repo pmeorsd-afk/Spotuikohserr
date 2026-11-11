@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3763,
-  "last_updated": "2026-11-11T20:53:42.377Z",
+  "version": 3764,
+  "last_updated": "2026-11-11T20:53:45.613Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3znh11eICuDFLwel50qjSD",
+      "title": "Bishvili",
+      "artist": "Moshik Afia",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:53:45.613Z"
+    },
     {
       "id": "5z81MM0ckan9NGrrnHZ3A6",
       "title": "Hoshana",
