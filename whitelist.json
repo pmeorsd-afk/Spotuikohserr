@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3690,
-  "last_updated": "2026-11-11T20:43:59.472Z",
+  "version": 3692,
+  "last_updated": "2026-11-11T20:44:02.594Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5lqyqPU3JkpCbUbLmTVQPW",
+      "title": "The Unforgiven - Remastered 2021",
+      "artist": "Metallica",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:44:02.594Z"
+    },
+    {
+      "id": "6iBi1uTYjYVD5tXtLnzDVb",
+      "title": "ואם תבואי אליי - גרסת פסנתר",
+      "artist": "Idan Raichel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:44:02.594Z"
+    },
     {
       "id": "4qz1H015zVaJIxFaFMB6o4",
       "title": "חופי פיראוס",
