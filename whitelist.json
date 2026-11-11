@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3662,
-  "last_updated": "2026-11-11T20:39:57.083Z",
+  "version": 3663,
+  "last_updated": "2026-11-11T20:40:00.293Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2If2NeA5XgvO07DhYETbva",
+      "title": "אור מחזיר אור",
+      "artist": "Shir David Gadasi, Argaman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:40:00.293Z"
+    },
     {
       "id": "4PFwvHhuf3sYJmkBuXz78n",
       "title": "אוהב אבל מציאותי",
