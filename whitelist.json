@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3814,
-  "last_updated": "2026-11-11T21:21:21.207Z",
+  "version": 3815,
+  "last_updated": "2026-11-11T21:21:24.681Z",
   "artists": [
+    {
+      "id": "6Ztpb94hA4naHTZW01nqXi",
+      "canonical_name": "אור שפייר",
+      "aliases": [
+        "אור שפייר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:21:24.681Z"
+    },
     {
       "id": "0z770vf4sbnknFvLVbJx8p",
       "canonical_name": "Nadav Bachar",
