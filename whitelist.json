@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3677,
-  "last_updated": "2026-11-11T20:41:23.760Z",
+  "version": 3678,
+  "last_updated": "2026-11-11T20:41:27.322Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5DtezbY6TExNguuFNUygID",
+      "title": "האהבה תנצח",
+      "artist": "Ethnix",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:41:27.322Z"
+    },
     {
       "id": "6HjtZWIo0bh0KLD8Tq4ujR",
       "title": "DotA - Radio Edit",
