@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3777,
-  "last_updated": "2026-11-11T20:55:09.367Z",
+  "version": 3778,
+  "last_updated": "2026-11-11T20:55:12.606Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5mFQCdbvuzVATC7tP7XsPp",
+      "title": "Rhythm Is a Dancer - 7\" Edit",
+      "artist": "SNAP!",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:55:12.606Z"
+    },
     {
       "id": "2wBnZdVWa5jVpvYRfGU7rP",
       "title": "Mary On A Cross",
