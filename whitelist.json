@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3762,
-  "last_updated": "2026-11-11T20:53:30.939Z",
+  "version": 3763,
+  "last_updated": "2026-11-11T20:53:42.377Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5z81MM0ckan9NGrrnHZ3A6",
+      "title": "Hoshana",
+      "artist": "Ari Goldwag, קובי ברומר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:53:42.377Z"
+    },
     {
       "id": "1pAIOdbnb1NPI2Iv6vifZA",
       "title": "בשלב הבא",
