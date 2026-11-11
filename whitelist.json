@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3747,
-  "last_updated": "2026-11-11T20:51:03.860Z",
+  "version": 3748,
+  "last_updated": "2026-11-11T20:51:06.923Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5rfJ2Bq2PEL8yBjZLzouEu",
+      "title": "Who Can It Be Now?",
+      "artist": "Men At Work",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:51:06.923Z"
+    },
     {
       "id": "1NET7b4NMGZGbG4FSxwtga",
       "title": "כשנגמרת הסופה",
