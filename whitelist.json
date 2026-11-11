@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3826,
-  "last_updated": "2026-11-11T21:22:20.110Z",
+  "version": 3827,
+  "last_updated": "2026-11-11T21:25:51.776Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4YWbXiA0gVHKfUoWEYEa8F",
+      "title": "לאן שהרוח תיקח",
+      "artist": "Gil Vain, טליסמאן, Omri Sabach",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:25:51.776Z"
+    },
     {
       "id": "6LOYPgfDgt5FKTiWqyBwI8",
       "title": "יותר מדי שנים",
