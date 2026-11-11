@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3809,
-  "last_updated": "2026-11-11T21:20:56.403Z",
+  "version": 3810,
+  "last_updated": "2026-11-11T21:21:05.437Z",
   "artists": [
+    {
+      "id": "4hPs6Ec5ZTGKNgks65JP2k",
+      "canonical_name": "יוחנן",
+      "aliases": [
+        "יוחנן"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:21:05.437Z"
+    },
     {
       "id": "0IeB2kWPHsk5ADVRzjAxBB",
       "canonical_name": "ניגוני חבד",
