@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3804,
-  "last_updated": "2026-11-11T21:20:34.923Z",
+  "version": 3805,
+  "last_updated": "2026-11-11T21:20:38.645Z",
   "artists": [
+    {
+      "id": "3l9ofl4s5THKtsramkdIq6",
+      "canonical_name": "Seder Nigunim",
+      "aliases": [
+        "Seder Nigunim"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:20:38.645Z"
+    },
     {
       "id": "0c2Jcp6eQW5gsaPdrsI6uP",
       "canonical_name": "Ari Goldwag",
