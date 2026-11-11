@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3746,
-  "last_updated": "2026-11-11T20:51:00.265Z",
+  "version": 3747,
+  "last_updated": "2026-11-11T20:51:03.860Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1NET7b4NMGZGbG4FSxwtga",
+      "title": "כשנגמרת הסופה",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:51:03.860Z"
+    },
     {
       "id": "3ZZq9396zv8pcn5GYVhxUi",
       "title": "Down Under",
