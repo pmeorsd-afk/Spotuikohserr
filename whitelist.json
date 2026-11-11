@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3717,
-  "last_updated": "2026-11-11T20:47:35.787Z",
+  "version": 3719,
+  "last_updated": "2026-11-11T20:47:39.265Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "26QKxvjlCo2fSd3T4c8Zpb",
+      "title": "Heart of Gold",
+      "artist": "Neil Young",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:47:39.265Z"
+    },
+    {
+      "id": "7snQQk1zcKl8gZ92AnueZW",
+      "title": "Sweet Child O' Mine",
+      "artist": "Guns N' Roses",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:47:39.265Z"
+    },
     {
       "id": "08mG3Y1vljYA6bvDt4Wqkj",
       "title": "Back In Black",
