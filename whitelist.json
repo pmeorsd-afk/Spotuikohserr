@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3701,
-  "last_updated": "2026-11-11T20:46:06.487Z",
+  "version": 3702,
+  "last_updated": "2026-11-11T20:46:10.021Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3n7WZ20xxoIp2lwyBGAgWG",
+      "title": "No Ball",
+      "artist": "Brother Strut",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:46:10.021Z"
+    },
     {
       "id": "1s6mRglgoDBUsivMREEiAW",
       "title": "קברי הצדיקים",
