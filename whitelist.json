@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3786,
-  "last_updated": "2026-11-11T20:55:45.484Z",
+  "version": 3787,
+  "last_updated": "2026-11-11T20:55:49.332Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2zZxAdLZf3hhJHboKBMm29",
+      "title": "NINAO",
+      "artist": "GIMS",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:55:49.332Z"
+    },
     {
       "id": "1m0UFnuTktOkksvjbF9z0m",
       "title": "Ramenez la coupe à la maison",
