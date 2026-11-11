@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3820,
-  "last_updated": "2026-11-11T21:21:38.023Z",
+  "version": 3821,
+  "last_updated": "2026-11-11T21:21:41.560Z",
   "artists": [
+    {
+      "id": "1giqtregfk1yoJcPEzyrqC",
+      "canonical_name": "Yosef Moshe Kahana",
+      "aliases": [
+        "Yosef Moshe Kahana"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:21:41.560Z"
+    },
     {
       "id": "7zHY1FDMndjW6MSPZb3aOo",
       "canonical_name": "דרשו",
