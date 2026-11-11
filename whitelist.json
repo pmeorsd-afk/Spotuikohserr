@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3723,
-  "last_updated": "2026-11-11T20:47:59.318Z",
+  "version": 3724,
+  "last_updated": "2026-11-11T20:48:03.577Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0fc3xvxeopJBDbk7cZ1IU5",
+      "title": "הכל לטובה",
+      "artist": "ליאור כהן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:48:03.577Z"
+    },
     {
       "id": "0CoJxkeRDICuu7vTIZn11C",
       "title": "גבר הולך לאיבוד 1995",
