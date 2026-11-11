@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3757,
-  "last_updated": "2026-11-11T20:52:36.909Z",
+  "version": 3758,
+  "last_updated": "2026-11-11T20:52:53.947Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "487V4q4PfbWRCEy7j9Kuxd",
+      "title": "ואמרתם",
+      "artist": "Yosef Moshe Kahana",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:52:53.947Z"
+    },
     {
       "id": "7CxFjVbljakiJULRUxH5AB",
       "title": "שערי שמים - Live",
