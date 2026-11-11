@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3728,
-  "last_updated": "2026-11-11T20:48:18.235Z",
+  "version": 3729,
+  "last_updated": "2026-11-11T20:48:21.399Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Gg1tYCl7rWR4laKbdtPA4",
+      "title": "Daylight",
+      "artist": "David Kushner",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:48:21.399Z"
+    },
     {
       "id": "46VtRJI1zPgZOu9MKK29ga",
       "title": "איתך עד סוף הזמן",
