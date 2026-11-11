@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3703,
-  "last_updated": "2026-11-11T20:46:20.090Z",
+  "version": 3704,
+  "last_updated": "2026-11-11T20:46:26.704Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3VyCYStiIiOKQxJaNaEpCF",
+      "title": "בלדה לשוטר (מהסרט \"השוטר אזולאי\")",
+      "artist": "Oshik Levy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:46:26.704Z"
+    },
     {
       "id": "3eWQsfiwM5gaMTFi94PH7E",
       "title": "פידלע",
