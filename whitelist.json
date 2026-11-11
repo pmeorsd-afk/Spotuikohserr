@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3668,
-  "last_updated": "2026-11-11T20:40:25.604Z",
+  "version": 3669,
+  "last_updated": "2026-11-11T20:40:33.720Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2X5Kn1JY3a0gSlub2rV6pr",
+      "title": "ברצלונה",
+      "artist": "The Voice Israel, Shar-El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:40:33.720Z"
+    },
     {
       "id": "5lu2SL5ONx2FHsj9Eh7xFn",
       "title": "יש בי אמונה - DJ Niso Slob Remix",
