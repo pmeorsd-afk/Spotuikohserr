@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3807,
-  "last_updated": "2026-11-11T21:20:45.237Z",
+  "version": 3808,
+  "last_updated": "2026-11-11T21:20:48.641Z",
   "artists": [
     {
       "id": "3EJbtD7nRKjJl97tsHRxQg",
@@ -3350,6 +3350,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0G9A7qhIklWOHjbyb3i7D8",
+      "title": "הוזה אותך מולי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:20:48.641Z"
+    },
     {
       "id": "5nhjo2vDRqhlWdt48bwwKP",
       "title": "רגע גדול",
