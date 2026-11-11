@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3825,
-  "last_updated": "2026-11-11T21:22:16.436Z",
+  "version": 3826,
+  "last_updated": "2026-11-11T21:22:20.110Z",
   "artists": [
+    {
+      "id": "6c9RrACmBdZbkAZPp2C9bo",
+      "canonical_name": "אסף קורץ",
+      "aliases": [
+        "אסף קורץ"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:22:20.110Z"
+    },
     {
       "id": "4dswhnG6Ah8CTxkq1AZiEN",
       "canonical_name": "Nerya Engel",
