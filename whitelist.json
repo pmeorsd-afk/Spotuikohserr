@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3742,
-  "last_updated": "2026-11-11T20:50:43.591Z",
+  "version": 3743,
+  "last_updated": "2026-11-11T20:50:46.790Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "08rceAEIiZStEcoKSxnVqP",
+      "title": "מתוק כשמרלי",
+      "artist": "אוריה אזערי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:50:46.790Z"
+    },
     {
       "id": "6Tv4MBAWmEK1e8GYXAP6w9",
       "title": "קלאסה",
