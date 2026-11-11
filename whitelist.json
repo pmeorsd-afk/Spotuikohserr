@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3760,
-  "last_updated": "2026-11-11T20:53:19.301Z",
+  "version": 3761,
+  "last_updated": "2026-11-11T20:53:26.943Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1kCmA0ZAuDg8FTn09LQOll",
+      "title": "Kah Riboin",
+      "artist": "Ari Goldwag",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:53:26.943Z"
+    },
     {
       "id": "1zebpUqcpTuV0Z8YDTQTE2",
       "title": "להקת שיר חדש - מחרוזת שירי חנוכה || על הניסים || יוונים יוונים || ובאו זרים || מעוז צור ישועתי || מן המיצר",
