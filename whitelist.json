@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3773,
-  "last_updated": "2026-11-11T20:54:50.507Z",
+  "version": 3774,
+  "last_updated": "2026-11-11T20:54:57.224Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0pbQdFuD2p3iDa2YwqgSWT",
+      "title": "Shivti",
+      "artist": "Gelf, Yosef Gestetner",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:54:57.224Z"
+    },
     {
       "id": "20sC2edulbcYLtOo0BZR8I",
       "title": "בסוף יהיה טוב-רמיקס",
