@@ -1,8 +1,28 @@
 {
   "schema_version": 2,
-  "version": 3816,
-  "last_updated": "2026-11-11T21:21:27.992Z",
+  "version": 3818,
+  "last_updated": "2026-11-11T21:21:31.513Z",
   "artists": [
+    {
+      "id": "6n8jS4Jz0ureN4q5vjAZvX",
+      "canonical_name": "שמחה בירנהאק",
+      "aliases": [
+        "שמחה בירנהאק"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:21:31.513Z"
+    },
+    {
+      "id": "0UBY0qIzvoqJIQ42I6Hxod",
+      "canonical_name": "סנדי דינקל",
+      "aliases": [
+        "סנדי דינקל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:21:31.513Z"
+    },
     {
       "id": "6Ztpb94hA4naHTZW01nqXi",
       "canonical_name": "אור שפייר",
