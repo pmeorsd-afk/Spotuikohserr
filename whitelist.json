@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3811,
-  "last_updated": "2026-11-11T21:21:09.652Z",
+  "version": 3812,
+  "last_updated": "2026-11-11T21:21:13.178Z",
   "artists": [
+    {
+      "id": "4yFFS8W2tfPLiRbgawPMy5",
+      "canonical_name": "Ianir Kilinsky",
+      "aliases": [
+        "Ianir Kilinsky"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:21:13.178Z"
+    },
     {
       "id": "1WBdrLUATfmEwHEuWmcNJa",
       "canonical_name": "דוד ביתן",
