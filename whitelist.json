@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3736,
-  "last_updated": "2026-11-11T20:48:50.330Z",
+  "version": 3737,
+  "last_updated": "2026-11-11T20:48:55.205Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2yBckxEYHmgaa4CM5jJRMs",
+      "title": "סיבוב",
+      "artist": "Balishag, La R.O.D",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:48:55.205Z"
+    },
     {
       "id": "5hyJRm3gV6RAry8pJindIP",
       "title": "יש אהבה",
