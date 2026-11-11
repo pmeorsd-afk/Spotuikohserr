@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3655,
-  "last_updated": "2026-11-11T20:39:20.519Z",
+  "version": 3656,
+  "last_updated": "2026-11-11T20:39:25.005Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0WUrWUtxBT77KSaIZ7XgFD",
+      "title": "כמה ימים",
+      "artist": "Eyal Golan, Moshe Perez",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:39:25.005Z"
+    },
     {
       "id": "0NUFmHEVcxPH6AFB0VY7Nm",
       "title": "יפה בלבן",
