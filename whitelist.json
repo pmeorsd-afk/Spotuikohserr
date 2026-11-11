@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3784,
-  "last_updated": "2026-11-11T20:55:36.528Z",
+  "version": 3785,
+  "last_updated": "2026-11-11T20:55:39.720Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1RXoCep9hxApPfx8UFsGZk",
+      "title": "Take It Out On Me",
+      "artist": "Thousand Foot Krutch",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:55:39.720Z"
+    },
     {
       "id": "20z2ZtTIXxpUocIuMh5j7m",
       "title": "מודה אני",
