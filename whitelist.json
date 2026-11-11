@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3720,
-  "last_updated": "2026-11-11T20:47:42.517Z",
+  "version": 3721,
+  "last_updated": "2026-11-11T20:47:45.669Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0GwcBK821xPuRklr4Hptdc",
+      "title": "Vocal",
+      "artist": "Madrugada",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:47:45.669Z"
+    },
     {
       "id": "6p1ba90LpQ0tYzfhJTRtjE",
       "title": "Lover, Lover, Lover - Live Sept 24, 2009; Ramat Gan Stadium, Tel Aviv, Israel",
