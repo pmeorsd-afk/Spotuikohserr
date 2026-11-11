@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3694,
-  "last_updated": "2026-11-11T20:44:15.025Z",
+  "version": 3695,
+  "last_updated": "2026-11-11T20:44:18.555Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6yMOiGEJHHjazJDR7ZJmHe",
+      "title": "ניגון הבעל שם טוב",
+      "artist": "הלב והמעיין, Chilik Frank, נאור כרמי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:44:18.555Z"
+    },
     {
       "id": "6zeE5tKyr8Nu882DQhhSQI",
       "title": "Dust in the Wind",
