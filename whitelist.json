@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3661,
-  "last_updated": "2026-11-11T20:39:53.771Z",
+  "version": 3662,
+  "last_updated": "2026-11-11T20:39:57.083Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4PFwvHhuf3sYJmkBuXz78n",
+      "title": "אוהב אבל מציאותי",
+      "artist": "Nati Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:39:57.083Z"
+    },
     {
       "id": "2vlDrKpOC0eSTqTDRcbYyw",
       "title": "This Is What You Came For",
