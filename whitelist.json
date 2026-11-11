@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3684,
-  "last_updated": "2026-11-11T20:43:39.315Z",
+  "version": 3685,
+  "last_updated": "2026-11-11T20:43:42.955Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5d8Wq39QLT6OQWsY9paz5n",
+      "title": "Zombie",
+      "artist": "Bad Wolves",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:43:42.955Z"
+    },
     {
       "id": "2K6JIvH3uzjD6mIlgYO1cb",
       "title": "ככלות הקול והתמונה",
