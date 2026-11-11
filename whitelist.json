@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3792,
-  "last_updated": "2026-11-11T21:19:37.712Z",
+  "version": 3793,
+  "last_updated": "2026-11-11T21:19:43.050Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5nhjo2vDRqhlWdt48bwwKP",
+      "title": "רגע גדול",
+      "artist": "Sarit Hadad, Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:19:43.050Z"
+    },
     {
       "id": "2pvlbipBAnMXwFkuRwLJpo",
       "title": "חורף 23",
