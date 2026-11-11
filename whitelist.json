@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3671,
-  "last_updated": "2026-11-11T20:40:50.048Z",
+  "version": 3672,
+  "last_updated": "2026-11-11T20:40:59.841Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3dmQQleuNJM4WW0ocY1Z3n",
+      "title": "קול ביער",
+      "artist": "Oren Tsor, Nadav Bachar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:40:59.841Z"
+    },
     {
       "id": "3SJnB3sMOz23IA4xKkwd1U",
       "title": "ניגון רבי יוחנן הסנדלר",
