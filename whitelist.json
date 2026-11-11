@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3828,
-  "last_updated": "2026-11-11T21:30:16.709Z",
+  "version": 3829,
+  "last_updated": "2026-11-11T21:48:50.425Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5KSExHHRYuwHfwbsjMc2vr",
+      "title": "שפכי כמים ליבך",
+      "artist": "Haim Israel, מקהלת הידידים העולמית",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:48:50.425Z"
+    },
     {
       "id": "44yYQrw8liArBfQ8Gg7CfM",
       "title": "גבר אוהב",
