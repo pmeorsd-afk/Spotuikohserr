@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3722,
-  "last_updated": "2026-11-11T20:47:51.084Z",
+  "version": 3723,
+  "last_updated": "2026-11-11T20:47:59.318Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0CoJxkeRDICuu7vTIZn11C",
+      "title": "גבר הולך לאיבוד 1995",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:47:59.318Z"
+    },
     {
       "id": "2kvkOBUcaWXgujrEWOY0lJ",
       "title": "אנחנו מאותו הכפר",
