@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3665,
-  "last_updated": "2026-11-11T20:40:06.516Z",
+  "version": 3666,
+  "last_updated": "2026-11-11T20:40:10.466Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "43bXOZhMBn1hYcuxdvkP9i",
+      "title": "כוכבים לא משקרים",
+      "artist": "Yigal Bashan, Riki Gal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:40:10.466Z"
+    },
     {
       "id": "2SkP7mDgRy2DaPs9wiSld4",
       "title": "חופשי ומאושר",
