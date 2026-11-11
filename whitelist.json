@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3696,
-  "last_updated": "2026-11-11T20:44:23.417Z",
+  "version": 3697,
+  "last_updated": "2026-11-11T20:44:27.281Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4JiEyzf0Md7KEFFGWDDdCr",
+      "title": "Knockin' On Heaven's Door",
+      "artist": "Guns N' Roses",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:44:27.281Z"
+    },
     {
       "id": "4nK1VJdLOMJISqcFZ0FhzC",
       "title": "Oifgeben - אויפגעבען",
