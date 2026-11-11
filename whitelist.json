@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3797,
-  "last_updated": "2026-11-11T21:19:53.130Z",
+  "version": 3798,
+  "last_updated": "2026-11-11T21:20:07.526Z",
   "artists": [
+    {
+      "id": "5XoFBvKph9LmlOeMNmcrkA",
+      "canonical_name": "Kinderlach",
+      "aliases": [
+        "Kinderlach"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:20:07.526Z"
+    },
     {
       "id": "3j4B1BrM98kralD2qNSgME",
       "canonical_name": "מיק קרוצ'י",
