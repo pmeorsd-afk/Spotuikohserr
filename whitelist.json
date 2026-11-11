@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3659,
-  "last_updated": "2026-11-11T20:39:47.030Z",
+  "version": 3660,
+  "last_updated": "2026-11-11T20:39:50.363Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5oxwQLUdt0AJWMKX1b6ABf",
+      "title": "איזו מדינה",
+      "artist": "Eli Luzon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:39:50.363Z"
+    },
     {
       "id": "6FvD31rnFzid8m4WiqHQaW",
       "title": "עמק הפרחים",
