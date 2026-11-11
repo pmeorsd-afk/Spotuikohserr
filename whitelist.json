@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3752,
-  "last_updated": "2026-11-11T20:52:03.671Z",
+  "version": 3753,
+  "last_updated": "2026-11-11T20:52:07.156Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ZvV37Ax3MIhVLdS2JVBXI",
+      "title": "דוד מלך ישראל",
+      "artist": "Chava Alberstein",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:52:07.156Z"
+    },
     {
       "id": "7ntpvrvaJ5ZEFs7y2hMVi1",
       "title": "Od Yishoma",
