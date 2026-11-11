@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3821,
-  "last_updated": "2026-11-11T21:21:41.560Z",
+  "version": 3822,
+  "last_updated": "2026-11-11T21:21:44.877Z",
   "artists": [
+    {
+      "id": "7r9AW25laBl7Rc8r2F9qz2",
+      "canonical_name": "להקת שיר חדש Shir Hadash band",
+      "aliases": [
+        "להקת שיר חדש Shir Hadash band"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:21:44.877Z"
+    },
     {
       "id": "1giqtregfk1yoJcPEzyrqC",
       "canonical_name": "Yosef Moshe Kahana",
