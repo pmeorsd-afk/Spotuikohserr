@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3731,
-  "last_updated": "2026-11-11T20:48:31.338Z",
+  "version": 3732,
+  "last_updated": "2026-11-11T20:48:34.337Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0gnmvEtmVuD92L8Pl1vIdF",
+      "title": "להינשא הלילה & תפילות",
+      "artist": "אורי סבאן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:48:34.337Z"
+    },
     {
       "id": "1DKSUvbOUZsQ5Hg0CeYDAJ",
       "title": "אלף כינורות",
