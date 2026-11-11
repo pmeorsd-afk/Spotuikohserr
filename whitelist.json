@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3660,
-  "last_updated": "2026-11-11T20:39:50.363Z",
+  "version": 3661,
+  "last_updated": "2026-11-11T20:39:53.771Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2vlDrKpOC0eSTqTDRcbYyw",
+      "title": "This Is What You Came For",
+      "artist": "Calvin Harris, Rihanna",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:39:53.771Z"
+    },
     {
       "id": "5oxwQLUdt0AJWMKX1b6ABf",
       "title": "איזו מדינה",
