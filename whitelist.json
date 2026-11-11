@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3772,
-  "last_updated": "2026-11-11T20:54:37.798Z",
+  "version": 3773,
+  "last_updated": "2026-11-11T20:54:50.507Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "20sC2edulbcYLtOo0BZR8I",
+      "title": "בסוף יהיה טוב-רמיקס",
+      "artist": "Assaf Harush, אסף קורץ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:54:50.507Z"
+    },
     {
       "id": "6HSXNV0b4M4cLJ7ljgVVeh",
       "title": "Knockin' On Heaven's Door",
