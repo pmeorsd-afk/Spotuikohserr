@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3714,
-  "last_updated": "2026-11-11T20:47:17.675Z",
+  "version": 3715,
+  "last_updated": "2026-11-11T20:47:28.876Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3FuJ1e5yAS2n3x6FvPGZ3I",
+      "title": "זן נדיר - Remastered",
+      "artist": "Korin Allal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:47:28.876Z"
+    },
     {
       "id": "4A7MBtipzGEPj7Ymj9b3e3",
       "title": "זמרת גדולה",
