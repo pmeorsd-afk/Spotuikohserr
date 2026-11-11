@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3799,
-  "last_updated": "2026-11-11T21:20:11.367Z",
+  "version": 3800,
+  "last_updated": "2026-11-11T21:20:14.894Z",
   "artists": [
+    {
+      "id": "3p47iBh5vRPMGtkvl0XG0H",
+      "canonical_name": "Gelf",
+      "aliases": [
+        "Gelf"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:20:14.894Z"
+    },
     {
       "id": "3THFmumWMKK2Ggyqt9NBU3",
       "canonical_name": "Yanky Steinmetz",
