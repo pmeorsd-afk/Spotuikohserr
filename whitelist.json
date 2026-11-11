@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3819,
-  "last_updated": "2026-11-11T21:21:34.487Z",
+  "version": 3820,
+  "last_updated": "2026-11-11T21:21:38.023Z",
   "artists": [
+    {
+      "id": "7zHY1FDMndjW6MSPZb3aOo",
+      "canonical_name": "דרשו",
+      "aliases": [
+        "דרשו"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:21:38.023Z"
+    },
     {
       "id": "7omzSd0e00SD2vqlNpolcs",
       "canonical_name": "EvenAl Orchestra",
