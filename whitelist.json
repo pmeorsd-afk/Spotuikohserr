@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3686,
-  "last_updated": "2026-11-11T20:43:46.084Z",
+  "version": 3687,
+  "last_updated": "2026-11-11T20:43:49.893Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2HHtWyy5CgaQbC7XSoOb0e",
+      "title": "Eye of the Tiger",
+      "artist": "Survivor",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:43:49.893Z"
+    },
     {
       "id": "0BOAO8CW6LVEhrg5XtPWqs",
       "title": "Уралрэп - slowed&reverb",
