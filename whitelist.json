@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3753,
-  "last_updated": "2026-11-11T20:52:07.156Z",
+  "version": 3754,
+  "last_updated": "2026-11-11T20:52:10.534Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5fnOrhQ4KgT5irGCjIccGH",
+      "title": "Arthur's Theme (Best That You Can Do)",
+      "artist": "Christopher Cross",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:52:10.534Z"
+    },
     {
       "id": "2ZvV37Ax3MIhVLdS2JVBXI",
       "title": "דוד מלך ישראל",
