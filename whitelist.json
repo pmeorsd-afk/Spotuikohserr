@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3652,
-  "last_updated": "2026-11-11T20:39:14.062Z",
+  "version": 3653,
+  "last_updated": "2026-11-11T20:39:17.269Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0G5YrKLpyPodrHSfelvK6F",
+      "title": "מחרוזת בלעדייך - Live",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:39:17.269Z"
+    },
     {
       "id": "0uWhlKtR53jZg7E3gh3gj4",
       "title": "מביט אל השמיים",
