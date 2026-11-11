@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3733,
-  "last_updated": "2026-11-11T20:48:39.804Z",
+  "version": 3734,
+  "last_updated": "2026-11-11T20:48:43.052Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "26Bh4BSnEVzjwIrPcDN0fM",
+      "title": "כל המילים",
+      "artist": "אושר ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:48:43.052Z"
+    },
     {
       "id": "5yGzAXMeQ1zTianhYcCHeP",
       "title": "Rak Laalot",
