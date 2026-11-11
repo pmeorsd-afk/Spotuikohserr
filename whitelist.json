@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3782,
-  "last_updated": "2026-11-11T20:55:23.007Z",
+  "version": 3783,
+  "last_updated": "2026-11-11T20:55:26.485Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Y4ldFPbe39m81tRLOcIWd",
+      "title": "Head Up",
+      "artist": "The Score",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:55:26.485Z"
+    },
     {
       "id": "7AYHViJJinWbat9PPc1DGn",
       "title": "Jump Slowed",
