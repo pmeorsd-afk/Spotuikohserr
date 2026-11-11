@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3648,
-  "last_updated": "2026-11-10T22:30:24.740Z",
+  "version": 3649,
+  "last_updated": "2026-11-11T20:39:02.863Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "19osnW2bZ04gOFD38af5br",
+      "title": "תהום",
+      "artist": "Ravid Plotnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:39:02.863Z"
+    },
     {
       "id": "2xKHYKKDAzaPj7VtdbrNwd",
       "title": "B'Karov Mamash - בקרוב ממש",
