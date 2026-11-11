@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3783,
-  "last_updated": "2026-11-11T20:55:26.485Z",
+  "version": 3784,
+  "last_updated": "2026-11-11T20:55:36.528Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "20z2ZtTIXxpUocIuMh5j7m",
+      "title": "מודה אני",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:55:36.528Z"
+    },
     {
       "id": "4Y4ldFPbe39m81tRLOcIWd",
       "title": "Head Up",
