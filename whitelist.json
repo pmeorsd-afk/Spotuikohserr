@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3711,
-  "last_updated": "2026-11-11T20:46:55.828Z",
+  "version": 3712,
+  "last_updated": "2026-11-11T20:47:00.472Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "22NHkFYbgxB2Zirj29Gbp8",
+      "title": "oh yeah?",
+      "artist": "Steve Lacy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:47:00.472Z"
+    },
     {
       "id": "3xEpbgVWCR09jXgrnMFwTM",
       "title": "רוח רוח",
