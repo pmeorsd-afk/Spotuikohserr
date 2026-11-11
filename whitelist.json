@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3775,
-  "last_updated": "2026-11-11T20:55:00.030Z",
+  "version": 3776,
+  "last_updated": "2026-11-11T20:55:03.098Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1r1fPuhj9H4VdXr7OK6FL5",
+      "title": "CASTLE OF GLASS",
+      "artist": "Linkin Park",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:55:03.098Z"
+    },
     {
       "id": "3a9TMd2Yrza6HXqqlfMtfy",
       "title": "Est-ce que tu m'aimes ? - Pilule bleue",
