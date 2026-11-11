@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3725,
-  "last_updated": "2026-11-11T20:48:06.859Z",
+  "version": 3726,
+  "last_updated": "2026-11-11T20:48:10.279Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "594oMb1Ma8iiX8kHQXF7Yz",
+      "title": "מורה מחליף",
+      "artist": "Ido Maimon Ben Yehoshua, Tuna",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:48:10.279Z"
+    },
     {
       "id": "66VpxjZEqwpbpgfiWiedLY",
       "title": "גשם אחרון",
