@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3810,
-  "last_updated": "2026-11-11T21:21:05.437Z",
+  "version": 3811,
+  "last_updated": "2026-11-11T21:21:09.652Z",
   "artists": [
+    {
+      "id": "1WBdrLUATfmEwHEuWmcNJa",
+      "canonical_name": "דוד ביתן",
+      "aliases": [
+        "דוד ביתן"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:21:09.652Z"
+    },
     {
       "id": "4hPs6Ec5ZTGKNgks65JP2k",
       "canonical_name": "יוחנן",
