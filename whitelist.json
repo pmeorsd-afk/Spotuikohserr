@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3708,
-  "last_updated": "2026-11-11T20:46:45.466Z",
+  "version": 3709,
+  "last_updated": "2026-11-11T20:46:49.059Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4z3yiPQh5NW0jl3TGTRSQ6",
+      "title": "חוזה לך ברח",
+      "artist": "Oshik Levy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:46:49.059Z"
+    },
     {
       "id": "7AEEvVFqKFw7GpTHw4XJRk",
       "title": "רוב הזמן את אישתי",
