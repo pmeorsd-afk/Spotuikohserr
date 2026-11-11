@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3729,
-  "last_updated": "2026-11-11T20:48:21.399Z",
+  "version": 3730,
+  "last_updated": "2026-11-11T20:48:27.858Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7HkohBxAiPM08LJdNdLaYI",
+      "title": "נדבר עם הגוף",
+      "artist": "Tzaguy Boy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:48:27.858Z"
+    },
     {
       "id": "4Gg1tYCl7rWR4laKbdtPA4",
       "title": "Daylight",
