@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3765,
-  "last_updated": "2026-11-11T20:53:49.181Z",
+  "version": 3766,
+  "last_updated": "2026-11-11T20:53:52.686Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3cQMmzbxoAM2R5NYoZXIxz",
+      "title": "הטוב הטוב",
+      "artist": "Nerya Engel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:53:52.686Z"
+    },
     {
       "id": "0fKxeeBmZI1XaSKFE6mA3C",
       "title": "כמה טוב השם",
