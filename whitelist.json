@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3707,
-  "last_updated": "2026-11-11T20:46:37.933Z",
+  "version": 3708,
+  "last_updated": "2026-11-11T20:46:45.466Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7AEEvVFqKFw7GpTHw4XJRk",
+      "title": "רוב הזמן את אישתי",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:46:45.466Z"
+    },
     {
       "id": "2rUXZPyYkMvncJ7jkbOmd2",
       "title": "לילה בלי כוכב",
