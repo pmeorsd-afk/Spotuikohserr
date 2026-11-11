@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3649,
-  "last_updated": "2026-11-11T20:39:02.863Z",
+  "version": 3650,
+  "last_updated": "2026-11-11T20:39:06.577Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "264TWa7KES3bmCDgsEVuH2",
+      "title": "הילה",
+      "artist": "רון חיון, ליעד מאיר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:39:06.577Z"
+    },
     {
       "id": "19osnW2bZ04gOFD38af5br",
       "title": "תהום",
