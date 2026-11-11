@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3744,
-  "last_updated": "2026-11-11T20:50:50.330Z",
+  "version": 3745,
+  "last_updated": "2026-11-11T20:50:55.793Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Z2CDQYWi6N4h5DGwe0FTe",
+      "title": "ניגוני חבד לתינוקות",
+      "artist": "שניאור לרר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:50:55.793Z"
+    },
     {
       "id": "39rDhWPFZexCy08vKNscfp",
       "title": "מוזיקה מרגיעה לתינוקות לשינה לתינוק",
