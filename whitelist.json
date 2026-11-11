@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3721,
-  "last_updated": "2026-11-11T20:47:45.669Z",
+  "version": 3722,
+  "last_updated": "2026-11-11T20:47:51.084Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2kvkOBUcaWXgujrEWOY0lJ",
+      "title": "אנחנו מאותו הכפר",
+      "artist": "להקת פיקוד מרכז",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:47:51.084Z"
+    },
     {
       "id": "0GwcBK821xPuRklr4Hptdc",
       "title": "Vocal",
