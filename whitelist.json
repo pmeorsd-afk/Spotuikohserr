@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3676,
-  "last_updated": "2026-11-11T20:41:19.628Z",
+  "version": 3677,
+  "last_updated": "2026-11-11T20:41:23.760Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6HjtZWIo0bh0KLD8Tq4ujR",
+      "title": "DotA - Radio Edit",
+      "artist": "Basshunter",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:41:23.760Z"
+    },
     {
       "id": "0JsDTyimv30QHOZtymlYTB",
       "title": "ניגון הבעל שם טוב זצוק\"ל",
