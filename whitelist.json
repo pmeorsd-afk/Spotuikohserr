@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3658,
-  "last_updated": "2026-11-11T20:39:38.836Z",
+  "version": 3659,
+  "last_updated": "2026-11-11T20:39:47.030Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6FvD31rnFzid8m4WiqHQaW",
+      "title": "עמק הפרחים",
+      "artist": "Nati Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:39:47.030Z"
+    },
     {
       "id": "6a4idEsYW3uqMCs5OKTznq",
       "title": "Hatzi Rusia Hatzi Marokait",
