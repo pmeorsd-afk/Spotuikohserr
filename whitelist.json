@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3808,
-  "last_updated": "2026-11-11T21:20:48.641Z",
+  "version": 3809,
+  "last_updated": "2026-11-11T21:20:56.403Z",
   "artists": [
+    {
+      "id": "0IeB2kWPHsk5ADVRzjAxBB",
+      "canonical_name": "ניגוני חבד",
+      "aliases": [
+        "ניגוני חבד"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:20:56.403Z"
+    },
     {
       "id": "3EJbtD7nRKjJl97tsHRxQg",
       "canonical_name": "אורייתא נוקדים",
