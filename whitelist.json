@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3829,
-  "last_updated": "2026-11-11T21:48:50.425Z",
+  "version": 3830,
+  "last_updated": "2026-11-11T21:48:54.356Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6kwAbEjseqBob48jCus7Sz",
+      "title": "Elastic Heart",
+      "artist": "Sia",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:48:54.356Z"
+    },
     {
       "id": "5KSExHHRYuwHfwbsjMc2vr",
       "title": "שפכי כמים ליבך",
