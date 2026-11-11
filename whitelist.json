@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3813,
-  "last_updated": "2026-11-11T21:21:17.095Z",
+  "version": 3814,
+  "last_updated": "2026-11-11T21:21:21.207Z",
   "artists": [
+    {
+      "id": "0z770vf4sbnknFvLVbJx8p",
+      "canonical_name": "Nadav Bachar",
+      "aliases": [
+        "Nadav Bachar"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:21:21.207Z"
+    },
     {
       "id": "4yFFS8W2tfPLiRbgawPMy5",
       "canonical_name": "Ianir Kilinsky",
