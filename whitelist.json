@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3805,
-  "last_updated": "2026-11-11T21:20:38.645Z",
+  "version": 3806,
+  "last_updated": "2026-11-11T21:20:41.545Z",
   "artists": [
+    {
+      "id": "7GLqWuCVBOv0HM8908jYlB",
+      "canonical_name": "איצי אקרמן",
+      "aliases": [
+        "איצי אקרמן"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:20:41.545Z"
+    },
     {
       "id": "3l9ofl4s5THKtsramkdIq6",
       "canonical_name": "Seder Nigunim",
