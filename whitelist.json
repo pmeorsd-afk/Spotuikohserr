@@ -1,8 +1,28 @@
 {
   "schema_version": 2,
-  "version": 3795,
-  "last_updated": "2026-11-11T21:19:49.741Z",
+  "version": 3797,
+  "last_updated": "2026-11-11T21:19:53.130Z",
   "artists": [
+    {
+      "id": "3j4B1BrM98kralD2qNSgME",
+      "canonical_name": "מיק קרוצ'י",
+      "aliases": [
+        "מיק קרוצ'י"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:19:53.130Z"
+    },
+    {
+      "id": "6d4mnsiNPQulWN9XQvokxz",
+      "canonical_name": "דודי אייזנשטיין",
+      "aliases": [
+        "דודי אייזנשטיין"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:19:53.130Z"
+    },
     {
       "id": "10jxIFH8Iu77bdcyEXUVB8",
       "canonical_name": "הרשי סגל",
