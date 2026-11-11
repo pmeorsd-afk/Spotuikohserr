@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3678,
-  "last_updated": "2026-11-11T20:41:27.322Z",
+  "version": 3679,
+  "last_updated": "2026-11-11T20:43:25.918Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "52LJ3hyknOijCrE5gCD0rE",
+      "title": "L'Amour Toujours",
+      "artist": "GIGI D'AGOSTINO",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:43:25.918Z"
+    },
     {
       "id": "5DtezbY6TExNguuFNUygID",
       "title": "האהבה תנצח",
