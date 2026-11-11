@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3818,
-  "last_updated": "2026-11-11T21:21:31.513Z",
+  "version": 3819,
+  "last_updated": "2026-11-11T21:21:34.487Z",
   "artists": [
+    {
+      "id": "7omzSd0e00SD2vqlNpolcs",
+      "canonical_name": "EvenAl Orchestra",
+      "aliases": [
+        "EvenAl Orchestra"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:21:34.487Z"
+    },
     {
       "id": "6n8jS4Jz0ureN4q5vjAZvX",
       "canonical_name": "שמחה בירנהאק",
