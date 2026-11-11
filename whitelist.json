@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3800,
-  "last_updated": "2026-11-11T21:20:14.894Z",
+  "version": 3801,
+  "last_updated": "2026-11-11T21:20:21.326Z",
   "artists": [
+    {
+      "id": "1eEoKm2pLWGRPgwnxkCi3R",
+      "canonical_name": "Yehuda Green",
+      "aliases": [
+        "Yehuda Green"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:20:21.326Z"
+    },
     {
       "id": "3p47iBh5vRPMGtkvl0XG0H",
       "canonical_name": "Gelf",
