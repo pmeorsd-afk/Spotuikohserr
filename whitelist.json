@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3727,
-  "last_updated": "2026-11-11T20:48:13.672Z",
+  "version": 3728,
+  "last_updated": "2026-11-11T20:48:18.235Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "46VtRJI1zPgZOu9MKK29ga",
+      "title": "איתך עד סוף הזמן",
+      "artist": "Elai Botner, ישי לוי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:48:18.235Z"
+    },
     {
       "id": "7xpB1D0cHHVkoXNuzdhg8W",
       "title": "לא תנצחו אותי",
