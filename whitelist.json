@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3666,
-  "last_updated": "2026-11-11T20:40:10.466Z",
+  "version": 3667,
+  "last_updated": "2026-11-11T20:40:13.899Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5HNUTNNpyjpfhfQ6iIjeSY",
+      "title": "אח יא עיוני",
+      "artist": "Nati Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:40:13.899Z"
+    },
     {
       "id": "43bXOZhMBn1hYcuxdvkP9i",
       "title": "כוכבים לא משקרים",
