@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3719,
-  "last_updated": "2026-11-11T20:47:39.265Z",
+  "version": 3720,
+  "last_updated": "2026-11-11T20:47:42.517Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6p1ba90LpQ0tYzfhJTRtjE",
+      "title": "Lover, Lover, Lover - Live Sept 24, 2009; Ramat Gan Stadium, Tel Aviv, Israel",
+      "artist": "Leonard Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:47:42.517Z"
+    },
     {
       "id": "26QKxvjlCo2fSd3T4c8Zpb",
       "title": "Heart of Gold",
