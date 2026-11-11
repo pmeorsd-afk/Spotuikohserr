@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3716,
-  "last_updated": "2026-11-11T20:47:32.328Z",
+  "version": 3717,
+  "last_updated": "2026-11-11T20:47:35.787Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "08mG3Y1vljYA6bvDt4Wqkj",
+      "title": "Back In Black",
+      "artist": "AC/DC",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:47:35.787Z"
+    },
     {
       "id": "6rg24qKFWwVWdhT0fkDXu9",
       "title": "Rain Plans",
