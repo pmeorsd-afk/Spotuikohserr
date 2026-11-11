@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3824,
-  "last_updated": "2026-11-11T21:22:12.832Z",
+  "version": 3825,
+  "last_updated": "2026-11-11T21:22:16.436Z",
   "artists": [
+    {
+      "id": "4dswhnG6Ah8CTxkq1AZiEN",
+      "canonical_name": "Nerya Engel",
+      "aliases": [
+        "Nerya Engel"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:22:16.436Z"
+    },
     {
       "id": "28i2gpreu0V4UjxNHzzw17",
       "canonical_name": "Pinky Weber",
