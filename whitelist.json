@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3767,
-  "last_updated": "2026-11-11T20:54:10.369Z",
+  "version": 3768,
+  "last_updated": "2026-11-11T20:54:23.059Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6gBVnG1ZT754MUL7TRRDaC",
+      "title": "כה אמר Ko Umar",
+      "artist": "Motty Steinmetz, פינקי וועבער",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:54:23.059Z"
+    },
     {
       "id": "3cQMmzbxoAM2R5NYoZXIxz",
       "title": "הטוב הטוב",
