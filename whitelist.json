@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3745,
-  "last_updated": "2026-11-11T20:50:55.793Z",
+  "version": 3746,
+  "last_updated": "2026-11-11T20:51:00.265Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ZZq9396zv8pcn5GYVhxUi",
+      "title": "Down Under",
+      "artist": "Men At Work",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:51:00.265Z"
+    },
     {
       "id": "1Z2CDQYWi6N4h5DGwe0FTe",
       "title": "ניגוני חבד לתינוקות",
