@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3675,
-  "last_updated": "2026-11-11T20:41:16.706Z",
+  "version": 3676,
+  "last_updated": "2026-11-11T20:41:19.628Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0JsDTyimv30QHOZtymlYTB",
+      "title": "ניגון הבעל שם טוב זצוק\"ל",
+      "artist": "Ianir Kilinsky",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:41:19.628Z"
+    },
     {
       "id": "5WHC16TNodnjoOYvh3NN2q",
       "title": "חלק מהזמן",
