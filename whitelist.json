@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3726,
-  "last_updated": "2026-11-11T20:48:10.279Z",
+  "version": 3727,
+  "last_updated": "2026-11-11T20:48:13.672Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7xpB1D0cHHVkoXNuzdhg8W",
+      "title": "לא תנצחו אותי",
+      "artist": "Yehoram Gaon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:48:13.672Z"
+    },
     {
       "id": "594oMb1Ma8iiX8kHQXF7Yz",
       "title": "מורה מחליף",
