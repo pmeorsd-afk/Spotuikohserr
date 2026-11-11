@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3735,
-  "last_updated": "2026-11-11T20:48:46.779Z",
+  "version": 3736,
+  "last_updated": "2026-11-11T20:48:50.330Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5hyJRm3gV6RAry8pJindIP",
+      "title": "יש אהבה",
+      "artist": "Avihai Hollender",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:48:50.330Z"
+    },
     {
       "id": "4IkfW3W9K2IbmoCm0rOjXk",
       "title": "סאנשיין רידים - Sunshine Riddim",
