@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3769,
-  "last_updated": "2026-11-11T20:54:27.290Z",
+  "version": 3770,
+  "last_updated": "2026-11-11T20:54:30.801Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "14XWXWv5FoCbFzLksawpEe",
+      "title": "Riders on the Storm",
+      "artist": "The Doors",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:54:30.801Z"
+    },
     {
       "id": "6gBVnG1ZT754MUL7TRRDaC",
       "title": "כה אמר Ko Umar",
