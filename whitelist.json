@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3732,
-  "last_updated": "2026-11-11T20:48:34.337Z",
+  "version": 3733,
+  "last_updated": "2026-11-11T20:48:39.804Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5yGzAXMeQ1zTianhYcCHeP",
+      "title": "Rak Laalot",
+      "artist": "Café Shahor Hazak",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:48:39.804Z"
+    },
     {
       "id": "0gnmvEtmVuD92L8Pl1vIdF",
       "title": "להינשא הלילה & תפילות",
