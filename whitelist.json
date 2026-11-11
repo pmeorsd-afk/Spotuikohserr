@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3779,
-  "last_updated": "2026-11-11T20:55:16.191Z",
+  "version": 3781,
+  "last_updated": "2026-11-11T20:55:19.581Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6wi3c0sHfbLi7E5ighjFnq",
+      "title": "MAN1C BATMAN",
+      "artist": "DJ STIX",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:55:19.581Z"
+    },
+    {
+      "id": "030D3duTUTfJORIycOhZNr",
+      "title": "For the Glory",
+      "artist": "All Good Things",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:55:19.581Z"
+    },
     {
       "id": "4n09n5GLULony5PK3byS3c",
       "title": "Drag Me Down",
