@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3712,
-  "last_updated": "2026-11-11T20:47:00.472Z",
+  "version": 3713,
+  "last_updated": "2026-11-11T20:47:14.030Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1IyuSfhOy4Ub6dUPIrAAx2",
+      "title": "בלונים - גרסת הסקיצה",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:47:14.030Z"
+    },
     {
       "id": "22NHkFYbgxB2Zirj29Gbp8",
       "title": "oh yeah?",
