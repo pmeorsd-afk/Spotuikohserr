@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3803,
-  "last_updated": "2026-11-11T21:20:30.368Z",
+  "version": 3804,
+  "last_updated": "2026-11-11T21:20:34.923Z",
   "artists": [
+    {
+      "id": "0c2Jcp6eQW5gsaPdrsI6uP",
+      "canonical_name": "Ari Goldwag",
+      "aliases": [
+        "Ari Goldwag"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T21:20:34.923Z"
+    },
     {
       "id": "3HpzgdOCu0X0YQN9XdMnb2",
       "canonical_name": "נתי לוין",
