@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3656,
-  "last_updated": "2026-11-11T20:39:25.005Z",
+  "version": 3657,
+  "last_updated": "2026-11-11T20:39:33.429Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6a4idEsYW3uqMCs5OKTznq",
+      "title": "Hatzi Rusia Hatzi Marokait",
+      "artist": "Yossi Shitrit",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:39:33.429Z"
+    },
     {
       "id": "0WUrWUtxBT77KSaIZ7XgFD",
       "title": "כמה ימים",
