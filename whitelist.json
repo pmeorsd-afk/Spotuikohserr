@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3687,
-  "last_updated": "2026-11-11T20:43:49.893Z",
+  "version": 3688,
+  "last_updated": "2026-11-11T20:43:52.845Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2aibwv5hGXSgw7Yru8IYTO",
+      "title": "Snow (Hey Oh)",
+      "artist": "Red Hot Chili Peppers",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:43:52.845Z"
+    },
     {
       "id": "2HHtWyy5CgaQbC7XSoOb0e",
       "title": "Eye of the Tiger",
