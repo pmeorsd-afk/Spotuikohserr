@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3681,
-  "last_updated": "2026-11-11T20:43:32.266Z",
+  "version": 3683,
+  "last_updated": "2026-11-11T20:43:35.561Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "73uouP5VnxMJtGczsud7Jz",
+      "title": "Там таз стелит",
+      "artist": "Джанки Джин, Мастер Дрон",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:43:35.561Z"
+    },
+    {
+      "id": "6QAsrXPnMSXIbV0yEJHlEX",
+      "title": "Nothing Else Matters - Remastered 2021",
+      "artist": "Metallica",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:43:35.561Z"
+    },
     {
       "id": "55TYdavMK951y7WHfYpGmK",
       "title": "Фонтанчик с дельфином",
