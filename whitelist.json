@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3702,
-  "last_updated": "2026-11-11T20:46:10.021Z",
+  "version": 3703,
+  "last_updated": "2026-11-11T20:46:20.090Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3eWQsfiwM5gaMTFi94PH7E",
+      "title": "פידלע",
+      "artist": "יואלי דוידוביץ, Mendy Weiss, שמחה בירנהאק, Ahrele Samet",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:46:20.090Z"
+    },
     {
       "id": "3n7WZ20xxoIp2lwyBGAgWG",
       "title": "No Ball",
