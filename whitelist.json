@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3705,
-  "last_updated": "2026-11-11T20:46:30.097Z",
+  "version": 3706,
+  "last_updated": "2026-11-11T20:46:33.410Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6BykGZ7M6NrztXwdPqyEcc",
+      "title": "ליל חניה",
+      "artist": "Hanan Yovel, Yardena Arazi, Efraim Shamir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:46:33.410Z"
+    },
     {
       "id": "0F8SBhwgYksVzkwr02B1t2",
       "title": "מבטך",
