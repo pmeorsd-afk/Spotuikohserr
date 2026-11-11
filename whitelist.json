@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3758,
-  "last_updated": "2026-11-11T20:52:53.947Z",
+  "version": 3759,
+  "last_updated": "2026-11-11T20:53:03.467Z",
   "artists": [
     {
       "id": "7JBFLkMbFdatYc6CmmqEbB",
@@ -3210,6 +3210,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0U87auHx1iZTEFcq9KVdmO",
+      "title": "Boulevard of Broken Dreams",
+      "artist": "Green Day",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-11T20:53:03.467Z"
+    },
     {
       "id": "487V4q4PfbWRCEy7j9Kuxd",
       "title": "ואמרתם",
