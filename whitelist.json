@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3957,
-  "last_updated": "2026-11-12T21:37:02.781Z",
+  "version": 3959,
+  "last_updated": "2026-11-12T21:37:05.883Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "13rNBdN0Un1hfcXZKUouZo",
+      "title": "אהבתי אותָךְ",
+      "artist": "נועם קלינשטיין, גלגלצ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T21:37:05.883Z"
+    },
+    {
+      "id": "18URX6WP8wyh5gJATd7oJd",
+      "title": "רחובות ריקים",
+      "artist": "Amir Dadon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T21:37:05.883Z"
+    },
     {
       "id": "2fSKlyHxFeIGNZEEFAfTMr",
       "title": "רולקס וקסקט - חי באולפן גלגלצ",
