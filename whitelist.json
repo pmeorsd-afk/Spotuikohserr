@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3847,
-  "last_updated": "2026-11-12T11:35:26.997Z",
+  "version": 3848,
+  "last_updated": "2026-11-12T11:35:33.342Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6MfVSA5iKBPHzo6RGARjL0",
+      "title": "Lost In Love",
+      "artist": "Air Supply",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:35:33.342Z"
+    },
     {
       "id": "0KMGxYKeUzK9wc5DZCt3HT",
       "title": "If You Leave Me Now",
