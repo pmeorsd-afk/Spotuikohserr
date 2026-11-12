@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3964,
-  "last_updated": "2026-11-12T21:47:53.664Z",
+  "version": 3965,
+  "last_updated": "2026-11-12T22:43:53.544Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "56VyTnUtVcZItVvXvzGOXO",
+      "title": "אהבה כזאת",
+      "artist": "רותם חן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T22:43:53.544Z"
+    },
     {
       "id": "0x9UM4GuxnMJUjyuipowmo",
       "title": "אל תעזבי ידיים",
