@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3843,
-  "last_updated": "2026-11-12T11:34:56.444Z",
+  "version": 3844,
+  "last_updated": "2026-11-12T11:35:00.322Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0YL2z8KZ9KGh2ocNEjgv0N",
+      "title": "לא מעניין אותי",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:35:00.322Z"
+    },
     {
       "id": "0TgY5HmBIWmCQ9RlQHqsOM",
       "title": "דודה שרופה",
