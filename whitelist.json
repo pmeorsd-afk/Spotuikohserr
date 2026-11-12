@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3876,
-  "last_updated": "2026-11-12T11:37:13.669Z",
+  "version": 3877,
+  "last_updated": "2026-11-12T11:37:17.108Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0PyZPaz1MhzkHC8AWSj848",
+      "title": "Just as I Am",
+      "artist": "Air Supply",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:37:17.108Z"
+    },
     {
       "id": "5NkskuCkvULsXr5SW0PgjQ",
       "title": "Sweet Dreams",
