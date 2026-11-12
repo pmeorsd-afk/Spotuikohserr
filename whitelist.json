@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3855,
-  "last_updated": "2026-11-12T11:36:10.701Z",
+  "version": 3857,
+  "last_updated": "2026-11-12T11:36:13.905Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6tX4aDs51Oosm2h9Wjy5s6",
+      "title": "La Paloma",
+      "artist": "Julio Iglesias",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:36:13.905Z"
+    },
+    {
+      "id": "42PKiI4nh7FN1zq40KhWRY",
+      "title": "Paloma Blanca",
+      "artist": "Julio Iglesias",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:36:13.905Z"
+    },
     {
       "id": "5UPomCrgyIMqN8Itzf2N5L",
       "title": "Crazy",
