@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3949,
-  "last_updated": "2026-11-12T19:17:15.612Z",
+  "version": 3950,
+  "last_updated": "2026-11-12T21:36:32.863Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2lRntJBEehdZzjc4niS3Ox",
+      "title": "פרש - רוץ בן סוסי",
+      "artist": "כפר השירים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T21:36:32.863Z"
+    },
     {
       "id": "14b2CiDmRjVaZjpIULxPNx",
       "title": "שונא את תל אביב",
