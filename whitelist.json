@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3884,
-  "last_updated": "2026-11-12T11:37:46.602Z",
+  "version": 3885,
+  "last_updated": "2026-11-12T11:37:50.144Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Tfv1gNGW2pten8m5PBxdK",
+      "title": "קול ברוח - A voice in the wind",
+      "artist": "Omer Gonen-Haela",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:37:50.144Z"
+    },
     {
       "id": "4iO0vsgCY99jdKcYOYcoTO",
       "title": "Habayta",
