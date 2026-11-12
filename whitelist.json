@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3903,
-  "last_updated": "2026-11-12T12:17:07.503Z",
+  "version": 3904,
+  "last_updated": "2026-11-12T12:17:13.366Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0tIQwXFOyQjd6K7w7PIBrn",
+      "title": "יש בך הכל",
+      "artist": "Akiva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T12:17:13.366Z"
+    },
     {
       "id": "2a1o6ZejUi8U3wzzOtCOYw",
       "title": "Danza Kuduro",
