@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3933,
-  "last_updated": "2026-11-12T19:16:17.904Z",
+  "version": 3934,
+  "last_updated": "2026-11-12T19:16:21.344Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "25FDEuBLoTNV7CujVjMw18",
+      "title": "ימים של קיץ",
+      "artist": "Elai Botner, Kfir Ben Laish",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:16:21.344Z"
+    },
     {
       "id": "4a4rCXdHtT55j6IlpZksW5",
       "title": "הכוכבים דולקים על אש קטנה",
