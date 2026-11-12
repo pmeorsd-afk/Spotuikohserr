@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3837,
-  "last_updated": "2026-11-12T11:34:39.883Z",
+  "version": 3838,
+  "last_updated": "2026-11-12T11:34:43.112Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3i4Gz2lcHnL6wssYKmmbq6",
+      "title": "ג׳ונסון",
+      "artist": "שרקי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:34:43.112Z"
+    },
     {
       "id": "54jUgilRCL0GtZISiDWbOo",
       "title": "מזל",
