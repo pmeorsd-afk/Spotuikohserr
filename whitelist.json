@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3965,
-  "last_updated": "2026-11-12T22:43:53.544Z",
+  "version": 3966,
+  "last_updated": "2026-11-12T22:43:58.398Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1SA8ICFeU3GGPRy5Oo2Thg",
+      "title": "היגיינה",
+      "artist": "דודא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T22:43:58.398Z"
+    },
     {
       "id": "56VyTnUtVcZItVvXvzGOXO",
       "title": "אהבה כזאת",
