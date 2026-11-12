@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3959,
-  "last_updated": "2026-11-12T21:37:05.883Z",
+  "version": 3960,
+  "last_updated": "2026-11-12T21:37:09.364Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ebNscPWQkFlMaOB2DlOqF",
+      "title": "מסע ומתן",
+      "artist": "Mosh Ben Ari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T21:37:09.364Z"
+    },
     {
       "id": "13rNBdN0Un1hfcXZKUouZo",
       "title": "אהבתי אותָךְ",
