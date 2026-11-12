@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3924,
-  "last_updated": "2026-11-12T19:15:32.949Z",
+  "version": 3925,
+  "last_updated": "2026-11-12T19:15:39.765Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:fGTfINnNVMg",
+      "title": "מסתובב",
+      "artist": "מתי כספי, אביב גפן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:15:39.765Z"
+    },
     {
       "id": "1kOrrpPVVjC39JpQREIqJk",
       "title": "התיקון הכללי",
