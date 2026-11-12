@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3905,
-  "last_updated": "2026-11-12T12:17:16.933Z",
+  "version": 3906,
+  "last_updated": "2026-11-12T12:17:21.403Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "197z2xWa59UqWDCRBKJt0D",
+      "title": "ערב רומנטי",
+      "artist": "Naor Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T12:17:21.403Z"
+    },
     {
       "id": "2g5kPQh1EexoG8kGZH2nOZ",
       "title": "Mr. Know It All",
