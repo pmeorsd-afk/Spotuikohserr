@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3835,
-  "last_updated": "2026-11-12T11:34:33.068Z",
+  "version": 3836,
+  "last_updated": "2026-11-12T11:34:36.642Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2TNBlgQI4RtrMZQqzVnGqw",
+      "title": "מריחואנה",
+      "artist": "שרקי, 9 מ''מ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:34:36.642Z"
+    },
     {
       "id": "5wXHoXp3DCnzuqZOE6rY0a",
       "title": "סיפורי צדיקים",
