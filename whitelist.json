@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3926,
-  "last_updated": "2026-11-12T19:15:48.853Z",
+  "version": 3927,
+  "last_updated": "2026-11-12T19:15:52.738Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3dkWBNGauRAVVgc5Ignoud",
+      "title": "Love Me",
+      "artist": "JMSN",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:15:52.738Z"
+    },
     {
       "id": "0r0PXtu5Q6TOmOfwK9GRgT",
       "title": "קרמלה",
