@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3868,
-  "last_updated": "2026-11-12T11:36:50.973Z",
+  "version": 3869,
+  "last_updated": "2026-11-12T11:36:54.631Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4uiYP4RGLQwlnNMQcuJdxo",
+      "title": "Live a Life of Torah",
+      "artist": "Yerachmiel Begun & The Miami Boys Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:36:54.631Z"
+    },
     {
       "id": "6osl4NIgjUP9f9OijlaN0a",
       "title": "One By One",
