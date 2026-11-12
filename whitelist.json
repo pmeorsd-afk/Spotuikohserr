@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3946,
-  "last_updated": "2026-11-12T19:17:00.391Z",
+  "version": 3947,
+  "last_updated": "2026-11-12T19:17:03.288Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7DkaE4o28lPoQJhTQfGSHY",
+      "title": "אהבתיה",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:17:03.288Z"
+    },
     {
       "id": "2fCSulwhjYvNxKbh67d4Pd",
       "title": "Paranoid Android - Remastered",
