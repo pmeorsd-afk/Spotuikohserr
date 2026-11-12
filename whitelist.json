@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3899,
-  "last_updated": "2026-11-12T11:39:27.843Z",
+  "version": 3900,
+  "last_updated": "2026-11-12T11:39:32.111Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0DWdj2oZMBFSzRsi2Cvfzf",
+      "title": "TQG",
+      "artist": "KAROL G, Shakira",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:39:32.111Z"
+    },
     {
       "id": "1s7oOCT8vauUh01PbJD6ps",
       "title": "Calm Down (with Selena Gomez)",
