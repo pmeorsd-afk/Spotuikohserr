@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3963,
-  "last_updated": "2026-11-12T21:47:48.871Z",
+  "version": 3964,
+  "last_updated": "2026-11-12T21:47:53.664Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0x9UM4GuxnMJUjyuipowmo",
+      "title": "אל תעזבי ידיים",
+      "artist": "Akiva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T21:47:53.664Z"
+    },
     {
       "id": "31xrdrysKXihCk5LVBoQU5",
       "title": "בית ביפו - Mita Gami & Darco Remix - מיוחד למצעד השנתי תשפ״ו",
