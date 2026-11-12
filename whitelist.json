@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3853,
-  "last_updated": "2026-11-12T11:36:03.656Z",
+  "version": 3854,
+  "last_updated": "2026-11-12T11:36:07.406Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Anqelw87qHI5V8dq9rKA3",
+      "title": "Nathalie",
+      "artist": "Julio Iglesias",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:36:07.406Z"
+    },
     {
       "id": "2IPv4vBcEN7IPveNv4imeq",
       "title": "Manuela - Spanish",
