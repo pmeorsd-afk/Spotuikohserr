@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3892,
-  "last_updated": "2026-11-12T11:38:15.011Z",
+  "version": 3893,
+  "last_updated": "2026-11-12T11:38:18.295Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3YcugEviHYZs9i6m8UiyfM",
+      "title": "Marco",
+      "artist": "Uriel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:38:18.295Z"
+    },
     {
       "id": "3TLFXTudEoBUK4UbEqo3gv",
       "title": "חתונת השנה",
