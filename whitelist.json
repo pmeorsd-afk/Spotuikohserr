@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3881,
-  "last_updated": "2026-11-12T11:37:26.890Z",
+  "version": 3882,
+  "last_updated": "2026-11-12T11:37:30.451Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5MXAYDV5nyl9wXAbWLZbbH",
+      "title": "Chamesh",
+      "artist": "Uriel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:37:30.451Z"
+    },
     {
       "id": "1SlIyoYUDxrqBFN2HjMhtx",
       "title": "חללית",
