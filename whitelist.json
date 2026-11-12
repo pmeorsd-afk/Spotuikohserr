@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3886,
-  "last_updated": "2026-11-12T11:37:53.735Z",
+  "version": 3887,
+  "last_updated": "2026-11-12T11:37:58.808Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2blHTmvt5MJMwiFEsJ3rhy",
+      "title": "ניגון לבניה",
+      "artist": "Alma",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:37:58.808Z"
+    },
     {
       "id": "1fsYK3YUl9U1tWcQXLsLiB",
       "title": "Essence",
