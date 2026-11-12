@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3896,
-  "last_updated": "2026-11-12T11:38:31.019Z",
+  "version": 3897,
+  "last_updated": "2026-11-12T11:39:20.251Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ltc9j6uh3LvO7FuXm6Ix3",
+      "title": "For My Hand (feat. Ed Sheeran)",
+      "artist": "Burna Boy, Ed Sheeran",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:39:20.251Z"
+    },
     {
       "id": "5BZsQlgw21vDOAjoqkNgKb",
       "title": "DAISIES",
