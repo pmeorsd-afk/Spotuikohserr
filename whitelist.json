@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3907,
-  "last_updated": "2026-11-12T12:17:24.721Z",
+  "version": 3908,
+  "last_updated": "2026-11-12T12:26:40.778Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1rBCVv9XhyyWOEFhSQkqi0",
+      "title": "תמונת מצב",
+      "artist": "Eve And Lear",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T12:26:40.778Z"
+    },
     {
       "id": "4H9UB2cRlTybnkh50sm2ng",
       "title": "סתם תמים",
