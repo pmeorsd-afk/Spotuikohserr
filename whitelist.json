@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3944,
-  "last_updated": "2026-11-12T19:16:53.233Z",
+  "version": 3945,
+  "last_updated": "2026-11-12T19:16:56.772Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "348rUXIKEw4DYw7R0oIYNu",
+      "title": "כל השבוע מרגיש כמו שבת",
+      "artist": "Boaz Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:16:56.772Z"
+    },
     {
       "id": "0vgSQrQMEoa6VecE9Y5Dnk",
       "title": "Subterranean Homesick Alien - Remastered",
