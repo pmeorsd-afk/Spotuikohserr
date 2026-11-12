@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3918,
-  "last_updated": "2026-11-12T18:51:52.151Z",
+  "version": 3919,
+  "last_updated": "2026-11-12T18:51:59.553Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0aJ3Sjd0ZTvI7eoBgANU11",
+      "title": "Spin That Dreidel",
+      "artist": "New York Boys Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T18:51:59.553Z"
+    },
     {
       "id": "2S9MFxP7615F3WadH1zJos",
       "title": "Light Up the Nights",
