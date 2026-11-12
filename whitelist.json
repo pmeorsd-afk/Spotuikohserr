@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3840,
-  "last_updated": "2026-11-12T11:34:49.832Z",
+  "version": 3841,
+  "last_updated": "2026-11-12T11:34:53.027Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5DjDSJS3H8KOEbYw6W0SUF",
+      "title": "עונג שבת",
+      "artist": "שרקי, Shuli Rand",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:34:53.027Z"
+    },
     {
       "id": "59sMaJSvd6XfFYMM45arWr",
       "title": "וידה לוקה",
