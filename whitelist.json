@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3962,
-  "last_updated": "2026-11-12T21:37:16.437Z",
+  "version": 3963,
+  "last_updated": "2026-11-12T21:47:48.871Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "31xrdrysKXihCk5LVBoQU5",
+      "title": "בית ביפו - Mita Gami & Darco Remix - מיוחד למצעד השנתי תשפ״ו",
+      "artist": "Dudu Tassa, גלגלצ, Mita Gami, Darco",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T21:47:48.871Z"
+    },
     {
       "id": "3O710Gm8gMmC6Ow2fuiv29",
       "title": "עץ הסודות",
