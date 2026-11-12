@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3887,
-  "last_updated": "2026-11-12T11:37:58.808Z",
+  "version": 3888,
+  "last_updated": "2026-11-12T11:38:01.565Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6PCUP3dWmTjcTtXY02oFdT",
+      "title": "Castle on the Hill",
+      "artist": "Ed Sheeran",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:38:01.565Z"
+    },
     {
       "id": "2blHTmvt5MJMwiFEsJ3rhy",
       "title": "ניגון לבניה",
