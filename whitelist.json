@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3911,
-  "last_updated": "2026-11-12T12:32:51.622Z",
+  "version": 3912,
+  "last_updated": "2026-11-12T18:51:31.344Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4BKaV9z2JDgECx0dGrjYEk",
+      "title": "אבטיח רמיקס",
+      "artist": "יהודה מור, יאיר אלייצור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T18:51:31.344Z"
+    },
     {
       "id": "5rPEjeU8qHeNsivF1u5uMu",
       "title": "אישה",
