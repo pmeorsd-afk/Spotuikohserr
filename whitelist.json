@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3883,
-  "last_updated": "2026-11-12T11:37:33.705Z",
+  "version": 3884,
+  "last_updated": "2026-11-12T11:37:46.602Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4iO0vsgCY99jdKcYOYcoTO",
+      "title": "Habayta",
+      "artist": "Amir Alaev",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:37:46.602Z"
+    },
     {
       "id": "52JgCQ2FVe90hQ136LSzjS",
       "title": "באמת אהבה",
