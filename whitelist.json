@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3844,
-  "last_updated": "2026-11-12T11:35:00.322Z",
+  "version": 3845,
+  "last_updated": "2026-11-12T11:35:09.946Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ZaHLeeg33L2VcZDg3GiJh",
+      "title": "דמעות של גבר",
+      "artist": "שרקי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:35:09.946Z"
+    },
     {
       "id": "0YL2z8KZ9KGh2ocNEjgv0N",
       "title": "לא מעניין אותי",
