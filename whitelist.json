@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3879,
-  "last_updated": "2026-11-12T11:37:23.359Z",
+  "version": 3881,
+  "last_updated": "2026-11-12T11:37:26.890Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1SlIyoYUDxrqBFN2HjMhtx",
+      "title": "חללית",
+      "artist": "Gazoz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:37:26.890Z"
+    },
+    {
+      "id": "36LEBlAzRxzQlMLYPPscOX",
+      "title": "מלאכי השלום",
+      "artist": "R' Cheskie Weisz, Menachem Moskowitz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:37:26.890Z"
+    },
     {
       "id": "6a3cnqlJpbmMQyxq2oMLoO",
       "title": "Making Love Out of Nothing at All",
