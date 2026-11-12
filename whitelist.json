@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3860,
-  "last_updated": "2026-11-12T11:36:24.361Z",
+  "version": 3861,
+  "last_updated": "2026-11-12T11:36:27.341Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6E5QpUHRUEoyfSzIvH4gpg",
+      "title": "A Veces Tu, A Veces Yo",
+      "artist": "Julio Iglesias",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:36:27.341Z"
+    },
     {
       "id": "2DgylhgotfHh0cbQQ6o0rC",
       "title": "Cu-Cu-Rru-Cu-Cu Paloma",
