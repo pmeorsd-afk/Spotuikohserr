@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3845,
-  "last_updated": "2026-11-12T11:35:09.946Z",
+  "version": 3846,
+  "last_updated": "2026-11-12T11:35:13.307Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Rh5r9vUOumJ1sbPuv3dkO",
+      "title": "עד שתבואי עד אליי",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:35:13.307Z"
+    },
     {
       "id": "3ZaHLeeg33L2VcZDg3GiJh",
       "title": "דמעות של גבר",
