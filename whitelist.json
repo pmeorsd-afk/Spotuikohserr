@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3955,
-  "last_updated": "2026-11-12T21:36:56.215Z",
+  "version": 3956,
+  "last_updated": "2026-11-12T21:36:59.680Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1SxKHV6d77mhJrXdqo0iT8",
+      "title": "גלים",
+      "artist": "Amir Dadon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T21:36:59.680Z"
+    },
     {
       "id": "5rU74u3T5OztQiHI0hrFbH",
       "title": "אדם שבור / אהבה ראשונה - מיוחד למצעד הישראלי השנתי תשפ\"ו",
