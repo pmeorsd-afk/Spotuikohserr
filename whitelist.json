@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3897,
-  "last_updated": "2026-11-12T11:39:20.251Z",
+  "version": 3898,
+  "last_updated": "2026-11-12T11:39:24.782Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6xX6zmaXeKzB4u9TiM1XgU",
+      "title": "WE PRAY",
+      "artist": "Coldplay, Little Simz, Burna Boy, Elyanna, TINI",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:39:24.782Z"
+    },
     {
       "id": "3ltc9j6uh3LvO7FuXm6Ix3",
       "title": "For My Hand (feat. Ed Sheeran)",
