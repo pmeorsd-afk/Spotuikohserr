@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3890,
-  "last_updated": "2026-11-12T11:38:07.986Z",
+  "version": 3891,
+  "last_updated": "2026-11-12T11:38:11.248Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3TLFXTudEoBUK4UbEqo3gv",
+      "title": "חתונת השנה",
+      "artist": "Itay Levi, Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:38:11.248Z"
+    },
     {
       "id": "2ipIPsgrgd0j2beDf4Ki70",
       "title": "Mystical Magical",
