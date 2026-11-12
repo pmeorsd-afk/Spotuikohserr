@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3948,
-  "last_updated": "2026-11-12T19:17:06.329Z",
+  "version": 3949,
+  "last_updated": "2026-11-12T19:17:15.612Z",
   "artists": [
+    {
+      "id": "3AtKG5ZHeb5ImUtSUcRvlS",
+      "canonical_name": "New York Boys Choir",
+      "aliases": [
+        "New York Boys Choir"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:17:15.612Z"
+    },
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
       "canonical_name": "אסף קורץ",
