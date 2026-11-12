@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3917,
-  "last_updated": "2026-11-12T18:51:48.389Z",
+  "version": 3918,
+  "last_updated": "2026-11-12T18:51:52.151Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2S9MFxP7615F3WadH1zJos",
+      "title": "Light Up the Nights",
+      "artist": "Yerachmiel Begun & The Miami Boys Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T18:51:52.151Z"
+    },
     {
       "id": "2FUioC666bowepsocecBT4",
       "title": "We Will Prevail",
