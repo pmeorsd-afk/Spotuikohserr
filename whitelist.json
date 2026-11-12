@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3882,
-  "last_updated": "2026-11-12T11:37:30.451Z",
+  "version": 3883,
+  "last_updated": "2026-11-12T11:37:33.705Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "52JgCQ2FVe90hQ136LSzjS",
+      "title": "באמת אהבה",
+      "artist": "Aviv Bahar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:37:33.705Z"
+    },
     {
       "id": "5MXAYDV5nyl9wXAbWLZbbH",
       "title": "Chamesh",
