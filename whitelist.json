@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3841,
-  "last_updated": "2026-11-12T11:34:53.027Z",
+  "version": 3843,
+  "last_updated": "2026-11-12T11:34:56.444Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0TgY5HmBIWmCQ9RlQHqsOM",
+      "title": "דודה שרופה",
+      "artist": "שרקי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:34:56.444Z"
+    },
+    {
+      "id": "4ljtpZp5uvnGzhNPY8cSp5",
+      "title": "ערב אחד איתך",
+      "artist": "שרקי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:34:56.444Z"
+    },
     {
       "id": "5DjDSJS3H8KOEbYw6W0SUF",
       "title": "עונג שבת",
