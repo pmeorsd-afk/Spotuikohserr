@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3874,
-  "last_updated": "2026-11-12T11:37:10.297Z",
+  "version": 3876,
+  "last_updated": "2026-11-12T11:37:13.669Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5NkskuCkvULsXr5SW0PgjQ",
+      "title": "Sweet Dreams",
+      "artist": "Air Supply",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:37:13.669Z"
+    },
+    {
+      "id": "3J52OEBteXsHiYoRy77VQJ",
+      "title": "Lost In Love",
+      "artist": "Air Supply",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:37:13.669Z"
+    },
     {
       "id": "5jFkKKbu93dgWlbRAgTl3G",
       "title": "Here I Am (Just When I Thought I Was Over You)",
