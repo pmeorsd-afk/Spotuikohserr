@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3906,
-  "last_updated": "2026-11-12T12:17:21.403Z",
+  "version": 3907,
+  "last_updated": "2026-11-12T12:17:24.721Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4H9UB2cRlTybnkh50sm2ng",
+      "title": "סתם תמים",
+      "artist": "יאיר אלייצור, Avraham Aviv Alush, תאקט 30",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T12:17:24.721Z"
+    },
     {
       "id": "197z2xWa59UqWDCRBKJt0D",
       "title": "ערב רומנטי",
