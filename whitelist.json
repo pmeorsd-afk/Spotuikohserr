@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3834,
-  "last_updated": "2026-11-11T22:01:54.369Z",
+  "version": 3835,
+  "last_updated": "2026-11-12T11:34:33.068Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5wXHoXp3DCnzuqZOE6rY0a",
+      "title": "סיפורי צדיקים",
+      "artist": "אודיה, בן צור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:34:33.068Z"
+    },
     {
       "id": "1QLZKzC2pjP4ySf4ALrNhm",
       "title": "Christmas Without You",
