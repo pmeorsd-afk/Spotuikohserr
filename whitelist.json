@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3861,
-  "last_updated": "2026-11-12T11:36:27.341Z",
+  "version": 3862,
+  "last_updated": "2026-11-12T11:36:30.469Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Yt30h8C6xdHa8uyvHdAHd",
+      "title": "Por el Amor de una Mujer",
+      "artist": "Julio Iglesias",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:36:30.469Z"
+    },
     {
       "id": "6E5QpUHRUEoyfSzIvH4gpg",
       "title": "A Veces Tu, A Veces Yo",
