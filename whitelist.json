@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3950,
-  "last_updated": "2026-11-12T21:36:32.863Z",
+  "version": 3951,
+  "last_updated": "2026-11-12T21:36:41.697Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "49Pb9RF9MF12homWxv7IQp",
+      "title": "טעיתי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T21:36:41.697Z"
+    },
     {
       "id": "2lRntJBEehdZzjc4niS3Ox",
       "title": "פרש - רוץ בן סוסי",
