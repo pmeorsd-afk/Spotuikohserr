@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3921,
-  "last_updated": "2026-11-12T19:15:22.831Z",
+  "version": 3922,
+  "last_updated": "2026-11-12T19:15:26.335Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0bJ5uOgInw2jAEU7YPJGlR",
+      "title": "אהבה שלי בלב",
+      "artist": "Kobi Maman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:15:26.335Z"
+    },
     {
       "id": "5EjMwx3Tmp37EwRvGFAZOo",
       "title": "מחכה שתבואי",
