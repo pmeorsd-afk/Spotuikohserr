@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3910,
-  "last_updated": "2026-11-12T12:26:47.939Z",
+  "version": 3911,
+  "last_updated": "2026-11-12T12:32:51.622Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5rPEjeU8qHeNsivF1u5uMu",
+      "title": "אישה",
+      "artist": "Rubi Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T12:32:51.622Z"
+    },
     {
       "id": "2cpzEPmGdVdjNl9mhF1MhG",
       "title": "Dance the Night",
