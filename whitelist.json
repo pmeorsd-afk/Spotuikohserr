@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3839,
-  "last_updated": "2026-11-12T11:34:46.507Z",
+  "version": 3840,
+  "last_updated": "2026-11-12T11:34:49.832Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "59sMaJSvd6XfFYMM45arWr",
+      "title": "וידה לוקה",
+      "artist": "שרקי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:34:49.832Z"
+    },
     {
       "id": "4hV1hzLbqXVNrkX9pRMDEQ",
       "title": "ג׳מייקה",
