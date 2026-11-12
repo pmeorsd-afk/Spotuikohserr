@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3927,
-  "last_updated": "2026-11-12T19:15:52.738Z",
+  "version": 3928,
+  "last_updated": "2026-11-12T19:15:55.911Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4hsCjKX3DOQobfRV1qJhWK",
+      "title": "ג'וני",
+      "artist": "Bar Tzabary",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:15:55.911Z"
+    },
     {
       "id": "3dkWBNGauRAVVgc5Ignoud",
       "title": "Love Me",
