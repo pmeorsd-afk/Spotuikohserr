@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3863,
-  "last_updated": "2026-11-12T11:36:34.458Z",
+  "version": 3864,
+  "last_updated": "2026-11-12T11:36:37.875Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ApZCE3E6XHtonDk26Ccev",
+      "title": "Dois Amigos (featuring with Zezé di Camargo & Luciano) (feat. Zezé Di Camargo & Luciano)",
+      "artist": "Julio Iglesias, Zezé Di Camargo & Luciano",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:36:37.875Z"
+    },
     {
       "id": "78sbk1u9KLkF7Sf6DhBz8a",
       "title": "Sunshine",
