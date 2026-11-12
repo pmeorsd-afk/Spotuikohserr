@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3871,
-  "last_updated": "2026-11-12T11:37:00.490Z",
+  "version": 3872,
+  "last_updated": "2026-11-12T11:37:04.100Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2rkUhGw5iWbBY1PE5AnCl8",
+      "title": "Way Too Self Aware",
+      "artist": "Ian Asher",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:37:04.100Z"
+    },
     {
       "id": "0PXlAASjColqngGNNbzoA5",
       "title": "Me Va, Me Va",
