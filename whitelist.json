@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3939,
-  "last_updated": "2026-11-12T19:16:35.943Z",
+  "version": 3940,
+  "last_updated": "2026-11-12T19:16:39.206Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4IVJLBmal4at5NiZTnz9j6",
+      "title": "Chanukah",
+      "artist": "New York Boys Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:16:39.206Z"
+    },
     {
       "id": "5h4y42RUKwYKYWgutNwvKP",
       "title": "There, There",
