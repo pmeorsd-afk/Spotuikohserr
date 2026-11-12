@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3954,
-  "last_updated": "2026-11-12T21:36:52.446Z",
+  "version": 3955,
+  "last_updated": "2026-11-12T21:36:56.215Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5rU74u3T5OztQiHI0hrFbH",
+      "title": "אדם שבור / אהבה ראשונה - מיוחד למצעד הישראלי השנתי תשפ\"ו",
+      "artist": "Eden Hason, נדב חנציס, גלגלצ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T21:36:56.215Z"
+    },
     {
       "id": "1m96SLU1xOYUx2hHWIk6xT",
       "title": "מוכרת לי מפעם - חי באולפן גלגלצ",
