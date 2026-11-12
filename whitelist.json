@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3898,
-  "last_updated": "2026-11-12T11:39:24.782Z",
+  "version": 3899,
+  "last_updated": "2026-11-12T11:39:27.843Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1s7oOCT8vauUh01PbJD6ps",
+      "title": "Calm Down (with Selena Gomez)",
+      "artist": "Rema, Selena Gomez",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:39:27.843Z"
+    },
     {
       "id": "6xX6zmaXeKzB4u9TiM1XgU",
       "title": "WE PRAY",
