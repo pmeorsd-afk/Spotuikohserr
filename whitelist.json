@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3838,
-  "last_updated": "2026-11-12T11:34:43.112Z",
+  "version": 3839,
+  "last_updated": "2026-11-12T11:34:46.507Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4hV1hzLbqXVNrkX9pRMDEQ",
+      "title": "ג׳מייקה",
+      "artist": "שרקי, Fishi Hagadol",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:34:46.507Z"
+    },
     {
       "id": "3i4Gz2lcHnL6wssYKmmbq6",
       "title": "ג׳ונסון",
