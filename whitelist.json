@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3865,
-  "last_updated": "2026-11-12T11:36:42.082Z",
+  "version": 3866,
+  "last_updated": "2026-11-12T11:36:44.881Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "75HwIvQnw7eJB1X6SEg0oW",
+      "title": "When",
+      "artist": "Yerachmiel Begun & The Miami Boys Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:36:44.881Z"
+    },
     {
       "id": "6D7sAmPy0VzY6eNkvoin0V",
       "title": "All of You (feat. Diana Ross)",
