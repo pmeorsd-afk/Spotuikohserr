@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3934,
-  "last_updated": "2026-11-12T19:16:21.344Z",
+  "version": 3935,
+  "last_updated": "2026-11-12T19:16:25.324Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1a4NIJGblE2czG34gcGmJO",
+      "title": "פרפרים",
+      "artist": "Uri Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:16:25.324Z"
+    },
     {
       "id": "25FDEuBLoTNV7CujVjMw18",
       "title": "ימים של קיץ",
