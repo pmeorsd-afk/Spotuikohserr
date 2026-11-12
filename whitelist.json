@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3935,
-  "last_updated": "2026-11-12T19:16:25.324Z",
+  "version": 3937,
+  "last_updated": "2026-11-12T19:16:28.711Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4KoyF1BiTEJ71EZxPVfMeZ",
+      "title": "Like Spinning Plates",
+      "artist": "Radiohead",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:16:28.711Z"
+    },
+    {
+      "id": "7f6Bkdh4flhzfeUcMeuBjY",
+      "title": "הגשמה עצמית",
+      "artist": "Eric Berman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:16:28.711Z"
+    },
     {
       "id": "1a4NIJGblE2czG34gcGmJO",
       "title": "פרפרים",
