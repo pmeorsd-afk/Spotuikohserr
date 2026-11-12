@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3870,
-  "last_updated": "2026-11-12T11:36:57.641Z",
+  "version": 3871,
+  "last_updated": "2026-11-12T11:37:00.490Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0PXlAASjColqngGNNbzoA5",
+      "title": "Me Va, Me Va",
+      "artist": "Julio Iglesias",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:37:00.490Z"
+    },
     {
       "id": "2tpWsVSb9UEmDRxAl1zhX1",
       "title": "Counting Stars",
