@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3900,
-  "last_updated": "2026-11-12T11:39:32.111Z",
+  "version": 3901,
+  "last_updated": "2026-11-12T11:43:54.663Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3btiOEdugvgsOABoarrShF",
+      "title": "מנגינה",
+      "artist": "The Voice Israel, Eden Ben Zaken, אושר כהן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:43:54.663Z"
+    },
     {
       "id": "0DWdj2oZMBFSzRsi2Cvfzf",
       "title": "TQG",
