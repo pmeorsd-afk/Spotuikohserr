@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3947,
-  "last_updated": "2026-11-12T19:17:03.288Z",
+  "version": 3948,
+  "last_updated": "2026-11-12T19:17:06.329Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "14b2CiDmRjVaZjpIULxPNx",
+      "title": "שונא את תל אביב",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:17:06.329Z"
+    },
     {
       "id": "7DkaE4o28lPoQJhTQfGSHY",
       "title": "אהבתיה",
