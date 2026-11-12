@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3920,
-  "last_updated": "2026-11-12T19:15:17.629Z",
+  "version": 3921,
+  "last_updated": "2026-11-12T19:15:22.831Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5EjMwx3Tmp37EwRvGFAZOo",
+      "title": "מחכה שתבואי",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:15:22.831Z"
+    },
     {
       "id": "0tewqHTtZMfb7sPsqTyRVc",
       "title": "מרכז תל אביב",
