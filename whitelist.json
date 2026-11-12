@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3854,
-  "last_updated": "2026-11-12T11:36:07.406Z",
+  "version": 3855,
+  "last_updated": "2026-11-12T11:36:10.701Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5UPomCrgyIMqN8Itzf2N5L",
+      "title": "Crazy",
+      "artist": "Julio Iglesias",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:36:10.701Z"
+    },
     {
       "id": "3Anqelw87qHI5V8dq9rKA3",
       "title": "Nathalie",
