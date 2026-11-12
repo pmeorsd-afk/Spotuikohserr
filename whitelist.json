@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3913,
-  "last_updated": "2026-11-12T18:51:35.474Z",
+  "version": 3914,
+  "last_updated": "2026-11-12T18:51:38.676Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "29gCUQ8kKPbmh3VKyspTfg",
+      "title": "לקחת את המפתחות",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T18:51:38.676Z"
+    },
     {
       "id": "1vgT99ZVku4fUjaGhISM2D",
       "title": "גלגל ענק",
