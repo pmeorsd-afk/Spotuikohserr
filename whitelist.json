@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3942,
-  "last_updated": "2026-11-12T19:16:42.757Z",
+  "version": 3943,
+  "last_updated": "2026-11-12T19:16:48.073Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "79R7xghwLf9k0HCRMOusu0",
+      "title": "Eyes of Glass",
+      "artist": "Simcha Leiner",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T19:16:48.073Z"
+    },
     {
       "id": "5JVwhmdj8SuGh3BXSg9GWz",
       "title": "איפה היית",
