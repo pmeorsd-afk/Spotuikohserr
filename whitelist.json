@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3951,
-  "last_updated": "2026-11-12T21:36:41.697Z",
+  "version": 3952,
+  "last_updated": "2026-11-12T21:36:45.059Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6kmBZ7FMu5EUJ9Lb8YlPQm",
+      "title": "כולם גנבים - חי באולפן גלגלצ",
+      "artist": "Amir Dadon, גלגלצ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T21:36:45.059Z"
+    },
     {
       "id": "49Pb9RF9MF12homWxv7IQp",
       "title": "טעיתי",
