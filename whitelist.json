@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3956,
-  "last_updated": "2026-11-12T21:36:59.680Z",
+  "version": 3957,
+  "last_updated": "2026-11-12T21:37:02.781Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2fSKlyHxFeIGNZEEFAfTMr",
+      "title": "רולקס וקסקט - חי באולפן גלגלצ",
+      "artist": "Noam Bettan, גלגלצ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T21:37:02.781Z"
+    },
     {
       "id": "1SxKHV6d77mhJrXdqo0iT8",
       "title": "גלים",
