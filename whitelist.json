@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3872,
-  "last_updated": "2026-11-12T11:37:04.100Z",
+  "version": 3873,
+  "last_updated": "2026-11-12T11:37:07.034Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ro5OlSjuMuOi7nCyJMLkl",
+      "title": "All Out of Love",
+      "artist": "Air Supply",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:37:07.034Z"
+    },
     {
       "id": "2rkUhGw5iWbBY1PE5AnCl8",
       "title": "Way Too Self Aware",
