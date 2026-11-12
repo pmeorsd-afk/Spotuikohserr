@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3893,
-  "last_updated": "2026-11-12T11:38:18.295Z",
+  "version": 3894,
+  "last_updated": "2026-11-12T11:38:21.321Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7citwhIjpn00OA9FgjqRSw",
+      "title": "דיבורים של אמת",
+      "artist": "יאיר אלייצור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:38:21.321Z"
+    },
     {
       "id": "3YcugEviHYZs9i6m8UiyfM",
       "title": "Marco",
