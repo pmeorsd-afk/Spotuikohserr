@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3857,
-  "last_updated": "2026-11-12T11:36:13.905Z",
+  "version": 3858,
+  "last_updated": "2026-11-12T11:36:17.483Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "08dBVLVf935YlwMPBPARvU",
+      "title": "Hey",
+      "artist": "Julio Iglesias",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:36:17.483Z"
+    },
     {
       "id": "6tX4aDs51Oosm2h9Wjy5s6",
       "title": "La Paloma",
