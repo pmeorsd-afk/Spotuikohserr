@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3846,
-  "last_updated": "2026-11-12T11:35:13.307Z",
+  "version": 3847,
+  "last_updated": "2026-11-12T11:35:26.997Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0KMGxYKeUzK9wc5DZCt3HT",
+      "title": "If You Leave Me Now",
+      "artist": "Chicago",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T11:35:26.997Z"
+    },
     {
       "id": "1Rh5r9vUOumJ1sbPuv3dkO",
       "title": "עד שתבואי עד אליי",
