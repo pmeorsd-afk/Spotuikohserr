@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3909,
-  "last_updated": "2026-11-12T12:26:44.699Z",
+  "version": 3910,
+  "last_updated": "2026-11-12T12:26:47.939Z",
   "artists": [
     {
       "id": "6c9RrACmBdZbkAZPp2C9bo",
@@ -3500,6 +3500,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2cpzEPmGdVdjNl9mhF1MhG",
+      "title": "Dance the Night",
+      "artist": "Offer Nissim, Riki Ben-Ari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-12T12:26:47.939Z"
+    },
     {
       "id": "22SAbgn57ex40FKokXz9KA",
       "title": "Easy As Life - Show Mix",
