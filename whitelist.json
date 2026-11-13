@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4038,
-  "last_updated": "2026-11-13T11:21:53.377Z",
+  "version": 4039,
+  "last_updated": "2026-11-13T11:21:57.188Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4KcWW3TKazrGRaKGKHGNhy",
+      "title": "Tragedy - Live At The MGM Grand",
+      "artist": "Bee Gees",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T11:21:57.188Z"
+    },
     {
       "id": "3jP5pBj5rYLeNDV3szAFHS",
       "title": "Immortality - Live - At The MGM Grand",
