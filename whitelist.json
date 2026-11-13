@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3994,
-  "last_updated": "2026-11-13T09:17:59.519Z",
+  "version": 3995,
+  "last_updated": "2026-11-13T09:18:03.253Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "27fhBtzdJeqEvqCEBKb8KH",
+      "title": "יום הולדת לאלי החתול",
+      "artist": "אלי החתול והחברים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T09:18:03.253Z"
+    },
     {
       "id": "2awrv2DeMdhLwrGuFejAji",
       "title": "Ben Adam",
