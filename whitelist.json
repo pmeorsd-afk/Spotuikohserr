@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3976,
-  "last_updated": "2026-11-13T08:17:21.138Z",
+  "version": 3977,
+  "last_updated": "2026-11-13T08:17:24.853Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3x6SgnT8Qcya61YSTpnA5r",
+      "title": "אלף כוכבים",
+      "artist": "Eyal Golan, Eden Ben Zaken",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T08:17:24.853Z"
+    },
     {
       "id": "30RSluchsTGVdCi0o30ODG",
       "title": "שירים שאהבנו",
