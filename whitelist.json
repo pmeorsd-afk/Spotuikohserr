@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4017,
-  "last_updated": "2026-11-13T10:15:45.967Z",
+  "version": 4018,
+  "last_updated": "2026-11-13T10:30:52.096Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1r2V2LjmovjDYmrn7kP0x7",
+      "title": "Words - Live At The MGM Grand",
+      "artist": "Bee Gees",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:30:52.096Z"
+    },
     {
       "id": "0jHip24OqPOfrxuaGc1o69",
       "title": "To Love Somebody - Live At The MGM Grand",
