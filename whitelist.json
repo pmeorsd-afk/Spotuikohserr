@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4014,
-  "last_updated": "2026-11-13T10:15:35.573Z",
+  "version": 4015,
+  "last_updated": "2026-11-13T10:15:38.872Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3TtZlTHR3gT0WYzFTEoPsV",
+      "title": "שתישרף האהבה",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:15:38.872Z"
+    },
     {
       "id": "5TXPRRyI9HwiorUI0u1J0T",
       "title": "רק אני ואת",
