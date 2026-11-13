@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4055,
-  "last_updated": "2026-11-13T12:19:27.989Z",
+  "version": 4056,
+  "last_updated": "2026-11-13T12:20:14.649Z",
   "artists": [
+    {
+      "id": "564dx6dEzMT7sUdjrt8yBv",
+      "canonical_name": "אהרון סגל",
+      "aliases": [
+        "אהרון סגל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T12:20:14.649Z"
+    },
     {
       "id": "5yrSXmnSyIXgjAIk0n7fQI",
       "canonical_name": "אמיר יוסף",
