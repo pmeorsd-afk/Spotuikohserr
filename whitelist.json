@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3988,
-  "last_updated": "2026-11-13T08:21:41.564Z",
+  "version": 3989,
+  "last_updated": "2026-11-13T09:05:15.765Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5NXuxjeAV3wx4fHpK1FgxZ",
+      "title": "צלצולי פעמונים",
+      "artist": "Sagiv Cohen, Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T09:05:15.765Z"
+    },
     {
       "id": "16dkWKIlBsfYTISCVuDs0w",
       "title": "A Drop in the Ocean",
