@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4060,
-  "last_updated": "2026-11-13T12:47:18.273Z",
+  "version": 4061,
+  "last_updated": "2026-11-13T12:47:21.926Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4VWNKplBK8kZCICroqYVK1",
+      "title": "שבת",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T12:47:21.926Z"
+    },
     {
       "id": "6AKSYkwnAZMz6bWMuY7JUQ",
       "title": "Drugs",
