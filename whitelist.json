@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4011,
-  "last_updated": "2026-11-13T10:03:32.642Z",
+  "version": 4012,
+  "last_updated": "2026-11-13T10:03:35.851Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0p8y0WCK1hpZw4xjREmYMX",
+      "title": "מחרוזת רונה",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:03:35.851Z"
+    },
     {
       "id": "0cnXDZGevuZ5kj2nbVzPyu",
       "title": "לילה עיר",
