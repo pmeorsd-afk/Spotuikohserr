@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4009,
-  "last_updated": "2026-11-13T10:03:19.658Z",
+  "version": 4010,
+  "last_updated": "2026-11-13T10:03:29.512Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6LVURhYae6S3ep1H0Q8bbd",
+      "title": "ניגוני הכנה להדלקת נרות חנוכה ושירי שמחה והודאה | ישיבת רועה ישראל - יצהר - מקורית",
+      "artist": "ישיבת רועה ישראל - יצהר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:03:29.512Z"
+    },
     {
       "id": "3xcfRHbbkwIh6rPKQ9y8DX",
       "title": "פאטה מורגנה",
