@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4019,
-  "last_updated": "2026-11-13T10:30:55.940Z",
+  "version": 4020,
+  "last_updated": "2026-11-13T10:30:59.072Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6qdVDwR1NiW74hQRHTYWRQ",
+      "title": "החידה הגדולה",
+      "artist": "Shay Gabso",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:30:59.072Z"
+    },
     {
       "id": "5x4DpcRL7jAYh0te3eBFKG",
       "title": "Closer Than Close - Live At The MGM Grand",
