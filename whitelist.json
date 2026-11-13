@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3973,
-  "last_updated": "2026-11-13T08:17:14.120Z",
+  "version": 3974,
+  "last_updated": "2026-11-13T08:17:17.467Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6YEcDPO0mxYoUOZx5cZleT",
+      "title": "מדע בדיוני",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T08:17:17.467Z"
+    },
     {
       "id": "0fKVCELecjBKwCjGgbG6At",
       "title": "ימים טובים",
