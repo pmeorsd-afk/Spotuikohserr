@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4028,
-  "last_updated": "2026-11-13T10:37:59.083Z",
+  "version": 4029,
+  "last_updated": "2026-11-13T10:38:02.662Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1rVqShsMHoyVsEeMGO7Ue9",
+      "title": "Lonely Days - Live At The MGM Grand",
+      "artist": "Bee Gees",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:38:02.662Z"
+    },
     {
       "id": "57bgtoPSgt236HzfBOd8kj",
       "title": "Thunderstruck",
