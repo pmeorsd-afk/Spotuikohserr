@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4026,
-  "last_updated": "2026-11-13T10:31:27.628Z",
+  "version": 4027,
+  "last_updated": "2026-11-13T10:33:13.310Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6bV6Oq9zscFsJIb8BJEo1m",
+      "title": "Night Fever / More Than A Woman - Live At The MGM Grand",
+      "artist": "Bee Gees",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:33:13.310Z"
+    },
     {
       "id": "5rklC1mQh9pcNBiLYNLkUs",
       "title": "Our Love (Don't Throw It All Away) - Live - At The MGM Grand",
