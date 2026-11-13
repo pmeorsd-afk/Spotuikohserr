@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4053,
-  "last_updated": "2026-11-13T12:19:20.869Z",
+  "version": 4054,
+  "last_updated": "2026-11-13T12:19:24.415Z",
   "artists": [
     {
       "id": "5yrSXmnSyIXgjAIk0n7fQI",
@@ -3550,6 +3550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1L8kJR6KYxmQBPfdUuyWLf",
+      "title": "מזלות",
+      "artist": "Avihu Medina, Shimi Tavori",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T12:19:24.415Z"
+    },
     {
       "id": "3Snzgyts4X42ZvAzMNWTcB",
       "title": "Stayin' Alive - Live At The MGM Grand",
