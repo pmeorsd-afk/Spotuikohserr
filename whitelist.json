@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3985,
-  "last_updated": "2026-11-13T08:17:51.434Z",
+  "version": 3986,
+  "last_updated": "2026-11-13T08:17:54.975Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5UDX3jJn9vXGxE5h0sNRCy",
+      "title": "Hurt No More",
+      "artist": "CHASE WRIGHT",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T08:17:54.975Z"
+    },
     {
       "id": "63MU2FswcPQclQMxK17Fkb",
       "title": "Arms Of A Stranger",
