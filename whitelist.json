@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4008,
-  "last_updated": "2026-11-13T10:03:11.857Z",
+  "version": 4009,
+  "last_updated": "2026-11-13T10:03:19.658Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3xcfRHbbkwIh6rPKQ9y8DX",
+      "title": "פאטה מורגנה",
+      "artist": "Itay Levi, Zehavi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:03:19.658Z"
+    },
     {
       "id": "1kfEpDFVf23HhPFxztqKiK",
       "title": "אור האורות",
