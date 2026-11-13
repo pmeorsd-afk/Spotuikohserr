@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 3996,
-  "last_updated": "2026-11-13T09:18:06.970Z",
+  "version": 3997,
+  "last_updated": "2026-11-13T09:21:23.876Z",
   "artists": [
+    {
+      "id": "7xiDnxuuh5vHvuQQFdPmYO",
+      "canonical_name": "להקת נשמחה",
+      "aliases": [
+        "להקת נשמחה"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T09:21:23.876Z"
+    },
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
       "canonical_name": "New York Boys Choir",
