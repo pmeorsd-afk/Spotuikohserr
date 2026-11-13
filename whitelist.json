@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4051,
-  "last_updated": "2026-11-13T12:18:42.629Z",
+  "version": 4052,
+  "last_updated": "2026-11-13T12:19:16.910Z",
   "artists": [
+    {
+      "id": "49gzbUFoJAchdKGvKmusJr",
+      "canonical_name": "ארז יחיאל",
+      "aliases": [
+        "ארז יחיאל"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T12:19:16.910Z"
+    },
     {
       "id": "3Kzn359wexaprQlKBq9Gk3",
       "canonical_name": "Avihu Medina",
