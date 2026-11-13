@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3970,
-  "last_updated": "2026-11-13T08:17:06.481Z",
+  "version": 3971,
+  "last_updated": "2026-11-13T08:17:10.117Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0OcsRZJeTegHUvzc2bLC5l",
+      "title": "אל תגידי לא, אחרי הכל מתגעגע, שלא תביני לא נכון, מי את היום בלעדיי - מתוך מופע מנורה לייב 2024",
+      "artist": "Itay Levi, Yonatan Kalimi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T08:17:10.117Z"
+    },
     {
       "id": "30DD4U5gWCwsysBq5pMkP5",
       "title": "מי שמאמין",
