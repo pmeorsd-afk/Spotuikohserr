@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3974,
-  "last_updated": "2026-11-13T08:17:17.467Z",
+  "version": 3976,
+  "last_updated": "2026-11-13T08:17:21.138Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "30RSluchsTGVdCi0o30ODG",
+      "title": "שירים שאהבנו",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T08:17:21.138Z"
+    },
+    {
+      "id": "3oCsy2522AljJy5JyXRYjL",
+      "title": "באור גדול",
+      "artist": "Eyal Golan, Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T08:17:21.138Z"
+    },
     {
       "id": "6YEcDPO0mxYoUOZx5cZleT",
       "title": "מדע בדיוני",
