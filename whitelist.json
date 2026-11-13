@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4032,
-  "last_updated": "2026-11-13T11:21:33.696Z",
+  "version": 4033,
+  "last_updated": "2026-11-13T11:21:37.017Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2XaRre0bZf4tSXIPFfH4mv",
+      "title": "And The Sun Will Shine - Live At The MGM Grand",
+      "artist": "Bee Gees",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T11:21:37.017Z"
+    },
     {
       "id": "7atmCJEv1Ha9R8AKOjR76L",
       "title": "I Can't See Nobody - Live At The MGM Grand",
