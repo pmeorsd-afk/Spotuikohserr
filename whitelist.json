@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4020,
-  "last_updated": "2026-11-13T10:30:59.072Z",
+  "version": 4022,
+  "last_updated": "2026-11-13T10:31:02.521Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "26B81hzch5vcQweK3TFBt6",
+      "title": "Islands In The Stream - Live At The MGM Grand/1997",
+      "artist": "Bee Gees",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:31:02.521Z"
+    },
+    {
+      "id": "4MHqMu0Z6ekE6cx6ZV65Ed",
+      "title": "The Way Of The Heart",
+      "artist": "Maniko",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:31:02.521Z"
+    },
     {
       "id": "6qdVDwR1NiW74hQRHTYWRQ",
       "title": "החידה הגדולה",
