@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3991,
-  "last_updated": "2026-11-13T09:05:22.601Z",
+  "version": 3992,
+  "last_updated": "2026-11-13T09:05:25.634Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "00LrMpWDfZgm0r47D0LsES",
+      "title": "שבחי ירושלים",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T09:05:25.634Z"
+    },
     {
       "id": "6bLLz2HbW3FbxVYPzci1No",
       "title": "פני מלאך",
