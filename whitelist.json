@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4006,
-  "last_updated": "2026-11-13T10:02:58.396Z",
+  "version": 4007,
+  "last_updated": "2026-11-13T10:03:02.472Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "00loVjlwn2P1rD3T5tnpRu",
+      "title": "bardichev",
+      "artist": "Niv Klil Hahoresh",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:03:02.472Z"
+    },
     {
       "id": "6sPpUfwcYBgW3kTXStNsVM",
       "title": "Mr. Sandman",
