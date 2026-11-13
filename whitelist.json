@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4035,
-  "last_updated": "2026-11-13T11:21:46.341Z",
+  "version": 4036,
+  "last_updated": "2026-11-13T11:21:49.913Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1P7hs2ymxVqzuqBUtLdkmQ",
+      "title": "Heartbreaker - Live At The MGM Grand/1997",
+      "artist": "Bee Gees",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T11:21:49.913Z"
+    },
     {
       "id": "0R25L71h2rUyy0tVA1K464",
       "title": "How Can You Mend A Broken Heart - Live At The MGM Grand",
