@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3967,
-  "last_updated": "2026-11-12T23:22:58.193Z",
+  "version": 3968,
+  "last_updated": "2026-11-13T08:16:54.214Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "057zhs662GgbUroJi4wN7Z",
+      "title": "השם גדול",
+      "artist": "שראל סופר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T08:16:54.214Z"
+    },
     {
       "id": "1SA8ICFeU3GGPRy5Oo2Thg",
       "title": "היגיינה",
