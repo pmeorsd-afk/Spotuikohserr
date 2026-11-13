@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4018,
-  "last_updated": "2026-11-13T10:30:52.096Z",
+  "version": 4019,
+  "last_updated": "2026-11-13T10:30:55.940Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5x4DpcRL7jAYh0te3eBFKG",
+      "title": "Closer Than Close - Live At The MGM Grand",
+      "artist": "Bee Gees",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:30:55.940Z"
+    },
     {
       "id": "1r2V2LjmovjDYmrn7kP0x7",
       "title": "Words - Live At The MGM Grand",
