@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4007,
-  "last_updated": "2026-11-13T10:03:02.472Z",
+  "version": 4008,
+  "last_updated": "2026-11-13T10:03:11.857Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1kfEpDFVf23HhPFxztqKiK",
+      "title": "אור האורות",
+      "artist": "אהרון סגל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:03:11.857Z"
+    },
     {
       "id": "00loVjlwn2P1rD3T5tnpRu",
       "title": "bardichev",
