@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4013,
-  "last_updated": "2026-11-13T10:07:14.142Z",
+  "version": 4014,
+  "last_updated": "2026-11-13T10:15:35.573Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5TXPRRyI9HwiorUI0u1J0T",
+      "title": "רק אני ואת",
+      "artist": "Omri Sabach, Stephane Legar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:15:35.573Z"
+    },
     {
       "id": "5w2TGBYS9kotRyHWqWxo4R",
       "title": "Intro - You Should Be Dancing / Alone - Live - At The MGM Grand",
