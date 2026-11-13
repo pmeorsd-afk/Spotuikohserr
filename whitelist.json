@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4016,
-  "last_updated": "2026-11-13T10:15:42.401Z",
+  "version": 4017,
+  "last_updated": "2026-11-13T10:15:45.967Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0jHip24OqPOfrxuaGc1o69",
+      "title": "To Love Somebody - Live At The MGM Grand",
+      "artist": "Bee Gees",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:15:45.967Z"
+    },
     {
       "id": "2bvqmssoNevfM8unaxu6YT",
       "title": "Massachusetts - Live At The MGM Grand",
