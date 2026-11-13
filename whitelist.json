@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4004,
-  "last_updated": "2026-11-13T09:58:23.077Z",
+  "version": 4005,
+  "last_updated": "2026-11-13T09:58:27.675Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -25688,6 +25688,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-11-13T08:17:33.753Z"
+    },
+    {
+      "id": "968597868c824e2e7872573df9927d0b715499dbbda0909c",
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/2OLmN3LLWtLF7zerL4VdaX/he",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-11-13T09:58:27.675Z"
     }
   ],
   "search_images": [
