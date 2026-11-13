@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4054,
-  "last_updated": "2026-11-13T12:19:24.415Z",
+  "version": 4055,
+  "last_updated": "2026-11-13T12:19:27.989Z",
   "artists": [
     {
       "id": "5yrSXmnSyIXgjAIk0n7fQI",
@@ -3550,6 +3550,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3EZen8ZriW0A1dZBaB6QRA",
+      "title": "מתפלל אני",
+      "artist": "ארז יחיאל, אמיר יוסף",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T12:19:27.989Z"
+    },
     {
       "id": "1L8kJR6KYxmQBPfdUuyWLf",
       "title": "מזלות",
