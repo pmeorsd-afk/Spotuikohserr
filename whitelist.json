@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4030,
-  "last_updated": "2026-11-13T10:38:06.159Z",
+  "version": 4031,
+  "last_updated": "2026-11-13T11:21:30.458Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1EVv2PGWESAYy4FmzfxAwT",
+      "title": "New York Mining Disaster 1941 - Live At The MGM Grand",
+      "artist": "Bee Gees",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T11:21:30.458Z"
+    },
     {
       "id": "5Th6EdNVhxp0TPX41ZLZk6",
       "title": "One Way Or Another - Remastered 2001",
