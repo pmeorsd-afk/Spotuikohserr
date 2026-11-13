@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4049,
-  "last_updated": "2026-11-13T12:16:10.794Z",
+  "version": 4050,
+  "last_updated": "2026-11-13T12:18:38.988Z",
   "artists": [
+    {
+      "id": "3Kzn359wexaprQlKBq9Gk3",
+      "canonical_name": "Avihu Medina",
+      "aliases": [
+        "Avihu Medina"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T12:18:38.988Z"
+    },
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
       "canonical_name": "להקת נשמחה",
