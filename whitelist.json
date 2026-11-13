@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4023,
-  "last_updated": "2026-11-13T10:31:10.285Z",
+  "version": 4024,
+  "last_updated": "2026-11-13T10:31:14.644Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6AcZ2QAVzqqcbF3kLWXhG3",
+      "title": "The Way of the Heart (Faster Version)",
+      "artist": "Gopal, Narayani, Anandgyan, Chinmaya Dunster",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:31:14.644Z"
+    },
     {
       "id": "26B81hzch5vcQweK3TFBt6",
       "title": "Islands In The Stream - Live At The MGM Grand/1997",
