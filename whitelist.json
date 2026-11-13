@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4047,
-  "last_updated": "2026-11-13T12:16:07.573Z",
+  "version": 4049,
+  "last_updated": "2026-11-13T12:16:10.794Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6RT4iTFj4NcuEYOE8vUzKc",
+      "title": "מחרוזת דבקה בפארק הירקון - Live",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T12:16:10.794Z"
+    },
+    {
+      "id": "2gWTIYOfW8YmeanLvdPXjt",
+      "title": "טובע לי בחלומות",
+      "artist": "Ben Chen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T12:16:10.794Z"
+    },
     {
       "id": "6bRCodcrERrV15WXjQLJ0t",
       "title": "מחרוזת מורנו",
