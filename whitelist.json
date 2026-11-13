@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3999,
-  "last_updated": "2026-11-13T09:30:08.488Z",
+  "version": 4000,
+  "last_updated": "2026-11-13T09:30:12.159Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2YS4HmVtW1Atp2S2lv48Cg",
+      "title": "Love Is for Free",
+      "artist": "Smiley, Pacha Man",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T09:30:12.159Z"
+    },
     {
       "id": "7gVSSIVSQ7VYvq32BSuq6U",
       "title": "מרוב אהבה שותק",
