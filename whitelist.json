@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3977,
-  "last_updated": "2026-11-13T08:17:24.853Z",
+  "version": 3978,
+  "last_updated": "2026-11-13T08:17:28.303Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7MAzRpjDMz2lXud79eIBpD",
+      "title": "קצת אהבה לא תזיק",
+      "artist": "Alon Eder",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T08:17:28.303Z"
+    },
     {
       "id": "3x6SgnT8Qcya61YSTpnA5r",
       "title": "אלף כוכבים",
