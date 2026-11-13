@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3982,
-  "last_updated": "2026-11-13T08:17:44.407Z",
+  "version": 3984,
+  "last_updated": "2026-11-13T08:17:47.689Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1rcpSda8oPEfPm6po2W01I",
+      "title": "A Voice in the Wind",
+      "artist": "Omer Gonen-Haela",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T08:17:47.689Z"
+    },
+    {
+      "id": "5Ow4BJa1CvGTYQflgsxkE2",
+      "title": "אור",
+      "artist": "Eliad",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T08:17:47.689Z"
+    },
     {
       "id": "5fqQczuDcR3byTsxWOXDha",
       "title": "Homeless",
