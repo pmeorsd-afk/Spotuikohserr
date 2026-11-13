@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4010,
-  "last_updated": "2026-11-13T10:03:29.512Z",
+  "version": 4011,
+  "last_updated": "2026-11-13T10:03:32.642Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0cnXDZGevuZ5kj2nbVzPyu",
+      "title": "לילה עיר",
+      "artist": "Maor Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T10:03:32.642Z"
+    },
     {
       "id": "6LVURhYae6S3ep1H0Q8bbd",
       "title": "ניגוני הכנה להדלקת נרות חנוכה ושירי שמחה והודאה | ישיבת רועה ישראל - יצהר - מקורית",
