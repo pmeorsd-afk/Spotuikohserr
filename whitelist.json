@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4057,
-  "last_updated": "2026-11-13T12:20:17.938Z",
+  "version": 4058,
+  "last_updated": "2026-11-13T12:20:21.429Z",
   "artists": [
+    {
+      "id": "5CO6FrhKGkctvckrqa6cJ7",
+      "canonical_name": "Amir Alaev",
+      "aliases": [
+        "Amir Alaev"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T12:20:21.429Z"
+    },
     {
       "id": "1TDZazRlbpfUYNbD2vHNF4",
       "canonical_name": "ישיבת רועה ישראל - יצהר",
