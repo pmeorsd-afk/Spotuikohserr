@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4040,
-  "last_updated": "2026-11-13T11:22:00.846Z",
+  "version": 4041,
+  "last_updated": "2026-11-13T11:22:04.699Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "363GKRpK21IbuEwJVkYFpK",
+      "title": "I Started A Joke - Live At The MGM Grand",
+      "artist": "Bee Gees",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T11:22:04.699Z"
+    },
     {
       "id": "3KcvhdB2XV8U0s6PbIy1bc",
       "title": "WFT",
