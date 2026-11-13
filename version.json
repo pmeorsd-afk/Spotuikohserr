@@ -1,11 +1,11 @@
 {
-  "versionCode": 29,
-  "versionName": "2.9",
-  "title": "יצא עדכון חדש לאפליקציה! (גרסה 2.9) 🎉",
-  "message": "עדכון גרסה 2.9: מנגנון עדכונים ישיר מתוך האפליקציה, שיפורי עיצוב וביצועים במסך הבית, בחיפוש ובספרייה, ותמיכה משופרת ב-Android Auto ו-Waze.",
+  "versionCode": 30,
+  "versionName": "3.0",
+  "title": "יצא עדכון חדש לאפליקציה! (גרסה 3.0) 🎉",
+  "message": "עדכון גרסה 3.0: איכות מוזיקה משופרת (עד כ-160kbps ויותר), ייבוא כל המועדפים מחשבון ספוטיפיי, תיקון מסך שירים שאהבתם, ועיצובים חדשים למסכים ולמסך התור בנגן.",
   "downloadUrl": "https://mitmachim.top/post/1271543",
-  "apkUrl": "https://github.com/pmeorsd-afk/Spotuikohserr/releases/download/v2.9/Spotify-Kosher.apk",
-  "apkSha256": "6AF6B59B186B19AC18345F22D0A3212B895DF922F2EA0870550255474A917AFB",
+  "apkUrl": "https://github.com/pmeorsd-afk/Spotuikohserr/releases/download/v3.0/Spotify-Kosher.apk",
+  "apkSha256": "C1DEB7DD88E266305D4207BB37603B58F8FCE679BBB2243243A89E35E4ACE016",
   "forceUpdate": false,
   "updateButtonText": "הורד עדכון עכשיו",
   "cancelButtonText": "הזכר לי מאוחר יותר"
