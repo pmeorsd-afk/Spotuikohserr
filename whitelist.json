@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4061,
-  "last_updated": "2026-11-13T12:47:21.926Z",
+  "version": 4062,
+  "last_updated": "2026-11-13T12:47:25.423Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1wy6aXqtGg14F3Ooa9BzPs",
+      "title": "אצלי הכל בסדר, את לי לילה - מנורה לייב",
+      "artist": "Moshik Afia, Boaz Sharabi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T12:47:25.423Z"
+    },
     {
       "id": "4VWNKplBK8kZCICroqYVK1",
       "title": "שבת",
