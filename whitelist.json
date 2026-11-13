@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4001,
-  "last_updated": "2026-11-13T09:58:04.841Z",
+  "version": 4002,
+  "last_updated": "2026-11-13T09:58:16.126Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4MXSTBM9Zd6TxYLOiqPqzm",
+      "title": "עדיף",
+      "artist": "Daniel Salomon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T09:58:16.126Z"
+    },
     {
       "id": "0d28khcov6AiegSCpG5TuT",
       "title": "Feel Good Inc.",
