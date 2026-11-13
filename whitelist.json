@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4044,
-  "last_updated": "2026-11-13T11:22:15.156Z",
+  "version": 4046,
+  "last_updated": "2026-11-13T11:22:18.905Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "47RlJqYcGgZC0tONUHj4b3",
+      "title": "How Deep Is Your Love - Live At The MGM Grand",
+      "artist": "Bee Gees",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T11:22:18.905Z"
+    },
+    {
+      "id": "5h5zuwonbytUyDagAmPydT",
+      "title": "מחרוזת שבת - Live",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T11:22:18.905Z"
+    },
     {
       "id": "4m9X1AR1EDCNFeZO1wkM91",
       "title": "Jive Talkin' - Live At The MGM Grand",
