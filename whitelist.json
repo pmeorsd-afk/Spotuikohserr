@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3990,
-  "last_updated": "2026-11-13T09:05:19.105Z",
+  "version": 3991,
+  "last_updated": "2026-11-13T09:05:22.601Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6bLLz2HbW3FbxVYPzci1No",
+      "title": "פני מלאך",
+      "artist": "Yoav Itzhak",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T09:05:22.601Z"
+    },
     {
       "id": "2LEMdNMznljbg2wqGsfGF9",
       "title": "Love Me Better",
