@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4056,
-  "last_updated": "2026-11-13T12:20:14.649Z",
+  "version": 4057,
+  "last_updated": "2026-11-13T12:20:17.938Z",
   "artists": [
+    {
+      "id": "1TDZazRlbpfUYNbD2vHNF4",
+      "canonical_name": "ישיבת רועה ישראל - יצהר",
+      "aliases": [
+        "ישיבת רועה ישראל - יצהר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T12:20:17.938Z"
+    },
     {
       "id": "564dx6dEzMT7sUdjrt8yBv",
       "canonical_name": "אהרון סגל",
