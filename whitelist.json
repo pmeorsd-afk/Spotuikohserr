@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4058,
-  "last_updated": "2026-11-13T12:20:21.429Z",
+  "version": 4059,
+  "last_updated": "2026-11-13T12:47:14.602Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Jnxngdff0lVu2rza1GVx6",
+      "title": "Paranoid - 2009 Remaster",
+      "artist": "Black Sabbath",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T12:47:14.602Z"
+    },
     {
       "id": "3EZen8ZriW0A1dZBaB6QRA",
       "title": "מתפלל אני",
