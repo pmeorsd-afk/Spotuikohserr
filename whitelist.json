@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3995,
-  "last_updated": "2026-11-13T09:18:03.253Z",
+  "version": 3996,
+  "last_updated": "2026-11-13T09:18:06.970Z",
   "artists": [
     {
       "id": "3AtKG5ZHeb5ImUtSUcRvlS",
@@ -3510,6 +3510,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Pga0I6DJAfL1DEySKUnUq",
+      "title": "Dancing",
+      "artist": "Shye Ben Tzur",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T09:18:06.970Z"
+    },
     {
       "id": "27fhBtzdJeqEvqCEBKb8KH",
       "title": "יום הולדת לאלי החתול",
