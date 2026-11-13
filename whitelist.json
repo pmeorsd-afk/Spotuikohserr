@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 3997,
-  "last_updated": "2026-11-13T09:21:23.876Z",
+  "version": 3998,
+  "last_updated": "2026-11-13T09:21:28.243Z",
   "artists": [
     {
       "id": "7xiDnxuuh5vHvuQQFdPmYO",
@@ -3520,6 +3520,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6nYGEYa94XZB6yhlTlbgND",
+      "title": "אקדם את פנייך",
+      "artist": "להקת נשמחה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-13T09:21:28.243Z"
+    },
     {
       "id": "6Pga0I6DJAfL1DEySKUnUq",
       "title": "Dancing",
