@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4086,
-  "last_updated": "2026-11-14T16:32:19.406Z",
+  "version": 4087,
+  "last_updated": "2026-11-14T16:32:26.678Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3MGiy268tmTb9ezmLdsm2L",
+      "title": "מחרוזת שירי מקדש וירושלים",
+      "artist": "ישיבת הר הבית",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:32:26.678Z"
+    },
     {
       "id": "4d1FaEnQi33dEl2R42RAgd",
       "title": "עולם חדש-רמיקס רשמי",
