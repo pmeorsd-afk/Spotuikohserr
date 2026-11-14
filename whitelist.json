@@ -1,8 +1,28 @@
 {
   "schema_version": 2,
-  "version": 4165,
-  "last_updated": "2026-11-14T19:40:42.306Z",
+  "version": 4167,
+  "last_updated": "2026-11-14T19:40:45.764Z",
   "artists": [
+    {
+      "id": "7sDyvOHIftb0VQ9gIK3wmY",
+      "canonical_name": "רגעים",
+      "aliases": [
+        "רגעים"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:40:45.764Z"
+    },
+    {
+      "id": "5TkxMo9AzlK9Ixb35fNKoc",
+      "canonical_name": "צח חכים",
+      "aliases": [
+        "צח חכים"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:40:45.764Z"
+    },
     {
       "id": "06sQ1PWeWcWzVBd3kVV2Dv",
       "canonical_name": "עומר ביטון",
