@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4174,
-  "last_updated": "2026-11-14T19:41:09.513Z",
+  "version": 4175,
+  "last_updated": "2026-11-14T19:41:13.005Z",
   "artists": [
+    {
+      "id": "4yWHXW971V596h2I7b3ovn",
+      "canonical_name": "מוישי רוט",
+      "aliases": [
+        "מוישי רוט"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:41:13.005Z"
+    },
     {
       "id": "13CpDXHlVxPMiKDIMUeRDN",
       "canonical_name": "Meir Adler",
