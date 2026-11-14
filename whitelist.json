@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4202,
-  "last_updated": "2026-11-14T23:08:40.218Z",
+  "version": 4203,
+  "last_updated": "2026-11-14T23:21:45.596Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5IFvQ8R1HCc3ozFmBQpAiP",
+      "title": "אנרגיה פנימית",
+      "artist": "RW מוח ממוקד",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T23:21:45.596Z"
+    },
     {
       "id": "1hTth4TFnHWYWiXglQ6bN2",
       "title": "רחוק מכולם",
