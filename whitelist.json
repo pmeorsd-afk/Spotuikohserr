@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4157,
-  "last_updated": "2026-11-14T19:19:19.957Z",
+  "version": 4158,
+  "last_updated": "2026-11-14T19:30:57.305Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "65zlO231Rvku4dASZfoVhW",
+      "title": "הנני",
+      "artist": "David Taub, Gil Israelov, Amiran Dvir, אריק דביר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:30:57.305Z"
+    },
     {
       "id": "2Z66HN2DBZz6WlhR5bSQAa",
       "title": "Finally Free",
