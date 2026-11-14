@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4122,
-  "last_updated": "2026-11-14T17:15:41.612Z",
+  "version": 4123,
+  "last_updated": "2026-11-14T17:21:56.293Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ya0JtcbcMT35tsDUTuLQx",
+      "title": "אישה מהשמיים",
+      "artist": "Gilad Segev",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T17:21:56.293Z"
+    },
     {
       "id": "4UtuIfBLUQRQCeqQGezauz",
       "title": "עיניים עצובות גירסת היוצר",
