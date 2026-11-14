@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4093,
-  "last_updated": "2026-11-14T16:33:01.973Z",
+  "version": 4094,
+  "last_updated": "2026-11-14T16:33:05.741Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "41EDoM9c9AUVKoEvPPYbfm",
+      "title": "מחרוזת שירי מקדש וירושלים 2",
+      "artist": "ישיבת הר הבית",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:33:05.741Z"
+    },
     {
       "id": "5zdjRwWamrcF5ZkXuzvhga",
       "title": "Ashrei Anoshecha - אשרי אנשיך",
