@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4170,
-  "last_updated": "2026-11-14T19:40:57.932Z",
+  "version": 4171,
+  "last_updated": "2026-11-14T19:41:01.752Z",
   "artists": [
+    {
+      "id": "02eUusef22nSMD08b9TsEi",
+      "canonical_name": "Tzali Gold",
+      "aliases": [
+        "Tzali Gold"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:41:01.752Z"
+    },
     {
       "id": "4gAOZn2YN0ojkBWjS9Aqeg",
       "canonical_name": "בני לאופר",
