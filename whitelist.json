@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4164,
-  "last_updated": "2026-11-14T19:40:39.256Z",
+  "version": 4165,
+  "last_updated": "2026-11-14T19:40:42.306Z",
   "artists": [
+    {
+      "id": "06sQ1PWeWcWzVBd3kVV2Dv",
+      "canonical_name": "עומר ביטון",
+      "aliases": [
+        "עומר ביטון"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:40:42.306Z"
+    },
     {
       "id": "6qazuQSHfHAFfHHGtKJAXU",
       "canonical_name": "ישיבת הר הבית",
