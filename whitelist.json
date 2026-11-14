@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4071,
-  "last_updated": "2026-11-14T16:31:21.029Z",
+  "version": 4072,
+  "last_updated": "2026-11-14T16:31:24.384Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0VIPQbUKj3b2OAGn6KPw5q",
+      "title": "Let It Kill Me",
+      "artist": "Jonah Marais",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:31:24.384Z"
+    },
     {
       "id": "0bMbDctzMmTyK2j74j3nF3",
       "title": "Alone, Pt. II",
