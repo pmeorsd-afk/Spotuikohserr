@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4187,
-  "last_updated": "2026-11-14T20:13:09.517Z",
+  "version": 4188,
+  "last_updated": "2026-11-14T20:49:36.058Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3BTt3n0TIEoKwPgb9myrRc",
+      "title": "היום קמתי שמח",
+      "artist": "Ofer Levi, חנן בן ארי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T20:49:36.058Z"
+    },
     {
       "id": "52ct7kYZt46jY21JVwjr1k",
       "title": "שבע ברכות",
