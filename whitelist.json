@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4094,
-  "last_updated": "2026-11-14T16:33:05.741Z",
+  "version": 4095,
+  "last_updated": "2026-11-14T16:33:11.283Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7b6qoEhxW8ZiNDPoFjPcRl",
+      "title": "מחרוזת חתונות || בורא עולם | מהרה ה' | אשר ברא | צמאה | מחשבות טובות |",
+      "artist": "צח חכים, רגעים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:33:11.283Z"
+    },
     {
       "id": "41EDoM9c9AUVKoEvPPYbfm",
       "title": "מחרוזת שירי מקדש וירושלים 2",
