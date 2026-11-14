@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4183,
-  "last_updated": "2026-11-14T19:41:37.271Z",
+  "version": 4184,
+  "last_updated": "2026-11-14T19:42:04.044Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4RZmrgnG5pAofN7JhWvMBo",
+      "title": "Choose Life",
+      "artist": "Zusha, Akiva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:42:04.044Z"
+    },
     {
       "id": "014wNqtpt3wV0maS4kRbw3",
       "title": "חלליות - Remix",
