@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4173,
-  "last_updated": "2026-11-14T19:41:05.655Z",
+  "version": 4174,
+  "last_updated": "2026-11-14T19:41:09.513Z",
   "artists": [
+    {
+      "id": "13CpDXHlVxPMiKDIMUeRDN",
+      "canonical_name": "Meir Adler",
+      "aliases": [
+        "Meir Adler"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:41:09.513Z"
+    },
     {
       "id": "0DdneKvF1AQoLLDMqd8o5N",
       "canonical_name": "Moishy Schwartz",
