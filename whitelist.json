@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4092,
-  "last_updated": "2026-11-14T16:32:49.381Z",
+  "version": 4093,
+  "last_updated": "2026-11-14T16:33:01.973Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5zdjRwWamrcF5ZkXuzvhga",
+      "title": "Ashrei Anoshecha - אשרי אנשיך",
+      "artist": "Thank You Hashem, Moshe Auslander",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:33:01.973Z"
+    },
     {
       "id": "3pFnWCTckTkmGGzubFHsck",
       "title": "יבואו ימים",
