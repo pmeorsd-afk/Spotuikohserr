@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4110,
-  "last_updated": "2026-11-14T16:34:53.943Z",
+  "version": 4111,
+  "last_updated": "2026-11-14T16:35:03.635Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1o8VtK8FfoUXk2ESdr5VFz",
+      "title": "אין קדוש כהשם",
+      "artist": "יואלי קליין, מקהלת מלכות, Mendy Weiss",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:35:03.635Z"
+    },
     {
       "id": "5w34GpQeWlV1BHfIatYmUD",
       "title": "Pesach Shaarei Shamayim - פתח שערי שמים",
