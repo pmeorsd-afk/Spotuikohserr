@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4154,
-  "last_updated": "2026-11-14T19:19:08.333Z",
+  "version": 4155,
+  "last_updated": "2026-11-14T19:19:11.870Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3xJmFW6TzxIE0k5zGdIHdB",
+      "title": "Just the Two of Us (feat. Rachael Harris & D.B. Woodside)",
+      "artist": "Lucifer Cast, D.B. Woodside, Rachael Harris",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:19:11.870Z"
+    },
     {
       "id": "1t6BhKUZhBmBQk3sFPeHxX",
       "title": "אומן",
