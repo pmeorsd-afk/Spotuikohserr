@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4163,
-  "last_updated": "2026-11-14T19:40:36.300Z",
+  "version": 4164,
+  "last_updated": "2026-11-14T19:40:39.256Z",
   "artists": [
+    {
+      "id": "6qazuQSHfHAFfHHGtKJAXU",
+      "canonical_name": "ישיבת הר הבית",
+      "aliases": [
+        "ישיבת הר הבית"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:40:39.256Z"
+    },
     {
       "id": "4r5tENMnY6y7ctwda1TV9c",
       "canonical_name": "ישיבת אורות שאול",
