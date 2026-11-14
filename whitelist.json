@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4168,
-  "last_updated": "2026-11-14T19:40:48.695Z",
+  "version": 4169,
+  "last_updated": "2026-11-14T19:40:54.392Z",
   "artists": [
+    {
+      "id": "7xotowWYYkwQ44dylQyM6J",
+      "canonical_name": "Yossi Shtendig",
+      "aliases": [
+        "Yossi Shtendig"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:40:54.392Z"
+    },
     {
       "id": "7wha8YpcxUZ6riIYe9UddU",
       "canonical_name": "מקהלת מלכות",
