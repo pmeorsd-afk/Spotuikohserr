@@ -1,8 +1,28 @@
 {
   "schema_version": 2,
-  "version": 4171,
-  "last_updated": "2026-11-14T19:41:01.752Z",
+  "version": 4173,
+  "last_updated": "2026-11-14T19:41:05.655Z",
   "artists": [
+    {
+      "id": "0DdneKvF1AQoLLDMqd8o5N",
+      "canonical_name": "Moishy Schwartz",
+      "aliases": [
+        "Moishy Schwartz"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:41:05.655Z"
+    },
+    {
+      "id": "49GT6iDYMuIbMMNVCTA20F",
+      "canonical_name": "Hershy Langsam",
+      "aliases": [
+        "Hershy Langsam"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:41:05.655Z"
+    },
     {
       "id": "02eUusef22nSMD08b9TsEi",
       "canonical_name": "Tzali Gold",
