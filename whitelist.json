@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4102,
-  "last_updated": "2026-11-14T16:34:05.044Z",
+  "version": 4103,
+  "last_updated": "2026-11-14T16:34:08.720Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Vj4KZZAFHEk8QMrkv62rz",
+      "title": "Zakeini - זכינו",
+      "artist": "Tzali Gold, Hershy Weinberger, Ahrele Samet",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:34:08.720Z"
+    },
     {
       "id": "3xgyNRX0GL4jc7errvMMhL",
       "title": "אמנם כן יצר סוכן בנו",
