@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4128,
-  "last_updated": "2026-11-14T18:14:20.257Z",
+  "version": 4129,
+  "last_updated": "2026-11-14T18:23:43.602Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5gK0xdlt74qS6yaf1HKCkx",
+      "title": "מחרוזת אמא",
+      "artist": "אלירן אלבז, אלעד שער",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T18:23:43.602Z"
+    },
     {
       "id": "0wH8UfNTFYw5prrOMO0I3v",
       "title": "מחרוזת לברית מילה",
