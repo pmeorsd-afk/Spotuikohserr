@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4184,
-  "last_updated": "2026-11-14T19:42:04.044Z",
+  "version": 4185,
+  "last_updated": "2026-11-14T20:13:05.710Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6nbPkEQBQoOi5eYs3EN196",
+      "title": "ביום ההוא",
+      "artist": "חיים פורטל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T20:13:05.710Z"
+    },
     {
       "id": "4RZmrgnG5pAofN7JhWvMBo",
       "title": "Choose Life",
