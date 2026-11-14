@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4185,
-  "last_updated": "2026-11-14T20:13:05.710Z",
+  "version": 4187,
+  "last_updated": "2026-11-14T20:13:09.517Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "52ct7kYZt46jY21JVwjr1k",
+      "title": "שבע ברכות",
+      "artist": "ישראל אס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T20:13:09.517Z"
+    },
+    {
+      "id": "5Q9iMPs5FBjh1d5TxGwZd0",
+      "title": "עוד הכל יסתדר",
+      "artist": "מאיר חג'בי, קובי ברומר, חיים פורטל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T20:13:09.517Z"
+    },
     {
       "id": "6nbPkEQBQoOi5eYs3EN196",
       "title": "ביום ההוא",
