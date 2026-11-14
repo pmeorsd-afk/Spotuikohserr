@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4100,
-  "last_updated": "2026-11-14T16:33:47.708Z",
+  "version": 4101,
+  "last_updated": "2026-11-14T16:33:53.585Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "160aIwIlQxavsXRuIM3GOV",
+      "title": "Chamol - חמול",
+      "artist": "Moishy Schwartz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:33:53.585Z"
+    },
     {
       "id": "25ao6VzMNpazV6MXj6ZWui",
       "title": "ליל שימורים",
