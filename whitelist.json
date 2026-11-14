@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4200,
-  "last_updated": "2026-11-14T22:30:14.207Z",
+  "version": 4201,
+  "last_updated": "2026-11-14T23:08:33.836Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1hTth4TFnHWYWiXglQ6bN2",
+      "title": "רחוק מכולם",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T23:08:33.836Z"
+    },
     {
       "id": "2LeJyOf7FcWGyL4IScqhMa",
       "title": "כמו שטן",
