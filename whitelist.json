@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4068,
-  "last_updated": "2026-11-14T16:30:47.076Z",
+  "version": 4069,
+  "last_updated": "2026-11-14T16:30:52.722Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5gFYe6ngpSJe0fH7snUMfe",
+      "title": "First Last Time",
+      "artist": "Deeps",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:30:52.722Z"
+    },
     {
       "id": "7yCF65vpc7sUwPjftI0iFb",
       "title": "Happy Nation",
