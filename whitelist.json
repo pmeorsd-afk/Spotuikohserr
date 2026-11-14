@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4091,
-  "last_updated": "2026-11-14T16:32:45.482Z",
+  "version": 4092,
+  "last_updated": "2026-11-14T16:32:49.381Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3pFnWCTckTkmGGzubFHsck",
+      "title": "יבואו ימים",
+      "artist": "נתנאל ברדה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:32:49.381Z"
+    },
     {
       "id": "5XgtuWnJYaH6SUSgNj38qt",
       "title": "מאור ענינו",
