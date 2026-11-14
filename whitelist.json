@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4101,
-  "last_updated": "2026-11-14T16:33:53.585Z",
+  "version": 4102,
+  "last_updated": "2026-11-14T16:34:05.044Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3xgyNRX0GL4jc7errvMMhL",
+      "title": "אמנם כן יצר סוכן בנו",
+      "artist": "Meir Adler",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:34:05.044Z"
+    },
     {
       "id": "160aIwIlQxavsXRuIM3GOV",
       "title": "Chamol - חמול",
