@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4137,
-  "last_updated": "2026-11-14T18:45:44.519Z",
+  "version": 4138,
+  "last_updated": "2026-11-14T18:48:20.633Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3QCWA9RzAPb4Xw4BagADFq",
+      "title": "ככה וככה",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T18:48:20.633Z"
+    },
     {
       "id": "7gC4AJFRiM3D7Hp6vD6yGY",
       "title": "עונת החתונות",
