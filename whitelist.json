@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4167,
-  "last_updated": "2026-11-14T19:40:45.764Z",
+  "version": 4168,
+  "last_updated": "2026-11-14T19:40:48.695Z",
   "artists": [
+    {
+      "id": "7wha8YpcxUZ6riIYe9UddU",
+      "canonical_name": "מקהלת מלכות",
+      "aliases": [
+        "מקהלת מלכות"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:40:48.695Z"
+    },
     {
       "id": "7sDyvOHIftb0VQ9gIK3wmY",
       "canonical_name": "רגעים",
