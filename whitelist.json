@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4079,
-  "last_updated": "2026-11-14T16:31:48.183Z",
+  "version": 4080,
+  "last_updated": "2026-11-14T16:31:53.054Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6T0LlxJeSMgFHzKPWf4NfM",
+      "title": "I Don't Know Me",
+      "artist": "Pedro Santos",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:31:53.054Z"
+    },
     {
       "id": "1Tb61hpQi7xaP0fuqF2wBo",
       "title": "מחרוזת שבת",
