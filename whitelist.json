@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4176,
-  "last_updated": "2026-11-14T19:41:16.254Z",
+  "version": 4177,
+  "last_updated": "2026-11-14T19:41:19.382Z",
   "artists": [
+    {
+      "id": "4Teyf59PJZtel0w6x0j82u",
+      "canonical_name": "ישראל גולדרייך",
+      "aliases": [
+        "ישראל גולדרייך"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:41:19.382Z"
+    },
     {
       "id": "4yWHXW971V596h2I7b3ovn",
       "canonical_name": "מוישי רוט",
