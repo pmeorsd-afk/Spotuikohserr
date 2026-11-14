@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4189,
-  "last_updated": "2026-11-14T20:49:39.380Z",
+  "version": 4190,
+  "last_updated": "2026-11-14T20:49:42.897Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3p28r5siIqR7TuNZyeS6Rh",
+      "title": "חלום של כל גבר",
+      "artist": "Subliminal, Gilad Vital",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T20:49:42.897Z"
+    },
     {
       "id": "3OIZaVMNulfpvgg4zu7QCv",
       "title": "אהבה ראשונה - Remix",
