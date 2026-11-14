@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4107,
-  "last_updated": "2026-11-14T16:34:31.722Z",
+  "version": 4108,
+  "last_updated": "2026-11-14T16:34:43.114Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2TzbESDBECjWObHJWLiYgd",
+      "title": "כנשר",
+      "artist": "ישראל גולדרייך, מקהלת מלכות",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:34:43.114Z"
+    },
     {
       "id": "24dnCozogOYlXroStIAlFe",
       "title": "הלל הזקן",
