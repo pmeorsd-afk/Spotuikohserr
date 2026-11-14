@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4072,
-  "last_updated": "2026-11-14T16:31:24.384Z",
+  "version": 4073,
+  "last_updated": "2026-11-14T16:31:27.956Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7xwiV7wpHpB8cEwcWlhZpw",
+      "title": "REDLIGHT",
+      "artist": "Jonah Marais",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:31:27.956Z"
+    },
     {
       "id": "0VIPQbUKj3b2OAGn6KPw5q",
       "title": "Let It Kill Me",
