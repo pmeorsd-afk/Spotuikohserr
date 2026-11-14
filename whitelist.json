@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4082,
-  "last_updated": "2026-11-14T16:32:02.631Z",
+  "version": 4083,
+  "last_updated": "2026-11-14T16:32:06.408Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6iOSaiNoR9l6IDUwQo5Cv9",
+      "title": "I Will Survive (feat. Tom Ellis & Skye Townsend)",
+      "artist": "Lucifer Cast, Skye Townsend, Tom Ellis",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:32:06.408Z"
+    },
     {
       "id": "6P0gZKEYC2SnR0gF9Y3ysB",
       "title": "אנא - הרמיקס הרשמי",
