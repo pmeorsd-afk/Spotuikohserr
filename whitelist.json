@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4149,
-  "last_updated": "2026-11-14T19:00:39.340Z",
+  "version": 4150,
+  "last_updated": "2026-11-14T19:18:56.896Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4A7sxktD27KPqQjTxvZSl4",
+      "title": "Drogba (Joanna)",
+      "artist": "Afro B, Wizkid",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:18:56.896Z"
+    },
     {
       "id": "3E25CVg6Am2imRZTBVtfVZ",
       "title": "PRiNCE GEORGE",
