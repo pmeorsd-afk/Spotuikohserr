@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4089,
-  "last_updated": "2026-11-14T16:32:36.010Z",
+  "version": 4090,
+  "last_updated": "2026-11-14T16:32:39.406Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1sklMkk3FFsMerX6jsM0fe",
+      "title": "מורה לחיים",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:32:39.406Z"
+    },
     {
       "id": "03k0nAWkjw7t5p53OPO9EC",
       "title": "תמיד אוהב אותי - Remix",
