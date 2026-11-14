@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4182,
-  "last_updated": "2026-11-14T19:41:33.782Z",
+  "version": 4183,
+  "last_updated": "2026-11-14T19:41:37.271Z",
   "artists": [
+    {
+      "id": "0ekBvy1SWNvQVyELcr9Xui",
+      "canonical_name": "David Taub",
+      "aliases": [
+        "David Taub"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:41:37.271Z"
+    },
     {
       "id": "6j4gUn7AOBhtletaBIfRip",
       "canonical_name": "אריק דביר",
