@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4203,
-  "last_updated": "2026-11-14T23:21:45.596Z",
+  "version": 4204,
+  "last_updated": "2026-11-14T23:21:48.557Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0cTRDUl1vovXBJ1lBQIyRk",
+      "title": "מים שקופים",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T23:21:48.557Z"
+    },
     {
       "id": "5IFvQ8R1HCc3ozFmBQpAiP",
       "title": "אנרגיה פנימית",
