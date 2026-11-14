@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4142,
-  "last_updated": "2026-11-14T18:52:53.379Z",
+  "version": 4143,
+  "last_updated": "2026-11-14T18:56:37.848Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "768Vu2KbeWeRY0TOjBHtOO",
+      "title": "סטאי / אתה שלי (חלק 1)",
+      "artist": "אודיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T18:56:37.848Z"
+    },
     {
       "id": "0yz2J4wsXFCjMjpJ6A74yV",
       "title": "Fine China",
