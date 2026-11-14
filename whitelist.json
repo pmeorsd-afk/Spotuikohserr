@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4161,
-  "last_updated": "2026-11-14T19:40:29.453Z",
+  "version": 4162,
+  "last_updated": "2026-11-14T19:40:32.845Z",
   "artists": [
+    {
+      "id": "3ZqQ5tMIPBF3P2XTOuz7F0",
+      "canonical_name": "ישיבת מעלה גלבוע",
+      "aliases": [
+        "ישיבת מעלה גלבוע"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:40:32.845Z"
+    },
     {
       "id": "6Wy3o5P4KtikSAIKevnRKN",
       "canonical_name": "פרחי ירושלים",
