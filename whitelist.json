@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4135,
-  "last_updated": "2026-11-14T18:45:31.146Z",
+  "version": 4136,
+  "last_updated": "2026-11-14T18:45:37.220Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7gC4AJFRiM3D7Hp6vD6yGY",
+      "title": "עונת החתונות",
+      "artist": "אליה והב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T18:45:37.220Z"
+    },
     {
       "id": "6IMYNu41FqIsjdvvaGjNxo",
       "title": "שבת של אמא",
