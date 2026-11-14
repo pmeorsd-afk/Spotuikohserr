@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4169,
-  "last_updated": "2026-11-14T19:40:54.392Z",
+  "version": 4170,
+  "last_updated": "2026-11-14T19:40:57.932Z",
   "artists": [
+    {
+      "id": "4gAOZn2YN0ojkBWjS9Aqeg",
+      "canonical_name": "בני לאופר",
+      "aliases": [
+        "בני לאופר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:40:57.932Z"
+    },
     {
       "id": "7xotowWYYkwQ44dylQyM6J",
       "canonical_name": "Yossi Shtendig",
