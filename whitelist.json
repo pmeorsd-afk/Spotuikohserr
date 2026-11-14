@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4194,
-  "last_updated": "2026-11-14T21:10:03.069Z",
+  "version": 4195,
+  "last_updated": "2026-11-14T21:10:07.600Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ZxJ4vVCpBZ0uR5WpOeNsD",
+      "title": "חמוטל",
+      "artist": "בועז מור, ניסו סול",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T21:10:07.600Z"
+    },
     {
       "id": "7BbUfVD178xBIjVTjE0UqX",
       "title": "תשאירי לי מקום לחבק אותך - רמיקס",
