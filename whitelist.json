@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4127,
-  "last_updated": "2026-11-14T18:12:31.318Z",
+  "version": 4128,
+  "last_updated": "2026-11-14T18:14:20.257Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0wH8UfNTFYw5prrOMO0I3v",
+      "title": "מחרוזת לברית מילה",
+      "artist": "Avi Ben Israel, Moshe Giat",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T18:14:20.257Z"
+    },
     {
       "id": "2yPnlfwQ1AmhHauqQWDlWZ",
       "title": "מנגן ושר",
