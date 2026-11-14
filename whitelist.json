@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4103,
-  "last_updated": "2026-11-14T16:34:08.720Z",
+  "version": 4104,
+  "last_updated": "2026-11-14T16:34:14.454Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "24dnCozogOYlXroStIAlFe",
+      "title": "הלל הזקן",
+      "artist": "בנצי שטיין, מקהלת מלכות, מוישי רוט",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:34:14.454Z"
+    },
     {
       "id": "6Vj4KZZAFHEk8QMrkv62rz",
       "title": "Zakeini - זכינו",
