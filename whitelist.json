@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4117,
-  "last_updated": "2026-11-14T16:35:31.995Z",
+  "version": 4118,
+  "last_updated": "2026-11-14T17:01:35.434Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "07Ee2kh7vMtMwZ39G4LbKX",
+      "title": "אוצר שלי",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T17:01:35.434Z"
+    },
     {
       "id": "5di0NZSn3Eh6srp0h28Rd3",
       "title": "עוגה עוגה",
