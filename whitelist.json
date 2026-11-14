@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4178,
-  "last_updated": "2026-11-14T19:41:23.094Z",
+  "version": 4179,
+  "last_updated": "2026-11-14T19:41:26.192Z",
   "artists": [
+    {
+      "id": "2QUIxhrCiFU5UqlbU6E0F8",
+      "canonical_name": "מאיר שלום",
+      "aliases": [
+        "מאיר שלום"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:41:26.192Z"
+    },
     {
       "id": "2iho4IRTJMVDNgTguNToms",
       "canonical_name": "Mordechai Kohn",
