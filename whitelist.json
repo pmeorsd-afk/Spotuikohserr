@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4087,
-  "last_updated": "2026-11-14T16:32:26.678Z",
+  "version": 4088,
+  "last_updated": "2026-11-14T16:32:32.587Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "58uma3kwMnzcGkTyRiln2A",
+      "title": "מחרוזת סליחות",
+      "artist": "ניסים סבג, נחמן סבג",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:32:32.587Z"
+    },
     {
       "id": "3MGiy268tmTb9ezmLdsm2L",
       "title": "מחרוזת שירי מקדש וירושלים",
