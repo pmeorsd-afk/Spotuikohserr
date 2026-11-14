@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4070,
-  "last_updated": "2026-11-14T16:31:17.394Z",
+  "version": 4071,
+  "last_updated": "2026-11-14T16:31:21.029Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0bMbDctzMmTyK2j74j3nF3",
+      "title": "Alone, Pt. II",
+      "artist": "Alan Walker, Ava Max",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:31:21.029Z"
+    },
     {
       "id": "3n9P5VJJ7rqmeIbtLOs2TX",
       "title": "שירי שבת",
