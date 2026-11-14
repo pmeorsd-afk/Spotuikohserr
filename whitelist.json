@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4062,
-  "last_updated": "2026-11-13T12:47:25.423Z",
+  "version": 4063,
+  "last_updated": "2026-11-14T16:30:27.103Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2UREu1Y8CO4jXkbvqAtP7g",
+      "title": "Monster",
+      "artist": "Skillet",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:30:27.103Z"
+    },
     {
       "id": "1wy6aXqtGg14F3Ooa9BzPs",
       "title": "אצלי הכל בסדר, את לי לילה - מנורה לייב",
