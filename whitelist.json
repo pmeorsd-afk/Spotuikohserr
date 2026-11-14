@@ -1,8 +1,28 @@
 {
   "schema_version": 2,
-  "version": 4179,
-  "last_updated": "2026-11-14T19:41:26.192Z",
+  "version": 4181,
+  "last_updated": "2026-11-14T19:41:30.116Z",
   "artists": [
+    {
+      "id": "1djwwgctylhGh8rGwcwPKT",
+      "canonical_name": "Moshe Giat",
+      "aliases": [
+        "Moshe Giat"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:41:30.116Z"
+    },
+    {
+      "id": "1NL0jsC2PXUnOQ2WNcYv4B",
+      "canonical_name": "Avi Ben Israel",
+      "aliases": [
+        "Avi Ben Israel"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:41:30.116Z"
+    },
     {
       "id": "2QUIxhrCiFU5UqlbU6E0F8",
       "canonical_name": "מאיר שלום",
