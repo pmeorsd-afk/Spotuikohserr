@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4065,
-  "last_updated": "2026-11-14T16:30:36.456Z",
+  "version": 4066,
+  "last_updated": "2026-11-14T16:30:40.151Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0OTO8ZF2YqFQVw9hnZylTd",
+      "title": "What Is Love - 7\" Mix",
+      "artist": "Haddaway",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:30:40.151Z"
+    },
     {
       "id": "2xKy8HbpMFgHV2xZhpQf12",
       "title": "You Broke Me First",
