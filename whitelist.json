@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4133,
-  "last_updated": "2026-11-14T18:37:24.121Z",
+  "version": 4134,
+  "last_updated": "2026-11-14T18:40:51.498Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7F02x6EKYIQV3VcTaTm7oN",
+      "title": "Hey You",
+      "artist": "Pink Floyd",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T18:40:51.498Z"
+    },
     {
       "id": "36J81aiADWgTLcLthpySX9",
       "title": "דקלון וביתר - גרסת האוהדים",
