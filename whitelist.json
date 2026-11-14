@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4076,
-  "last_updated": "2026-11-14T16:31:38.166Z",
+  "version": 4078,
+  "last_updated": "2026-11-14T16:31:41.942Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5SUmgoHUVgM8piA2qSHWN2",
+      "title": "Should Have Known Better",
+      "artist": "Pedro Santos",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:31:41.942Z"
+    },
+    {
+      "id": "6KDgUgglDgCdMZminAXL49",
+      "title": "Love You Harder",
+      "artist": "Jake Miller",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:31:41.942Z"
+    },
     {
       "id": "3bGsVbY4Z0hO5BoWQnEqOM",
       "title": "אשת חיל 2026",
