@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4177,
-  "last_updated": "2026-11-14T19:41:19.382Z",
+  "version": 4178,
+  "last_updated": "2026-11-14T19:41:23.094Z",
   "artists": [
+    {
+      "id": "2iho4IRTJMVDNgTguNToms",
+      "canonical_name": "Mordechai Kohn",
+      "aliases": [
+        "Mordechai Kohn"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:41:23.094Z"
+    },
     {
       "id": "4Teyf59PJZtel0w6x0j82u",
       "canonical_name": "ישראל גולדרייך",
