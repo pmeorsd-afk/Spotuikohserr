@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4188,
-  "last_updated": "2026-11-14T20:49:36.058Z",
+  "version": 4189,
+  "last_updated": "2026-11-14T20:49:39.380Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3OIZaVMNulfpvgg4zu7QCv",
+      "title": "אהבה ראשונה - Remix",
+      "artist": "Neevos, נדב חנציס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T20:49:39.380Z"
+    },
     {
       "id": "3BTt3n0TIEoKwPgb9myrRc",
       "title": "היום קמתי שמח",
