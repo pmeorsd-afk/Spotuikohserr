@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4195,
-  "last_updated": "2026-11-14T21:10:07.600Z",
+  "version": 4196,
+  "last_updated": "2026-11-14T21:16:19.531Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "34ZiVJw6HBkvHrQWBTBHo2",
+      "title": "עד שתבואי הביתה",
+      "artist": "Nuri",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T21:16:19.531Z"
+    },
     {
       "id": "3ZxJ4vVCpBZ0uR5WpOeNsD",
       "title": "חמוטל",
