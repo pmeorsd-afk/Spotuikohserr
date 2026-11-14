@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4129,
-  "last_updated": "2026-11-14T18:23:43.602Z",
+  "version": 4130,
+  "last_updated": "2026-11-14T18:23:48.396Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2foTZaysNY65xcTXlQKxg4",
+      "title": "אם אתה שלי",
+      "artist": "אודיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T18:23:48.396Z"
+    },
     {
       "id": "5gK0xdlt74qS6yaf1HKCkx",
       "title": "מחרוזת אמא",
