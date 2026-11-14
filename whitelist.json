@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4197,
-  "last_updated": "2026-11-14T21:36:27.012Z",
+  "version": 4198,
+  "last_updated": "2026-11-14T21:36:30.117Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2lP5C1R88A8B4BLte7sAKY",
+      "title": "קוברה בסלון",
+      "artist": "Dima XR",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T21:36:30.117Z"
+    },
     {
       "id": "4ba71UA0iyBiXUAVl9AF9U",
       "title": "מטומטמת",
