@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4191,
-  "last_updated": "2026-11-14T20:51:32.472Z",
+  "version": 4192,
+  "last_updated": "2026-11-14T21:09:51.269Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3sWBROB3YLuJoNqXQeCXnz",
+      "title": "לילות וקללות (רמיקס)",
+      "artist": "Neevos, עומר אדם",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T21:09:51.269Z"
+    },
     {
       "id": "3vlsM9ngoBw1KTeVYocnxi",
       "title": "מדאם - רמיקס",
