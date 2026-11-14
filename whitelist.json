@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4124,
-  "last_updated": "2026-11-14T17:22:15.119Z",
+  "version": 4125,
+  "last_updated": "2026-11-14T17:38:39.465Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "49E2K6nUEYRDOzLWSDLzWl",
+      "title": "מי ידע שכך יהיה",
+      "artist": "Avner Gadasi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T17:38:39.465Z"
+    },
     {
       "id": "2QjAyPQmGqnlQLIoH5BZvb",
       "title": "כולם גנבים - ברסלב",
