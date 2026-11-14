@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4146,
-  "last_updated": "2026-11-14T18:58:39.384Z",
+  "version": 4147,
+  "last_updated": "2026-11-14T18:58:42.759Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2RmENPt0yPmU09BKjKC26M",
+      "title": "Ziplock",
+      "artist": "Saba",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T18:58:42.759Z"
+    },
     {
       "id": "74QLfg69aVm4Afw3VGhDTY",
       "title": "Port Antonio",
