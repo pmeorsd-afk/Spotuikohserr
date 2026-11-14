@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4118,
-  "last_updated": "2026-11-14T17:01:35.434Z",
+  "version": 4119,
+  "last_updated": "2026-11-14T17:03:33.891Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4hq2uY5Ak8kIVgNbZ0r8xM",
+      "title": "בכל יום שאיבדתי אותך",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T17:03:33.891Z"
+    },
     {
       "id": "07Ee2kh7vMtMwZ39G4LbKX",
       "title": "אוצר שלי",
