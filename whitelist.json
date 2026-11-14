@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4181,
-  "last_updated": "2026-11-14T19:41:30.116Z",
+  "version": 4182,
+  "last_updated": "2026-11-14T19:41:33.782Z",
   "artists": [
+    {
+      "id": "6j4gUn7AOBhtletaBIfRip",
+      "canonical_name": "אריק דביר",
+      "aliases": [
+        "אריק דביר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:41:33.782Z"
+    },
     {
       "id": "1djwwgctylhGh8rGwcwPKT",
       "canonical_name": "Moshe Giat",
