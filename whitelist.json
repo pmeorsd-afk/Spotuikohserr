@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 4162,
-  "last_updated": "2026-11-14T19:40:32.845Z",
+  "version": 4163,
+  "last_updated": "2026-11-14T19:40:36.300Z",
   "artists": [
+    {
+      "id": "4r5tENMnY6y7ctwda1TV9c",
+      "canonical_name": "ישיבת אורות שאול",
+      "aliases": [
+        "ישיבת אורות שאול"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T19:40:36.300Z"
+    },
     {
       "id": "3ZqQ5tMIPBF3P2XTOuz7F0",
       "canonical_name": "ישיבת מעלה גלבוע",
