@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4095,
-  "last_updated": "2026-11-14T16:33:11.283Z",
+  "version": 4096,
+  "last_updated": "2026-11-14T16:33:18.967Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5dJpGTRYpGtMTYOcdz7K8c",
+      "title": "שטייגען טאנץ",
+      "artist": "בנצי שטיין, מקהלת נשמה, מקהלת מלכות",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:33:18.967Z"
+    },
     {
       "id": "7b6qoEhxW8ZiNDPoFjPcRl",
       "title": "מחרוזת חתונות || בורא עולם | מהרה ה' | אשר ברא | צמאה | מחשבות טובות |",
