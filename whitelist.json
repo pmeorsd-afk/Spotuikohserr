@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4125,
-  "last_updated": "2026-11-14T17:38:39.465Z",
+  "version": 4126,
+  "last_updated": "2026-11-14T18:02:49.220Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5IQ74Ycf03be3GZas8l9NN",
+      "title": "מחרוזת חתונה",
+      "artist": "עמנואל זאודה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T18:02:49.220Z"
+    },
     {
       "id": "49E2K6nUEYRDOzLWSDLzWl",
       "title": "מי ידע שכך יהיה",
