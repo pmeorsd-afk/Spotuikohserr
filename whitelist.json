@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4131,
-  "last_updated": "2026-11-14T18:37:17.795Z",
+  "version": 4132,
+  "last_updated": "2026-11-14T18:37:20.916Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0nr3P3JGyJkcfIXmD5chmA",
+      "title": "החיים לקחו אותי רחוק",
+      "artist": "Shimon Buskila",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T18:37:20.916Z"
+    },
     {
       "id": "73GkH8PmFI1woGZ0v3c06N",
       "title": "מחרוזת נשיקה",
