@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4097,
-  "last_updated": "2026-11-14T16:33:27.999Z",
+  "version": 4098,
+  "last_updated": "2026-11-14T16:33:37.060Z",
   "artists": [
     {
       "id": "5CO6FrhKGkctvckrqa6cJ7",
@@ -3580,6 +3580,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4bvjuLrjibnErBH9bgywiN",
+      "title": "רחל - Live",
+      "artist": "Zanvil Weinberger, משה דוד וייסמאנדל, מקהלת מלכות, בני לאופר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-14T16:33:37.060Z"
+    },
     {
       "id": "45lEVma2E3iycpLGlLRXns",
       "title": "מודים",
