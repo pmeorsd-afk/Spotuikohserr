@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4288,
-  "last_updated": "2026-11-15T19:31:10.685Z",
+  "version": 4289,
+  "last_updated": "2026-11-15T19:31:14.233Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3SXrV7jLXsr9cnhAaIF7C5",
+      "title": "כפית אחת של טוב",
+      "artist": "Static & Ben El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:31:14.233Z"
+    },
     {
       "id": "7KePFDyALC5ajxUxYSW9z2",
       "title": "אלף מוזמנים X מלון בהוואי",
