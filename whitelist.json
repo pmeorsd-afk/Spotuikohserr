@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4286,
-  "last_updated": "2026-11-15T19:31:02.519Z",
+  "version": 4287,
+  "last_updated": "2026-11-15T19:31:06.120Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "585Slof7rJYr64bSv6DUJT",
+      "title": "לב לבן (קאבר)",
+      "artist": "Eden Meiri",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:31:06.120Z"
+    },
     {
       "id": "13biJ0HbDe2kK9jAu5Y9sz",
       "title": "את & 08 & שביל האושר - Live",
