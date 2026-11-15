@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4269,
-  "last_updated": "2026-11-15T19:29:47.529Z",
+  "version": 4270,
+  "last_updated": "2026-11-15T19:29:51.069Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2bjwRfXMk4uRgOD9IBYl9h",
+      "title": "Portland",
+      "artist": "Drake, Quavo, Travis Scott",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:51.069Z"
+    },
     {
       "id": "7ji8hiQsCy07iYB3u79V0c",
       "title": "גדות הירקון",
