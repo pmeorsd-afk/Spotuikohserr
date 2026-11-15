@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4220,
-  "last_updated": "2026-11-15T08:51:57.600Z",
+  "version": 4221,
+  "last_updated": "2026-11-15T08:52:03.534Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4OuY686TSTuNVXq7bfEquE",
+      "title": "שבת מתנה",
+      "artist": "Shimi Tavori",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:52:03.534Z"
+    },
     {
       "id": "2h0phk6Zf5CI2BN8XO8z76",
       "title": "Falling For Strangers",
