@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4299,
-  "last_updated": "2026-11-15T19:31:57.259Z",
+  "version": 4300,
+  "last_updated": "2026-11-15T19:32:01.102Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "275ubfEi2U25FKUhjFpJ0y",
+      "title": "ילדה מטורפת",
+      "artist": "אלעד אביבי, טודיאל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:32:01.102Z"
+    },
     {
       "id": "3035iphN90WN67byHv8NCH",
       "title": "לכי יא מושפעת",
