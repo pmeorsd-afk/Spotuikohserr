@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4209,
-  "last_updated": "2026-11-15T08:51:03.401Z",
+  "version": 4210,
+  "last_updated": "2026-11-15T08:51:06.817Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2c9UrpiGfXwKUxxDxXLRTK",
+      "title": "יוצא לדרך",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:51:06.817Z"
+    },
     {
       "id": "0YrVjKvXySeP2Uo8LlNI97",
       "title": "אני נשאר אני",
