@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4251,
-  "last_updated": "2026-11-15T19:28:19.086Z",
+  "version": 4252,
+  "last_updated": "2026-11-15T19:28:32.509Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5siQQhCPSAXxOppFgpN7qP",
+      "title": "מזמור לתודה",
+      "artist": "Gabriel Sebbag, דיג'יי ניסו סלוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:28:32.509Z"
+    },
     {
       "id": "6ZNPPeXELmS281EDWbpAo9",
       "title": "כמה טוב השם - ניסו סלוב רמיקס",
