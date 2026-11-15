@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4386,
-  "last_updated": "2026-11-15T21:14:52.696Z",
+  "version": 4387,
+  "last_updated": "2026-11-15T21:14:56.200Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "54OBgO0Xwu20Jak9TMXbR7",
+      "title": "Wellerman - Sea Shanty",
+      "artist": "Nathan Evans",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:14:56.200Z"
+    },
     {
       "id": "0AE7sTtCXGLVztzbDpoyWs",
       "title": "ימים טובים",
