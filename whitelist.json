@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4324,
-  "last_updated": "2026-11-15T19:33:31.625Z",
+  "version": 4325,
+  "last_updated": "2026-11-15T19:33:34.979Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6SWt7MJzmdeIz8DHmbNHMn",
+      "title": "עונג שבת",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:33:34.979Z"
+    },
     {
       "id": "0l9xTt0WwTpwSQCOb1zphd",
       "title": "Bones - Live in Vegas",
