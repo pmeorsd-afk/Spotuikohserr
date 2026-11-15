@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4242,
-  "last_updated": "2026-11-15T11:00:13.525Z",
+  "version": 4244,
+  "last_updated": "2026-11-15T11:00:16.796Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1lqMLr9Wj7SM2F9AikGcxN",
+      "title": "Hurricane",
+      "artist": "Bob Dylan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T11:00:16.796Z"
+    },
+    {
+      "id": "0mNRxKOMTG52ZMasDZGgH6",
+      "title": "הייתי שם",
+      "artist": "Tuna",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T11:00:16.796Z"
+    },
     {
       "id": "5fTCU82IwY3barEA7iYjHg",
       "title": "The Same",
