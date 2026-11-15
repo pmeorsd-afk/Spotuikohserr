@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4327,
-  "last_updated": "2026-11-15T19:33:41.794Z",
+  "version": 4329,
+  "last_updated": "2026-11-15T19:33:45.371Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6hTP73sOdyMLaXMEjvkWRf",
+      "title": "מנגב לך ת'דמעות",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:33:45.371Z"
+    },
+    {
+      "id": "25Ql6FA1qDDoOeE0IWolfV",
+      "title": "יינות אדומים",
+      "artist": "Lihi Toledano",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:33:45.371Z"
+    },
     {
       "id": "0vidBOtz8yFbcf2LUmVwjK",
       "title": "התקווה",
