@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4368,
-  "last_updated": "2026-11-15T19:41:28.439Z",
+  "version": 4369,
+  "last_updated": "2026-11-15T20:01:07.092Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4PcdcSDUImHuVjoCezSYuC",
+      "title": "פלואו של טמבל 2",
+      "artist": "ליעד מאיר, רון חיון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T20:01:07.092Z"
+    },
     {
       "id": "1ucQPqVmiWKL35WmBG1j9L",
       "title": "לא נורמאלית",
