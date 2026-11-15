@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4332,
-  "last_updated": "2026-11-15T19:33:55.971Z",
+  "version": 4334,
+  "last_updated": "2026-11-15T19:33:59.722Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4YoSyRsXh16oVcXHwz3dpd",
+      "title": "We Don't Stop",
+      "artist": "MONYX",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:33:59.722Z"
+    },
+    {
+      "id": "546o4i5ox0AThQCAq2lfFk",
+      "title": "מנגינה",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:33:59.722Z"
+    },
     {
       "id": "5AJ9hqTS2wcFQCELCFRO7A",
       "title": "MILLION DOLLAR BABY",
