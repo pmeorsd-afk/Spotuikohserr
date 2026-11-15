@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4274,
-  "last_updated": "2026-11-15T19:30:01.984Z",
+  "version": 4275,
+  "last_updated": "2026-11-15T19:30:05.854Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6PGoSes0D9eUDeeAafB2As",
+      "title": "LOVE. FEAT. ZACARI.",
+      "artist": "Kendrick Lamar, Zacari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:30:05.854Z"
+    },
     {
       "id": "4h2C3irmtq3zeyrecknxTD",
       "title": "מילים יפות",
