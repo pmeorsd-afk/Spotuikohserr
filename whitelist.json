@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4338,
-  "last_updated": "2026-11-15T19:34:14.478Z",
+  "version": 4340,
+  "last_updated": "2026-11-15T19:34:18.304Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5FbfPxWMDM3yEnNUJS0HLQ",
+      "title": "Good Life",
+      "artist": "OneRepublic",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:18.304Z"
+    },
+    {
+      "id": "2U33pHvwJZDFgE9qDiu1yX",
+      "title": "מחרוזת אל הגן",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:18.304Z"
+    },
     {
       "id": "02e7dM0geCBA91hCvFemC4",
       "title": "אהבה",
