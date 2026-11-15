@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4266,
-  "last_updated": "2026-11-15T19:29:40.858Z",
+  "version": 4268,
+  "last_updated": "2026-11-15T19:29:44.227Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1H5N26VqHR4JhuaRKY2I0u",
+      "title": "Heaven Knows I'm Miserable Now - 2011 Remaster",
+      "artist": "The Smiths",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:44.227Z"
+    },
+    {
+      "id": "7bjEytoRwIfewm3QLbuYvS",
+      "title": "מתי לחזור",
+      "artist": "Ethnix",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:44.227Z"
+    },
     {
       "id": "7g2OkqcxeXiyOh4a43bGJw",
       "title": "FRUTIGER FUNK - Ultra Slowed",
