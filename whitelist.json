@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4208,
-  "last_updated": "2026-11-15T08:51:00.085Z",
+  "version": 4209,
+  "last_updated": "2026-11-15T08:51:03.401Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0YrVjKvXySeP2Uo8LlNI97",
+      "title": "אני נשאר אני",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:51:03.401Z"
+    },
     {
       "id": "6mTI9WxclHr9jSq5ii8o2h",
       "title": "רציתי שתדע (אלוקים שלי)",
