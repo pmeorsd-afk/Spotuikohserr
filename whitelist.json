@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4356,
-  "last_updated": "2026-11-15T19:35:05.218Z",
+  "version": 4357,
+  "last_updated": "2026-11-15T19:35:08.826Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4zWK2UlyxFNvm7CVLIYaKD",
+      "title": "אני רוצה לזוז",
+      "artist": "Tomer Yosef",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:35:08.826Z"
+    },
     {
       "id": "4fuSUBuTZ4JOZCrmqcQ9YQ",
       "title": "ישראלי קומפלט",
