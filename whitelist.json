@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4385,
-  "last_updated": "2026-11-15T21:14:48.589Z",
+  "version": 4386,
+  "last_updated": "2026-11-15T21:14:52.696Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0AE7sTtCXGLVztzbDpoyWs",
+      "title": "ימים טובים",
+      "artist": "Subliminal, DJ Malka, The Ultras, Ran Shafir, Ketreyah, Gad Elbaz, ים רפאלי, Eli Perez",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:14:52.696Z"
+    },
     {
       "id": "4CvgRQYt1K49py3rjkLzbM",
       "title": "זכר חסדו",
