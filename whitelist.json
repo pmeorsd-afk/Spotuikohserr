@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4297,
-  "last_updated": "2026-11-15T19:31:43.728Z",
+  "version": 4298,
+  "last_updated": "2026-11-15T19:31:53.747Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "37N52VzOZzFpuN71RFeEuK",
+      "title": "אור וירושלים",
+      "artist": "רפי ביטון, קולות מן השמים - ירושלים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:31:53.747Z"
+    },
     {
       "id": "0rQNU4O6sYEZEua4LVyQ0W",
       "title": "תפוס",
