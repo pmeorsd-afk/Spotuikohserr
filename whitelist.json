@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4320,
-  "last_updated": "2026-11-15T19:33:15.538Z",
+  "version": 4321,
+  "last_updated": "2026-11-15T19:33:19.001Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7ao3ELlZGja47VWJUGJ2Zk",
+      "title": "דוד מלכי",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:33:19.001Z"
+    },
     {
       "id": "2wPj7Uclg195jFgnnML1j2",
       "title": "ועפנו",
