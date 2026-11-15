@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4254,
-  "last_updated": "2026-11-15T19:28:40.031Z",
+  "version": 4255,
+  "last_updated": "2026-11-15T19:28:43.798Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1JFDpn6NUrB6cG05FvkSsw",
+      "title": "רבי שמעון - ניסו סלוב רמיקס",
+      "artist": "Yaniv Ben Mashiach, דיג'יי ניסו סלוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:28:43.798Z"
+    },
     {
       "id": "1KyIp4IRXhVtjmXlkbnD6U",
       "title": "מחרוזת יפה ותמה",
