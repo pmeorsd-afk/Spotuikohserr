@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4396,
-  "last_updated": "2026-11-15T21:30:14.844Z",
+  "version": 4398,
+  "last_updated": "2026-11-15T21:30:18.592Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5TloEAbFz7jueXfeCotMUd",
+      "title": "קול עת",
+      "artist": "Faraj Samra",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:30:18.592Z"
+    },
+    {
+      "id": "09PsVrioVJlWyxxkd676wv",
+      "title": "צור ישראל",
+      "artist": "רפי ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:30:18.592Z"
+    },
     {
       "id": "0JoYMP7hvEwxKCjj9szUo6",
       "title": "טיל פצמר",
