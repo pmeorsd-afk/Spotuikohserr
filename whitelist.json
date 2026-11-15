@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4326,
-  "last_updated": "2026-11-15T19:33:38.603Z",
+  "version": 4327,
+  "last_updated": "2026-11-15T19:33:41.794Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0vidBOtz8yFbcf2LUmVwjK",
+      "title": "התקווה",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:33:41.794Z"
+    },
     {
       "id": "2pwED7E7gGr3UR7T3s3LSM",
       "title": "Papaoutai - Afro Soul",
