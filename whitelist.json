@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4248,
-  "last_updated": "2026-11-15T19:28:07.562Z",
+  "version": 4249,
+  "last_updated": "2026-11-15T19:28:11.964Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4abB8WdkswrxWxcV2e56x9",
+      "title": "גדל לי קצת זקן",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:28:11.964Z"
+    },
     {
       "id": "5rbobebjtm7G6B4p7XtLQJ",
       "title": "מחרוזת איזה טוב השם",
