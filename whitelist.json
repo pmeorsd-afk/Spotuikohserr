@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4351,
-  "last_updated": "2026-11-15T19:34:52.410Z",
+  "version": 4352,
+  "last_updated": "2026-11-15T19:34:55.470Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2VaOoXFfdlrHyhORSq9H1v",
+      "title": "Stompin' At The Savoy",
+      "artist": "Clifford Brown, Max Roach",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:55.470Z"
+    },
     {
       "id": "7LqmXk66ct9fJWHPVXNmvP",
       "title": "מה שיהיה יהיה",
