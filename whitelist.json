@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4213,
-  "last_updated": "2026-11-15T08:51:30.666Z",
+  "version": 4214,
+  "last_updated": "2026-11-15T08:51:34.216Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2RcxISxOsc7amWo98F6HGp",
+      "title": "Let You Go",
+      "artist": "Jake Miller",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:51:34.216Z"
+    },
     {
       "id": "2lHROJXOhGu1HbHlR0rA8h",
       "title": "בעבר היו זמנים - לייב ממופע קבלת שבת",
