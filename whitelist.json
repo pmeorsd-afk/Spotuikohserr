@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4210,
-  "last_updated": "2026-11-15T08:51:06.817Z",
+  "version": 4211,
+  "last_updated": "2026-11-15T08:51:10.231Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "22SaL28Z4pQqLFASDIF26J",
+      "title": "סיגליות",
+      "artist": "Lior Farhi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:51:10.231Z"
+    },
     {
       "id": "2c9UrpiGfXwKUxxDxXLRTK",
       "title": "יוצא לדרך",
