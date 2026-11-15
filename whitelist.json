@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4214,
-  "last_updated": "2026-11-15T08:51:34.216Z",
+  "version": 4215,
+  "last_updated": "2026-11-15T08:51:37.691Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7vqgKci5WfCnk0iUrNN9op",
+      "title": "Love’s a Gun",
+      "artist": "Daniel Seavey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:51:37.691Z"
+    },
     {
       "id": "2RcxISxOsc7amWo98F6HGp",
       "title": "Let You Go",
