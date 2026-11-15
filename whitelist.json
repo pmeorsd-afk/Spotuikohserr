@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4229,
-  "last_updated": "2026-11-15T08:52:34.058Z",
+  "version": 4230,
+  "last_updated": "2026-11-15T08:52:37.153Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3lY4gYjLdw1encvFgopsMq",
+      "title": "אסור היה לך לעזוב",
+      "artist": "Haim El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:52:37.153Z"
+    },
     {
       "id": "41UQIJl5MLJi4liHq1ABF6",
       "title": "עד מתי ישלוט העצב",
