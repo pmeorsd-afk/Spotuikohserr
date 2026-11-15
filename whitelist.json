@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4212,
-  "last_updated": "2026-11-15T08:51:27.616Z",
+  "version": 4213,
+  "last_updated": "2026-11-15T08:51:30.666Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2lHROJXOhGu1HbHlR0rA8h",
+      "title": "בעבר היו זמנים - לייב ממופע קבלת שבת",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:51:30.666Z"
+    },
     {
       "id": "1OQrZDaEXdOytZAL6iyN4w",
       "title": "בית צדיקים",
