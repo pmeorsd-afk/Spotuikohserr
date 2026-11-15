@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4388,
-  "last_updated": "2026-11-15T21:19:01.895Z",
+  "version": 4389,
+  "last_updated": "2026-11-15T21:19:06.046Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6suPRKCUarF1s521653j6q",
+      "title": "מחרוזת רוק - Live",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:19:06.046Z"
+    },
     {
       "id": "6EYVV7KZ2F7oA56xv5aHNr",
       "title": "חיים קורים",
