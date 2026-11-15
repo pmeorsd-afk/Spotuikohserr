@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4284,
-  "last_updated": "2026-11-15T19:30:49.060Z",
+  "version": 4285,
+  "last_updated": "2026-11-15T19:30:58.098Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7tA81dWf0cV06myojSTest",
+      "title": "Shluchim Medley",
+      "artist": "Yoni Eliav, Simche Friedman, Mendi Jerufi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:30:58.098Z"
+    },
     {
       "id": "2SQ8W42gMWWlS68x3LjWxz",
       "title": "ילדה סוכר",
