@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4305,
-  "last_updated": "2026-11-15T19:32:19.275Z",
+  "version": 4306,
+  "last_updated": "2026-11-15T19:32:23.258Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44FKJzcZLGdHIkfaXILnOP",
+      "title": "בן מלאך שלי - Live",
+      "artist": "Yaniv Ben Masiah",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:32:23.258Z"
+    },
     {
       "id": "0Ces1oOwqA1R8nnCPZFkkn",
       "title": "זהו אלי וגואלי",
