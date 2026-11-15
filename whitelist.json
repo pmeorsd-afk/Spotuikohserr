@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4393,
-  "last_updated": "2026-11-15T21:23:11.560Z",
+  "version": 4394,
+  "last_updated": "2026-11-15T21:23:15.143Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1SXuSm4gqpudpB5cPG0EOw",
+      "title": "Wellerman",
+      "artist": "Jared Halley",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:23:15.143Z"
+    },
     {
       "id": "6s7LQ3bgiQRORpqbxK2N5X",
       "title": "אחשילי",
