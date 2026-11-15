@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4271,
-  "last_updated": "2026-11-15T19:29:54.769Z",
+  "version": 4273,
+  "last_updated": "2026-11-15T19:29:58.717Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0aB0v4027ukVziUGwVGYpG",
+      "title": "tv off (feat. lefty gunplay)",
+      "artist": "Kendrick Lamar, Lefty Gunplay",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:58.717Z"
+    },
+    {
+      "id": "647fHcdo0WTOdPSOtoaEFd",
+      "title": "3 בבוקר",
+      "artist": "מוני",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:58.717Z"
+    },
     {
       "id": "29mNdw6QHQpRkMOEMVM9nW",
       "title": "תפילה",
