@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4292,
-  "last_updated": "2026-11-15T19:31:24.739Z",
+  "version": 4294,
+  "last_updated": "2026-11-15T19:31:27.979Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2NSLvLJyJP5vCV7qqmNdT9",
+      "title": "הברוז",
+      "artist": "רונית פלד",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:31:27.979Z"
+    },
+    {
+      "id": "0gN2DOFNEreDTM2921YhwQ",
+      "title": "מברוק",
+      "artist": "מאור אדרי, מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:31:27.979Z"
+    },
     {
       "id": "0D5dxqI1HEsEtFPYP2Hz4N",
       "title": "פטרון",
