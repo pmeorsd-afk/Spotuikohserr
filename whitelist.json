@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4376,
-  "last_updated": "2026-11-15T21:05:45.749Z",
+  "version": 4378,
+  "last_updated": "2026-11-15T21:05:48.832Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6NuYlT9Z9Rp5VYySISVvhZ",
+      "title": "כמה ימים",
+      "artist": "Moshe Perez, Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:05:48.832Z"
+    },
+    {
+      "id": "7wG0fHodj1i90zPPXqv90d",
+      "title": "בית משוגעים - Itay Galo Remix",
+      "artist": "Ran Danker, Itay Galo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:05:48.832Z"
+    },
     {
       "id": "1U5jBbUqPGPZtJ0ljWCMO0",
       "title": "ברצלונה - Live",
