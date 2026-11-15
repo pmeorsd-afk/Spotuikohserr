@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4289,
-  "last_updated": "2026-11-15T19:31:14.233Z",
+  "version": 4290,
+  "last_updated": "2026-11-15T19:31:17.894Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Vo7pV7M9gkvrEoP9g9RCH",
+      "title": "תסביכים",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:31:17.894Z"
+    },
     {
       "id": "3SXrV7jLXsr9cnhAaIF7C5",
       "title": "כפית אחת של טוב",
