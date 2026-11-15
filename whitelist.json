@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4348,
-  "last_updated": "2026-11-15T19:34:40.703Z",
+  "version": 4349,
+  "last_updated": "2026-11-15T19:34:45.069Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4tUzBc8r2OveTlgYubK0kp",
+      "title": "Be Light",
+      "artist": "Vini Vici, Darwish, Hatikva 6",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:45.069Z"
+    },
     {
       "id": "3YNR710rz6R0J80jnPkBM7",
       "title": "יום שישי הגיע",
