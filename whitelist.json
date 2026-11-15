@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4211,
-  "last_updated": "2026-11-15T08:51:10.231Z",
+  "version": 4212,
+  "last_updated": "2026-11-15T08:51:27.616Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1OQrZDaEXdOytZAL6iyN4w",
+      "title": "בית צדיקים",
+      "artist": "יואלי דוידוביץ, תזמורת מלודי, אבי מן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:51:27.616Z"
+    },
     {
       "id": "22SaL28Z4pQqLFASDIF26J",
       "title": "סיגליות",
