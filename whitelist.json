@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4387,
-  "last_updated": "2026-11-15T21:14:56.200Z",
+  "version": 4388,
+  "last_updated": "2026-11-15T21:19:01.895Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6EYVV7KZ2F7oA56xv5aHNr",
+      "title": "חיים קורים",
+      "artist": "בניה ברבי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:19:01.895Z"
+    },
     {
       "id": "54OBgO0Xwu20Jak9TMXbR7",
       "title": "Wellerman - Sea Shanty",
