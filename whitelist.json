@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4256,
-  "last_updated": "2026-11-15T19:29:02.371Z",
+  "version": 4257,
+  "last_updated": "2026-11-15T19:29:11.048Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2vjiAGcfPrSVplWkoGPoE6",
+      "title": "שיר פרטי",
+      "artist": "Zohar Argov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:11.048Z"
+    },
     {
       "id": "3TqvAza31ZUi57SUO0BhGi",
       "title": "מחרוזת התבודדות",
