@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4234,
-  "last_updated": "2026-11-15T09:26:55.016Z",
+  "version": 4235,
+  "last_updated": "2026-11-15T10:20:45.383Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "487cRFpGzIdrK3cfEIjGhO",
+      "title": "חלקת אלוהים (מתוך פרויקט \"יעלה ויבוא\")",
+      "artist": "Yonatan Razel, צאן ברזל מוזיקה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T10:20:45.383Z"
+    },
     {
       "id": "42uWQL2EbYpu0NA3bJcaQT",
       "title": "The Origin",
