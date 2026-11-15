@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4270,
-  "last_updated": "2026-11-15T19:29:51.069Z",
+  "version": 4271,
+  "last_updated": "2026-11-15T19:29:54.769Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "29mNdw6QHQpRkMOEMVM9nW",
+      "title": "תפילה",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:54.769Z"
+    },
     {
       "id": "2bjwRfXMk4uRgOD9IBYl9h",
       "title": "Portland",
