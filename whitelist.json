@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4273,
-  "last_updated": "2026-11-15T19:29:58.717Z",
+  "version": 4274,
+  "last_updated": "2026-11-15T19:30:01.984Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4h2C3irmtq3zeyrecknxTD",
+      "title": "מילים יפות",
+      "artist": "Gazoz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:30:01.984Z"
+    },
     {
       "id": "0aB0v4027ukVziUGwVGYpG",
       "title": "tv off (feat. lefty gunplay)",
