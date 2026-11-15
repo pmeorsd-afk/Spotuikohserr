@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4262,
-  "last_updated": "2026-11-15T19:29:25.780Z",
+  "version": 4263,
+  "last_updated": "2026-11-15T19:29:29.338Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7iQ5StKc6MpFzPrD7ryNun",
+      "title": "FRUTIGER FUNK",
+      "artist": "null, DJ AURAXÉ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:29.338Z"
+    },
     {
       "id": "6VeShKmeCWQQbcX2nRTP9n",
       "title": "בתנועה במבט",
