@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4378,
-  "last_updated": "2026-11-15T21:05:48.832Z",
+  "version": 4379,
+  "last_updated": "2026-11-15T21:05:52.729Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6jMCb4UpIBjmiKf6EwVK8u",
+      "title": "חצי דפוק",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:05:52.729Z"
+    },
     {
       "id": "6NuYlT9Z9Rp5VYySISVvhZ",
       "title": "כמה ימים",
