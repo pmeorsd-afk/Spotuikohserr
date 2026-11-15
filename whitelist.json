@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4294,
-  "last_updated": "2026-11-15T19:31:27.979Z",
+  "version": 4295,
+  "last_updated": "2026-11-15T19:31:31.619Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1vF6SFPATz9B1Zx7gszDvC",
+      "title": "ללכת שבי אחרייך",
+      "artist": "רפי ביטון, קולות מן השמים - ירושלים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:31:31.619Z"
+    },
     {
       "id": "2NSLvLJyJP5vCV7qqmNdT9",
       "title": "הברוז",
