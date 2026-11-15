@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4308,
-  "last_updated": "2026-11-15T19:32:30.189Z",
+  "version": 4309,
+  "last_updated": "2026-11-15T19:32:33.659Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0yYj2iKURX4julmRceJOSS",
+      "title": "אשרינו",
+      "artist": "Avraham Tal, צמאה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:32:33.659Z"
+    },
     {
       "id": "42omII8G2eKiRQgDCdMy3V",
       "title": "מחרוזת: בדרך לחתונה",
