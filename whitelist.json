@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4300,
-  "last_updated": "2026-11-15T19:32:01.102Z",
+  "version": 4301,
+  "last_updated": "2026-11-15T19:32:04.944Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2gpllTpJ2kC1pyiQcgP2Ob",
+      "title": "לך בורא עולם - Live",
+      "artist": "Yaniv Ben Masiah",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:32:04.944Z"
+    },
     {
       "id": "275ubfEi2U25FKUhjFpJ0y",
       "title": "ילדה מטורפת",
