@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4221,
-  "last_updated": "2026-11-15T08:52:03.534Z",
+  "version": 4222,
+  "last_updated": "2026-11-15T08:52:06.840Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7apnrDC67RlsOyhCbAJVR0",
+      "title": "על כפיו יביא",
+      "artist": "Avi Peretz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:52:06.840Z"
+    },
     {
       "id": "4OuY686TSTuNVXq7bfEquE",
       "title": "שבת מתנה",
