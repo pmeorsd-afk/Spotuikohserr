@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4364,
-  "last_updated": "2026-11-15T19:35:31.586Z",
+  "version": 4365,
+  "last_updated": "2026-11-15T19:35:35.041Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1e2GFVSVDgRF9mHHWZkyCb",
+      "title": "פלונטר",
+      "artist": "Hatikva 6",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:35:35.041Z"
+    },
     {
       "id": "0dLLf2qIhilWgyFElBlrsv",
       "title": "ויהי אור",
