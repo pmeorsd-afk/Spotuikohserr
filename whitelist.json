@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4285,
-  "last_updated": "2026-11-15T19:30:58.098Z",
+  "version": 4286,
+  "last_updated": "2026-11-15T19:31:02.519Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "13biJ0HbDe2kK9jAu5Y9sz",
+      "title": "את & 08 & שביל האושר - Live",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:31:02.519Z"
+    },
     {
       "id": "7tA81dWf0cV06myojSTest",
       "title": "Shluchim Medley",
