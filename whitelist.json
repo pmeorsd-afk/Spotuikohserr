@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4240,
-  "last_updated": "2026-11-15T11:00:05.748Z",
+  "version": 4241,
+  "last_updated": "2026-11-15T11:00:10.099Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5fTCU82IwY3barEA7iYjHg",
+      "title": "The Same",
+      "artist": "The Smile",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T11:00:10.099Z"
+    },
     {
       "id": "4nsncxr8x3Rdj6S3lTxPCM",
       "title": "dream river. (Async Ross rework)",
