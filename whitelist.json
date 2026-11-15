@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4394,
-  "last_updated": "2026-11-15T21:23:15.143Z",
+  "version": 4395,
+  "last_updated": "2026-11-15T21:30:11.395Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6XxHJHco2qERGiCKjFeuGN",
+      "title": "הניחי לי",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:30:11.395Z"
+    },
     {
       "id": "1SXuSm4gqpudpB5cPG0EOw",
       "title": "Wellerman",
