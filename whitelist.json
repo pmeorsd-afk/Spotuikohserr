@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4360,
-  "last_updated": "2026-11-15T19:35:20.826Z",
+  "version": 4362,
+  "last_updated": "2026-11-15T19:35:24.355Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3c4iEG8QseL2QWMIAUs5uy",
+      "title": "העברית החדשה",
+      "artist": "Hatikva 6",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:35:24.355Z"
+    },
+    {
+      "id": "5mo6cs26Til0Xk3EysGFWL",
+      "title": "כל יום מחדש",
+      "artist": "Hatikva 6",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:35:24.355Z"
+    },
     {
       "id": "3brooqpgl6OI9SumH9KHSd",
       "title": "כפיים ליוצר",
