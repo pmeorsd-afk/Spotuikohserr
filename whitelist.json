@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4296,
-  "last_updated": "2026-11-15T19:31:40.355Z",
+  "version": 4297,
+  "last_updated": "2026-11-15T19:31:43.728Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0rQNU4O6sYEZEua4LVyQ0W",
+      "title": "תפוס",
+      "artist": "Moshik Afia",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:31:43.728Z"
+    },
     {
       "id": "1vF6SFPATz9B1Zx7gszDvC",
       "title": "ללכת שבי אחרייך",
