@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4336,
-  "last_updated": "2026-11-15T19:34:07.241Z",
+  "version": 4337,
+  "last_updated": "2026-11-15T19:34:10.890Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2lCp3FJYD2JCyH3n0meeTF",
+      "title": "אל הגן ארד",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:10.890Z"
+    },
     {
       "id": "0snGIaCwinmW54lTKMcKgf",
       "title": "Mr. Toot",
