@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4298,
-  "last_updated": "2026-11-15T19:31:53.747Z",
+  "version": 4299,
+  "last_updated": "2026-11-15T19:31:57.259Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3035iphN90WN67byHv8NCH",
+      "title": "לכי יא מושפעת",
+      "artist": "אסף יצחקי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:31:57.259Z"
+    },
     {
       "id": "37N52VzOZzFpuN71RFeEuK",
       "title": "אור וירושלים",
