@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4367,
-  "last_updated": "2026-11-15T19:41:15.427Z",
+  "version": 4368,
+  "last_updated": "2026-11-15T19:41:28.439Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1ucQPqVmiWKL35WmBG1j9L",
+      "title": "לא נורמאלית",
+      "artist": "בנאל בן ציון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:41:28.439Z"
+    },
     {
       "id": "1D6ZUnsQ3hCB3KOgVQ42J4",
       "title": "מחרוזת להיטים",
