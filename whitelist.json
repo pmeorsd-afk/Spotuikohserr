@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4365,
-  "last_updated": "2026-11-15T19:35:35.041Z",
+  "version": 4366,
+  "last_updated": "2026-11-15T19:35:39.486Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Ie11mkryyNQemZuYaRDsg",
+      "title": "שלכת",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:35:39.486Z"
+    },
     {
       "id": "1e2GFVSVDgRF9mHHWZkyCb",
       "title": "פלונטר",
