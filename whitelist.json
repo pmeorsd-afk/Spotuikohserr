@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4257,
-  "last_updated": "2026-11-15T19:29:11.048Z",
+  "version": 4258,
+  "last_updated": "2026-11-15T19:29:14.750Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "54ujCgwE4qTm8iRFmw0S5j",
+      "title": "Everything She Wants - Remix",
+      "artist": "Wham!",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:14.750Z"
+    },
     {
       "id": "2vjiAGcfPrSVplWkoGPoE6",
       "title": "שיר פרטי",
