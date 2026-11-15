@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4264,
-  "last_updated": "2026-11-15T19:29:33.766Z",
+  "version": 4265,
+  "last_updated": "2026-11-15T19:29:37.528Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Mv0aanQnASnFcMsLvyhC8",
+      "title": "FRUTIGER FUNK - Super Slowed",
+      "artist": "null, DJ AURAXÉ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:37.528Z"
+    },
     {
       "id": "2tQvY8a9ld7rgvUH8MalKp",
       "title": "FRUTIGER FUNK - Slowed",
