@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4315,
-  "last_updated": "2026-11-15T19:32:58.521Z",
+  "version": 4316,
+  "last_updated": "2026-11-15T19:33:01.958Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7uqNGM8oBjBzHYUowBAhWG",
+      "title": "רק אלוקים + אל עולם - Live",
+      "artist": "Yaniv Ben Masiah",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:33:01.958Z"
+    },
     {
       "id": "1yOoTkJRHjnGgmVXEbOBR4",
       "title": "שיר הוודקה",
