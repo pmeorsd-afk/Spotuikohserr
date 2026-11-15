@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4268,
-  "last_updated": "2026-11-15T19:29:44.227Z",
+  "version": 4269,
+  "last_updated": "2026-11-15T19:29:47.529Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7ji8hiQsCy07iYB3u79V0c",
+      "title": "גדות הירקון",
+      "artist": "Cohen@Mushon, Peter Roth, Dana Frieder",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:47.529Z"
+    },
     {
       "id": "1H5N26VqHR4JhuaRKY2I0u",
       "title": "Heaven Knows I'm Miserable Now - 2011 Remaster",
