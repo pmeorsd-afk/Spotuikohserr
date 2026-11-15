@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4232,
-  "last_updated": "2026-11-15T09:26:51.202Z",
+  "version": 4234,
+  "last_updated": "2026-11-15T09:26:55.016Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "42uWQL2EbYpu0NA3bJcaQT",
+      "title": "The Origin",
+      "artist": "Palo Canto",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T09:26:55.016Z"
+    },
+    {
+      "id": "0X3BmyGcVoiBSUn3R8EggL",
+      "title": "Steel echoes",
+      "artist": "Adrian Ström",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T09:26:55.016Z"
+    },
     {
       "id": "7wKUqlOL9OES7gwPdgUcQl",
       "title": "رايحين نسهر - بام بام",
