@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4249,
-  "last_updated": "2026-11-15T19:28:11.964Z",
+  "version": 4250,
+  "last_updated": "2026-11-15T19:28:15.504Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5EZfOTLFoj64rmQ8n43NGe",
+      "title": "צעקתי אליך",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:28:15.504Z"
+    },
     {
       "id": "4abB8WdkswrxWxcV2e56x9",
       "title": "גדל לי קצת זקן",
