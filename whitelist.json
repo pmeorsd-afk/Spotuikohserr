@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4222,
-  "last_updated": "2026-11-15T08:52:06.840Z",
+  "version": 4223,
+  "last_updated": "2026-11-15T08:52:10.466Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3wCZt2D9j51iXMR5qqmTAn",
+      "title": "אלירן שלי",
+      "artist": "Shimi Tavori",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:52:10.466Z"
+    },
     {
       "id": "7apnrDC67RlsOyhCbAJVR0",
       "title": "על כפיו יביא",
