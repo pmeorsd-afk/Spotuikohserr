@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4392,
-  "last_updated": "2026-11-15T21:19:35.308Z",
+  "version": 4393,
+  "last_updated": "2026-11-15T21:23:11.560Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6s7LQ3bgiQRORpqbxK2N5X",
+      "title": "אחשילי",
+      "artist": "Yishay Swissa, Michael Swissa, Shahar Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:23:11.560Z"
+    },
     {
       "id": "1zi7xx7UVEFkmKfv06H8x0",
       "title": "One Dance",
