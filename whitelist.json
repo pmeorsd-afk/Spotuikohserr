@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4383,
-  "last_updated": "2026-11-15T21:06:07.084Z",
+  "version": 4384,
+  "last_updated": "2026-11-15T21:06:10.858Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6t8lJz7Y04APuJ2LjyHuDK",
+      "title": "את לי כחלום בית\"ר",
+      "artist": "אדיר ניזרי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:06:10.858Z"
+    },
     {
       "id": "51Hu4boFqHLQPmzeOYMKYe",
       "title": "הגלגל מסתובב",
