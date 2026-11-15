@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4206,
-  "last_updated": "2026-11-15T08:50:50.084Z",
+  "version": 4207,
+  "last_updated": "2026-11-15T08:50:56.764Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7lX2zznCc07XDOe9Kt9st7",
+      "title": "Eastside Story",
+      "artist": "Trevor Duncan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:50:56.764Z"
+    },
     {
       "id": "6J2R4mMoDfb5NQMDuV0nWq",
       "title": "עשר אפס לך",
