@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4225,
-  "last_updated": "2026-11-15T08:52:16.917Z",
+  "version": 4226,
+  "last_updated": "2026-11-15T08:52:20.287Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Gz1kfW2NKIMaFhXB9MOnu",
+      "title": "המוות הלבן",
+      "artist": "Kobi Peretz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:52:20.287Z"
+    },
     {
       "id": "1HlsPXCdTEW1tEveIsLs2x",
       "title": "האוטו שלנו",
