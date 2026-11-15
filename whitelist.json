@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4237,
-  "last_updated": "2026-11-15T10:20:52.986Z",
+  "version": 4238,
+  "last_updated": "2026-11-15T10:35:21.396Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:R_eY0GLqG_k",
+      "title": "חמישי שישי",
+      "artist": "Osher Cohen, Nadav NAVI Aharoni",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T10:35:21.396Z"
+    },
     {
       "id": "youtube:BTfbWvYVyRU",
       "title": "כלום",
