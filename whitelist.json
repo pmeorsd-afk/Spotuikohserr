@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4312,
-  "last_updated": "2026-11-15T19:32:47.710Z",
+  "version": 4313,
+  "last_updated": "2026-11-15T19:32:51.471Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3pfJoGeq6nmm0mNMO7Io7a",
+      "title": "כל הדרך הביתה",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:32:51.471Z"
+    },
     {
       "id": "1kWi8uyLiSJjO0VkADl17j",
       "title": "بتسالني بحبك ليه",
