@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4205,
-  "last_updated": "2026-11-14T23:53:03.887Z",
+  "version": 4206,
+  "last_updated": "2026-11-15T08:50:50.084Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6J2R4mMoDfb5NQMDuV0nWq",
+      "title": "עשר אפס לך",
+      "artist": "Adir Getz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:50:50.084Z"
+    },
     {
       "id": "52Mm47AOdqVEYOl6Ss9Uv1",
       "title": "זומבים",
