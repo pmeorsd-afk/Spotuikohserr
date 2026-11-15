@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4287,
-  "last_updated": "2026-11-15T19:31:06.120Z",
+  "version": 4288,
+  "last_updated": "2026-11-15T19:31:10.685Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7KePFDyALC5ajxUxYSW9z2",
+      "title": "אלף מוזמנים X מלון בהוואי",
+      "artist": "טל בן גיגי, מושיקו ינגילוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:31:10.685Z"
+    },
     {
       "id": "585Slof7rJYr64bSv6DUJT",
       "title": "לב לבן (קאבר)",
