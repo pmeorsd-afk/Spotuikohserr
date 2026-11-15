@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4337,
-  "last_updated": "2026-11-15T19:34:10.890Z",
+  "version": 4338,
+  "last_updated": "2026-11-15T19:34:14.478Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "02e7dM0geCBA91hCvFemC4",
+      "title": "אהבה",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:14.478Z"
+    },
     {
       "id": "2lCp3FJYD2JCyH3n0meeTF",
       "title": "אל הגן ארד",
