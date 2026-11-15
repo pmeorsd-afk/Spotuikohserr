@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4379,
-  "last_updated": "2026-11-15T21:05:52.729Z",
+  "version": 4380,
+  "last_updated": "2026-11-15T21:05:56.464Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4MkG3cFMiWnyN2ynlw16C6",
+      "title": "רק אותך אני אוהב (בית\"ר ירושלים - שיר הזכייה בגביע המדינה 22/23)",
+      "artist": "Idan Amedi, Itzik Kala, מה קשור, Zion Baruch, אסי ישראלוף",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:05:56.464Z"
+    },
     {
       "id": "6jMCb4UpIBjmiKf6EwVK8u",
       "title": "חצי דפוק",
