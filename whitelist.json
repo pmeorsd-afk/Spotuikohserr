@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4345,
-  "last_updated": "2026-11-15T19:34:33.316Z",
+  "version": 4346,
+  "last_updated": "2026-11-15T19:34:37.392Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1cFfgFhTFXeHPxhoy53Vyt",
+      "title": "בנין עדי עד",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:37.392Z"
+    },
     {
       "id": "3RAqtUEItsRVVMgmlyPeAS",
       "title": "אני ואת",
