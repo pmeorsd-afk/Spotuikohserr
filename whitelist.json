@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4282,
-  "last_updated": "2026-11-15T19:30:41.272Z",
+  "version": 4283,
+  "last_updated": "2026-11-15T19:30:45.317Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0DMRb13cnwexE3PVlZuEwt",
+      "title": "לחן בחזה",
+      "artist": "Avihai Hollender, צדי צרפתי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:30:45.317Z"
+    },
     {
       "id": "7vUymY2iDlh72iINdRcnW3",
       "title": "ואני בחסדך",
