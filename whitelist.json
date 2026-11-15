@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4238,
-  "last_updated": "2026-11-15T10:35:21.396Z",
+  "version": 4239,
+  "last_updated": "2026-11-15T10:35:25.127Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:Z3oWF1BoajA",
+      "title": "איך שאת אוהבת",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T10:35:25.127Z"
+    },
     {
       "id": "youtube:R_eY0GLqG_k",
       "title": "חמישי שישי",
