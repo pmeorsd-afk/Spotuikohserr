@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4357,
-  "last_updated": "2026-11-15T19:35:08.826Z",
+  "version": 4358,
+  "last_updated": "2026-11-15T19:35:12.162Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "22udtFUukacEm2065J6n9I",
+      "title": "אוי ואבוי",
+      "artist": "דודא גאנג, Ravid Plotnik, Z.K",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:35:12.162Z"
+    },
     {
       "id": "4zWK2UlyxFNvm7CVLIYaKD",
       "title": "אני רוצה לזוז",
