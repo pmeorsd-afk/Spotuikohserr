@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4389,
-  "last_updated": "2026-11-15T21:19:06.046Z",
+  "version": 4390,
+  "last_updated": "2026-11-15T21:19:09.218Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0qlQ69CUrUF5C4mr1x9EFH",
+      "title": "הסוויסות",
+      "artist": "Yishay Swissa, Michael Swissa, Ravid Plotnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:19:09.218Z"
+    },
     {
       "id": "6suPRKCUarF1s521653j6q",
       "title": "מחרוזת רוק - Live",
