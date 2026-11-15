@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4382,
-  "last_updated": "2026-11-15T21:06:03.645Z",
+  "version": 4383,
+  "last_updated": "2026-11-15T21:06:07.084Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "51Hu4boFqHLQPmzeOYMKYe",
+      "title": "הגלגל מסתובב",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:06:07.084Z"
+    },
     {
       "id": "7Gdh53MqJDvzXVPVHp64vN",
       "title": "מחרוזת ללב נכנסת בית\"ר ירושלים",
