@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4235,
-  "last_updated": "2026-11-15T10:20:45.383Z",
+  "version": 4236,
+  "last_updated": "2026-11-15T10:20:48.976Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:E9L3VRqrHWA",
+      "title": "שירים של עומר",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T10:20:48.976Z"
+    },
     {
       "id": "487cRFpGzIdrK3cfEIjGhO",
       "title": "חלקת אלוהים (מתוך פרויקט \"יעלה ויבוא\")",
