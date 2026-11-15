@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4217,
-  "last_updated": "2026-11-15T08:51:46.949Z",
+  "version": 4218,
+  "last_updated": "2026-11-15T08:51:50.326Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "79WmVVG6KbCecp45eyhbfX",
+      "title": "Sleeping With The Lights On",
+      "artist": "Daniel Seavey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:51:50.326Z"
+    },
     {
       "id": "1AeSZVz9UrF4m5kQ7KPmUu",
       "title": "Fall into You",
