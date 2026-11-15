@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4380,
-  "last_updated": "2026-11-15T21:05:56.464Z",
+  "version": 4381,
+  "last_updated": "2026-11-15T21:05:59.576Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2wCMzqMoEmKOpViKAEEhZt",
+      "title": "זאב בודד",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:05:59.576Z"
+    },
     {
       "id": "4MkG3cFMiWnyN2ynlw16C6",
       "title": "רק אותך אני אוהב (בית\"ר ירושלים - שיר הזכייה בגביע המדינה 22/23)",
