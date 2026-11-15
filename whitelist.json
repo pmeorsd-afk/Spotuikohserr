@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4290,
-  "last_updated": "2026-11-15T19:31:17.894Z",
+  "version": 4291,
+  "last_updated": "2026-11-15T19:31:21.612Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Ow0gCGxYfOcyiCuZOt9mp",
+      "title": "שבוע טוב",
+      "artist": "Avraham Tal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:31:21.612Z"
+    },
     {
       "id": "1Vo7pV7M9gkvrEoP9g9RCH",
       "title": "תסביכים",
