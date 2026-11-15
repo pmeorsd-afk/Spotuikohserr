@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4318,
-  "last_updated": "2026-11-15T19:33:08.493Z",
+  "version": 4319,
+  "last_updated": "2026-11-15T19:33:12.110Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1aK2LQ9iGvYt81nPYGGrvd",
+      "title": "טיפוס של חורף",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:33:12.110Z"
+    },
     {
       "id": "3ZGrF6YuoGbcQ4CFAJjgUW",
       "title": "חפלה בבנייני האומה",
