@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4350,
-  "last_updated": "2026-11-15T19:34:48.672Z",
+  "version": 4351,
+  "last_updated": "2026-11-15T19:34:52.410Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7LqmXk66ct9fJWHPVXNmvP",
+      "title": "מה שיהיה יהיה",
+      "artist": "Hatikva 6",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:52.410Z"
+    },
     {
       "id": "4uGjzmOvkagLvI0oXRy3nj",
       "title": "יום שישי הגיע",
