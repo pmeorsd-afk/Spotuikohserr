@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4304,
-  "last_updated": "2026-11-15T19:32:14.979Z",
+  "version": 4305,
+  "last_updated": "2026-11-15T19:32:19.275Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Ces1oOwqA1R8nnCPZFkkn",
+      "title": "זהו אלי וגואלי",
+      "artist": "Itzik Eshel, Yechiel Nahari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:32:19.275Z"
+    },
     {
       "id": "5vpt4GY9eef41u9orSqI5v",
       "title": "Oulala",
