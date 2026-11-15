@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4342,
-  "last_updated": "2026-11-15T19:34:26.147Z",
+  "version": 4344,
+  "last_updated": "2026-11-15T19:34:29.577Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "272RHKpNqc9csYOp1ozFL8",
+      "title": "איילת חן",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:29.577Z"
+    },
+    {
+      "id": "4stu786pT0DCpe7BPlCk9J",
+      "title": "ללכת לשם",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:29.577Z"
+    },
     {
       "id": "25HGqVGQkHBsQhwHaPqpnS",
       "title": "מורי",
