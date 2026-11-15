@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4322,
-  "last_updated": "2026-11-15T19:33:24.270Z",
+  "version": 4323,
+  "last_updated": "2026-11-15T19:33:27.789Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3KOB28QFYWH7AS8Q52z2Bl",
+      "title": "עד דלא ידע",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:33:27.789Z"
+    },
     {
       "id": "4t8yKo3A6nNEHCib4nDbC0",
       "title": "יגיע טוב היום - Maor Cohen Remix",
