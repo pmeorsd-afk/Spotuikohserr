@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4353,
-  "last_updated": "2026-11-15T19:34:58.294Z",
+  "version": 4355,
+  "last_updated": "2026-11-15T19:35:01.634Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3r1Mw2XwTdtgS6QTHOFAFY",
+      "title": "מגן ישראל",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:35:01.634Z"
+    },
+    {
+      "id": "5jP0oIB9DjQ5E2sBEeOEqK",
+      "title": "להיות אדם",
+      "artist": "Zohar Argov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:35:01.634Z"
+    },
     {
       "id": "0hIcAqQSX3NdYvfLILXTKh",
       "title": "Where Do I Belong",
