@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4344,
-  "last_updated": "2026-11-15T19:34:29.577Z",
+  "version": 4345,
+  "last_updated": "2026-11-15T19:34:33.316Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3RAqtUEItsRVVMgmlyPeAS",
+      "title": "אני ואת",
+      "artist": "Ofer Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:33.316Z"
+    },
     {
       "id": "272RHKpNqc9csYOp1ozFL8",
       "title": "איילת חן",
