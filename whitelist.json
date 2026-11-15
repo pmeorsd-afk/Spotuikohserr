@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4223,
-  "last_updated": "2026-11-15T08:52:10.466Z",
+  "version": 4224,
+  "last_updated": "2026-11-15T08:52:13.647Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Tp0tjtjOQY725WFWhIIUn",
+      "title": "מחרוזת נערה",
+      "artist": "Lior Miara",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T08:52:13.647Z"
+    },
     {
       "id": "3wCZt2D9j51iXMR5qqmTAn",
       "title": "אלירן שלי",
