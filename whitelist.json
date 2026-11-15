@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4277,
-  "last_updated": "2026-11-15T19:30:12.381Z",
+  "version": 4278,
+  "last_updated": "2026-11-15T19:30:16.500Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0mZTHIYPmztx9ZZHUEJWQ2",
+      "title": "JAIYQ",
+      "artist": "Kezeń",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:30:16.500Z"
+    },
     {
       "id": "53zYxeOdw40Ej3BGeuNNov",
       "title": "עוד חוזר הניגון",
