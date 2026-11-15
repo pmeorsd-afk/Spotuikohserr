@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4346,
-  "last_updated": "2026-11-15T19:34:37.392Z",
+  "version": 4348,
+  "last_updated": "2026-11-15T19:34:40.703Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3YNR710rz6R0J80jnPkBM7",
+      "title": "יום שישי הגיע",
+      "artist": "Daklon, Haim Moshe",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:40.703Z"
+    },
+    {
+      "id": "4sfPNoDjtUetBSVIEZnnoH",
+      "title": "אפילו",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:40.703Z"
+    },
     {
       "id": "1cFfgFhTFXeHPxhoy53Vyt",
       "title": "בנין עדי עד",
