@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4260,
-  "last_updated": "2026-11-15T19:29:22.025Z",
+  "version": 4262,
+  "last_updated": "2026-11-15T19:29:25.780Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6VeShKmeCWQQbcX2nRTP9n",
+      "title": "בתנועה במבט",
+      "artist": "Alon Eder",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:25.780Z"
+    },
+    {
+      "id": "6L5RI9isQPvFyl1yCxnFFb",
+      "title": "Playground Love (with Gordon Tracks)",
+      "artist": "Air, Gordon Tracks",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:25.780Z"
+    },
     {
       "id": "6RaoiLs7wwPfc84dij3ToP",
       "title": "בקול גדול",
