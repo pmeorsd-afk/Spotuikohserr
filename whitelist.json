@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4395,
-  "last_updated": "2026-11-15T21:30:11.395Z",
+  "version": 4396,
+  "last_updated": "2026-11-15T21:30:14.844Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0JoYMP7hvEwxKCjj9szUo6",
+      "title": "טיל פצמר",
+      "artist": "ליעד מאיר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:30:14.844Z"
+    },
     {
       "id": "6XxHJHco2qERGiCKjFeuGN",
       "title": "הניחי לי",
