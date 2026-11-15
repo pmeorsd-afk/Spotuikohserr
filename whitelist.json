@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4280,
-  "last_updated": "2026-11-15T19:30:23.501Z",
+  "version": 4281,
+  "last_updated": "2026-11-15T19:30:31.641Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2alAlEQRwGmMEUccpmLJXY",
+      "title": "הנשמה לך",
+      "artist": "Shlomo Carlebach",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:30:31.641Z"
+    },
     {
       "id": "3piVfvEpcO5TXO1qn55NtX",
       "title": "סלינה",
