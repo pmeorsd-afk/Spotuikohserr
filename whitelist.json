@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4236,
-  "last_updated": "2026-11-15T10:20:48.976Z",
+  "version": 4237,
+  "last_updated": "2026-11-15T10:20:52.986Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:BTfbWvYVyRU",
+      "title": "כלום",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T10:20:52.986Z"
+    },
     {
       "id": "youtube:E9L3VRqrHWA",
       "title": "שירים של עומר",
