@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4321,
-  "last_updated": "2026-11-15T19:33:19.001Z",
+  "version": 4322,
+  "last_updated": "2026-11-15T19:33:24.270Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4t8yKo3A6nNEHCib4nDbC0",
+      "title": "יגיע טוב היום - Maor Cohen Remix",
+      "artist": "משה קליין, Maor Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:33:24.270Z"
+    },
     {
       "id": "7ao3ELlZGja47VWJUGJ2Zk",
       "title": "דוד מלכי",
