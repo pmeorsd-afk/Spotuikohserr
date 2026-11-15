@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4259,
-  "last_updated": "2026-11-15T19:29:18.060Z",
+  "version": 4260,
+  "last_updated": "2026-11-15T19:29:22.025Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6RaoiLs7wwPfc84dij3ToP",
+      "title": "בקול גדול",
+      "artist": "Alon Eder",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:22.025Z"
+    },
     {
       "id": "0MkRKj3FYPIDT0N99rUx4o",
       "title": "מספרים",
