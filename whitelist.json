@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4317,
-  "last_updated": "2026-11-15T19:33:05.406Z",
+  "version": 4318,
+  "last_updated": "2026-11-15T19:33:08.493Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ZGrF6YuoGbcQ4CFAJjgUW",
+      "title": "חפלה בבנייני האומה",
+      "artist": "דוד חפצדי, Yaniv Ben Mashiach",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:33:08.493Z"
+    },
     {
       "id": "1x4yzWPLBHEL5B9pDJswku",
       "title": "Tayer Ya Hawa",
