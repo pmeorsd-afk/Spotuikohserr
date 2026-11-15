@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4399,
-  "last_updated": "2026-11-15T21:30:22.129Z",
+  "version": 4400,
+  "last_updated": "2026-11-15T21:30:27.270Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5oDX0crRNh3ZX5Gn8AjHJB",
+      "title": "אבא",
+      "artist": "רפי ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:30:27.270Z"
+    },
     {
       "id": "2Kmuag3BqomcuLdkDsBEM9",
       "title": "מחרוזת בחוף של פורטוגל - Live",
