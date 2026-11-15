@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4283,
-  "last_updated": "2026-11-15T19:30:45.317Z",
+  "version": 4284,
+  "last_updated": "2026-11-15T19:30:49.060Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2SQ8W42gMWWlS68x3LjWxz",
+      "title": "ילדה סוכר",
+      "artist": "Mooki",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:30:49.060Z"
+    },
     {
       "id": "0DMRb13cnwexE3PVlZuEwt",
       "title": "לחן בחזה",
