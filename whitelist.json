@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4358,
-  "last_updated": "2026-11-15T19:35:12.162Z",
+  "version": 4359,
+  "last_updated": "2026-11-15T19:35:17.298Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5s6itD7bllGLBuDguJX6Se",
+      "title": "עוד פעם פעם",
+      "artist": "Hatikva 6",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:35:17.298Z"
+    },
     {
       "id": "22udtFUukacEm2065J6n9I",
       "title": "אוי ואבוי",
