@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4341,
-  "last_updated": "2026-11-15T19:34:22.307Z",
+  "version": 4342,
+  "last_updated": "2026-11-15T19:34:26.147Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "25HGqVGQkHBsQhwHaPqpnS",
+      "title": "מורי",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:26.147Z"
+    },
     {
       "id": "3LmqupDhzBs2r5tYjSl16Z",
       "title": "יש ימים",
