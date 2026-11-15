@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4340,
-  "last_updated": "2026-11-15T19:34:18.304Z",
+  "version": 4341,
+  "last_updated": "2026-11-15T19:34:22.307Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3LmqupDhzBs2r5tYjSl16Z",
+      "title": "יש ימים",
+      "artist": "Gidi Gov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:34:22.307Z"
+    },
     {
       "id": "5FbfPxWMDM3yEnNUJS0HLQ",
       "title": "Good Life",
