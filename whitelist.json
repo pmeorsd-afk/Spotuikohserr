@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4246,
-  "last_updated": "2026-11-15T12:23:11.288Z",
+  "version": 4247,
+  "last_updated": "2026-11-15T19:28:03.974Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4WqZucpFLEEGhiRuifM7Td",
+      "title": "אדון הרוחות",
+      "artist": "נתי בן שלום",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:28:03.974Z"
+    },
     {
       "id": "0HEmnAUT8PHznIAAmVXqFJ",
       "title": "Faith - Remastered",
