@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4313,
-  "last_updated": "2026-11-15T19:32:51.471Z",
+  "version": 4314,
+  "last_updated": "2026-11-15T19:32:54.757Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "57ahOhK6zmPBpj19dhQh5G",
+      "title": "פותח את ידך",
+      "artist": "ותן חלקנו, Ishay Ribo, Moshe Perez, פאר טסי, Akiva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:32:54.757Z"
+    },
     {
       "id": "3pfJoGeq6nmm0mNMO7Io7a",
       "title": "כל הדרך הביתה",
