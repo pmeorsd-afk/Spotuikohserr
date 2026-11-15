@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4369,
-  "last_updated": "2026-11-15T20:01:07.092Z",
+  "version": 4370,
+  "last_updated": "2026-11-15T20:08:02.090Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7jaFKMpC3fgEP8no1SDFmB",
+      "title": "קריז",
+      "artist": "Peled",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T20:08:02.090Z"
+    },
     {
       "id": "4PcdcSDUImHuVjoCezSYuC",
       "title": "פלואו של טמבל 2",
