@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4253,
-  "last_updated": "2026-11-15T19:28:36.503Z",
+  "version": 4254,
+  "last_updated": "2026-11-15T19:28:40.031Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1KyIp4IRXhVtjmXlkbnD6U",
+      "title": "מחרוזת יפה ותמה",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:28:40.031Z"
+    },
     {
       "id": "7rsKEjup5SEtolmQLfcaLO",
       "title": "עבדו את השם בשמחה - ניסו סלוב רמיקס",
