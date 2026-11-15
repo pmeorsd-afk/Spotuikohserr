@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4255,
-  "last_updated": "2026-11-15T19:28:43.798Z",
+  "version": 4256,
+  "last_updated": "2026-11-15T19:29:02.371Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3TqvAza31ZUi57SUO0BhGi",
+      "title": "מחרוזת התבודדות",
+      "artist": "ניסים סבג, נחמן סבג",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:29:02.371Z"
+    },
     {
       "id": "1JFDpn6NUrB6cG05FvkSsw",
       "title": "רבי שמעון - ניסו סלוב רמיקס",
