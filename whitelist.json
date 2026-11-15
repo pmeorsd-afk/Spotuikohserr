@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4309,
-  "last_updated": "2026-11-15T19:32:33.659Z",
+  "version": 4310,
+  "last_updated": "2026-11-15T19:32:37.310Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Ow1bUscoFRj5y2rLilHJE",
+      "title": "אני חוזר לאמא - Live",
+      "artist": "Yaniv Ben Masiah",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:32:37.310Z"
+    },
     {
       "id": "0yYj2iKURX4julmRceJOSS",
       "title": "אשרינו",
