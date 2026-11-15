@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4384,
-  "last_updated": "2026-11-15T21:06:10.858Z",
+  "version": 4385,
+  "last_updated": "2026-11-15T21:14:48.589Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4CvgRQYt1K49py3rjkLzbM",
+      "title": "זכר חסדו",
+      "artist": "מנדי רוט, Mendy Hershkowitz Band, The Shira Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:14:48.589Z"
+    },
     {
       "id": "6t8lJz7Y04APuJ2LjyHuDK",
       "title": "את לי כחלום בית\"ר",
