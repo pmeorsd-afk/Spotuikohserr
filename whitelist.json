@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4370,
-  "last_updated": "2026-11-15T20:08:02.090Z",
+  "version": 4371,
+  "last_updated": "2026-11-15T20:08:06.184Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0hlBI8n1v5F2mj0tDIM5ai",
+      "title": "שלוק מהבלו",
+      "artist": "ליעד מאיר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T20:08:06.184Z"
+    },
     {
       "id": "7jaFKMpC3fgEP8no1SDFmB",
       "title": "קריז",
