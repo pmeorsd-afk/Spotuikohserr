@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4355,
-  "last_updated": "2026-11-15T19:35:01.634Z",
+  "version": 4356,
+  "last_updated": "2026-11-15T19:35:05.218Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4fuSUBuTZ4JOZCrmqcQ9YQ",
+      "title": "ישראלי קומפלט",
+      "artist": "Hatikva 6",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:35:05.218Z"
+    },
     {
       "id": "3r1Mw2XwTdtgS6QTHOFAFY",
       "title": "מגן ישראל",
