@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4252,
-  "last_updated": "2026-11-15T19:28:32.509Z",
+  "version": 4253,
+  "last_updated": "2026-11-15T19:28:36.503Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7rsKEjup5SEtolmQLfcaLO",
+      "title": "עבדו את השם בשמחה - ניסו סלוב רמיקס",
+      "artist": "נתנאל בר יוחאי, דיג'יי ניסו סלוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:28:36.503Z"
+    },
     {
       "id": "5siQQhCPSAXxOppFgpN7qP",
       "title": "מזמור לתודה",
