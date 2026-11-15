@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4374,
-  "last_updated": "2026-11-15T21:05:38.649Z",
+  "version": 4375,
+  "last_updated": "2026-11-15T21:05:41.993Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7lIXfphu0guzuQtbeK4kZU",
+      "title": "שלוק מקצב",
+      "artist": "מאור אדרי, טליסמאן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T21:05:41.993Z"
+    },
     {
       "id": "69UvZhqnkW8mEbejcoMv6X",
       "title": "מאושרים",
