@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4301,
-  "last_updated": "2026-11-15T19:32:04.944Z",
+  "version": 4302,
+  "last_updated": "2026-11-15T19:32:08.171Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6vQS8BCTMzviwBhnnYcEZ2",
+      "title": "רואים רחוק רואים שקוף",
+      "artist": "יאיר גדסי, Avner Gadasi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:32:08.171Z"
+    },
     {
       "id": "2gpllTpJ2kC1pyiQcgP2Ob",
       "title": "לך בורא עולם - Live",
