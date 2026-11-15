@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4306,
-  "last_updated": "2026-11-15T19:32:23.258Z",
+  "version": 4307,
+  "last_updated": "2026-11-15T19:32:26.606Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5gOtgDuMVu95fOJ5n44RnF",
+      "title": "טוב שיש מחר - Live",
+      "artist": "Yaniv Ben Masiah",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-15T19:32:26.606Z"
+    },
     {
       "id": "44FKJzcZLGdHIkfaXILnOP",
       "title": "בן מלאך שלי - Live",
