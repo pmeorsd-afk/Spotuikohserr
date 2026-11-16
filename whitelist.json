@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4466,
-  "last_updated": "2026-11-16T20:50:12.043Z",
+  "version": 4467,
+  "last_updated": "2026-11-16T20:50:25.242Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Xg5M4d2hyreZtIxSySG97",
+      "title": "Love Theme From \"The Godfather\" (Speak Softly Love)",
+      "artist": "Andy Williams",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:50:25.242Z"
+    },
     {
       "id": "7GHf8dQ2wA71wYOuRsQCZP",
       "title": "Rhythm of the Rain",
