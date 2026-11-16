@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4502,
-  "last_updated": "2026-11-16T20:58:04.183Z",
+  "version": 4503,
+  "last_updated": "2026-11-16T20:58:17.291Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7xQIX3KzMcybeLt3N3Ue2v",
+      "title": "אל בורות המים",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:58:17.291Z"
+    },
     {
       "id": "61LD3LQQogbF5oEOyMOdYN",
       "title": "Himalaja",
