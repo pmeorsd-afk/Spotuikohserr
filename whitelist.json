@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4472,
-  "last_updated": "2026-11-16T20:51:35.813Z",
+  "version": 4473,
+  "last_updated": "2026-11-16T20:51:48.710Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3BZDsx241F8N6l1NM9JMEI",
+      "title": "כשאנחנו מנגנים",
+      "artist": "Shuli Rand, Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:51:48.710Z"
+    },
     {
       "id": "1q6vJqvTIH3c8RPo8mh4o9",
       "title": "Toca Toca",
