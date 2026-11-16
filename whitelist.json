@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4486,
-  "last_updated": "2026-11-16T20:54:36.902Z",
+  "version": 4487,
+  "last_updated": "2026-11-16T20:54:50.168Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2wRx3EInpPYjQej6d7P0aj",
+      "title": "רבי נחמן",
+      "artist": "יאיר אלייצור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:54:50.168Z"
+    },
     {
       "id": "0gqtHNzgIKzEGF59MtkGhZ",
       "title": "שלום אשה",
