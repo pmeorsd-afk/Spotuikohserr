@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4407,
-  "last_updated": "2026-11-16T20:38:06.104Z",
+  "version": 4408,
+  "last_updated": "2026-11-16T20:38:10.628Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0WBp7Q3X8EoyRZlq6m0gk3",
+      "title": "חשוף זרוע קדשך",
+      "artist": "שי אברמסון, החזנים הצבאיים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:38:10.628Z"
+    },
     {
       "id": "26teSkXzdx0D1rcbZecpEV",
       "title": "ילד",
