@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4424,
-  "last_updated": "2026-11-16T20:41:01.113Z",
+  "version": 4425,
+  "last_updated": "2026-11-16T20:41:14.187Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "566ztClsZZs1LXfQNXAKA4",
+      "title": "אחד בפה אחד בלב",
+      "artist": "דודא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:41:14.187Z"
+    },
     {
       "id": "7KmRMNXkZQv1Yi3AfP4cZR",
       "title": "שדים בארון",
