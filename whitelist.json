@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4449,
-  "last_updated": "2026-11-16T20:46:31.254Z",
+  "version": 4450,
+  "last_updated": "2026-11-16T20:46:44.507Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4w4FzD9qevYx8luiaxXvcN",
+      "title": "שעה של אור",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:46:44.507Z"
+    },
     {
       "id": "2pTk0xonPzAp4SIxyEy3dZ",
       "title": "שעה של אור",
