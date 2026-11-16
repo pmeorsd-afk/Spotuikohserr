@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4447,
-  "last_updated": "2026-11-16T20:46:05.116Z",
+  "version": 4448,
+  "last_updated": "2026-11-16T20:46:18.244Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4FHagKvWX1jJnq4PlZV3F5",
+      "title": "Kol Halayla",
+      "artist": "Sruli & Netanel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:46:18.244Z"
+    },
     {
       "id": "1SgTsVCOS0OS7LyMpxW1Un",
       "title": "אהלן וסהלן מחרוזת",
