@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4508,
-  "last_updated": "2026-11-16T21:17:37.767Z",
+  "version": 4509,
+  "last_updated": "2026-11-16T21:18:09.768Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0F28D4DpEIjMwem5EIz6Rh",
+      "title": "נשמת",
+      "artist": "Avraham Fried, בנצי שטיין, Haim Israel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T21:18:09.768Z"
+    },
     {
       "id": "youtube:gT6lrgwa0Ic",
       "title": "בשעות הבודדות",
