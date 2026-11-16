@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4481,
-  "last_updated": "2026-11-16T20:53:31.339Z",
+  "version": 4482,
+  "last_updated": "2026-11-16T20:53:44.521Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2uaofxGDurdsHvAc17SIvZ",
+      "title": "Meme",
+      "artist": "Dj Gimbo, Gjesti",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:53:44.521Z"
+    },
     {
       "id": "5g4xuXM3jzn3jZzn3TJweq",
       "title": "אחרי עשרים שנה",
