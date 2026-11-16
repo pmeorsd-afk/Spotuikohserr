@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4482,
-  "last_updated": "2026-11-16T20:53:44.521Z",
+  "version": 4483,
+  "last_updated": "2026-11-16T20:53:57.682Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6YWFr8BHQrRL4b7RwuqS36",
+      "title": "Golden Boy",
+      "artist": "Nadav Guedj",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:53:57.682Z"
+    },
     {
       "id": "2uaofxGDurdsHvAc17SIvZ",
       "title": "Meme",
