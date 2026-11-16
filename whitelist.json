@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4418,
-  "last_updated": "2026-11-16T20:39:42.097Z",
+  "version": 4419,
+  "last_updated": "2026-11-16T20:39:55.266Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2cnSabm1eei70hsQJvJdPA",
+      "title": "עדיין אשדוד",
+      "artist": "דודא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:39:55.266Z"
+    },
     {
       "id": "1vWv068EpdMazqhfGtYWoz",
       "title": "בול עליי",
