@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4421,
-  "last_updated": "2026-11-16T20:40:22.116Z",
+  "version": 4422,
+  "last_updated": "2026-11-16T20:40:35.920Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "24nmy66cDSzQqdzS3KVse8",
+      "title": "Our House - 12\" Extended Version",
+      "artist": "Madness",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:40:35.920Z"
+    },
     {
       "id": "4TVRJM0rOwwoDP4D1oqbtu",
       "title": "לא איתי",
