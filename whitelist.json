@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4501,
-  "last_updated": "2026-11-16T20:57:51.105Z",
+  "version": 4502,
+  "last_updated": "2026-11-16T20:58:04.183Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "61LD3LQQogbF5oEOyMOdYN",
+      "title": "Himalaja",
+      "artist": "Alban Skenderaj",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:58:04.183Z"
+    },
     {
       "id": "46L5lm1Xzwr0TExEMpObtq",
       "title": "Killer Queen",
