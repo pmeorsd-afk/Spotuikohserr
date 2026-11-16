@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4488,
-  "last_updated": "2026-11-16T20:55:03.304Z",
+  "version": 4489,
+  "last_updated": "2026-11-16T20:55:16.664Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1WMVTFSS4a1WqsSF9k4iP5",
+      "title": "היכן אתה",
+      "artist": "Amir Benayoun, Shlomi Shabat",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:55:16.664Z"
+    },
     {
       "id": "2inqR5rCpsGc85pPOsVIQ7",
       "title": "Happy Together (Mono) - 2016 Remaster",
