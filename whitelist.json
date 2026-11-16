@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4456,
-  "last_updated": "2026-11-16T20:48:01.287Z",
+  "version": 4457,
+  "last_updated": "2026-11-16T20:48:14.108Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5IWH8CJZxFKHYgzaFn8nzn",
+      "title": "שלום לבן דודי",
+      "artist": "Lehakat Tzliley Haud",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:48:14.108Z"
+    },
     {
       "id": "2FmEVuf8GsBjU09pwcfOn8",
       "title": "סוף לסיפור",
