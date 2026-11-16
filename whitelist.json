@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4454,
-  "last_updated": "2026-11-16T20:47:35.386Z",
+  "version": 4455,
+  "last_updated": "2026-11-16T20:47:48.554Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0g5Kbip6xWsuNNt2J7qNzf",
+      "title": "שלום לבן דודי",
+      "artist": "Daklon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:47:48.554Z"
+    },
     {
       "id": "4nPpbTDeNAD4MRA03xEQcE",
       "title": "The Violent Truth",
