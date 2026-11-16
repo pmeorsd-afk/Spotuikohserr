@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4423,
-  "last_updated": "2026-11-16T20:40:48.704Z",
+  "version": 4424,
+  "last_updated": "2026-11-16T20:41:01.113Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7KmRMNXkZQv1Yi3AfP4cZR",
+      "title": "שדים בארון",
+      "artist": "Lukach, כליפי, דודא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:41:01.113Z"
+    },
     {
       "id": "2saHrb2XITEyOmjVfq4EPn",
       "title": "ליפול ולקום",
