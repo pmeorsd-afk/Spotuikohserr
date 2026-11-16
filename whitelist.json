@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4470,
-  "last_updated": "2026-11-16T20:51:05.957Z",
+  "version": 4471,
+  "last_updated": "2026-11-16T20:51:19.046Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2kqX4xdkkBv7Szd2j6pxjt",
+      "title": "תדליקו אורות",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:51:19.046Z"
+    },
     {
       "id": "42FQ6SWMnzb6QAVEuTBTiO",
       "title": "Resonance x Genesis x Not allowed - Slowed",
