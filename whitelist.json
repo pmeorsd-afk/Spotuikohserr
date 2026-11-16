@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4476,
-  "last_updated": "2026-11-16T20:52:27.204Z",
+  "version": 4477,
+  "last_updated": "2026-11-16T20:52:39.853Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ObtSqw9I9NoPloLhyeupO",
+      "title": "אם אתה בסביבה",
+      "artist": "Arik Sinai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:52:39.853Z"
+    },
     {
       "id": "0XvxMK4g5h5LZj7SbPUP96",
       "title": "Daydream Believer",
