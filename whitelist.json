@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4453,
-  "last_updated": "2026-11-16T20:47:22.535Z",
+  "version": 4454,
+  "last_updated": "2026-11-16T20:47:35.386Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4nPpbTDeNAD4MRA03xEQcE",
+      "title": "The Violent Truth",
+      "artist": "Guitar Resonance",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:47:35.386Z"
+    },
     {
       "id": "6KaFJElr5x35nT1QTH4tD9",
       "title": "Quiet Sails",
