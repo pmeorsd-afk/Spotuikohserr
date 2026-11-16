@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4505,
-  "last_updated": "2026-11-16T20:58:43.005Z",
+  "version": 4506,
+  "last_updated": "2026-11-16T20:58:56.077Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6wG3ydJ38J2Atrwyr8gT8M",
+      "title": "פשוט סתם",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:58:56.077Z"
+    },
     {
       "id": "30cYF8YZxxRcZN5JIeNpvr",
       "title": "להשתטות לפעמים",
