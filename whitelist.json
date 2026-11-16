@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4500,
-  "last_updated": "2026-11-16T20:57:38.559Z",
+  "version": 4501,
+  "last_updated": "2026-11-16T20:57:51.105Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "46L5lm1Xzwr0TExEMpObtq",
+      "title": "Killer Queen",
+      "artist": "Queen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:57:51.105Z"
+    },
     {
       "id": "4W1HbfOdDrzT8ItQ0pJtJz",
       "title": "Alabama Song (Whisky Bar)",
