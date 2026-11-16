@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4438,
-  "last_updated": "2026-11-16T20:44:07.053Z",
+  "version": 4439,
+  "last_updated": "2026-11-16T20:44:20.121Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3alrQ8lQSlaTPnqJu9dLhf",
+      "title": "Erev Shel Shoshanim",
+      "artist": "Tal Skloot",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:44:20.121Z"
+    },
     {
       "id": "12OBKmgI1w4bDt5ISfNHSV",
       "title": "Shalom Aleichem/Eishes Chayil - Violin Duet",
