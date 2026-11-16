@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4474,
-  "last_updated": "2026-11-16T20:52:01.223Z",
+  "version": 4475,
+  "last_updated": "2026-11-16T20:52:14.399Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4oyVu7Of5RDlbP9ACsHTNL",
+      "title": "רציתי להגיד לך שלום",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:52:14.399Z"
+    },
     {
       "id": "0eVMm4LCn45g0gb3UxtN0m",
       "title": "חולם בספרדית",
