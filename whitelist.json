@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4461,
-  "last_updated": "2026-11-16T20:49:06.661Z",
+  "version": 4462,
+  "last_updated": "2026-11-16T20:49:19.678Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "61vRUTlDSYGoITovtSwpuf",
+      "title": "אודה לאל",
+      "artist": "המדרגות",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:49:19.678Z"
+    },
     {
       "id": "6REbwUNlppTfcnV4d4ZoZi",
       "title": "Swimming Pools (Drank)",
