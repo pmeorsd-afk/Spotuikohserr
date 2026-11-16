@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4416,
-  "last_updated": "2026-11-16T20:39:19.903Z",
+  "version": 4417,
+  "last_updated": "2026-11-16T20:39:29.133Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "15VRO9CQwMpbqUYA7e6Hwg",
+      "title": "The Man Who Sold The World - Live",
+      "artist": "Nirvana",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:39:29.133Z"
+    },
     {
       "id": "3O4p4TYIC37n9yi7seb4Go",
       "title": "ילדותי השנייה",
