@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4499,
-  "last_updated": "2026-11-16T20:57:25.782Z",
+  "version": 4500,
+  "last_updated": "2026-11-16T20:57:38.559Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4W1HbfOdDrzT8ItQ0pJtJz",
+      "title": "Alabama Song (Whisky Bar)",
+      "artist": "The Doors",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:57:38.559Z"
+    },
     {
       "id": "576xPFmqv6Rk2TENEkPh2X",
       "title": "מי אוהב אותך יותר ממני?",
