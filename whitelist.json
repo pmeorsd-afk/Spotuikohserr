@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4471,
-  "last_updated": "2026-11-16T20:51:19.046Z",
+  "version": 4472,
+  "last_updated": "2026-11-16T20:51:35.813Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1q6vJqvTIH3c8RPo8mh4o9",
+      "title": "Toca Toca",
+      "artist": "Project X",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:51:35.813Z"
+    },
     {
       "id": "2kqX4xdkkBv7Szd2j6pxjt",
       "title": "תדליקו אורות",
