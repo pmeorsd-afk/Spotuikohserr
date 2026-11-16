@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4463,
-  "last_updated": "2026-11-16T20:49:32.475Z",
+  "version": 4464,
+  "last_updated": "2026-11-16T20:49:45.715Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2SpEHTbUuebeLkgs9QB7Ue",
+      "title": "Jolene",
+      "artist": "Dolly Parton",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:49:45.715Z"
+    },
     {
       "id": "23XNkZWXkNRRDcPLHC7Hpi",
       "title": "מרגיש",
