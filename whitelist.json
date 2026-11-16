@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4419,
-  "last_updated": "2026-11-16T20:39:55.266Z",
+  "version": 4420,
+  "last_updated": "2026-11-16T20:40:08.757Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3hFn4a9yRk3IM9Qqmf3W8b",
+      "title": "Betcha' Wouldn't Hurt Me",
+      "artist": "Quincy Jones",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:40:08.757Z"
+    },
     {
       "id": "2cnSabm1eei70hsQJvJdPA",
       "title": "עדיין אשדוד",
