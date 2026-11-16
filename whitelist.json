@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4512,
-  "last_updated": "2026-11-16T21:20:50.713Z",
+  "version": 4513,
+  "last_updated": "2026-11-16T21:31:52.199Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3CRDbSIZ4r5MsZ0YwxuEkn",
+      "title": "Stressed Out",
+      "artist": "Twenty One Pilots",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T21:31:52.199Z"
+    },
     {
       "id": "3RiPr603aXAoi4GHyXx0uy",
       "title": "Hymn for the Weekend",
