@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4435,
-  "last_updated": "2026-11-16T20:43:27.007Z",
+  "version": 4436,
+  "last_updated": "2026-11-16T20:43:40.010Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5jDBFKWopuPdRjJOYJ0EvI",
+      "title": "י-ה אכסוף אינסטרומנטלי",
+      "artist": "Asaph Neve Shalom",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:43:40.010Z"
+    },
     {
       "id": "0Pr4OKWRHrmnYmsFcA59aw",
       "title": "מוזיקה ישראלית - אינסטרומנטל",
