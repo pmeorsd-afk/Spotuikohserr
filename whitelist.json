@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4420,
-  "last_updated": "2026-11-16T20:40:08.757Z",
+  "version": 4421,
+  "last_updated": "2026-11-16T20:40:22.116Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4TVRJM0rOwwoDP4D1oqbtu",
+      "title": "לא איתי",
+      "artist": "Vic Ohana Jan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:40:22.116Z"
+    },
     {
       "id": "3hFn4a9yRk3IM9Qqmf3W8b",
       "title": "Betcha' Wouldn't Hurt Me",
