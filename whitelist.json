@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4489,
-  "last_updated": "2026-11-16T20:55:16.664Z",
+  "version": 4490,
+  "last_updated": "2026-11-16T20:55:29.307Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4WzzZqZI12Ug1Q4neiHLLc",
+      "title": "שיר השופט",
+      "artist": "Jeki Mekayten",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:55:29.307Z"
+    },
     {
       "id": "1WMVTFSS4a1WqsSF9k4iP5",
       "title": "היכן אתה",
