@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4473,
-  "last_updated": "2026-11-16T20:51:48.710Z",
+  "version": 4474,
+  "last_updated": "2026-11-16T20:52:01.223Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0eVMm4LCn45g0gb3UxtN0m",
+      "title": "חולם בספרדית",
+      "artist": "Shlomo Ydov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:52:01.223Z"
+    },
     {
       "id": "3BZDsx241F8N6l1NM9JMEI",
       "title": "כשאנחנו מנגנים",
