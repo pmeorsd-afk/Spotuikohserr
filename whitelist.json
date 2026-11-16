@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4434,
-  "last_updated": "2026-11-16T20:43:14.008Z",
+  "version": 4435,
+  "last_updated": "2026-11-16T20:43:27.007Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Pr4OKWRHrmnYmsFcA59aw",
+      "title": "מוזיקה ישראלית - אינסטרומנטל",
+      "artist": "Mayor",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:43:27.007Z"
+    },
     {
       "id": "3YIxjj18Rf8QrQXk0Nnaof",
       "title": "Ani Maamin | אני מאמין (MixerJr Remix)",
