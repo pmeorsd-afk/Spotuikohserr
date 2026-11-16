@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4475,
-  "last_updated": "2026-11-16T20:52:14.399Z",
+  "version": 4476,
+  "last_updated": "2026-11-16T20:52:27.204Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0XvxMK4g5h5LZj7SbPUP96",
+      "title": "Daydream Believer",
+      "artist": "The Monkees",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:52:27.204Z"
+    },
     {
       "id": "4oyVu7Of5RDlbP9ACsHTNL",
       "title": "רציתי להגיד לך שלום",
