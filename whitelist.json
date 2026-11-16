@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4494,
-  "last_updated": "2026-11-16T20:56:21.067Z",
+  "version": 4495,
+  "last_updated": "2026-11-16T20:56:34.080Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Xl3ruc5AAurMm07dREZmJ",
+      "title": "חנינה יא יומה",
+      "artist": "George Bar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:56:34.080Z"
+    },
     {
       "id": "6QhXQOpyYvbpdbyjgAqKdY",
       "title": "Cecilia",
