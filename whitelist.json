@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4422,
-  "last_updated": "2026-11-16T20:40:35.920Z",
+  "version": 4423,
+  "last_updated": "2026-11-16T20:40:48.704Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2saHrb2XITEyOmjVfq4EPn",
+      "title": "ליפול ולקום",
+      "artist": "קפליו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:40:48.704Z"
+    },
     {
       "id": "24nmy66cDSzQqdzS3KVse8",
       "title": "Our House - 12\" Extended Version",
