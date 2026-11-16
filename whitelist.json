@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4442,
-  "last_updated": "2026-11-16T20:44:59.301Z",
+  "version": 4443,
+  "last_updated": "2026-11-16T20:45:12.309Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "43OJgE6nY2luiOcXd1nlo4",
+      "title": "נערה מספרד",
+      "artist": "Avner Gadasi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:45:12.309Z"
+    },
     {
       "id": "2WLTF6OwrsXqOXMkowWlup",
       "title": "Al Tira Israel",
