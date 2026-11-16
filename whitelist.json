@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4409,
-  "last_updated": "2026-11-16T20:38:20.466Z",
+  "version": 4411,
+  "last_updated": "2026-11-16T20:38:24.045Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7o4QDgTxIq7Tq5jjEjzvE4",
+      "title": "Child's Anthem",
+      "artist": "TOTO",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:38:24.045Z"
+    },
+    {
+      "id": "0qxsaZS9w6vv8Q1y7P3lCl",
+      "title": "Mind Relaxation",
+      "artist": "מוזיקה מרגיעה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:38:24.045Z"
+    },
     {
       "id": "0WBp7Q3X8EoyRZlq6m0gk3",
       "title": "חשוף זרוע קדשך",
