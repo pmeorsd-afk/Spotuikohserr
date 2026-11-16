@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4492,
-  "last_updated": "2026-11-16T20:55:55.303Z",
+  "version": 4493,
+  "last_updated": "2026-11-16T20:56:07.897Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3IF6XKaOo3Awmw5jGYsmAe",
+      "title": "Ki meshire",
+      "artist": "Alban Skenderaj",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:56:07.897Z"
+    },
     {
       "id": "3VbGCXWRiouAq8VyMYN2MI",
       "title": "Love Me Do - Remastered 2009",
