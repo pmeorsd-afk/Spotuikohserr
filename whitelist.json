@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4417,
-  "last_updated": "2026-11-16T20:39:29.133Z",
+  "version": 4418,
+  "last_updated": "2026-11-16T20:39:42.097Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1vWv068EpdMazqhfGtYWoz",
+      "title": "בול עליי",
+      "artist": "Teddy Neguse, דודא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:39:42.097Z"
+    },
     {
       "id": "15VRO9CQwMpbqUYA7e6Hwg",
       "title": "The Man Who Sold The World - Live",
