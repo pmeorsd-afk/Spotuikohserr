@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4431,
-  "last_updated": "2026-11-16T20:42:33.837Z",
+  "version": 4432,
+  "last_updated": "2026-11-16T20:42:46.917Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6c1fOTwRXhnSrmw4OynOBT",
+      "title": "אין ילד רע",
+      "artist": "דודא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:42:46.917Z"
+    },
     {
       "id": "0gLwePIpgagi3NBTugHQps",
       "title": "ויקטוריה סיקרט סגול",
