@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4504,
-  "last_updated": "2026-11-16T20:58:29.897Z",
+  "version": 4505,
+  "last_updated": "2026-11-16T20:58:43.005Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "30cYF8YZxxRcZN5JIeNpvr",
+      "title": "להשתטות לפעמים",
+      "artist": "Gabi Shoshan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:58:43.005Z"
+    },
     {
       "id": "1NHWG8zxSEypSRF3UufrnO",
       "title": "Don't Stop Me Now",
