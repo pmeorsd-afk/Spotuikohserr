@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4445,
-  "last_updated": "2026-11-16T20:45:39.062Z",
+  "version": 4446,
+  "last_updated": "2026-11-16T20:45:52.098Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ccnmgtRu2iyXZWDD0HMou",
+      "title": "נערת החלומות",
+      "artist": "Eli Luzon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:45:52.098Z"
+    },
     {
       "id": "5NIjo3Yhqk4TM4D8nXr5cR",
       "title": "אלוקים נתן לך במתנה",
