@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4490,
-  "last_updated": "2026-11-16T20:55:29.307Z",
+  "version": 4491,
+  "last_updated": "2026-11-16T20:55:42.061Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "48UPSzbZjgc449aqz8bxox",
+      "title": "Californication",
+      "artist": "Red Hot Chili Peppers",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:55:42.061Z"
+    },
     {
       "id": "4WzzZqZI12Ug1Q4neiHLLc",
       "title": "שיר השופט",
