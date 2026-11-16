@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4513,
-  "last_updated": "2026-11-16T21:31:52.199Z",
+  "version": 4514,
+  "last_updated": "2026-11-16T21:31:55.406Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7j56HrjR9cGzvekvZY3Faz",
+      "title": "HandClap",
+      "artist": "Fitz and The Tantrums",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T21:31:55.406Z"
+    },
     {
       "id": "3CRDbSIZ4r5MsZ0YwxuEkn",
       "title": "Stressed Out",
