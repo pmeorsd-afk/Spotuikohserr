@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4493,
-  "last_updated": "2026-11-16T20:56:07.897Z",
+  "version": 4494,
+  "last_updated": "2026-11-16T20:56:21.067Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6QhXQOpyYvbpdbyjgAqKdY",
+      "title": "Cecilia",
+      "artist": "Simon & Garfunkel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:56:21.067Z"
+    },
     {
       "id": "3IF6XKaOo3Awmw5jGYsmAe",
       "title": "Ki meshire",
