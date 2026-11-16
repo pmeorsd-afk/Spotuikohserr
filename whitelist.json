@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4498,
-  "last_updated": "2026-11-16T20:57:12.906Z",
+  "version": 4499,
+  "last_updated": "2026-11-16T20:57:25.782Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "576xPFmqv6Rk2TENEkPh2X",
+      "title": "מי אוהב אותך יותר ממני?",
+      "artist": "Arkadi Duchin",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:57:25.782Z"
+    },
     {
       "id": "5HOpkTTVcmZHnthgyxrIL8",
       "title": "The Fox (What Does the Fox Say?)",
