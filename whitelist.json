@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4430,
-  "last_updated": "2026-11-16T20:42:20.929Z",
+  "version": 4431,
+  "last_updated": "2026-11-16T20:42:33.837Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0gLwePIpgagi3NBTugHQps",
+      "title": "ויקטוריה סיקרט סגול",
+      "artist": "קפליו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:42:33.837Z"
+    },
     {
       "id": "4hgu1yMYXwD8CIiT9M2p8F",
       "title": "הדיכאון של ניב 1",
