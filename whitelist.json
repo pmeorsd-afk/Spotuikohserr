@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4429,
-  "last_updated": "2026-11-16T20:42:07.765Z",
+  "version": 4430,
+  "last_updated": "2026-11-16T20:42:20.929Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4hgu1yMYXwD8CIiT9M2p8F",
+      "title": "הדיכאון של ניב 1",
+      "artist": "ניב אבוטבול",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:42:20.929Z"
+    },
     {
       "id": "5WrbBflQV2aQgjgDvNrfEl",
       "title": "But i hope (It leads to you)",
