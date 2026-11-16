@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4495,
-  "last_updated": "2026-11-16T20:56:34.080Z",
+  "version": 4496,
+  "last_updated": "2026-11-16T20:56:47.243Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6pxWv6GV35VGmcPf5dh6CH",
+      "title": "Proud Mary",
+      "artist": "Creedence Clearwater Revival",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:56:47.243Z"
+    },
     {
       "id": "1Xl3ruc5AAurMm07dREZmJ",
       "title": "חנינה יא יומה",
