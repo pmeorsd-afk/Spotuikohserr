@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4455,
-  "last_updated": "2026-11-16T20:47:48.554Z",
+  "version": 4456,
+  "last_updated": "2026-11-16T20:48:01.287Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2FmEVuf8GsBjU09pwcfOn8",
+      "title": "סוף לסיפור",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:48:01.287Z"
+    },
     {
       "id": "0g5Kbip6xWsuNNt2J7qNzf",
       "title": "שלום לבן דודי",
