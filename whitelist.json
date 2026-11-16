@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4411,
-  "last_updated": "2026-11-16T20:38:24.045Z",
+  "version": 4412,
+  "last_updated": "2026-11-16T20:38:37.042Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5MCrBsyrPA07nUXHBYcZex",
+      "title": "קומנדו מוחי",
+      "artist": "Subliminal, The Shadow, Shi 360, Booskills",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:38:37.042Z"
+    },
     {
       "id": "7o4QDgTxIq7Tq5jjEjzvE4",
       "title": "Child's Anthem",
