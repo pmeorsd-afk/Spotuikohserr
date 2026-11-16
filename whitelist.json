@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4506,
-  "last_updated": "2026-11-16T20:58:56.077Z",
+  "version": 4507,
+  "last_updated": "2026-11-16T21:00:07.842Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:gT6lrgwa0Ic",
+      "title": "בשעות הבודדות",
+      "artist": "איתי לוי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T21:00:07.842Z"
+    },
     {
       "id": "6wG3ydJ38J2Atrwyr8gT8M",
       "title": "פשוט סתם",
