@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4414,
-  "last_updated": "2026-11-16T20:39:03.220Z",
+  "version": 4415,
+  "last_updated": "2026-11-16T20:39:15.894Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3O4p4TYIC37n9yi7seb4Go",
+      "title": "ילדותי השנייה",
+      "artist": "Matti Caspi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:39:15.894Z"
+    },
     {
       "id": "42B78nSUeYYpdzmeWciyPM",
       "title": "Waiting For A Train",
