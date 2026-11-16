@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4478,
-  "last_updated": "2026-11-16T20:52:52.829Z",
+  "version": 4479,
+  "last_updated": "2026-11-16T20:53:05.543Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5ODfaXVQANrmVXBj3k4Xnq",
+      "title": "Who Loves the Sun - 2015 Remaster",
+      "artist": "The Velvet Underground",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-16T20:53:05.543Z"
+    },
     {
       "id": "7eXLViQLxfaanvYWr2YGtt",
       "title": "מי תרצי - Live",
