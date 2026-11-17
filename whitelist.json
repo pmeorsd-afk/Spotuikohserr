@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4593,
-  "last_updated": "2026-11-17T00:47:23.011Z",
+  "version": 4594,
+  "last_updated": "2026-11-17T00:47:35.833Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2GxAnxZF4gHzuflYzgTTy8",
+      "title": "ילדמסדרון",
+      "artist": "Avihai Naftali",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:47:35.833Z"
+    },
     {
       "id": "4UtozLapYJ3K3MAXmrGUa6",
       "title": "שוד",
