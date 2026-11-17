@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4834,
-  "last_updated": "2026-11-17T20:07:57.850Z",
+  "version": 4835,
+  "last_updated": "2026-11-17T20:08:11.290Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6vBj8ijJBbgYEcpmtSLutQ",
+      "title": "תמלאי תכוס",
+      "artist": "Eagle Eye, Vic Ohana Jan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:08:11.290Z"
+    },
     {
       "id": "506Pe8NitVHPX2jcUqTsgv",
       "title": "טיפשים וצעירים",
