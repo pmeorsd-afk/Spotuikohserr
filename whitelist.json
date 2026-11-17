@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4678,
-  "last_updated": "2026-11-17T01:06:33.758Z",
+  "version": 4679,
+  "last_updated": "2026-11-17T01:06:46.520Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7vqHEGZnapBmeNrmqf9292",
+      "title": "This Life",
+      "artist": "Eitan Rock, Yaakov Rosenblum",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:06:46.520Z"
+    },
     {
       "id": "0Xdu4SOfwe7EwFZfQKOl7Z",
       "title": "Cold",
