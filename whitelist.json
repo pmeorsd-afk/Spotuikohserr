@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4697,
-  "last_updated": "2026-11-17T01:10:49.595Z",
+  "version": 4698,
+  "last_updated": "2026-11-17T01:11:13.165Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6KVoYCUBcJcNJHAgRenfEj",
+      "title": "תרקוד",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:11:13.165Z"
+    },
     {
       "id": "3AeSYOcsPR1a87YYTaGZl6",
       "title": "אמצע הלילה בכפר",
