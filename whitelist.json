@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4601,
-  "last_updated": "2026-11-17T00:49:05.676Z",
+  "version": 4602,
+  "last_updated": "2026-11-17T00:49:18.392Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5z7L2y42Icl84hyEDjEjAM",
+      "title": "אבא",
+      "artist": "Shlomi Shabat",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:49:18.392Z"
+    },
     {
       "id": "5GjPQ0eI7AgmOnADn1EO6Q",
       "title": "Eleanor Rigby - Remastered 2009",
