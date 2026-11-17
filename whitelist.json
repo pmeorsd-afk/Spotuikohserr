@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4577,
-  "last_updated": "2026-11-17T00:43:56.318Z",
+  "version": 4578,
+  "last_updated": "2026-11-17T00:44:09.563Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ZMyXkos8c1G7lxqKtv0zJ",
+      "title": "70 שקל",
+      "artist": "דודא, זיו שביט",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:44:09.563Z"
+    },
     {
       "id": "66CgcqmBbAfMoCuUbP7nuo",
       "title": "סביבה רעילה",
