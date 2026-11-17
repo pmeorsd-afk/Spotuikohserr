@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4974,
-  "last_updated": "2026-11-17T20:37:37.415Z",
+  "version": 4975,
+  "last_updated": "2026-11-17T20:37:50.718Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0ckd54NpB6QU3NIBdbkddf",
+      "title": "גשם",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:37:50.718Z"
+    },
     {
       "id": "1kLBYLdcBWCytUwNycgKlY",
       "title": "זמר בלילות",
