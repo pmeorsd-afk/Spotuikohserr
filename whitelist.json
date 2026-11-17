@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4547,
-  "last_updated": "2026-11-17T00:37:21.807Z",
+  "version": 4548,
+  "last_updated": "2026-11-17T00:37:34.580Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4k7kC22AQqdw587PrHV3s2",
+      "title": "ניגון החיים",
+      "artist": "Haim Israel, ישי ריבו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:37:34.580Z"
+    },
     {
       "id": "5rATfnpUMfGNDYH0PqR9sl",
       "title": "עינייך החומות",
