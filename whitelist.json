@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4630,
-  "last_updated": "2026-11-17T00:55:40.766Z",
+  "version": 4631,
+  "last_updated": "2026-11-17T00:55:53.183Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "39nKOTMlcggij0znqkBG38",
+      "title": "Wassini (Vocals Only)",
+      "artist": "Mikhaael Mala",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:55:53.183Z"
+    },
     {
       "id": "2zSlRYhW1ZxuCeLafCnpsQ",
       "title": "Do it Again",
