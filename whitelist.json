@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4977,
-  "last_updated": "2026-11-17T20:38:16.644Z",
+  "version": 4978,
+  "last_updated": "2026-11-17T20:38:29.539Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2iHLxPddjWRCiIPXdGMHlJ",
+      "title": "Girl On Fire - Live From Auditorio Nacional Mexico City, Mexico",
+      "artist": "Alicia Keys",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:38:29.539Z"
+    },
     {
       "id": "37LNNQNbL1YLyutBG6aWRx",
       "title": "Rescue Me",
