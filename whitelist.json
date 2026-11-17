@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4790,
-  "last_updated": "2026-11-17T19:58:08.681Z",
+  "version": 4791,
+  "last_updated": "2026-11-17T19:58:16.655Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "27b3oPHkUgjn79R3ASuk3j",
+      "title": "רק טוב",
+      "artist": "יאיר אלייצור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:58:16.655Z"
+    },
     {
       "id": "0Qd1Ptc9EwcmbVNUU4TwE1",
       "title": "חזק יותר",
