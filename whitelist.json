@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4871,
-  "last_updated": "2026-11-17T20:15:52.475Z",
+  "version": 4872,
+  "last_updated": "2026-11-17T20:16:05.500Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6bVt6QaMujk2tsIo5cKcPg",
+      "title": "החברה הטובים",
+      "artist": "נהוראי תורג'מן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:16:05.500Z"
+    },
     {
       "id": "3IgEQPr6PKCFUvZwxsveL2",
       "title": "Live Session התמונות שבאלבום #מלכת הדור #תמיד שמח",
