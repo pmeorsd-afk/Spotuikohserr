@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4583,
-  "last_updated": "2026-11-17T00:45:13.850Z",
+  "version": 4584,
+  "last_updated": "2026-11-17T00:45:27.104Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5VAP6d5vE98dbeKYETtGDr",
+      "title": "אור",
+      "artist": "היוצרים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:45:27.104Z"
+    },
     {
       "id": "6hntoKk6swJxfaUKbMIBTR",
       "title": "פאבלה",
