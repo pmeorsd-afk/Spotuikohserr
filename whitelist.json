@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4833,
-  "last_updated": "2026-11-17T20:07:44.829Z",
+  "version": 4834,
+  "last_updated": "2026-11-17T20:07:57.850Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "506Pe8NitVHPX2jcUqTsgv",
+      "title": "טיפשים וצעירים",
+      "artist": "Maor Ashkenazi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:07:57.850Z"
+    },
     {
       "id": "6f08saOLZyQr0ulFKUzFeL",
       "title": "Easy On My Heart",
