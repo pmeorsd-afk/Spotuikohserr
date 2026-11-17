@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4903,
-  "last_updated": "2026-11-17T20:22:54.576Z",
+  "version": 4904,
+  "last_updated": "2026-11-17T20:23:07.713Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "22LAwLoDA5b4AaGSkg6bKW",
+      "title": "Blueberry Faygo",
+      "artist": "Lil Mosey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:23:07.713Z"
+    },
     {
       "id": "03ON6fWiqzA7fJu0gdXljQ",
       "title": "יקינטון",
