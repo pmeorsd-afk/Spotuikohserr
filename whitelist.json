@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4704,
-  "last_updated": "2026-11-17T04:55:06.544Z",
+  "version": 4705,
+  "last_updated": "2026-11-17T04:55:19.280Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:Ku9a3Q78Mkc",
+      "title": "3 HOURS Best Romantic Relaxing music  | Wonderful #Piano -Background, Spa  #Music, Therapy, #Relax",
+      "artist": "RelaxingMusic RomanticMusic",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T04:55:19.280Z"
+    },
     {
       "id": "2yxCdoT2EwGCp033Oyn4eu",
       "title": "The Creek",
