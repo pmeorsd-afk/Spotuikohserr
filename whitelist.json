@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4538,
-  "last_updated": "2026-11-17T00:35:16.304Z",
+  "version": 4539,
+  "last_updated": "2026-11-17T00:35:29.210Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5H1sKFMzDeMtXwND3V6hRY",
+      "title": "JUMP",
+      "artist": "BLACKPINK",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:35:29.210Z"
+    },
     {
       "id": "0tax7RlGaWtB70BSJPACgJ",
       "title": "Taking the Chance",
