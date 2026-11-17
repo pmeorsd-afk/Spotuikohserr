@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4975,
-  "last_updated": "2026-11-17T20:37:50.718Z",
+  "version": 4976,
+  "last_updated": "2026-11-17T20:38:03.372Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0SHsfTHUmzNjjLDGa4YCOJ",
+      "title": "ג'ה/אלוהים - בהופעה",
+      "artist": "Mosh Ben Ari, Muki, Shotei Hanevuah",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:38:03.372Z"
+    },
     {
       "id": "0ckd54NpB6QU3NIBdbkddf",
       "title": "גשם",
