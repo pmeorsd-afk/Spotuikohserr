@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4713,
-  "last_updated": "2026-11-17T04:57:12.655Z",
+  "version": 4714,
+  "last_updated": "2026-11-17T04:57:25.464Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6P2TGX8H3uTdysCrfbokRq",
+      "title": "מה למדתי (עם רוישה ומאור אשכנזי)",
+      "artist": "Sagol 59, Roisha, Maor Ashkenazi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T04:57:25.464Z"
+    },
     {
       "id": "21er2Oe2k6dRTtSPrh1bm5",
       "title": "כל מעייני",
