@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4880,
-  "last_updated": "2026-11-17T20:17:51.843Z",
+  "version": 4881,
+  "last_updated": "2026-11-17T20:18:04.747Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5gwceYiuk5XQXUId19Px4s",
+      "title": "גדי V",
+      "artist": "Ron Sky Nesher",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:18:04.747Z"
+    },
     {
       "id": "0LtkAAEpEp1lkLX1ZvjHZb",
       "title": "Follow You",
