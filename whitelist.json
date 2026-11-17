@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4910,
-  "last_updated": "2026-11-17T20:24:14.749Z",
+  "version": 4911,
+  "last_updated": "2026-11-17T20:24:28.260Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0rzkWNyLLu2iVJMM50eTr7",
+      "title": "אחרי האהבה - קיסריה אנפלאגד",
+      "artist": "Tuna, Bar Tzabary",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:24:28.260Z"
+    },
     {
       "id": "4ZeaLg3JDQm9QoZ2hmZia1",
       "title": "עשר שיחות",
