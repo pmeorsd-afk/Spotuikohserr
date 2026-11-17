@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4960,
-  "last_updated": "2026-11-17T20:34:56.614Z",
+  "version": 4962,
+  "last_updated": "2026-11-17T20:35:00.506Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5MjRIL2ySrPGoATyTk2ZT9",
+      "title": "החדר מסתובב",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:35:00.506Z"
+    },
+    {
+      "id": "29xPEz7iLiil9rISrKwjq8",
+      "title": "אחרי המבול",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:35:00.506Z"
+    },
     {
       "id": "7vBdIecwSHmD1bG78DScxd",
       "title": "נהדרת",
