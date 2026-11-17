@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4807,
-  "last_updated": "2026-11-17T20:01:38.065Z",
+  "version": 4808,
+  "last_updated": "2026-11-17T20:01:51.230Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6nek1Nin9q48AVZcWs9e9D",
+      "title": "Paradise",
+      "artist": "Coldplay",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:01:51.230Z"
+    },
     {
       "id": "4idV4UhKatC5h4Na8dhBQo",
       "title": "Coming Home (feat. Norma Jean Martine)",
