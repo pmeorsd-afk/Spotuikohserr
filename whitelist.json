@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4956,
-  "last_updated": "2026-11-17T20:34:19.173Z",
+  "version": 4957,
+  "last_updated": "2026-11-17T20:34:31.976Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7rvyVWja33WG9R97oeJAjx",
+      "title": "Envy Me",
+      "artist": "Calboy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:34:31.976Z"
+    },
     {
       "id": "6Bq3HSKehoUKNEfaHTjFIk",
       "title": "כל החברים סביבנו",
