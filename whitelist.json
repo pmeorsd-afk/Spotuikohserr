@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4746,
-  "last_updated": "2026-11-17T19:51:01.221Z",
+  "version": 4747,
+  "last_updated": "2026-11-17T19:51:14.280Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3eekarcy7kvN4yt5ZFzltW",
+      "title": "HIGHEST IN THE ROOM",
+      "artist": "Travis Scott",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:51:14.280Z"
+    },
     {
       "id": "0nbXyq5TXYPCO7pr3N8S4I",
       "title": "The Box",
