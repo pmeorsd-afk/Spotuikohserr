@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4836,
-  "last_updated": "2026-11-17T20:08:24.518Z",
+  "version": 4837,
+  "last_updated": "2026-11-17T20:08:37.377Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6FjNzE8JzBiQCNcvUL1iCE",
+      "title": "גשם",
+      "artist": "Vibe Ish",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:08:37.377Z"
+    },
     {
       "id": "7BvGkH3DHxFeusDMNnTU8O",
       "title": "מחרוזת מהלב 2",
