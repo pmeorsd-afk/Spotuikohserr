@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4680,
-  "last_updated": "2026-11-17T01:06:59.637Z",
+  "version": 4681,
+  "last_updated": "2026-11-17T01:07:13.049Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1KVxaEWlrQDL9ZnlP39BQc",
+      "title": "Lecha Amar Libi (my heart is You)",
+      "artist": "Chaim Ghoori",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:07:13.049Z"
+    },
     {
       "id": "0OTrxy1DMXOW2Oa5FMEIkV",
       "title": "Kol Yachol",
