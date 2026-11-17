@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4769,
-  "last_updated": "2026-11-17T19:55:30.729Z",
+  "version": 4770,
+  "last_updated": "2026-11-17T19:55:43.951Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "023H4I7HJnxRqsc9cqeFKV",
+      "title": "I Got U",
+      "artist": "Duke Dumont, Jax Jones",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:55:43.951Z"
+    },
     {
       "id": "71t7Hq0N8xg6KPYjpuDz6O",
       "title": "מחרוזת מאבד שליטה היי את שורדים אהבה",
