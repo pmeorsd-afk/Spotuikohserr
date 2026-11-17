@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4906,
-  "last_updated": "2026-11-17T20:23:33.620Z",
+  "version": 4907,
+  "last_updated": "2026-11-17T20:23:46.696Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5MwIGPDKeDb7SpblcaQP6O",
+      "title": "One Call Away",
+      "artist": "Charlie Puth",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:23:46.696Z"
+    },
     {
       "id": "0tgVpDi06FyKpA1z0VMD4v",
       "title": "Perfect",
