@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4770,
-  "last_updated": "2026-11-17T19:55:43.951Z",
+  "version": 4771,
+  "last_updated": "2026-11-17T19:55:56.746Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2rgtCOVK2tpfao2VjURn84",
+      "title": "Lovers on the Sun (feat. Sam Martin)",
+      "artist": "David Guetta, Sam Martin",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:55:56.746Z"
+    },
     {
       "id": "023H4I7HJnxRqsc9cqeFKV",
       "title": "I Got U",
