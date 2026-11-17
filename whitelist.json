@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4656,
-  "last_updated": "2026-11-17T01:01:25.985Z",
+  "version": 4657,
+  "last_updated": "2026-11-17T01:01:38.776Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1PesKQRy7UmcUt1fWlmOup",
+      "title": "You're a Pinteleh Yid",
+      "artist": "Gabe Bauman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:01:38.776Z"
+    },
     {
       "id": "7DGgPX9e86mOPiA1SIveSB",
       "title": "Adir",
