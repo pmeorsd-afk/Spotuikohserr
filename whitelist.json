@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4791,
-  "last_updated": "2026-11-17T19:58:16.655Z",
+  "version": 4792,
+  "last_updated": "2026-11-17T19:58:20.212Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5E1RVkVEX8jOJdlNFf0446",
+      "title": "אני פה מצטער",
+      "artist": "Tamir Gal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:58:20.212Z"
+    },
     {
       "id": "27b3oPHkUgjn79R3ASuk3j",
       "title": "רק טוב",
