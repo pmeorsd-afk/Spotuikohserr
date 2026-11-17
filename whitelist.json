@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4958,
-  "last_updated": "2026-11-17T20:34:45.255Z",
+  "version": 4959,
+  "last_updated": "2026-11-17T20:34:52.821Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5IUT0GajZUV9Qn78d7lYnH",
+      "title": "שמע בני",
+      "artist": "שראל סופר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:34:52.821Z"
+    },
     {
       "id": "3zc8VZEpM1onYV4FWGdFvm",
       "title": "Tombstone",
