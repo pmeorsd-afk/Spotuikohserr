@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5026,
-  "last_updated": "2026-11-17T22:41:04.119Z",
+  "version": 5027,
+  "last_updated": "2026-11-17T22:41:07.940Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2cT1u7csfoLg2wUy6hk5oR",
+      "title": "אשת חיל",
+      "artist": "שרקי, יסמין שמעוני",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T22:41:07.940Z"
+    },
     {
       "id": "5YipCwRK5wjnzRY1C6AnSD",
       "title": "יפה לך",
