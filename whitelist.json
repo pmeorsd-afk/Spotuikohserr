@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4623,
-  "last_updated": "2026-11-17T00:54:11.503Z",
+  "version": 4624,
+  "last_updated": "2026-11-17T00:54:24.463Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7xkVoZlVNX0Tf7JppsZ9Pf",
+      "title": "ירושלים",
+      "artist": "Freilach Band, Mordechai Shapiro, Itzik Dadya",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:54:24.463Z"
+    },
     {
       "id": "39FAZ2fNsa1wKy0YfauMsd",
       "title": "Ana Melech",
