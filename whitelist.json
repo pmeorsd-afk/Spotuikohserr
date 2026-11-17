@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4598,
-  "last_updated": "2026-11-17T00:48:26.482Z",
+  "version": 4599,
+  "last_updated": "2026-11-17T00:48:39.079Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3PQLYVskjUeRmRIfECsL0X",
+      "title": "No Woman No Cry",
+      "artist": "Bob Marley & The Wailers",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:48:39.079Z"
+    },
     {
       "id": "227vbUKS69O2AtbyYioQ29",
       "title": "נער בן 15 בוס",
