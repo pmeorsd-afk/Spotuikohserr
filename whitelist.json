@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4999,
-  "last_updated": "2026-11-17T20:50:49.339Z",
+  "version": 5000,
+  "last_updated": "2026-11-17T20:50:52.821Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1dbdlSsh9uZxwiqJqNgDpV",
+      "title": "Blah Blah Blah",
+      "artist": "Armin van Buuren",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:50:52.821Z"
+    },
     {
       "id": "1Rph9i0FWKDa9Aq9H4iiMx",
       "title": "I'll Wait and Pray",
