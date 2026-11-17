@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4962,
-  "last_updated": "2026-11-17T20:35:00.506Z",
+  "version": 4963,
+  "last_updated": "2026-11-17T20:35:04.562Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:ktAn8R-4LxE",
+      "title": "ג'ה/אלוהים (בהופעה)",
+      "artist": "שיר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:35:04.562Z"
+    },
     {
       "id": "5MjRIL2ySrPGoATyTk2ZT9",
       "title": "החדר מסתובב",
