@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4698,
-  "last_updated": "2026-11-17T01:11:13.165Z",
+  "version": 4699,
+  "last_updated": "2026-11-17T01:11:25.700Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4xQ6lOCtPqdHLdA5KTR1wo",
+      "title": "ימי בנימינה",
+      "artist": "Matti Caspi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:11:25.700Z"
+    },
     {
       "id": "6KVoYCUBcJcNJHAgRenfEj",
       "title": "תרקוד",
