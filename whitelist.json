@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4757,
-  "last_updated": "2026-11-17T19:53:25.081Z",
+  "version": 4758,
+  "last_updated": "2026-11-17T19:53:37.934Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "77PbIbzvnhuXdAqD9Al5JR",
+      "title": "Love Sosa",
+      "artist": "Chief Keef",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:53:37.934Z"
+    },
     {
       "id": "4GUGmEgzyUbeagD0GpFuyU",
       "title": "הכל הכל טוב",
