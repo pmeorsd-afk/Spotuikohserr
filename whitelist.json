@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4735,
-  "last_updated": "2026-11-17T19:49:14.880Z",
+  "version": 4736,
+  "last_updated": "2026-11-17T19:49:28.442Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Ls53fBNVfaXTROBi6X8Hw",
+      "title": "Just Wanna Rock",
+      "artist": "Lil Uzi Vert",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:49:28.442Z"
+    },
     {
       "id": "7lv4SU2ATVjQJp6Jia0x7N",
       "title": "Dark Thoughts",
