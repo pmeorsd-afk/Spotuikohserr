@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4823,
-  "last_updated": "2026-11-17T20:05:08.600Z",
+  "version": 4824,
+  "last_updated": "2026-11-17T20:05:21.637Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Mb3qP4vkrapnebn8JNm5K",
+      "title": "חושב עלייך",
+      "artist": "Danny Sanderson",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:05:21.637Z"
+    },
     {
       "id": "0JjV3LCW0fitXap4VCVtTY",
       "title": "את שתבקש",
