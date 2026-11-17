@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4648,
-  "last_updated": "2026-11-17T00:59:43.885Z",
+  "version": 4649,
+  "last_updated": "2026-11-17T00:59:56.652Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1xHX66BsgGGIVEdktQxxTp",
+      "title": "HIGHS AND LOWS",
+      "artist": "Akiva David",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:59:56.652Z"
+    },
     {
       "id": "28yOhIKc70kg9llOxrZGyR",
       "title": "Good To Let Go - RP",
