@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4907,
-  "last_updated": "2026-11-17T20:23:46.696Z",
+  "version": 4908,
+  "last_updated": "2026-11-17T20:23:57.729Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1ibkLtKZuGBaiJOCJL1X6o",
+      "title": "נס",
+      "artist": "Amir Sade, דוד בן ארזה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:23:57.729Z"
+    },
     {
       "id": "5MwIGPDKeDb7SpblcaQP6O",
       "title": "One Call Away",
