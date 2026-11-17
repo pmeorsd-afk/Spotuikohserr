@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4696,
-  "last_updated": "2026-11-17T01:10:36.774Z",
+  "version": 4697,
+  "last_updated": "2026-11-17T01:10:49.595Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3AeSYOcsPR1a87YYTaGZl6",
+      "title": "אמצע הלילה בכפר",
+      "artist": "Harel Moyal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:10:49.595Z"
+    },
     {
       "id": "0NnecF2AT3b6qCJHOIATJ3",
       "title": "זה כל הקסם",
