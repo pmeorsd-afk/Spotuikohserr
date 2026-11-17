@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4785,
-  "last_updated": "2026-11-17T19:57:29.363Z",
+  "version": 4786,
+  "last_updated": "2026-11-17T19:57:34.271Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:Zu2vpB0IOWM",
+      "title": "ותערב לפניך - מרדכי בן דוד ומוטי שטיינמץ",
+      "artist": "Yigal Kafka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:57:34.271Z"
+    },
     {
       "id": "3tNl23TT3uNXDPrDGrAUuz",
       "title": "אני חוזר",
