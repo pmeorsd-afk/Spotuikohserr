@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4929,
-  "last_updated": "2026-11-17T20:28:25.913Z",
+  "version": 4930,
+  "last_updated": "2026-11-17T20:28:39.231Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5zPTc1mblCrVgMmPzrTMfQ",
+      "title": "Better Off (Alone, Pt. III)",
+      "artist": "Alan Walker, Dash Berlin, Vikkstar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:28:39.231Z"
+    },
     {
       "id": "6iaSML1PIYq936g62BDtBq",
       "title": "Robbery",
