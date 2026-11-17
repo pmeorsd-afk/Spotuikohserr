@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4689,
-  "last_updated": "2026-11-17T01:08:55.835Z",
+  "version": 4690,
+  "last_updated": "2026-11-17T01:09:08.646Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6cTJXQc1oRqea0FbZXIAyj",
+      "title": "Nights Like These",
+      "artist": "EZZI",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:09:08.646Z"
+    },
     {
       "id": "6ftnzrRiQxdGA22IsHduie",
       "title": "Somebody Else's Sunshine",
