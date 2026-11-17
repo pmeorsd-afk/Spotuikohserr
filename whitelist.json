@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4935,
-  "last_updated": "2026-11-17T20:29:43.654Z",
+  "version": 4936,
+  "last_updated": "2026-11-17T20:29:56.536Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1S5lrLO2sr8Dz3HIWtPPIn",
+      "title": "Self Esteem (featuring NLE Choppa)",
+      "artist": "Lambo4oe, NLE Choppa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:29:56.536Z"
+    },
     {
       "id": "7zLYKWcXnYeHHWidalz7rj",
       "title": "Noticed",
