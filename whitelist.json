@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5025,
-  "last_updated": "2026-11-17T22:40:59.393Z",
+  "version": 5026,
+  "last_updated": "2026-11-17T22:41:04.119Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5YipCwRK5wjnzRY1C6AnSD",
+      "title": "יפה לך",
+      "artist": "רואי אדם, שרקי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T22:41:04.119Z"
+    },
     {
       "id": "1ZKFMC1mSbMK2ByPlrwsGV",
       "title": "VÉGÁLLOMÁS",
