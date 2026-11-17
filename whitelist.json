@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4787,
-  "last_updated": "2026-11-17T19:57:42.234Z",
+  "version": 4788,
+  "last_updated": "2026-11-17T19:57:46.323Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7z5yg5ydwWGJUksjJeCulx",
+      "title": "Vesein Belibeinu - ותן בליבנו",
+      "artist": "Mendy Hershkowitz Band, Yeedle",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:57:46.323Z"
+    },
     {
       "id": "1lIzViG4lMiqMmhfe4W8uB",
       "title": "שדה שושנים",
