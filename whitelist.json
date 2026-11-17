@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5023,
-  "last_updated": "2026-11-17T22:14:13.823Z",
+  "version": 5024,
+  "last_updated": "2026-11-17T22:40:50.629Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2p1ZoyqdTmDDgYR4TF0GLj",
+      "title": "עד שיתקרר הלב",
+      "artist": "נתי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T22:40:50.629Z"
+    },
     {
       "id": "63zqkoj1tOllEatC6JBDdX",
       "title": "ביום ההוא",
