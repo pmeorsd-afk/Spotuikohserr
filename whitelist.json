@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4835,
-  "last_updated": "2026-11-17T20:08:11.290Z",
+  "version": 4836,
+  "last_updated": "2026-11-17T20:08:24.518Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7BvGkH3DHxFeusDMNnTU8O",
+      "title": "מחרוזת מהלב 2",
+      "artist": "מאור אדרי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:08:24.518Z"
+    },
     {
       "id": "6vBj8ijJBbgYEcpmtSLutQ",
       "title": "תמלאי תכוס",
