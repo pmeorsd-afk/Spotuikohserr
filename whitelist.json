@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4739,
-  "last_updated": "2026-11-17T19:49:42.173Z",
+  "version": 4740,
+  "last_updated": "2026-11-17T19:49:55.323Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3AWDeHLc88XogCaCnZQLVI",
+      "title": "Cry For Me",
+      "artist": "The Weeknd",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:49:55.323Z"
+    },
     {
       "id": "0M9ydKzuF3oZTfYYPfaGX1",
       "title": "Bad and Boujee (feat. Lil Uzi Vert)",
