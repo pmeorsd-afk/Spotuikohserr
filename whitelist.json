@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4701,
-  "last_updated": "2026-11-17T01:11:51.378Z",
+  "version": 4702,
+  "last_updated": "2026-11-17T04:54:40.623Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0J7a1dshnNddIfDVfGnDY7",
+      "title": "The Days of Wine and Roses",
+      "artist": "Vincent Barbosa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T04:54:40.623Z"
+    },
     {
       "id": "4NNlfU5nEUTXhbLCVeRn3t",
       "title": "כמו אריה",
