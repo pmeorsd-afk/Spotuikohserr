@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4691,
-  "last_updated": "2026-11-17T01:09:21.539Z",
+  "version": 4692,
+  "last_updated": "2026-11-17T01:09:34.069Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7DpcmtvVq2bi1od9hxRt0d",
+      "title": "Changes",
+      "artist": "DJ Kraz, Sholom",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:09:34.069Z"
+    },
     {
       "id": "5vl4ZFx7gPaRUmhmaCh4uo",
       "title": "כוכב נופל",
