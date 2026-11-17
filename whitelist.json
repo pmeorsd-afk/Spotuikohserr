@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4819,
-  "last_updated": "2026-11-17T20:04:15.897Z",
+  "version": 4820,
+  "last_updated": "2026-11-17T20:04:29.495Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0h0bGubWnn2k4c4b8HYdOX",
+      "title": "נשל הנחש",
+      "artist": "Meir Ariel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:04:29.495Z"
+    },
     {
       "id": "08CnZDwkM6OVqDzL43pxND",
       "title": "אותו מקום אותה הרוח",
