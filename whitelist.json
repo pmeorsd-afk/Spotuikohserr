@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4631,
-  "last_updated": "2026-11-17T00:55:53.183Z",
+  "version": 4632,
+  "last_updated": "2026-11-17T00:56:05.776Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4qIUxImgIFXIzDXIytBkRW",
+      "title": "השיר של נעם",
+      "artist": "Maor Ashkenazi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:56:05.776Z"
+    },
     {
       "id": "39nKOTMlcggij0znqkBG38",
       "title": "Wassini (Vocals Only)",
