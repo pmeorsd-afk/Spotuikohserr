@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4869,
-  "last_updated": "2026-11-17T20:15:26.632Z",
+  "version": 4870,
+  "last_updated": "2026-11-17T20:15:39.520Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0EJekbVYUm30jaM7E4VPaw",
+      "title": "רכבת לילה לקהיר",
+      "artist": "Mashina",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:15:39.520Z"
+    },
     {
       "id": "4bGBj9oLRWu8wXBf0J8h9Y",
       "title": "ילד שלי",
