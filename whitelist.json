@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4564,
-  "last_updated": "2026-11-17T00:40:58.507Z",
+  "version": 4565,
+  "last_updated": "2026-11-17T00:41:11.320Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4vC0hR1j6QvX1ilBw0TDCM",
+      "title": "שוונג",
+      "artist": "סטילה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:41:11.320Z"
+    },
     {
       "id": "7oRsOu55w6BpKPKblAHp2z",
       "title": "לך לך",
