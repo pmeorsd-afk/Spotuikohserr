@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4786,
-  "last_updated": "2026-11-17T19:57:34.271Z",
+  "version": 4787,
+  "last_updated": "2026-11-17T19:57:42.234Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1lIzViG4lMiqMmhfe4W8uB",
+      "title": "שדה שושנים",
+      "artist": "אופיר אלחייני",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:57:42.234Z"
+    },
     {
       "id": "youtube:Zu2vpB0IOWM",
       "title": "ותערב לפניך - מרדכי בן דוד ומוטי שטיינמץ",
