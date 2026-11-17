@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4818,
-  "last_updated": "2026-11-17T20:04:02.677Z",
+  "version": 4819,
+  "last_updated": "2026-11-17T20:04:15.897Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "08CnZDwkM6OVqDzL43pxND",
+      "title": "אותו מקום אותה הרוח",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:04:15.897Z"
+    },
     {
       "id": "3B93WzKL1joFthGRWBOYMl",
       "title": "אימפריות נופלות לאט",
