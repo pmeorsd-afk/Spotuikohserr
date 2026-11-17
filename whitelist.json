@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4777,
-  "last_updated": "2026-11-17T19:56:50.117Z",
+  "version": 4778,
+  "last_updated": "2026-11-17T19:56:54.208Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:g3pJnrmwEJ8",
+      "title": "ילד הפלא ארי רייך-\"יהיו לרצון\".הקליפ הרשמי . Ari Reich Hihiyu Leratzon",
+      "artist": "משה כהן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:56:54.208Z"
+    },
     {
       "id": "0yp0DS834QwsMomvYK0mRq",
       "title": "מכור אלייך",
