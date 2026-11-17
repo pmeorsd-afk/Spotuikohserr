@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4721,
-  "last_updated": "2026-11-17T04:58:56.821Z",
+  "version": 4722,
+  "last_updated": "2026-11-17T04:59:09.773Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0wxJM33QNXArUMFA7gMCuP",
+      "title": "Gam Ki Eilech",
+      "artist": "Mesivta of Waterbury",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T04:59:09.773Z"
+    },
     {
       "id": "18rkcU3jiuYuB8rPxd2FF4",
       "title": "Achim Beyachad (אחים ביחד)",
