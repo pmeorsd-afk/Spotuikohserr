@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4816,
-  "last_updated": "2026-11-17T20:03:36.578Z",
+  "version": 4817,
+  "last_updated": "2026-11-17T20:03:49.467Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7ranmtPVs7Ckg2WLHO2L0m",
+      "title": "Here's Your Perfect",
+      "artist": "Jamie Miller",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:03:49.467Z"
+    },
     {
       "id": "7d8avMtsDuLVgrIoea2a0E",
       "title": "רק בשביל לקבל חיבוק",
