@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4520,
-  "last_updated": "2026-11-17T00:31:04.072Z",
+  "version": 4521,
+  "last_updated": "2026-11-17T00:31:16.464Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "35bOzO8Az5C9xsAgUjr0Bq",
+      "title": "Force",
+      "artist": "Laolu",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:31:16.464Z"
+    },
     {
       "id": "6ZEAXknmx2mrO3KgcDNpFI",
       "title": "Wake Me Up Before You Go-Go",
