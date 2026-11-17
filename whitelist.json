@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4675,
-  "last_updated": "2026-11-17T01:05:55.204Z",
+  "version": 4676,
+  "last_updated": "2026-11-17T01:06:08.115Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "66rpoOW4m5Sa2JWgWosl4k",
+      "title": "נשמתי",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:06:08.115Z"
+    },
     {
       "id": "2zDNPiCJZfuFmGX3njOBt8",
       "title": "Come Back",
