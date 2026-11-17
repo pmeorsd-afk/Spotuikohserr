@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4586,
-  "last_updated": "2026-11-17T00:45:52.705Z",
+  "version": 4587,
+  "last_updated": "2026-11-17T00:46:06.116Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "066i3gMHNNnYWWwmlRu1lR",
+      "title": "מחרוזת א'",
+      "artist": "שיעלה רוט",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:46:06.116Z"
+    },
     {
       "id": "0ariE4oGibfGefful4FtDs",
       "title": "אבא נשמה",
