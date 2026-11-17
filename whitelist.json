@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4584,
-  "last_updated": "2026-11-17T00:45:27.104Z",
+  "version": 4585,
+  "last_updated": "2026-11-17T00:45:39.909Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6egOo79GkWhlGRQQTVHui5",
+      "title": "אור (אקוסטי)",
+      "artist": "היוצרים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:45:39.909Z"
+    },
     {
       "id": "5VAP6d5vE98dbeKYETtGDr",
       "title": "אור",
