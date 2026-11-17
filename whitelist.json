@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4672,
-  "last_updated": "2026-11-17T01:05:16.434Z",
+  "version": 4673,
+  "last_updated": "2026-11-17T01:05:29.264Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "60ivjU4FNbdyHnHOLijO7M",
+      "title": "Alive",
+      "artist": "Avi Friedler",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:05:29.264Z"
+    },
     {
       "id": "6prOEtHb3w47L7P0JvsXPA",
       "title": "In Our Days",
