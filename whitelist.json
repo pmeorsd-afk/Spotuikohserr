@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4984,
-  "last_updated": "2026-11-17T20:40:09.284Z",
+  "version": 4985,
+  "last_updated": "2026-11-17T20:40:25.804Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7pgoCxqjm2Wi9QdoCNsyxq",
+      "title": "הכל יהיה בסדר",
+      "artist": "Mofa Haarnavot Shel Dr. Kasper",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:40:25.804Z"
+    },
     {
       "id": "5NLXBAQK3cw8MxHlUZ47IF",
       "title": "Ihiye Beseder",
