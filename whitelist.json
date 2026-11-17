@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4775,
-  "last_updated": "2026-11-17T19:56:36.853Z",
+  "version": 4776,
+  "last_updated": "2026-11-17T19:56:40.713Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:xZWSaQSG1Ws",
+      "title": "המנגנים מציג: \"קומטאנץ\" מוטי שטיינמץ - כאייל תערוג | Hamenagnim Presents: \"Kumtantz\" Motty Steinmetz",
+      "artist": "shiezoli",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:56:40.713Z"
+    },
     {
       "id": "6u1IYHWBK0434P78bL1hMg",
       "title": "עד הסוף",
