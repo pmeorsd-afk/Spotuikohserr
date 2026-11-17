@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4909,
-  "last_updated": "2026-11-17T20:24:01.483Z",
+  "version": 4910,
+  "last_updated": "2026-11-17T20:24:14.749Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ZeaLg3JDQm9QoZ2hmZia1",
+      "title": "עשר שיחות",
+      "artist": "Vibe Ish",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:24:14.749Z"
+    },
     {
       "id": "4xVmPboqdKG78mkqZ0sn1m",
       "title": "What You Know Bout Love",
