@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4937,
-  "last_updated": "2026-11-17T20:30:10.137Z",
+  "version": 4938,
+  "last_updated": "2026-11-17T20:30:23.398Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0lks2Kt9veMOFEAPN0fsqN",
+      "title": "Lily",
+      "artist": "Alan Walker, K-391, Emelie Hollow",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:30:23.398Z"
+    },
     {
       "id": "6SRWhUJcD2YKahCwHavz3X",
       "title": "Darkside",
