@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4587,
-  "last_updated": "2026-11-17T00:46:06.116Z",
+  "version": 4588,
+  "last_updated": "2026-11-17T00:46:19.159Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4i7TcdEiBtPqS8Pf2CpoYS",
+      "title": "שבור?",
+      "artist": "Maor Ashkenazi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:46:19.159Z"
+    },
     {
       "id": "066i3gMHNNnYWWwmlRu1lR",
       "title": "מחרוזת א'",
