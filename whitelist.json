@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4926,
-  "last_updated": "2026-11-17T20:27:46.652Z",
+  "version": 4927,
+  "last_updated": "2026-11-17T20:27:59.933Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3HMY0r2BAdpasXMY8rseR0",
+      "title": "Too Sweet",
+      "artist": "Hozier",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:27:59.933Z"
+    },
     {
       "id": "2JvzF1RMd7lE3KmFlsyZD8",
       "title": "MIDDLE CHILD",
