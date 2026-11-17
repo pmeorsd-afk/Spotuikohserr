@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4607,
-  "last_updated": "2026-11-17T00:50:33.368Z",
+  "version": 4608,
+  "last_updated": "2026-11-17T00:50:46.053Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4A93wNEVo7tRduNji4q5yU",
+      "title": "עידן האלוהים",
+      "artist": "Hayehudim",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:50:46.053Z"
+    },
     {
       "id": "0pQskrTITgmCMyr85tb9qq",
       "title": "Starman - 2012 Remaster",
