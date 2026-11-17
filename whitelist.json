@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4862,
-  "last_updated": "2026-11-17T20:13:51.964Z",
+  "version": 4863,
+  "last_updated": "2026-11-17T20:14:05.435Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1U3Ga58xmmjFMW2Tvi0zTN",
+      "title": "שמחה ביט",
+      "artist": "שמחה בירנהאק, מוישי כהנא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:14:05.435Z"
+    },
     {
       "id": "4VEXqkygWf1elN6hv7RZj8",
       "title": "מואנה",
