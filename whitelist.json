@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5011,
-  "last_updated": "2026-11-17T21:12:07.320Z",
+  "version": 5012,
+  "last_updated": "2026-11-17T21:15:34.651Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2P64F9RPwQos7ELkKotqW5",
+      "title": "Canes Venatici",
+      "artist": "Donald Beaudoin",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T21:15:34.651Z"
+    },
     {
       "id": "2qgV9gYYOEysuSyknNpJmA",
       "title": "מתי זה יעבור",
