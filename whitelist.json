@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4815,
-  "last_updated": "2026-11-17T20:03:23.254Z",
+  "version": 4816,
+  "last_updated": "2026-11-17T20:03:36.578Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7d8avMtsDuLVgrIoea2a0E",
+      "title": "רק בשביל לקבל חיבוק",
+      "artist": "Eifo HaYeled",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:03:36.578Z"
+    },
     {
       "id": "1sL96byRdynTmZQLj8wYRM",
       "title": "אני אוהב אותך לאה",
