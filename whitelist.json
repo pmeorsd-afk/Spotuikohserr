@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4963,
-  "last_updated": "2026-11-17T20:35:04.562Z",
+  "version": 4964,
+  "last_updated": "2026-11-17T20:35:13.532Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "02BTW4wd2eUJGJZsMiYd2b",
+      "title": "Gambling",
+      "artist": "Tunes by Shy, Rod Wave",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:35:13.532Z"
+    },
     {
       "id": "youtube:ktAn8R-4LxE",
       "title": "ג'ה/אלוהים (בהופעה)",
