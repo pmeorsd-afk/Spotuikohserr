@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4780,
-  "last_updated": "2026-11-17T19:57:03.320Z",
+  "version": 4781,
+  "last_updated": "2026-11-17T19:57:06.406Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:u1pC8oa4KHs",
+      "title": "אלעד כהן ושלמה כהן 'עד מתי' הקליפ",
+      "artist": "אלעד כהן הערוץ הרשמי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:57:06.406Z"
+    },
     {
       "id": "12nxnwUQvUN0HVZA5bZFTn",
       "title": "מלאת אהבה (גרסת כיסוי)",
