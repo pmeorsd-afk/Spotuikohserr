@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4527,
-  "last_updated": "2026-11-17T00:32:32.973Z",
+  "version": 4528,
+  "last_updated": "2026-11-17T00:32:45.631Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4bJ7hDIjOucR0hGDEaVBOr",
+      "title": "Best of Me - Radio Edit",
+      "artist": "ARTBAT, Sailor & I",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:32:45.631Z"
+    },
     {
       "id": "6wHPqSlZmGDCGXI7GR10sv",
       "title": "שיר ישן",
