@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4874,
-  "last_updated": "2026-11-17T20:16:32.052Z",
+  "version": 4875,
+  "last_updated": "2026-11-17T20:16:45.036Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6qyTB7rJHhrJtAArOeQfPH",
+      "title": "כנפיים",
+      "artist": "Vic Ohana Jan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:16:45.036Z"
+    },
     {
       "id": "5KRYlY2elcHmdodMFboaC7",
       "title": "פלוס אחד",
