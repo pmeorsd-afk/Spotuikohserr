@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4879,
-  "last_updated": "2026-11-17T20:17:38.903Z",
+  "version": 4880,
+  "last_updated": "2026-11-17T20:17:51.843Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0LtkAAEpEp1lkLX1ZvjHZb",
+      "title": "Follow You",
+      "artist": "Imagine Dragons",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:17:51.843Z"
+    },
     {
       "id": "7bj4lX7A66HL2yiTWMhx7k",
       "title": "פרוייקט מחווה לקלאסיקות - מחרוזת זוהר ארגוב",
