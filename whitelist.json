@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4552,
-  "last_updated": "2026-11-17T00:38:24.545Z",
+  "version": 4553,
+  "last_updated": "2026-11-17T00:38:37.290Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5pyYuRscrW9zjcPt66ycEk",
+      "title": "שיר חרא",
+      "artist": "הפונדקאים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:38:37.290Z"
+    },
     {
       "id": "5VXC4BiJu2emJhppwJF3f3",
       "title": "כשאני איתך אני כמו דג",
