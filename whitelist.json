@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4895,
-  "last_updated": "2026-11-17T20:21:09.716Z",
+  "version": 4896,
+  "last_updated": "2026-11-17T20:21:22.899Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5l0uFjA731wPYH8CkR7K1Y",
+      "title": "Mood Swings",
+      "artist": "Pop Smoke, Lil Tjay",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:21:22.899Z"
+    },
     {
       "id": "58LqDKufxj4p2LexJVzXrz",
       "title": "מחרוזת חנוכה מירושלים",
