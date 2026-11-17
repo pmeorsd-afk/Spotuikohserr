@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4804,
-  "last_updated": "2026-11-17T20:00:58.590Z",
+  "version": 4805,
+  "last_updated": "2026-11-17T20:01:11.212Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7uqvJMLEzlRw2BWD47tvaV",
+      "title": "זה מה שנשאר",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:01:11.212Z"
+    },
     {
       "id": "3QBUBpbULG6xo6HbPQbTjy",
       "title": "חבקי אותי",
