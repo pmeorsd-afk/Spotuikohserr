@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4822,
-  "last_updated": "2026-11-17T20:04:55.540Z",
+  "version": 4823,
+  "last_updated": "2026-11-17T20:05:08.600Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0JjV3LCW0fitXap4VCVtTY",
+      "title": "את שתבקש",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:05:08.600Z"
+    },
     {
       "id": "7s8kJICUA2Q2ovtA9O9CyJ",
       "title": "Can't Stop Me",
