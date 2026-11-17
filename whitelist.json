@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4796,
-  "last_updated": "2026-11-17T19:59:12.334Z",
+  "version": 4797,
+  "last_updated": "2026-11-17T19:59:25.469Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "67bWHaUcxAKYRIr7etUl4Y",
+      "title": "בלילות חשוכים",
+      "artist": "Moshik Afia",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:59:25.469Z"
+    },
     {
       "id": "6O3IrXQXaF1tt1ubfYIzDl",
       "title": "ספרי לי ילדה",
