@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4618,
-  "last_updated": "2026-11-17T00:53:06.891Z",
+  "version": 4619,
+  "last_updated": "2026-11-17T00:53:19.625Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0URGfPQLiB6JHBn9hwh2x9",
+      "title": "Kivinu",
+      "artist": "Mordechai Shapiro",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:53:19.625Z"
+    },
     {
       "id": "7ifcWuObvExirL0FlKINGT",
       "title": "Elokai",
