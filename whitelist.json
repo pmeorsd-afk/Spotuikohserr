@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4660,
-  "last_updated": "2026-11-17T01:02:18.289Z",
+  "version": 4661,
+  "last_updated": "2026-11-17T01:02:31.196Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3tKuAAOxiLgPd82G13YG7h",
+      "title": "מה עשה לנו הזמן",
+      "artist": "Eden Meiri",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:02:31.196Z"
+    },
     {
       "id": "7Au9OxzjVtnJ0dJUIUr9o1",
       "title": "Avinu Malkenu",
