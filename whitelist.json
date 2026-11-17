@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4546,
-  "last_updated": "2026-11-17T00:37:09.272Z",
+  "version": 4547,
+  "last_updated": "2026-11-17T00:37:21.807Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5rATfnpUMfGNDYH0PqR9sl",
+      "title": "עינייך החומות",
+      "artist": "Zohar Argov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:37:21.807Z"
+    },
     {
       "id": "5bFErJAc1oo73Q2uIAsHTy",
       "title": "אנעים זמירות",
