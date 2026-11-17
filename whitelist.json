@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4828,
-  "last_updated": "2026-11-17T20:06:26.823Z",
+  "version": 4829,
+  "last_updated": "2026-11-17T20:06:40.108Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6MIF7V2YTrKZrwRmgpWTZU",
+      "title": "Overjoyed",
+      "artist": "LAKEY INSPIRED",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:06:40.108Z"
+    },
     {
       "id": "0LcLOyu9n5qRTeax5IdewO",
       "title": "Dynamite (feat. Sia)",
