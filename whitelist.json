@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4872,
-  "last_updated": "2026-11-17T20:16:05.500Z",
+  "version": 4873,
+  "last_updated": "2026-11-17T20:16:19.039Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4HdebyZfiqDHUFeMq0X057",
+      "title": "לירז ובתאל",
+      "artist": "Ron Sky Nesher",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:16:19.039Z"
+    },
     {
       "id": "6bVt6QaMujk2tsIo5cKcPg",
       "title": "החברה הטובים",
