@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4530,
-  "last_updated": "2026-11-17T00:33:11.691Z",
+  "version": 4531,
+  "last_updated": "2026-11-17T00:33:24.595Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1YPkBfrRCpvBrwJU66LQWq",
+      "title": "Osama",
+      "artist": "Zakes Bantwini, Kasango",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:33:24.595Z"
+    },
     {
       "id": "2oPilGeIeMzZm7USo5Gy12",
       "title": "בת מלך",
