@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4561,
-  "last_updated": "2026-11-17T00:40:20.032Z",
+  "version": 4562,
+  "last_updated": "2026-11-17T00:40:33.109Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5eBQQqtDYQBX8pmGGtQGfK",
+      "title": "הבט בעיני",
+      "artist": "Tzaguy Boy, Jimmejonn",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:40:33.109Z"
+    },
     {
       "id": "7bxAHKHLd87IHLgeMhgg64",
       "title": "How Can I Tell Her",
