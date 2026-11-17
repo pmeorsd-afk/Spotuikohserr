@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4580,
-  "last_updated": "2026-11-17T00:44:35.262Z",
+  "version": 4581,
+  "last_updated": "2026-11-17T00:44:48.185Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6RiGWlw8osHZUN376nnDTo",
+      "title": "איזה יום",
+      "artist": "היפהופ מישראל, הילל גוטמן, young buta",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:44:48.185Z"
+    },
     {
       "id": "3ONBxo6AtgxdclpWJnJbs5",
       "title": "כבוד",
