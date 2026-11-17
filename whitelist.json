@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4973,
-  "last_updated": "2026-11-17T20:37:24.156Z",
+  "version": 4974,
+  "last_updated": "2026-11-17T20:37:37.415Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1kLBYLdcBWCytUwNycgKlY",
+      "title": "זמר בלילות",
+      "artist": "אלקנה אלפסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:37:37.415Z"
+    },
     {
       "id": "4rlaGqWwl1cM6EPERYODrw",
       "title": "פשוטים",
