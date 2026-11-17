@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4610,
-  "last_updated": "2026-11-17T00:51:12.211Z",
+  "version": 4611,
+  "last_updated": "2026-11-17T00:51:24.927Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7xzHYBRpTy9zZymFx585MJ",
+      "title": "חלום מתוק",
+      "artist": "Moshik Afia, Shlomi Saranga",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:51:24.927Z"
+    },
     {
       "id": "0I0iOr0FNypIQcPzWw6jkp",
       "title": "רוצה להיות טוב",
