@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4768,
-  "last_updated": "2026-11-17T19:55:17.769Z",
+  "version": 4769,
+  "last_updated": "2026-11-17T19:55:30.729Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "71t7Hq0N8xg6KPYjpuDz6O",
+      "title": "מחרוזת מאבד שליטה היי את שורדים אהבה",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:55:30.729Z"
+    },
     {
       "id": "youtube:wMWFBgNmF5M",
       "title": "שלומי כהן - ומלאכים מתוך הקומזינג 2",
