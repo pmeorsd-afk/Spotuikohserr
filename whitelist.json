@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5019,
-  "last_updated": "2026-11-17T22:13:50.067Z",
+  "version": 5020,
+  "last_updated": "2026-11-17T22:13:55.736Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:0kNe-wRUZEY",
+      "title": "ישי לפידות - בקש עבדך  (Prod. By Sruli)",
+      "artist": "Ishay Lapidot Music",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T22:13:55.736Z"
+    },
     {
       "id": "0yr0G0YFJcfsU38nP2OUCT",
       "title": "לא שם",
