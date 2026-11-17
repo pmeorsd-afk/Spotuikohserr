@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4625,
-  "last_updated": "2026-11-17T00:54:37.048Z",
+  "version": 4626,
+  "last_updated": "2026-11-17T00:54:49.911Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6JgpdnBIAVWjDaO0JgM8UH",
+      "title": "ELUL",
+      "artist": "EKEV, Mordechai Shapiro",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:54:49.911Z"
+    },
     {
       "id": "5VtmUrkoqm9ef2DMhDZy0s",
       "title": "Fighter",
