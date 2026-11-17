@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4650,
-  "last_updated": "2026-11-17T01:00:09.559Z",
+  "version": 4651,
+  "last_updated": "2026-11-17T01:00:22.198Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4GXu8TU1yvSbrtvs84lGcb",
+      "title": "Born For This",
+      "artist": "EZZI",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:00:22.198Z"
+    },
     {
       "id": "4n0G7uDRyEpMSfHxueX3mH",
       "title": "Why Do We Run (Why Am I Running)",
