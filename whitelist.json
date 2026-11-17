@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4524,
-  "last_updated": "2026-11-17T00:31:54.659Z",
+  "version": 4525,
+  "last_updated": "2026-11-17T00:32:07.400Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4BUTrHlGO4AHYTujkzA3IE",
+      "title": "מחרוזת: חביבי יעני",
+      "artist": "שריף",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:32:07.400Z"
+    },
     {
       "id": "4PKp0KbO2W70oAXc43O3RG",
       "title": "Safe",
