@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4589,
-  "last_updated": "2026-11-17T00:46:31.938Z",
+  "version": 4590,
+  "last_updated": "2026-11-17T00:46:44.796Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7bYO7RcCVF1T4ileBThNah",
+      "title": "כסף",
+      "artist": "אורי עמבר, Maor Ashkenazi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:46:44.796Z"
+    },
     {
       "id": "3GpbwCm3YxiWDvy29Uo3vP",
       "title": "Right Round",
