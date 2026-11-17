@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4738,
-  "last_updated": "2026-11-17T19:49:38.380Z",
+  "version": 4739,
+  "last_updated": "2026-11-17T19:49:42.173Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0M9ydKzuF3oZTfYYPfaGX1",
+      "title": "Bad and Boujee (feat. Lil Uzi Vert)",
+      "artist": "Migos, Lil Uzi Vert",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:49:42.173Z"
+    },
     {
       "id": "4Ls53fBNVfaXTROBi6X8Hw",
       "title": "Just Wanna Rock",
