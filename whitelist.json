@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4955,
-  "last_updated": "2026-11-17T20:34:06.351Z",
+  "version": 4956,
+  "last_updated": "2026-11-17T20:34:19.173Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Bq3HSKehoUKNEfaHTjFIk",
+      "title": "כל החברים סביבנו",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:34:19.173Z"
+    },
     {
       "id": "591ks2A0o7ratTpiRdI7M6",
       "title": "Heart On Ice",
