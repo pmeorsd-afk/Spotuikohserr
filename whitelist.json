@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4658,
-  "last_updated": "2026-11-17T01:01:51.878Z",
+  "version": 4659,
+  "last_updated": "2026-11-17T01:02:05.007Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Tc1hUyauxW4fMzh81KAu5",
+      "title": "עד שהגעת אליי",
+      "artist": "אליה והב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:02:05.007Z"
+    },
     {
       "id": "2qZNEh4QhBJrGxnoQhgJz4",
       "title": "Yibaneh",
