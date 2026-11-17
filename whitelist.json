@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4636,
-  "last_updated": "2026-11-17T00:57:07.944Z",
+  "version": 4637,
+  "last_updated": "2026-11-17T00:57:20.734Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6PUIzlqotEmPuBfjbwYWOB",
+      "title": "Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) - Cedric Gervais Remix",
+      "artist": "Lana Del Rey, Cedric Gervais",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:57:20.734Z"
+    },
     {
       "id": "05SBRd4fXgn8FX7bf8BCAE",
       "title": "I Need Your Love (feat. Ellie Goulding)",
