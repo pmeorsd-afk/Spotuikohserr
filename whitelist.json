@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4856,
-  "last_updated": "2026-11-17T20:12:33.907Z",
+  "version": 4857,
+  "last_updated": "2026-11-17T20:12:46.937Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0OFG35P5uPTRO33IfDAjk1",
+      "title": "זיכרון מתוק",
+      "artist": "Kobi Peretz, Mor",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:12:46.937Z"
+    },
     {
       "id": "213x4gsFDm04hSqIUkg88w",
       "title": "On Top Of The World",
