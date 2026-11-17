@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4993,
-  "last_updated": "2026-11-17T20:48:43.735Z",
+  "version": 4995,
+  "last_updated": "2026-11-17T20:48:47.387Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3iWnCuMY3FoIG3ojjXYGw2",
+      "title": "זה כל מה שיש",
+      "artist": "Yoni Rechter",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:48:47.387Z"
+    },
+    {
+      "id": "70sv8NcAIJoPsBStnKe61w",
+      "title": "Over Oceans",
+      "artist": "We Dream of Eden",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:48:47.387Z"
+    },
     {
       "id": "0fYVliAYKHuPmECRs1pbRf",
       "title": "Renegades",
