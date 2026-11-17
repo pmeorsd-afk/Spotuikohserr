@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4946,
-  "last_updated": "2026-11-17T20:32:08.680Z",
+  "version": 4947,
+  "last_updated": "2026-11-17T20:32:22.281Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7GX5flRQZVHRAGd6B4TmDO",
+      "title": "XO Tour Llif3",
+      "artist": "Lil Uzi Vert",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:32:22.281Z"
+    },
     {
       "id": "5LQONu3AO0PGNO9TvE9sUt",
       "title": "Fly",
