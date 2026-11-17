@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4692,
-  "last_updated": "2026-11-17T01:09:34.069Z",
+  "version": 4693,
+  "last_updated": "2026-11-17T01:09:46.827Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3veP41hqImUDYUhBbnZG90",
+      "title": "שיר של יום חולין",
+      "artist": "Maor Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:09:46.827Z"
+    },
     {
       "id": "7DpcmtvVq2bi1od9hxRt0d",
       "title": "Changes",
