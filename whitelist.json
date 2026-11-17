@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4842,
-  "last_updated": "2026-11-17T20:09:42.324Z",
+  "version": 4843,
+  "last_updated": "2026-11-17T20:09:55.562Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3RBpmZJ0YG9abVBXI2U1UO",
+      "title": "את חסרה לי",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:09:55.562Z"
+    },
     {
       "id": "2nyRqcEnO9F6XGZk0Irt33",
       "title": "הכל ורוד",
