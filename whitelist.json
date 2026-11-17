@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4764,
-  "last_updated": "2026-11-17T19:54:38.669Z",
+  "version": 4765,
+  "last_updated": "2026-11-17T19:54:51.731Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6UAgnw2w3AVwLg1p7sE7v4",
+      "title": "I Follow Rivers - The Magician Remix",
+      "artist": "Lykke Li, The Magician",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:54:51.731Z"
+    },
     {
       "id": "6boFNTIi78pShZnsQ8gxyS",
       "title": "אוחילה לאל",
