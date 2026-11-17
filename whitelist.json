@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4779,
-  "last_updated": "2026-11-17T19:56:58.786Z",
+  "version": 4780,
+  "last_updated": "2026-11-17T19:57:03.320Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "12nxnwUQvUN0HVZA5bZFTn",
+      "title": "מלאת אהבה (גרסת כיסוי)",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:57:03.320Z"
+    },
     {
       "id": "youtube:9CazoSZk-58",
       "title": "yehuda green havdala",
