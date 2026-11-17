@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4924,
-  "last_updated": "2026-11-17T20:27:20.259Z",
+  "version": 4925,
+  "last_updated": "2026-11-17T20:27:33.327Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7MXVkk9YMctZqd1Srtv4MB",
+      "title": "Starboy",
+      "artist": "The Weeknd, Daft Punk",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:27:33.327Z"
+    },
     {
       "id": "40mjsnRjCpycdUw3xhS20g",
       "title": "GATTI",
