@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4814,
-  "last_updated": "2026-11-17T20:03:10.059Z",
+  "version": 4815,
+  "last_updated": "2026-11-17T20:03:23.254Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1sL96byRdynTmZQLj8wYRM",
+      "title": "אני אוהב אותך לאה",
+      "artist": "Svika Pick",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:03:23.254Z"
+    },
     {
       "id": "3f0P6PEY35Qsfbg1C7pyGw",
       "title": "אתמול",
