@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4613,
-  "last_updated": "2026-11-17T00:52:02.681Z",
+  "version": 4614,
+  "last_updated": "2026-11-17T00:52:15.269Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4MBzIOj2kBE2GXqTmDPSh4",
+      "title": "מחכה לשקט",
+      "artist": "איתי דוד, SHINER",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:52:15.269Z"
+    },
     {
       "id": "6yxcOGpAvcmrQSuS5hB0Se",
       "title": "מסיבה סגורה",
