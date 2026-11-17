@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4677,
-  "last_updated": "2026-11-17T01:06:20.931Z",
+  "version": 4678,
+  "last_updated": "2026-11-17T01:06:33.758Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Xdu4SOfwe7EwFZfQKOl7Z",
+      "title": "Cold",
+      "artist": "Avi Friedler",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:06:33.758Z"
+    },
     {
       "id": "3HjuFzHnFes4Y7GGdUK0sB",
       "title": "Tzama",
