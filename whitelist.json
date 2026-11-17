@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4566,
-  "last_updated": "2026-11-17T00:41:24.362Z",
+  "version": 4567,
+  "last_updated": "2026-11-17T00:41:37.276Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "42yDuoZN8Kr7IFOeSpIxQb",
+      "title": "תשע",
+      "artist": "Vibe Ish",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:41:37.276Z"
+    },
     {
       "id": "12pGzBnlpZzmwUH90EkuYK",
       "title": "כמה טוב שנפגשנו",
