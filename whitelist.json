@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4579,
-  "last_updated": "2026-11-17T00:44:22.199Z",
+  "version": 4580,
+  "last_updated": "2026-11-17T00:44:35.262Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ONBxo6AtgxdclpWJnJbs5",
+      "title": "כבוד",
+      "artist": "Maor Ashkenazi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:44:35.262Z"
+    },
     {
       "id": "2HLf3UEQDuW1brI7VIrnMU",
       "title": "מיס תבל",
