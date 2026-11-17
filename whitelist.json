@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4789,
-  "last_updated": "2026-11-17T19:57:55.350Z",
+  "version": 4790,
+  "last_updated": "2026-11-17T19:58:08.681Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Qd1Ptc9EwcmbVNUU4TwE1",
+      "title": "חזק יותר",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:58:08.681Z"
+    },
     {
       "id": "5PtOILSb1vQldcnH3sGufE",
       "title": "תאמר לה",
