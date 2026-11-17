@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4798,
-  "last_updated": "2026-11-17T19:59:38.609Z",
+  "version": 4799,
+  "last_updated": "2026-11-17T19:59:52.062Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7hfIOzXe9BcuMxVKcvk1Z3",
+      "title": "פעימות ליבך",
+      "artist": "Yossi Eden",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:59:52.062Z"
+    },
     {
       "id": "7H57lOdwbBbs4D5T2cr3x9",
       "title": "לא עוזב את העיר",
