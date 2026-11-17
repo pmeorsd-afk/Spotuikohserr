@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4813,
-  "last_updated": "2026-11-17T20:02:56.464Z",
+  "version": 4814,
+  "last_updated": "2026-11-17T20:03:10.059Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3f0P6PEY35Qsfbg1C7pyGw",
+      "title": "אתמול",
+      "artist": "Tomer Hen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:03:10.059Z"
+    },
     {
       "id": "6SrriGAtHnL1OMROo7oQNH",
       "title": "Running Up That Hill",
