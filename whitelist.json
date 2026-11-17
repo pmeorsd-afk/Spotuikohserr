@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4959,
-  "last_updated": "2026-11-17T20:34:52.821Z",
+  "version": 4960,
+  "last_updated": "2026-11-17T20:34:56.614Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7vBdIecwSHmD1bG78DScxd",
+      "title": "נהדרת",
+      "artist": "יציאת חירום",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:34:56.614Z"
+    },
     {
       "id": "5IUT0GajZUV9Qn78d7lYnH",
       "title": "שמע בני",
