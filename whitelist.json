@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4647,
-  "last_updated": "2026-11-17T00:59:30.511Z",
+  "version": 4648,
+  "last_updated": "2026-11-17T00:59:43.885Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "28yOhIKc70kg9llOxrZGyR",
+      "title": "Good To Let Go - RP",
+      "artist": "Eitan Rock, Yoni Rock, Werntatty",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:59:43.885Z"
+    },
     {
       "id": "2c5vmR16OMaUN44hDeH4IX",
       "title": "Life Is Good (החיים טובים)",
