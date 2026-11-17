@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4758,
-  "last_updated": "2026-11-17T19:53:37.934Z",
+  "version": 4759,
+  "last_updated": "2026-11-17T19:53:41.867Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2WBNUsV0WH7Cmjr71viWfC",
+      "title": "מסע",
+      "artist": "Eliad",
+      "status": "blocked",
+      "notes": "blocked via telegram",
+      "updated_at": "2026-11-17T19:53:41.867Z"
+    },
     {
       "id": "77PbIbzvnhuXdAqD9Al5JR",
       "title": "Love Sosa",
