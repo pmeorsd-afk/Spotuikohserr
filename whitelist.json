@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4772,
-  "last_updated": "2026-11-17T19:56:07.685Z",
+  "version": 4773,
+  "last_updated": "2026-11-17T19:56:10.940Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "63SevszngYpZOwf63o61K4",
+      "title": "Nevermind",
+      "artist": "Dennis Lloyd",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:56:10.940Z"
+    },
     {
       "id": "2vDjeqTzuAS8RaKmdqOcSe",
       "title": "Calling On Me (feat. Tove Lo)",
