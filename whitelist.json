@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4858,
-  "last_updated": "2026-11-17T20:13:00.165Z",
+  "version": 4859,
+  "last_updated": "2026-11-17T20:13:13.400Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6TEftSkmWdTm1EpThnwqh6",
+      "title": "Wrecked",
+      "artist": "Imagine Dragons",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:13:13.400Z"
+    },
     {
       "id": "5S9VxagUMB4zYCCoaRriDe",
       "title": "אלוקים ישמור עלייך",
