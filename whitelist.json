@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4913,
-  "last_updated": "2026-11-17T20:24:54.727Z",
+  "version": 4914,
+  "last_updated": "2026-11-17T20:25:07.783Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "34gCuhDGsG4bRPIf9bb02f",
+      "title": "Thinking out Loud",
+      "artist": "Ed Sheeran",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:25:07.783Z"
+    },
     {
       "id": "30Qjw9Omqxi0quD224ISfm",
       "title": "עצב על קצב",
