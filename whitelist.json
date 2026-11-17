@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4591,
-  "last_updated": "2026-11-17T00:46:57.641Z",
+  "version": 4592,
+  "last_updated": "2026-11-17T00:47:10.423Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5XxAP26wrHn23Wik2NaNaC",
+      "title": "וואן און וואן",
+      "artist": "קפליו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:47:10.423Z"
+    },
     {
       "id": "62rG5rxSs5E86OwHRIdOr7",
       "title": "בעולם שלי",
