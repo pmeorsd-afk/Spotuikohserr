@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4728,
-  "last_updated": "2026-11-17T19:47:32.622Z",
+  "version": 4729,
+  "last_updated": "2026-11-17T19:47:57.070Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7e7brY9hXhaDY5U34iNdpC",
+      "title": "Vie de voyou",
+      "artist": "SAM",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:47:57.070Z"
+    },
     {
       "id": "6euwKpkQB92wk3DluAidnQ",
       "title": "Hydration",
