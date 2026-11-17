@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4569,
-  "last_updated": "2026-11-17T00:42:02.481Z",
+  "version": 4570,
+  "last_updated": "2026-11-17T00:42:15.004Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4bEd6EnHTIxhMk6e3dhvJ8",
+      "title": "ידעתי שאסבול",
+      "artist": "Avi Gueta, Doron Ajami",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:42:15.004Z"
+    },
     {
       "id": "74TDOvNO02xCRGTaB8LTKf",
       "title": "פשוט אנשים",
