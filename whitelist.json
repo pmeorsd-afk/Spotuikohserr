@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4602,
-  "last_updated": "2026-11-17T00:49:18.392Z",
+  "version": 4603,
+  "last_updated": "2026-11-17T00:49:31.000Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "69fcj6WcCU6l8JcrUmFJ4H",
+      "title": "היום אני אבא של שבת",
+      "artist": "פיקבו - שירים לקטנטנים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:49:31.000Z"
+    },
     {
       "id": "5z7L2y42Icl84hyEDjEjAM",
       "title": "אבא",
