@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4917,
-  "last_updated": "2026-11-17T20:25:47.527Z",
+  "version": 4918,
+  "last_updated": "2026-11-17T20:26:00.262Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2tLRpjeyFaVy6ip1FsEdV4",
+      "title": "חומות חימר",
+      "artist": "מתן לוי, הכוכב הבא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:26:00.262Z"
+    },
     {
       "id": "285pBltuF7vW8TeWk8hdRR",
       "title": "Lucid Dreams",
