@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4996,
-  "last_updated": "2026-11-17T20:48:52.216Z",
+  "version": 4997,
+  "last_updated": "2026-11-17T20:48:55.874Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4kb0DudMr04Ejllf3VQib6",
+      "title": "Eyes Closed (Baseline)",
+      "artist": "Brain Floss",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:48:55.874Z"
+    },
     {
       "id": "3jnz28JDlLUPA90sly4Xqk",
       "title": "Naima - 2020 Remaster",
