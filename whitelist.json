@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4716,
-  "last_updated": "2026-11-17T04:57:51.776Z",
+  "version": 4717,
+  "last_updated": "2026-11-17T04:58:04.592Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1kLG1wbWHXsdhnJ7qdeemI",
+      "title": "Keli",
+      "artist": "Aryeh Kunstler, Yosef Karduner",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T04:58:04.592Z"
+    },
     {
       "id": "7m3ByOyo4v5EGvF49cI9Px",
       "title": "שלום בבית",
