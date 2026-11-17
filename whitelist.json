@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4609,
-  "last_updated": "2026-11-17T00:50:59.202Z",
+  "version": 4610,
+  "last_updated": "2026-11-17T00:51:12.211Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0I0iOr0FNypIQcPzWw6jkp",
+      "title": "רוצה להיות טוב",
+      "artist": "Akiva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:51:12.211Z"
+    },
     {
       "id": "1oZbzZEpWVtmwMjxo12SzV",
       "title": "רוקי",
