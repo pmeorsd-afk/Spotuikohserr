@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4549,
-  "last_updated": "2026-11-17T00:37:46.860Z",
+  "version": 4550,
+  "last_updated": "2026-11-17T00:37:59.562Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3TvAGDeaQ66Ps0mqzBdKRO",
+      "title": "עשרה בני אדם",
+      "artist": "Aaron Razel, ישי ריבו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:37:59.562Z"
+    },
     {
       "id": "1JHt6UwF0YvvtjbuH1vOJ9",
       "title": "Ανεξίτηλες Στιγμές",
