@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4521,
-  "last_updated": "2026-11-17T00:31:16.464Z",
+  "version": 4522,
+  "last_updated": "2026-11-17T00:31:29.290Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3DBSy0e80PXfjpymph6D6o",
+      "title": "JE DISTANCU",
+      "artist": "2Ton",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:31:29.290Z"
+    },
     {
       "id": "35bOzO8Az5C9xsAgUjr0Bq",
       "title": "Force",
