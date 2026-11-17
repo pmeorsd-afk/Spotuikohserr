@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4539,
-  "last_updated": "2026-11-17T00:35:29.210Z",
+  "version": 4540,
+  "last_updated": "2026-11-17T00:35:42.166Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4D00BrpKsNlWNcH4mknB5B",
+      "title": "עבדו את השם",
+      "artist": "Roi Harush, נריה אנג'ל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:35:42.166Z"
+    },
     {
       "id": "5H1sKFMzDeMtXwND3V6hRY",
       "title": "JUMP",
