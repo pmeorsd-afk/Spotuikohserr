@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4957,
-  "last_updated": "2026-11-17T20:34:31.976Z",
+  "version": 4958,
+  "last_updated": "2026-11-17T20:34:45.255Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3zc8VZEpM1onYV4FWGdFvm",
+      "title": "Tombstone",
+      "artist": "Rod Wave",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:34:45.255Z"
+    },
     {
       "id": "7rvyVWja33WG9R97oeJAjx",
       "title": "Envy Me",
