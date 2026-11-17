@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4988,
-  "last_updated": "2026-11-17T20:41:05.450Z",
+  "version": 4989,
+  "last_updated": "2026-11-17T20:41:18.770Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0qtajTXHtY7cDyH67ulZe6",
+      "title": "מותש ממך",
+      "artist": "נתנאל ששון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:41:18.770Z"
+    },
     {
       "id": "3BTCHxGctmO45MbHfW2G0M",
       "title": "שיכור עם געגוע",
