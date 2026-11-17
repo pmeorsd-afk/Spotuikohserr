@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5001,
-  "last_updated": "2026-11-17T21:03:53.600Z",
+  "version": 5002,
+  "last_updated": "2026-11-17T21:03:57.762Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0TDLuuLlV54CkRRUOahJb4",
+      "title": "Titanium (feat. Sia)",
+      "artist": "David Guetta, Sia",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T21:03:57.762Z"
+    },
     {
       "id": "3oDFtOhcN08qeDPAK6MEQG",
       "title": "Boom Boom Pow",
