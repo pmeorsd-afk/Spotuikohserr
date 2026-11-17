@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4840,
-  "last_updated": "2026-11-17T20:09:16.413Z",
+  "version": 4841,
+  "last_updated": "2026-11-17T20:09:29.335Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "64ytSB0mJV5vhcZA3yS54Q",
+      "title": "תותים",
+      "artist": "Ethnix",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:09:29.335Z"
+    },
     {
       "id": "7wZah8SqV9RbUHTndGPZkW",
       "title": "Check the Vibe",
