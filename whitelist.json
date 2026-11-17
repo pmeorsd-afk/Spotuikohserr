@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4606,
-  "last_updated": "2026-11-17T00:50:20.445Z",
+  "version": 4607,
+  "last_updated": "2026-11-17T00:50:33.368Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0pQskrTITgmCMyr85tb9qq",
+      "title": "Starman - 2012 Remaster",
+      "artist": "David Bowie",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:50:33.368Z"
+    },
     {
       "id": "2KbgZRia2i5LVw01FL4xfh",
       "title": "מחרוזת שירי רבאק 2",
