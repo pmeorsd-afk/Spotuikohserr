@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4788,
-  "last_updated": "2026-11-17T19:57:46.323Z",
+  "version": 4789,
+  "last_updated": "2026-11-17T19:57:55.350Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5PtOILSb1vQldcnH3sGufE",
+      "title": "תאמר לה",
+      "artist": "Tamir Gal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:57:55.350Z"
+    },
     {
       "id": "7z5yg5ydwWGJUksjJeCulx",
       "title": "Vesein Belibeinu - ותן בליבנו",
