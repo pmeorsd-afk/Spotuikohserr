@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4760,
-  "last_updated": "2026-11-17T19:53:51.169Z",
+  "version": 4761,
+  "last_updated": "2026-11-17T19:54:04.063Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1SN1vSPsr4V4tIUTR3s8YW",
+      "title": "Fast Car",
+      "artist": "Jonas Blue, Dakota",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:54:04.063Z"
+    },
     {
       "id": "1lfO0bqThTLimzHsvk3LrN",
       "title": "OWA OWA",
