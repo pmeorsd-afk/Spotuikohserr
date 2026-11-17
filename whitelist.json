@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4877,
-  "last_updated": "2026-11-17T20:17:12.041Z",
+  "version": 4878,
+  "last_updated": "2026-11-17T20:17:25.399Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7d71FNPLTLSj3rTxifeAke",
+      "title": "Risk It All",
+      "artist": "Mergui",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:17:25.399Z"
+    },
     {
       "id": "47fbjSoPpAyrqsR5SI0kYj",
       "title": "ילדים חרא",
