@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4642,
-  "last_updated": "2026-11-17T00:58:25.677Z",
+  "version": 4643,
+  "last_updated": "2026-11-17T00:58:39.045Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0hZOdxtj5Wi4T3F95s8cUO",
+      "title": "Nishmas Adam",
+      "artist": "Gabe Bauman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:58:39.045Z"
+    },
     {
       "id": "34vo6XRIxYBLIUhBWMMMv8",
       "title": "Chagigah - חגיגה",
