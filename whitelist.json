@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4964,
-  "last_updated": "2026-11-17T20:35:13.532Z",
+  "version": 4965,
+  "last_updated": "2026-11-17T20:35:26.766Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ZxZ3ZcOjgOEgsETBeEjhJ",
+      "title": "Moods",
+      "artist": "Scorey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:35:26.766Z"
+    },
     {
       "id": "02BTW4wd2eUJGJZsMiYd2b",
       "title": "Gambling",
