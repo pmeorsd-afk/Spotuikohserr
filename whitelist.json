@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4794,
-  "last_updated": "2026-11-17T19:58:46.571Z",
+  "version": 4795,
+  "last_updated": "2026-11-17T19:58:59.315Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3S4fO0AYSTRZ9Q4kVo6o2A",
+      "title": "שקרים",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:58:59.315Z"
+    },
     {
       "id": "14Ehqia75y2a4EibHrlt4m",
       "title": "בבוקר שאחרי",
