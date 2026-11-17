@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4745,
-  "last_updated": "2026-11-17T19:50:48.119Z",
+  "version": 4746,
+  "last_updated": "2026-11-17T19:51:01.221Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0nbXyq5TXYPCO7pr3N8S4I",
+      "title": "The Box",
+      "artist": "Roddy Ricch",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:51:01.221Z"
+    },
     {
       "id": "0FlcmZ13DGRmscCroro9GO",
       "title": "Body",
