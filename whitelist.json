@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4847,
-  "last_updated": "2026-11-17T20:10:36.055Z",
+  "version": 4848,
+  "last_updated": "2026-11-17T20:10:49.066Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5PqXw9phEz4VZIdcgeilWk",
+      "title": "Floating",
+      "artist": "Raviv Gazit",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:10:49.066Z"
+    },
     {
       "id": "1tgxANoVfsAk9N2R5oKaxb",
       "title": "שאגת הגוב - ביתר ירושלים",
