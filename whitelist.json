@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4529,
-  "last_updated": "2026-11-17T00:32:58.889Z",
+  "version": 4530,
+  "last_updated": "2026-11-17T00:33:11.691Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2oPilGeIeMzZm7USo5Gy12",
+      "title": "בת מלך",
+      "artist": "Haim Israel, Shlomi Shabat",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:33:11.691Z"
+    },
     {
       "id": "2zpIU1OroZ3mUzrnYqoLBa",
       "title": "Hear Me Out",
