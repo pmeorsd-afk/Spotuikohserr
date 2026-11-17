@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4841,
-  "last_updated": "2026-11-17T20:09:29.335Z",
+  "version": 4842,
+  "last_updated": "2026-11-17T20:09:42.324Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2nyRqcEnO9F6XGZk0Irt33",
+      "title": "הכל ורוד",
+      "artist": "Apocalipsa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:09:42.324Z"
+    },
     {
       "id": "64ytSB0mJV5vhcZA3yS54Q",
       "title": "תותים",
