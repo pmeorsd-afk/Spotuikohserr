@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4966,
-  "last_updated": "2026-11-17T20:35:40.226Z",
+  "version": 4967,
+  "last_updated": "2026-11-17T20:35:53.613Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0HFM97N55v1DzcB9GTsuXk",
+      "title": "04 - לייב מתוך אגן הים התיכון",
+      "artist": "Itay Levi, כאן גימל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:35:53.613Z"
+    },
     {
       "id": "6HuHyXviAdpmnQu73JHfBz",
       "title": "Ghost Town",
