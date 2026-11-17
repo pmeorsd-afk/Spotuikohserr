@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4627,
-  "last_updated": "2026-11-17T00:55:02.582Z",
+  "version": 4628,
+  "last_updated": "2026-11-17T00:55:15.843Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1sMVDDLvBs8g4j0u42ujW3",
+      "title": "מלאכים",
+      "artist": "שרקי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:55:15.843Z"
+    },
     {
       "id": "3pcIScMk5u9NRJrWhic6oN",
       "title": "Ayeka",
