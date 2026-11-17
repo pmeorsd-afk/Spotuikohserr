@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4695,
-  "last_updated": "2026-11-17T01:10:12.502Z",
+  "version": 4696,
+  "last_updated": "2026-11-17T01:10:36.774Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0NnecF2AT3b6qCJHOIATJ3",
+      "title": "זה כל הקסם",
+      "artist": "Nimrod Lev, Orly Perl",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:10:36.774Z"
+    },
     {
       "id": "093hkza6ymC96cI5OfOuqU",
       "title": "פאף פאף פאס",
