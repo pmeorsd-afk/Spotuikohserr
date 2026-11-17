@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4853,
-  "last_updated": "2026-11-17T20:11:54.501Z",
+  "version": 4854,
+  "last_updated": "2026-11-17T20:12:07.443Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0aNuoWnDB6pM30KVoRuoYW",
+      "title": "אוהב לשנוא",
+      "artist": "Apocalipsa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:12:07.443Z"
+    },
     {
       "id": "2FY7b99s15jUprqC0M5NCT",
       "title": "Natural",
