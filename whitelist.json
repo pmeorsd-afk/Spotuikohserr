@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4646,
-  "last_updated": "2026-11-17T00:59:17.694Z",
+  "version": 4647,
+  "last_updated": "2026-11-17T00:59:30.511Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2c5vmR16OMaUN44hDeH4IX",
+      "title": "Life Is Good (החיים טובים)",
+      "artist": "Gabe Bauman, Werntatty, SHMN",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:59:30.511Z"
+    },
     {
       "id": "3vrgrYLTSlsTdep0Km0oh8",
       "title": "Not Today - Dear Yetzer Hara",
