@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4896,
-  "last_updated": "2026-11-17T20:21:22.899Z",
+  "version": 4897,
+  "last_updated": "2026-11-17T20:21:36.276Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0BjQrpj2lmuRluaxgs0jcx",
+      "title": "Ready for War (feat. Lil Tjay)",
+      "artist": "Street Ruff Money, Lil Tjay",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:21:36.276Z"
+    },
     {
       "id": "5l0uFjA731wPYH8CkR7K1Y",
       "title": "Mood Swings",
