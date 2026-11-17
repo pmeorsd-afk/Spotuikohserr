@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4982,
-  "last_updated": "2026-11-17T20:39:42.829Z",
+  "version": 4983,
+  "last_updated": "2026-11-17T20:39:56.511Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1idjTVgJlzigOT9DgKSZQJ",
+      "title": "Kol Tov",
+      "artist": "Yeedle, Chaim Lazer Werdyger",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:39:56.511Z"
+    },
     {
       "id": "0dutoNQWL1xJBU5JpOcbNi",
       "title": "בסיבוב הבא (לייב מתוך 'העשירייה' בכאן גימל)",
