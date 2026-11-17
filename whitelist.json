@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4674,
-  "last_updated": "2026-11-17T01:05:42.167Z",
+  "version": 4675,
+  "last_updated": "2026-11-17T01:05:55.204Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2zDNPiCJZfuFmGX3njOBt8",
+      "title": "Come Back",
+      "artist": "Eli Dachs, Werntatty",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:05:55.204Z"
+    },
     {
       "id": "4nGLwMWXXSRbiRxPWDXOPj",
       "title": "I Don't Need to Fly",
