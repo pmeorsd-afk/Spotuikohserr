@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4575,
-  "last_updated": "2026-11-17T00:43:30.622Z",
+  "version": 4576,
+  "last_updated": "2026-11-17T00:43:43.476Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6cs5V2FNlQc1Izn3W6p5jX",
+      "title": "בחורים טובים",
+      "artist": "ליעד מאיר, זיו שביט",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:43:43.476Z"
+    },
     {
       "id": "0WnlDh7F0ZAN3QLdgYL28J",
       "title": "מאבדים שליטה",
