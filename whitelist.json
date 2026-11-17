@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4694,
-  "last_updated": "2026-11-17T01:09:59.531Z",
+  "version": 4695,
+  "last_updated": "2026-11-17T01:10:12.502Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "093hkza6ymC96cI5OfOuqU",
+      "title": "פאף פאף פאס",
+      "artist": "Apocalipsa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:10:12.502Z"
+    },
     {
       "id": "2lAP4Yor1MGL0rEPFie8y6",
       "title": "בן אדם",
