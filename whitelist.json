@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4573,
-  "last_updated": "2026-11-17T00:43:04.790Z",
+  "version": 4574,
+  "last_updated": "2026-11-17T00:43:17.734Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "42E4wT2FgrKLWRmj5PebSx",
+      "title": "חרבות של אהבה",
+      "artist": "ניב אבוטבול",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:43:17.734Z"
+    },
     {
       "id": "4ukTLLU39V3XdCA0cYSWln",
       "title": "זורם לך בגוף",
