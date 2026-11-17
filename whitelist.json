@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4986,
-  "last_updated": "2026-11-17T20:40:38.704Z",
+  "version": 4987,
+  "last_updated": "2026-11-17T20:40:52.575Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7o0ouOx18hqHN0rdgz67lX",
+      "title": "05 - Live",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:40:52.575Z"
+    },
     {
       "id": "0FRkQefpzpNeiBViqncHpM",
       "title": "Ein Davar Ra - DZ REMIX",
