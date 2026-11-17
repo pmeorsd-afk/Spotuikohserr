@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4755,
-  "last_updated": "2026-11-17T19:52:59.012Z",
+  "version": 4756,
+  "last_updated": "2026-11-17T19:53:12.038Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1lOe9qE0vR9zwWQAOk6CoO",
+      "title": "Ransom",
+      "artist": "Lil Tecca",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:53:12.038Z"
+    },
     {
       "id": "4tII4kpjlTpBu2Hp00roep",
       "title": "מהודו להודו",
