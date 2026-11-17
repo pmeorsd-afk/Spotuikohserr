@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4711,
-  "last_updated": "2026-11-17T04:56:36.159Z",
+  "version": 4712,
+  "last_updated": "2026-11-17T04:56:48.552Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0svmHXJVwpVuqaYH09r7ka",
+      "title": "מרגיש כמו בוס עם שרק",
+      "artist": "Apocalipsa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T04:56:48.552Z"
+    },
     {
       "id": "0lzNuslcoWuJIePcCcgkxg",
       "title": "Gandagana",
