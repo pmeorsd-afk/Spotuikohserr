@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4851,
-  "last_updated": "2026-11-17T20:11:28.368Z",
+  "version": 4852,
+  "last_updated": "2026-11-17T20:11:41.564Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4cR0KEaVzley1UOw70CBCo",
+      "title": "בני ברית",
+      "artist": "Hoodyman, 9 מ''מ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:11:41.564Z"
+    },
     {
       "id": "7ntqN17Oz6p8Insym1DQEA",
       "title": "Hakaitz Haacharon",
