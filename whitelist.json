@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4742,
-  "last_updated": "2026-11-17T19:50:21.680Z",
+  "version": 4743,
+  "last_updated": "2026-11-17T19:50:34.819Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "42VsgItocQwOQC3XWZ8JNA",
+      "title": "FE!N (feat. Playboi Carti)",
+      "artist": "Travis Scott, Playboi Carti",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:50:34.819Z"
+    },
     {
       "id": "7tICCrK3CcyRFKza7yrR0z",
       "title": "Homewrecker",
