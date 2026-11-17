@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4867,
-  "last_updated": "2026-11-17T20:14:59.555Z",
+  "version": 4868,
+  "last_updated": "2026-11-17T20:15:13.365Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0DErRzHFkW6XGurw4qmtsK",
+      "title": "שקיות של זבל",
+      "artist": "Ron Sky Nesher",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:15:13.365Z"
+    },
     {
       "id": "30HZfUucfwWAOVAVUCsfJj",
       "title": "בלדה לסוכן כפול",
