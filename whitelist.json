@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4620,
-  "last_updated": "2026-11-17T00:53:32.658Z",
+  "version": 4621,
+  "last_updated": "2026-11-17T00:53:45.790Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6rmwyRYkczRpyi9KAqWif6",
+      "title": "Shema Koleinu",
+      "artist": "Yaakov Rosenblum, Coby Walden",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:53:45.790Z"
+    },
     {
       "id": "2ryUWp0m61L1ZtdGsS5BJ9",
       "title": "Achas",
