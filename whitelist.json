@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4820,
-  "last_updated": "2026-11-17T20:04:29.495Z",
+  "version": 4821,
+  "last_updated": "2026-11-17T20:04:42.366Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Wld1ZrVF5kmAzyIV9yPEW",
+      "title": "מלאכים",
+      "artist": "Mayor, Sagol 59",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:04:42.366Z"
+    },
     {
       "id": "0h0bGubWnn2k4c4b8HYdOX",
       "title": "נשל הנחש",
