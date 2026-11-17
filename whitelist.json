@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4832,
-  "last_updated": "2026-11-17T20:07:19.918Z",
+  "version": 4833,
+  "last_updated": "2026-11-17T20:07:44.829Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6f08saOLZyQr0ulFKUzFeL",
+      "title": "Easy On My Heart",
+      "artist": "Gabry Ponte",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:07:44.829Z"
+    },
     {
       "id": "5JRP4APTJj20DuTa77Gqv4",
       "title": "מודדת",
