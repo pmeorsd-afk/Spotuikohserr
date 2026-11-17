@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4594,
-  "last_updated": "2026-11-17T00:47:35.833Z",
+  "version": 4595,
+  "last_updated": "2026-11-17T00:47:48.361Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6mFkJmJqdDVQ1REhVfGgd1",
+      "title": "Wish You Were Here",
+      "artist": "Pink Floyd",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:47:48.361Z"
+    },
     {
       "id": "2GxAnxZF4gHzuflYzgTTy8",
       "title": "ילדמסדרון",
