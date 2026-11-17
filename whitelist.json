@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4887,
-  "last_updated": "2026-11-17T20:19:24.347Z",
+  "version": 4888,
+  "last_updated": "2026-11-17T20:19:37.548Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "19LCFfVG3ISuCS7IJmPA4I",
+      "title": "Good Shabbos",
+      "artist": "Thank You Hashem, Mendy Worch",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:19:37.548Z"
+    },
     {
       "id": "1kOMsxXInHtZNlzThiau7l",
       "title": "Furthest Thing",
