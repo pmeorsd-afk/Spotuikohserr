@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5009,
-  "last_updated": "2026-11-17T21:07:38.177Z",
+  "version": 5010,
+  "last_updated": "2026-11-17T21:11:59.218Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Axl2Rjg3wOC3JHju1Gess",
+      "title": "Freestyler (Rock The Microphone)",
+      "artist": "Lost Frequencies, Bomfunk MC's",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T21:11:59.218Z"
+    },
     {
       "id": "6ZkChu5rQ46XfxN1ytjQBC",
       "title": "Mr. Vain",
