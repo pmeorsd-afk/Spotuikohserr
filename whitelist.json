@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4865,
-  "last_updated": "2026-11-17T20:14:31.946Z",
+  "version": 4866,
+  "last_updated": "2026-11-17T20:14:45.510Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0hXAcagMIPuvsf4EDC0HJX",
+      "title": "אלירן סבג",
+      "artist": "Dudu Faruk",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:14:45.510Z"
+    },
     {
       "id": "0uletvm96FMtFe2Yu8OO0L",
       "title": "פאנצ'ים",
