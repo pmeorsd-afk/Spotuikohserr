@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4950,
-  "last_updated": "2026-11-17T20:33:02.025Z",
+  "version": 4951,
+  "last_updated": "2026-11-17T20:33:14.895Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1CcrrtoxE5pobJYYgWkSG6",
+      "title": "Arba Bavot (Baal HaTanya) Four Gates - Live",
+      "artist": "הרב יאיר כלב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:33:14.895Z"
+    },
     {
       "id": "2DnyKpPcFpC460wLJeGzOs",
       "title": "23 Island",
