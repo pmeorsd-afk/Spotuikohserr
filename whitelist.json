@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4759,
-  "last_updated": "2026-11-17T19:53:41.867Z",
+  "version": 4760,
+  "last_updated": "2026-11-17T19:53:51.169Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1lfO0bqThTLimzHsvk3LrN",
+      "title": "OWA OWA",
+      "artist": "Lil Tecca",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:53:51.169Z"
+    },
     {
       "id": "2WBNUsV0WH7Cmjr71viWfC",
       "title": "מסע",
