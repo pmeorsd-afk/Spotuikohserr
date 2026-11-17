@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4857,
-  "last_updated": "2026-11-17T20:12:46.937Z",
+  "version": 4858,
+  "last_updated": "2026-11-17T20:13:00.165Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5S9VxagUMB4zYCCoaRriDe",
+      "title": "אלוקים ישמור עלייך",
+      "artist": "Haim Ifargan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:13:00.165Z"
+    },
     {
       "id": "0OFG35P5uPTRO33IfDAjk1",
       "title": "זיכרון מתוק",
