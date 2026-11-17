@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4930,
-  "last_updated": "2026-11-17T20:28:39.231Z",
+  "version": 4931,
+  "last_updated": "2026-11-17T20:28:51.939Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3IJYUaN3tx04S4TYyZHKoP",
+      "title": "Party Girl",
+      "artist": "StaySolidRocky",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:28:51.939Z"
+    },
     {
       "id": "5zPTc1mblCrVgMmPzrTMfQ",
       "title": "Better Off (Alone, Pt. III)",
