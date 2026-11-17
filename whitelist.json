@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4905,
-  "last_updated": "2026-11-17T20:23:20.589Z",
+  "version": 4906,
+  "last_updated": "2026-11-17T20:23:33.620Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0tgVpDi06FyKpA1z0VMD4v",
+      "title": "Perfect",
+      "artist": "Ed Sheeran",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:23:33.620Z"
+    },
     {
       "id": "3QzAOrNlsabgbMwlZt7TAY",
       "title": "Ballin' (with Roddy Ricch)",
