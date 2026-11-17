@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5003,
-  "last_updated": "2026-11-17T21:04:01.392Z",
+  "version": 5004,
+  "last_updated": "2026-11-17T21:04:04.788Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "285HeuLxsngjFn4GGegGNm",
+      "title": "Hey Mama (feat. Nicki Minaj, Bebe Rexha & Afrojack)",
+      "artist": "David Guetta, AFROJACK, Bebe Rexha, Nicki Minaj",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T21:04:04.788Z"
+    },
     {
       "id": "2P4OICZRVAQcYAV2JReRfj",
       "title": "Waiting For Love",
