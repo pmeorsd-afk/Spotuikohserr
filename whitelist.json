@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4730,
-  "last_updated": "2026-11-17T19:48:09.675Z",
+  "version": 4731,
+  "last_updated": "2026-11-17T19:48:22.947Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1JLn8RhQzHz3qDqsChcmBl",
+      "title": "I Want to Know What Love Is - 1999 Remaster",
+      "artist": "Foreigner",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:48:22.947Z"
+    },
     {
       "id": "3nFJbZCHP4d9vduKjJLdBL",
       "title": "Never Too Much",
