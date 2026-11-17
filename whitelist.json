@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5014,
-  "last_updated": "2026-11-17T21:23:27.057Z",
+  "version": 5015,
+  "last_updated": "2026-11-17T21:23:45.156Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "08ELAHAbjyKUfwMF7acdAN",
+      "title": "Voyager #2",
+      "artist": "Beyond The Last Star",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T21:23:45.156Z"
+    },
     {
       "id": "2wtThYMGGoZQ18CIwBlbZv",
       "title": "Better and better",
