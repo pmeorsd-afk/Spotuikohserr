@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4717,
-  "last_updated": "2026-11-17T04:58:04.592Z",
+  "version": 4718,
+  "last_updated": "2026-11-17T04:58:16.943Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1tQ0okq3lujj73dCZpALFi",
+      "title": "BOEE",
+      "artist": "EKEV, Aryeh Kunstler",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T04:58:16.943Z"
+    },
     {
       "id": "1kLG1wbWHXsdhnJ7qdeemI",
       "title": "Keli",
