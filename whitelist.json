@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4565,
-  "last_updated": "2026-11-17T00:41:11.320Z",
+  "version": 4566,
+  "last_updated": "2026-11-17T00:41:24.362Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "12pGzBnlpZzmwUH90EkuYK",
+      "title": "כמה טוב שנפגשנו",
+      "artist": "Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:41:24.362Z"
+    },
     {
       "id": "4vC0hR1j6QvX1ilBw0TDCM",
       "title": "שוונג",
