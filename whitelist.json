@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4808,
-  "last_updated": "2026-11-17T20:01:51.230Z",
+  "version": 4809,
+  "last_updated": "2026-11-17T20:02:04.729Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4568BYpCFDz90315v75qzG",
+      "title": "אישה נאמנה",
+      "artist": "ישי לוי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:02:04.729Z"
+    },
     {
       "id": "6nek1Nin9q48AVZcWs9e9D",
       "title": "Paradise",
