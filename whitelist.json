@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4536,
-  "last_updated": "2026-11-17T00:34:50.469Z",
+  "version": 4537,
+  "last_updated": "2026-11-17T00:35:03.159Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "15vKxXiO4mlTAZk94For4f",
+      "title": "I Can't Let Go",
+      "artist": "Air Supply",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:35:03.159Z"
+    },
     {
       "id": "5WICDZdY0cvmb9dhiGRpXm",
       "title": "It's Not Too Late",
