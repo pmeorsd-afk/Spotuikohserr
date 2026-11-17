@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4985,
-  "last_updated": "2026-11-17T20:40:25.804Z",
+  "version": 4986,
+  "last_updated": "2026-11-17T20:40:38.704Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0FRkQefpzpNeiBViqncHpM",
+      "title": "Ein Davar Ra - DZ REMIX",
+      "artist": "David Zeitouni",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:40:38.704Z"
+    },
     {
       "id": "7pgoCxqjm2Wi9QdoCNsyxq",
       "title": "הכל יהיה בסדר",
