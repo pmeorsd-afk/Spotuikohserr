@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4766,
-  "last_updated": "2026-11-17T19:55:05.092Z",
+  "version": 4768,
+  "last_updated": "2026-11-17T19:55:17.769Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:wMWFBgNmF5M",
+      "title": "שלומי כהן - ומלאכים מתוך הקומזינג 2",
+      "artist": "מיכל נועם",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:55:17.769Z"
+    },
+    {
+      "id": "0ZfByLXCeKchuj7zi1CJ0S",
+      "title": "Stolen Dance",
+      "artist": "Milky Chance",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:55:17.769Z"
+    },
     {
       "id": "5bGG1abhVIUm6EAa36ipRX",
       "title": "One Day / Reckoning Song (Wankelmut Remix) Radio Edit",
