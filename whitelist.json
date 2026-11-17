@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4844,
-  "last_updated": "2026-11-17T20:10:08.412Z",
+  "version": 4845,
+  "last_updated": "2026-11-17T20:10:21.991Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1mKDH2ybXKnd8DmCzC8kic",
+      "title": "השיר האחרון 2026",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:10:21.991Z"
+    },
     {
       "id": "4iT3fkTBkdJX45sFUwATOK",
       "title": "מחרוזת שמועות - Live",
