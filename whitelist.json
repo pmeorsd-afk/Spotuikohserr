@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4687,
-  "last_updated": "2026-11-17T01:08:29.885Z",
+  "version": 4688,
+  "last_updated": "2026-11-17T01:08:42.893Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2t78CRkX2w1uhOVa4TkH4Y",
+      "title": "מחילה",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:08:42.893Z"
+    },
     {
       "id": "6pIvz1zIDkw5pZ5eTbDiwl",
       "title": "Eishes Chayil",
