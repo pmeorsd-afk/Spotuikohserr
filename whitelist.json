@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4751,
-  "last_updated": "2026-11-17T19:52:07.558Z",
+  "version": 4752,
+  "last_updated": "2026-11-17T19:52:20.118Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7m1mYXGOc4qhvS4xqeEy9s",
+      "title": "משפחת שדה",
+      "artist": "Alin Golan, ליאם גולן, Ilanit Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:52:20.118Z"
+    },
     {
       "id": "6l3X7le3OXz2bb0fdkvyfx",
       "title": "לילה לבן",
