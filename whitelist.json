@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4700,
-  "last_updated": "2026-11-17T01:11:38.554Z",
+  "version": 4701,
+  "last_updated": "2026-11-17T01:11:51.378Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4NNlfU5nEUTXhbLCVeRn3t",
+      "title": "כמו אריה",
+      "artist": "טל בן גיגי, אופק אברג'יל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:11:51.378Z"
+    },
     {
       "id": "0G8ooolx3x5DNkKkcZ19zp",
       "title": "שוב היא כאן",
