@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4801,
-  "last_updated": "2026-11-17T20:00:18.472Z",
+  "version": 4802,
+  "last_updated": "2026-11-17T20:00:31.780Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "013kWW54rscSsE0ZAR3yEv",
+      "title": "רחמו עלי",
+      "artist": "Avi Biter, Tamir Gal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:00:31.780Z"
+    },
     {
       "id": "6KLAJmzQ12WTvCxJReGXgY",
       "title": "לב קבור",
