@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4726,
-  "last_updated": "2026-11-17T19:47:06.725Z",
+  "version": 4727,
+  "last_updated": "2026-11-17T19:47:19.614Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "57UnGHfgKpD4dOZuqW017Y",
+      "title": "חתול רחוב",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:47:19.614Z"
+    },
     {
       "id": "3rIVUWVQQLciizMd8krWm6",
       "title": "Avinu",
