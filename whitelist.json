@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4800,
-  "last_updated": "2026-11-17T20:00:05.352Z",
+  "version": 4801,
+  "last_updated": "2026-11-17T20:00:18.472Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6KLAJmzQ12WTvCxJReGXgY",
+      "title": "לב קבור",
+      "artist": "מאור אדרי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:00:18.472Z"
+    },
     {
       "id": "5HfIVbNNb2BUzY9l5FVtzN",
       "title": "חייאתי",
