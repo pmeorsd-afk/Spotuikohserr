@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4734,
-  "last_updated": "2026-11-17T19:49:01.899Z",
+  "version": 4735,
+  "last_updated": "2026-11-17T19:49:14.880Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7lv4SU2ATVjQJp6Jia0x7N",
+      "title": "Dark Thoughts",
+      "artist": "Lil Tecca",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:49:14.880Z"
+    },
     {
       "id": "0FIDCNYYjNvPVimz5icugS",
       "title": "Timeless (feat Playboi Carti)",
