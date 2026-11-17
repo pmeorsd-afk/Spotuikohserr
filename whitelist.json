@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4797,
-  "last_updated": "2026-11-17T19:59:25.469Z",
+  "version": 4798,
+  "last_updated": "2026-11-17T19:59:38.609Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7H57lOdwbBbs4D5T2cr3x9",
+      "title": "לא עוזב את העיר",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:59:38.609Z"
+    },
     {
       "id": "67bWHaUcxAKYRIr7etUl4Y",
       "title": "בלילות חשוכים",
