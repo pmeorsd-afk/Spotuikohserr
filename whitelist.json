@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4690,
-  "last_updated": "2026-11-17T01:09:08.646Z",
+  "version": 4691,
+  "last_updated": "2026-11-17T01:09:21.539Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5vl4ZFx7gPaRUmhmaCh4uo",
+      "title": "כוכב נופל",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:09:21.539Z"
+    },
     {
       "id": "6cTJXQc1oRqea0FbZXIAyj",
       "title": "Nights Like These",
