@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4568,
-  "last_updated": "2026-11-17T00:41:49.743Z",
+  "version": 4569,
+  "last_updated": "2026-11-17T00:42:02.481Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "74TDOvNO02xCRGTaB8LTKf",
+      "title": "פשוט אנשים",
+      "artist": "Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:42:02.481Z"
+    },
     {
       "id": "62Tyxb591vIfvygAxZp7lc",
       "title": "אין נחמה",
