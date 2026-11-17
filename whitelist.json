@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4972,
-  "last_updated": "2026-11-17T20:37:10.961Z",
+  "version": 4973,
+  "last_updated": "2026-11-17T20:37:24.156Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4rlaGqWwl1cM6EPERYODrw",
+      "title": "פשוטים",
+      "artist": "Akiva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:37:24.156Z"
+    },
     {
       "id": "5UpURNxX2GdBrv04ln9ncK",
       "title": "מה עובר עלייך - Live",
