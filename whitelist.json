@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4845,
-  "last_updated": "2026-11-17T20:10:21.991Z",
+  "version": 4846,
+  "last_updated": "2026-11-17T20:10:32.780Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1aeIIiVOQLeqRSzmCDg6Wq",
+      "title": "רק שהם יותר",
+      "artist": "משה כורסיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:10:32.780Z"
+    },
     {
       "id": "1mKDH2ybXKnd8DmCzC8kic",
       "title": "השיר האחרון 2026",
