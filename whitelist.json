@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4776,
-  "last_updated": "2026-11-17T19:56:40.713Z",
+  "version": 4777,
+  "last_updated": "2026-11-17T19:56:50.117Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0yp0DS834QwsMomvYK0mRq",
+      "title": "מכור אלייך",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:56:50.117Z"
+    },
     {
       "id": "youtube:xZWSaQSG1Ws",
       "title": "המנגנים מציג: \"קומטאנץ\" מוטי שטיינמץ - כאייל תערוג | Hamenagnim Presents: \"Kumtantz\" Motty Steinmetz",
