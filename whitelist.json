@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4876,
-  "last_updated": "2026-11-17T20:16:58.486Z",
+  "version": 4877,
+  "last_updated": "2026-11-17T20:17:12.041Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "47fbjSoPpAyrqsR5SI0kYj",
+      "title": "ילדים חרא",
+      "artist": "Balishag, פוצ'ו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:17:12.041Z"
+    },
     {
       "id": "5D1e4DzsS71lMhR0s4uzvb",
       "title": "Hofshia",
