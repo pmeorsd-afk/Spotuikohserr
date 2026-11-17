@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4659,
-  "last_updated": "2026-11-17T01:02:05.007Z",
+  "version": 4660,
+  "last_updated": "2026-11-17T01:02:18.289Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7Au9OxzjVtnJ0dJUIUr9o1",
+      "title": "Avinu Malkenu",
+      "artist": "Akiva David",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:02:18.289Z"
+    },
     {
       "id": "6Tc1hUyauxW4fMzh81KAu5",
       "title": "עד שהגעת אליי",
