@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4553,
-  "last_updated": "2026-11-17T00:38:37.290Z",
+  "version": 4554,
+  "last_updated": "2026-11-17T00:38:49.750Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7x4UW1hIIEhU3hlMclJckP",
+      "title": "עור ברווז",
+      "artist": "Arutz Hakibud, Lidoy, Astma, Shaked Ferrera",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:38:49.750Z"
+    },
     {
       "id": "5pyYuRscrW9zjcPt66ycEk",
       "title": "שיר חרא",
