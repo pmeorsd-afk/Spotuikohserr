@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4666,
-  "last_updated": "2026-11-17T01:03:36.470Z",
+  "version": 4667,
+  "last_updated": "2026-11-17T01:04:00.718Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "25UI63Ca6NSUR85YdXGSFV",
+      "title": "Eternal",
+      "artist": "TAI",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:04:00.718Z"
+    },
     {
       "id": "5e4IAgIogAh8NoV9UAI8SZ",
       "title": "Unstoppable",
