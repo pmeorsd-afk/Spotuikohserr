@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4778,
-  "last_updated": "2026-11-17T19:56:54.208Z",
+  "version": 4779,
+  "last_updated": "2026-11-17T19:56:58.786Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:9CazoSZk-58",
+      "title": "yehuda green havdala",
+      "artist": "muusicaa10",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:56:58.786Z"
+    },
     {
       "id": "youtube:g3pJnrmwEJ8",
       "title": "ילד הפלא ארי רייך-\"יהיו לרצון\".הקליפ הרשמי . Ari Reich Hihiyu Leratzon",
