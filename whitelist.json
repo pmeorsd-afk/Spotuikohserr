@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4617,
-  "last_updated": "2026-11-17T00:52:54.106Z",
+  "version": 4618,
+  "last_updated": "2026-11-17T00:53:06.891Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7ifcWuObvExirL0FlKINGT",
+      "title": "Elokai",
+      "artist": "Shalsheles, Yaakov Rosenblum, EZZI",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:53:06.891Z"
+    },
     {
       "id": "0PlcDbrZAreLidFTPiyDmh",
       "title": "מכוון לירח",
