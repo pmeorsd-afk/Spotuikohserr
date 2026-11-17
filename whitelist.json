@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4595,
-  "last_updated": "2026-11-17T00:47:48.361Z",
+  "version": 4596,
+  "last_updated": "2026-11-17T00:48:01.351Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5QnVTCKelwDTjJ0ugFIDFp",
+      "title": "תפילות וצעקות",
+      "artist": "Akiva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:48:01.351Z"
+    },
     {
       "id": "6mFkJmJqdDVQ1REhVfGgd1",
       "title": "Wish You Were Here",
