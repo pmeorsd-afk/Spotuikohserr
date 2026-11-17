@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5010,
-  "last_updated": "2026-11-17T21:11:59.218Z",
+  "version": 5011,
+  "last_updated": "2026-11-17T21:12:07.320Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2qgV9gYYOEysuSyknNpJmA",
+      "title": "מתי זה יעבור",
+      "artist": "Moti Taka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T21:12:07.320Z"
+    },
     {
       "id": "5Axl2Rjg3wOC3JHju1Gess",
       "title": "Freestyler (Rock The Microphone)",
