@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4592,
-  "last_updated": "2026-11-17T00:47:10.423Z",
+  "version": 4593,
+  "last_updated": "2026-11-17T00:47:23.011Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4UtozLapYJ3K3MAXmrGUa6",
+      "title": "שוד",
+      "artist": "Maor Ashkenazi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:47:23.011Z"
+    },
     {
       "id": "5XxAP26wrHn23Wik2NaNaC",
       "title": "וואן און וואן",
