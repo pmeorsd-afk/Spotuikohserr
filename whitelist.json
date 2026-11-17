@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4685,
-  "last_updated": "2026-11-17T01:08:04.407Z",
+  "version": 4686,
+  "last_updated": "2026-11-17T01:08:17.132Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4v7ZlMrPZ2DuTBkTw1dJfu",
+      "title": "WITH YOU",
+      "artist": "Akiva David",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:08:17.132Z"
+    },
     {
       "id": "0s4oyx6fjamXxoAtMP9U3C",
       "title": "רוצה אלייך",
