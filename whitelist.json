@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4634,
-  "last_updated": "2026-11-17T00:56:42.630Z",
+  "version": 4635,
+  "last_updated": "2026-11-17T00:56:55.186Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "442iYEVlS8kbeiMzAedNTQ",
+      "title": "Crying Out To You",
+      "artist": "Gabe Bauman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:56:55.186Z"
+    },
     {
       "id": "1wIyr1y5wiWqo7nqbxHpWt",
       "title": "FRIENDS",
