@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4923,
-  "last_updated": "2026-11-17T20:27:06.911Z",
+  "version": 4924,
+  "last_updated": "2026-11-17T20:27:20.259Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "40mjsnRjCpycdUw3xhS20g",
+      "title": "GATTI",
+      "artist": "JACKBOYS, Pop Smoke, Travis Scott",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:27:20.259Z"
+    },
     {
       "id": "0FTmksd2dxiE5e3rWyJXs6",
       "title": "back to friends",
