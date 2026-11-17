@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4783,
-  "last_updated": "2026-11-17T19:57:15.872Z",
+  "version": 4784,
+  "last_updated": "2026-11-17T19:57:20.888Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:WCK2V8LmVrM",
+      "title": "מאיר גפני - מידת הרחמים  / Meir Gafni - \" Midat Harachamim \" Official Music Video",
+      "artist": "Yoni Zur",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:57:20.888Z"
+    },
     {
       "id": "2QVwmWJlB0lvp0QqAUxAhR",
       "title": "מחרוזת פתאום אהבה",
