@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4712,
-  "last_updated": "2026-11-17T04:56:48.552Z",
+  "version": 4713,
+  "last_updated": "2026-11-17T04:57:12.655Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "21er2Oe2k6dRTtSPrh1bm5",
+      "title": "כל מעייני",
+      "artist": "Noifeld's Glasses, Ishay Ribo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T04:57:12.655Z"
+    },
     {
       "id": "0svmHXJVwpVuqaYH09r7ka",
       "title": "מרגיש כמו בוס עם שרק",
