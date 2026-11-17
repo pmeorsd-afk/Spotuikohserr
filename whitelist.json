@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4714,
-  "last_updated": "2026-11-17T04:57:25.464Z",
+  "version": 4715,
+  "last_updated": "2026-11-17T04:57:38.598Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ALQx0b9nKvk85P6hFlSRD",
+      "title": "הכל עוד אפשרי",
+      "artist": "Akiva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T04:57:38.598Z"
+    },
     {
       "id": "6P2TGX8H3uTdysCrfbokRq",
       "title": "מה למדתי (עם רוישה ומאור אשכנזי)",
