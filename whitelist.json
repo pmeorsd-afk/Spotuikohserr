@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4599,
-  "last_updated": "2026-11-17T00:48:39.079Z",
+  "version": 4600,
+  "last_updated": "2026-11-17T00:48:52.243Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ynaRz7EuNbDrNrlr3QUjP",
+      "title": "Danza Kuduro - Version MTO",
+      "artist": "Lucenzo, Don Omar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:48:52.243Z"
+    },
     {
       "id": "3PQLYVskjUeRmRIfECsL0X",
       "title": "No Woman No Cry",
