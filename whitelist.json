@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4543,
-  "last_updated": "2026-11-17T00:36:20.160Z",
+  "version": 4544,
+  "last_updated": "2026-11-17T00:36:43.959Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3SZEvCaUPmEktLt71ezafI",
+      "title": "יש חתונה פה",
+      "artist": "Itzik Eshel, דיג'יי ניסו סלוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:36:43.959Z"
+    },
     {
       "id": "1zLBsSVxETQOfINOLYvT5m",
       "title": "GIRL LIKE ME",
