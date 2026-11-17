@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4651,
-  "last_updated": "2026-11-17T01:00:22.198Z",
+  "version": 4652,
+  "last_updated": "2026-11-17T01:00:35.006Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1wdKCnniMtF9IShE44s0qp",
+      "title": "אבא תודה",
+      "artist": "Akiva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:00:35.006Z"
+    },
     {
       "id": "4GXu8TU1yvSbrtvs84lGcb",
       "title": "Born For This",
