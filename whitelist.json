@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5021,
-  "last_updated": "2026-11-17T22:14:01.336Z",
+  "version": 5022,
+  "last_updated": "2026-11-17T22:14:05.256Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6LftCpllvCxM72X9yeFxKk",
+      "title": "אדון הסליחות (רמיקס)",
+      "artist": "ישי לפידות, Moshe Louk, ישראל סוסנה ותזמורתו, Dj.יהודה מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T22:14:05.256Z"
+    },
     {
       "id": "2jCP2LzrztPq7MSwKNP28j",
       "title": "אלבי",
