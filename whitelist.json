@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4671,
-  "last_updated": "2026-11-17T01:05:03.492Z",
+  "version": 4672,
+  "last_updated": "2026-11-17T01:05:16.434Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6prOEtHb3w47L7P0JvsXPA",
+      "title": "In Our Days",
+      "artist": "Gabe Bauman, Werntatty",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:05:16.434Z"
+    },
     {
       "id": "2V7mMbQkOT2jTc8xHYLhpB",
       "title": "I'll Make It Back",
