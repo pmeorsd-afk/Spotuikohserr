@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4933,
-  "last_updated": "2026-11-17T20:29:17.829Z",
+  "version": 4934,
+  "last_updated": "2026-11-17T20:29:30.406Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3BomnHfqKZCdPJC9bkGBjE",
+      "title": "On My Way",
+      "artist": "Alan Walker, Sabrina Carpenter, Farruko",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:29:30.406Z"
+    },
     {
       "id": "2U5WueTLIK5WJLD7mvDODv",
       "title": "Wishing Well",
