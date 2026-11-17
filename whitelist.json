@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4525,
-  "last_updated": "2026-11-17T00:32:07.400Z",
+  "version": 4526,
+  "last_updated": "2026-11-17T00:32:20.223Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ZTOjC8lXAXK5AUw4SRfn1",
+      "title": "Baglami",
+      "artist": "DALI",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:32:20.223Z"
+    },
     {
       "id": "4BUTrHlGO4AHYTujkzA3IE",
       "title": "מחרוזת: חביבי יעני",
