@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4793,
-  "last_updated": "2026-11-17T19:58:33.125Z",
+  "version": 4794,
+  "last_updated": "2026-11-17T19:58:46.571Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "14Ehqia75y2a4EibHrlt4m",
+      "title": "בבוקר שאחרי",
+      "artist": "שריף",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:58:46.571Z"
+    },
     {
       "id": "2n9xsL0chAlhYrNYXwpqhv",
       "title": "כשאחר",
