@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4756,
-  "last_updated": "2026-11-17T19:53:12.038Z",
+  "version": 4757,
+  "last_updated": "2026-11-17T19:53:25.081Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4GUGmEgzyUbeagD0GpFuyU",
+      "title": "הכל הכל טוב",
+      "artist": "Gil Vain, דוד לב ארי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:53:25.081Z"
+    },
     {
       "id": "1lOe9qE0vR9zwWQAOk6CoO",
       "title": "Ransom",
