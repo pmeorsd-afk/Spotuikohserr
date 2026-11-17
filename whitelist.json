@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4940,
-  "last_updated": "2026-11-17T20:30:50.295Z",
+  "version": 4941,
+  "last_updated": "2026-11-17T20:31:03.450Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "50aavjIFmj5VB6Cxkcx2X7",
+      "title": "Never Letting Go",
+      "artist": "Alok, Gryffin, Julia Church",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:31:03.450Z"
+    },
     {
       "id": "02shCNmb6IvgB5jLqKjtkK",
       "title": "Nevada",
