@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4980,
-  "last_updated": "2026-11-17T20:39:05.884Z",
+  "version": 4981,
+  "last_updated": "2026-11-17T20:39:18.625Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3jmbzbM4SyaxhqWbiRgw6v",
+      "title": "הלב על השולחן",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:39:18.625Z"
+    },
     {
       "id": "5fpUswYssHoE9Jg9QadqOE",
       "title": "מישל - לייב מתוך העשירייה",
