@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4669,
-  "last_updated": "2026-11-17T01:04:26.822Z",
+  "version": 4670,
+  "last_updated": "2026-11-17T01:04:50.178Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1HvO3wrYYF4kL2TLfhD68I",
+      "title": "EVERY YID",
+      "artist": "Gabe Bauman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:04:50.178Z"
+    },
     {
       "id": "2gqwJ3x0pd34E1Hw3TNJZ3",
       "title": "מדויק ולא בערך",
