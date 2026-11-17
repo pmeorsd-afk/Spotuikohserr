@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4686,
-  "last_updated": "2026-11-17T01:08:17.132Z",
+  "version": 4687,
+  "last_updated": "2026-11-17T01:08:29.885Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6pIvz1zIDkw5pZ5eTbDiwl",
+      "title": "Eishes Chayil",
+      "artist": "Oli Assor",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:08:29.885Z"
+    },
     {
       "id": "4v7ZlMrPZ2DuTBkTw1dJfu",
       "title": "WITH YOU",
