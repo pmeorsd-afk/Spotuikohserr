@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4557,
-  "last_updated": "2026-11-17T00:39:28.716Z",
+  "version": 4558,
+  "last_updated": "2026-11-17T00:39:41.738Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2d8JBDJNZctqCfFzt9tFnv",
+      "title": "אורחים לרגע",
+      "artist": "Botzer, Akiva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:39:41.738Z"
+    },
     {
       "id": "2qmKKS5uZ7N3iZzQ4fx6j9",
       "title": "היו זמנים",
