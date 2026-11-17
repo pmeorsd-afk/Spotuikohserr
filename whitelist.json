@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4969,
-  "last_updated": "2026-11-17T20:36:30.980Z",
+  "version": 4970,
+  "last_updated": "2026-11-17T20:36:44.030Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4JRK0vJYbQGUswxlsiGeSt",
+      "title": "Valentine",
+      "artist": "YK Osiris",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:36:44.030Z"
+    },
     {
       "id": "3k0LQivRnB690bkznEXI1E",
       "title": "Old Streets",
