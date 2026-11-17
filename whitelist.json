@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5020,
-  "last_updated": "2026-11-17T22:13:55.736Z",
+  "version": 5021,
+  "last_updated": "2026-11-17T22:14:01.336Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2jCP2LzrztPq7MSwKNP28j",
+      "title": "אלבי",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T22:14:01.336Z"
+    },
     {
       "id": "youtube:0kNe-wRUZEY",
       "title": "ישי לפידות - בקש עבדך  (Prod. By Sruli)",
