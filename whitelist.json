@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4676,
-  "last_updated": "2026-11-17T01:06:08.115Z",
+  "version": 4677,
+  "last_updated": "2026-11-17T01:06:20.931Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3HjuFzHnFes4Y7GGdUK0sB",
+      "title": "Tzama",
+      "artist": "Jack Cohen, Rebbe Glanz, Gabe Bauman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:06:20.931Z"
+    },
     {
       "id": "66rpoOW4m5Sa2JWgWosl4k",
       "title": "נשמתי",
