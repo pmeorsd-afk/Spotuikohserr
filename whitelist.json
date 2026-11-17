@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4827,
-  "last_updated": "2026-11-17T20:06:13.585Z",
+  "version": 4828,
+  "last_updated": "2026-11-17T20:06:26.823Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0LcLOyu9n5qRTeax5IdewO",
+      "title": "Dynamite (feat. Sia)",
+      "artist": "Sean Paul, Sia",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:06:26.823Z"
+    },
     {
       "id": "4vuEk5qXUygw4SylOXjg9X",
       "title": "על המדרכה",
