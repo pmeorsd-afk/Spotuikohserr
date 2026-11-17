@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4885,
-  "last_updated": "2026-11-17T20:18:58.324Z",
+  "version": 4886,
+  "last_updated": "2026-11-17T20:19:11.220Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4w0MYbMkTmVYTW4RXGiVtB",
+      "title": "אנא בכח",
+      "artist": "Ken Burgess, Amiran Dvir, Ohad Moskowitz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:19:11.220Z"
+    },
     {
       "id": "6NMNgWgEAzde5M8U3lc6FN",
       "title": "Fake Love",
