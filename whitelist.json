@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4802,
-  "last_updated": "2026-11-17T20:00:31.780Z",
+  "version": 4803,
+  "last_updated": "2026-11-17T20:00:45.383Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6RDT142qyEOkVox6yh7CS4",
+      "title": "גן העדן שבליבך",
+      "artist": "Moshik Afia",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:00:45.383Z"
+    },
     {
       "id": "013kWW54rscSsE0ZAR3yEv",
       "title": "רחמו עלי",
