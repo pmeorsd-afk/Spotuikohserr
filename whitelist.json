@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4693,
-  "last_updated": "2026-11-17T01:09:46.827Z",
+  "version": 4694,
+  "last_updated": "2026-11-17T01:09:59.531Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2lAP4Yor1MGL0rEPFie8y6",
+      "title": "בן אדם",
+      "artist": "רגע מיוזיק, Avraham Aviv Alush",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:09:59.531Z"
+    },
     {
       "id": "3veP41hqImUDYUhBbnZG90",
       "title": "שיר של יום חולין",
