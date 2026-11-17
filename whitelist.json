@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4684,
-  "last_updated": "2026-11-17T01:07:51.143Z",
+  "version": 4685,
+  "last_updated": "2026-11-17T01:08:04.407Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0s4oyx6fjamXxoAtMP9U3C",
+      "title": "רוצה אלייך",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:08:04.407Z"
+    },
     {
       "id": "20S03wUsI8aTPyAUnjNDaF",
       "title": "You Dont Know (How Good it is :)",
