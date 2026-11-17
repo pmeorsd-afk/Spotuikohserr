@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4908,
-  "last_updated": "2026-11-17T20:23:57.729Z",
+  "version": 4909,
+  "last_updated": "2026-11-17T20:24:01.483Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4xVmPboqdKG78mkqZ0sn1m",
+      "title": "What You Know Bout Love",
+      "artist": "Pop Smoke",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:24:01.483Z"
+    },
     {
       "id": "1ibkLtKZuGBaiJOCJL1X6o",
       "title": "נס",
