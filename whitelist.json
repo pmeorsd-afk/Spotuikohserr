@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4915,
-  "last_updated": "2026-11-17T20:25:21.211Z",
+  "version": 4916,
+  "last_updated": "2026-11-17T20:25:34.474Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6WzRpISELf3YglGAh7TXcG",
+      "title": "Popular (with Playboi Carti & Madonna) - From The Idol Vol. 1 (Music from the HBO Original Series)",
+      "artist": "The Weeknd, Playboi Carti, Madonna",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:25:34.474Z"
+    },
     {
       "id": "7dt6x5M1jzdTEt8oCbisTK",
       "title": "Better Now",
