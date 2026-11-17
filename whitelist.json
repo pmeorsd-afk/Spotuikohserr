@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4526,
-  "last_updated": "2026-11-17T00:32:20.223Z",
+  "version": 4527,
+  "last_updated": "2026-11-17T00:32:32.973Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6wHPqSlZmGDCGXI7GR10sv",
+      "title": "שיר ישן",
+      "artist": "Ethnix",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:32:32.973Z"
+    },
     {
       "id": "6ZTOjC8lXAXK5AUw4SRfn1",
       "title": "Baglami",
