@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5017,
-  "last_updated": "2026-11-17T21:31:31.844Z",
+  "version": 5018,
+  "last_updated": "2026-11-17T21:36:03.536Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:evD84C02VTI",
+      "title": "אדרבה - אברהם פריד  שר תפילתו של  ר' אלימלך מליז'ענסק",
+      "artist": "matokmedvash",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T21:36:03.536Z"
+    },
     {
       "id": "1W7SPFjIHR1b3lFJKwDuSF",
       "title": "דופמין",
