@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4900,
-  "last_updated": "2026-11-17T20:22:15.462Z",
+  "version": 4901,
+  "last_updated": "2026-11-17T20:22:28.539Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "32ypPhtgTaETvFn3ZIHXTW",
+      "title": "Fade Away",
+      "artist": "The Kid LAROI, Lil Tjay",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:22:28.539Z"
+    },
     {
       "id": "7vGuf3Y35N4wmASOKLUVVU",
       "title": "Silence",
