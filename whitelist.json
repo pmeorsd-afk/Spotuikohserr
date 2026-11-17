@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4688,
-  "last_updated": "2026-11-17T01:08:42.893Z",
+  "version": 4689,
+  "last_updated": "2026-11-17T01:08:55.835Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ftnzrRiQxdGA22IsHduie",
+      "title": "Somebody Else's Sunshine",
+      "artist": "EZZI",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:08:55.835Z"
+    },
     {
       "id": "2t78CRkX2w1uhOVa4TkH4Y",
       "title": "מחילה",
