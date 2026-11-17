@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4578,
-  "last_updated": "2026-11-17T00:44:09.563Z",
+  "version": 4579,
+  "last_updated": "2026-11-17T00:44:22.199Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2HLf3UEQDuW1brI7VIrnMU",
+      "title": "מיס תבל",
+      "artist": "אלקנה מרציאנו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:44:22.199Z"
+    },
     {
       "id": "6ZMyXkos8c1G7lxqKtv0zJ",
       "title": "70 שקל",
