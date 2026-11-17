@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4763,
-  "last_updated": "2026-11-17T19:54:25.725Z",
+  "version": 4764,
+  "last_updated": "2026-11-17T19:54:38.669Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6boFNTIi78pShZnsQ8gxyS",
+      "title": "אוחילה לאל",
+      "artist": "אופיר אלחייני",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:54:38.669Z"
+    },
     {
       "id": "6YUTL4dYpB9xZO5qExPf05",
       "title": "Summer",
