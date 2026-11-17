@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4725,
-  "last_updated": "2026-11-17T19:45:28.521Z",
+  "version": 4726,
+  "last_updated": "2026-11-17T19:47:06.725Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3rIVUWVQQLciizMd8krWm6",
+      "title": "Avinu",
+      "artist": "Shalsheles",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:47:06.725Z"
+    },
     {
       "id": "0wxJM33QNXArUMFA7gMCuP",
       "title": "Gam Ki Eilech",
