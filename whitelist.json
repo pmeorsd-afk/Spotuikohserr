@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4881,
-  "last_updated": "2026-11-17T20:18:04.747Z",
+  "version": 4882,
+  "last_updated": "2026-11-17T20:18:17.983Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3NxXZVLBdHsNMOaTvBaF3b",
+      "title": "Hootie Frutti",
+      "artist": "KATSEYE",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:18:17.983Z"
+    },
     {
       "id": "5gwceYiuk5XQXUId19Px4s",
       "title": "גדי V",
