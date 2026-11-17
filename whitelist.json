@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4897,
-  "last_updated": "2026-11-17T20:21:36.276Z",
+  "version": 4898,
+  "last_updated": "2026-11-17T20:21:49.356Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4e0FYxSROat25pH16zMTZI",
+      "title": "Love Me",
+      "artist": "Lil Tecca",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:21:49.356Z"
+    },
     {
       "id": "0BjQrpj2lmuRluaxgs0jcx",
       "title": "Ready for War (feat. Lil Tjay)",
