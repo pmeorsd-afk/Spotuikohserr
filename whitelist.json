@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4774,
-  "last_updated": "2026-11-17T19:56:23.996Z",
+  "version": 4775,
+  "last_updated": "2026-11-17T19:56:36.853Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6u1IYHWBK0434P78bL1hMg",
+      "title": "עד הסוף",
+      "artist": "Sarit Hadad, Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:56:36.853Z"
+    },
     {
       "id": "4zLBcDtvYNVtF9fnG6lme3",
       "title": "Sun Goes Down (feat. Jasmine Thompson) - Radio Mix",
