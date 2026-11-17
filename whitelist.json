@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4571,
-  "last_updated": "2026-11-17T00:42:39.024Z",
+  "version": 4572,
+  "last_updated": "2026-11-17T00:42:51.903Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1H436F1UT5ltllRwbwYVRE",
+      "title": "Ein Davar Ra",
+      "artist": "Yaakov Shwekey, Shimon Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T00:42:51.903Z"
+    },
     {
       "id": "24kSwEGhPlbsTp26saSx7J",
       "title": "לצאת מדיכאון - לייב אצל עידו פורת",
