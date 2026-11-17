@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4668,
-  "last_updated": "2026-11-17T01:04:13.660Z",
+  "version": 4669,
+  "last_updated": "2026-11-17T01:04:26.822Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2gqwJ3x0pd34E1Hw3TNJZ3",
+      "title": "מדויק ולא בערך",
+      "artist": "שראל סופר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T01:04:26.822Z"
+    },
     {
       "id": "3lpTJexqIu0CkgTvh5EsIP",
       "title": "I LOVE YOU G-D (I Can’t Tell You)",
