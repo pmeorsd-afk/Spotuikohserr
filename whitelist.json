@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4799,
-  "last_updated": "2026-11-17T19:59:52.062Z",
+  "version": 4800,
+  "last_updated": "2026-11-17T20:00:05.352Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5HfIVbNNb2BUzY9l5FVtzN",
+      "title": "חייאתי",
+      "artist": "רואי אדם, שרקי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:00:05.352Z"
+    },
     {
       "id": "7hfIOzXe9BcuMxVKcvk1Z3",
       "title": "פעימות ליבך",
