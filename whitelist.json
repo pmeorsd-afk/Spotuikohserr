@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4781,
-  "last_updated": "2026-11-17T19:57:06.406Z",
+  "version": 4783,
+  "last_updated": "2026-11-17T19:57:15.872Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2QVwmWJlB0lvp0QqAUxAhR",
+      "title": "מחרוזת פתאום אהבה",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:57:15.872Z"
+    },
+    {
+      "id": "youtube:RJqEQSpzblk",
+      "title": "שקעה חמה I שלמה יהודה רכניץ Shak'a Chama I Shlomo Shlomo Yehuda Rechnitz",
+      "artist": "Shlomo Rechnitz Shir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:57:15.872Z"
+    },
     {
       "id": "youtube:u1pC8oa4KHs",
       "title": "אלעד כהן ושלמה כהן 'עד מתי' הקליפ",
