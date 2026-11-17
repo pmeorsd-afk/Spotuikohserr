@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4925,
-  "last_updated": "2026-11-17T20:27:33.327Z",
+  "version": 4926,
+  "last_updated": "2026-11-17T20:27:46.652Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2JvzF1RMd7lE3KmFlsyZD8",
+      "title": "MIDDLE CHILD",
+      "artist": "J. Cole",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:27:46.652Z"
+    },
     {
       "id": "7MXVkk9YMctZqd1Srtv4MB",
       "title": "Starboy",
