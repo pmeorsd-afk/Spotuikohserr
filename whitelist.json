@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4843,
-  "last_updated": "2026-11-17T20:09:55.562Z",
+  "version": 4844,
+  "last_updated": "2026-11-17T20:10:08.412Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4iT3fkTBkdJX45sFUwATOK",
+      "title": "מחרוזת שמועות - Live",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:10:08.412Z"
+    },
     {
       "id": "3RBpmZJ0YG9abVBXI2U1UO",
       "title": "את חסרה לי",
