@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4861,
-  "last_updated": "2026-11-17T20:13:39.011Z",
+  "version": 4862,
+  "last_updated": "2026-11-17T20:13:51.964Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4VEXqkygWf1elN6hv7RZj8",
+      "title": "מואנה",
+      "artist": "Ron Sky Nesher, Ben El Tavori",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:13:51.964Z"
+    },
     {
       "id": "3cZajhyr8LmtPfHZ9296tj",
       "title": "No Broke Boys",
