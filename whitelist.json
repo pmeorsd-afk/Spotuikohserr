@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4943,
-  "last_updated": "2026-11-17T20:31:29.934Z",
+  "version": 4944,
+  "last_updated": "2026-11-17T20:31:42.950Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7AQim7LbvFVZJE3O8TYgf2",
+      "title": "Fuck Love",
+      "artist": "XXXTENTACION, Trippie Redd",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:31:42.950Z"
+    },
     {
       "id": "0OvO2X2Q3i98dc5RcgEN3x",
       "title": "Jungle",
