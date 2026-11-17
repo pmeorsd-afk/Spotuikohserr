@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4987,
-  "last_updated": "2026-11-17T20:40:52.575Z",
+  "version": 4988,
+  "last_updated": "2026-11-17T20:41:05.450Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3BTCHxGctmO45MbHfW2G0M",
+      "title": "שיכור עם געגוע",
+      "artist": "בנאל בן ציון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:41:05.450Z"
+    },
     {
       "id": "7o0ouOx18hqHN0rdgz67lX",
       "title": "05 - Live",
