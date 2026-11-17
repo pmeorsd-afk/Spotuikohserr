@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4859,
-  "last_updated": "2026-11-17T20:13:13.400Z",
+  "version": 4860,
+  "last_updated": "2026-11-17T20:13:26.022Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "78Z90advH2znAcHRQ9aEGe",
+      "title": "כוכבים",
+      "artist": "Ron Sky Nesher, אשר ג'הבי אלקובי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:13:26.022Z"
+    },
     {
       "id": "6TEftSkmWdTm1EpThnwqh6",
       "title": "Wrecked",
