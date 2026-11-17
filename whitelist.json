@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4889,
-  "last_updated": "2026-11-17T20:19:50.714Z",
+  "version": 4890,
+  "last_updated": "2026-11-17T20:20:03.480Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7oVEtyuv9NBmnytsCIsY5I",
+      "title": "BURN IT DOWN",
+      "artist": "Linkin Park",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T20:20:03.480Z"
+    },
     {
       "id": "4YJmZfvlheSziXem8HBWrj",
       "title": "Still Here",
