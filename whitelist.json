@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 4795,
-  "last_updated": "2026-11-17T19:58:59.315Z",
+  "version": 4796,
+  "last_updated": "2026-11-17T19:59:12.334Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6O3IrXQXaF1tt1ubfYIzDl",
+      "title": "ספרי לי ילדה",
+      "artist": "Yossi Eden",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-17T19:59:12.334Z"
+    },
     {
       "id": "3S4fO0AYSTRZ9Q4kVo6o2A",
       "title": "שקרים",
