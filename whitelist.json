@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5135,
-  "last_updated": "2026-11-18T20:21:46.408Z",
+  "version": 5136,
+  "last_updated": "2026-11-18T20:21:51.133Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1quBoxh2fvPsy4f0ZBLf46",
+      "title": "בסוף נרקוד",
+      "artist": "Osher Cohen, שחר סאול",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:21:51.133Z"
+    },
     {
       "id": "4wOpBKUnpBbjN2We6sB5nX",
       "title": "הפעם זה זה",
