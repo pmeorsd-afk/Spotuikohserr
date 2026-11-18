@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5181,
-  "last_updated": "2026-11-18T20:27:18.169Z",
+  "version": 5182,
+  "last_updated": "2026-11-18T20:27:22.199Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:6KgSm4nJoM4",
+      "title": "אודי דוידי- דיינו",
+      "artist": "izicar247",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:27:22.199Z"
+    },
     {
       "id": "0RUC2LeVDXOW4DUerfpW4e",
       "title": "משמאל לימין",
