@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5204,
-  "last_updated": "2026-11-18T20:29:05.971Z",
+  "version": 5205,
+  "last_updated": "2026-11-18T20:29:09.841Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6CdH2dwwvfmvpPrc9S0fHU",
+      "title": "Truth Or Dare",
+      "artist": "B.R.T, Becky Smith",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:09.841Z"
+    },
     {
       "id": "4lQNI1gdGsuxzcrvqAuxiB",
       "title": "לא כועס",
