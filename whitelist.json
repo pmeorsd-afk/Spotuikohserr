@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5229,
-  "last_updated": "2026-11-18T20:30:18.663Z",
+  "version": 5232,
+  "last_updated": "2026-11-18T20:30:23.193Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,30 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:O9m5e-oPl5I",
+      "title": "מוטי שטיינמץ - צאינה וראינה - ישיבה עטרת שלמה | Motty Steinmetz - Tseno Ureno",
+      "artist": "shiezoli",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:30:23.193Z"
+    },
+    {
+      "id": "52Q9XrykEoJz26Rk9QlsbW",
+      "title": "Good Advice",
+      "artist": "Zummer, B.R.T, Becky Smith",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:30:23.193Z"
+    },
+    {
+      "id": "1Es7AUAhQvapIcoh3qMKDL",
+      "title": "Timeless (feat. Playboi Carti)",
+      "artist": "The Weeknd, Playboi Carti",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:30:23.193Z"
+    },
     {
       "id": "2X6ZTVKQl9e0q8kNrtTFhj",
       "title": "Maybe I'm Falling Into You",
