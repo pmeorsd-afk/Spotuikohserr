@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5118,
-  "last_updated": "2026-11-18T20:20:28.773Z",
+  "version": 5119,
+  "last_updated": "2026-11-18T20:20:37.658Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6LRgPexWyhB9kt1GluibyB",
+      "title": "א חסידישע טריפ 2",
+      "artist": "יוסלה קרישבסקי, מוישי מנדלסון, דור אסרף",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:20:37.658Z"
+    },
     {
       "id": "7ibtTZ7fh2HKLCaOCAZyXn",
       "title": "יחד",
