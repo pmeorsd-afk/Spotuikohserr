@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5046,
-  "last_updated": "2026-11-18T19:56:48.576Z",
+  "version": 5047,
+  "last_updated": "2026-11-18T19:56:58.290Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3TU5XFqrgp3NHXpLqwSqSp",
+      "title": "פיו פיו",
+      "artist": "Maya Dadon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:56:58.290Z"
+    },
     {
       "id": "0YYKuhX70k71YruDkgVBkK",
       "title": "היה לי אותך",
