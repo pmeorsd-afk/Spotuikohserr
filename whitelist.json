@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5053,
-  "last_updated": "2026-11-18T19:57:16.415Z",
+  "version": 5054,
+  "last_updated": "2026-11-18T19:57:19.996Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2JfWY2jf6mTHyft4ZB3FIA",
+      "title": "מחרוזת: משגע את כולן",
+      "artist": "Aviad Sahar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:57:19.996Z"
+    },
     {
       "id": "39Ui4fZ9muxVLN4S0UGu3f",
       "title": "רוקדת",
