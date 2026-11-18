@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5260,
-  "last_updated": "2026-11-18T20:31:39.327Z",
+  "version": 5261,
+  "last_updated": "2026-11-18T20:31:43.603Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2nMeu6UenVvwUktBCpLMK9",
+      "title": "Young And Beautiful",
+      "artist": "Lana Del Rey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:43.603Z"
+    },
     {
       "id": "5V89XGLYUr8WoPzuYcYcUD",
       "title": "מאושרים (עם לירן דנינו ונועה קירל) - Acoustic",
