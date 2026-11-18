@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5313,
-  "last_updated": "2026-11-18T20:47:41.369Z",
+  "version": 5314,
+  "last_updated": "2026-11-18T20:47:45.001Z",
   "artists": [
+    {
+      "id": "4u5QHWyhLYXUFerb5DRDbz",
+      "canonical_name": "Shimon Levi",
+      "aliases": [
+        "Shimon Levi"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:47:45.001Z"
+    },
     {
       "id": "6pYId74xflE9vKsGHs9RvU",
       "canonical_name": "מנדי רוט",
