@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5113,
-  "last_updated": "2026-11-18T20:20:11.280Z",
+  "version": 5115,
+  "last_updated": "2026-11-18T20:20:15.615Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6QFCMUUq1T2Vf5sFUXcuQ7",
+      "title": "Beauty And A Beat",
+      "artist": "Justin Bieber, Nicki Minaj",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:20:15.615Z"
+    },
+    {
+      "id": "07zyumIrJCPQRmGZV3aNGM",
+      "title": "OUT YOUR MIND",
+      "artist": "DKAY, Sped-ed, DANIIEL",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:20:15.615Z"
+    },
     {
       "id": "4G8hATb1qo2YTF5yLAea3e",
       "title": "ON MY WAY",
