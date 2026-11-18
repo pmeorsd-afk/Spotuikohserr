@@ -1,8 +1,28 @@
 {
   "schema_version": 2,
-  "version": 5315,
-  "last_updated": "2026-11-18T20:47:48.736Z",
+  "version": 5317,
+  "last_updated": "2026-11-18T20:47:52.462Z",
   "artists": [
+    {
+      "id": "2hxXMtW7A8Moreleh7kJCV",
+      "canonical_name": "שירת הבקשות",
+      "aliases": [
+        "שירת הבקשות"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:47:52.462Z"
+    },
+    {
+      "id": "1MPEWrFK4Y6GIimJNnC7uQ",
+      "canonical_name": "פיקבו - שירים לקטנטנים",
+      "aliases": [
+        "פיקבו - שירים לקטנטנים"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:47:52.462Z"
+    },
     {
       "id": "5Xo52BImdypoNLbP4qCkzQ",
       "canonical_name": "שיעלה רוט",
