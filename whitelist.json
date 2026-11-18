@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5060,
-  "last_updated": "2026-11-18T19:57:44.316Z",
+  "version": 5062,
+  "last_updated": "2026-11-18T19:57:47.600Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2uXlHCUbq9OMUwx3hrk06o",
+      "title": "Riptide",
+      "artist": "Vance Joy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:57:47.600Z"
+    },
+    {
+      "id": "2Nm9MXw2rcs9U9Vp1sr8Kj",
+      "title": "כואב אחי",
+      "artist": "Moshik Afia",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:57:47.600Z"
+    },
     {
       "id": "5XeFesFbtLpXzIVDNQP22n",
       "title": "I Wanna Be Yours",
