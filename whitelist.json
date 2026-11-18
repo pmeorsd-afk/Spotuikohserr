@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5278,
-  "last_updated": "2026-11-18T20:32:29.778Z",
+  "version": 5279,
+  "last_updated": "2026-11-18T20:32:36.016Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7oiHL6cVs1zZG6NI0XXpPo",
+      "title": "Hassa",
+      "artist": "M20 LA ZONE",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:36.016Z"
+    },
     {
       "id": "3QKj9mcorqGF141sDKOWF7",
       "title": "לראות את הטוב",
