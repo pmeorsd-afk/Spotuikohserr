@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5309,
-  "last_updated": "2026-11-18T20:47:24.608Z",
+  "version": 5310,
+  "last_updated": "2026-11-18T20:47:28.509Z",
   "artists": [
+    {
+      "id": "5Baj5H0Y6wL4GzDkYAw1J0",
+      "canonical_name": "רפי ביטון",
+      "aliases": [
+        "רפי ביטון"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:47:28.509Z"
+    },
     {
       "id": "5TvuNKoZ4SNrLS0wtFpRcF",
       "canonical_name": "Shlomo Carlebach",
