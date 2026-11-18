@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5043,
-  "last_updated": "2026-11-18T19:56:36.994Z",
+  "version": 5044,
+  "last_updated": "2026-11-18T19:56:41.031Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "46XU5GojwRNl0wfFN7CkiO",
+      "title": "משמעות לחלומותיי",
+      "artist": "Shlomo Artzi, Ehud Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:56:41.031Z"
+    },
     {
       "id": "7ofEqhrupzsqLmfbGBe9wk",
       "title": "אותיות נחמה",
