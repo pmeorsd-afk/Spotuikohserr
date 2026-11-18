@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5245,
-  "last_updated": "2026-11-18T20:30:57.292Z",
+  "version": 5246,
+  "last_updated": "2026-11-18T20:31:00.628Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3OQHuCcIt977D8EZX0ecwu",
+      "title": "יפה שלי",
+      "artist": "Asaf Hertz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:00.628Z"
+    },
     {
       "id": "3Ih9gCsn3Lejbr974un7H3",
       "title": "שפע",
