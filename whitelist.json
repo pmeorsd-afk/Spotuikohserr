@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5325,
-  "last_updated": "2026-11-18T20:48:14.716Z",
+  "version": 5326,
+  "last_updated": "2026-11-18T20:48:18.086Z",
   "artists": [
+    {
+      "id": "0NI5S3iU2zLmB5jkDsYOR6",
+      "canonical_name": "עדי גביסון",
+      "aliases": [
+        "עדי גביסון"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:48:18.086Z"
+    },
     {
       "id": "5PQwhpe6nUjWcXSgTj3VtC",
       "canonical_name": "יהודה מנהיים",
