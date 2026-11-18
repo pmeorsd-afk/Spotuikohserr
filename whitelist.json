@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5248,
-  "last_updated": "2026-11-18T20:31:09.815Z",
+  "version": 5249,
+  "last_updated": "2026-11-18T20:31:13.644Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2psRActEWsTlYYd7EDoyVR",
+      "title": "Those Eyes",
+      "artist": "New West",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:13.644Z"
+    },
     {
       "id": "1oe1Z2DH0XUoShl0ZpBzoD",
       "title": "כולם צדיקים",
