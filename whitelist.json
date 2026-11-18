@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5275,
-  "last_updated": "2026-11-18T20:32:21.992Z",
+  "version": 5277,
+  "last_updated": "2026-11-18T20:32:26.058Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0pp1XgfSPXk2GsXSpRvs6J",
+      "title": "הדרך משקרת",
+      "artist": "אליה והב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:26.058Z"
+    },
+    {
+      "id": "4FPEVMR2ViK6pDDXLaVtvf",
+      "title": "מחרוזת אבא שלך גנוב עלייך",
+      "artist": "ראובן המלאך",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:26.058Z"
+    },
     {
       "id": "5KT4MB0aXslFMiM6tfSMmJ",
       "title": "ירושלים",
