@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5261,
-  "last_updated": "2026-11-18T20:31:43.603Z",
+  "version": 5262,
+  "last_updated": "2026-11-18T20:31:47.658Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6hQh8TDewz3fGZgSHAnb6J",
+      "title": "תגידי לי",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:47.658Z"
+    },
     {
       "id": "2nMeu6UenVvwUktBCpLMK9",
       "title": "Young And Beautiful",
