@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5188,
-  "last_updated": "2026-11-18T20:27:54.328Z",
+  "version": 5189,
+  "last_updated": "2026-11-18T20:28:00.658Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4EwbGZCaKwnEr7H24IX4iQ",
+      "title": "מרגיש לי טוב",
+      "artist": "עדי גביסון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:28:00.658Z"
+    },
     {
       "id": "29sZm4KMloqRraPVOIE8np",
       "title": "L'shem Yichud",
