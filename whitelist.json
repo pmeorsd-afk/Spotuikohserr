@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5178,
-  "last_updated": "2026-11-18T20:26:54.861Z",
+  "version": 5179,
+  "last_updated": "2026-11-18T20:27:09.214Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:OAWQ4q3pvDY",
+      "title": "אוף שימחעס - שיר החסידים",
+      "artist": "fddonline",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:27:09.214Z"
+    },
     {
       "id": "youtube:l463vS68reA",
       "title": "יוסף חיים שוואקי \"הכל לטובה\" - \"yosef chaim shwekey \"Everything For good \"",
