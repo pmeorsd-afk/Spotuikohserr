@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5157,
-  "last_updated": "2026-11-18T20:25:55.764Z",
+  "version": 5158,
+  "last_updated": "2026-11-18T20:25:59.528Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0dmPM84Ii5QuiwtV5WmMcv",
+      "title": "אנחנו שניים",
+      "artist": "Mashina",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:25:59.528Z"
+    },
     {
       "id": "18AXbzPzBS8Y3AkgSxzJPb",
       "title": "In the Air Tonight - 2015 Remaster",
