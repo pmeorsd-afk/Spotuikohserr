@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5292,
-  "last_updated": "2026-11-18T20:32:59.743Z",
+  "version": 5295,
+  "last_updated": "2026-11-18T20:33:03.485Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,30 @@
     }
   ],
   "tracks": [
+    {
+      "id": "59lDhqUjpKoXmrDveLpjvC",
+      "title": "Dubi Dubi Dam Dam",
+      "artist": "Prod Nifo, BLACKX",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:33:03.485Z"
+    },
+    {
+      "id": "1joptrx82eduwtho6nEv2y",
+      "title": "כיכר האכזבות",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:33:03.485Z"
+    },
+    {
+      "id": "2EctTy3bW6ypf9UuvBrTRv",
+      "title": "פשע לאהוב אותך",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:33:03.485Z"
+    },
     {
       "id": "6R57RKCbjvO6rqlT815lG0",
       "title": "Big Boom (DJ.ILHAM)",
