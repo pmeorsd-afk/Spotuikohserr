@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5152,
-  "last_updated": "2026-11-18T20:25:43.875Z",
+  "version": 5154,
+  "last_updated": "2026-11-18T20:25:47.804Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3KVAcPTNLAMbe8UvE34YC8",
+      "title": "פנים ושמות",
+      "artist": "Danny Robas",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:25:47.804Z"
+    },
+    {
+      "id": "5AoBNJQDXXEnIJGjJjZu3y",
+      "title": "Just Another Day",
+      "artist": "Jon Secada",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:25:47.804Z"
+    },
     {
       "id": "7u1NBF1SAZV4qQPkIL6NyE",
       "title": "טלפני טלפני",
