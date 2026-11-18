@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5030,
-  "last_updated": "2026-11-18T19:55:30.922Z",
+  "version": 5031,
+  "last_updated": "2026-11-18T19:55:39.177Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0jxopcblGXvNAUlLvshCvk",
+      "title": "אין לי אוויר",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:55:39.177Z"
+    },
     {
       "id": "4f5sxA4nQywcBlU05Ixdc7",
       "title": "Espresso Macchiato",
