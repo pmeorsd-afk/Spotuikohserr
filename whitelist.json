@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5176,
-  "last_updated": "2026-11-18T20:26:45.883Z",
+  "version": 5177,
+  "last_updated": "2026-11-18T20:26:49.503Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2n4DPH6fb4c6YGTWXijW6t",
+      "title": "אפריקן ליידי",
+      "artist": "אבי מולה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:26:49.503Z"
+    },
     {
       "id": "4uUG5RXrOk84mYEfFvj3cK",
       "title": "I'm Good (Blue)",
