@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5120,
-  "last_updated": "2026-11-18T20:20:41.772Z",
+  "version": 5122,
+  "last_updated": "2026-11-18T20:20:45.354Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0GAiXnxduXhIrbkHHz6jv4",
+      "title": "תמיד אוהב אותי רמיקס",
+      "artist": "יהודה מור, יאיר אלייצור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:20:45.354Z"
+    },
+    {
+      "id": "6CNJ2j2bwvphR9aIEejpc7",
+      "title": "החיטה צומחת שוב",
+      "artist": "HaGevatron",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:20:45.354Z"
+    },
     {
       "id": "10gwUEFZ0xcw9aa8HUHZnN",
       "title": "Yesh Becha Hakol | יש בך הכל - MixerJr Remix",
