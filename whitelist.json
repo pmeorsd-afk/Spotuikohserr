@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5033,
-  "last_updated": "2026-11-18T19:55:48.691Z",
+  "version": 5034,
+  "last_updated": "2026-11-18T19:55:58.054Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0YKcoSHhXNOw4PHMHahUvT",
+      "title": "סקס",
+      "artist": "Mofa Haarnavot Shel Dr. Kasper",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:55:58.054Z"
+    },
     {
       "id": "4F2o3FLWbXqPTZswlm8fLZ",
       "title": "Ma Haya Chaser Bi",
