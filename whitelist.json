@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5102,
-  "last_updated": "2026-11-18T20:19:29.019Z",
+  "version": 5103,
+  "last_updated": "2026-11-18T20:19:32.821Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "06s8oQCRvrDMI2yFkpeLfP",
+      "title": "Chasof",
+      "artist": "Yehuda Galili, The Yedidim Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:19:32.821Z"
+    },
     {
       "id": "2CneNmpYpka8RgSkZZIiw3",
       "title": "Neila נעילה",
