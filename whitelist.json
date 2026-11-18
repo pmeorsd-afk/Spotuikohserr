@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5145,
-  "last_updated": "2026-11-18T20:25:22.388Z",
+  "version": 5147,
+  "last_updated": "2026-11-18T20:25:26.309Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6yN1RbU6xC7DUestehLCRe",
+      "title": "תמונות שלך (by Offir Malol)",
+      "artist": "Osher Cohen, החללית",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:25:26.309Z"
+    },
+    {
+      "id": "54c7SQei5iE9BWKVquK9Xo",
+      "title": "death bed, Pt. 2",
+      "artist": "Powfu, Daniel Saint, Chill Sebs",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:25:26.309Z"
+    },
     {
       "id": "7yqPEVjm7ExZJrgRNAwZzX",
       "title": "Stranger",
