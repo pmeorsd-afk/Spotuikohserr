@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5297,
-  "last_updated": "2026-11-18T20:33:08.062Z",
+  "version": 5299,
+  "last_updated": "2026-11-18T20:33:11.778Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7nK2ac7BZucYerOTvlkLD7",
+      "title": "Always Remember Us This Way",
+      "artist": "Aspinal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:33:11.778Z"
+    },
+    {
+      "id": "3fBW6KPT7VzRPtx1B12mrW",
+      "title": "בגשם נרטב",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:33:11.778Z"
+    },
     {
       "id": "6Mk5Yeh2qnNzmrLfAW6MuH",
       "title": "Eagle Eye",
