@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5163,
-  "last_updated": "2026-11-18T20:26:08.662Z",
+  "version": 5164,
+  "last_updated": "2026-11-18T20:26:13.017Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1QSyrr4cXks6FAapnrfnmA",
+      "title": "שימו לב על הנשמה",
+      "artist": "Neta Elkayam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:26:13.017Z"
+    },
     {
       "id": "12bYYQaLqHliSXvRIYlq8G",
       "title": "I Just Might",
