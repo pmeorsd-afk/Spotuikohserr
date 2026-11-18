@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5219,
-  "last_updated": "2026-11-18T20:29:42.010Z",
+  "version": 5220,
+  "last_updated": "2026-11-18T20:29:45.581Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6BktHfgC3lb8szkKoy5lk9",
+      "title": "GOTTA RAP",
+      "artist": "Ab-Soul",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:45.581Z"
+    },
     {
       "id": "0w4e9A0KryKlPySPdyZQDC",
       "title": "מגבת באוויר",
