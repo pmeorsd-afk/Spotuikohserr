@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5091,
-  "last_updated": "2026-11-18T20:18:19.581Z",
+  "version": 5092,
+  "last_updated": "2026-11-18T20:18:24.728Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "17QcYWgYdfJpkJYOhvI8Tb",
+      "title": "הללויה",
+      "artist": "Alma",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:18:24.728Z"
+    },
     {
       "id": "4YboX8Ua3NErCD3ActvWM9",
       "title": "נזכרה בי",
