@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5310,
-  "last_updated": "2026-11-18T20:47:28.509Z",
+  "version": 5311,
+  "last_updated": "2026-11-18T20:47:32.388Z",
   "artists": [
+    {
+      "id": "5GGuJlfrOdZLYgnzq0Jw3B",
+      "canonical_name": "קולות מן השמים - ירושלים",
+      "aliases": [
+        "קולות מן השמים - ירושלים"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:47:32.388Z"
+    },
     {
       "id": "5Baj5H0Y6wL4GzDkYAw1J0",
       "canonical_name": "רפי ביטון",
