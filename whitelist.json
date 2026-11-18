@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5133,
-  "last_updated": "2026-11-18T20:21:42.595Z",
+  "version": 5135,
+  "last_updated": "2026-11-18T20:21:46.408Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4wOpBKUnpBbjN2We6sB5nX",
+      "title": "הפעם זה זה",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:21:46.408Z"
+    },
+    {
+      "id": "2e33MYvTvmpUPTgOZJbRHf",
+      "title": "זוגות כאלה",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:21:46.408Z"
+    },
     {
       "id": "1pizAMAnDm5kDUSBKY3SPk",
       "title": "עד שיירד הסהר",
