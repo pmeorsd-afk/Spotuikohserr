@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5290,
-  "last_updated": "2026-11-18T20:32:55.120Z",
+  "version": 5292,
+  "last_updated": "2026-11-18T20:32:59.743Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6R57RKCbjvO6rqlT815lG0",
+      "title": "Big Boom (DJ.ILHAM)",
+      "artist": "MANTOXE",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:59.743Z"
+    },
+    {
+      "id": "1awEiz3jE3wKfAqjg2EW3V",
+      "title": "סיבוב מסוכן",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:59.743Z"
+    },
     {
       "id": "2JQWWEfbJ7z6MYOIunlwJ4",
       "title": "תחזרי תחזרי",
