@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5312,
-  "last_updated": "2026-11-18T20:47:36.935Z",
+  "version": 5313,
+  "last_updated": "2026-11-18T20:47:41.369Z",
   "artists": [
+    {
+      "id": "6pYId74xflE9vKsGHs9RvU",
+      "canonical_name": "מנדי רוט",
+      "aliases": [
+        "מנדי רוט"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:47:41.369Z"
+    },
     {
       "id": "5GGuJlfrOdZLYgnzq0Jw3B",
       "canonical_name": "קולות מן השמים - ירושלים",
