@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5265,
-  "last_updated": "2026-11-18T20:31:54.893Z",
+  "version": 5266,
+  "last_updated": "2026-11-18T20:31:59.833Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3rqVKuggHwvncCjhhAcOad",
+      "title": "מחרוזת שירת חיי וכינורי LIVE זאפה 2024",
+      "artist": "היוצרים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:59.833Z"
+    },
     {
       "id": "06fGIUNt99GlbnxwM03q3T",
       "title": "חזק אותי",
