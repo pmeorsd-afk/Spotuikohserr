@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5224,
-  "last_updated": "2026-11-18T20:30:02.760Z",
+  "version": 5225,
+  "last_updated": "2026-11-18T20:30:07.044Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4iJyoBOLtHqaGxP12qzhQI",
+      "title": "Peaches (feat. Daniel Caesar & Giveon)",
+      "artist": "Justin Bieber, Daniel Caesar, GIVĒON",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:30:07.044Z"
+    },
     {
       "id": "1QRrPx4NgVhRawHuiMRlJm",
       "title": "Stay With Me",
