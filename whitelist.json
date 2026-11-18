@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5032,
-  "last_updated": "2026-11-18T19:55:43.402Z",
+  "version": 5033,
+  "last_updated": "2026-11-18T19:55:48.691Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4F2o3FLWbXqPTZswlm8fLZ",
+      "title": "Ma Haya Chaser Bi",
+      "artist": "Yaakov Hatan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:55:48.691Z"
+    },
     {
       "id": "4bUJ9rC2DyXQw8QL7h1gpO",
       "title": "אלינור",
