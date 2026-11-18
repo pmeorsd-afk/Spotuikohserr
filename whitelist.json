@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5115,
-  "last_updated": "2026-11-18T20:20:15.615Z",
+  "version": 5116,
+  "last_updated": "2026-11-18T20:20:21.211Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "733yUkrK7MBesBTRjY1mM8",
+      "title": "הרקיע השביעי",
+      "artist": "Doron Mazar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:20:21.211Z"
+    },
     {
       "id": "6QFCMUUq1T2Vf5sFUXcuQ7",
       "title": "Beauty And A Beat",
