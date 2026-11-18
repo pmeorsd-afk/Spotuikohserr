@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5125,
-  "last_updated": "2026-11-18T20:20:57.185Z",
+  "version": 5127,
+  "last_updated": "2026-11-18T20:21:01.049Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4uZlNsYgB1nPOcSk4uZ8wB",
+      "title": "Formidable - אקוסטי",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:21:01.049Z"
+    },
+    {
+      "id": "2izWDcMNKdD88WZ4UCMjZh",
+      "title": "Mon amour",
+      "artist": "הכוכב הבא, Noam Bettan, יובל רפאל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:21:01.049Z"
+    },
     {
       "id": "6uCZdJ3p3hrfi6mRKVtt7k",
       "title": "תראי אהובתי",
