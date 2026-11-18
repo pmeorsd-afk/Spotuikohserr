@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5117,
-  "last_updated": "2026-11-18T20:20:25.029Z",
+  "version": 5118,
+  "last_updated": "2026-11-18T20:20:28.773Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7ibtTZ7fh2HKLCaOCAZyXn",
+      "title": "יחד",
+      "artist": "חלב ודבש, Gali Atari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:20:28.773Z"
+    },
     {
       "id": "6FIoQTP0AywBpk7oExZfb0",
       "title": "הביתה",
