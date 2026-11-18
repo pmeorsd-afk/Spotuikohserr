@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5246,
-  "last_updated": "2026-11-18T20:31:00.628Z",
+  "version": 5247,
+  "last_updated": "2026-11-18T20:31:04.633Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7G7tgVYORlDuVprcYHuFJh",
+      "title": "Don't Dream It's Over",
+      "artist": "Crowded House",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:04.633Z"
+    },
     {
       "id": "3OQHuCcIt977D8EZX0ecwu",
       "title": "יפה שלי",
