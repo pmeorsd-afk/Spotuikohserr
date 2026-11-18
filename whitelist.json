@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5189,
-  "last_updated": "2026-11-18T20:28:00.658Z",
+  "version": 5190,
+  "last_updated": "2026-11-18T20:28:08.149Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6IDyedWaPV5nDT3q11TY6M",
+      "title": "Sunset Lemonade",
+      "artist": "VLX, Diviners",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:28:08.149Z"
+    },
     {
       "id": "4EwbGZCaKwnEr7H24IX4iQ",
       "title": "מרגיש לי טוב",
