@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5099,
-  "last_updated": "2026-11-18T20:19:16.019Z",
+  "version": 5100,
+  "last_updated": "2026-11-18T20:19:21.079Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3VBMoD1EHhEVkilx6WIqNk",
+      "title": "מודים אנחנו לך",
+      "artist": "ניגוני עולמות עליונים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:19:21.079Z"
+    },
     {
       "id": "26TSPTK24tOsvwUNdeVGN9",
       "title": "ראיתי בית",
