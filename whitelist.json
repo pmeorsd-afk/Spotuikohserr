@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5307,
-  "last_updated": "2026-11-18T20:47:14.624Z",
+  "version": 5308,
+  "last_updated": "2026-11-18T20:47:19.823Z",
   "artists": [
+    {
+      "id": "6CO22pLklchkhsDW4491nU",
+      "canonical_name": "נחמן סבג",
+      "aliases": [
+        "נחמן סבג"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:47:19.823Z"
+    },
     {
       "id": "2Wl4G1HKWwrROdWI3UV0r0",
       "canonical_name": "ניסים סבג",
