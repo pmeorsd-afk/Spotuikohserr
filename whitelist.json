@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5169,
-  "last_updated": "2026-11-18T20:26:30.192Z",
+  "version": 5171,
+  "last_updated": "2026-11-18T20:26:34.272Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "65DbTqJKhbwqYbZ1Okr0rc",
+      "title": "Choosin' Texas",
+      "artist": "Ella Langley",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:26:34.272Z"
+    },
+    {
+      "id": "5UJYL1CNEgRltcuknO2ACj",
+      "title": "מחפש אותך בנרות",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:26:34.272Z"
+    },
     {
       "id": "4h9wh7iOZ0GGn8QVp4RAOB",
       "title": "I Ain't Worried",
