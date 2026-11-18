@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5029,
-  "last_updated": "2026-11-17T22:44:44.538Z",
+  "version": 5030,
+  "last_updated": "2026-11-18T19:55:30.922Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4f5sxA4nQywcBlU05Ixdc7",
+      "title": "Espresso Macchiato",
+      "artist": "Tommy Cash",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:55:30.922Z"
+    },
     {
       "id": "7d4euemqdTY6hfb5xdZJwS",
       "title": "Хайыс",
