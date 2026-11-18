@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5328,
-  "last_updated": "2026-11-18T20:48:25.200Z",
+  "version": 5329,
+  "last_updated": "2026-11-18T20:51:26.594Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4JdtTYdVBO831OiGbz6VLM",
+      "title": "פלמינגו",
+      "artist": "C-van",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:51:26.594Z"
+    },
     {
       "id": "2maunI5ItxJKfPXLwTJyGE",
       "title": "בדיוק כמו שהיא",
