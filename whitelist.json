@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5202,
-  "last_updated": "2026-11-18T20:28:58.218Z",
+  "version": 5203,
+  "last_updated": "2026-11-18T20:29:02.295Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3USxtqRwSYz57Ewm6wWRMp",
+      "title": "Heat Waves",
+      "artist": "Glass Animals",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:02.295Z"
+    },
     {
       "id": "0GRc3eGTg8HBdWLRGYgqIc",
       "title": "Azizam",
