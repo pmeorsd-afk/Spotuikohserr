@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5122,
-  "last_updated": "2026-11-18T20:20:45.354Z",
+  "version": 5123,
+  "last_updated": "2026-11-18T20:20:48.947Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "24h6QuRnJokfyZy997eSH8",
+      "title": "לא כואב לי",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:20:48.947Z"
+    },
     {
       "id": "0GAiXnxduXhIrbkHHz6jv4",
       "title": "תמיד אוהב אותי רמיקס",
