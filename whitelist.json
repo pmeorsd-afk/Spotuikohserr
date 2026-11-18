@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5138,
-  "last_updated": "2026-11-18T20:21:58.535Z",
+  "version": 5139,
+  "last_updated": "2026-11-18T20:22:01.783Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ICsg0MAobTLg4VVjW2iE5",
+      "title": "אהובי לב אדום",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:22:01.783Z"
+    },
     {
       "id": "6ubV4TOnHggG27ygsPxjvR",
       "title": "אקורדים בלילות",
