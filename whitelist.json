@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5090,
-  "last_updated": "2026-11-18T20:18:14.610Z",
+  "version": 5091,
+  "last_updated": "2026-11-18T20:18:19.581Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4YboX8Ua3NErCD3ActvWM9",
+      "title": "נזכרה בי",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:18:19.581Z"
+    },
     {
       "id": "0uOkcF57Khu2F05SD6i8eu",
       "title": "אלהי נשמה",
