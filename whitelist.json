@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5318,
-  "last_updated": "2026-11-18T20:47:56.038Z",
+  "version": 5319,
+  "last_updated": "2026-11-18T20:48:00.067Z",
   "artists": [
+    {
+      "id": "4hHHITGSm2B3WyEeHhPg3V",
+      "canonical_name": "הרב יואל קליין",
+      "aliases": [
+        "הרב יואל קליין"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:48:00.067Z"
+    },
     {
       "id": "2IYpW1MawBLW490JNw5vhj",
       "canonical_name": "מוישי כהנא",
