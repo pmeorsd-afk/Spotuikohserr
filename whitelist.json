@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5083,
-  "last_updated": "2026-11-18T20:17:45.607Z",
+  "version": 5085,
+  "last_updated": "2026-11-18T20:17:49.481Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0UV5zxRMz6AO4ZwUOZNIKI",
+      "title": "Where'd All the Time Go?",
+      "artist": "Dr. Dog",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:17:49.481Z"
+    },
+    {
+      "id": "1O0VUtEP7oVZKAXOMl0QLY",
+      "title": "אקדח",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:17:49.481Z"
+    },
     {
       "id": "02OxOdthi2YqEBWhFEGlhd",
       "title": "Maoz Tzur",
