@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5144,
-  "last_updated": "2026-11-18T20:22:12.876Z",
+  "version": 5145,
+  "last_updated": "2026-11-18T20:25:22.388Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7yqPEVjm7ExZJrgRNAwZzX",
+      "title": "Stranger",
+      "artist": "BoyWithUke",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:25:22.388Z"
+    },
     {
       "id": "2ffRiw53GhA1n87JC4vQYu",
       "title": "להיות רק בשמחה",
