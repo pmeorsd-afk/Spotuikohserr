@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5266,
-  "last_updated": "2026-11-18T20:31:59.833Z",
+  "version": 5267,
+  "last_updated": "2026-11-18T20:32:03.483Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6tsojOQ5wHaIjKqIryLZK6",
+      "title": "All My Life",
+      "artist": "Foo Fighters",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:03.483Z"
+    },
     {
       "id": "3rqVKuggHwvncCjhhAcOad",
       "title": "מחרוזת שירת חיי וכינורי LIVE זאפה 2024",
