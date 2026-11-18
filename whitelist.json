@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5280,
-  "last_updated": "2026-11-18T20:32:40.058Z",
+  "version": 5282,
+  "last_updated": "2026-11-18T20:32:43.908Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "60Cmrz2VxJ1LITvZmfQiQi",
+      "title": "Pour les sous",
+      "artist": "Zitoune",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:43.908Z"
+    },
+    {
+      "id": "20UUir5JRcahfeISUZF4wP",
+      "title": "C'est réel",
+      "artist": "Carlito",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:43.908Z"
+    },
     {
       "id": "2yhBX7T8ltvo7T1dpHF011",
       "title": "אני נשבע",
