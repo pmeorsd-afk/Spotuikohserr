@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5111,
-  "last_updated": "2026-11-18T20:20:07.460Z",
+  "version": 5113,
+  "last_updated": "2026-11-18T20:20:11.280Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4G8hATb1qo2YTF5yLAea3e",
+      "title": "ON MY WAY",
+      "artist": "Werntatty, DANIIEL",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:20:11.280Z"
+    },
+    {
+      "id": "0cQVqPuHQP4KEwc7ZUQmj6",
+      "title": "Sweater Weather",
+      "artist": "The Neighbourhood",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:20:11.280Z"
+    },
     {
       "id": "2FRnf9qhLbvw8fu4IBXx78",
       "title": "Last Christmas",
