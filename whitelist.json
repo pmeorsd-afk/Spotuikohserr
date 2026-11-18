@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5221,
-  "last_updated": "2026-11-18T20:29:50.573Z",
+  "version": 5222,
+  "last_updated": "2026-11-18T20:29:54.079Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:33Vqk6r1SKs",
+      "title": "אברהם פריד- אדרבה avraham fried - aderabe",
+      "artist": "גל פז - gal paz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:54.079Z"
+    },
     {
       "id": "youtube:5W1VGgOnfD0",
       "title": "בואי בשלום",
