@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5073,
-  "last_updated": "2026-11-18T20:17:12.866Z",
+  "version": 5075,
+  "last_updated": "2026-11-18T20:17:16.552Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "42qNWdLKCI41S4uzfamhFM",
+      "title": "Duvet",
+      "artist": "bôa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:17:16.552Z"
+    },
+    {
+      "id": "4ZVVbCnyibnotjC0CQ4gLa",
+      "title": "Alter Rebbe's Niggun",
+      "artist": "Gershon Wachtel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:17:16.552Z"
+    },
     {
       "id": "0sTlGEld0h8kIPZaKDYUf4",
       "title": "Notion",
