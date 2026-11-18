@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5141,
-  "last_updated": "2026-11-18T20:22:05.507Z",
+  "version": 5142,
+  "last_updated": "2026-11-18T20:22:09.145Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4jDpJIog6JBkvq3OV1F4XR",
+      "title": "רבנו נחמן יעלה",
+      "artist": "Lior Miara",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:22:09.145Z"
+    },
     {
       "id": "0taqIIB89cQQoiA8ZDukWf",
       "title": "מקבל על עצמי",
