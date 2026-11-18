@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5304,
-  "last_updated": "2026-11-18T20:33:23.543Z",
+  "version": 5305,
+  "last_updated": "2026-11-18T20:33:26.977Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0v0YbupXiuODW7gXkKDzEE",
+      "title": "ביום שנפגש",
+      "artist": "דודו אהרון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:33:26.977Z"
+    },
     {
       "id": "354YT2zYO1GpAmf10xXiZf",
       "title": "בואי נדבר",
