@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5088,
-  "last_updated": "2026-11-18T20:18:07.721Z",
+  "version": 5089,
+  "last_updated": "2026-11-18T20:18:11.115Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "05od2qm2MTSKCHxy1GBp5W",
+      "title": "12 to 12",
+      "artist": "sombr",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:18:11.115Z"
+    },
     {
       "id": "6B7bWgUleo2lgIqdMjK2IZ",
       "title": "מודה אני",
