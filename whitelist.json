@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5286,
-  "last_updated": "2026-11-18T20:32:47.570Z",
+  "version": 5287,
+  "last_updated": "2026-11-18T20:32:51.566Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "704SepT16hi0SazuCWX8rY",
+      "title": "Freestyle semi liberté",
+      "artist": "Chinoi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:51.566Z"
+    },
     {
       "id": "2NWAkktAboVng8MBzNkrfl",
       "title": "שבור",
