@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5139,
-  "last_updated": "2026-11-18T20:22:01.783Z",
+  "version": 5141,
+  "last_updated": "2026-11-18T20:22:05.507Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0taqIIB89cQQoiA8ZDukWf",
+      "title": "מקבל על עצמי",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:22:05.507Z"
+    },
+    {
+      "id": "1cL0tlq9MDkKYFopOVlvKh",
+      "title": "בשבילך",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:22:05.507Z"
+    },
     {
       "id": "2ICsg0MAobTLg4VVjW2iE5",
       "title": "אהובי לב אדום",
