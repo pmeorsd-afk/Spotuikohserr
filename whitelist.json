@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5306,
-  "last_updated": "2026-11-18T20:33:31.156Z",
+  "version": 5307,
+  "last_updated": "2026-11-18T20:47:14.624Z",
   "artists": [
+    {
+      "id": "2Wl4G1HKWwrROdWI3UV0r0",
+      "canonical_name": "ניסים סבג",
+      "aliases": [
+        "ניסים סבג"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:47:14.624Z"
+    },
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
       "canonical_name": "David Taub",
