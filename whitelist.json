@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5058,
-  "last_updated": "2026-11-18T19:57:40.401Z",
+  "version": 5060,
+  "last_updated": "2026-11-18T19:57:44.316Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5XeFesFbtLpXzIVDNQP22n",
+      "title": "I Wanna Be Yours",
+      "artist": "Arctic Monkeys",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:57:44.316Z"
+    },
+    {
+      "id": "51TCxtQ1u4Qi655ekjDCZD",
+      "title": "Feel It",
+      "artist": "d4vd",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:57:44.316Z"
+    },
     {
       "id": "0myRViRgmQ3J8izICXEAVO",
       "title": "I Thought I Saw Your Face Today",
