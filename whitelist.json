@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5173,
-  "last_updated": "2026-11-18T20:26:38.206Z",
+  "version": 5174,
+  "last_updated": "2026-11-18T20:26:42.069Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3XLQEvM2gRPTloVmuqM59G",
+      "title": "חתן וכלה",
+      "artist": "Oren Chen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:26:42.069Z"
+    },
     {
       "id": "0e8wNfrGCO9d06p8sidaJS",
       "title": "Blue Horizon",
