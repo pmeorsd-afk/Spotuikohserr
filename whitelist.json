@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5109,
-  "last_updated": "2026-11-18T20:19:51.487Z",
+  "version": 5110,
+  "last_updated": "2026-11-18T20:19:54.944Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2FRnf9qhLbvw8fu4IBXx78",
+      "title": "Last Christmas",
+      "artist": "Wham!",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:19:54.944Z"
+    },
     {
       "id": "6Tyba4t5zYr7xlpR01u0Ac",
       "title": "Sunny Mornings",
