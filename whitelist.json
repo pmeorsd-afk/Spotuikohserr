@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5196,
-  "last_updated": "2026-11-18T20:28:26.217Z",
+  "version": 5197,
+  "last_updated": "2026-11-18T20:28:34.628Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1T5DlLEYAXz1Ojxu7SYeYi",
+      "title": "Mesikas Hatorah",
+      "artist": "Yisroel Werdyger",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:28:34.628Z"
+    },
     {
       "id": "5h95RKlS30sfxJrOMyiwxL",
       "title": "Ad Matai (Blue)",
