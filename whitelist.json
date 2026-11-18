@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5065,
-  "last_updated": "2026-11-18T20:13:23.281Z",
+  "version": 5066,
+  "last_updated": "2026-11-18T20:13:35.973Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "58m9mqwBLliFpIFSYzprSn",
+      "title": "עטלף עיוור",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:13:35.973Z"
+    },
     {
       "id": "4aJv2UNjRUq1TxXceJiLNN",
       "title": "דמייני",
