@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5273,
-  "last_updated": "2026-11-18T20:32:18.543Z",
+  "version": 5275,
+  "last_updated": "2026-11-18T20:32:21.992Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5KT4MB0aXslFMiM6tfSMmJ",
+      "title": "ירושלים",
+      "artist": "אליה והב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:21.992Z"
+    },
+    {
+      "id": "0tPmvzagmFovHotFpUAi3G",
+      "title": "משליך הכל עליך",
+      "artist": "אליה והב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:21.992Z"
+    },
     {
       "id": "1zFN8JsQiruHHyx8Ywybr7",
       "title": "אבא סלח לי",
