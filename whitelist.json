@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5222,
-  "last_updated": "2026-11-18T20:29:54.079Z",
+  "version": 5223,
+  "last_updated": "2026-11-18T20:29:57.861Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5XGRa6WTwBnW9bgsKr0BJ7",
+      "title": "Chirpy Chirpy Cheep Cheep",
+      "artist": "Danny Suko, Gabriel Wittner, Steve Lima",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:57.861Z"
+    },
     {
       "id": "youtube:33Vqk6r1SKs",
       "title": "אברהם פריד- אדרבה avraham fried - aderabe",
