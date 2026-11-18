@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5177,
-  "last_updated": "2026-11-18T20:26:49.503Z",
+  "version": 5178,
+  "last_updated": "2026-11-18T20:26:54.861Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:l463vS68reA",
+      "title": "יוסף חיים שוואקי \"הכל לטובה\" - \"yosef chaim shwekey \"Everything For good \"",
+      "artist": "16ronen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:26:54.861Z"
+    },
     {
       "id": "2n4DPH6fb4c6YGTWXijW6t",
       "title": "אפריקן ליידי",
