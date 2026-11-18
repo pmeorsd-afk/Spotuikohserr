@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5104,
-  "last_updated": "2026-11-18T20:19:37.047Z",
+  "version": 5106,
+  "last_updated": "2026-11-18T20:19:41.413Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3s617Hcn9njFTDqsfBtppe",
+      "title": "חלק ממך",
+      "artist": "Yishai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:19:41.413Z"
+    },
+    {
+      "id": "7cTqptARWAJGKSg4rki8ws",
+      "title": "כי לא תחפוץ",
+      "artist": "Shloime Daskal",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:19:41.413Z"
+    },
     {
       "id": "6ktgq4lai0lyOKsYdwLWKl",
       "title": "ELECHA",
