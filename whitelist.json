@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5302,
-  "last_updated": "2026-11-18T20:33:19.730Z",
+  "version": 5304,
+  "last_updated": "2026-11-18T20:33:23.543Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "354YT2zYO1GpAmf10xXiZf",
+      "title": "בואי נדבר",
+      "artist": "ששון איפרם שאולוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:33:23.543Z"
+    },
+    {
+      "id": "1ADljphnyLqrI3HOQjParb",
+      "title": "דובדבן",
+      "artist": "דודו אהרון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:33:23.543Z"
+    },
     {
       "id": "5LoubNGZfjpvY7CmnZhLF0",
       "title": "In Zaire - Re-Afro Mix",
