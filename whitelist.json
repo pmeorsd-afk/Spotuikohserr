@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5213,
-  "last_updated": "2026-11-18T20:29:27.584Z",
+  "version": 5214,
+  "last_updated": "2026-11-18T20:29:31.107Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7aOIETWtupasNKBhLh46a4",
+      "title": "#דוביגל - Expo live",
+      "artist": "Static, Ron Sky Nesher",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:31.107Z"
+    },
     {
       "id": "1SAftVfBD9vcEIfaAOLFah",
       "title": "ניגון חסידי - צמח צדק (מתוך פרויקט צמאה)",
