@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5314,
-  "last_updated": "2026-11-18T20:47:45.001Z",
+  "version": 5315,
+  "last_updated": "2026-11-18T20:47:48.736Z",
   "artists": [
+    {
+      "id": "5Xo52BImdypoNLbP4qCkzQ",
+      "canonical_name": "שיעלה רוט",
+      "aliases": [
+        "שיעלה רוט"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:47:48.736Z"
+    },
     {
       "id": "4u5QHWyhLYXUFerb5DRDbz",
       "canonical_name": "Shimon Levi",
