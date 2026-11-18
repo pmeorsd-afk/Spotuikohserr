@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5321,
-  "last_updated": "2026-11-18T20:48:03.851Z",
+  "version": 5322,
+  "last_updated": "2026-11-18T20:48:07.399Z",
   "artists": [
+    {
+      "id": "0kSmRFvcGwtRLvgFE8VE18",
+      "canonical_name": "Yerachmiel Begun",
+      "aliases": [
+        "Yerachmiel Begun"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:48:07.399Z"
+    },
     {
       "id": "071VDj4Qpu5cyJlZxy6gRP",
       "canonical_name": "The Yedidim Choir",
