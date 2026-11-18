@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5305,
-  "last_updated": "2026-11-18T20:33:26.977Z",
+  "version": 5306,
+  "last_updated": "2026-11-18T20:33:31.156Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2maunI5ItxJKfPXLwTJyGE",
+      "title": "בדיוק כמו שהיא",
+      "artist": "Adir Getz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:33:31.156Z"
+    },
     {
       "id": "0v0YbupXiuODW7gXkKDzEE",
       "title": "ביום שנפגש",
