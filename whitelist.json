@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5264,
-  "last_updated": "2026-11-18T20:31:51.222Z",
+  "version": 5265,
+  "last_updated": "2026-11-18T20:31:54.893Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "06fGIUNt99GlbnxwM03q3T",
+      "title": "חזק אותי",
+      "artist": "אליה והב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:54.893Z"
+    },
     {
       "id": "5PntSbMHC1ud6Vvl8x56qd",
       "title": "Loser",
