@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5077,
-  "last_updated": "2026-11-18T20:17:26.464Z",
+  "version": 5079,
+  "last_updated": "2026-11-18T20:17:29.928Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4LJmj8tGVu9HnWM20iC89w",
+      "title": "אל בעוני הבט 1",
+      "artist": "Yechiel Nahari",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:17:29.928Z"
+    },
+    {
+      "id": "76a0Wv3Vx3S3NPPzgpfe9Y",
+      "title": "שקט",
+      "artist": "מורן קריטי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:17:29.928Z"
+    },
     {
       "id": "79EkGysjP2dL5GdpeQjRxT",
       "title": "This Side of Paradise",
