@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5186,
-  "last_updated": "2026-11-18T20:27:46.343Z",
+  "version": 5187,
+  "last_updated": "2026-11-18T20:27:49.916Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Hiix6dRsvYiGemQwCv5kJ",
+      "title": "Yerei Shamayim",
+      "artist": "Shmueli Ungar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:27:49.916Z"
+    },
     {
       "id": "1cW5liM55PaRYVm1aUpoiw",
       "title": "מה שבא לנו",
