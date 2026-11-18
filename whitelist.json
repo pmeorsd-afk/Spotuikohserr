@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5299,
-  "last_updated": "2026-11-18T20:33:11.778Z",
+  "version": 5301,
+  "last_updated": "2026-11-18T20:33:15.507Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3VySNMEnRIGXObKL9n37ER",
+      "title": "Good day",
+      "artist": "delorane",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:33:15.507Z"
+    },
+    {
+      "id": "2XsqlxLT2eaFa03YZ0jUX9",
+      "title": "מבול",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:33:15.507Z"
+    },
     {
       "id": "7nK2ac7BZucYerOTvlkLD7",
       "title": "Always Remember Us This Way",
