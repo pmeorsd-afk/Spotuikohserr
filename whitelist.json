@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5330,
-  "last_updated": "2026-11-18T20:51:30.484Z",
+  "version": 5331,
+  "last_updated": "2026-11-18T20:55:18.777Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4JS0UwBYo76BwuaLxLLkjS",
+      "title": "יום שישי חזר",
+      "artist": "Matti Caspi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:55:18.777Z"
+    },
     {
       "id": "3RSge0lxgPjkBUyJu37Eze",
       "title": "שלוש בלילה בעיר",
