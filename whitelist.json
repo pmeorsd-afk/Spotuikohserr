@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5200,
-  "last_updated": "2026-11-18T20:28:50.457Z",
+  "version": 5201,
+  "last_updated": "2026-11-18T20:28:54.190Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "21IYMdzTrzSe191Cy5eMap",
+      "title": "Sailor Song",
+      "artist": "Gigi Perez",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:28:54.190Z"
+    },
     {
       "id": "2rQQLhl2z9faJjCt4C4C4N",
       "title": "Shoulda",
