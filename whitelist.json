@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5148,
-  "last_updated": "2026-11-18T20:25:30.243Z",
+  "version": 5150,
+  "last_updated": "2026-11-18T20:25:33.690Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "27Q0AnWlJqDBgmBsh9LYC1",
+      "title": "Don't Say Goodbye",
+      "artist": "ConKi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:25:33.690Z"
+    },
+    {
+      "id": "2tQCrZ4fe3eDviBKb6wFhj",
+      "title": "ברגעים שאת הולכת",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:25:33.690Z"
+    },
     {
       "id": "4CFA74yi1qKdx8VlZKfLHR",
       "title": "כמה טוב השם",
