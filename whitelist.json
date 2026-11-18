@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5171,
-  "last_updated": "2026-11-18T20:26:34.272Z",
+  "version": 5173,
+  "last_updated": "2026-11-18T20:26:38.206Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0e8wNfrGCO9d06p8sidaJS",
+      "title": "Blue Horizon",
+      "artist": "VLX",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:26:38.206Z"
+    },
+    {
+      "id": "6fJIQxlF39R3IN6Af7Zd9m",
+      "title": "אל תשברי לי",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:26:38.206Z"
+    },
     {
       "id": "65DbTqJKhbwqYbZ1Okr0rc",
       "title": "Choosin' Texas",
