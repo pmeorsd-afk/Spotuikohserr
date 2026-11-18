@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5034,
-  "last_updated": "2026-11-18T19:55:58.054Z",
+  "version": 5035,
+  "last_updated": "2026-11-18T19:56:02.779Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4e4Bs7QFGt2Q0ShvlGGzb1",
+      "title": "ככה זה חיים שלי",
+      "artist": "רואי אדם",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:56:02.779Z"
+    },
     {
       "id": "0YKcoSHhXNOw4PHMHahUvT",
       "title": "סקס",
