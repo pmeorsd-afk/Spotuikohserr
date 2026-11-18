@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5147,
-  "last_updated": "2026-11-18T20:25:26.309Z",
+  "version": 5148,
+  "last_updated": "2026-11-18T20:25:30.243Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4CFA74yi1qKdx8VlZKfLHR",
+      "title": "כמה טוב השם",
+      "artist": "היוצרים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:25:30.243Z"
+    },
     {
       "id": "6yN1RbU6xC7DUestehLCRe",
       "title": "תמונות שלך (by Offir Malol)",
