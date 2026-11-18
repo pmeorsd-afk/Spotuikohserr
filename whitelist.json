@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5076,
-  "last_updated": "2026-11-18T20:17:21.868Z",
+  "version": 5077,
+  "last_updated": "2026-11-18T20:17:26.464Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "79EkGysjP2dL5GdpeQjRxT",
+      "title": "This Side of Paradise",
+      "artist": "Coyote Theory",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:17:26.464Z"
+    },
     {
       "id": "3vhei8BgXpEYt1iSlNPZys",
       "title": "Nigun Leshabbos VeYom Tov 1",
