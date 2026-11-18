@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5067,
-  "last_updated": "2026-11-18T20:13:49.663Z",
+  "version": 5068,
+  "last_updated": "2026-11-18T20:14:03.005Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4k4Od9abLF9hbIb2GoOztG",
+      "title": "כביש הערבה",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:14:03.005Z"
+    },
     {
       "id": "0pfODWsXr9LupfTHbRPgry",
       "title": "כל הנשים יפות",
