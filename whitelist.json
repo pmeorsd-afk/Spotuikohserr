@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5131,
-  "last_updated": "2026-11-18T20:21:35.285Z",
+  "version": 5132,
+  "last_updated": "2026-11-18T20:21:39.040Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6cvmv9rPmaXRJyt8uQjAfk",
+      "title": "נזכר בעיניה",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:21:39.040Z"
+    },
     {
       "id": "1SOS6qtdtNNyNkcdRMs3ig",
       "title": "Beautiful Mind",
