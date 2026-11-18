@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5093,
-  "last_updated": "2026-11-18T20:18:32.687Z",
+  "version": 5094,
+  "last_updated": "2026-11-18T20:18:36.564Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3YxnHRohWiX8cLk7omqHAL",
+      "title": "Chanukah (Remix)",
+      "artist": "CKids, Levik Loschak",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:18:36.564Z"
+    },
     {
       "id": "1Roj0c9zi3L5PZy1dHtQgv",
       "title": "יונים ניגון",
