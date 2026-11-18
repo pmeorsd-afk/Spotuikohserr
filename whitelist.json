@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5269,
-  "last_updated": "2026-11-18T20:32:07.250Z",
+  "version": 5270,
+  "last_updated": "2026-11-18T20:32:10.768Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2nLtzopw4rPReszdYBJU6h",
+      "title": "Numb",
+      "artist": "Linkin Park",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:10.768Z"
+    },
     {
       "id": "4IRw6NB5T0AVVZ8WvUqJAo",
       "title": "מחרוזת: יום הרווקים",
