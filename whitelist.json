@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5050,
-  "last_updated": "2026-11-18T19:57:08.813Z",
+  "version": 5052,
+  "last_updated": "2026-11-18T19:57:12.331Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0eAuGrXyGFYwur9ARUe7LJ",
+      "title": "Earrings",
+      "artist": "Malcolm Todd",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:57:12.331Z"
+    },
+    {
+      "id": "2B6xITJUNDlxKZequqv3o9",
+      "title": "DIGIDI DIGIDI",
+      "artist": "DJ.ILHAM, DJ MIRO",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:57:12.331Z"
+    },
     {
       "id": "7dTAQLG7I4sFsZFVPfRNiu",
       "title": "טאם טאם - גרסת מועדונים",
