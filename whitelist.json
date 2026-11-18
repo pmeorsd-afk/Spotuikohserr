@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5250,
-  "last_updated": "2026-11-18T20:31:20.823Z",
+  "version": 5252,
+  "last_updated": "2026-11-18T20:31:24.550Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5KfaxePCKn1S0Oz8BnmRNO",
+      "title": "מחרוזת נדרתי נדר - Live",
+      "artist": "Moshik Afia, Moshe Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:24.550Z"
+    },
+    {
+      "id": "0vUmeTxSlhNfNVXo81y4hr",
+      "title": "הולך תמים",
+      "artist": "עמיחי פלסר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:24.550Z"
+    },
     {
       "id": "2psRActEWsTlYYd7EDoyVR",
       "title": "Those Eyes",
