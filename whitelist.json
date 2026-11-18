@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5311,
-  "last_updated": "2026-11-18T20:47:32.388Z",
+  "version": 5312,
+  "last_updated": "2026-11-18T20:47:36.935Z",
   "artists": [
     {
       "id": "5GGuJlfrOdZLYgnzq0Jw3B",
@@ -11254,9 +11254,9 @@
       "id": "1D6ZUnsQ3hCB3KOgVQ42J4",
       "title": "מחרוזת להיטים",
       "artist": "תהילה צוקרל, נויה יוסף",
-      "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-11-15T19:41:15.427Z"
+      "status": "blocked",
+      "notes": "blocked via telegram",
+      "updated_at": "2026-11-18T20:47:36.935Z"
     },
     {
       "id": "0Ie11mkryyNQemZuYaRDsg",
