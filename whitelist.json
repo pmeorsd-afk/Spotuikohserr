@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5094,
-  "last_updated": "2026-11-18T20:18:36.564Z",
+  "version": 5095,
+  "last_updated": "2026-11-18T20:18:48.041Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3lKX9bFeQo8nz7IOOnSMLV",
+      "title": "שיר (יונה וולך)",
+      "artist": "Alma",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:18:48.041Z"
+    },
     {
       "id": "3YxnHRohWiX8cLk7omqHAL",
       "title": "Chanukah (Remix)",
