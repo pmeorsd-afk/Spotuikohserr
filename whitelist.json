@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5205,
-  "last_updated": "2026-11-18T20:29:09.841Z",
+  "version": 5206,
+  "last_updated": "2026-11-18T20:29:13.360Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0pfePzfX0i64NZBi0j0j8S",
+      "title": "Please You",
+      "artist": "Gan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:13.360Z"
+    },
     {
       "id": "6CdH2dwwvfmvpPrc9S0fHU",
       "title": "Truth Or Dare",
