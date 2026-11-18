@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5323,
-  "last_updated": "2026-11-18T20:48:11.107Z",
+  "version": 5325,
+  "last_updated": "2026-11-18T20:48:14.716Z",
   "artists": [
     {
       "id": "5PQwhpe6nUjWcXSgTj3VtC",
@@ -4980,9 +4980,9 @@
       "id": "2n4DPH6fb4c6YGTWXijW6t",
       "title": "אפריקן ליידי",
       "artist": "אבי מולה",
-      "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-11-18T20:26:49.503Z"
+      "status": "blocked",
+      "notes": "blocked via telegram",
+      "updated_at": "2026-11-18T20:48:14.716Z"
     },
     {
       "id": "4uUG5RXrOk84mYEfFvj3cK",
@@ -5940,9 +5940,9 @@
       "id": "2Vp2d2PUPJt7gbAE2XA48X",
       "title": "לעולם ועד",
       "artist": "Osher Cohen",
-      "status": "approved",
-      "notes": "approved via telegram",
-      "updated_at": "2026-11-18T19:57:23.932Z"
+      "status": "blocked",
+      "notes": "blocked via telegram",
+      "updated_at": "2026-11-18T20:48:14.716Z"
     },
     {
       "id": "2JfWY2jf6mTHyft4ZB3FIA",
