@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5035,
-  "last_updated": "2026-11-18T19:56:02.779Z",
+  "version": 5036,
+  "last_updated": "2026-11-18T19:56:09.806Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4fnaxu5u7uNkQoj6ddyvN2",
+      "title": "אם הייתי יודע",
+      "artist": "רואי אדם",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:56:09.806Z"
+    },
     {
       "id": "4e4Bs7QFGt2Q0ShvlGGzb1",
       "title": "ככה זה חיים שלי",
