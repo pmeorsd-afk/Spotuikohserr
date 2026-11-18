@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5208,
-  "last_updated": "2026-11-18T20:29:16.929Z",
+  "version": 5209,
+  "last_updated": "2026-11-18T20:29:20.220Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0yqJgDCeQl6svQK1HMKXW1",
+      "title": "Thinking of Yerushalaim",
+      "artist": "נפתלי קמפה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:20.220Z"
+    },
     {
       "id": "4xhsWYTOGcal8zt0J161CU",
       "title": "Lovin On Me",
