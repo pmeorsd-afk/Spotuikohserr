@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5220,
-  "last_updated": "2026-11-18T20:29:45.581Z",
+  "version": 5221,
+  "last_updated": "2026-11-18T20:29:50.573Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:5W1VGgOnfD0",
+      "title": "בואי בשלום",
+      "artist": "בן סנוף",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:50.573Z"
+    },
     {
       "id": "6BktHfgC3lb8szkKoy5lk9",
       "title": "GOTTA RAP",
