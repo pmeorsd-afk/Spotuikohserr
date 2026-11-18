@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5308,
-  "last_updated": "2026-11-18T20:47:19.823Z",
+  "version": 5309,
+  "last_updated": "2026-11-18T20:47:24.608Z",
   "artists": [
+    {
+      "id": "5TvuNKoZ4SNrLS0wtFpRcF",
+      "canonical_name": "Shlomo Carlebach",
+      "aliases": [
+        "Shlomo Carlebach"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:47:24.608Z"
+    },
     {
       "id": "6CO22pLklchkhsDW4491nU",
       "canonical_name": "נחמן סבג",
