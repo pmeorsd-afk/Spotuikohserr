@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5203,
-  "last_updated": "2026-11-18T20:29:02.295Z",
+  "version": 5204,
+  "last_updated": "2026-11-18T20:29:05.971Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4lQNI1gdGsuxzcrvqAuxiB",
+      "title": "לא כועס",
+      "artist": "Naor Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:05.971Z"
+    },
     {
       "id": "3USxtqRwSYz57Ewm6wWRMp",
       "title": "Heat Waves",
