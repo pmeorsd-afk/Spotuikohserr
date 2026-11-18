@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5087,
-  "last_updated": "2026-11-18T20:18:00.536Z",
+  "version": 5088,
+  "last_updated": "2026-11-18T20:18:07.721Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6B7bWgUleo2lgIqdMjK2IZ",
+      "title": "מודה אני",
+      "artist": "Meir Ariel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:18:07.721Z"
+    },
     {
       "id": "04emojnbYkrRmv5qtJcgVP",
       "title": "What I Want (feat. Tate McRae)",
