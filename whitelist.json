@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5279,
-  "last_updated": "2026-11-18T20:32:36.016Z",
+  "version": 5280,
+  "last_updated": "2026-11-18T20:32:40.058Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2yhBX7T8ltvo7T1dpHF011",
+      "title": "אני נשבע",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:40.058Z"
+    },
     {
       "id": "7oiHL6cVs1zZG6NI0XXpPo",
       "title": "Hassa",
