@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5185,
-  "last_updated": "2026-11-18T20:27:43.003Z",
+  "version": 5186,
+  "last_updated": "2026-11-18T20:27:46.343Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1cW5liM55PaRYVm1aUpoiw",
+      "title": "מה שבא לנו",
+      "artist": "רוני אייסו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:27:46.343Z"
+    },
     {
       "id": "4cwaHcBRYSx3NBc2F0DkU5",
       "title": "3 AM",
