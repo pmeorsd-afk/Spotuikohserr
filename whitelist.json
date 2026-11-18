@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5100,
-  "last_updated": "2026-11-18T20:19:21.079Z",
+  "version": 5101,
+  "last_updated": "2026-11-18T20:19:25.176Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2z9Y1zMzHwkLOBTnA7iEsW",
+      "title": "הנני כאן",
+      "artist": "Harel Skaat",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:19:25.176Z"
+    },
     {
       "id": "3VBMoD1EHhEVkilx6WIqNk",
       "title": "מודים אנחנו לך",
