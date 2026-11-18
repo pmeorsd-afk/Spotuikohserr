@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5039,
-  "last_updated": "2026-11-18T19:56:21.720Z",
+  "version": 5040,
+  "last_updated": "2026-11-18T19:56:25.613Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "17OZFNXGn2SWwaZFiOFigW",
+      "title": "Amigo - 2013 Remaster",
+      "artist": "Black Slate",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:56:25.613Z"
+    },
     {
       "id": "4PfDS6wcDp7YvikkmbySak",
       "title": "Everything I Own - 7'' Mix",
