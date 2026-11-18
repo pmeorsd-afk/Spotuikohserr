@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5212,
-  "last_updated": "2026-11-18T20:29:24.051Z",
+  "version": 5213,
+  "last_updated": "2026-11-18T20:29:27.584Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1SAftVfBD9vcEIfaAOLFah",
+      "title": "ניגון חסידי - צמח צדק (מתוך פרויקט צמאה)",
+      "artist": "Avraham Fried, צמאה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:27.584Z"
+    },
     {
       "id": "72SAYTK5231gH5Vwr0Z4n3",
       "title": "Sleep",
