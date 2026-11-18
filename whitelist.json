@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5235,
-  "last_updated": "2026-11-18T20:30:37.606Z",
+  "version": 5237,
+  "last_updated": "2026-11-18T20:30:41.238Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:due4Ht7cCrw",
+      "title": "מה הבריות אומרות",
+      "artist": "אלי פרידמן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:30:41.238Z"
+    },
+    {
+      "id": "youtube:iEs91D_mN4w",
+      "title": "אלי פרידמן - רבונו של עולם - מתוך המופע \"שרים ביקב\"",
+      "artist": "אלי פרידמן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:30:41.238Z"
+    },
     {
       "id": "51XWxWqKpRqp5MzIGbyAFJ",
       "title": "לא נרגע",
