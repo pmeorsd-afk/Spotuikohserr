@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5282,
-  "last_updated": "2026-11-18T20:32:43.908Z",
+  "version": 5286,
+  "last_updated": "2026-11-18T20:32:47.570Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,38 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2NWAkktAboVng8MBzNkrfl",
+      "title": "שבור",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:47.570Z"
+    },
+    {
+      "id": "7yda5b1JfNL7preCjLERBX",
+      "title": "קריוקי בסלון",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:47.570Z"
+    },
+    {
+      "id": "6kgSzKxmHYhOtOtz4aiyEG",
+      "title": "Ice-O-Lator",
+      "artist": "Pato, Saïf",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:47.570Z"
+    },
+    {
+      "id": "3cbk7aherKA6PfZoI1EXOp",
+      "title": "אם רק הייתי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:47.570Z"
+    },
     {
       "id": "60Cmrz2VxJ1LITvZmfQiQi",
       "title": "Pour les sous",
