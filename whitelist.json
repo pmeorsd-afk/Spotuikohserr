@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5098,
-  "last_updated": "2026-11-18T20:19:11.585Z",
+  "version": 5099,
+  "last_updated": "2026-11-18T20:19:16.019Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "26TSPTK24tOsvwUNdeVGN9",
+      "title": "ראיתי בית",
+      "artist": "Alma",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:19:16.019Z"
+    },
     {
       "id": "10BpeRARR6lI1XumgJ9Pzj",
       "title": "This Chanuka 5782",
