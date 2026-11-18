@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5247,
-  "last_updated": "2026-11-18T20:31:04.633Z",
+  "version": 5248,
+  "last_updated": "2026-11-18T20:31:09.815Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1oe1Z2DH0XUoShl0ZpBzoD",
+      "title": "כולם צדיקים",
+      "artist": "הראל טל, מוטי גולדמן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:09.815Z"
+    },
     {
       "id": "7G7tgVYORlDuVprcYHuFJh",
       "title": "Don't Dream It's Over",
