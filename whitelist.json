@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5287,
-  "last_updated": "2026-11-18T20:32:51.566Z",
+  "version": 5290,
+  "last_updated": "2026-11-18T20:32:55.120Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,30 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2JQWWEfbJ7z6MYOIunlwJ4",
+      "title": "תחזרי תחזרי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:55.120Z"
+    },
+    {
+      "id": "6kGDE4KqvFi0nDn4rSMrGW",
+      "title": "שמע ישראל",
+      "artist": "מאור אדרי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:55.120Z"
+    },
+    {
+      "id": "2nyvSg340PJqAUD9fLsZHK",
+      "title": "הכל טוב",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:55.120Z"
+    },
     {
       "id": "704SepT16hi0SazuCWX8rY",
       "title": "Freestyle semi liberté",
