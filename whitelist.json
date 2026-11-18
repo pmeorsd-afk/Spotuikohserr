@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5086,
-  "last_updated": "2026-11-18T20:17:56.911Z",
+  "version": 5087,
+  "last_updated": "2026-11-18T20:18:00.536Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "04emojnbYkrRmv5qtJcgVP",
+      "title": "What I Want (feat. Tate McRae)",
+      "artist": "Morgan Wallen, Tate McRae",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:18:00.536Z"
+    },
     {
       "id": "1JESRX2pSvg7ZaiykaP3Yp",
       "title": "Refoeinu",
