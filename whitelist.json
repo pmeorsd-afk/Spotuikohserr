@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5071,
-  "last_updated": "2026-11-18T20:14:43.356Z",
+  "version": 5072,
+  "last_updated": "2026-11-18T20:14:56.201Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3oNQ6NkihVzQkV5qhk2Pbe",
+      "title": "Something About You",
+      "artist": "Eyedress, Dent May",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:14:56.201Z"
+    },
     {
       "id": "5yvVYFDUpbnjcnRBgjwTzM",
       "title": "Dracula (with JENNIE)",
