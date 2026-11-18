@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5116,
-  "last_updated": "2026-11-18T20:20:21.211Z",
+  "version": 5117,
+  "last_updated": "2026-11-18T20:20:25.029Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6FIoQTP0AywBpk7oExZfb0",
+      "title": "הביתה",
+      "artist": "Yardena Arazi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:20:25.029Z"
+    },
     {
       "id": "733yUkrK7MBesBTRjY1mM8",
       "title": "הרקיע השביעי",
