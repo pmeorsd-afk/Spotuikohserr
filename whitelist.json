@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5054,
-  "last_updated": "2026-11-18T19:57:19.996Z",
+  "version": 5055,
+  "last_updated": "2026-11-18T19:57:23.932Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Vp2d2PUPJt7gbAE2XA48X",
+      "title": "לעולם ועד",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:57:23.932Z"
+    },
     {
       "id": "2JfWY2jf6mTHyft4ZB3FIA",
       "title": "מחרוזת: משגע את כולן",
