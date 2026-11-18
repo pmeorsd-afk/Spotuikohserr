@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5057,
-  "last_updated": "2026-11-18T19:57:36.701Z",
+  "version": 5058,
+  "last_updated": "2026-11-18T19:57:40.401Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0myRViRgmQ3J8izICXEAVO",
+      "title": "I Thought I Saw Your Face Today",
+      "artist": "She & Him",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:57:40.401Z"
+    },
     {
       "id": "7yNf9YjeO5JXUE3JEBgnYc",
       "title": "Babydoll",
