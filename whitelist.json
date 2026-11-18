@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5241,
-  "last_updated": "2026-11-18T20:30:48.781Z",
+  "version": 5242,
+  "last_updated": "2026-11-18T20:30:53.352Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7ef4DlsgrMEH11cDZd32M6",
+      "title": "One Kiss (with Dua Lipa)",
+      "artist": "Calvin Harris, Dua Lipa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:30:53.352Z"
+    },
     {
       "id": "21jGcNKet2qwijlDFuPiPb",
       "title": "Circles",
