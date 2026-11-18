@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5174,
-  "last_updated": "2026-11-18T20:26:42.069Z",
+  "version": 5176,
+  "last_updated": "2026-11-18T20:26:45.883Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4uUG5RXrOk84mYEfFvj3cK",
+      "title": "I'm Good (Blue)",
+      "artist": "David Guetta, Bebe Rexha",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:26:45.883Z"
+    },
+    {
+      "id": "4qLoexsB3DzKurtuA5mqJy",
+      "title": "כך עוברים חיי",
+      "artist": "Oren Chen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:26:45.883Z"
+    },
     {
       "id": "3XLQEvM2gRPTloVmuqM59G",
       "title": "חתן וכלה",
