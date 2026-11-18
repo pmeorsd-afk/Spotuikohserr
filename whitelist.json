@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5317,
-  "last_updated": "2026-11-18T20:47:52.462Z",
+  "version": 5318,
+  "last_updated": "2026-11-18T20:47:56.038Z",
   "artists": [
+    {
+      "id": "2IYpW1MawBLW490JNw5vhj",
+      "canonical_name": "מוישי כהנא",
+      "aliases": [
+        "מוישי כהנא"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:47:56.038Z"
+    },
     {
       "id": "2hxXMtW7A8Moreleh7kJCV",
       "canonical_name": "שירת הבקשות",
