@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5180,
-  "last_updated": "2026-11-18T20:27:12.771Z",
+  "version": 5181,
+  "last_updated": "2026-11-18T20:27:18.169Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0RUC2LeVDXOW4DUerfpW4e",
+      "title": "משמאל לימין",
+      "artist": "שימי די אנד די",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:27:18.169Z"
+    },
     {
       "id": "0RAav5qdlvwsV8voJiG8xs",
       "title": "Tonight",
