@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5322,
-  "last_updated": "2026-11-18T20:48:07.399Z",
+  "version": 5323,
+  "last_updated": "2026-11-18T20:48:11.107Z",
   "artists": [
+    {
+      "id": "5PQwhpe6nUjWcXSgTj3VtC",
+      "canonical_name": "יהודה מנהיים",
+      "aliases": [
+        "יהודה מנהיים"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:48:11.107Z"
+    },
     {
       "id": "0kSmRFvcGwtRLvgFE8VE18",
       "canonical_name": "Yerachmiel Begun",
