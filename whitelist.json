@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5142,
-  "last_updated": "2026-11-18T20:22:09.145Z",
+  "version": 5144,
+  "last_updated": "2026-11-18T20:22:12.876Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ffRiw53GhA1n87JC4vQYu",
+      "title": "להיות רק בשמחה",
+      "artist": "ליאם גולן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:22:12.876Z"
+    },
+    {
+      "id": "4SxjTr2FDIxmj4uySdbo7A",
+      "title": "הנה את בוכה",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:22:12.876Z"
+    },
     {
       "id": "4jDpJIog6JBkvq3OV1F4XR",
       "title": "רבנו נחמן יעלה",
