@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5262,
-  "last_updated": "2026-11-18T20:31:47.658Z",
+  "version": 5264,
+  "last_updated": "2026-11-18T20:31:51.222Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5PntSbMHC1ud6Vvl8x56qd",
+      "title": "Loser",
+      "artist": "Beck",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:51.222Z"
+    },
+    {
+      "id": "3u1Bn1IGwuUIBFzmBO1fQ7",
+      "title": "תקופה",
+      "artist": "משה כורסיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:51.222Z"
+    },
     {
       "id": "6hQh8TDewz3fGZgSHAnb6J",
       "title": "תגידי לי",
