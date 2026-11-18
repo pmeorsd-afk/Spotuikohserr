@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5044,
-  "last_updated": "2026-11-18T19:56:41.031Z",
+  "version": 5045,
+  "last_updated": "2026-11-18T19:56:44.466Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0IGijaEJdjXOZ2fp4WIua1",
+      "title": "כשהכל יתבהר",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:56:44.466Z"
+    },
     {
       "id": "46XU5GojwRNl0wfFN7CkiO",
       "title": "משמעות לחלומותיי",
