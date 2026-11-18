@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5277,
-  "last_updated": "2026-11-18T20:32:26.058Z",
+  "version": 5278,
+  "last_updated": "2026-11-18T20:32:29.778Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3QKj9mcorqGF141sDKOWF7",
+      "title": "לראות את הטוב",
+      "artist": "אליה והב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:29.778Z"
+    },
     {
       "id": "0pp1XgfSPXk2GsXSpRvs6J",
       "title": "הדרך משקרת",
