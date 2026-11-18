@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5242,
-  "last_updated": "2026-11-18T20:30:53.352Z",
+  "version": 5245,
+  "last_updated": "2026-11-18T20:30:57.292Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,30 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Ih9gCsn3Lejbr974un7H3",
+      "title": "שפע",
+      "artist": "Avihai Hollender",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:30:57.292Z"
+    },
+    {
+      "id": "0cRz8saWOwackJEGUgrq8f",
+      "title": "Come On Over",
+      "artist": "Ludomir, Idun Nicoline",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:30:57.292Z"
+    },
+    {
+      "id": "77fMGCDb1e3KEd060YEpyS",
+      "title": "One Day In Your Life",
+      "artist": "Michael Jackson",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:30:57.292Z"
+    },
     {
       "id": "7ef4DlsgrMEH11cDZd32M6",
       "title": "One Kiss (with Dua Lipa)",
