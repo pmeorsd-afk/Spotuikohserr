@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5270,
-  "last_updated": "2026-11-18T20:32:10.768Z",
+  "version": 5272,
+  "last_updated": "2026-11-18T20:32:14.811Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1MXHvNZNVJoaPanQJAlaK2",
+      "title": "מסע חיי",
+      "artist": "אליה והב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:14.811Z"
+    },
+    {
+      "id": "3geRffSf6eAruhg23RkpKV",
+      "title": "Drive",
+      "artist": "R.E.M.",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:32:14.811Z"
+    },
     {
       "id": "2nLtzopw4rPReszdYBJU6h",
       "title": "Numb",
