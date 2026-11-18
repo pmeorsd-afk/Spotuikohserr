@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5191,
-  "last_updated": "2026-11-18T20:28:13.980Z",
+  "version": 5192,
+  "last_updated": "2026-11-18T20:28:18.018Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0eLXbQO2FYmfWbCKx15dL3",
+      "title": "בסוף אנחנו נתחתן",
+      "artist": "Adir Getz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:28:18.018Z"
+    },
     {
       "id": "0m9DhTA5QNeyGVpUgCEnEi",
       "title": "Body Back On Mine",
