@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5079,
-  "last_updated": "2026-11-18T20:17:29.928Z",
+  "version": 5081,
+  "last_updated": "2026-11-18T20:17:33.773Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4k6Uh1HXdhtusDW5y8Gbvy",
+      "title": "Bad Habit",
+      "artist": "Steve Lacy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:17:33.773Z"
+    },
+    {
+      "id": "7iO50km2dwRzZJ1dXiET4e",
+      "title": "Reb Shlomo Chesinker Niggun Before Yechidus",
+      "artist": "Gershon Wachtel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:17:33.773Z"
+    },
     {
       "id": "4LJmj8tGVu9HnWM20iC89w",
       "title": "אל בעוני הבט 1",
