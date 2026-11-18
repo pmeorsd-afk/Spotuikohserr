@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5256,
-  "last_updated": "2026-11-18T20:31:32.174Z",
+  "version": 5258,
+  "last_updated": "2026-11-18T20:31:35.737Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7o1flskZISBHAUiWuFtuVq",
+      "title": "זאת לא אהבה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:35.737Z"
+    },
+    {
+      "id": "2jbKbrClFSgt6ByLmHiUqs",
+      "title": "מלנכוליה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:35.737Z"
+    },
     {
       "id": "0p0K0GKy3WeE4hChf0h2Rw",
       "title": "מתכון לעצב",
