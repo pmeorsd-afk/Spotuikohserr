@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5214,
-  "last_updated": "2026-11-18T20:29:31.107Z",
+  "version": 5216,
+  "last_updated": "2026-11-18T20:29:34.801Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7yB4Y6B0r5kOGoq27ctuF6",
+      "title": "כי אנו עמך",
+      "artist": "Ishay Ribo, Avraham Fried, Amir Dadon, צמאה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:34.801Z"
+    },
+    {
+      "id": "1IcFJQU7aYJTAiVNUPTH3y",
+      "title": "Cola",
+      "artist": "Joezi, Voodoochild, Burlington",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:34.801Z"
+    },
     {
       "id": "7aOIETWtupasNKBhLh46a4",
       "title": "#דוביגל - Expo live",
