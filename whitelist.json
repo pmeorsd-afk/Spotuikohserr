@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5101,
-  "last_updated": "2026-11-18T20:19:25.176Z",
+  "version": 5102,
+  "last_updated": "2026-11-18T20:19:29.019Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2CneNmpYpka8RgSkZZIiw3",
+      "title": "Neila נעילה",
+      "artist": "David Hababou, Binyamin elbaz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:19:29.019Z"
+    },
     {
       "id": "2z9Y1zMzHwkLOBTnA7iEsW",
       "title": "הנני כאן",
