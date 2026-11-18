@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5326,
-  "last_updated": "2026-11-18T20:48:18.086Z",
+  "version": 5327,
+  "last_updated": "2026-11-18T20:48:21.756Z",
   "artists": [
+    {
+      "id": "0USMMfQGpsHYMaoGw010lx",
+      "canonical_name": "Yisroel Werdyger",
+      "aliases": [
+        "Yisroel Werdyger"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:48:21.756Z"
+    },
     {
       "id": "0NI5S3iU2zLmB5jkDsYOR6",
       "canonical_name": "עדי גביסון",
