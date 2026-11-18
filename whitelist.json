@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5194,
-  "last_updated": "2026-11-18T20:28:22.274Z",
+  "version": 5196,
+  "last_updated": "2026-11-18T20:28:26.217Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5h95RKlS30sfxJrOMyiwxL",
+      "title": "Ad Matai (Blue)",
+      "artist": "iZZy D JaY",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:28:26.217Z"
+    },
+    {
+      "id": "6xGruZOHLs39ZbVccQTuPZ",
+      "title": "Glimpse of Us",
+      "artist": "Joji",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:28:26.217Z"
+    },
     {
       "id": "76IFZgkGXALdlJ3gNOKIYT",
       "title": "בא מן השתיקה",
