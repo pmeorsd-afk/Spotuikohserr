@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5081,
-  "last_updated": "2026-11-18T20:17:33.773Z",
+  "version": 5082,
+  "last_updated": "2026-11-18T20:17:40.642Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "28JWKxmSSQztQkbA1MYP97",
+      "title": "Shalom Yeladim",
+      "artist": "Rebbe Alter",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:17:40.642Z"
+    },
     {
       "id": "4k6Uh1HXdhtusDW5y8Gbvy",
       "title": "Bad Habit",
