@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5182,
-  "last_updated": "2026-11-18T20:27:22.199Z",
+  "version": 5183,
+  "last_updated": "2026-11-18T20:27:31.789Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:xCzkzTR_zd4",
+      "title": "בקרוב (יתגדל)",
+      "artist": "שמחה פרידמן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:27:31.789Z"
+    },
     {
       "id": "youtube:6KgSm4nJoM4",
       "title": "אודי דוידי- דיינו",
