@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5097,
-  "last_updated": "2026-11-18T20:19:02.433Z",
+  "version": 5098,
+  "last_updated": "2026-11-18T20:19:11.585Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "10BpeRARR6lI1XumgJ9Pzj",
+      "title": "This Chanuka 5782",
+      "artist": "Yerachmiel Begun, The Miami Boys Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:19:11.585Z"
+    },
     {
       "id": "4OrkuwZxnMjEyjFUOhH5lD",
       "title": "Al Hanissim",
