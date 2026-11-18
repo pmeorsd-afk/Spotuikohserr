@@ -1,8 +1,28 @@
 {
   "schema_version": 2,
-  "version": 5319,
-  "last_updated": "2026-11-18T20:48:00.067Z",
+  "version": 5321,
+  "last_updated": "2026-11-18T20:48:03.851Z",
   "artists": [
+    {
+      "id": "071VDj4Qpu5cyJlZxy6gRP",
+      "canonical_name": "The Yedidim Choir",
+      "aliases": [
+        "The Yedidim Choir"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:48:03.851Z"
+    },
+    {
+      "id": "3ycrWlmj1UUuQh55dzMjYD",
+      "canonical_name": "Yehuda Galili",
+      "aliases": [
+        "Yehuda Galili"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:48:03.851Z"
+    },
     {
       "id": "4hHHITGSm2B3WyEeHhPg3V",
       "canonical_name": "הרב יואל קליין",
