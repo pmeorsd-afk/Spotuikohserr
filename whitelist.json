@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5123,
-  "last_updated": "2026-11-18T20:20:48.947Z",
+  "version": 5124,
+  "last_updated": "2026-11-18T20:20:53.402Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Tikwwd7t5b6tH7j6tTqQj",
+      "title": "יודעל'ס ווייב",
+      "artist": "יהודה מנהיים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:20:53.402Z"
+    },
     {
       "id": "24h6QuRnJokfyZy997eSH8",
       "title": "לא כואב לי",
