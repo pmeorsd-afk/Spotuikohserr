@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5217,
-  "last_updated": "2026-11-18T20:29:38.228Z",
+  "version": 5219,
+  "last_updated": "2026-11-18T20:29:42.010Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0w4e9A0KryKlPySPdyZQDC",
+      "title": "מגבת באוויר",
+      "artist": "NOROZ, Ido B & Zooki",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:42.010Z"
+    },
+    {
+      "id": "58G2DbcPg0V0vuat9jM1NG",
+      "title": "Echo",
+      "artist": "VLX, Diviners",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:29:42.010Z"
+    },
     {
       "id": "0mflMxspEfB0VbI1kyLiAv",
       "title": "Stick Season",
