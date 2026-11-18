@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5106,
-  "last_updated": "2026-11-18T20:19:41.413Z",
+  "version": 5108,
+  "last_updated": "2026-11-18T20:19:45.567Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1o9mAOmNm3wT2NdyGV1Ard",
+      "title": "Babydoll",
+      "artist": "Jamie Miller",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:19:45.567Z"
+    },
+    {
+      "id": "5XQ6TsL0YG8GrS4liePNZq",
+      "title": "מודה אני",
+      "artist": "Kobi Peretz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:19:45.567Z"
+    },
     {
       "id": "3s617Hcn9njFTDqsfBtppe",
       "title": "חלק ממך",
