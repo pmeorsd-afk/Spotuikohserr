@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5038,
-  "last_updated": "2026-11-18T19:56:18.140Z",
+  "version": 5039,
+  "last_updated": "2026-11-18T19:56:21.720Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4PfDS6wcDp7YvikkmbySak",
+      "title": "Everything I Own - 7'' Mix",
+      "artist": "Ken Boothe",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T19:56:21.720Z"
+    },
     {
       "id": "313JuKHqAtGCAxbWleAW5w",
       "title": "Up Town Top Ranking",
