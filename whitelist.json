@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5068,
-  "last_updated": "2026-11-18T20:14:03.005Z",
+  "version": 5069,
+  "last_updated": "2026-11-18T20:14:16.551Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5I7hxYIBby10JBSN0kWhXl",
+      "title": "WHITE KEYS",
+      "artist": "Dominic Fike",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:14:16.551Z"
+    },
     {
       "id": "4k4Od9abLF9hbIb2GoOztG",
       "title": "כביש הערבה",
