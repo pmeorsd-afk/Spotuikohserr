@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5252,
-  "last_updated": "2026-11-18T20:31:24.550Z",
+  "version": 5254,
+  "last_updated": "2026-11-18T20:31:28.858Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ZxAKIuLtwktnHVu0fNWey",
+      "title": "באמונה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:28.858Z"
+    },
+    {
+      "id": "0pZacz7Bmg6tcReUecXBGC",
+      "title": "האדמה מתחתיי",
+      "artist": "Loren Peled",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:31:28.858Z"
+    },
     {
       "id": "5KfaxePCKn1S0Oz8BnmRNO",
       "title": "מחרוזת נדרתי נדר - Live",
