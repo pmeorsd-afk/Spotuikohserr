@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5198,
-  "last_updated": "2026-11-18T20:28:39.505Z",
+  "version": 5199,
+  "last_updated": "2026-11-18T20:28:46.444Z",
   "artists": [
     {
       "id": "0ekBvy1SWNvQVyELcr9Xui",
@@ -3800,6 +3800,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2I1ajycrJY7p3GjDzz3gCA",
+      "title": "Dovid Hamelech",
+      "artist": "Yisroel Werdyger",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-18T20:28:46.444Z"
+    },
     {
       "id": "3MLaxa9YmRY3V0Mzzu9Lk7",
       "title": "Daylight",
