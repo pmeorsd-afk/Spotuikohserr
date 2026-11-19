@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5558,
-  "last_updated": "2026-11-19T21:28:27.873Z",
+  "version": 5559,
+  "last_updated": "2026-11-19T21:28:31.398Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0NCiumEA4mZYwrmBPzivk3",
+      "title": "A Brief History Of Goa-Trance Oforia",
+      "artist": "Talamasca",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T21:28:31.398Z"
+    },
     {
       "id": "4Dq3NYdClmCWrj7mSRGeu2",
       "title": "Image of Yourself - Original Mix",
