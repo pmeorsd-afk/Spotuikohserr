@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5493,
-  "last_updated": "2026-11-19T16:22:46.930Z",
+  "version": 5494,
+  "last_updated": "2026-11-19T17:04:32.232Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "42beRxmfZdScj7adnift6e",
+      "title": "Charmaine",
+      "artist": "Mantovani",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T17:04:32.232Z"
+    },
     {
       "id": "6zwvB879PJSpTyFcg2wwnL",
       "title": "The Theme from \"A Summer Place\"",
