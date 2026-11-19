@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5437,
-  "last_updated": "2026-11-19T13:16:27.372Z",
+  "version": 5438,
+  "last_updated": "2026-11-19T13:16:30.888Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0rNHfMGVeLTOgO2XMMdI3h",
+      "title": "כי תעבור במים",
+      "artist": "קובי גרינבוים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T13:16:30.888Z"
+    },
     {
       "id": "0aOhpn5nuJWAiABU57b3n2",
       "title": "שמים - Studio Version",
