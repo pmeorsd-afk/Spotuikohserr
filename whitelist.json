@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5373,
-  "last_updated": "2026-11-19T11:58:21.945Z",
+  "version": 5375,
+  "last_updated": "2026-11-19T11:58:25.524Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ao2BInyA53TM4h0NUgnmq",
+      "title": "משחקים של כבוד",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:58:25.524Z"
+    },
+    {
+      "id": "1JQ7aHjR7IkhbchNYhnrcX",
+      "title": "שלחת אליי מבט",
+      "artist": "נדב חנציס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:58:25.524Z"
+    },
     {
       "id": "5XlSJsQkpAksC8lQ4FNCuV",
       "title": "Maaminim",
