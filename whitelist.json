@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5411,
-  "last_updated": "2026-11-19T12:00:32.274Z",
+  "version": 5414,
+  "last_updated": "2026-11-19T12:00:36.247Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,30 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5ouLdHofokD5pmwcAkOb7r",
+      "title": "אמוציונלי",
+      "artist": "Zohar Ashirov, Ben El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T12:00:36.247Z"
+    },
+    {
+      "id": "2f0bLB0m8pcAanqLDRJ5vk",
+      "title": "איזה יום",
+      "artist": "Dudu Tassa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T12:00:36.247Z"
+    },
+    {
+      "id": "0KMQElolYQxdpTxyUXUyeL",
+      "title": "עכשיו",
+      "artist": "Jonnie Shualy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T12:00:36.247Z"
+    },
     {
       "id": "4zk7MEDnwcfS6rEGVyoEFm",
       "title": "דראגון בול",
