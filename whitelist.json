@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5536,
-  "last_updated": "2026-11-19T20:31:02.664Z",
+  "version": 5537,
+  "last_updated": "2026-11-19T20:31:06.581Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "60lOdw1DK6MwoGdV8kpRTm",
+      "title": "בעקיטשע - BATMAZ Remix",
+      "artist": "Sruly Green, Zisha'la, BATMAZ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T20:31:06.581Z"
+    },
     {
       "id": "01SN05KrYDNYmHPxXgK7vt",
       "title": "For The Yidden - ליהודים",
