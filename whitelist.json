@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5432,
-  "last_updated": "2026-11-19T13:11:38.209Z",
+  "version": 5433,
+  "last_updated": "2026-11-19T13:11:42.122Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2YxCDskYhUW9KbPKfWvAYW",
+      "title": "וזכני",
+      "artist": "Yuval Dayan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T13:11:42.122Z"
+    },
     {
       "id": "6X6eC4lT8ILVGQUEc5o8Al",
       "title": "אור",
