@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5465,
-  "last_updated": "2026-11-19T14:09:07.164Z",
+  "version": 5466,
+  "last_updated": "2026-11-19T14:10:58.709Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6liaHE9iHh23PLVvw7lK8V",
+      "title": "Closing Time",
+      "artist": "Semisonic",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T14:10:58.709Z"
+    },
     {
       "id": "01bJvYGLn1xMA32TasmOkb",
       "title": "עוד אחד ששר לך",
