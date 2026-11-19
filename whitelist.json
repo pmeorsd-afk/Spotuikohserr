@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5444,
-  "last_updated": "2026-11-19T13:35:48.478Z",
+  "version": 5445,
+  "last_updated": "2026-11-19T13:35:52.179Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ZK6MLxV1oH0q1BdRqyL46",
+      "title": "Bishvili",
+      "artist": "Benny Friedman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T13:35:52.179Z"
+    },
     {
       "id": "2Fx7zP4WElrMc1TknEbxCz",
       "title": "חולת אהבה",
