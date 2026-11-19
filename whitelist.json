@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5445,
-  "last_updated": "2026-11-19T13:35:52.179Z",
+  "version": 5446,
+  "last_updated": "2026-11-19T13:41:49.904Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Lx2Z1zLF2KAgf991dKyq9",
+      "title": "תסתכל עלי",
+      "artist": "אהרון אברג'יל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T13:41:49.904Z"
+    },
     {
       "id": "6ZK6MLxV1oH0q1BdRqyL46",
       "title": "Bishvili",
