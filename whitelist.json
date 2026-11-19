@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5568,
-  "last_updated": "2026-11-19T21:45:29.372Z",
+  "version": 5569,
+  "last_updated": "2026-11-19T22:00:59.434Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5hKlPrRcWY818A4iJh6X94",
+      "title": "אם אין אותך",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T22:00:59.434Z"
+    },
     {
       "id": "6eBlb9sFqr0Unm59UK0k4z",
       "title": "תודה לך מאמי",
