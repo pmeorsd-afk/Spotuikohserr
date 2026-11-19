@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5348,
-  "last_updated": "2026-11-19T11:56:57.294Z",
+  "version": 5350,
+  "last_updated": "2026-11-19T11:57:00.952Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1mouNhs3u4dFchnTmavzQ0",
+      "title": "שלווה בארמונותיך",
+      "artist": "Daniel Ben Haim",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:57:00.952Z"
+    },
+    {
+      "id": "60BOR51eeN8A3wYIrElggH",
+      "title": "אני פה",
+      "artist": "Osher Cohen, אודיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:57:00.952Z"
+    },
     {
       "id": "3jKaDHhrgtpPuDumGhZ8MW",
       "title": "פרח",
