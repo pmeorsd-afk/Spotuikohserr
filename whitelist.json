@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5357,
-  "last_updated": "2026-11-19T11:57:23.412Z",
+  "version": 5358,
+  "last_updated": "2026-11-19T11:57:30.290Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0BxEYAUdyw894DVnIMTFOo",
+      "title": "Shomrei - שומרי",
+      "artist": "Mordechai Ben David, The Shira Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:57:30.290Z"
+    },
     {
       "id": "5uogMVrrsisSarR4RO4E7K",
       "title": "No More Lonely Nights",
