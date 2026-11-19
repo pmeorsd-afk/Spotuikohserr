@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5397,
-  "last_updated": "2026-11-19T11:59:55.966Z",
+  "version": 5398,
+  "last_updated": "2026-11-19T11:59:59.233Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6IoDmKMOqGMYwny9MjQ6dg",
+      "title": "deep in it",
+      "artist": "berlioz, Ted Jasper",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:59:59.233Z"
+    },
     {
       "id": "4DQELM6tV86vX1T48opurh",
       "title": "לכבוד חמדת לבבי",
