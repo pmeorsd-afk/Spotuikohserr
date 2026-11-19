@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5354,
-  "last_updated": "2026-11-19T11:57:11.836Z",
+  "version": 5355,
+  "last_updated": "2026-11-19T11:57:15.434Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3hCqD4p3JxFr7KLAGE2Nro",
+      "title": "לכל סוף",
+      "artist": "KGC, ישראל אלמו, BAZZI B",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:57:15.434Z"
+    },
     {
       "id": "71CXzHYYOyNqgtVFpNdeCS",
       "title": "I'd Love You to Want Me",
