@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5378,
-  "last_updated": "2026-11-19T11:58:32.816Z",
+  "version": 5379,
+  "last_updated": "2026-11-19T11:58:36.345Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0dXNQ8dckG4eYfEtq9zcva",
+      "title": "All Night",
+      "artist": "The Vamps, Matoma",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:58:36.345Z"
+    },
     {
       "id": "13SODn9makhTnmJbSvoGYE",
       "title": "זה מסוכן",
