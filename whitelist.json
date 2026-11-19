@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5461,
-  "last_updated": "2026-11-19T14:08:27.325Z",
+  "version": 5462,
+  "last_updated": "2026-11-19T14:08:31.630Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5fVZC9GiM4e8vu99W0Xf6J",
+      "title": "How to Save a Life",
+      "artist": "The Fray",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T14:08:31.630Z"
+    },
     {
       "id": "0TSOT64AfBz7UdYq4i7DrY",
       "title": "מחרוזת אינסטרומנטלית לחנוכה",
