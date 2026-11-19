@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5482,
-  "last_updated": "2026-11-19T16:09:59.654Z",
+  "version": 5483,
+  "last_updated": "2026-11-19T16:10:03.572Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0jWgAnTrNZmOGmqgvHhZEm",
+      "title": "What's Up?",
+      "artist": "4 Non Blondes",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T16:10:03.572Z"
+    },
     {
       "id": "3yUcJwYu7fXAfqMj9krY6l",
       "title": "Thank You",
