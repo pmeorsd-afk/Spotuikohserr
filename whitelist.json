@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5363,
-  "last_updated": "2026-11-19T11:57:41.132Z",
+  "version": 5365,
+  "last_updated": "2026-11-19T11:57:44.797Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5TPJghTExETSk37sE1xIme",
+      "title": "Share D'muois",
+      "artist": "Freilach Band, Mordechai Ben David, Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:57:44.797Z"
+    },
+    {
+      "id": "03W5LMkP0nX4AVSjj83L9k",
+      "title": "Ich Hub Gevart",
+      "artist": "Freilach Band, Mordechai Ben David, Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:57:44.797Z"
+    },
     {
       "id": "7HCevs2nIp1OJE9lodDXOH",
       "title": "Memories",
