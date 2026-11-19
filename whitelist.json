@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5426,
-  "last_updated": "2026-11-19T12:57:03.515Z",
+  "version": 5427,
+  "last_updated": "2026-11-19T12:57:08.435Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6tXdDR8q1JxBrHfDtPp3kD",
+      "title": "נשרף העולם",
+      "artist": "רביב כנר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T12:57:08.435Z"
+    },
     {
       "id": "4qstF8atHDrmnRdlfTSTmH",
       "title": "כל מה שיש לי",
