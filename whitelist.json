@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5552,
-  "last_updated": "2026-11-19T21:03:41.123Z",
+  "version": 5553,
+  "last_updated": "2026-11-19T21:03:45.415Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3BOIqRpcSWM5C540TImOlS",
+      "title": "אפיסת כוחות",
+      "artist": "ישי שין",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T21:03:45.415Z"
+    },
     {
       "id": "6G9nY0aJNcQ8BHJjgRCgZ5",
       "title": "יצאנו לרקוד",
