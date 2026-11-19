@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5358,
-  "last_updated": "2026-11-19T11:57:30.290Z",
+  "version": 5360,
+  "last_updated": "2026-11-19T11:57:33.585Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7r1sl8a7dFm9e5CVmmM91P",
+      "title": "Ribono Shel Olam",
+      "artist": "Freilach Band, Mordechai Ben David, Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:57:33.585Z"
+    },
+    {
+      "id": "12vxY3EmaAGhX7vrvyKBOW",
+      "title": "Ivertzoinchu",
+      "artist": "Isaac Honig",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:57:33.585Z"
+    },
     {
       "id": "0BxEYAUdyw894DVnIMTFOo",
       "title": "Shomrei - שומרי",
