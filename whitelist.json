@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5418,
-  "last_updated": "2026-11-19T12:00:49.098Z",
+  "version": 5419,
+  "last_updated": "2026-11-19T12:00:54.362Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2jbmCsbVOnwDTnYcBw1RTC",
+      "title": "אין כניסה לפילים",
+      "artist": "Girafot",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T12:00:54.362Z"
+    },
     {
       "id": "5CUgViOGM7xgdaH8C29nSw",
       "title": "את",
