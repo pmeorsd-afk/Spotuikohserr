@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5562,
-  "last_updated": "2026-11-19T21:28:38.509Z",
+  "version": 5563,
+  "last_updated": "2026-11-19T21:31:48.667Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5BU0ougPlMl9wb8aP5CWZT",
+      "title": "תודה",
+      "artist": "אליה והב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T21:31:48.667Z"
+    },
     {
       "id": "3Y0a1DkmD660zikFFhK98i",
       "title": "תודה על הכל",
