@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5520,
-  "last_updated": "2026-11-19T19:22:37.824Z",
+  "version": 5521,
+  "last_updated": "2026-11-19T19:22:41.327Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6xupcsJHo3wW2tSVKwu4mf",
+      "title": "Self Aware",
+      "artist": "LUM!X",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T19:22:41.327Z"
+    },
     {
       "id": "1yTQ39my3MoNROlFw3RDNy",
       "title": "Say You'll Be There - Single Mix",
