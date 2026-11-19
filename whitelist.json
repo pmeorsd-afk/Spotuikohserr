@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5504,
-  "last_updated": "2026-11-19T17:55:24.358Z",
+  "version": 5505,
+  "last_updated": "2026-11-19T18:09:45.666Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1eoa9kdZi9UlcF5Gdxu1Yh",
+      "title": "Shema Yisroel",
+      "artist": "Shea Kaller Band, Meilech Braunstein",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T18:09:45.666Z"
+    },
     {
       "id": "4YpUMlwdAOZ9LPW4saF76a",
       "title": "Penny & Me",
