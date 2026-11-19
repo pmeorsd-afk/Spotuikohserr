@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5485,
-  "last_updated": "2026-11-19T16:10:24.258Z",
+  "version": 5486,
+  "last_updated": "2026-11-19T16:10:50.159Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "43z6scIZU2QcEieMQFAJRG",
+      "title": "There She Goes",
+      "artist": "Sixpence None The Richer",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T16:10:50.159Z"
+    },
     {
       "id": "7bYWaOmAlDdVa5v7IoSCiM",
       "title": "Never Known",
