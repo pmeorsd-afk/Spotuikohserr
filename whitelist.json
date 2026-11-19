@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5424,
-  "last_updated": "2026-11-19T12:51:13.529Z",
+  "version": 5425,
+  "last_updated": "2026-11-19T12:51:17.083Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0ostk5qHG41GFSR2U3mtxN",
+      "title": "לו הייתי פירט",
+      "artist": "The Three'ngers",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T12:51:17.083Z"
+    },
     {
       "id": "4nMxpuGZwC3u3yOECONK76",
       "title": "לתת ולקחת",
