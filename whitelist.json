@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5551,
-  "last_updated": "2026-11-19T20:31:58.615Z",
+  "version": 5552,
+  "last_updated": "2026-11-19T21:03:41.123Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6G9nY0aJNcQ8BHJjgRCgZ5",
+      "title": "יצאנו לרקוד",
+      "artist": "HaDorbanim",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T21:03:41.123Z"
+    },
     {
       "id": "4jYSnmdajjwdQ8yy7m4Byb",
       "title": "מיתרי הלב - ווקאלי",
