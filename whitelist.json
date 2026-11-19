@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5528,
-  "last_updated": "2026-11-19T19:23:42.601Z",
+  "version": 5529,
+  "last_updated": "2026-11-19T19:27:17.816Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0iB5f04XdJ2tcfhoVkeLV8",
+      "title": "LET'S GET FKD UP",
+      "artist": "Alok, Mondello'G, CERES, Tribbs",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T19:27:17.816Z"
+    },
     {
       "id": "0qURpq2VYJrEgvyTeOkmpR",
       "title": "What Is Love",
