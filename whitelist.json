@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5441,
-  "last_updated": "2026-11-19T13:29:06.961Z",
+  "version": 5442,
+  "last_updated": "2026-11-19T13:32:00.190Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6SMMyqaUdWfEAuBWSyWMY1",
+      "title": "נווה אלוקים",
+      "artist": "אהרון אברג'יל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T13:32:00.190Z"
+    },
     {
       "id": "5QpaGzWp0hwB5faV8dkbAz",
       "title": "Wherever You Will Go",
