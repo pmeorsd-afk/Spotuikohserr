@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5396,
-  "last_updated": "2026-11-19T11:59:52.571Z",
+  "version": 5397,
+  "last_updated": "2026-11-19T11:59:55.966Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4DQELM6tV86vX1T48opurh",
+      "title": "לכבוד חמדת לבבי",
+      "artist": "מיכאל פרץ, Lior Elmaleh, Sagiv Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:59:55.966Z"
+    },
     {
       "id": "7EnesP8byOyGu7HOfvpmoG",
       "title": "מאוהב בגשם",
