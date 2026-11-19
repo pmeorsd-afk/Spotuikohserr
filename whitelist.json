@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5478,
-  "last_updated": "2026-11-19T15:21:40.251Z",
+  "version": 5479,
+  "last_updated": "2026-11-19T15:33:19.911Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1xNmF1Uep5OGutizZSbKvd",
+      "title": "One Of Us",
+      "artist": "Joan Osborne",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T15:33:19.911Z"
+    },
     {
       "id": "1T7TSRc6saBgcJmoalNVAu",
       "title": "צליל מכוון",
