@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5496,
-  "last_updated": "2026-11-19T17:04:45.643Z",
+  "version": 5497,
+  "last_updated": "2026-11-19T17:04:51.571Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4GmeCWSHhGFSnhp4Tf2P1c",
+      "title": "Horova!",
+      "artist": "Shmueli Ungar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T17:04:51.571Z"
+    },
     {
       "id": "2X485T9Z5Ly0xyaghN73ed",
       "title": "Let It Happen",
