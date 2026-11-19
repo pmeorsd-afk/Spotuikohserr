@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5356,
-  "last_updated": "2026-11-19T11:57:19.379Z",
+  "version": 5357,
+  "last_updated": "2026-11-19T11:57:23.412Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5uogMVrrsisSarR4RO4E7K",
+      "title": "No More Lonely Nights",
+      "artist": "Paul McCartney",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:57:23.412Z"
+    },
     {
       "id": "",
       "title": "אתה לא לבד - אקוסטי",
