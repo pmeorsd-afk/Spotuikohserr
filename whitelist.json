@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5486,
-  "last_updated": "2026-11-19T16:10:50.159Z",
+  "version": 5487,
+  "last_updated": "2026-11-19T16:14:27.599Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3w3y8KPTfNeOKPiqUTakBh",
+      "title": "Locked out of Heaven",
+      "artist": "Bruno Mars",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T16:14:27.599Z"
+    },
     {
       "id": "43z6scIZU2QcEieMQFAJRG",
       "title": "There She Goes",
