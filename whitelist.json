@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5453,
-  "last_updated": "2026-11-19T13:43:07.731Z",
+  "version": 5454,
+  "last_updated": "2026-11-19T13:48:39.662Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "55S07tCJxQOR9eRbvfU1yj",
+      "title": "Ameich Ami",
+      "artist": "נפתלי קמפה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T13:48:39.662Z"
+    },
     {
       "id": "4K9he1mzsFoXSIKXaXH97v",
       "title": "אל תדאגי לי אמא",
