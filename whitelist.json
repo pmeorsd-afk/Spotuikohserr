@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5345,
-  "last_updated": "2026-11-19T11:56:50.163Z",
+  "version": 5347,
+  "last_updated": "2026-11-19T11:56:53.542Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2wyRiBowWnLfuhvf0oMR8d",
+      "title": "קול דודי דופק - Live",
+      "artist": "Jerusalem Orchestra East West, יהלה לחמיש",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:56:53.542Z"
+    },
+    {
+      "id": "2hefw2Le0PjDHBNaKDCTmO",
+      "title": "והריקותי לכם ברכה - Live",
+      "artist": "Jerusalem Orchestra East West, Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:56:53.542Z"
+    },
     {
       "id": "69jVoYTQ5XgUxMRR4aRW6C",
       "title": "אל מסתתר - Live",
