@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5483,
-  "last_updated": "2026-11-19T16:10:03.572Z",
+  "version": 5484,
+  "last_updated": "2026-11-19T16:10:20.417Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Chq64Mzuur06ZQCu39Las",
+      "title": "מיוחד",
+      "artist": "Avi Aburomi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T16:10:20.417Z"
+    },
     {
       "id": "0jWgAnTrNZmOGmqgvHhZEm",
       "title": "What's Up?",
