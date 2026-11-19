@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5385,
-  "last_updated": "2026-11-19T11:59:05.083Z",
+  "version": 5386,
+  "last_updated": "2026-11-19T11:59:09.093Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -36760,6 +36760,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-11-18T20:31:20.823Z"
+    },
+    {
+      "id": "eb546f0107c61edac0b2ee50e9be6707cb991e6791798fcc",
+      "url": "https://img.transistorcdn.com/OmdURxR4sbDQVO6wV7gsb_TO1NSdbK6jXZJ1BiD04rE/rs:fill:0:0:1/w:1400/h:1400/q:60/mb:500000/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82MGE4/OTIxY2NhMjJhMWJm/MTZlYWQzOWE5ZmI1/ZGQ5Yy53ZWJw.jpg",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-11-19T11:59:09.093Z"
     }
   ],
   "search_images": [
