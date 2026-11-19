@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5457,
-  "last_updated": "2026-11-19T13:56:10.319Z",
+  "version": 5458,
+  "last_updated": "2026-11-19T13:56:17.660Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7A54z2oKRQyb5QrpX0j1Br",
+      "title": "רבינו זעק",
+      "artist": "Sinay Aviel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T13:56:17.660Z"
+    },
     {
       "id": "5IR8i9AE0Z3BRXQhUZ3igu",
       "title": "יום ועוד יומיים",
