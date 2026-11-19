@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5476,
-  "last_updated": "2026-11-19T15:21:36.246Z",
+  "version": 5478,
+  "last_updated": "2026-11-19T15:21:40.251Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1T7TSRc6saBgcJmoalNVAu",
+      "title": "צליל מכוון",
+      "artist": "Tuned Tone, Itzhak Klepter, Shem-Tov Levy, Shlomo Ydov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T15:21:40.251Z"
+    },
+    {
+      "id": "1649MZPIAWASv6pNqxubUF",
+      "title": "Génération",
+      "artist": "Mig",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T15:21:40.251Z"
+    },
     {
       "id": "1Jaah2tmN9Hv81A87KZ1MU",
       "title": "Torn",
