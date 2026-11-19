@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5456,
-  "last_updated": "2026-11-19T13:56:06.667Z",
+  "version": 5457,
+  "last_updated": "2026-11-19T13:56:10.319Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5IR8i9AE0Z3BRXQhUZ3igu",
+      "title": "יום ועוד יומיים",
+      "artist": "Shay Gabso",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T13:56:10.319Z"
+    },
     {
       "id": "13p8eWZ9yxsf2IYMrXLNgn",
       "title": "Asei Imuni",
