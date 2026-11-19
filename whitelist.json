@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5439,
-  "last_updated": "2026-11-19T13:18:28.272Z",
+  "version": 5440,
+  "last_updated": "2026-11-19T13:29:02.523Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7pGL7HeHuvRukFMhRQ29EY",
+      "title": "אור - לייב היכל מנורה 2026",
+      "artist": "דודו אהרון, Alon De Loco",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T13:29:02.523Z"
+    },
     {
       "id": "4jVOCfySiZHfCh35d0J9tn",
       "title": "השבעתי אתכם",
