@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5555,
-  "last_updated": "2026-11-19T21:03:50.038Z",
+  "version": 5556,
+  "last_updated": "2026-11-19T21:28:18.205Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1kjPIXGS7hlIRiHm56MbGi",
+      "title": "על כל אלה",
+      "artist": "Yossi Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T21:28:18.205Z"
+    },
     {
       "id": "4PaJbIyPqncKEijAK7dMFG",
       "title": "Nyc ניו יורק סיטי",
