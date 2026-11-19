@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5400,
-  "last_updated": "2026-11-19T12:00:03.270Z",
+  "version": 5402,
+  "last_updated": "2026-11-19T12:00:07.192Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6KqM3xmPIDonsTjCSGrrr5",
+      "title": "TOO COOL TO BE CARELESS",
+      "artist": "PAWSA",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T12:00:07.192Z"
+    },
+    {
+      "id": "6w2gYwXEkhiH5HMsdqei5q",
+      "title": "By The Pool",
+      "artist": "LAKEY INSPIRED",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T12:00:07.192Z"
+    },
     {
       "id": "2k5sc5QmNn2d6PWDcLn8ra",
       "title": "ברוך השם הכל מעולה",
