@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5488,
-  "last_updated": "2026-11-19T16:14:32.659Z",
+  "version": 5489,
+  "last_updated": "2026-11-19T16:14:37.131Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5FVd6KXrgO9B3JPmC8OPst",
+      "title": "Do I Wanna Know?",
+      "artist": "Arctic Monkeys",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T16:14:37.131Z"
+    },
     {
       "id": "4R45nMBvtWZF0nOiRSyyy9",
       "title": "Biscaya",
