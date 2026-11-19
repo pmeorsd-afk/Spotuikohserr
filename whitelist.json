@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5435,
-  "last_updated": "2026-11-19T13:11:45.897Z",
+  "version": 5436,
+  "last_updated": "2026-11-19T13:16:23.898Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ysKfEflFQSxe1ovgdnFaR",
+      "title": "Ma'amin Benisim",
+      "artist": "Yaakov Shwekey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T13:16:23.898Z"
+    },
     {
       "id": "6KXfhwpkUw1zHQ8lujvclC",
       "title": "אהיה לך אושר",
