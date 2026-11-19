@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5393,
-  "last_updated": "2026-11-19T11:59:39.135Z",
+  "version": 5394,
+  "last_updated": "2026-11-19T11:59:44.696Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5zFl2JbWNrrTvK3wSGllmM",
+      "title": "Aufa Eshkona",
+      "artist": "Yossi Azulay",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:59:44.696Z"
+    },
     {
       "id": "4iVHXrL0UrgTYRIku2rIHF",
       "title": "מצייר אותך",
