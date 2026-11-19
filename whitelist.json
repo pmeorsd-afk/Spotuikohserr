@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5336,
-  "last_updated": "2026-11-19T11:56:21.256Z",
+  "version": 5338,
+  "last_updated": "2026-11-19T11:56:24.747Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "36URZCHTHJ4EgmkHSTy8y2",
+      "title": "אמ פמ",
+      "artist": "Ron Sky Nesher, Vic Ohana Jan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:56:24.747Z"
+    },
+    {
+      "id": "41hRsYcgmjX1DOVnZEl900",
+      "title": "השדים האלה",
+      "artist": "Avihai Naftali, Vic Ohana Jan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:56:24.747Z"
+    },
     {
       "id": "3SG4UHIW7quRw52YyCAk3q",
       "title": "שלוש כוסות מרטיני",
