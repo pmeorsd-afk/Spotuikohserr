@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5505,
-  "last_updated": "2026-11-19T18:09:45.666Z",
+  "version": 5506,
+  "last_updated": "2026-11-19T18:09:49.315Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "22HYEJveCvykVDHDiEEmjZ",
+      "title": "Tubthumping",
+      "artist": "Chumbawamba",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T18:09:49.315Z"
+    },
     {
       "id": "1eoa9kdZi9UlcF5Gdxu1Yh",
       "title": "Shema Yisroel",
