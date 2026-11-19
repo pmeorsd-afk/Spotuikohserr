@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5353,
-  "last_updated": "2026-11-19T11:57:08.603Z",
+  "version": 5354,
+  "last_updated": "2026-11-19T11:57:11.836Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "71CXzHYYOyNqgtVFpNdeCS",
+      "title": "I'd Love You to Want Me",
+      "artist": "Lobo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:57:11.836Z"
+    },
     {
       "id": "3JnIt5bAQ3RTST2pL6USeu",
       "title": "Music",
