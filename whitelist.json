@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5347,
-  "last_updated": "2026-11-19T11:56:53.542Z",
+  "version": 5348,
+  "last_updated": "2026-11-19T11:56:57.294Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3jKaDHhrgtpPuDumGhZ8MW",
+      "title": "פרח",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:56:57.294Z"
+    },
     {
       "id": "2wyRiBowWnLfuhvf0oMR8d",
       "title": "קול דודי דופק - Live",
