@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5498,
-  "last_updated": "2026-11-19T17:04:59.166Z",
+  "version": 5499,
+  "last_updated": "2026-11-19T17:05:03.150Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "51HOh5c8d7FTP5wlkLpbNn",
+      "title": "You're Beautiful",
+      "artist": "James Blunt",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T17:05:03.150Z"
+    },
     {
       "id": "1Cwsd5xI8CajJz795oy4XF",
       "title": "You Get What You Give",
