@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5549,
-  "last_updated": "2026-11-19T20:31:55.056Z",
+  "version": 5551,
+  "last_updated": "2026-11-19T20:31:58.615Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4jYSnmdajjwdQ8yy7m4Byb",
+      "title": "מיתרי הלב - ווקאלי",
+      "artist": "ישי שין",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T20:31:58.615Z"
+    },
+    {
+      "id": "3F5wJJvq38QGLoDSma9IDg",
+      "title": "אני אש",
+      "artist": "Elai Botner, Ran Danker",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T20:31:58.615Z"
+    },
     {
       "id": "4o9GWuERItV70IJaWr50du",
       "title": "סימניך",
