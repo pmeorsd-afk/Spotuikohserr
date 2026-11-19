@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5386,
-  "last_updated": "2026-11-19T11:59:09.093Z",
+  "version": 5387,
+  "last_updated": "2026-11-19T11:59:12.431Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5N4eBWsckD3AgTQFGLQEeU",
+      "title": "Woman In Chains",
+      "artist": "Tears For Fears, Oleta Adams",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:59:12.431Z"
+    },
     {
       "id": "2W2Ve5RqiBy1SUc2DW9KZr",
       "title": "היידה",
