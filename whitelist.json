@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5571,
-  "last_updated": "2026-11-19T22:55:00.832Z",
+  "version": 5572,
+  "last_updated": "2026-11-19T23:05:38.035Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1qF9x63m17ofXEx4cWJGfW",
+      "title": "מחרוזת מה שהיה היה",
+      "artist": "Roi Harush, אבי פודולינסקי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T23:05:38.035Z"
+    },
     {
       "id": "3J9WtKAaomwG69gzlTxh04",
       "title": "לכבוד התנא אלוקי רבי שמעון בר יוחאי",
