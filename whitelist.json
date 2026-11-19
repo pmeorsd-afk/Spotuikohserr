@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5343,
-  "last_updated": "2026-11-19T11:56:39.013Z",
+  "version": 5344,
+  "last_updated": "2026-11-19T11:56:46.727Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2SESDPN8osVJzBksl3ZGuB",
+      "title": "אלי אתה ואודך - Live",
+      "artist": "Jerusalem Orchestra East West, Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:56:46.727Z"
+    },
     {
       "id": "5HXaoZNjiqBMniM83I7qGs",
       "title": "אנעים זמירות - Live",
