@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5369,
-  "last_updated": "2026-11-19T11:58:14.541Z",
+  "version": 5371,
+  "last_updated": "2026-11-19T11:58:17.819Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3PezgoznS96gT33JFdFaSG",
+      "title": "Hinei Ma Tov",
+      "artist": "Freilach Band, Mordechai Ben David, Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:58:17.819Z"
+    },
+    {
+      "id": "71gNRew7h7zKLsLAw6uF1T",
+      "title": "Unity",
+      "artist": "Freilach Band, Mordechai Ben David, Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:58:17.819Z"
+    },
     {
       "id": "3Yxf3qmxYSKKfnBxZ8FaaS",
       "title": "Aleh Katan",
