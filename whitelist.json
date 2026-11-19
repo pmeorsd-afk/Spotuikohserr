@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5371,
-  "last_updated": "2026-11-19T11:58:17.819Z",
+  "version": 5373,
+  "last_updated": "2026-11-19T11:58:21.945Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5XlSJsQkpAksC8lQ4FNCuV",
+      "title": "Maaminim",
+      "artist": "Freilach Band, Mordechai Ben David, Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:58:21.945Z"
+    },
+    {
+      "id": "2jaXwNOkNEDBCAeTm22ut4",
+      "title": "Chazak",
+      "artist": "Freilach Band, Mordechai Ben David, Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:58:21.945Z"
+    },
     {
       "id": "3PezgoznS96gT33JFdFaSG",
       "title": "Hinei Ma Tov",
