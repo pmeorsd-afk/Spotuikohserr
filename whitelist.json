@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5515,
-  "last_updated": "2026-11-19T19:22:25.826Z",
+  "version": 5516,
+  "last_updated": "2026-11-19T19:22:29.505Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3D24ErT1MMmUfXWotSj2A2",
+      "title": "ME JALO",
+      "artist": "Fuerza Regida, Grupo Frontera",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T19:22:29.505Z"
+    },
     {
       "id": "01eGxd90CmaQLxoH1DhmmI",
       "title": "Beretta (De Los Cerros La Escuela)",
