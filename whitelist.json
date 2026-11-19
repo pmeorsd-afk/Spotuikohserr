@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5390,
-  "last_updated": "2026-11-19T11:59:28.356Z",
+  "version": 5391,
+  "last_updated": "2026-11-19T11:59:31.899Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4GX4dkET3m823YWUOhwaMW",
+      "title": "רק בזכרונות",
+      "artist": "Moti Taka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:59:31.899Z"
+    },
     {
       "id": "2yMQwyf4x5ivtDI2Klvg9R",
       "title": "יום שישי הגיע",
