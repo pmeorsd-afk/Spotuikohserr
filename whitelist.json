@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5350,
-  "last_updated": "2026-11-19T11:57:00.952Z",
+  "version": 5352,
+  "last_updated": "2026-11-19T11:57:04.988Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ovjw5HZZv43SxTwApooCM",
+      "title": "Wind Of Change",
+      "artist": "Scorpions",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:57:04.988Z"
+    },
+    {
+      "id": "3nAl8cJsOxMp3CqV4RTalk",
+      "title": "Words",
+      "artist": "F.R. David",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:57:04.988Z"
+    },
     {
       "id": "1mouNhs3u4dFchnTmavzQ0",
       "title": "שלווה בארמונותיך",
