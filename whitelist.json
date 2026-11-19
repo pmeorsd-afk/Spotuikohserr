@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5443,
-  "last_updated": "2026-11-19T13:34:34.759Z",
+  "version": 5444,
+  "last_updated": "2026-11-19T13:35:48.478Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Fx7zP4WElrMc1TknEbxCz",
+      "title": "חולת אהבה",
+      "artist": "שראל סופר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T13:35:48.478Z"
+    },
     {
       "id": "3UVEcUQ1OT0hYGRm0w4Iec",
       "title": "Am Yisrael Chai - עם ישראל חי",
