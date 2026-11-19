@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5366,
-  "last_updated": "2026-11-19T11:58:11.132Z",
+  "version": 5369,
+  "last_updated": "2026-11-19T11:58:14.541Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,30 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Yxf3qmxYSKKfnBxZ8FaaS",
+      "title": "Aleh Katan",
+      "artist": "Freilach Band, Mordechai Ben David, Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:58:14.541Z"
+    },
+    {
+      "id": "6i4NTnrCPNATj6iBgsN3f3",
+      "title": "Lonely People",
+      "artist": "Freilach Band, Mordechai Ben David, Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:58:14.541Z"
+    },
+    {
+      "id": "6tafV3aLHTX2nqR38Ielzj",
+      "title": "חומר ממכר",
+      "artist": "Ben Chen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:58:14.541Z"
+    },
     {
       "id": "2qiSvBKxW9G94XS7LdJisu",
       "title": "Second Dance 1",
