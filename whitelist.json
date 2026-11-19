@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5375,
-  "last_updated": "2026-11-19T11:58:25.524Z",
+  "version": 5377,
+  "last_updated": "2026-11-19T11:58:29.070Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4XXxODo8FaQdRwH0oQIglo",
+      "title": "Al Hanisim",
+      "artist": "Shalsheles Junior",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:58:29.070Z"
+    },
+    {
+      "id": "4Oxe1RT4ZKoNr14ASendIk",
+      "title": "טוב לך איתו",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:58:29.070Z"
+    },
     {
       "id": "3ao2BInyA53TM4h0NUgnmq",
       "title": "משחקים של כבוד",
