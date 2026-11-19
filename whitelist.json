@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5470,
-  "last_updated": "2026-11-19T15:21:21.525Z",
+  "version": 5472,
+  "last_updated": "2026-11-19T15:21:25.516Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7Ewz6bJ97vUqk5HdkvguFQ",
+      "title": "Heaven",
+      "artist": "Bryan Adams",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T15:21:25.516Z"
+    },
+    {
+      "id": "5RKQ5NdjSh2QzD4MaunT91",
+      "title": "Don't Stop Believin' (2022 Remaster)",
+      "artist": "Journey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T15:21:25.516Z"
+    },
     {
       "id": "0ntQJM78wzOLVeCUAW7Y45",
       "title": "Sex on Fire",
