@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5566,
-  "last_updated": "2026-11-19T21:45:25.452Z",
+  "version": 5568,
+  "last_updated": "2026-11-19T21:45:29.372Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6eBlb9sFqr0Unm59UK0k4z",
+      "title": "תודה לך מאמי",
+      "artist": "Kobi Peretz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T21:45:29.372Z"
+    },
+    {
+      "id": "0ivnjqYY7tWVgUp9Mx31a9",
+      "title": "זוכרת",
+      "artist": "Matan Galilov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T21:45:29.372Z"
+    },
     {
       "id": "5ERymNueXAWIXdJKcPhDdb",
       "title": "שמע בני",
