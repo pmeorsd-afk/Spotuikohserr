@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5338,
-  "last_updated": "2026-11-19T11:56:24.747Z",
+  "version": 5340,
+  "last_updated": "2026-11-19T11:56:28.200Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7jPCz0Cok87tijZzs8fojh",
+      "title": "פגישה לאין קץ",
+      "artist": "Amir Benayoun",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:56:28.200Z"
+    },
+    {
+      "id": "2SbsvihBJmgNKZ4qkXFWrp",
+      "title": "More Than Words",
+      "artist": "Extreme",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:56:28.200Z"
+    },
     {
       "id": "36URZCHTHJ4EgmkHSTy8y2",
       "title": "אמ פמ",
