@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5472,
-  "last_updated": "2026-11-19T15:21:25.516Z",
+  "version": 5473,
+  "last_updated": "2026-11-19T15:21:28.982Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4RCWB3V8V0dignt99LZ8vH",
+      "title": "Hey There Delilah",
+      "artist": "Plain White T's",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T15:21:28.982Z"
+    },
     {
       "id": "7Ewz6bJ97vUqk5HdkvguFQ",
       "title": "Heaven",
