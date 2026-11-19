@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5557,
-  "last_updated": "2026-11-19T21:28:24.111Z",
+  "version": 5558,
+  "last_updated": "2026-11-19T21:28:27.873Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Dq3NYdClmCWrj7mSRGeu2",
+      "title": "Image of Yourself - Original Mix",
+      "artist": "Ajja, Burn In Noise",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T21:28:27.873Z"
+    },
     {
       "id": "2MR9D8w2tDknz5tfW6yzgH",
       "title": "קעקוע על הלב",
