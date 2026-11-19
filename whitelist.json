@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5570,
-  "last_updated": "2026-11-19T22:12:32.537Z",
+  "version": 5571,
+  "last_updated": "2026-11-19T22:55:00.832Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3J9WtKAaomwG69gzlTxh04",
+      "title": "לכבוד התנא אלוקי רבי שמעון בר יוחאי",
+      "artist": "Reb Meilich Biderman, אהרלע סאמעט",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T22:55:00.832Z"
+    },
     {
       "id": "youtube:3evcQ9Sd8-0",
       "title": "Menucho Vsimcho - מנוחה ושמחה",
