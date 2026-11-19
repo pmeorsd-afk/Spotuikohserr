@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5422,
-  "last_updated": "2026-11-19T12:43:33.221Z",
+  "version": 5423,
+  "last_updated": "2026-11-19T12:43:37.007Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3hTdzsVEY0BKmm7wZ4LniT",
+      "title": "בדרך אלייך",
+      "artist": "Sagiv Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T12:43:37.007Z"
+    },
     {
       "id": "3g3QWjI4m8isLHQDWa3mCv",
       "title": "מטר מהמים",
