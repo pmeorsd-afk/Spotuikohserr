@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5382,
-  "last_updated": "2026-11-19T11:58:54.136Z",
+  "version": 5383,
+  "last_updated": "2026-11-19T11:58:57.469Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6dnLtiaoXsgk72ahog5dV7",
+      "title": "שימי לי עוד רום",
+      "artist": "Hatikva 6",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T11:58:57.469Z"
+    },
     {
       "id": "7g2IKgi16wkasDkqh6mh8P",
       "title": "ניצחתי ואנצח",
