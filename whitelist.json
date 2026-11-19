@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5460,
-  "last_updated": "2026-11-19T14:08:23.637Z",
+  "version": 5461,
+  "last_updated": "2026-11-19T14:08:27.325Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0TSOT64AfBz7UdYq4i7DrY",
+      "title": "מחרוזת אינסטרומנטלית לחנוכה",
+      "artist": "Asaph Neve Shalom",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-19T14:08:27.325Z"
+    },
     {
       "id": "2r6ssNnhNfT7dy9Bltctgt",
       "title": "לא יוצא למסיבות",
