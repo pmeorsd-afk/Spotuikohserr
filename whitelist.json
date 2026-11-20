@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5670,
-  "last_updated": "2026-11-20T10:29:20.274Z",
+  "version": 5671,
+  "last_updated": "2026-11-20T10:41:59.753Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2GhsVWnWlc1uMJ34Y91zja",
+      "title": "STEREO LOVE x DANZA KUDURO - Afro Soul",
+      "artist": "NA-KD",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T10:41:59.753Z"
+    },
     {
       "id": "0scojlMjWXZmjqtmOzMRqI",
       "title": "מחרוזת ילדה רעה",
