@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5607,
-  "last_updated": "2026-11-20T07:31:30.064Z",
+  "version": 5609,
+  "last_updated": "2026-11-20T07:31:33.798Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2qKt5wqOPQauLR3uQGbtyV",
+      "title": "קדושה",
+      "artist": "Yosef Chaim Shwekey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:31:33.798Z"
+    },
+    {
+      "id": "5OiwJIcMcUy5dawTvtbZqC",
+      "title": "Chasoif",
+      "artist": "Yaakov Shwekey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:31:33.798Z"
+    },
     {
       "id": "18y8bYziS7kxYIvxvOeo5a",
       "title": "כי אנו עמך",
