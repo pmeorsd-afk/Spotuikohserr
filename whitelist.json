@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5648,
-  "last_updated": "2026-11-20T08:45:19.262Z",
+  "version": 5649,
+  "last_updated": "2026-11-20T08:46:46.112Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3qBTtz4UyBHnlYXU0NGuRb",
+      "title": "גם אני",
+      "artist": "Cookie Levanna",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T08:46:46.112Z"
+    },
     {
       "id": "63FWDXKN8s9q5ukKK34c7x",
       "title": "יחפים - קאבר",
