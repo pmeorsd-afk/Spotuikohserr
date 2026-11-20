@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5728,
-  "last_updated": "2026-11-20T12:48:38.735Z",
+  "version": 5729,
+  "last_updated": "2026-11-20T12:48:42.269Z",
   "artists": [
+    {
+      "id": "3Wh5eoWy0EGQWjNYywlz8s",
+      "canonical_name": "Avrumy straus",
+      "aliases": [
+        "Avrumy straus"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:42.269Z"
+    },
     {
       "id": "1LS2rHUvv9xZfmGh3y6Qxh",
       "canonical_name": "יחיאל ליכטיגר",
