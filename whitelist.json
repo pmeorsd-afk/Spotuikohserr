@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5674,
-  "last_updated": "2026-11-20T10:42:19.818Z",
+  "version": 5676,
+  "last_updated": "2026-11-20T10:42:23.773Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0I2E3ShUFs5H4Rs1f34HwP",
+      "title": "השיר שלנו",
+      "artist": "Aviv Geffen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T10:42:23.773Z"
+    },
+    {
+      "id": "5gf3DLppm3jxWzLAezAc94",
+      "title": "כלום בלב",
+      "artist": "דודו אהרון, Alon De Loco, Nuri",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T10:42:23.773Z"
+    },
     {
       "id": "4NV16C4VeI7JidPQs4wmXD",
       "title": "דיי",
