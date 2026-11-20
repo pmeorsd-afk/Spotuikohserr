@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5722,
-  "last_updated": "2026-11-20T12:48:16.307Z",
+  "version": 5723,
+  "last_updated": "2026-11-20T12:48:19.752Z",
   "artists": [
+    {
+      "id": "5fUMlPqXQVaoCq0gxaMVjM",
+      "canonical_name": "Dj Aharon Kofman",
+      "aliases": [
+        "Dj Aharon Kofman"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:19.752Z"
+    },
     {
       "id": "7p396LFKoLkU7OfbtBHTaU",
       "canonical_name": "Chaim Shlomo Mayesz",
