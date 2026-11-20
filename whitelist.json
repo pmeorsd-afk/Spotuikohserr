@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5582,
-  "last_updated": "2026-11-20T07:30:42.222Z",
+  "version": 5584,
+  "last_updated": "2026-11-20T07:30:45.553Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Xg1wVo6XPTLv9UEYp4mRk",
+      "title": "מחרוזת להיטים",
+      "artist": "משה קליין, תזמורת טאנץ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:30:45.553Z"
+    },
+    {
+      "id": "1at4OvwE6xkV7ShOEhw3HN",
+      "title": "מוזיקה לספא ולעיסוי מרגיע",
+      "artist": "Aviel Hakmon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:30:45.553Z"
+    },
     {
       "id": "5NQbUaeTEOGdD6hHcre0dZ",
       "title": "679 (feat. Remy Boyz)",
