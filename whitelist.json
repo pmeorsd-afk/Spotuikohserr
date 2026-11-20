@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5718,
-  "last_updated": "2026-11-20T12:48:05.365Z",
+  "version": 5719,
+  "last_updated": "2026-11-20T12:48:08.777Z",
   "artists": [
+    {
+      "id": "6EFmo7zLyrIm4891Xpevxp",
+      "canonical_name": "Sinay Aviel",
+      "aliases": [
+        "Sinay Aviel"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:08.777Z"
+    },
     {
       "id": "5DV26nVyb2msZdbv50ZR6h",
       "canonical_name": "קובי גרינבוים",
