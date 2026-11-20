@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5584,
-  "last_updated": "2026-11-20T07:30:45.553Z",
+  "version": 5585,
+  "last_updated": "2026-11-20T07:30:53.180Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0UAu3XoZ5bBWihTuSgl2hA",
+      "title": "Crooked Tree",
+      "artist": "Ariel La Mancha",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:30:53.180Z"
+    },
     {
       "id": "3Xg1wVo6XPTLv9UEYp4mRk",
       "title": "מחרוזת להיטים",
