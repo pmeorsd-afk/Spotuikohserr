@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5649,
-  "last_updated": "2026-11-20T08:46:46.112Z",
+  "version": 5650,
+  "last_updated": "2026-11-20T08:51:16.966Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1CqG5BRWCPRDnfFgd1Lrpi",
+      "title": "שיר אהבה סטנדרטי - האהבה פנים רבות לה - רימאסטרינג",
+      "artist": "Arik Einstein, Yoni Rechter",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T08:51:16.966Z"
+    },
     {
       "id": "3qBTtz4UyBHnlYXU0NGuRb",
       "title": "גם אני",
