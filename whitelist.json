@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5587,
-  "last_updated": "2026-11-20T07:30:56.466Z",
+  "version": 5590,
+  "last_updated": "2026-11-20T07:31:00.102Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,30 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7osBjxxoPSCceUMdkyFh9O",
+      "title": "Valet (feat. Fetty Wap and 2 Chainz)",
+      "artist": "Eric Bellinger, Fetty Wap, 2 Chainz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:31:00.102Z"
+    },
+    {
+      "id": "5rmp7Jxi1lYGPnBfev4Mrb",
+      "title": "Part 1, Brushy Creek Promenade",
+      "artist": "Chad Crouch",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:31:00.102Z"
+    },
+    {
+      "id": "36xYUabjbOl2G7lCOASK2A",
+      "title": "愜意 (ASMR水滴)",
+      "artist": "紀鈞瀚 (Bryan Chi)",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:31:00.102Z"
+    },
     {
       "id": "4STnruOS34o1TIMxi9p6KF",
       "title": "Time (feat. Monty)",
