@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5702,
-  "last_updated": "2026-11-20T11:42:26.362Z",
+  "version": 5703,
+  "last_updated": "2026-11-20T11:45:57.520Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:lb9R-1SjFpg",
+      "title": "להקת אשירה במחרוזת שמחה! •• ולעורר ליבי •• ואמר ביום ההוא •• שובה",
+      "artist": "להקת אשירה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T11:45:57.520Z"
+    },
     {
       "id": "3C3jWxBNFHSLIPe3YIdka8",
       "title": "O Sole Mio / Arrivederci Roma",
