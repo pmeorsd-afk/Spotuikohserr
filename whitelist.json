@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5694,
-  "last_updated": "2026-11-20T11:35:03.211Z",
+  "version": 5695,
+  "last_updated": "2026-11-20T11:35:13.657Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1y3dkWRExUSRaEsSnJieOk",
+      "title": "Ein Aroch - Levine",
+      "artist": "Yaakov Shwekey, The Music of Shabbos",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T11:35:13.657Z"
+    },
     {
       "id": "6ousRAiHpac9eX6LMyqkOv",
       "title": "Till",
