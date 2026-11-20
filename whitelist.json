@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5705,
-  "last_updated": "2026-11-20T12:15:52.706Z",
+  "version": 5706,
+  "last_updated": "2026-11-20T12:15:55.905Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0vS0WxwgQuYiPuIKwadqMc",
+      "title": "ערב טוב",
+      "artist": "ליאור נרקיס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:15:55.905Z"
+    },
     {
       "id": "7FP6cGnmLMMNBg6I63Sm1U",
       "title": "קול גלגל",
