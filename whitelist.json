@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5643,
-  "last_updated": "2026-11-20T08:23:39.109Z",
+  "version": 5644,
+  "last_updated": "2026-11-20T08:28:55.050Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4jOZ3ApDOSmEp7AOGhu04S",
+      "title": "המצב הזה",
+      "artist": "Ben El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T08:28:55.050Z"
+    },
     {
       "id": "3m88B5nv0yhdqxCBFVues4",
       "title": "עד אלייך",
