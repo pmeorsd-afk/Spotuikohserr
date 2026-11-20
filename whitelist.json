@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5745,
-  "last_updated": "2026-11-20T13:03:16.485Z",
+  "version": 5746,
+  "last_updated": "2026-11-20T13:11:34.398Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7kajhzZi9JEMVcjM2Ozl7u",
+      "title": "ריחות של אלכוהול",
+      "artist": "ליאור נרקיס",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T13:11:34.398Z"
+    },
     {
       "id": "6ROcRK9s2Siv57ZzHHfI9V",
       "title": "לכה דודי",
