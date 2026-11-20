@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5619,
-  "last_updated": "2026-11-20T07:32:26.914Z",
+  "version": 5620,
+  "last_updated": "2026-11-20T07:32:29.994Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2mu8PHGmZARcZtjXnrncjP",
+      "title": "על חבל דק",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:32:29.994Z"
+    },
     {
       "id": "6Mk9PX15OFsW551sKckNM7",
       "title": "בעולם שלי",
