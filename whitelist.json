@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5646,
-  "last_updated": "2026-11-20T08:36:10.905Z",
+  "version": 5647,
+  "last_updated": "2026-11-20T08:36:14.718Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5nASdE2ijIfq0cIG4VZCgW",
+      "title": "Whatever It Takes - Live in Vegas",
+      "artist": "Imagine Dragons",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T08:36:14.718Z"
+    },
     {
       "id": "22sksAQG5BimEvIbffOWAR",
       "title": "דור מקולקל",
