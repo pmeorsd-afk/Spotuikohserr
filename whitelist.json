@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5640,
-  "last_updated": "2026-11-20T08:10:58.363Z",
+  "version": 5641,
+  "last_updated": "2026-11-20T08:11:03.470Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:exjjmZP7Hg8",
+      "title": "Kiddush - Dovy Meisels, Moshe Kraus, Yiddish Nachas  קידושא רבא - דובי מייזעלס, משה קרויס, אידיש נחת",
+      "artist": "Yiddish Nachas - MK Studios",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T08:11:03.470Z"
+    },
     {
       "id": "youtube:JxJgX8QgLVo",
       "title": "Cantor Helfgot performs the song of Moshe veAaron החזן יצחק מאיר הלפגוט - משה ואהרן",
