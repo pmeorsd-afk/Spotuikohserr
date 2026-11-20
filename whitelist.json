@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5725,
-  "last_updated": "2026-11-20T12:48:27.043Z",
+  "version": 5726,
+  "last_updated": "2026-11-20T12:48:30.851Z",
   "artists": [
+    {
+      "id": "6DLSQDKErpXWTgvgUGGv2d",
+      "canonical_name": "Yosef Chaim Shwekey",
+      "aliases": [
+        "Yosef Chaim Shwekey"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:30.851Z"
+    },
     {
       "id": "2t5U44HFN8FHdq8voJPPgA",
       "canonical_name": "תזמורת טאנץ",
