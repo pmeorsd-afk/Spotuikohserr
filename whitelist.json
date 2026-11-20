@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5650,
-  "last_updated": "2026-11-20T08:51:16.966Z",
+  "version": 5651,
+  "last_updated": "2026-11-20T08:51:20.658Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ijjmfmbscDuuHMK2M40su",
+      "title": "מסך עשן",
+      "artist": "ליאם גולן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T08:51:20.658Z"
+    },
     {
       "id": "1CqG5BRWCPRDnfFgd1Lrpi",
       "title": "שיר אהבה סטנדרטי - האהבה פנים רבות לה - רימאסטרינג",
