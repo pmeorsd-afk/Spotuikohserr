@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5627,
-  "last_updated": "2026-11-20T07:32:56.322Z",
+  "version": 5628,
+  "last_updated": "2026-11-20T07:33:00.037Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "435vbzb0k88F3OjYWa2T7Y",
+      "title": "ערום",
+      "artist": "Shae",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:33:00.037Z"
+    },
     {
       "id": "1hVbhkCYJAN4MA2wezFnV7",
       "title": "Forest Whisper",
