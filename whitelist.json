@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5704,
-  "last_updated": "2026-11-20T11:46:01.019Z",
+  "version": 5705,
+  "last_updated": "2026-11-20T12:15:52.706Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7FP6cGnmLMMNBg6I63Sm1U",
+      "title": "קול גלגל",
+      "artist": "Shotei Hanevuah",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:15:52.706Z"
+    },
     {
       "id": "5p4WI0Y852bjJjPuXKPry6",
       "title": "מחול של טעויות",
