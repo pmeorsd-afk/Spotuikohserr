@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5746,
-  "last_updated": "2026-11-20T13:11:34.398Z",
+  "version": 5747,
+  "last_updated": "2026-11-20T13:12:54.215Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:ITtX1_QAWTA",
+      "title": "Shulem Aleicham - שלום עליכם",
+      "artist": "Mordechai Ben David, The Shira Choir",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T13:12:54.215Z"
+    },
     {
       "id": "7kajhzZi9JEMVcjM2Ozl7u",
       "title": "ריחות של אלכוהול",
