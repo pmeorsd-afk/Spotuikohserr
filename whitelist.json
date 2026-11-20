@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5707,
-  "last_updated": "2026-11-20T12:15:59.729Z",
+  "version": 5708,
+  "last_updated": "2026-11-20T12:16:05.599Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4QV4EoxCGw7KFJVNdepyAK",
+      "title": "מעורר את הלב",
+      "artist": "איציק וינגרטן, SHMN",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:16:05.599Z"
+    },
     {
       "id": "2WttCqddn7YQ66v2H4zJll",
       "title": "Bakol",
