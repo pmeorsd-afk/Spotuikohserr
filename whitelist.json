@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5710,
-  "last_updated": "2026-11-20T12:16:15.025Z",
+  "version": 5711,
+  "last_updated": "2026-11-20T12:46:34.088Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0AOmbw8AwDnwXhHC3OhdVB",
+      "title": "Courtesy Call",
+      "artist": "Thousand Foot Krutch",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:46:34.088Z"
+    },
     {
       "id": "2UnYuPqXYmk3g8Qy8kbR45",
       "title": "Anybody's You",
