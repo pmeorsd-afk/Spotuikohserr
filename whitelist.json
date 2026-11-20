@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5721,
-  "last_updated": "2026-11-20T12:48:12.712Z",
+  "version": 5722,
+  "last_updated": "2026-11-20T12:48:16.307Z",
   "artists": [
+    {
+      "id": "7p396LFKoLkU7OfbtBHTaU",
+      "canonical_name": "Chaim Shlomo Mayesz",
+      "aliases": [
+        "Chaim Shlomo Mayesz"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:16.307Z"
+    },
     {
       "id": "6mCJBBs2UxFTVj4Jjs78fQ",
       "canonical_name": "DJ מאוריקו",
