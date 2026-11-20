@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5713,
-  "last_updated": "2026-11-20T12:47:12.327Z",
+  "version": 5714,
+  "last_updated": "2026-11-20T12:47:17.588Z",
   "artists": [
+    {
+      "id": "6NPGqb4tYKoCj2swTIGxkJ",
+      "canonical_name": "Nuchem Weinberger",
+      "aliases": [
+        "Nuchem Weinberger"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:47:17.588Z"
+    },
     {
       "id": "0BlMlyEssAzDd60oeO2gdl",
       "canonical_name": "The Shira Choir",
