@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5692,
-  "last_updated": "2026-11-20T11:34:49.726Z",
+  "version": 5693,
+  "last_updated": "2026-11-20T11:34:52.944Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "18O1E3E6LJk7MS1MVbHlIF",
+      "title": "המלך הטוב",
+      "artist": "Avraham Fried, Ari Stern",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T11:34:52.944Z"
+    },
     {
       "id": "4N5HEag3HSy7vdT5Dm11El",
       "title": "Call Bobak",
