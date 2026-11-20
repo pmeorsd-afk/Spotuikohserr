@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5734,
-  "last_updated": "2026-11-20T12:48:56.910Z",
+  "version": 5735,
+  "last_updated": "2026-11-20T12:49:00.706Z",
   "artists": [
+    {
+      "id": "52DoJvkLX4UEXz1kY8gHsO",
+      "canonical_name": "יניב מדר",
+      "aliases": [
+        "יניב מדר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:49:00.706Z"
+    },
     {
       "id": "3DLx5ks9HVQsLupMzYUbt9",
       "canonical_name": "שרוליק מילר",
