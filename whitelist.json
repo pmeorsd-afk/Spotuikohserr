@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5669,
-  "last_updated": "2026-11-20T10:29:17.159Z",
+  "version": 5670,
+  "last_updated": "2026-11-20T10:29:20.274Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0scojlMjWXZmjqtmOzMRqI",
+      "title": "מחרוזת ילדה רעה",
+      "artist": "היוצרים, Pini Hadad",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T10:29:20.274Z"
+    },
     {
       "id": "5eh2pLJmBVjgtUzKl7Ambt",
       "title": "Like a Prayer",
