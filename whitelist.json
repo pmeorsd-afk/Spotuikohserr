@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5639,
-  "last_updated": "2026-11-20T08:10:48.585Z",
+  "version": 5640,
+  "last_updated": "2026-11-20T08:10:58.363Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:JxJgX8QgLVo",
+      "title": "Cantor Helfgot performs the song of Moshe veAaron החזן יצחק מאיר הלפגוט - משה ואהרן",
+      "artist": "chazanut2010",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T08:10:58.363Z"
+    },
     {
       "id": "6VGmQtoNNk6TTViXnzxFVJ",
       "title": "בשעות הכי קטנות",
