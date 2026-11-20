@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5699,
-  "last_updated": "2026-11-20T11:35:30.504Z",
+  "version": 5700,
+  "last_updated": "2026-11-20T11:36:13.270Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5LnRwEuHd0N7VQNKpTjqAj",
+      "title": "Wonderland by Night",
+      "artist": "Francis Dupont",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T11:36:13.270Z"
+    },
     {
       "id": "youtube:Xq2lSavGrXE",
       "title": "מחרוזת מכינת קשת יהודה",
