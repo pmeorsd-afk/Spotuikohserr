@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5673,
-  "last_updated": "2026-11-20T10:42:16.104Z",
+  "version": 5674,
+  "last_updated": "2026-11-20T10:42:19.818Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4NV16C4VeI7JidPQs4wmXD",
+      "title": "דיי",
+      "artist": "נתנאל ששון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T10:42:19.818Z"
+    },
     {
       "id": "79AJaGdgDKlee4mBXJksQU",
       "title": "שירי אהבה",
