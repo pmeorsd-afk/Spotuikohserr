@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5641,
-  "last_updated": "2026-11-20T08:11:03.470Z",
+  "version": 5642,
+  "last_updated": "2026-11-20T08:11:07.273Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3xSuiMhIeSkwmC6Cm57rrv",
+      "title": "מוותרת",
+      "artist": "נתנאל ששון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T08:11:07.273Z"
+    },
     {
       "id": "youtube:exjjmZP7Hg8",
       "title": "Kiddush - Dovy Meisels, Moshe Kraus, Yiddish Nachas  קידושא רבא - דובי מייזעלס, משה קרויס, אידיש נחת",
