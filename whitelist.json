@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5644,
-  "last_updated": "2026-11-20T08:28:55.050Z",
+  "version": 5645,
+  "last_updated": "2026-11-20T08:34:31.934Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "283Zv0l0tRwqbPlVC6BDGC",
+      "title": "בואי בשלום",
+      "artist": "Chaim Shlomo Mayesz",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T08:34:31.934Z"
+    },
     {
       "id": "4jOZ3ApDOSmEp7AOGhu04S",
       "title": "המצב הזה",
