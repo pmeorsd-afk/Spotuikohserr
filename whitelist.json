@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5631,
-  "last_updated": "2026-11-20T07:33:12.815Z",
+  "version": 5633,
+  "last_updated": "2026-11-20T07:33:16.381Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7HDWH2xgDr83VAIE3QFFZS",
+      "title": "The Whirling Ways of Stars That Pass",
+      "artist": "Jóhann Jóhannsson",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:33:16.381Z"
+    },
+    {
+      "id": "1sQZTB4ghsYGXqcoNqgrnL",
+      "title": "את & אני בוכה - מנורה לייב",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:33:16.381Z"
+    },
     {
       "id": "7HD1jLrCw9UEo0hC2NbaJR",
       "title": "תקופה חדשה",
