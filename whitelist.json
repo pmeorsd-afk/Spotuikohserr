@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5724,
-  "last_updated": "2026-11-20T12:48:23.397Z",
+  "version": 5725,
+  "last_updated": "2026-11-20T12:48:27.043Z",
   "artists": [
+    {
+      "id": "2t5U44HFN8FHdq8voJPPgA",
+      "canonical_name": "תזמורת טאנץ",
+      "aliases": [
+        "תזמורת טאנץ"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:27.043Z"
+    },
     {
       "id": "0QQp4ux29iuR0ZtagPbxSt",
       "canonical_name": "Bentzi Marcus",
