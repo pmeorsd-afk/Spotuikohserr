@@ -1,8 +1,28 @@
 {
   "schema_version": 2,
-  "version": 5719,
-  "last_updated": "2026-11-20T12:48:08.777Z",
+  "version": 5721,
+  "last_updated": "2026-11-20T12:48:12.712Z",
   "artists": [
+    {
+      "id": "6mCJBBs2UxFTVj4Jjs78fQ",
+      "canonical_name": "DJ מאוריקו",
+      "aliases": [
+        "DJ מאוריקו"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:12.712Z"
+    },
+    {
+      "id": "6bEJdMOhrXxj6ru3r4cHJr",
+      "canonical_name": "יוסף חיים",
+      "aliases": [
+        "יוסף חיים"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:12.712Z"
+    },
     {
       "id": "6EFmo7zLyrIm4891Xpevxp",
       "canonical_name": "Sinay Aviel",
