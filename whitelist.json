@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5731,
-  "last_updated": "2026-11-20T12:48:45.823Z",
+  "version": 5732,
+  "last_updated": "2026-11-20T12:48:49.686Z",
   "artists": [
+    {
+      "id": "2nUC3ZzgKCfG4kIp2lSFSO",
+      "canonical_name": "Moshe Groner",
+      "aliases": [
+        "Moshe Groner"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:49.686Z"
+    },
     {
       "id": "3rvXyBVKy9nCOf3JDupF4g",
       "canonical_name": "Hanan Ben Ari",
