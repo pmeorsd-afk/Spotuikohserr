@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5716,
-  "last_updated": "2026-11-20T12:47:55.464Z",
+  "version": 5717,
+  "last_updated": "2026-11-20T12:48:01.399Z",
   "artists": [
+    {
+      "id": "0ervBY5UeqTk1YOatn1Re7",
+      "canonical_name": "Yossi Azulay",
+      "aliases": [
+        "Yossi Azulay"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:01.399Z"
+    },
     {
       "id": "49f9SSJbP1L8nFp2Ckwb55",
       "canonical_name": "Shmuel Dovid Landau",
