@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5736,
-  "last_updated": "2026-11-20T12:49:04.225Z",
+  "version": 5737,
+  "last_updated": "2026-11-20T12:49:07.774Z",
   "artists": [
+    {
+      "id": "7CtcllS3qxsHNrF6Y328mL",
+      "canonical_name": "להקת אשירה",
+      "aliases": [
+        "להקת אשירה"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:49:07.774Z"
+    },
     {
       "id": "0NMICwc1KlDtPg3LpbuOD0",
       "canonical_name": "מכינת קשת יהודה",
