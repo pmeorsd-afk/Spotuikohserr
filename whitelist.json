@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5738,
-  "last_updated": "2026-11-20T12:49:11.373Z",
+  "version": 5739,
+  "last_updated": "2026-11-20T12:49:15.425Z",
   "artists": [
+    {
+      "id": "7v51gIWdaxI6I04SBe2VRH",
+      "canonical_name": "Gad Feureisen",
+      "aliases": [
+        "Gad Feureisen"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:49:15.425Z"
+    },
     {
       "id": "1XxF7hXLanqCAY26OqniF3",
       "canonical_name": "SHMN",
