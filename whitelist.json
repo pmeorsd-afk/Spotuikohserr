@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5638,
-  "last_updated": "2026-11-20T07:44:34.692Z",
+  "version": 5639,
+  "last_updated": "2026-11-20T08:10:48.585Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6VGmQtoNNk6TTViXnzxFVJ",
+      "title": "בשעות הכי קטנות",
+      "artist": "Haim Israel, עילאי אבידני",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T08:10:48.585Z"
+    },
     {
       "id": "1vgknx567gJBBAGkkmPhS9",
       "title": "תני סימן",
