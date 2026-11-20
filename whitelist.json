@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5667,
-  "last_updated": "2026-11-20T10:18:14.234Z",
+  "version": 5668,
+  "last_updated": "2026-11-20T10:28:26.285Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:hmWdjUIvPBI",
+      "title": "קבלת שבת נוסח קרליבך",
+      "artist": "Avrumy straus",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T10:28:26.285Z"
+    },
     {
       "id": "3HcRlvoqH9esgeqEeUz2Re",
       "title": "חנוכה",
