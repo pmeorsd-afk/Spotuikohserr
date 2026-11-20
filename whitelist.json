@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5712,
-  "last_updated": "2026-11-20T12:46:38.014Z",
+  "version": 5713,
+  "last_updated": "2026-11-20T12:47:12.327Z",
   "artists": [
+    {
+      "id": "0BlMlyEssAzDd60oeO2gdl",
+      "canonical_name": "The Shira Choir",
+      "aliases": [
+        "The Shira Choir"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:47:12.327Z"
+    },
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
       "canonical_name": "מוטי גולדמן",
