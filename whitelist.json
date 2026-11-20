@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5664,
-  "last_updated": "2026-11-20T10:06:50.607Z",
+  "version": 5665,
+  "last_updated": "2026-11-20T10:10:56.315Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3yOGuW58V04nhgxIYe6uum",
+      "title": "Karov - Izzy's Version",
+      "artist": "Kunst, iZZy D JaY",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T10:10:56.315Z"
+    },
     {
       "id": "5a7rmvUjSt0sQjUSt1MsWn",
       "title": "This Is My Song",
