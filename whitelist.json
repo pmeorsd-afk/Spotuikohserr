@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5737,
-  "last_updated": "2026-11-20T12:49:07.774Z",
+  "version": 5738,
+  "last_updated": "2026-11-20T12:49:11.373Z",
   "artists": [
+    {
+      "id": "1XxF7hXLanqCAY26OqniF3",
+      "canonical_name": "SHMN",
+      "aliases": [
+        "SHMN"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:49:11.373Z"
+    },
     {
       "id": "7CtcllS3qxsHNrF6Y328mL",
       "canonical_name": "להקת אשירה",
