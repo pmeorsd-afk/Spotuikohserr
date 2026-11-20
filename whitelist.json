@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5744,
-  "last_updated": "2026-11-20T12:58:11.864Z",
+  "version": 5745,
+  "last_updated": "2026-11-20T13:03:16.485Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ROcRK9s2Siv57ZzHHfI9V",
+      "title": "לכה דודי",
+      "artist": "Itzik Eshel, Mendi Jerufi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T13:03:16.485Z"
+    },
     {
       "id": "5V3UMwDGWho9MvjAtMLkZv",
       "title": "L.S.D.",
