@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5723,
-  "last_updated": "2026-11-20T12:48:19.752Z",
+  "version": 5724,
+  "last_updated": "2026-11-20T12:48:23.397Z",
   "artists": [
+    {
+      "id": "0QQp4ux29iuR0ZtagPbxSt",
+      "canonical_name": "Bentzi Marcus",
+      "aliases": [
+        "Bentzi Marcus"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:23.397Z"
+    },
     {
       "id": "5fUMlPqXQVaoCq0gxaMVjM",
       "canonical_name": "Dj Aharon Kofman",
