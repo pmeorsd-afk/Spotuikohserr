@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5714,
-  "last_updated": "2026-11-20T12:47:17.588Z",
+  "version": 5715,
+  "last_updated": "2026-11-20T12:47:21.434Z",
   "artists": [
+    {
+      "id": "49f9SSJbP1L8nFp2Ckwb55",
+      "canonical_name": "Shmuel Dovid Landau",
+      "aliases": [
+        "Shmuel Dovid Landau"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:47:21.434Z"
+    },
     {
       "id": "6NPGqb4tYKoCj2swTIGxkJ",
       "canonical_name": "Nuchem Weinberger",
