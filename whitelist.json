@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5717,
-  "last_updated": "2026-11-20T12:48:01.399Z",
+  "version": 5718,
+  "last_updated": "2026-11-20T12:48:05.365Z",
   "artists": [
+    {
+      "id": "5DV26nVyb2msZdbv50ZR6h",
+      "canonical_name": "קובי גרינבוים",
+      "aliases": [
+        "קובי גרינבוים"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:05.365Z"
+    },
     {
       "id": "0ervBY5UeqTk1YOatn1Re7",
       "canonical_name": "Yossi Azulay",
