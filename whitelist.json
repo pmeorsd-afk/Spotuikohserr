@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5614,
-  "last_updated": "2026-11-20T07:32:16.474Z",
+  "version": 5616,
+  "last_updated": "2026-11-20T07:32:20.195Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7btodvT3m7SO8YhI6W53EF",
+      "title": "אהבתי בלחש",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:32:20.195Z"
+    },
+    {
+      "id": "39lPWtE2xsPD5qr3VjHcPy",
+      "title": "Mesaperet Li Olam",
+      "artist": "Eliran Aslan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:32:20.195Z"
+    },
     {
       "id": "2DpVWe1rs8lDB5a8O7MX2b",
       "title": "אושר מזוייף",
