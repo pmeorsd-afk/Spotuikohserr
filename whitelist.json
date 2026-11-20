@@ -1,8 +1,28 @@
 {
   "schema_version": 2,
-  "version": 5729,
-  "last_updated": "2026-11-20T12:48:42.269Z",
+  "version": 5731,
+  "last_updated": "2026-11-20T12:48:45.823Z",
   "artists": [
+    {
+      "id": "3rvXyBVKy9nCOf3JDupF4g",
+      "canonical_name": "Hanan Ben Ari",
+      "aliases": [
+        "Hanan Ben Ari"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:45.823Z"
+    },
+    {
+      "id": "3I64tOqHAN9gKuGf6gBuoS",
+      "canonical_name": "Freilach Band",
+      "aliases": [
+        "Freilach Band"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:45.823Z"
+    },
     {
       "id": "3Wh5eoWy0EGQWjNYywlz8s",
       "canonical_name": "Avrumy straus",
