@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5747,
-  "last_updated": "2026-11-20T13:12:54.215Z",
+  "version": 5748,
+  "last_updated": "2026-11-20T13:28:07.498Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:OIXWsziPBQo",
+      "title": "L'chee - Strumz with Beri Weber - לכו - סטרומז עם בערי וועבער",
+      "artist": "ברי ובר",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T13:28:07.498Z"
+    },
     {
       "id": "youtube:ITtX1_QAWTA",
       "title": "Shulem Aleicham - שלום עליכם",
