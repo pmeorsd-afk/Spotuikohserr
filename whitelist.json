@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5726,
-  "last_updated": "2026-11-20T12:48:30.851Z",
+  "version": 5727,
+  "last_updated": "2026-11-20T12:48:34.847Z",
   "artists": [
+    {
+      "id": "1GV14Q3QTAEMBvevijAeqM",
+      "canonical_name": "יוסי רוטנר",
+      "aliases": [
+        "יוסי רוטנר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:34.847Z"
+    },
     {
       "id": "6DLSQDKErpXWTgvgUGGv2d",
       "canonical_name": "Yosef Chaim Shwekey",
