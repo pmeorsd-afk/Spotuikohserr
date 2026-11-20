@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5599,
-  "last_updated": "2026-11-20T07:31:17.083Z",
+  "version": 5602,
+  "last_updated": "2026-11-20T07:31:20.451Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,30 @@
     }
   ],
   "tracks": [
+    {
+      "id": "73SNDYz02QDsGKo3XPIAgQ",
+      "title": "בן אדם",
+      "artist": "Yaniv Ben Mashiach",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:31:20.451Z"
+    },
+    {
+      "id": "5fkf3cpiyJajyjkP3UNCf6",
+      "title": "Ad Yom Moti",
+      "artist": "Itzik Kala",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:31:20.451Z"
+    },
+    {
+      "id": "4gzxKmp7dUgmTvQwjycDVw",
+      "title": "Kivinu - קיווינו",
+      "artist": "Yaakov Shwekey",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:31:20.451Z"
+    },
     {
       "id": "0pmPWAPKkhi1et5xIIewdK",
       "title": "Attract Love",
