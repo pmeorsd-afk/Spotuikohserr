@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5735,
-  "last_updated": "2026-11-20T12:49:00.706Z",
+  "version": 5736,
+  "last_updated": "2026-11-20T12:49:04.225Z",
   "artists": [
+    {
+      "id": "0NMICwc1KlDtPg3LpbuOD0",
+      "canonical_name": "מכינת קשת יהודה",
+      "aliases": [
+        "מכינת קשת יהודה"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:49:04.225Z"
+    },
     {
       "id": "52DoJvkLX4UEXz1kY8gHsO",
       "canonical_name": "יניב מדר",
