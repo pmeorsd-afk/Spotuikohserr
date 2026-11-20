@@ -1,8 +1,28 @@
 {
   "schema_version": 2,
-  "version": 5740,
-  "last_updated": "2026-11-20T12:49:19.135Z",
+  "version": 5742,
+  "last_updated": "2026-11-20T12:49:22.881Z",
   "artists": [
+    {
+      "id": "08xfLPgTExyLSCq8KbaTj6",
+      "canonical_name": "Nussy Fuchs",
+      "aliases": [
+        "Nussy Fuchs"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:49:22.881Z"
+    },
+    {
+      "id": "6jRoByJoOAoVbVjm71xGtY",
+      "canonical_name": "נחמן רוזנברג",
+      "aliases": [
+        "נחמן רוזנברג"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:49:22.881Z"
+    },
     {
       "id": "18qjjLXGz0LQlq0cvIzaLB",
       "canonical_name": "ישיבת הגולן",
