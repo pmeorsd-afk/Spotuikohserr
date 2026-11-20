@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5733,
-  "last_updated": "2026-11-20T12:48:53.334Z",
+  "version": 5734,
+  "last_updated": "2026-11-20T12:48:56.910Z",
   "artists": [
+    {
+      "id": "3DLx5ks9HVQsLupMzYUbt9",
+      "canonical_name": "שרוליק מילר",
+      "aliases": [
+        "שרוליק מילר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:56.910Z"
+    },
     {
       "id": "2nUC3ZzgKCfG4kIp2lSFSO",
       "canonical_name": "Moshe Groner",
