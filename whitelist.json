@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5602,
-  "last_updated": "2026-11-20T07:31:20.451Z",
+  "version": 5604,
+  "last_updated": "2026-11-20T07:31:23.986Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7jLz0mhFGmDoojBxUgbfxI",
+      "title": "מאמין בניסים",
+      "artist": "Regev Hod",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:31:23.986Z"
+    },
+    {
+      "id": "4kzPMUTmY6ZfbZfBoSqGIZ",
+      "title": "כמה טוב השם",
+      "artist": "Yaniv Ben Mashiach",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:31:23.986Z"
+    },
     {
       "id": "73SNDYz02QDsGKo3XPIAgQ",
       "title": "בן אדם",
