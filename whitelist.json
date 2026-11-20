@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5605,
-  "last_updated": "2026-11-20T07:31:26.663Z",
+  "version": 5607,
+  "last_updated": "2026-11-20T07:31:30.064Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "18y8bYziS7kxYIvxvOeo5a",
+      "title": "כי אנו עמך",
+      "artist": "Erez Lev Ari, צמאה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:31:30.064Z"
+    },
+    {
+      "id": "2DUO1wXQKEFteJU2kQuAbk",
+      "title": "מחרוזת: החתונות",
+      "artist": "Aviad Sahar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:31:30.064Z"
+    },
     {
       "id": "6xe5XBS5L1jDoX9hg8k5eK",
       "title": "מחרוזת פורטוגל",
