@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5677,
-  "last_updated": "2026-11-20T10:42:27.583Z",
+  "version": 5678,
+  "last_updated": "2026-11-20T10:42:36.115Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ssZ7boQBwyU0cBCyugqaA",
+      "title": "She Doesn't Mind x Danza Kuduro",
+      "artist": "studiojenna",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T10:42:36.115Z"
+    },
     {
       "id": "4rg9sDHVBwKxe6ORZ0jCu4",
       "title": "Uvechol Zos",
