@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5727,
-  "last_updated": "2026-11-20T12:48:34.847Z",
+  "version": 5728,
+  "last_updated": "2026-11-20T12:48:38.735Z",
   "artists": [
+    {
+      "id": "1LS2rHUvv9xZfmGh3y6Qxh",
+      "canonical_name": "יחיאל ליכטיגר",
+      "aliases": [
+        "יחיאל ליכטיגר"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:48:38.735Z"
+    },
     {
       "id": "1GV14Q3QTAEMBvevijAeqM",
       "canonical_name": "יוסי רוטנר",
