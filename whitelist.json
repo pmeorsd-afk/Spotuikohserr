@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5697,
-  "last_updated": "2026-11-20T11:35:21.389Z",
+  "version": 5698,
+  "last_updated": "2026-11-20T11:35:25.106Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "57QRlAasOg3CFH7sLmNqVD",
+      "title": "Wenn wir auseinandergeh'n (Please Release Me)",
+      "artist": "Captain Cook Und Seine Singenden Saxophone",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T11:35:25.106Z"
+    },
     {
       "id": "374bfMtHPvFhyLavOa4OAc",
       "title": "בואי עד אליי",
