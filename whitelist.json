@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5625,
-  "last_updated": "2026-11-20T07:32:49.655Z",
+  "version": 5626,
+  "last_updated": "2026-11-20T07:32:53.018Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Y9ckSuNBe8I4sC6vUyqHv",
+      "title": "אחרי הכל מתגעגע",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:32:53.018Z"
+    },
     {
       "id": "1bT43qBFxXLqL24ywoGmNn",
       "title": "Liba Baey",
