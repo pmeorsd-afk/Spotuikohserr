@@ -1,8 +1,18 @@
 {
   "schema_version": 2,
-  "version": 5742,
-  "last_updated": "2026-11-20T12:49:22.881Z",
+  "version": 5743,
+  "last_updated": "2026-11-20T12:49:26.312Z",
   "artists": [
+    {
+      "id": "5UBWBDPChLTiMw4knTCaGi",
+      "canonical_name": "Kalmey Schwartz",
+      "aliases": [
+        "Kalmey Schwartz"
+      ],
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:49:26.312Z"
+    },
     {
       "id": "08xfLPgTExyLSCq8KbaTj6",
       "canonical_name": "Nussy Fuchs",
