@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5623,
-  "last_updated": "2026-11-20T07:32:37.317Z",
+  "version": 5624,
+  "last_updated": "2026-11-20T07:32:40.759Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3RTeJv9B9Pz5MyFjX7eQA3",
+      "title": "חשבתי שניפגש בקרוב",
+      "artist": "Moti Taka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:32:40.759Z"
+    },
     {
       "id": "01mBn2Y3hJP4HucF4EFmvN",
       "title": "יום השישי",
