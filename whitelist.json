@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5743,
-  "last_updated": "2026-11-20T12:49:26.312Z",
+  "version": 5744,
+  "last_updated": "2026-11-20T12:58:11.864Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5V3UMwDGWho9MvjAtMLkZv",
+      "title": "L.S.D.",
+      "artist": "Hallucinogen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:58:11.864Z"
+    },
     {
       "id": "7FZuFyx512xqSfQlAceHlN",
       "title": "עוד לא תמו כל פלאייך",
