@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5685,
-  "last_updated": "2026-11-20T10:59:40.063Z",
+  "version": 5686,
+  "last_updated": "2026-11-20T11:03:30.649Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ZDWwAy3XQfWjyNfIGq3CF",
+      "title": "שוב לא שקט",
+      "artist": "Rockfour",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T11:03:30.649Z"
+    },
     {
       "id": "4zWbO2jh3xzgylLksw37Fu",
       "title": "Knockin' On Heaven's Door",
