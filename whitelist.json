@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5624,
-  "last_updated": "2026-11-20T07:32:40.759Z",
+  "version": 5625,
+  "last_updated": "2026-11-20T07:32:49.655Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1bT43qBFxXLqL24ywoGmNn",
+      "title": "Liba Baey",
+      "artist": "Shlomo Yehuda Rechnitz, Beri Weber",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:32:49.655Z"
+    },
     {
       "id": "3RTeJv9B9Pz5MyFjX7eQA3",
       "title": "חשבתי שניפגש בקרוב",
