@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5715,
-  "last_updated": "2026-11-20T12:47:21.434Z",
+  "version": 5716,
+  "last_updated": "2026-11-20T12:47:55.464Z",
   "artists": [
     {
       "id": "49f9SSJbP1L8nFp2Ckwb55",
@@ -4020,6 +4020,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7FZuFyx512xqSfQlAceHlN",
+      "title": "עוד לא תמו כל פלאייך",
+      "artist": "בן צור, הלהקות הצבאיות",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T12:47:55.464Z"
+    },
     {
       "id": "0nkzd3yNniB767zSDDdLZ3",
       "title": "Awake and Alive",
