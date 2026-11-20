@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5696,
-  "last_updated": "2026-11-20T11:35:17.806Z",
+  "version": 5697,
+  "last_updated": "2026-11-20T11:35:21.389Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "374bfMtHPvFhyLavOa4OAc",
+      "title": "בואי עד אליי",
+      "artist": "Akiva",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T11:35:21.389Z"
+    },
     {
       "id": "41mzMLa8LH4KlYj4txoRXj",
       "title": "And I Love You So",
