@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5575,
-  "last_updated": "2026-11-20T07:30:32.481Z",
+  "version": 5578,
+  "last_updated": "2026-11-20T07:30:35.763Z",
   "artists": [
     {
       "id": "39HYqJfOjGKkk5M3Hs8hvV",
@@ -3990,6 +3990,30 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3cRuZiP6oY5P4IqkV89bkd",
+      "title": "Quiet Universe Deep Sleep",
+      "artist": "kfir kaikov, Aviel Hakmon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:30:35.763Z"
+    },
+    {
+      "id": "1wKZIeOsvxB49fRdaKthQ8",
+      "title": "רוגע קליני ריפוי ושינה בספא",
+      "artist": "Aviel Hakmon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:30:35.763Z"
+    },
+    {
+      "id": "7GEVxaFoPtAzEdmJ96mZKa",
+      "title": "מאמי זה נגמר",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-20T07:30:35.763Z"
+    },
     {
       "id": "1BPQzxYMDBI0iNkUkcUF1X",
       "title": "אין כמוך",
