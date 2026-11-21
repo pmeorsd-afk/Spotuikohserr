@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5828,
-  "last_updated": "2026-11-21T15:59:41.458Z",
+  "version": 5829,
+  "last_updated": "2026-11-21T15:59:46.684Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "26At2TSv24w7zTR63f0WzI",
+      "title": "הנסיכה של רוטשילד",
+      "artist": "ניר בנילוש",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:59:46.684Z"
+    },
     {
       "id": "2eu0etLu1mxITZE4C9UfPG",
       "title": "ההמנון",
