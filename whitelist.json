@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5938,
-  "last_updated": "2026-11-21T21:15:22.861Z",
+  "version": 5939,
+  "last_updated": "2026-11-21T21:18:08.777Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2imQ4c7Z35gJAHcmTISf2k",
+      "title": "תני לי לאהוב אותך",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T21:18:08.777Z"
+    },
     {
       "id": "57krgx3TMNxq1OmLeC0fRl",
       "title": "רק תפילה",
