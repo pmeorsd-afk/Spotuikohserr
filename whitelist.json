@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5869,
-  "last_updated": "2026-11-21T16:02:24.082Z",
+  "version": 5870,
+  "last_updated": "2026-11-21T16:02:27.767Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5jz2k9K4de4E2LzgvBN2Uy",
+      "title": "לפני שאת הולכת",
+      "artist": "Gidi Shamor",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:02:27.767Z"
+    },
     {
       "id": "1am1JEyy5LeTfzuFOUPnqu",
       "title": "בין קשת לענן",
