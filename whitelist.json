@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5788,
-  "last_updated": "2026-11-21T15:55:50.723Z",
+  "version": 5789,
+  "last_updated": "2026-11-21T15:55:54.391Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1i9l9ZrRKROOibR1iRQloQ",
+      "title": "סימנים מאבא",
+      "artist": "Moti Taka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:55:54.391Z"
+    },
     {
       "id": "2pXREwiVU7rJcSTtytIH7w",
       "title": "Ze Lo Kal",
