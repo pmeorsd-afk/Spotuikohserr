@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5857,
-  "last_updated": "2026-11-21T16:01:46.905Z",
+  "version": 5859,
+  "last_updated": "2026-11-21T16:01:50.765Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2HU5tfiRw4bHARY8BOXr7G",
+      "title": "7 שנים",
+      "artist": "Tamir Sultana",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:50.765Z"
+    },
+    {
+      "id": "43liCZjfVMcUUzKgQTCaFf",
+      "title": "אותך אהבתי",
+      "artist": "Shar-El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:50.765Z"
+    },
     {
       "id": "0VGgnrtzFB2zcNDgTwrSIt",
       "title": "מצטער שהתאהבת",
