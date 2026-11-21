@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5898,
-  "last_updated": "2026-11-21T17:28:39.384Z",
+  "version": 5899,
+  "last_updated": "2026-11-21T17:49:28.124Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5yjDm60LBI1AVLRO2HMoLZ",
+      "title": "חתונה בישראל - Niso Slob Remix",
+      "artist": "שישו ושמחו, ליאור נרקיס, דיג'יי ניסו סלוב",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:49:28.124Z"
+    },
     {
       "id": "1jMX4aEtM8OlhhvfTAZEFl",
       "title": "Gravity",
