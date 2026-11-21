@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5921,
-  "last_updated": "2026-11-21T18:32:35.530Z",
+  "version": 5922,
+  "last_updated": "2026-11-21T19:03:51.384Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "42NrJOdxVkt532VizgYwGr",
+      "title": "אילת",
+      "artist": "Kevin Rubin",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T19:03:51.384Z"
+    },
     {
       "id": "4mMcFh9cjJMKHh8PLHvSmD",
       "title": "דקלון וביתר",
