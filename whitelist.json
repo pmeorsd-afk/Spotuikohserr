@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5768,
-  "last_updated": "2026-11-21T15:54:27.923Z",
+  "version": 5770,
+  "last_updated": "2026-11-21T15:54:31.313Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "27agtdcv4CnhyBttbCChrf",
+      "title": "קשת בענן",
+      "artist": "חן פורתי, Almog Tabeka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:31.313Z"
+    },
+    {
+      "id": "1zArkjfhYXUDJqKxq9IJQx",
+      "title": "Crazy Love",
+      "artist": "Paul Anka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:31.313Z"
+    },
     {
       "id": "2W5UG7uGle3SlZiyzEGxls",
       "title": "Sealed with a Kiss",
