@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5814,
-  "last_updated": "2026-11-21T15:57:13.197Z",
+  "version": 5815,
+  "last_updated": "2026-11-21T15:57:17.427Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7pqRECzlED4BwCtMOKgnUC",
+      "title": "אהבה שלי",
+      "artist": "טל בן גיגי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:57:17.427Z"
+    },
     {
       "id": "54SvUmTFxW9Fq12q2XrgUP",
       "title": "At Hachaim Sheli",
