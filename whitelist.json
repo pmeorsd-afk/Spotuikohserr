@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5798,
-  "last_updated": "2026-11-21T15:56:20.157Z",
+  "version": 5799,
+  "last_updated": "2026-11-21T15:56:23.630Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4aB3K87FuHpYyi8fln97u1",
+      "title": "אל תסגרי לי את הלב",
+      "artist": "Yagel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:23.630Z"
+    },
     {
       "id": "1Z83UOSbHfQk1egkf0JT6D",
       "title": "סגול בהיר",
