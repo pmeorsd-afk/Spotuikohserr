@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5892,
-  "last_updated": "2026-11-21T17:17:58.564Z",
+  "version": 5893,
+  "last_updated": "2026-11-21T17:18:02.226Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5j0drmB7PbYmi97xTejFdd",
+      "title": "Bring Me to Life",
+      "artist": "Night Divides, Veda",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:18:02.226Z"
+    },
     {
       "id": "1XHUfow1vLFFlJaQnAUCVN",
       "title": "ברוך הבא לבלאגן",
