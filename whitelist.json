@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5756,
-  "last_updated": "2026-11-21T15:53:48.486Z",
+  "version": 5757,
+  "last_updated": "2026-11-21T15:53:51.766Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ZQsdCn7ZUgtWNMAWsIvwE",
+      "title": "שירת העשבים",
+      "artist": "יהודה לויכטר, ביני לנדאו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:53:51.766Z"
+    },
     {
       "id": "69Wf3RZaI4tOJMAYbn9Mkl",
       "title": "You Don't Go To Parties",
