@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5937,
-  "last_updated": "2026-11-21T21:04:11.495Z",
+  "version": 5938,
+  "last_updated": "2026-11-21T21:15:22.861Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "57krgx3TMNxq1OmLeC0fRl",
+      "title": "רק תפילה",
+      "artist": "Freilach Band, Avraham Fried, Benny Friedman, Shloime Daskal, Itzik Dadya",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T21:15:22.861Z"
+    },
     {
       "id": "4xnLYFXEKCIHH7jvxpA9or",
       "title": "פדה בשלום",
