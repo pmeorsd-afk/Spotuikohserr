@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5916,
-  "last_updated": "2026-11-21T18:09:17.182Z",
+  "version": 5917,
+  "last_updated": "2026-11-21T18:17:16.557Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1nDzKv0wltX6Kl6TQMZrAl",
+      "title": "ניגון ויזניץ",
+      "artist": "וויזניץ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T18:17:16.557Z"
+    },
     {
       "id": "0lrrOTSB1vEOEphSG8CSsD",
       "title": "Survivor",
