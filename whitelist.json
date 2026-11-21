@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5889,
-  "last_updated": "2026-11-21T16:55:34.592Z",
+  "version": 5890,
+  "last_updated": "2026-11-21T17:01:36.493Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3bQIeVgvC783Sgg0Bdjh5p",
+      "title": "#Dubigal",
+      "artist": "Ron Sky Nesher, Static, Ben El Tavori, Jordi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:01:36.493Z"
+    },
     {
       "id": "59dCp05bgj0xERsmQbhFbA",
       "title": "אנחנו מאמינים",
