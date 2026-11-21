@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5865,
-  "last_updated": "2026-11-21T16:02:08.709Z",
+  "version": 5866,
+  "last_updated": "2026-11-21T16:02:12.674Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1EgMvfgN6ZfQ0pUwD1yHCd",
+      "title": "לתת ולקחת",
+      "artist": "הכוכב הבא, Mika Moshe",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:02:12.674Z"
+    },
     {
       "id": "7KoRErNSRoD2vZwzSzUiIo",
       "title": "שירו של שפשף",
