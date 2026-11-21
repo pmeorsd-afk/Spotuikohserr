@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5810,
-  "last_updated": "2026-11-21T15:57:02.292Z",
+  "version": 5811,
+  "last_updated": "2026-11-21T15:57:05.663Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7JoXEwDsbey37yMghVbIub",
+      "title": "הריני",
+      "artist": "Ravid Plotnik, Eviatar Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:57:05.663Z"
+    },
     {
       "id": "3GJqNFJr2TZNMp3owXyBmY",
       "title": "Mevateret",
