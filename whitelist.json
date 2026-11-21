@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5906,
-  "last_updated": "2026-11-21T17:49:48.785Z",
+  "version": 5907,
+  "last_updated": "2026-11-21T17:49:51.957Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2wy29RBixBECDOsXuBs7md",
+      "title": "Free Tibet - Vini Vici Remix",
+      "artist": "Hilight Tribe, Vini Vici",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:49:51.957Z"
+    },
     {
       "id": "7zyvQ8sb72g4RuwBpcuGUP",
       "title": "Home Alone (with Marnik)",
