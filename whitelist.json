@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5907,
-  "last_updated": "2026-11-21T17:49:51.957Z",
+  "version": 5908,
+  "last_updated": "2026-11-21T17:49:55.231Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1HrHphGwsqzhRVAZ7smxTF",
+      "title": "מנגל",
+      "artist": "שחר טבוך",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:49:55.231Z"
+    },
     {
       "id": "2wy29RBixBECDOsXuBs7md",
       "title": "Free Tibet - Vini Vici Remix",
