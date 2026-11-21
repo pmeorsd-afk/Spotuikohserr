@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5870,
-  "last_updated": "2026-11-21T16:02:27.767Z",
+  "version": 5871,
+  "last_updated": "2026-11-21T16:02:31.393Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0bn5dGggIbARdQUdoouQOS",
+      "title": "סולח",
+      "artist": "Yossi Eden",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:02:31.393Z"
+    },
     {
       "id": "5jz2k9K4de4E2LzgvBN2Uy",
       "title": "לפני שאת הולכת",
