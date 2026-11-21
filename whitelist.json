@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5917,
-  "last_updated": "2026-11-21T18:17:16.557Z",
+  "version": 5918,
+  "last_updated": "2026-11-21T18:17:20.336Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3BmqUSguks3wcQPcQLKIg4",
+      "title": "מחרוזת מערבבת",
+      "artist": "Shay Sharabi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T18:17:20.336Z"
+    },
     {
       "id": "1nDzKv0wltX6Kl6TQMZrAl",
       "title": "ניגון ויזניץ",
