@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5874,
-  "last_updated": "2026-11-21T16:02:39.754Z",
+  "version": 5875,
+  "last_updated": "2026-11-21T16:02:43.444Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0nQY30vcHlDXl2ldzlc8xF",
+      "title": "מחרוזת: צמא לאהבה , ילדה רעה",
+      "artist": "Pini Hadad",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:02:43.444Z"
+    },
     {
       "id": "7BlWsFwKWucyNB0W4fCrb2",
       "title": "פוג אל נחל",
