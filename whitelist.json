@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5935,
-  "last_updated": "2026-11-21T20:43:31.936Z",
+  "version": 5936,
+  "last_updated": "2026-11-21T21:04:07.869Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Wt0YYArIn5Tdr0GOMA6vu",
+      "title": "שבוי לאהבה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T21:04:07.869Z"
+    },
     {
       "id": "7hTICLxgn6rwqvLalvGIWH",
       "title": "אני מראש העין",
