@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5817,
-  "last_updated": "2026-11-21T15:57:24.537Z",
+  "version": 5819,
+  "last_updated": "2026-11-21T15:57:28.871Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5srzJ2IHbgHvpgIBErf3Ei",
+      "title": "לומד להשתנות",
+      "artist": "ניב אבוטבול",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:57:28.871Z"
+    },
+    {
+      "id": "3GAC1U8srg88mGClfUIyEj",
+      "title": "מלכה",
+      "artist": "טל בן גיגי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:57:28.871Z"
+    },
     {
       "id": "3jvjfv8Dz1dFzRA1z4y0mn",
       "title": "חלום קטן",
