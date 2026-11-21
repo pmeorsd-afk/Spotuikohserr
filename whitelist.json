@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5835,
-  "last_updated": "2026-11-21T16:00:18.377Z",
+  "version": 5836,
+  "last_updated": "2026-11-21T16:00:21.961Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1COnWCgCFkVy5osW0jLmpX",
+      "title": "מחרוזת מלכת המועדון",
+      "artist": "ראובן המלאך",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:00:21.961Z"
+    },
     {
       "id": "2X2LNdLtEdbLy8reMGePvy",
       "title": "מחרוזת רקדי",
