@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5860,
-  "last_updated": "2026-11-21T16:01:54.265Z",
+  "version": 5861,
+  "last_updated": "2026-11-21T16:01:57.992Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4qXGRczHcpLnePfAL7qNUt",
+      "title": "איך שהיא",
+      "artist": "Eli Luzon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:57.992Z"
+    },
     {
       "id": "7KOWn2HH5fCVGcGVmcxzQ1",
       "title": "פסק זמן",
