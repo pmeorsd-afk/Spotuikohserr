@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5811,
-  "last_updated": "2026-11-21T15:57:05.663Z",
+  "version": 5812,
+  "last_updated": "2026-11-21T15:57:09.574Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7ef5DnraZ5Om57Iwz5VOwn",
+      "title": "מציאות משונה",
+      "artist": "יוסף חיים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:57:09.574Z"
+    },
     {
       "id": "7JoXEwDsbey37yMghVbIub",
       "title": "הריני",
