@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5808,
-  "last_updated": "2026-11-21T15:56:55.983Z",
+  "version": 5809,
+  "last_updated": "2026-11-21T15:56:58.864Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4g7rZYobs7dmw5SXagDT55",
+      "title": "אצלך בעולם - אקוסטי",
+      "artist": "Meir Banai, Eviatar Banai",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:58.864Z"
+    },
     {
       "id": "3Wew5v7pbJQUSHZfWM8IsF",
       "title": "כיפה אדומה",
