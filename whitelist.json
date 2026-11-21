@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5821,
-  "last_updated": "2026-11-21T15:57:38.074Z",
+  "version": 5822,
+  "last_updated": "2026-11-21T15:59:12.882Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0qowV1fHgQPjChNL4G37oo",
+      "title": "השריטה שלי",
+      "artist": "Zohar Ashirov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:59:12.882Z"
+    },
     {
       "id": "77rOsE3b8KuHbNOJsICMq4",
       "title": "כאן לתמיד",
