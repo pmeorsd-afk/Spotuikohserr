@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5876,
-  "last_updated": "2026-11-21T16:02:46.834Z",
+  "version": 5877,
+  "last_updated": "2026-11-21T16:02:49.974Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1WorfOoNVPQECWUTKnn57D",
+      "title": "גורלו של זמר",
+      "artist": "Avi Sinvani",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:02:49.974Z"
+    },
     {
       "id": "0d2Ly7vjWXYx9br3KZBzl6",
       "title": "אלינור",
