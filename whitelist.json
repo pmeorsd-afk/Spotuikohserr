@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5896,
-  "last_updated": "2026-11-21T17:18:12.644Z",
+  "version": 5897,
+  "last_updated": "2026-11-21T17:21:45.666Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2zwQG4i5BGAO9ch4sEMrq6",
+      "title": "רגעים של אושר",
+      "artist": "דויד רוי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:21:45.666Z"
+    },
     {
       "id": "7EDRLxN07mWc49kUWJErVk",
       "title": "מישבאלי",
