@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5804,
-  "last_updated": "2026-11-21T15:56:41.185Z",
+  "version": 5805,
+  "last_updated": "2026-11-21T15:56:44.907Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0QbfGICuu7lgUp9W5j0C2N",
+      "title": "מעגלים",
+      "artist": "אושר ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:44.907Z"
+    },
     {
       "id": "6tKB9nHajg8virLvNnzUiT",
       "title": "לילות של געגוע",
