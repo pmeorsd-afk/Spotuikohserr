@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5843,
-  "last_updated": "2026-11-21T16:00:55.038Z",
+  "version": 5844,
+  "last_updated": "2026-11-21T16:00:59.020Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6wy0Z191ASqUhcXKiT9pEX",
+      "title": "חזק בנשמה",
+      "artist": "Ron Shoval",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:00:59.020Z"
+    },
     {
       "id": "5WoAEvRHPnPoMhjmTLK4AN",
       "title": "נפש תאומה",
