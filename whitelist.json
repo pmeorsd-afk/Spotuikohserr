@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5854,
-  "last_updated": "2026-11-21T16:01:39.279Z",
+  "version": 5856,
+  "last_updated": "2026-11-21T16:01:43.235Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0x4SW69qSYcM2TNcMRJb5i",
+      "title": "הבגידה",
+      "artist": "Yossi Shua",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:43.235Z"
+    },
+    {
+      "id": "5qZVmrhUhslFVj8QkB6t40",
+      "title": "דמעה של גבר",
+      "artist": "Shar-El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:43.235Z"
+    },
     {
       "id": "47k9cFGZjmZHazQs1cKfly",
       "title": "סוף הדרך בלעדייך",
