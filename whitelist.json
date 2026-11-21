@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5894,
-  "last_updated": "2026-11-21T17:18:05.672Z",
+  "version": 5895,
+  "last_updated": "2026-11-21T17:18:09.061Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4LlwNjMILqvMloFH37SrPw",
+      "title": "מוגזם",
+      "artist": "Ivri Lider",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:18:09.061Z"
+    },
     {
       "id": "6UWi2353AFQPyv1VjMLrmG",
       "title": "My Little One",
