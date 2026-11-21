@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5853,
-  "last_updated": "2026-11-21T16:01:35.724Z",
+  "version": 5854,
+  "last_updated": "2026-11-21T16:01:39.279Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "47k9cFGZjmZHazQs1cKfly",
+      "title": "סוף הדרך בלעדייך",
+      "artist": "Haim El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:39.279Z"
+    },
     {
       "id": "2ykj752ojgXewrxb85QkeN",
       "title": "מתחנן שנחזור",
