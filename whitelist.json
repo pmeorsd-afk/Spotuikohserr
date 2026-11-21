@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5846,
-  "last_updated": "2026-11-21T16:01:09.915Z",
+  "version": 5848,
+  "last_updated": "2026-11-21T16:01:13.380Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2zNjAC1CZjRoh6fwcYjBvB",
+      "title": "מחרוזת-שבוי לאהבה",
+      "artist": "Lior Miara",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:13.380Z"
+    },
+    {
+      "id": "7pJG2SKYaRrZnhVLDywYyG",
+      "title": "אהבת אמת",
+      "artist": "Yossi Eden",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:13.380Z"
+    },
     {
       "id": "3W5fkWgYashj2gk9xvbzWb",
       "title": "מחרוזת אהבה כפולה",
