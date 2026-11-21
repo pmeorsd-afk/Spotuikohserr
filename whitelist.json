@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5919,
-  "last_updated": "2026-11-21T18:32:28.210Z",
+  "version": 5920,
+  "last_updated": "2026-11-21T18:32:31.706Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0pc9vLQ3KfkPbxWQNL7qO5",
+      "title": "خسرت كل الناس",
+      "artist": "George Wassouf",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T18:32:31.706Z"
+    },
     {
       "id": "3BmqUSguks3wcQPcQLKIg4",
       "title": "מחרוזת מערבבת",
