@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5822,
-  "last_updated": "2026-11-21T15:59:12.882Z",
+  "version": 5823,
+  "last_updated": "2026-11-21T15:59:16.370Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7KCmF2qBR1b4fyNw4DJH6d",
+      "title": "מאפיה איטלקית",
+      "artist": "טל בן גיגי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:59:16.370Z"
+    },
     {
       "id": "0qowV1fHgQPjChNL4G37oo",
       "title": "השריטה שלי",
