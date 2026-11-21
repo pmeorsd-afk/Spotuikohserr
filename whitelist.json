@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5932,
-  "last_updated": "2026-11-21T20:24:52.895Z",
+  "version": 5933,
+  "last_updated": "2026-11-21T20:29:31.540Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3EHgeBIxSvqstCU3wGtV1K",
+      "title": "אל גליל",
+      "artist": "תזמורת אנדלוסאלם, ציון יחזקאל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T20:29:31.540Z"
+    },
     {
       "id": "7daT3ccNiMWGNNHERNv0bI",
       "title": "ראש למעלה",
