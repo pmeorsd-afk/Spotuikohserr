@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5895,
-  "last_updated": "2026-11-21T17:18:09.061Z",
+  "version": 5896,
+  "last_updated": "2026-11-21T17:18:12.644Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7EDRLxN07mWc49kUWJErVk",
+      "title": "מישבאלי",
+      "artist": "שחר טבוך",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:18:12.644Z"
+    },
     {
       "id": "4LlwNjMILqvMloFH37SrPw",
       "title": "מוגזם",
