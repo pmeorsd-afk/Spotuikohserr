@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5866,
-  "last_updated": "2026-11-21T16:02:12.674Z",
+  "version": 5867,
+  "last_updated": "2026-11-21T16:02:16.969Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "076bC5QEuuyEh9CJ2g3m4A",
+      "title": "חי ומאושר",
+      "artist": "Jeki Mekayten",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:02:16.969Z"
+    },
     {
       "id": "1EgMvfgN6ZfQ0pUwD1yHCd",
       "title": "לתת ולקחת",
