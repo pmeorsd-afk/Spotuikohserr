@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5839,
-  "last_updated": "2026-11-21T16:00:35.015Z",
+  "version": 5840,
+  "last_updated": "2026-11-21T16:00:41.243Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5ZbuMI7OXbc54cvQNrgKlF",
+      "title": "מדורה בלב",
+      "artist": "ראובן המלאך",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:00:41.243Z"
+    },
     {
       "id": "5IbLt3vWCrt82RRoOkVX6D",
       "title": "כשאת איתו",
