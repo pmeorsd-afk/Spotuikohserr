@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5933,
-  "last_updated": "2026-11-21T20:29:31.540Z",
+  "version": 5934,
+  "last_updated": "2026-11-21T20:43:28.320Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Mng0w0rU3YCbKIUvWBt66",
+      "title": "ככה זה",
+      "artist": "אופק אדנק, Tzaguy Boy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T20:43:28.320Z"
+    },
     {
       "id": "3EHgeBIxSvqstCU3wGtV1K",
       "title": "אל גליל",
