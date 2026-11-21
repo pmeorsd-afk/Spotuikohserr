@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5879,
-  "last_updated": "2026-11-21T16:02:57.302Z",
+  "version": 5881,
+  "last_updated": "2026-11-21T16:03:01.164Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4DfMuI673vvalIReZb1M3M",
+      "title": "אליהו הנביא זכור לטוב - רמיקס",
+      "artist": "ישראל סוסנה ותזמורתו, די.ג'י נדב ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:03:01.164Z"
+    },
+    {
+      "id": "6L1Ljy0pYdquq77sEQ1oKx",
+      "title": "כינור דוד",
+      "artist": "Avihu Medina, Shimi Tavori",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:03:01.164Z"
+    },
     {
       "id": "67HmNSaRHnwlb58wEOGIjM",
       "title": "הנשמה",
