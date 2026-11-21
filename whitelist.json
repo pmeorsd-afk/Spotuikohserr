@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5763,
-  "last_updated": "2026-11-21T15:54:15.567Z",
+  "version": 5764,
+  "last_updated": "2026-11-21T15:54:20.923Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5I1T3D3uYdTQJCfon5xNtR",
+      "title": "Hey Paula",
+      "artist": "Paul & Paula",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:20.923Z"
+    },
     {
       "id": "1MmBKqjWQtN0KZOVcAsP00",
       "title": "אין שום היגיון",
