@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5897,
-  "last_updated": "2026-11-21T17:21:45.666Z",
+  "version": 5898,
+  "last_updated": "2026-11-21T17:28:39.384Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1jMX4aEtM8OlhhvfTAZEFl",
+      "title": "Gravity",
+      "artist": "Richard Orlinski, Anna Zak, Fat Joe",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:28:39.384Z"
+    },
     {
       "id": "2zwQG4i5BGAO9ch4sEMrq6",
       "title": "רגעים של אושר",
