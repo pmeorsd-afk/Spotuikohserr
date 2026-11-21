@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5859,
-  "last_updated": "2026-11-21T16:01:50.765Z",
+  "version": 5860,
+  "last_updated": "2026-11-21T16:01:54.265Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7KOWn2HH5fCVGcGVmcxzQ1",
+      "title": "פסק זמן",
+      "artist": "Lior Farhi, Zion Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:54.265Z"
+    },
     {
       "id": "2HU5tfiRw4bHARY8BOXr7G",
       "title": "7 שנים",
