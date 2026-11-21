@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5930,
-  "last_updated": "2026-11-21T20:24:44.749Z",
+  "version": 5931,
+  "last_updated": "2026-11-21T20:24:48.853Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5pcv3fvp4C2mSvSSeiNSvT",
+      "title": "בזכרי ימים ימימה",
+      "artist": "Daklon, Haim Moshe",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T20:24:48.853Z"
+    },
     {
       "id": "66T48aitEgCEnmkRB4uzXM",
       "title": "שירת העשבים",
