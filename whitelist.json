@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5830,
-  "last_updated": "2026-11-21T15:59:50.935Z",
+  "version": 5831,
+  "last_updated": "2026-11-21T16:00:00.406Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6tSOCgt61gkbUtnNpFEZ84",
+      "title": "מחרוזת בסבוסה",
+      "artist": "Lior Miara, שימי מזרחי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:00:00.406Z"
+    },
     {
       "id": "6COmsigN0FtXDedJAfZzJV",
       "title": "ראיתי בעיניה",
