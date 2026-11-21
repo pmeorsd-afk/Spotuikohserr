@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5891,
-  "last_updated": "2026-11-21T17:01:40.004Z",
+  "version": 5892,
+  "last_updated": "2026-11-21T17:17:58.564Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1XHUfow1vLFFlJaQnAUCVN",
+      "title": "ברוך הבא לבלאגן",
+      "artist": "Harel Skaat, NOROZ",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:17:58.564Z"
+    },
     {
       "id": "2qJkesdHu9sMMVFgkRkqhQ",
       "title": "Angel",
