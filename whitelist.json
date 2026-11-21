@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5909,
-  "last_updated": "2026-11-21T18:08:38.690Z",
+  "version": 5911,
+  "last_updated": "2026-11-21T18:08:42.649Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5KC7ginqShi7mhDQLttQh0",
+      "title": "Get in Trouble (So What)",
+      "artist": "Dimitri Vegas & Like Mike, Vini Vici, Dimitri Vegas",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T18:08:42.649Z"
+    },
+    {
+      "id": "1SjtLEpu5ssRmIwbsCtMxO",
+      "title": "Zombie",
+      "artist": "Hotel Kinshasa",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T18:08:42.649Z"
+    },
     {
       "id": "1D6pSmzRYmhsqR2VHHFx0g",
       "title": "צמאה לאהבה - Itay Galo Remix",
