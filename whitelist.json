@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5764,
-  "last_updated": "2026-11-21T15:54:20.923Z",
+  "version": 5766,
+  "last_updated": "2026-11-21T15:54:24.569Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2RCa9pVb2ZwzgdItSPkE5P",
+      "title": "Only Sixteen",
+      "artist": "Sam Cooke",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:24.569Z"
+    },
+    {
+      "id": "5UF2d8uk5JHmRsBfLHvYdo",
+      "title": "Ginny Come Lately",
+      "artist": "Brian Hyland",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:24.569Z"
+    },
     {
       "id": "5I1T3D3uYdTQJCfon5xNtR",
       "title": "Hey Paula",
