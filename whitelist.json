@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5775,
-  "last_updated": "2026-11-21T15:54:44.505Z",
+  "version": 5776,
+  "last_updated": "2026-11-21T15:54:48.042Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "00Eh1OzmqScLNm48Fhm1Aw",
+      "title": "סטרומאה",
+      "artist": "נתנאל ששון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:48.042Z"
+    },
     {
       "id": "6fT3P1XHmx1WHbag24hZzE",
       "title": "לבד",
