@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5761,
-  "last_updated": "2026-11-21T15:54:08.111Z",
+  "version": 5762,
+  "last_updated": "2026-11-21T15:54:12.926Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5S61EFS6PaKXjggOF5au6N",
+      "title": "בלילה על הדשא",
+      "artist": "להקת הזמר של פיקוד צפון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:12.926Z"
+    },
     {
       "id": "4BDO5IUI5D3louqZkwUMZf",
       "title": "רוח והצלה - ישיבה קדם צבאית ברוכין",
