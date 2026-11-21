@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5923,
-  "last_updated": "2026-11-21T19:33:58.356Z",
+  "version": 5925,
+  "last_updated": "2026-11-21T19:34:02.009Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "15ULXH2YwzYnThgh7Mx6Qi",
+      "title": "No Shtus",
+      "artist": "Thank You Hashem, Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T19:34:02.009Z"
+    },
+    {
+      "id": "3JfS1PpVR6iTqCelnGrJUo",
+      "title": "אבא",
+      "artist": "Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T19:34:02.009Z"
+    },
     {
       "id": "0tMiwFUS8KE3SCxpmHy4qg",
       "title": "נווה הדרים - גרסת ברסלב",
