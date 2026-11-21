@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5929,
-  "last_updated": "2026-11-21T20:24:39.411Z",
+  "version": 5930,
+  "last_updated": "2026-11-21T20:24:44.749Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "66T48aitEgCEnmkRB4uzXM",
+      "title": "שירת העשבים",
+      "artist": "Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T20:24:44.749Z"
+    },
     {
       "id": "3z9KSGSLh4vQieIqr3Z0Gj",
       "title": "שיבנה בית המקדש",
