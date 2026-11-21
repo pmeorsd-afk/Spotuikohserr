@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5799,
-  "last_updated": "2026-11-21T15:56:23.630Z",
+  "version": 5800,
+  "last_updated": "2026-11-21T15:56:27.444Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7fDQ0XoZnYwqVhi3NxvGoX",
+      "title": "שמיים לא שלי",
+      "artist": "Naor Cohen",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:27.444Z"
+    },
     {
       "id": "4aB3K87FuHpYyi8fln97u1",
       "title": "אל תסגרי לי את הלב",
