@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5780,
-  "last_updated": "2026-11-21T15:54:55.053Z",
+  "version": 5781,
+  "last_updated": "2026-11-21T15:54:58.370Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Mtq9rxSLfMWKGZxDN0keV",
+      "title": "קווין X היי גיאל",
+      "artist": "אורי סבאן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:58.370Z"
+    },
     {
       "id": "76NenaLfp7y6fQu8b6Nx8X",
       "title": "תצאי לי מהלב",
