@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5790,
-  "last_updated": "2026-11-21T15:55:58.134Z",
+  "version": 5792,
+  "last_updated": "2026-11-21T15:56:01.937Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5E0OnA40zPxJC1XkS7EXRm",
+      "title": "עבר עליי הכל",
+      "artist": "Roee Sendler",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:01.937Z"
+    },
+    {
+      "id": "0Vqo7KRtFBQMndegiWn0sL",
+      "title": "אחת למיליון",
+      "artist": "Ben Deri, Doron Azulay",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:01.937Z"
+    },
     {
       "id": "24L8hbZZVXvpHcsfXQhHf6",
       "title": "בא לי שנאהב",
