@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5776,
-  "last_updated": "2026-11-21T15:54:48.042Z",
+  "version": 5779,
+  "last_updated": "2026-11-21T15:54:51.511Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,30 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1rOj9Q9HQvvmodIKFMxFxq",
+      "title": "בסוף עוד ניפגש",
+      "artist": "Eliad",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:51.511Z"
+    },
+    {
+      "id": "728T92HZV6JhzIVtW0UZ2G",
+      "title": "הביתה",
+      "artist": "מתן חסן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:51.511Z"
+    },
+    {
+      "id": "6ZwFScIDvpnke7VIFYw80t",
+      "title": "Killing Me Softly With Her Song",
+      "artist": "Perry Como",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:51.511Z"
+    },
     {
       "id": "00Eh1OzmqScLNm48Fhm1Aw",
       "title": "סטרומאה",
