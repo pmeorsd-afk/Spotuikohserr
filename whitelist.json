@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5834,
-  "last_updated": "2026-11-21T16:00:14.626Z",
+  "version": 5835,
+  "last_updated": "2026-11-21T16:00:18.377Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2X2LNdLtEdbLy8reMGePvy",
+      "title": "מחרוזת רקדי",
+      "artist": "Lior Miara",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:00:18.377Z"
+    },
     {
       "id": "7yJisUzthDPbOXQyV5f6U0",
       "title": "מחרוזת להיות חופשייה - תלך כפרה עליי",
