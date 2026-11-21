@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5784,
-  "last_updated": "2026-11-21T15:55:33.340Z",
+  "version": 5785,
+  "last_updated": "2026-11-21T15:55:37.349Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0590neXhUo7bxiIpVQ3fpR",
+      "title": "שרירים",
+      "artist": "אושר ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:55:37.349Z"
+    },
     {
       "id": "3J0w46wC9U6ssG4qMmCJxT",
       "title": "מציירת לבבות",
