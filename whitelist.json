@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5922,
-  "last_updated": "2026-11-21T19:03:51.384Z",
+  "version": 5923,
+  "last_updated": "2026-11-21T19:33:58.356Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0tMiwFUS8KE3SCxpmHy4qg",
+      "title": "נווה הדרים - גרסת ברסלב",
+      "artist": "אביר יעקב יוסף",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T19:33:58.356Z"
+    },
     {
       "id": "42NrJOdxVkt532VizgYwGr",
       "title": "אילת",
