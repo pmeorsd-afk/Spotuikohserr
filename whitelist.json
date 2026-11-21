@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5786,
-  "last_updated": "2026-11-21T15:55:41.565Z",
+  "version": 5787,
+  "last_updated": "2026-11-21T15:55:45.580Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7mos31p9j2ItKwilNSGeTu",
+      "title": "נקודה של אור",
+      "artist": "Itay Levi, הרב יגאל כהן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:55:45.580Z"
+    },
     {
       "id": "1Z11tlkXmPY7hzIMnUnU3d",
       "title": "מזמור לתודה",
