@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5773,
-  "last_updated": "2026-11-21T15:54:37.772Z",
+  "version": 5774,
+  "last_updated": "2026-11-21T15:54:41.027Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "06jhzOQEBDZGDLJuQPdHl5",
+      "title": "מה שווה אהבה?",
+      "artist": "חן פורתי, מיתר רובין",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:41.027Z"
+    },
     {
       "id": "1XG4VABN8JdsIPJfgvr11z",
       "title": "אמביציה",
