@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5759,
-  "last_updated": "2026-11-21T15:53:54.918Z",
+  "version": 5760,
+  "last_updated": "2026-11-21T15:53:59.697Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1hpzM7MF9KEpClGxseC84M",
+      "title": "מחרוזת עד יום מותי",
+      "artist": "היוצרים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:53:59.697Z"
+    },
     {
       "id": "2IFwwkUVBiBcrBjWL6nFL4",
       "title": "יעקב",
