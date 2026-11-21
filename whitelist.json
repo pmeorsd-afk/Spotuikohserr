@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5890,
-  "last_updated": "2026-11-21T17:01:36.493Z",
+  "version": 5891,
+  "last_updated": "2026-11-21T17:01:40.004Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2qJkesdHu9sMMVFgkRkqhQ",
+      "title": "Angel",
+      "artist": "Theory of a Deadman",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:01:40.004Z"
+    },
     {
       "id": "3bQIeVgvC783Sgg0Bdjh5p",
       "title": "#Dubigal",
