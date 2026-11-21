@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5802,
-  "last_updated": "2026-11-21T15:56:31.249Z",
+  "version": 5803,
+  "last_updated": "2026-11-21T15:56:35.393Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5BKp6xANfykZTsmXobuMl1",
+      "title": "דברי איתי",
+      "artist": "Roee Sendler",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:35.393Z"
+    },
     {
       "id": "78vqwrjBcrw6b0vGEnsa7L",
       "title": "לאט",
