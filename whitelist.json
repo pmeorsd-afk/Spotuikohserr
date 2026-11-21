@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5829,
-  "last_updated": "2026-11-21T15:59:46.684Z",
+  "version": 5830,
+  "last_updated": "2026-11-21T15:59:50.935Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6COmsigN0FtXDedJAfZzJV",
+      "title": "ראיתי בעיניה",
+      "artist": "Ariel Israelov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:59:50.935Z"
+    },
     {
       "id": "26At2TSv24w7zTR63f0WzI",
       "title": "הנסיכה של רוטשילד",
