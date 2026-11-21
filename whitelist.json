@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5771,
-  "last_updated": "2026-11-21T15:54:34.292Z",
+  "version": 5773,
+  "last_updated": "2026-11-21T15:54:37.772Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1XG4VABN8JdsIPJfgvr11z",
+      "title": "אמביציה",
+      "artist": "Vic Ohana Jan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:37.772Z"
+    },
+    {
+      "id": "5tyk8g2Bn5SEQdhuGFDYie",
+      "title": "דילמות",
+      "artist": "רועי מזוז",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:37.772Z"
+    },
     {
       "id": "0we6C3lm53KCmG4pCjzK9l",
       "title": "You Are My Destiny",
