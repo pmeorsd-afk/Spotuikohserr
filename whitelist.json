@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5934,
-  "last_updated": "2026-11-21T20:43:28.320Z",
+  "version": 5935,
+  "last_updated": "2026-11-21T20:43:31.936Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7hTICLxgn6rwqvLalvGIWH",
+      "title": "אני מראש העין",
+      "artist": "Jeki Mekayten",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T20:43:31.936Z"
+    },
     {
       "id": "1Mng0w0rU3YCbKIUvWBt66",
       "title": "ככה זה",
