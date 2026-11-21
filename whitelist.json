@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5886,
-  "last_updated": "2026-11-21T16:50:00.700Z",
+  "version": 5887,
+  "last_updated": "2026-11-21T16:50:04.559Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1BgsxpowUfZCxHc3q4Ztaf",
+      "title": "ואני אבטח בך",
+      "artist": "Matt Dubb, Beri Weber, Shmueli Ungar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:50:04.559Z"
+    },
     {
       "id": "5zuaPsToImY4cmOfMgZ7ek",
       "title": "תודה",
