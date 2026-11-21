@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5832,
-  "last_updated": "2026-11-21T16:00:04.526Z",
+  "version": 5833,
+  "last_updated": "2026-11-21T16:00:10.564Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1zdsyXXMwd8BB3qXb4kY2i",
+      "title": "מחרוזת עיר נמל",
+      "artist": "Shimi Mizrahi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:00:10.564Z"
+    },
     {
       "id": "5HKmdZ9ySSnoxRZOco9TtC",
       "title": "מחרוזת תלתלים",
