@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5803,
-  "last_updated": "2026-11-21T15:56:35.393Z",
+  "version": 5804,
+  "last_updated": "2026-11-21T15:56:41.185Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6tKB9nHajg8virLvNnzUiT",
+      "title": "לילות של געגוע",
+      "artist": "Yagel",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:41.185Z"
+    },
     {
       "id": "5BKp6xANfykZTsmXobuMl1",
       "title": "דברי איתי",
