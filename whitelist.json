@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5752,
-  "last_updated": "2026-11-21T15:53:34.392Z",
+  "version": 5753,
+  "last_updated": "2026-11-21T15:53:37.876Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "49lk4CCtLz1YlHphE3FHjv",
+      "title": "סצנות",
+      "artist": "Gil Vain, The Choice",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:53:37.876Z"
+    },
     {
       "id": "2J4DpqJCIuuM9WjtWHbjvd",
       "title": "Grey",
