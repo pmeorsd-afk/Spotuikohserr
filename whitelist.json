@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5908,
-  "last_updated": "2026-11-21T17:49:55.231Z",
+  "version": 5909,
+  "last_updated": "2026-11-21T18:08:38.690Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1D6pSmzRYmhsqR2VHHFx0g",
+      "title": "צמאה לאהבה - Itay Galo Remix",
+      "artist": "Liran Danino, Itay Galo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T18:08:38.690Z"
+    },
     {
       "id": "1HrHphGwsqzhRVAZ7smxTF",
       "title": "מנגל",
