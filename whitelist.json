@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5800,
-  "last_updated": "2026-11-21T15:56:27.444Z",
+  "version": 5802,
+  "last_updated": "2026-11-21T15:56:31.249Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "78vqwrjBcrw6b0vGEnsa7L",
+      "title": "לאט",
+      "artist": "Shaked Komemy",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:31.249Z"
+    },
+    {
+      "id": "5XNh9b3fFeMlwZGoMEynoH",
+      "title": "תבלי לך איתו",
+      "artist": "אושר ביטון",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:31.249Z"
+    },
     {
       "id": "7fDQ0XoZnYwqVhi3NxvGoX",
       "title": "שמיים לא שלי",
