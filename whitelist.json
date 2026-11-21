@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5792,
-  "last_updated": "2026-11-21T15:56:01.937Z",
+  "version": 5793,
+  "last_updated": "2026-11-21T15:56:05.935Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2HuiOoPDBrvGbqaVPnfQTR",
+      "title": "ותראי מהיום",
+      "artist": "Idan Bakshi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:05.935Z"
+    },
     {
       "id": "5E0OnA40zPxJC1XkS7EXRm",
       "title": "עבר עליי הכל",
