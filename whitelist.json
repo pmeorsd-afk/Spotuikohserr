@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5820,
-  "last_updated": "2026-11-21T15:57:32.526Z",
+  "version": 5821,
+  "last_updated": "2026-11-21T15:57:38.074Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "77rOsE3b8KuHbNOJsICMq4",
+      "title": "כאן לתמיד",
+      "artist": "גיל אוליאל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:57:38.074Z"
+    },
     {
       "id": "3NQbTNVHUb6jEYF0LmDycK",
       "title": "היית המזל שלי",
