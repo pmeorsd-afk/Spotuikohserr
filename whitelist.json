@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5812,
-  "last_updated": "2026-11-21T15:57:09.574Z",
+  "version": 5814,
+  "last_updated": "2026-11-21T15:57:13.197Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "54SvUmTFxW9Fq12q2XrgUP",
+      "title": "At Hachaim Sheli",
+      "artist": "Yaakov Hatan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:57:13.197Z"
+    },
+    {
+      "id": "2yWlvitFO63FOOBWgyhRpy",
+      "title": "לפרוטוקול",
+      "artist": "ליאור פינטו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:57:13.197Z"
+    },
     {
       "id": "7ef5DnraZ5Om57Iwz5VOwn",
       "title": "מציאות משונה",
