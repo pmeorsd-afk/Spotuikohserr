@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5900,
-  "last_updated": "2026-11-21T17:49:32.051Z",
+  "version": 5901,
+  "last_updated": "2026-11-21T17:49:35.253Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1TrkJKPYB2oFe3NRS4jJme",
+      "title": "Free Tibet (Mixed) - Vini Vici Remix",
+      "artist": "Hilight Tribe, Vini Vici",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:49:35.253Z"
+    },
     {
       "id": "5tK0VMqovAo0kBplvqLCSD",
       "title": "זה גדול עלי",
