@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5781,
-  "last_updated": "2026-11-21T15:54:58.370Z",
+  "version": 5783,
+  "last_updated": "2026-11-21T15:55:01.609Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1pnMW4EuZCZ3hpoLP8Bzri",
+      "title": "אורזת",
+      "artist": "טל בן גיגי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:55:01.609Z"
+    },
+    {
+      "id": "0yfnkdlZ9gRQt8hAFPFfhk",
+      "title": "למה לא אנחנו",
+      "artist": "אורי סבאן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:55:01.609Z"
+    },
     {
       "id": "0Mtq9rxSLfMWKGZxDN0keV",
       "title": "קווין X היי גיאל",
