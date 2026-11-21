@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5912,
-  "last_updated": "2026-11-21T18:08:46.731Z",
+  "version": 5913,
+  "last_updated": "2026-11-21T18:08:59.963Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6V5LMAIGNd7qMjco5JjUSa",
+      "title": "Drink And Shout",
+      "artist": "Prezioso, Vini Vici, Shibui",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T18:08:59.963Z"
+    },
     {
       "id": "5O9Dz0h08LuBi0aVvDcylh",
       "title": "The Resistance",
