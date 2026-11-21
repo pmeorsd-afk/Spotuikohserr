@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5942,
-  "last_updated": "2026-11-21T21:32:51.784Z",
+  "version": 5943,
+  "last_updated": "2026-11-21T21:38:28.819Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6bvqFUdvZQrO35GKaGdX6W",
+      "title": "מה אשיב לך",
+      "artist": "אופיר סלומון, ניתאי צרפתי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T21:38:28.819Z"
+    },
     {
       "id": "1DGsCgDZ1IYCP5nBWsqZwW",
       "title": "כל החלומות",
