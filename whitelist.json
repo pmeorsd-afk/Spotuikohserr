@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5905,
-  "last_updated": "2026-11-21T17:49:45.162Z",
+  "version": 5906,
+  "last_updated": "2026-11-21T17:49:48.785Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7zyvQ8sb72g4RuwBpcuGUP",
+      "title": "Home Alone (with Marnik)",
+      "artist": "Naeleck, Vini Vici, Marnik",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:49:48.785Z"
+    },
     {
       "id": "2CeBUhUOri5AplBQ3JMsMb",
       "title": "פול גז - Niso Slob Remix",
