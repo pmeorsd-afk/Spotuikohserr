@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5753,
-  "last_updated": "2026-11-21T15:53:37.876Z",
+  "version": 5754,
+  "last_updated": "2026-11-21T15:53:41.150Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Ov30OiKyPEzffA8NMCU1o",
+      "title": "אדיר איום",
+      "artist": "מאיר קליינר, ביני לנדאו",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:53:41.150Z"
+    },
     {
       "id": "49lk4CCtLz1YlHphE3FHjv",
       "title": "סצנות",
