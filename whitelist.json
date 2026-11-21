@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5757,
-  "last_updated": "2026-11-21T15:53:51.766Z",
+  "version": 5759,
+  "last_updated": "2026-11-21T15:53:54.918Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2IFwwkUVBiBcrBjWL6nFL4",
+      "title": "יעקב",
+      "artist": "אברהם פריד",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:53:54.918Z"
+    },
+    {
+      "id": "4rQzIMjPW9nuF92hRDNcPi",
+      "title": "שבת קודש",
+      "artist": "אברהם פריד",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:53:54.918Z"
+    },
     {
       "id": "4ZQsdCn7ZUgtWNMAWsIvwE",
       "title": "שירת העשבים",
