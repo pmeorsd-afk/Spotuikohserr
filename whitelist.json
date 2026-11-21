@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5849,
-  "last_updated": "2026-11-21T16:01:20.806Z",
+  "version": 5850,
+  "last_updated": "2026-11-21T16:01:24.204Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7oD2G9P18sYU1WhEDQGm5g",
+      "title": "מחרוזת: חולפות שנים",
+      "artist": "ראובן המלאך",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:24.204Z"
+    },
     {
       "id": "6QMhdVTkh2xxUqoV9zSxKT",
       "title": "מה עשית לי",
