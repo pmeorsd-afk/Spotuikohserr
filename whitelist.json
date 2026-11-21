@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5941,
-  "last_updated": "2026-11-21T21:23:05.389Z",
+  "version": 5942,
+  "last_updated": "2026-11-21T21:32:51.784Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1DGsCgDZ1IYCP5nBWsqZwW",
+      "title": "כל החלומות",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T21:32:51.784Z"
+    },
     {
       "id": "2HddIqJ19Wy2QQPt6N418g",
       "title": "עומד כאן לבדי",
