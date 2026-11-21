@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5845,
-  "last_updated": "2026-11-21T16:01:05.920Z",
+  "version": 5846,
+  "last_updated": "2026-11-21T16:01:09.915Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3W5fkWgYashj2gk9xvbzWb",
+      "title": "מחרוזת אהבה כפולה",
+      "artist": "Shimi Mizrahi, Barak Mizrahi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:09.915Z"
+    },
     {
       "id": "29Q3zBbRuGKmv2b6KyMs2p",
       "title": "מחרוזת יאללה חתונה",
