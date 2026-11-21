@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5816,
-  "last_updated": "2026-11-21T15:57:20.975Z",
+  "version": 5817,
+  "last_updated": "2026-11-21T15:57:24.537Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3jvjfv8Dz1dFzRA1z4y0mn",
+      "title": "חלום קטן",
+      "artist": "גיל אוליאל",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:57:24.537Z"
+    },
     {
       "id": "1uqtzMCkguR1hrk4BK4GXz",
       "title": "Malachim Rokdim Bishvilenu",
