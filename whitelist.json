@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5940,
-  "last_updated": "2026-11-21T21:22:36.608Z",
+  "version": 5941,
+  "last_updated": "2026-11-21T21:23:05.389Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2HddIqJ19Wy2QQPt6N418g",
+      "title": "עומד כאן לבדי",
+      "artist": "עלאי ונתאי צרפתי, נתאי צרפתי, ניתאי צרפתי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T21:23:05.389Z"
+    },
     {
       "id": "27pylHn4TUNuMhEY4dtlVH",
       "title": "מחרוזת אהבה מטורפת - Live",
