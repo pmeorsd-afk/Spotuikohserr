@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5914,
-  "last_updated": "2026-11-21T18:09:08.530Z",
+  "version": 5915,
+  "last_updated": "2026-11-21T18:09:13.905Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4L6FTruqesX3GCgz8Nopm7",
+      "title": "יש לי חור בלב בצורה שלך - DUDU PAHIMA Official Remix",
+      "artist": "Girafot, Dudu Pahima",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T18:09:13.905Z"
+    },
     {
       "id": "3MD6oKyUTnF0k3DodQw82g",
       "title": "זודיאק",
