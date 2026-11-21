@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5842,
-  "last_updated": "2026-11-21T16:00:48.636Z",
+  "version": 5843,
+  "last_updated": "2026-11-21T16:00:55.038Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5WoAEvRHPnPoMhjmTLK4AN",
+      "title": "נפש תאומה",
+      "artist": "דניאל חן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:00:55.038Z"
+    },
     {
       "id": "03LSL8bphJuj7eVPLMipiD",
       "title": "מחרוזת אהבה שבלב, תני לי יד, אבא מצטער ילדה",
