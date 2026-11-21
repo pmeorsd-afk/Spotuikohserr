@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5838,
-  "last_updated": "2026-11-21T16:00:29.166Z",
+  "version": 5839,
+  "last_updated": "2026-11-21T16:00:35.015Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5IbLt3vWCrt82RRoOkVX6D",
+      "title": "כשאת איתו",
+      "artist": "Yossi Eden",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:00:35.015Z"
+    },
     {
       "id": "6y0G2UlKn49rfp2xgQlzRy",
       "title": "בואי אל הים",
