@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5840,
-  "last_updated": "2026-11-21T16:00:41.243Z",
+  "version": 5841,
+  "last_updated": "2026-11-21T16:00:45.178Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0UIXXhpQ3diTO5VmPVtW5D",
+      "title": "איך אהבנו",
+      "artist": "Shar-El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:00:45.178Z"
+    },
     {
       "id": "5ZbuMI7OXbc54cvQNrgKlF",
       "title": "מדורה בלב",
