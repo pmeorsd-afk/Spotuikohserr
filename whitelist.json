@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5881,
-  "last_updated": "2026-11-21T16:03:01.164Z",
+  "version": 5882,
+  "last_updated": "2026-11-21T16:06:10.707Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0e4rVIbyzTjXah2NGBgXRi",
+      "title": "כמו פרפר",
+      "artist": "Samir Shukri",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:06:10.707Z"
+    },
     {
       "id": "4DfMuI673vvalIReZb1M3M",
       "title": "אליהו הנביא זכור לטוב - רמיקס",
