@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5947,
-  "last_updated": "2026-11-21T22:16:22.778Z",
+  "version": 5948,
+  "last_updated": "2026-11-21T22:16:29.282Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4SPuNQSNCek0pc8CP0jdJM",
+      "title": "בצמאוני (חובות ליבי)",
+      "artist": "Ofer Levi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T22:16:29.282Z"
+    },
     {
       "id": "19cGCaMYWXIiRqJVaMdRip",
       "title": "לא מבינה עברית",
