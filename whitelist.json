@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5797,
-  "last_updated": "2026-11-21T15:56:16.476Z",
+  "version": 5798,
+  "last_updated": "2026-11-21T15:56:20.157Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Z83UOSbHfQk1egkf0JT6D",
+      "title": "סגול בהיר",
+      "artist": "נהוראי תורג'מן",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:20.157Z"
+    },
     {
       "id": "0OEDPdHswqezuiNMoacFo2",
       "title": "אין לי אוויר",
