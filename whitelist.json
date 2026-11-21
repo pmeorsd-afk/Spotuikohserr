@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5911,
-  "last_updated": "2026-11-21T18:08:42.649Z",
+  "version": 5912,
+  "last_updated": "2026-11-21T18:08:46.731Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5O9Dz0h08LuBi0aVvDcylh",
+      "title": "The Resistance",
+      "artist": "Skillet",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T18:08:46.731Z"
+    },
     {
       "id": "5KC7ginqShi7mhDQLttQh0",
       "title": "Get in Trouble (So What)",
