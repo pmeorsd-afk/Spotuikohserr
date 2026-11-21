@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5789,
-  "last_updated": "2026-11-21T15:55:54.391Z",
+  "version": 5790,
+  "last_updated": "2026-11-21T15:55:58.134Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "24L8hbZZVXvpHcsfXQhHf6",
+      "title": "בא לי שנאהב",
+      "artist": "Dudi Buzaglo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:55:58.134Z"
+    },
     {
       "id": "1i9l9ZrRKROOibR1iRQloQ",
       "title": "סימנים מאבא",
