@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5836,
-  "last_updated": "2026-11-21T16:00:21.961Z",
+  "version": 5837,
+  "last_updated": "2026-11-21T16:00:25.615Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5xUXXRqqYi4Y3msf6A6GHq",
+      "title": "לילות קסומים זאפה ירושלים 2026",
+      "artist": "Shar-El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:00:25.615Z"
+    },
     {
       "id": "1COnWCgCFkVy5osW0jLmpX",
       "title": "מחרוזת מלכת המועדון",
