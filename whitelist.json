@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5856,
-  "last_updated": "2026-11-21T16:01:43.235Z",
+  "version": 5857,
+  "last_updated": "2026-11-21T16:01:46.905Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0VGgnrtzFB2zcNDgTwrSIt",
+      "title": "מצטער שהתאהבת",
+      "artist": "כפיר עטיה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:46.905Z"
+    },
     {
       "id": "0x4SW69qSYcM2TNcMRJb5i",
       "title": "הבגידה",
