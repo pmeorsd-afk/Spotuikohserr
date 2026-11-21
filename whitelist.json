@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5945,
-  "last_updated": "2026-11-21T21:58:12.785Z",
+  "version": 5946,
+  "last_updated": "2026-11-21T22:09:34.559Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3CExOaDUXcMH6hjPk3jmCt",
+      "title": "אין לי יום אין לי לילה",
+      "artist": "Ofer Levi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T22:09:34.559Z"
+    },
     {
       "id": "32u6PxYddI6OYzZXjG8ue2",
       "title": "גורדון",
