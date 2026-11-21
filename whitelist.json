@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5878,
-  "last_updated": "2026-11-21T16:02:53.813Z",
+  "version": 5879,
+  "last_updated": "2026-11-21T16:02:57.302Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "67HmNSaRHnwlb58wEOGIjM",
+      "title": "הנשמה",
+      "artist": "Eli Luzon",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:02:57.302Z"
+    },
     {
       "id": "4jNok9QHgwkbewAcG4uH8m",
       "title": "על החוף בסלוניקי",
