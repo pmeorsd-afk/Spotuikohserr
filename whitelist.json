@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5825,
-  "last_updated": "2026-11-21T15:59:19.787Z",
+  "version": 5826,
+  "last_updated": "2026-11-21T15:59:25.596Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "53W7uCvi7rt1IZPQGpfBqu",
+      "title": "גשם על חלון ביתי",
+      "artist": "Lior Miara",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:59:25.596Z"
+    },
     {
       "id": "1ODTX6QKeIhnOPsl1rrlJI",
       "title": "הבוגדת",
