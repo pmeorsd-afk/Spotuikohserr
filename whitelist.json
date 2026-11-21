@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5805,
-  "last_updated": "2026-11-21T15:56:44.907Z",
+  "version": 5806,
+  "last_updated": "2026-11-21T15:56:48.950Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7JnozSvUprB8FTLTJ1pMYX",
+      "title": "Ze Lo Fair",
+      "artist": "Yaakov Hatan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:48.950Z"
+    },
     {
       "id": "0QbfGICuu7lgUp9W5j0C2N",
       "title": "מעגלים",
