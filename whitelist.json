@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5901,
-  "last_updated": "2026-11-21T17:49:35.253Z",
+  "version": 5902,
+  "last_updated": "2026-11-21T17:49:38.530Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4paVKldW1YeVqHdpFomk2O",
+      "title": "פרנציפ",
+      "artist": "Static, Ness, סטילה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T17:49:38.530Z"
+    },
     {
       "id": "1TrkJKPYB2oFe3NRS4jJme",
       "title": "Free Tibet (Mixed) - Vini Vici Remix",
