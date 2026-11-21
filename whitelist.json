@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5871,
-  "last_updated": "2026-11-21T16:02:31.393Z",
+  "version": 5873,
+  "last_updated": "2026-11-21T16:02:35.444Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1IsPZawHdKqfpUUvN9A9U7",
+      "title": "נחש העיר",
+      "artist": "עופר בדיחי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:02:35.444Z"
+    },
+    {
+      "id": "4flb6V9vNCGJ5eWbfE4eK6",
+      "title": "מחרוזת: סוד המזלות-בהופעה",
+      "artist": "Jeki Mekayten",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:02:35.444Z"
+    },
     {
       "id": "0bn5dGggIbARdQUdoouQOS",
       "title": "סולח",
