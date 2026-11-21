@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5809,
-  "last_updated": "2026-11-21T15:56:58.864Z",
+  "version": 5810,
+  "last_updated": "2026-11-21T15:57:02.292Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3GJqNFJr2TZNMp3owXyBmY",
+      "title": "Mevateret",
+      "artist": "Ben El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:57:02.292Z"
+    },
     {
       "id": "4g7rZYobs7dmw5SXagDT55",
       "title": "אצלך בעולם - אקוסטי",
