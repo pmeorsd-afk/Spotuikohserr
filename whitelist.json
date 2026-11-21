@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5928,
-  "last_updated": "2026-11-21T20:24:35.591Z",
+  "version": 5929,
+  "last_updated": "2026-11-21T20:24:39.411Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3z9KSGSLh4vQieIqr3Z0Gj",
+      "title": "שיבנה בית המקדש",
+      "artist": "Yishai Riboh, צמאה",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T20:24:39.411Z"
+    },
     {
       "id": "3kN9cj6uNcUwck3OwYFDQ8",
       "title": "עננים",
