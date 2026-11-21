@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5844,
-  "last_updated": "2026-11-21T16:00:59.020Z",
+  "version": 5845,
+  "last_updated": "2026-11-21T16:01:05.920Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "29Q3zBbRuGKmv2b6KyMs2p",
+      "title": "מחרוזת יאללה חתונה",
+      "artist": "Regev Hod",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:05.920Z"
+    },
     {
       "id": "6wy0Z191ASqUhcXKiT9pEX",
       "title": "חזק בנשמה",
