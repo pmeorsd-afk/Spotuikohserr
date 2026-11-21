@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5807,
-  "last_updated": "2026-11-21T15:56:52.469Z",
+  "version": 5808,
+  "last_updated": "2026-11-21T15:56:55.983Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Wew5v7pbJQUSHZfWM8IsF",
+      "title": "כיפה אדומה",
+      "artist": "Idan Bakshi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:55.983Z"
+    },
     {
       "id": "7BV391ZiANIiiCxk5YvPIb",
       "title": "לא יוצאת לי מהראש",
