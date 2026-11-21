@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5783,
-  "last_updated": "2026-11-21T15:55:01.609Z",
+  "version": 5784,
+  "last_updated": "2026-11-21T15:55:33.340Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3J0w46wC9U6ssG4qMmCJxT",
+      "title": "מציירת לבבות",
+      "artist": "אילון אלקיים",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:55:33.340Z"
+    },
     {
       "id": "1pnMW4EuZCZ3hpoLP8Bzri",
       "title": "אורזת",
