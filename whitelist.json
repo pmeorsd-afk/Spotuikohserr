@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5815,
-  "last_updated": "2026-11-21T15:57:17.427Z",
+  "version": 5816,
+  "last_updated": "2026-11-21T15:57:20.975Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1uqtzMCkguR1hrk4BK4GXz",
+      "title": "Malachim Rokdim Bishvilenu",
+      "artist": "Yaakov Hatan",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:57:20.975Z"
+    },
     {
       "id": "7pqRECzlED4BwCtMOKgnUC",
       "title": "אהבה שלי",
