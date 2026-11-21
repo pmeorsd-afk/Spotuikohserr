@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5823,
-  "last_updated": "2026-11-21T15:59:16.370Z",
+  "version": 5825,
+  "last_updated": "2026-11-21T15:59:19.787Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1ODTX6QKeIhnOPsl1rrlJI",
+      "title": "הבוגדת",
+      "artist": "Lior Miara, נחמן סבג",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:59:19.787Z"
+    },
+    {
+      "id": "3WTBt4npV2VDi6Sf6VG2pw",
+      "title": "מלחמות וכאב",
+      "artist": "שירז אברהם",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:59:19.787Z"
+    },
     {
       "id": "7KCmF2qBR1b4fyNw4DJH6d",
       "title": "מאפיה איטלקית",
