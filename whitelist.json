@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5770,
-  "last_updated": "2026-11-21T15:54:31.313Z",
+  "version": 5771,
+  "last_updated": "2026-11-21T15:54:34.292Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0we6C3lm53KCmG4pCjzK9l",
+      "title": "You Are My Destiny",
+      "artist": "Paul Anka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:34.292Z"
+    },
     {
       "id": "27agtdcv4CnhyBttbCChrf",
       "title": "קשת בענן",
