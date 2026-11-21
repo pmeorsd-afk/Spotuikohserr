@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5926,
-  "last_updated": "2026-11-21T19:34:08.375Z",
+  "version": 5927,
+  "last_updated": "2026-11-21T20:24:31.358Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3kN9cj6uNcUwck3OwYFDQ8",
+      "title": "עננים",
+      "artist": "ישי לוי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T20:24:31.358Z"
+    },
     {
       "id": "0X3V93Zs8EF6uqUaQuIDXx",
       "title": "ירושלים שבלב",
