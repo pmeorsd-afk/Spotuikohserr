@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5850,
-  "last_updated": "2026-11-21T16:01:24.204Z",
+  "version": 5851,
+  "last_updated": "2026-11-21T16:01:28.698Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7Dw1FQbXtMKh01n7tfBF1o",
+      "title": "מי שכאב",
+      "artist": "Haim El",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:28.698Z"
+    },
     {
       "id": "7oD2G9P18sYU1WhEDQGm5g",
       "title": "מחרוזת: חולפות שנים",
