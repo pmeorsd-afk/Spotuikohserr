@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5862,
-  "last_updated": "2026-11-21T16:02:01.363Z",
+  "version": 5863,
+  "last_updated": "2026-11-21T16:02:05.292Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Rov1TG16lwvk1zij2GUjk",
+      "title": "Umbrella",
+      "artist": "Gaya Shaki, ללי, הכוכב הבא",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:02:05.292Z"
+    },
     {
       "id": "1FYuIsYrROhbeYvVKLEfZG",
       "title": "Umbrella",
