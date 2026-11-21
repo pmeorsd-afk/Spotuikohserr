@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5943,
-  "last_updated": "2026-11-21T21:38:28.819Z",
+  "version": 5944,
+  "last_updated": "2026-11-21T21:58:09.235Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0YDNvOMfA2al8lWwTYw2hc",
+      "title": "לאן & בליבי בתוכי - Live",
+      "artist": "אריאל לוי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T21:58:09.235Z"
+    },
     {
       "id": "6bvqFUdvZQrO35GKaGdX6W",
       "title": "מה אשיב לך",
