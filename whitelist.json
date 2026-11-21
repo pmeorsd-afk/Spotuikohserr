@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5867,
-  "last_updated": "2026-11-21T16:02:16.969Z",
+  "version": 5868,
+  "last_updated": "2026-11-21T16:02:20.019Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0DJIjgeHF97A3v1yyqBj6b",
+      "title": "כתבתי לך מכתב",
+      "artist": "Lior Farhi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:02:20.019Z"
+    },
     {
       "id": "076bC5QEuuyEh9CJ2g3m4A",
       "title": "חי ומאושר",
