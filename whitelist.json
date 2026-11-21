@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5806,
-  "last_updated": "2026-11-21T15:56:48.950Z",
+  "version": 5807,
+  "last_updated": "2026-11-21T15:56:52.469Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7BV391ZiANIiiCxk5YvPIb",
+      "title": "לא יוצאת לי מהראש",
+      "artist": "Zohar Ashirov",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:52.469Z"
+    },
     {
       "id": "7JnozSvUprB8FTLTJ1pMYX",
       "title": "Ze Lo Fair",
