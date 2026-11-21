@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5779,
-  "last_updated": "2026-11-21T15:54:51.511Z",
+  "version": 5780,
+  "last_updated": "2026-11-21T15:54:55.053Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "76NenaLfp7y6fQu8b6Nx8X",
+      "title": "תצאי לי מהלב",
+      "artist": "Dudi Buzaglo",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:54:55.053Z"
+    },
     {
       "id": "1rOj9Q9HQvvmodIKFMxFxq",
       "title": "בסוף עוד ניפגש",
