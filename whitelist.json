@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5882,
-  "last_updated": "2026-11-21T16:06:10.707Z",
+  "version": 5883,
+  "last_updated": "2026-11-21T16:09:58.886Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5eYexkR792cbuPMdLAgMuO",
+      "title": "נטלי",
+      "artist": "Nati Levi",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:09:58.886Z"
+    },
     {
       "id": "0e4rVIbyzTjXah2NGBgXRi",
       "title": "כמו פרפר",
