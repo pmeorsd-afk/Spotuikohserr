@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5826,
-  "last_updated": "2026-11-21T15:59:25.596Z",
+  "version": 5827,
+  "last_updated": "2026-11-21T15:59:35.801Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1GmuB4ydnV13odub5dHbi9",
+      "title": "מחרוזת נערה יפה",
+      "artist": "ראובן המלאך",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:59:35.801Z"
+    },
     {
       "id": "53W7uCvi7rt1IZPQGpfBqu",
       "title": "גשם על חלון ביתי",
