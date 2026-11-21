@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5887,
-  "last_updated": "2026-11-21T16:50:04.559Z",
+  "version": 5888,
+  "last_updated": "2026-11-21T16:53:30.086Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "59dCp05bgj0xERsmQbhFbA",
+      "title": "אנחנו מאמינים",
+      "artist": "Amiran Dvir, מוחמד סעוד",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:53:30.086Z"
+    },
     {
       "id": "1BgsxpowUfZCxHc3q4Ztaf",
       "title": "ואני אבטח בך",
