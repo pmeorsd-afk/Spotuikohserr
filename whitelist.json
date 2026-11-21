@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5946,
-  "last_updated": "2026-11-21T22:09:34.559Z",
+  "version": 5947,
+  "last_updated": "2026-11-21T22:16:22.778Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "19cGCaMYWXIiRqJVaMdRip",
+      "title": "לא מבינה עברית",
+      "artist": "Eyal Golan, Offer Nissim",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T22:16:22.778Z"
+    },
     {
       "id": "3CExOaDUXcMH6hjPk3jmCt",
       "title": "אין לי יום אין לי לילה",
