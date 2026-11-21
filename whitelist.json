@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5819,
-  "last_updated": "2026-11-21T15:57:28.871Z",
+  "version": 5820,
+  "last_updated": "2026-11-21T15:57:32.526Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3NQbTNVHUb6jEYF0LmDycK",
+      "title": "היית המזל שלי",
+      "artist": "טל בן גיגי",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:57:32.526Z"
+    },
     {
       "id": "5srzJ2IHbgHvpgIBErf3Ei",
       "title": "לומד להשתנות",
