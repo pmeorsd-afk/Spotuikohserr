@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5848,
-  "last_updated": "2026-11-21T16:01:13.380Z",
+  "version": 5849,
+  "last_updated": "2026-11-21T16:01:20.806Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6QMhdVTkh2xxUqoV9zSxKT",
+      "title": "מה עשית לי",
+      "artist": "Yossi Eden",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:01:20.806Z"
+    },
     {
       "id": "2zNjAC1CZjRoh6fwcYjBvB",
       "title": "מחרוזת-שבוי לאהבה",
