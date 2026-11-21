@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5913,
-  "last_updated": "2026-11-21T18:08:59.963Z",
+  "version": 5914,
+  "last_updated": "2026-11-21T18:09:08.530Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3MD6oKyUTnF0k3DodQw82g",
+      "title": "זודיאק",
+      "artist": "Yaron Hadad",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T18:09:08.530Z"
+    },
     {
       "id": "6V5LMAIGNd7qMjco5JjUSa",
       "title": "Drink And Shout",
