@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5884,
-  "last_updated": "2026-11-21T16:23:25.408Z",
+  "version": 5885,
+  "last_updated": "2026-11-21T16:32:58.415Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6JjUUrvkIkwenuaI3RHu67",
+      "title": "אני חוזר הביתה",
+      "artist": "Doron Mazar",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T16:32:58.415Z"
+    },
     {
       "id": "49MfVHEyPCFyxFKZ4FmbQy",
       "title": "מג'נון",
