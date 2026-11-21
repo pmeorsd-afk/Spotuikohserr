@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5925,
-  "last_updated": "2026-11-21T19:34:02.009Z",
+  "version": 5926,
+  "last_updated": "2026-11-21T19:34:08.375Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,14 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0X3V93Zs8EF6uqUaQuIDXx",
+      "title": "ירושלים שבלב",
+      "artist": "Avraham Fried",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T19:34:08.375Z"
+    },
     {
       "id": "15ULXH2YwzYnThgh7Mx6Qi",
       "title": "No Shtus",
