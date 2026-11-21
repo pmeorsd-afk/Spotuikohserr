@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5794,
-  "last_updated": "2026-11-21T15:56:09.509Z",
+  "version": 5796,
+  "last_updated": "2026-11-21T15:56:12.946Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,22 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6YDDrg8llsRtAgLlIROzZc",
+      "title": "Put Your Head On My Shoulder - Remastered",
+      "artist": "Paul Anka",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:12.946Z"
+    },
+    {
+      "id": "5KG2ahk1cONbHvg3dBdTbx",
+      "title": "Mr. Lonely",
+      "artist": "Bobby Vinton",
+      "status": "approved",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-21T15:56:12.946Z"
+    },
     {
       "id": "4O8jYTGuhpJxYWKgw2jRRw",
       "title": "אבוד בלילות",
