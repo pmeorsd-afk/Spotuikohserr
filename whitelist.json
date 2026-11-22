@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6121,
-  "last_updated": "2026-11-22T19:50:49.940Z",
+  "version": 6123,
+  "last_updated": "2026-11-22T19:50:53.245Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0elmUoU7eMPwZX1Mw1MnQo",
+      "title": "The Way You Look Tonight",
+      "artist": "Frank Sinatra",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:50:53.245Z"
+    },
+    {
+      "id": "1m9bc7XJrJGUvDsbXJXt5e",
+      "title": "Fire",
+      "artist": "Shmueli Ungar",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:50:53.245Z"
+    },
     {
       "id": "2JzTfNN8k3O6l42DZMj80Q",
       "title": "Rain In My Heart",
