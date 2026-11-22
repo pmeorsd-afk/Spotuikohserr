@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5995,
-  "last_updated": "2026-11-22T08:43:00.031Z",
+  "version": 5996,
+  "last_updated": "2026-11-22T08:43:03.961Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4kPEZG6UEvgxpof6JnDIj3",
+      "title": "ואני קורא לך",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T08:43:03.961Z"
+    },
     {
       "id": "1GuNDT1kKVLGf7duF0lM4N",
       "title": "דמעות",
