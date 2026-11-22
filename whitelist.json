@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6087,
-  "last_updated": "2026-11-22T19:48:45.788Z",
+  "version": 6088,
+  "last_updated": "2026-11-22T19:48:54.564Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6yrZoKcoa7EIx7e7uCCmPW",
+      "title": "Nano",
+      "artist": "TUL8TE, Saint Levant",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:48:54.564Z"
+    },
     {
       "id": "youtube:iQJAgi6NXUE",
       "title": "חנוכה - מוטי ויזל, מקהלת מלכות, הרשי סגל, חסידימלעך - מנורה | Motty Vizel & Malchus Choir - menora",
