@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6140,
-  "last_updated": "2026-11-22T19:51:48.481Z",
+  "version": 6142,
+  "last_updated": "2026-11-22T19:51:52.128Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "054oMPfh3IRxGQMiwbHT47",
+      "title": "Headlights (feat. KIDDO) - Slowed Version",
+      "artist": "Alok, Alan Walker, KIDDO",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:51:52.128Z"
+    },
     {
       "id": "36ECEkodXYhLPyBHjZCEHh",
       "title": "It Has Begun",
@@ -43026,6 +43035,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-11-22T19:51:48.481Z"
+    },
+    {
+      "id": "19afc061bb27f2ae7a53aa658e8fd43b6c50b523a8169d0e",
+      "url": "https://i.scdn.co/image/ab67616d00001e029f8fb6cc563f5567c41b16b5",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-11-22T19:51:52.128Z"
     }
   ],
   "search_images": [
