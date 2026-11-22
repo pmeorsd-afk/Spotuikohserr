@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6000,
-  "last_updated": "2026-11-22T08:43:14.528Z",
+  "version": 6001,
+  "last_updated": "2026-11-22T09:00:24.963Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4kUm5RaYKOrALwvwB6KG6w",
+      "title": "כמה לילות",
+      "artist": "אברהם דהאן",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T09:00:24.963Z"
+    },
     {
       "id": "2A9yj46qweEVrsvnvntEa5",
       "title": "רק אל תלכי",
