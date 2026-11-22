@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5998,
-  "last_updated": "2026-11-22T08:43:11.169Z",
+  "version": 6000,
+  "last_updated": "2026-11-22T08:43:14.528Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2A9yj46qweEVrsvnvntEa5",
+      "title": "רק אל תלכי",
+      "artist": "Zikney Tzfat",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T08:43:14.528Z"
+    },
+    {
+      "id": "7kwStHQeGG1fJs9wK9mAzD",
+      "title": "מחרוזת נוסטלגיה ים תיכונית",
+      "artist": "רועי אדרי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T08:43:14.528Z"
+    },
     {
       "id": "5Fiyz2LF09CWJMF48W3M0y",
       "title": "גלשן",
