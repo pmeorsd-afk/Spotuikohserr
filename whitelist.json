@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6061,
-  "last_updated": "2026-11-22T19:46:44.027Z",
+  "version": 6062,
+  "last_updated": "2026-11-22T19:46:51.476Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3HLpI8TVkHp8ZWq8Non6YJ",
+      "title": "אבא תודה- גירסת רמיקס",
+      "artist": "Akiva, רזיאל קשתי, איתמר לדין",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:46:51.476Z"
+    },
     {
       "id": "44Xgd5X3F0DihsS7RmcVUv",
       "title": "Bet 500",
