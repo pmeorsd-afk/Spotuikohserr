@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6020,
-  "last_updated": "2026-11-22T10:00:26.647Z",
+  "version": 6021,
+  "last_updated": "2026-11-22T10:00:30.603Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1GoglFrfJ2ZJ48LCjyyj39",
+      "title": "Birth",
+      "artist": "Niv Klil Hahoresh",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T10:00:30.603Z"
+    },
     {
       "id": "4krcWtZK3AsVE1Jl4oqH8w",
       "title": "ALL THE TIME",
