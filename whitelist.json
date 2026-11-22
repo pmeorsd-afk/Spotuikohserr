@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5975,
-  "last_updated": "2026-11-22T07:14:17.124Z",
+  "version": 5976,
+  "last_updated": "2026-11-22T07:19:04.651Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5mw0CuWqR4bBZ7OFFSCTMP",
+      "title": "עונות",
+      "artist": "Aviv Geffen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:19:04.651Z"
+    },
     {
       "id": "7gE9VuQDGn6Rje8x6s8UQd",
       "title": "Shar Ba'ambatia",
