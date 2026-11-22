@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6003,
-  "last_updated": "2026-11-22T09:00:32.622Z",
+  "version": 6004,
+  "last_updated": "2026-11-22T09:00:36.841Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ux2llhjAuhSLggEaBoaLY",
+      "title": "i think i'm addicted",
+      "artist": "oskar med k, Haley Joelle",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T09:00:36.841Z"
+    },
     {
       "id": "4jIo4Qyru1MlzHjyY0b2p7",
       "title": "לחייך לצלקות",
