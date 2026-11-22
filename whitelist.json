@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6130,
-  "last_updated": "2026-11-22T19:51:15.168Z",
+  "version": 6131,
+  "last_updated": "2026-11-22T19:51:18.788Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1nHolVNlMb9GMpXIBk1snN",
+      "title": "ה' יתברך - האט מיר אייביג ליב",
+      "artist": "שלומי אסקל, Levy Falkowitz, יואלי קליין, מקהלת מלכות",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:51:18.788Z"
+    },
     {
       "id": "6ULUJny6n7x8pfQ2no5X8Y",
       "title": "מתי תבוא?",
