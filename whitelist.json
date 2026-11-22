@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6034,
-  "last_updated": "2026-11-22T19:44:36.745Z",
+  "version": 6036,
+  "last_updated": "2026-11-22T19:44:41.035Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "10uIWr3PXul5WzJBy1hskO",
+      "title": "Renaissance",
+      "artist": "DJ Kuba, Neitan, RAVEKINGS",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:44:41.035Z"
+    },
+    {
+      "id": "6x0eMOT5uyCgtmOxzWVATc",
+      "title": "Don't Stop (The Music)",
+      "artist": "Dimitri Vegas, Vin, Zion",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:44:41.035Z"
+    },
     {
       "id": "4MUMWxe9088SuTFKpprQ57",
       "title": "Low (LUNAX Remix)",
