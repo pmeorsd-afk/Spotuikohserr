@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6025,
-  "last_updated": "2026-11-22T10:24:20.641Z",
+  "version": 6026,
+  "last_updated": "2026-11-22T10:24:25.570Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1rGWizWLQddt2FtpzzWSEn",
+      "title": "When We Were Young (The Logical Song) - Seth Hills Remix",
+      "artist": "David Guetta, Kim Petras, Seth Hills",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T10:24:25.570Z"
+    },
     {
       "id": "21bk4m2BIbuHZ6GKiPqFsG",
       "title": "The Final Countdown 2025",
