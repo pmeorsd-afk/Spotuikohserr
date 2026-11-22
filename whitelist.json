@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6110,
-  "last_updated": "2026-11-22T19:50:13.316Z",
+  "version": 6112,
+  "last_updated": "2026-11-22T19:50:16.989Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6miS1PFtAASZZbp19JMvIT",
+      "title": "Astronaut In The Ocean",
+      "artist": "Arem Ozguc, Arman Aydin, Jordan Rys",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:50:16.989Z"
+    },
+    {
+      "id": "0LsJ5MInA2BwRRLkj74nzU",
+      "title": "מה בלילות",
+      "artist": "Bar Tzabary",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:50:16.989Z"
+    },
     {
       "id": "4MSmAXjcdrspd2RxUxdtT3",
       "title": "Further up (Na, Na, Na, Na, Na)",
