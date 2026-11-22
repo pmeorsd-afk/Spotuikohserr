@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6029,
-  "last_updated": "2026-11-22T10:33:05.503Z",
+  "version": 6030,
+  "last_updated": "2026-11-22T10:45:28.075Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4TNiHQs5zO3slGpbBwutVB",
+      "title": "So Hï",
+      "artist": "KREAM",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T10:45:28.075Z"
+    },
     {
       "id": "5Y2n6pW4Vqr4Mzkd9V4Uk8",
       "title": "Ray Of Solar",
