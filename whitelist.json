@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5958,
-  "last_updated": "2026-11-22T07:13:07.399Z",
+  "version": 5959,
+  "last_updated": "2026-11-22T07:13:11.777Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1xj8YOpFxxlTJR0cPin6bu",
+      "title": "Mama Raised a Dreamer",
+      "artist": "Jonah Marais",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:13:11.777Z"
+    },
     {
       "id": "7xSQyfyV23KhTzCkxXvgEm",
       "title": "בסוף היום",
