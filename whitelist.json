@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5983,
-  "last_updated": "2026-11-22T08:03:50.108Z",
+  "version": 5984,
+  "last_updated": "2026-11-22T08:03:53.613Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Wc3Bq5BzKOWxifoTRCCFk",
+      "title": "Relaxed Reflections",
+      "artist": "YavorivSky",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T08:03:53.613Z"
+    },
     {
       "id": "4O7H9vxzUvOP3EWKuu9ogj",
       "title": "מאושרים (עם לירן דנינו ונועה קירל) - Eden Shalev Remix",
