@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6170,
-  "last_updated": "2026-11-22T21:03:51.104Z",
+  "version": 6171,
+  "last_updated": "2026-11-22T21:03:54.447Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "25GyyK9CyZRiDCsPY51fIT",
+      "title": "Not In The Mood (feat. Fivio Foreign & Kay Flock)",
+      "artist": "Lil Tjay, Fivio Foreign, Kay Flock",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T21:03:54.447Z"
+    },
     {
       "id": "5iGwUsPomOAKq8QtnCqrru",
       "title": "במקום הכי בודד",
