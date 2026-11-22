@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6062,
-  "last_updated": "2026-11-22T19:46:51.476Z",
+  "version": 6063,
+  "last_updated": "2026-11-22T19:46:55.023Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3LBLmC8gqvt1l43kdpx43w",
+      "title": "Enemies",
+      "artist": "The Score",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:46:55.023Z"
+    },
     {
       "id": "3HLpI8TVkHp8ZWq8Non6YJ",
       "title": "אבא תודה- גירסת רמיקס",
