@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6037,
-  "last_updated": "2026-11-22T19:44:44.974Z",
+  "version": 6039,
+  "last_updated": "2026-11-22T19:44:48.766Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0DQiMuw802BljfUAbU8uxd",
+      "title": "Cream",
+      "artist": "DJ Kuba, Neitan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:44:48.766Z"
+    },
+    {
+      "id": "6OnP0RXTdkTOygsXCGZpcY",
+      "title": "נפלו לי השמיים",
+      "artist": "Ben Chen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:44:48.766Z"
+    },
     {
       "id": "4KHaFdAvzSaUoUpVnQAX38",
       "title": "Be Free",
