@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5997,
-  "last_updated": "2026-11-22T08:43:07.512Z",
+  "version": 5998,
+  "last_updated": "2026-11-22T08:43:11.169Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Fiyz2LF09CWJMF48W3M0y",
+      "title": "גלשן",
+      "artist": "Danny Sanderson",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T08:43:11.169Z"
+    },
     {
       "id": "68r0SzYpKJxM3xuWHFNIjf",
       "title": "מציאות אחרת",
