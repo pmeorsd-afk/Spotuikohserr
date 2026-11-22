@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5982,
-  "last_updated": "2026-11-22T08:03:46.330Z",
+  "version": 5983,
+  "last_updated": "2026-11-22T08:03:50.108Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4O7H9vxzUvOP3EWKuu9ogj",
+      "title": "מאושרים (עם לירן דנינו ונועה קירל) - Eden Shalev Remix",
+      "artist": "Doli & Penn, Liran Danino, Eden Shalev",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T08:03:50.108Z"
+    },
     {
       "id": "2OBt77x6FVP71yDTIxKhOU",
       "title": "אותך אשא",
