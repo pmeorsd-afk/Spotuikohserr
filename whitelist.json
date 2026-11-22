@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6032,
-  "last_updated": "2026-11-22T10:53:49.255Z",
+  "version": 6033,
+  "last_updated": "2026-11-22T10:53:52.519Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5vFJOD9V4rHgTLWaBRGQ4N",
+      "title": "Aria",
+      "artist": "Argy, Omnya",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T10:53:52.519Z"
+    },
     {
       "id": "5Jpz4nv8nA6FIYO5gEyQa2",
       "title": "Alibi (feat. Rudimental)",
