@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5953,
-  "last_updated": "2026-11-22T07:12:51.106Z",
+  "version": 5954,
+  "last_updated": "2026-11-22T07:12:54.947Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2cXkKE0OwO3uRHWYmfWPpb",
+      "title": "העיניים",
+      "artist": "Erez Lev Ari",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:12:54.947Z"
+    },
     {
       "id": "6GZszfqtagsQElV4XXJtcI",
       "title": "אבא יקר",
