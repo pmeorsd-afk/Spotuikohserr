@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6023,
-  "last_updated": "2026-11-22T10:11:05.782Z",
+  "version": 6024,
+  "last_updated": "2026-11-22T10:11:09.234Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2rtkijCiF44Uy4EqBhOsQP",
+      "title": "Feeling Good",
+      "artist": "Hypaton, David Guetta",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T10:11:09.234Z"
+    },
     {
       "id": "09CnYHiZ5jGT1wr1TXJ9Zt",
       "title": "Thank You (Not So Bad)",
