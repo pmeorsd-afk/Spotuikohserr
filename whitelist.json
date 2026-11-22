@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6159,
-  "last_updated": "2026-11-22T20:32:50.205Z",
+  "version": 6160,
+  "last_updated": "2026-11-22T20:38:16.903Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6lanRgr6wXibZr8KgzXxBl",
+      "title": "a thousand years",
+      "artist": "Christina Perri",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T20:38:16.903Z"
+    },
     {
       "id": "22jyNeHzsfbzIK7pDOHqRC",
       "title": "דיבורים של אמת",
