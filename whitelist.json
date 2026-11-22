@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6075,
-  "last_updated": "2026-11-22T19:47:57.210Z",
+  "version": 6076,
+  "last_updated": "2026-11-22T19:48:01.281Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6jijxorVTuABQPg3vc60Ym",
+      "title": "Tony Montana",
+      "artist": "Getinjo, Mozzik",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:48:01.281Z"
+    },
     {
       "id": "3utb273gqmELEr9mbYuxgB",
       "title": "מחרוזת שחקנית",
