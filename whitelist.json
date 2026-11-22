@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6079,
-  "last_updated": "2026-11-22T19:48:16.601Z",
+  "version": 6080,
+  "last_updated": "2026-11-22T19:48:21.595Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:kaUghjiqrdU",
+      "title": "אהר'לע סאמט, יענקי דסקל, מקהלת מלכות, יהודה גלילי - חשוף | Samet, Daskal, Malchus, Glili - Chasoif",
+      "artist": "בחזית",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:48:21.595Z"
+    },
     {
       "id": "6i78otRFpbd5IqKpCCgD27",
       "title": "The Scientist",
