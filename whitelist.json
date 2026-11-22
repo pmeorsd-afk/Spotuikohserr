@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5973,
-  "last_updated": "2026-11-22T07:14:13.690Z",
+  "version": 5975,
+  "last_updated": "2026-11-22T07:14:17.124Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7gE9VuQDGn6Rje8x6s8UQd",
+      "title": "Shar Ba'ambatia",
+      "artist": "Shlomi Saranga",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:14:17.124Z"
+    },
+    {
+      "id": "3F8XXY01v4FnL4QVLF8SVV",
+      "title": "צליל מכוון",
+      "artist": "Arik Einstein",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:14:17.124Z"
+    },
     {
       "id": "2ZfNiKLdWS1HGovs70yFIB",
       "title": "היינו עושים אהבה",
