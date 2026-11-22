@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6182,
-  "last_updated": "2026-11-22T21:33:17.458Z",
+  "version": 6183,
+  "last_updated": "2026-11-22T21:44:18.427Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4FgSWdbZCkJwQ10XWJzH3X",
+      "title": "תחנונים",
+      "artist": "Static",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T21:44:18.427Z"
+    },
     {
       "id": "2QSThPneRiqsttw8g4AKEN",
       "title": "פרפרים בבטן - לייב",
