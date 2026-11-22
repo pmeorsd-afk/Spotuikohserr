@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6116,
-  "last_updated": "2026-11-22T19:50:33.497Z",
+  "version": 6118,
+  "last_updated": "2026-11-22T19:50:36.925Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:93w1ZndZtxo",
+      "title": "מחרוזת חנוכה LIVE",
+      "artist": "אבי אילסון",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:50:36.925Z"
+    },
+    {
+      "id": "youtube:wCrbWIvOxyU",
+      "title": "חשוף - יוסל׳ה קרישבסקי, שרולי קלצקין - Chasoif",
+      "artist": "בחזית",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:50:36.925Z"
+    },
     {
       "id": "35084bFzBrMBZBZsVNTbOg",
       "title": "שקרים",
