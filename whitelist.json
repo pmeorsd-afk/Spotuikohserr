@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6050,
-  "last_updated": "2026-11-22T19:45:24.705Z",
+  "version": 6052,
+  "last_updated": "2026-11-22T19:45:28.740Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Q1FkPC7vReZ6HYuahoLJL",
+      "title": "אל תוותרי",
+      "artist": "נתנאל ששון",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:45:28.740Z"
+    },
+    {
+      "id": "7BFwwCduDBbDG9fk9SlAYm",
+      "title": "Seven Nation Army",
+      "artist": "Tungevaag, KRAIZ",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:45:28.740Z"
+    },
     {
       "id": "6OS6FafuDd9CytXs2pTVWG",
       "title": "Voices",
