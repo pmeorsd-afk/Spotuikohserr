@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6180,
-  "last_updated": "2026-11-22T21:33:09.430Z",
+  "version": 6181,
+  "last_updated": "2026-11-22T21:33:13.058Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3OXeCcNs54ErZaDOJd1COG",
+      "title": "The Friction",
+      "artist": "Katori Walker",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T21:33:13.058Z"
+    },
     {
       "id": "3V15mlr5xfKkvaoMSqd7OB",
       "title": "איזה חתיך אני ( בונוס)",
