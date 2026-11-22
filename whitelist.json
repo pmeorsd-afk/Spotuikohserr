@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5963,
-  "last_updated": "2026-11-22T07:13:33.022Z",
+  "version": 5964,
+  "last_updated": "2026-11-22T07:13:45.195Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3t3Ana7VZvRYKzKm15Sher",
+      "title": "האם להיות בך מאוהב - Remastered",
+      "artist": "Aviv Geffen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:13:45.195Z"
+    },
     {
       "id": "6MPZCW6Pgs2zipdBVabVAO",
       "title": "יומן מסע",
