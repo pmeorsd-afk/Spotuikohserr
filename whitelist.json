@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6006,
-  "last_updated": "2026-11-22T09:00:47.750Z",
+  "version": 6007,
+  "last_updated": "2026-11-22T09:06:33.766Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4o1t8bOiuHwjijH2b0LrmA",
+      "title": "It Feels So Good - Jamy Nox Remix",
+      "artist": "Matt Sassari, HUGEL, Sonique, Jamy Nox",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T09:06:33.766Z"
+    },
     {
       "id": "6VD3T09spn64tjPcBih64P",
       "title": "The Door - CYRIL Remix",
