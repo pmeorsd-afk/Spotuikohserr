@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6103,
-  "last_updated": "2026-11-22T19:49:51.527Z",
+  "version": 6104,
+  "last_updated": "2026-11-22T19:49:55.291Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0boiFQ5IrmUNkEhYkLcWBV",
+      "title": "הקב״ה איתי - DJ Kraz Remix",
+      "artist": "שמוליק סוכות, DJ Kraz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:49:55.291Z"
+    },
     {
       "id": "6ndmKwWqMozN2tcZqzCX4K",
       "title": "Remember the Name (feat. Styles of Beyond)",
