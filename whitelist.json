@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5985,
-  "last_updated": "2026-11-22T08:21:07.516Z",
+  "version": 5987,
+  "last_updated": "2026-11-22T08:21:11.208Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3DczK9W32LbRORCP80kz6o",
+      "title": "טוליק",
+      "artist": "Oshik Levy",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T08:21:11.208Z"
+    },
+    {
+      "id": "4zn4yuFOCwMEO9TtW75Typ",
+      "title": "מלכת היופי שלי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T08:21:11.208Z"
+    },
     {
       "id": "2ks32g5RwN65jht4XU36tR",
       "title": "Sleeping Music - Relaxing Sleep Music for Profound Relaxation to Help You Sleep",
