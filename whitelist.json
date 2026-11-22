@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5993,
-  "last_updated": "2026-11-22T08:22:06.144Z",
+  "version": 5994,
+  "last_updated": "2026-11-22T08:22:09.296Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0DnnNoHgluCGHpqOIBhQg5",
+      "title": "Whispering Sky",
+      "artist": "Alise Ashby, Ryan Judd",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T08:22:09.296Z"
+    },
     {
       "id": "79V7XeWGhT14xUfYnRwz1H",
       "title": "זה קורה",
