@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5996,
-  "last_updated": "2026-11-22T08:43:03.961Z",
+  "version": 5997,
+  "last_updated": "2026-11-22T08:43:07.512Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "68r0SzYpKJxM3xuWHFNIjf",
+      "title": "מציאות אחרת",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T08:43:07.512Z"
+    },
     {
       "id": "4kPEZG6UEvgxpof6JnDIj3",
       "title": "ואני קורא לך",
