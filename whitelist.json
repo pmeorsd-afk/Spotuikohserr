@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5962,
-  "last_updated": "2026-11-22T07:13:27.344Z",
+  "version": 5963,
+  "last_updated": "2026-11-22T07:13:33.022Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6MPZCW6Pgs2zipdBVabVAO",
+      "title": "יומן מסע",
+      "artist": "Aviv Geffen, Arik Einstein",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:13:33.022Z"
+    },
     {
       "id": "7zgrNrGcZVScYGGKBvIFOz",
       "title": "נחום וציונה",
