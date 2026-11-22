@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6030,
-  "last_updated": "2026-11-22T10:45:28.075Z",
+  "version": 6031,
+  "last_updated": "2026-11-22T10:48:01.410Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1B7BRFwQJL3LvD5UA4iHpx",
+      "title": "Sierra",
+      "artist": "Argy, Baset",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T10:48:01.410Z"
+    },
     {
       "id": "4TNiHQs5zO3slGpbBwutVB",
       "title": "So Hï",
