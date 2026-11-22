@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6021,
-  "last_updated": "2026-11-22T10:00:30.603Z",
+  "version": 6022,
+  "last_updated": "2026-11-22T10:01:20.606Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Zg16X9sBXpfQbs6fgVJzH",
+      "title": "I Adore You - ARTBAT Remix",
+      "artist": "HUGEL, Topic, ARTBAT, Arash, Daecolm",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T10:01:20.606Z"
+    },
     {
       "id": "1GoglFrfJ2ZJ48LCjyyj39",
       "title": "Birth",
