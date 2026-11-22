@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5971,
-  "last_updated": "2026-11-22T07:14:06.524Z",
+  "version": 5972,
+  "last_updated": "2026-11-22T07:14:10.287Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6bmFicZxvhWn3wYScYhKfy",
+      "title": "יונתן סע הביתה",
+      "artist": "Oshik Levy",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:14:10.287Z"
+    },
     {
       "id": "2bMANVaCGnsjPca7jkldhv",
       "title": "הופה היי",
