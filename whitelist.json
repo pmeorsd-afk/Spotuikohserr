@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6112,
-  "last_updated": "2026-11-22T19:50:16.989Z",
+  "version": 6113,
+  "last_updated": "2026-11-22T19:50:22.158Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0omNrq2nbx2MoqTN9Q6Akw",
+      "title": "עלא פאדי",
+      "artist": "Omri 69 Segal, Vic Ohana Jan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:50:22.158Z"
+    },
     {
       "id": "6miS1PFtAASZZbp19JMvIT",
       "title": "Astronaut In The Ocean",
