@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6126,
-  "last_updated": "2026-11-22T19:51:00.404Z",
+  "version": 6127,
+  "last_updated": "2026-11-22T19:51:04.757Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4eqqUvYNZ1UE2q4llMwtZr",
+      "title": "מחרוזת ציפור השמש",
+      "artist": "ראובן המלאך",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:51:04.757Z"
+    },
     {
       "id": "7D0RhFcb3CrfPuTJ0obrod",
       "title": "Sparks",
