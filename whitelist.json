@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5967,
-  "last_updated": "2026-11-22T07:13:55.576Z",
+  "version": 5968,
+  "last_updated": "2026-11-22T07:13:59.339Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3r7JLZkcBaNXGNbhkbbkp6",
+      "title": "אוהב לחיות",
+      "artist": "Ofer Levi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:13:59.339Z"
+    },
     {
       "id": "3KA61I18gzSL59mJykjEfw",
       "title": "אהבה ממבט ראשון",
