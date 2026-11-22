@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6040,
-  "last_updated": "2026-11-22T19:44:52.206Z",
+  "version": 6041,
+  "last_updated": "2026-11-22T19:44:55.489Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "19uQXFMSuGb0U8zhBuFxhE",
+      "title": "Live Loud",
+      "artist": "Dada Life, RAVEKINGS",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:44:55.489Z"
+    },
     {
       "id": "4c5dHcZ79J0bASxB7LenyG",
       "title": "Cathedral",
