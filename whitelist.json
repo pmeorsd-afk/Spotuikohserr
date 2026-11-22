@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6017,
-  "last_updated": "2026-11-22T10:00:19.209Z",
+  "version": 6018,
+  "last_updated": "2026-11-22T10:00:22.860Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5rXsVwWEhEa59yRG3ERLv1",
+      "title": "מחרוזת \"מה יהיה מחר\"",
+      "artist": "ישראל אס",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T10:00:22.860Z"
+    },
     {
       "id": "7MmG8p0F9N3C4AXdK6o6Eb",
       "title": "Outside (feat. Ellie Goulding)",
