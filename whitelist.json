@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6145,
-  "last_updated": "2026-11-22T19:52:04.310Z",
+  "version": 6146,
+  "last_updated": "2026-11-22T19:52:08.377Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ZL7AY6C4r8PnSZhZPll1s",
+      "title": "Pero Pero",
+      "artist": "EMBU",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:52:08.377Z"
+    },
     {
       "id": "5PFxplu8ZqdvgJlHa5aTkN",
       "title": "יום גדול - Bemet Remix",
