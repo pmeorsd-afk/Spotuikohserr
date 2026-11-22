@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6018,
-  "last_updated": "2026-11-22T10:00:22.860Z",
+  "version": 6020,
+  "last_updated": "2026-11-22T10:00:26.647Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4krcWtZK3AsVE1Jl4oqH8w",
+      "title": "ALL THE TIME",
+      "artist": "John Summit, The Chainsmokers, Ilsey",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T10:00:26.647Z"
+    },
+    {
+      "id": "0XtUFDrLUAPLmVLURQ02DQ",
+      "title": "Farid's oud",
+      "artist": "Niv Klil Hahoresh",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T10:00:26.647Z"
+    },
     {
       "id": "5rXsVwWEhEa59yRG3ERLv1",
       "title": "מחרוזת \"מה יהיה מחר\"",
