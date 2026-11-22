@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6081,
-  "last_updated": "2026-11-22T19:48:25.838Z",
+  "version": 6082,
+  "last_updated": "2026-11-22T19:48:29.383Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0rEDr8sPMIxRBaprqMYyrJ",
+      "title": "ALBY MWALA3 NAR",
+      "artist": "Masri",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:48:29.383Z"
+    },
     {
       "id": "3nqqDo8CcCLke3ZoTgiOKf",
       "title": "The Man Who Can't Be Moved",
