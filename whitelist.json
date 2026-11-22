@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5955,
-  "last_updated": "2026-11-22T07:12:58.652Z",
+  "version": 5957,
+  "last_updated": "2026-11-22T07:13:02.123Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3t0AO3JYRmyePjWs8y5qBQ",
+      "title": "Compass",
+      "artist": "Forever in Your Mind",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:13:02.123Z"
+    },
+    {
+      "id": "5oOAQBOTNutgZUB7EX3LRm",
+      "title": "מים מתוקים",
+      "artist": "Meir Ariel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:13:02.123Z"
+    },
     {
       "id": "6q2CZUCGib5kTOldnKNDXI",
       "title": "Wrapped Up for Christmas",
