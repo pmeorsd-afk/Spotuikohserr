@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6184,
-  "last_updated": "2026-11-22T21:53:22.929Z",
+  "version": 6185,
+  "last_updated": "2026-11-22T22:30:36.964Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6IoEIEufuPVS76j3DsbM91",
+      "title": "טקטיקה",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T22:30:36.964Z"
+    },
     {
       "id": "4zHtDctLRojL9HhXBx0p1Y",
       "title": "קריה יפייפיה על כל אהודך",
