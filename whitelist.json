@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5951,
-  "last_updated": "2026-11-22T07:12:47.314Z",
+  "version": 5953,
+  "last_updated": "2026-11-22T07:12:51.106Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6GZszfqtagsQElV4XXJtcI",
+      "title": "אבא יקר",
+      "artist": "Alma",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:12:51.106Z"
+    },
+    {
+      "id": "0CR2w7dipGPJnrBzmRbjuU",
+      "title": "ניגונים",
+      "artist": "Aviel Sultan, Shira Schwartz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:12:51.106Z"
+    },
     {
       "id": "7jA3zTLaXW0nCi2xj056ne",
       "title": "אוהבת אותי אמיתי",
