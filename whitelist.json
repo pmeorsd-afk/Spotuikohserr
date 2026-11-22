@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6011,
-  "last_updated": "2026-11-22T09:23:19.861Z",
+  "version": 6012,
+  "last_updated": "2026-11-22T09:32:22.953Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5ZUIPLoTLJZrPQh2kFZEUM",
+      "title": "Addicted",
+      "artist": "Zerb, The Chainsmokers, Ink",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T09:32:22.953Z"
+    },
     {
       "id": "2s2NJlQfNF77nQcQvb4sBk",
       "title": "Bad Dreams - HUGEL Remix",
