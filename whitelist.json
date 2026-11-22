@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6143,
-  "last_updated": "2026-11-22T19:51:56.443Z",
+  "version": 6144,
+  "last_updated": "2026-11-22T19:52:01.096Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6bu8w4EpDIKI3XLDMOSgnq",
+      "title": "חיי נשמות",
+      "artist": "עמיחי פלסר",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:52:01.096Z"
+    },
     {
       "id": "054oMPfh3IRxGQMiwbHT47",
       "title": "Headlights (feat. KIDDO) - Slowed Version",
