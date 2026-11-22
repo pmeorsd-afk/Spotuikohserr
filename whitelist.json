@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6047,
-  "last_updated": "2026-11-22T19:45:16.342Z",
+  "version": 6049,
+  "last_updated": "2026-11-22T19:45:20.718Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3pazCuwZT3PIxjCiWEZdfY",
+      "title": "Activating",
+      "artist": "Maddix",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:45:20.718Z"
+    },
+    {
+      "id": "2aa3apZ8RvvxzAxC83jTjX",
+      "title": "כאב של לוחמים",
+      "artist": "ליאם גולן",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:45:20.718Z"
+    },
     {
       "id": "1jskS0QmpYtvf9yNcN9qzg",
       "title": "Konye",
