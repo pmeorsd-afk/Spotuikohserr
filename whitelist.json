@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6009,
-  "last_updated": "2026-11-22T09:13:18.285Z",
+  "version": 6010,
+  "last_updated": "2026-11-22T09:17:57.840Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6AJAzlq5ujQWCzzwpeGEZA",
+      "title": "Wicked Game",
+      "artist": "KREAM",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T09:17:57.840Z"
+    },
     {
       "id": "1LY3GhF0zxIVgbYEQjCbUO",
       "title": "The Sound of Silence - CYRIL Remix",
