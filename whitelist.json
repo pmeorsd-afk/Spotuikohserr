@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6067,
-  "last_updated": "2026-11-22T19:47:23.773Z",
+  "version": 6068,
+  "last_updated": "2026-11-22T19:47:27.454Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4zNIHLaDjSNi9l7tVnvP5N",
+      "title": "GHETTO",
+      "artist": "EL BRAXO, Razz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:47:27.454Z"
+    },
     {
       "id": "3Kiw5lLtX1wBE1dcD2QjKk",
       "title": "Go Gyal - Radio Edit",
