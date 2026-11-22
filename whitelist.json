@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6007,
-  "last_updated": "2026-11-22T09:06:33.766Z",
+  "version": 6008,
+  "last_updated": "2026-11-22T09:13:11.677Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1LY3GhF0zxIVgbYEQjCbUO",
+      "title": "The Sound of Silence - CYRIL Remix",
+      "artist": "Disturbed, CYRIL",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T09:13:11.677Z"
+    },
     {
       "id": "4o1t8bOiuHwjijH2b0LrmA",
       "title": "It Feels So Good - Jamy Nox Remix",
