@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5969,
-  "last_updated": "2026-11-22T07:14:02.678Z",
+  "version": 5971,
+  "last_updated": "2026-11-22T07:14:06.524Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2bMANVaCGnsjPca7jkldhv",
+      "title": "הופה היי",
+      "artist": "The Revivo Project",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:14:06.524Z"
+    },
+    {
+      "id": "2kmTNBAdOG7TQE3MhNeeZr",
+      "title": "פחות אבל כואב",
+      "artist": "Yehuda Poliker",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:14:06.524Z"
+    },
     {
       "id": "3MU69FMOB5ddPCMSo1f0g7",
       "title": "וואלק",
