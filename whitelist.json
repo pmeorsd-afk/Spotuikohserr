@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6042,
-  "last_updated": "2026-11-22T19:45:00.668Z",
+  "version": 6043,
+  "last_updated": "2026-11-22T19:45:04.743Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "12bBKcfrR64kVkcxpoa0sL",
+      "title": "Holy Place",
+      "artist": "BENNETT",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:45:04.743Z"
+    },
     {
       "id": "19uQXFMSuGb0U8zhBuFxhE",
       "title": "Live Loud",
