@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6124,
-  "last_updated": "2026-11-22T19:50:56.819Z",
+  "version": 6126,
+  "last_updated": "2026-11-22T19:51:00.404Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7D0RhFcb3CrfPuTJ0obrod",
+      "title": "Sparks",
+      "artist": "Coldplay",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:51:00.404Z"
+    },
+    {
+      "id": "1NCuYqMc8hKMb4cpNTcJbD",
+      "title": "Another Day in Paradise - 2016 Remaster",
+      "artist": "Phil Collins",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:51:00.404Z"
+    },
     {
       "id": "4cgjA7B4fJBHyB9Ya2bu0t",
       "title": "Human Nature",
