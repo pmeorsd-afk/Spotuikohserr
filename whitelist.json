@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6060,
-  "last_updated": "2026-11-22T19:46:39.700Z",
+  "version": 6061,
+  "last_updated": "2026-11-22T19:46:44.027Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44Xgd5X3F0DihsS7RmcVUv",
+      "title": "Bet 500",
+      "artist": "Mossi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:46:44.027Z"
+    },
     {
       "id": "3Z9Ar0Cv5zwvoXMIBwoIOI",
       "title": "These Are The Nights",
