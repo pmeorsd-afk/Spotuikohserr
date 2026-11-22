@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5992,
-  "last_updated": "2026-11-22T08:21:24.633Z",
+  "version": 5993,
+  "last_updated": "2026-11-22T08:22:06.144Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "79V7XeWGhT14xUfYnRwz1H",
+      "title": "זה קורה",
+      "artist": "Aric Lavie",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T08:22:06.144Z"
+    },
     {
       "id": "5u9S163VnHyUKJrGcSFWFl",
       "title": "בחוף של פורטוגל",
