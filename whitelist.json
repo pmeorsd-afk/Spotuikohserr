@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6172,
-  "last_updated": "2026-11-22T21:04:11.939Z",
+  "version": 6173,
+  "last_updated": "2026-11-22T21:11:39.459Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6HygOUSYPnHyj0ziTIU7m6",
+      "title": "שיר פרידה",
+      "artist": "Lior Miara",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T21:11:39.459Z"
+    },
     {
       "id": "6ElJDAneudMVXVZDUXm5PD",
       "title": "My head is spinning like a screw",
