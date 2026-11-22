@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6118,
-  "last_updated": "2026-11-22T19:50:36.925Z",
+  "version": 6119,
+  "last_updated": "2026-11-22T19:50:42.279Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44AyOl4qVkzS48vBsbNXaC",
+      "title": "Can't Help Falling in Love",
+      "artist": "Elvis Presley",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:50:42.279Z"
+    },
     {
       "id": "youtube:93w1ZndZtxo",
       "title": "מחרוזת חנוכה LIVE",
