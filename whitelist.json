@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5965,
-  "last_updated": "2026-11-22T07:13:49.073Z",
+  "version": 5966,
+  "last_updated": "2026-11-22T07:13:52.389Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Q4FBn52tglZ02DCrAY8j0",
+      "title": "You Are So Beautiful - 1996 Version",
+      "artist": "Joe Cocker",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:13:52.389Z"
+    },
     {
       "id": "2UKkLqST2xWpK8n1b0Xr5Z",
       "title": "Return To Innocence",
