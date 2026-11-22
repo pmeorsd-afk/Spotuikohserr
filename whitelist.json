@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5991,
-  "last_updated": "2026-11-22T08:21:21.226Z",
+  "version": 5992,
+  "last_updated": "2026-11-22T08:21:24.633Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5u9S163VnHyUKJrGcSFWFl",
+      "title": "בחוף של פורטוגל",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T08:21:24.633Z"
+    },
     {
       "id": "5MrjU3G45SU9B1xCuRlWsi",
       "title": "Relaxation Melody",
