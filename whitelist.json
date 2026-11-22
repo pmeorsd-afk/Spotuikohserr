@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6109,
-  "last_updated": "2026-11-22T19:50:10.000Z",
+  "version": 6110,
+  "last_updated": "2026-11-22T19:50:13.316Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4MSmAXjcdrspd2RxUxdtT3",
+      "title": "Further up (Na, Na, Na, Na, Na)",
+      "artist": "Static & Ben El, Pitbull",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:50:13.316Z"
+    },
     {
       "id": "3jsG1Pnk6mP2mbHl98L0Yi",
       "title": "ניסים",
