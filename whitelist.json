@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6128,
-  "last_updated": "2026-11-22T19:51:08.246Z",
+  "version": 6129,
+  "last_updated": "2026-11-22T19:51:12.107Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1II3z06CILYH00zyVLCLV4",
+      "title": "Demons - Live in Vegas",
+      "artist": "Imagine Dragons",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:51:12.107Z"
+    },
     {
       "id": "5tciwAIfKUakVzpMS4z8yO",
       "title": "לישון בעמידה - Live",
