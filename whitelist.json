@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5980,
-  "last_updated": "2026-11-22T08:03:38.458Z",
+  "version": 5981,
+  "last_updated": "2026-11-22T08:03:42.650Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7Ci07iE2tKfCCv76lSaFYi",
+      "title": "את לא כמו כולם",
+      "artist": "Mashina",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T08:03:42.650Z"
+    },
     {
       "id": "2Omdu37LDZqLyEqvCzP4l7",
       "title": "בחור חדש",
