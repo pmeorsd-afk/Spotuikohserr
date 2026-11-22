@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5950,
-  "last_updated": "2026-11-22T07:12:43.750Z",
+  "version": 5951,
+  "last_updated": "2026-11-22T07:12:47.314Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7jA3zTLaXW0nCi2xj056ne",
+      "title": "אוהבת אותי אמיתי",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:12:47.314Z"
+    },
     {
       "id": "32Cypg0h40SmQnTzHIbA0G",
       "title": "דודי ירד לגנו",
