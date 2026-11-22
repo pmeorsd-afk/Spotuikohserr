@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6161,
-  "last_updated": "2026-11-22T20:38:23.622Z",
+  "version": 6162,
+  "last_updated": "2026-11-22T20:38:26.769Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2n3qidzvO42pCcYS2yc1ZS",
+      "title": "Can't Buy Me Loving / La La La",
+      "artist": "Rauf & Faik",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T20:38:26.769Z"
+    },
     {
       "id": "4wqIXeDppYSMXaWsnTzpzT",
       "title": "Say My Name",
