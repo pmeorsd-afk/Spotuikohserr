@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6098,
-  "last_updated": "2026-11-22T19:49:29.915Z",
+  "version": 6099,
+  "last_updated": "2026-11-22T19:49:34.728Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7Gwx8Ry5me7Mpd2oRQyikF",
+      "title": "Life Goes On - Alok Remix",
+      "artist": "Oliver Tree, Alok",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:49:34.728Z"
+    },
     {
       "id": "7ewS1VbHsBGhw2y29TuzO8",
       "title": "Miss You - Showtek Remix",
