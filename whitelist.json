@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6033,
-  "last_updated": "2026-11-22T10:53:52.519Z",
+  "version": 6034,
+  "last_updated": "2026-11-22T19:44:36.745Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4MUMWxe9088SuTFKpprQ57",
+      "title": "Low (LUNAX Remix)",
+      "artist": "71 Digits, Flo Rida, LUNAX",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:44:36.745Z"
+    },
     {
       "id": "5vFJOD9V4rHgTLWaBRGQ4N",
       "title": "Aria",
