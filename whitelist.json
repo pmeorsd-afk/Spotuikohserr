@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6001,
-  "last_updated": "2026-11-22T09:00:24.963Z",
+  "version": 6002,
+  "last_updated": "2026-11-22T09:00:28.745Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6c2ZcdXHkEFdsNArdJXrHX",
+      "title": "Mi Chico - Official - Jason Derulo x Melody",
+      "artist": "DJ Goja, Jason Derulo, Melody",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T09:00:28.745Z"
+    },
     {
       "id": "4kUm5RaYKOrALwvwB6KG6w",
       "title": "כמה לילות",
