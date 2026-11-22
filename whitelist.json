@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6026,
-  "last_updated": "2026-11-22T10:24:25.570Z",
+  "version": 6027,
+  "last_updated": "2026-11-22T10:32:22.822Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "65baOP5OngpGwLOeFI1drl",
+      "title": "Lioness - Argy Remix",
+      "artist": "Swedish House Mafia, Niki & The Dove, Argy",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T10:32:22.822Z"
+    },
     {
       "id": "1rGWizWLQddt2FtpzzWSEn",
       "title": "When We Were Young (The Logical Song) - Seth Hills Remix",
