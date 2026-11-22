@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6082,
-  "last_updated": "2026-11-22T19:48:29.383Z",
+  "version": 6083,
+  "last_updated": "2026-11-22T19:48:32.419Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "42hiq4Rb6MCa3Ix3F64fKe",
+      "title": "סימני הזמן",
+      "artist": "Moshe Perez",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:48:32.419Z"
+    },
     {
       "id": "0rEDr8sPMIxRBaprqMYyrJ",
       "title": "ALBY MWALA3 NAR",
