@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6131,
-  "last_updated": "2026-11-22T19:51:18.788Z",
+  "version": 6132,
+  "last_updated": "2026-11-22T19:51:22.029Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3KWoUiNzRdg1wy2YhqrtAf",
+      "title": "Faded",
+      "artist": "Nick Stubbs",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:51:22.029Z"
+    },
     {
       "id": "1nHolVNlMb9GMpXIBk1snN",
       "title": "ה' יתברך - האט מיר אייביג ליב",
