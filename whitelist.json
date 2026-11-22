@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6106,
-  "last_updated": "2026-11-22T19:50:02.744Z",
+  "version": 6107,
+  "last_updated": "2026-11-22T19:50:06.349Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6sUfOrXRPK8obDk2TCygv8",
+      "title": "איש וכינור",
+      "artist": "הכוכב הבא, Machluf",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:50:06.349Z"
+    },
     {
       "id": "4CegFStXEPtuxArFHerhOo",
       "title": "סתםלכיף",
