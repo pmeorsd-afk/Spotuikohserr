@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6176,
-  "last_updated": "2026-11-22T21:11:50.668Z",
+  "version": 6178,
+  "last_updated": "2026-11-22T21:11:54.042Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "39d9CQbAB6AMLCxcJtSc0U",
+      "title": "Paris to Tokyo",
+      "artist": "Fivio Foreign, The Kid LAROI",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T21:11:54.042Z"
+    },
+    {
+      "id": "5yuwOITt5IREuADkftF21b",
+      "title": "ילד רע",
+      "artist": "ליעד מאיר, רון חיון",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T21:11:54.042Z"
+    },
     {
       "id": "1LnBdd6MVc5bCmfr5FJiWi",
       "title": "משקפי שמש",
