@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5966,
-  "last_updated": "2026-11-22T07:13:52.389Z",
+  "version": 5967,
+  "last_updated": "2026-11-22T07:13:55.576Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3KA61I18gzSL59mJykjEfw",
+      "title": "אהבה ממבט ראשון",
+      "artist": "Arik Einstein, Shem-Tov Levy",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:13:55.576Z"
+    },
     {
       "id": "0Q4FBn52tglZ02DCrAY8j0",
       "title": "You Are So Beautiful - 1996 Version",
