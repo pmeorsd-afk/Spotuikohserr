@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5954,
-  "last_updated": "2026-11-22T07:12:54.947Z",
+  "version": 5955,
+  "last_updated": "2026-11-22T07:12:58.652Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6q2CZUCGib5kTOldnKNDXI",
+      "title": "Wrapped Up for Christmas",
+      "artist": "Forever in Your Mind",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:12:58.652Z"
+    },
     {
       "id": "2cXkKE0OwO3uRHWYmfWPpb",
       "title": "העיניים",
