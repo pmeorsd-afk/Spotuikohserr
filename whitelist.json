@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6070,
-  "last_updated": "2026-11-22T19:47:38.002Z",
+  "version": 6071,
+  "last_updated": "2026-11-22T19:47:41.971Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "13vsevnJs5k9liVuYILjBc",
+      "title": "PARIDI 2",
+      "artist": "Cllevio Masoni x Elia",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:47:41.971Z"
+    },
     {
       "id": "3rHuDq4SZnQHRJ3VapXGc4",
       "title": "44 Diamante",
