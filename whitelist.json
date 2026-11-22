@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5978,
-  "last_updated": "2026-11-22T07:42:06.849Z",
+  "version": 5979,
+  "last_updated": "2026-11-22T07:42:16.010Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2AoZpfObWvpCUJDgWEQmkH",
+      "title": "וגם וגם -רמיקס",
+      "artist": "ישראל סוסנה ותזמורתו, DJ נדב ביטון",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:42:16.010Z"
+    },
     {
       "id": "5FJynBvxXrAYFMhrJFe8Oe",
       "title": "תחזור תחזור",
