@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6080,
-  "last_updated": "2026-11-22T19:48:21.595Z",
+  "version": 6081,
+  "last_updated": "2026-11-22T19:48:25.838Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3nqqDo8CcCLke3ZoTgiOKf",
+      "title": "The Man Who Can't Be Moved",
+      "artist": "The Script",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:48:25.838Z"
+    },
     {
       "id": "youtube:kaUghjiqrdU",
       "title": "אהר'לע סאמט, יענקי דסקל, מקהלת מלכות, יהודה גלילי - חשוף | Samet, Daskal, Malchus, Glili - Chasoif",
