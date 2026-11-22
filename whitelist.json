@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6178,
-  "last_updated": "2026-11-22T21:11:54.042Z",
+  "version": 6179,
+  "last_updated": "2026-11-22T21:33:05.564Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7AYRT3hADPDQX5v4dXd6Nh",
+      "title": "You Make Me",
+      "artist": "Fivio Foreign, The Fire Choir",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T21:33:05.564Z"
+    },
     {
       "id": "39d9CQbAB6AMLCxcJtSc0U",
       "title": "Paris to Tokyo",
