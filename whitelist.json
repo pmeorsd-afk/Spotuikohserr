@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6096,
-  "last_updated": "2026-11-22T19:49:26.249Z",
+  "version": 6098,
+  "last_updated": "2026-11-22T19:49:29.915Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7ewS1VbHsBGhw2y29TuzO8",
+      "title": "Miss You - Showtek Remix",
+      "artist": "Oliver Tree, Robin Schulz, Showtek",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:49:29.915Z"
+    },
+    {
+      "id": "4f9ojyWTG7LEl6Ey2LTOLf",
+      "title": "מעגל",
+      "artist": "אברהם איילאו, אופק אדנק",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:49:29.915Z"
+    },
     {
       "id": "6Pg9AgtZ6409PM0QwSi23g",
       "title": "Melech Malchei Hamelachim",
