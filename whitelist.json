@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6146,
-  "last_updated": "2026-11-22T19:52:08.377Z",
+  "version": 6147,
+  "last_updated": "2026-11-22T19:52:12.153Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "49N2nEKonr6sw4YyTgC8r7",
+      "title": "סמבה ברגל שמאל",
+      "artist": "Sheshet",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:52:12.153Z"
+    },
     {
       "id": "6ZL7AY6C4r8PnSZhZPll1s",
       "title": "Pero Pero",
