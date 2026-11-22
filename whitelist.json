@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 5972,
-  "last_updated": "2026-11-22T07:14:10.287Z",
+  "version": 5973,
+  "last_updated": "2026-11-22T07:14:13.690Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ZfNiKLdWS1HGovs70yFIB",
+      "title": "היינו עושים אהבה",
+      "artist": "Knesiyat Hasechel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T07:14:13.690Z"
+    },
     {
       "id": "6bmFicZxvhWn3wYScYhKfy",
       "title": "יונתן סע הביתה",
