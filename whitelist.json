@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6132,
-  "last_updated": "2026-11-22T19:51:22.029Z",
+  "version": 6134,
+  "last_updated": "2026-11-22T19:51:25.924Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0v1XpBHnsbkCn7iJ9Ucr1l",
+      "title": "It's My Life",
+      "artist": "Bon Jovi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:51:25.924Z"
+    },
+    {
+      "id": "1EDPVGbyPKJPeGqATwXZvN",
+      "title": "The Emptiness Machine",
+      "artist": "Linkin Park",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-22T19:51:25.924Z"
+    },
     {
       "id": "3KWoUiNzRdg1wy2YhqrtAf",
       "title": "Faded",
