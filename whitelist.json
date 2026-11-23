@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6239,
-  "last_updated": "2026-11-23T19:37:43.861Z",
+  "version": 6240,
+  "last_updated": "2026-11-23T19:38:22.940Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7rnP9C5zGJ2a2qBNQv1afJ",
+      "title": "Numb The Pain",
+      "artist": "Clarx, Anikdote, Shiah Maisel, Catas, Le Malls, CHENDA",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:38:22.940Z"
+    },
     {
       "id": "0cfkoxB3nqXUFCHRoI1aDT",
       "title": "High",
