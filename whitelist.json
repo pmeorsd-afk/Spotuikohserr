@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6185,
-  "last_updated": "2026-11-22T22:30:36.964Z",
+  "version": 6186,
+  "last_updated": "2026-11-23T19:34:20.780Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2lFQyLebhR8N3wUTwd7Htv",
+      "title": "טיסה 5325",
+      "artist": "Moshe Perez",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:34:20.780Z"
+    },
     {
       "id": "6IoEIEufuPVS76j3DsbM91",
       "title": "טקטיקה",
