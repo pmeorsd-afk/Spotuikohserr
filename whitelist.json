@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6214,
-  "last_updated": "2026-11-23T19:36:25.462Z",
+  "version": 6216,
+  "last_updated": "2026-11-23T19:36:29.813Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2g1xIFzapto58vNM99SivG",
+      "title": "Seashore Melody",
+      "artist": "Baby Serenade",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:29.813Z"
+    },
+    {
+      "id": "3CmHvyZQQAGkKkTjTBFWN6",
+      "title": "Have a Cigar",
+      "artist": "Pink Floyd",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:29.813Z"
+    },
     {
       "id": "443dqMO5Gzusd9rIaT6TkH",
       "title": "מכל הנפילות",
