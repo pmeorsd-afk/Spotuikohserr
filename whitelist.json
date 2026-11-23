@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6377,
-  "last_updated": "2026-11-23T20:12:39.972Z",
+  "version": 6378,
+  "last_updated": "2026-11-23T20:12:44.250Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:fHZAi2aGHFk",
+      "title": "אברהם פריד - נישט גע'דאגה'ט יודן  - avraham fried - nisht gedaiget",
+      "artist": "גל פז - gal paz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T20:12:44.250Z"
+    },
     {
       "id": "youtube:NV7ApTcfsRs",
       "title": "מהרה פרחי מיאמי Mehera Miami boys choir",
