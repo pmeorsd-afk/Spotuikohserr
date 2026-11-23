@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6386,
-  "last_updated": "2026-11-23T20:13:04.742Z",
+  "version": 6387,
+  "last_updated": "2026-11-23T20:13:07.372Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "13jaijBfepwzeIvNvXpBTk",
+      "title": "Let The Energy Flow",
+      "artist": "Thank You Hashem, DJ Farbreng, Shlomo Gaisin",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T20:13:07.372Z"
+    },
     {
       "id": "4PEUKEY5bNfl5cXI7apEOM",
       "title": "Tzama",
