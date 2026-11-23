@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6384,
-  "last_updated": "2026-11-23T20:13:00.184Z",
+  "version": 6386,
+  "last_updated": "2026-11-23T20:13:04.742Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4PEUKEY5bNfl5cXI7apEOM",
+      "title": "Tzama",
+      "artist": "Waterbury Mesivta, Chaim Ghoori, EKEV",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T20:13:04.742Z"
+    },
+    {
+      "id": "1R83juyJgwg85r6iG3nUhv",
+      "title": "MY MIND",
+      "artist": "COSMOS JONES",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T20:13:04.742Z"
+    },
     {
       "id": "4Sd8BG7JfsxcUGsKWqyBX6",
       "title": "sadness",
