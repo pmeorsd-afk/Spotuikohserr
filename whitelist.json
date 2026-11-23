@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6314,
-  "last_updated": "2026-11-23T19:42:35.615Z",
+  "version": 6315,
+  "last_updated": "2026-11-23T19:42:39.392Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6NO3wkLjwmwjR6i1sdyLRH",
+      "title": "Weeping Eyes - Remastered",
+      "artist": "anna RF",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:42:39.392Z"
+    },
     {
       "id": "49LhntJQpkanCJvpBYXsbs",
       "title": "Sha La La - Radio Edit",
