@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6231,
-  "last_updated": "2026-11-23T19:37:16.008Z",
+  "version": 6232,
+  "last_updated": "2026-11-23T19:37:21.819Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Qn8raXXqS9fq099D5aFLS",
+      "title": "בין החלומות",
+      "artist": "Dor Daniel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:37:21.819Z"
+    },
     {
       "id": "0XQdp8gdjCS3mZ9mqhyHOO",
       "title": "כאב ואכזבות",
