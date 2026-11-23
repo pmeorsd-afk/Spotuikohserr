@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6255,
-  "last_updated": "2026-11-23T19:39:12.445Z",
+  "version": 6257,
+  "last_updated": "2026-11-23T19:39:16.328Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0KqlLyIGuBZWqzNwP9rypc",
+      "title": "Last First Kiss",
+      "artist": "One Direction",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:16.328Z"
+    },
+    {
+      "id": "5fRoTJR2UgZK9vhnvAHuPs",
+      "title": "אני רוצה",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:16.328Z"
+    },
     {
       "id": "4yVPaA6DOfwbqZIQNv4G5U",
       "title": "I Should Have Kissed You",
