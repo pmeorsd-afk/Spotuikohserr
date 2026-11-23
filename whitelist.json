@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6190,
-  "last_updated": "2026-11-23T19:34:47.338Z",
+  "version": 6191,
+  "last_updated": "2026-11-23T19:34:51.594Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5C9GHl2i1ulqnJqRHPJiDa",
+      "title": "יום הולדת לאבא",
+      "artist": "אנדרדוג",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:34:51.594Z"
+    },
     {
       "id": "13glnz6TTjULU22UmqBSfw",
       "title": "אמינם גידל אותי",
