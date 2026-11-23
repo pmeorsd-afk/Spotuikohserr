@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6226,
-  "last_updated": "2026-11-23T19:36:49.820Z",
+  "version": 6227,
+  "last_updated": "2026-11-23T19:36:56.706Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:bGBmhMxDm0I",
+      "title": "מבט כואב",
+      "artist": "שיר",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:56.706Z"
+    },
     {
       "id": "2W1PX1kNonqWkgbd1Aa9FP",
       "title": "ה' הוא האלוקים",
