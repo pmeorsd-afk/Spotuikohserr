@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6287,
-  "last_updated": "2026-11-23T19:41:05.847Z",
+  "version": 6288,
+  "last_updated": "2026-11-23T19:41:10.105Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:6sPl8u9u9P4",
+      "title": "הרשי אייזנבך & חיים אלטמן - בידו הגדולה | Hershey Eisenbach & Chaim Altman - B'yado HaGedola",
+      "artist": "חיים אלטמן - chaim altman",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:41:10.105Z"
+    },
     {
       "id": "4wynpm7WtwueimncaeNp6I",
       "title": "לאבא שלי יש סולם",
