@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6283,
-  "last_updated": "2026-11-23T19:40:54.376Z",
+  "version": 6284,
+  "last_updated": "2026-11-23T19:40:58.195Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:J6x0NgzikhU",
+      "title": "בנצי שטיין & מקהלת נשמה & מוטי כהן - הנרות הללו 🔥 שיר חנוכה \\\\ צבעים הפקות",
+      "artist": "צבעים הפקות - Tzvaim Productions",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:40:58.195Z"
+    },
     {
       "id": "3htwhiORrRIXx4LxZRa7S5",
       "title": "בעולם הזה",
