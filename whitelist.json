@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6210,
-  "last_updated": "2026-11-23T19:36:17.896Z",
+  "version": 6212,
+  "last_updated": "2026-11-23T19:36:22.128Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0kDIoKvSBne7yWN3mlmwRm",
+      "title": "תמסרי לו",
+      "artist": "Michael Levi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:22.128Z"
+    },
+    {
+      "id": "043twGJ2jl84yLiakTbAQn",
+      "title": "לבחור נכון Live",
+      "artist": "Ishay Ribo, Amir Dadon",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:22.128Z"
+    },
     {
       "id": "4gMgiXfqyzZLMhsksGmbQV",
       "title": "Another Brick in the Wall, Pt. 2",
