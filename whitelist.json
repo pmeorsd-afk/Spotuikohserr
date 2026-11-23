@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6395,
-  "last_updated": "2026-11-23T21:04:22.050Z",
+  "version": 6396,
+  "last_updated": "2026-11-23T21:09:29.000Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5edYMsNo852Zw29Qni9p8t",
+      "title": "בובה",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T21:09:29.000Z"
+    },
     {
       "id": "1oVHlHcySbc94Fo8rg4JJj",
       "title": "חבר",
