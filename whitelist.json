@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6358,
-  "last_updated": "2026-11-23T19:44:21.808Z",
+  "version": 6360,
+  "last_updated": "2026-11-23T19:44:25.630Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:iIXd-ecQEuI",
+      "title": "פרחי מיאמי - כלל ישראל - מהרה- Miami boys choir - klal israel -mehera",
+      "artist": "גל פז - gal paz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:44:25.630Z"
+    },
+    {
+      "id": "5XPcmXVf6TqJtE6UVecZtk",
+      "title": "feel so close",
+      "artist": "civilian",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:44:25.630Z"
+    },
     {
       "id": "youtube:14uvjVEvJjE",
       "title": "פרחי מיאמי - כלל ישראל - די גדולי הדור - Miami boys choir - di gdoley ador",
