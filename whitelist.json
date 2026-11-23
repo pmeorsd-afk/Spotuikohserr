@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6297,
-  "last_updated": "2026-11-23T19:41:36.220Z",
+  "version": 6298,
+  "last_updated": "2026-11-23T19:41:40.108Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:HdBgCPfaU64",
+      "title": "חנוכה עם מלודי",
+      "artist": "תזמורת מלודי, מנדי גולדברג, אברומי וינברג",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:41:40.108Z"
+    },
     {
       "id": "29StUXr684PQwnLEmTkyMP",
       "title": "BeBeit Hamikdash",
