@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6340,
-  "last_updated": "2026-11-23T19:43:34.904Z",
+  "version": 6342,
+  "last_updated": "2026-11-23T19:43:38.818Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4rnXh25eOFoPAezAfQtNPk",
+      "title": "Make This Up",
+      "artist": "Louis Knight",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:38.818Z"
+    },
+    {
+      "id": "0SEcTg7gdPsmZk5wvLrt3Q",
+      "title": "All or Nothin'",
+      "artist": "Nico May",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:38.818Z"
+    },
     {
       "id": "3pnAzKsKG4TYmdddhEF4si",
       "title": "Hopeless Hero - Stripped",
