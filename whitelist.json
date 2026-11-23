@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6365,
-  "last_updated": "2026-11-23T19:44:34.035Z",
+  "version": 6366,
+  "last_updated": "2026-11-23T19:44:39.467Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3HaUlXKqgfQOBSlCNTCe9T",
+      "title": "The Art of Letting Go (1111 Hz)",
+      "artist": "Malte Marten",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:44:39.467Z"
+    },
     {
       "id": "36WOwS5JahMksoQMFGHF4T",
       "title": "miss u",
