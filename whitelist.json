@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6271,
-  "last_updated": "2026-11-23T19:39:56.986Z",
+  "version": 6272,
+  "last_updated": "2026-11-23T19:40:05.386Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1aOPE9WyRMb9zzawMnoIRp",
+      "title": "בימים שיעברו עלינו",
+      "artist": "Aviv Bahar, Hadas Kleinman",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:40:05.386Z"
+    },
     {
       "id": "7y2SafCBiLoQVBDVZHaVOK",
       "title": "Irresistible",
