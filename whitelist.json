@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6186,
-  "last_updated": "2026-11-23T19:34:20.780Z",
+  "version": 6187,
+  "last_updated": "2026-11-23T19:34:24.932Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5f0Zv5UQhxrvIh9bFZjOvr",
+      "title": "בלבלי אותו",
+      "artist": "Kobi Peretz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:34:24.932Z"
+    },
     {
       "id": "2lFQyLebhR8N3wUTwd7Htv",
       "title": "טיסה 5325",
