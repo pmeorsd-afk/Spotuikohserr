@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6245,
-  "last_updated": "2026-11-23T19:38:38.673Z",
+  "version": 6247,
+  "last_updated": "2026-11-23T19:38:42.309Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "69zGSTv08oVDrsBrtENPQv",
+      "title": "Mountains",
+      "artist": "New Rules",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:38:42.309Z"
+    },
+    {
+      "id": "1k8OUxylkH81QiTUpeHEvd",
+      "title": "אין אותי יותר",
+      "artist": "Gal Adam",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:38:42.309Z"
+    },
     {
       "id": "3ilXnjGNprH0SGofx708f3",
       "title": "EYES FOR YOU",
