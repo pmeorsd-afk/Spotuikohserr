@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6269,
-  "last_updated": "2026-11-23T19:39:48.024Z",
+  "version": 6270,
+  "last_updated": "2026-11-23T19:39:51.997Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ZKv0OWZ3rjeAoPUuuJdyL",
+      "title": "Jumpin (feat. Miles)",
+      "artist": "Jake Miller, MILES",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:51.997Z"
+    },
     {
       "id": "7y2SafCBiLoQVBDVZHaVOK",
       "title": "Irresistible",
