@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6309,
-  "last_updated": "2026-11-23T19:42:20.076Z",
+  "version": 6311,
+  "last_updated": "2026-11-23T19:42:24.271Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "77d6RibzT8kYmGCdRHqd8k",
+      "title": "The Long Goodbye",
+      "artist": "Ara Dinkjian",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:42:24.271Z"
+    },
+    {
+      "id": "00Q5botSoRxvqLSxRzildY",
+      "title": "Rüya",
+      "artist": "Serkan Çağrı",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:42:24.271Z"
+    },
     {
       "id": "5szyELRk7xqn9pkieBbdlf",
       "title": "Gülümcan",
