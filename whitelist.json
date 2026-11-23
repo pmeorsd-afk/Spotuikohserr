@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6330,
-  "last_updated": "2026-11-23T19:43:18.239Z",
+  "version": 6333,
+  "last_updated": "2026-11-23T19:43:22.070Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,33 @@
     }
   ],
   "tracks": [
+    {
+      "id": "58dUzPg2dxw49EuLiir5HB",
+      "title": "Heart Of Gold",
+      "artist": "Isaac Butler",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:22.070Z"
+    },
+    {
+      "id": "54JZg8BMJkQy2YH9Lxc5K0",
+      "title": "I'll Be Yours Again",
+      "artist": "Isaac Butler",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:22.070Z"
+    },
+    {
+      "id": "49PVaqTTK6qn8Ku5BIR8Gt",
+      "title": "Say Love",
+      "artist": "James TW",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:22.070Z"
+    },
     {
       "id": "3T0SG0sgpD7iJG5mi4uAvP",
       "title": "לכי תספרי לכולם",
