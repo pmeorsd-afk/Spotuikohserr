@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6230,
-  "last_updated": "2026-11-23T19:37:05.199Z",
+  "version": 6231,
+  "last_updated": "2026-11-23T19:37:16.008Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0XQdp8gdjCS3mZ9mqhyHOO",
+      "title": "כאב ואכזבות",
+      "artist": "Avi Biter",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:37:16.008Z"
+    },
     {
       "id": "4a1HrvxPdBZhT76u6Vr13S",
       "title": "ברצלונה + עיר נמל - Live",
