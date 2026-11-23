@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6249,
-  "last_updated": "2026-11-23T19:38:52.795Z",
+  "version": 6251,
+  "last_updated": "2026-11-23T19:38:57.030Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1SZHFu9wOj0tmtzQ5DO4pA",
+      "title": "תחזרי מהר",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:38:57.030Z"
+    },
+    {
+      "id": "5UcphALlWd7sBBySclJvAi",
+      "title": "Home",
+      "artist": "One Direction",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:38:57.030Z"
+    },
     {
       "id": "1ZycJRpLOazlLcoFGxGROO",
       "title": "Walking in the Wind",
