@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6191,
-  "last_updated": "2026-11-23T19:34:51.594Z",
+  "version": 6193,
+  "last_updated": "2026-11-23T19:34:55.395Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0zykIRzzhpIpwUeNmHP77t",
+      "title": "אם מחר אני לא כאן",
+      "artist": "אנדרדוג, Arik Sinai",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:34:55.395Z"
+    },
+    {
+      "id": "4rAuKKiEcgEmg9srfI8fXR",
+      "title": "קום יא מניאק",
+      "artist": "סטילה",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:34:55.395Z"
+    },
     {
       "id": "5C9GHl2i1ulqnJqRHPJiDa",
       "title": "יום הולדת לאבא",
