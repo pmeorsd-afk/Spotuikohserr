@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6291,
-  "last_updated": "2026-11-23T19:41:17.443Z",
+  "version": 6292,
+  "last_updated": "2026-11-23T19:41:22.152Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:2yewsN1cuEs",
+      "title": "מיין לעכטלע",
+      "artist": "פנחס ביכלר, Ahrele Samet, הערשי רוטנברג, מקהלת מלכות",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:41:22.152Z"
+    },
     {
       "id": "6HITUpQ3K493o3C6PgFGsE",
       "title": "מה אני עובר",
