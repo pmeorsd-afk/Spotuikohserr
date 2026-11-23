@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6237,
-  "last_updated": "2026-11-23T19:37:35.573Z",
+  "version": 6238,
+  "last_updated": "2026-11-23T19:37:39.965Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4de6mi9b4mh5jz1VeuvDjI",
+      "title": "מקסיקאנה",
+      "artist": "Ethnix, Eden Ben Zaken",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:37:39.965Z"
+    },
     {
       "id": "1ZOVeidJCvkxOARWTHmWOL",
       "title": "MATAFAKA",
