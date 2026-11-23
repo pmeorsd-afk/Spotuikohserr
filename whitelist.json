@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6319,
-  "last_updated": "2026-11-23T19:42:51.690Z",
+  "version": 6321,
+  "last_updated": "2026-11-23T19:42:55.810Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Kfd3XrgqJ0M50O3Z5KN9c",
+      "title": "Running Back To You",
+      "artist": "Seph Schlueter",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:42:55.810Z"
+    },
+    {
+      "id": "71nT6KyPbkd1fPahMkLlj7",
+      "title": "Help",
+      "artist": "Jordan St. Cyr",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:42:55.810Z"
+    },
     {
       "id": "5X17sh9R2sTSYuydfcQrnx",
       "title": "What If",
