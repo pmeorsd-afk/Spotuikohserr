@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6264,
-  "last_updated": "2026-11-23T19:39:36.509Z",
+  "version": 6266,
+  "last_updated": "2026-11-23T19:39:40.649Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "46qPfZshPjoitCKdKVD6k7",
+      "title": "Same Mistakes",
+      "artist": "One Direction",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:40.649Z"
+    },
+    {
+      "id": "4lxaurdMyGkt1tOrdwRoVO",
+      "title": "Little Black Dress",
+      "artist": "One Direction",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:40.649Z"
+    },
     {
       "id": "2NEaBeIgs4iicToilwgGDO",
       "title": "שונא פרידות",
