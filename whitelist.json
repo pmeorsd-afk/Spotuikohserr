@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6317,
-  "last_updated": "2026-11-23T19:42:43.557Z",
+  "version": 6318,
+  "last_updated": "2026-11-23T19:42:47.641Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2WxVLSW3eLzRuR8D58aYvW",
+      "title": "לכה דודי",
+      "artist": "Yitzchak Meir, הרב מיכי יוספי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:42:47.641Z"
+    },
     {
       "id": "506VN6Szuk47lGyYxE9C7J",
       "title": "שלום עליכם (מלאכי השרת)",
