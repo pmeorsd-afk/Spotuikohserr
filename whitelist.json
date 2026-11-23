@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6228,
-  "last_updated": "2026-11-23T19:37:01.141Z",
+  "version": 6230,
+  "last_updated": "2026-11-23T19:37:05.199Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4a1HrvxPdBZhT76u6Vr13S",
+      "title": "ברצלונה + עיר נמל - Live",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:37:05.199Z"
+    },
+    {
+      "id": "462Oi8pqe9quyeU7YE3elx",
+      "title": "לצאת מדכאון - Live",
+      "artist": "Eyal Golan, יגל אושרי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:37:05.199Z"
+    },
     {
       "id": "3Y6B8qadz0SH8m2y6Th2Mg",
       "title": "שכחתי מזמן - Live",
