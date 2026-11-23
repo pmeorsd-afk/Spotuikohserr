@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6267,
-  "last_updated": "2026-11-23T19:39:44.150Z",
+  "version": 6269,
+  "last_updated": "2026-11-23T19:39:48.024Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7y2SafCBiLoQVBDVZHaVOK",
+      "title": "Irresistible",
+      "artist": "One Direction",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:48.024Z"
+    },
+    {
+      "id": "23eQyAz9tzvrKsG0kAnrja",
+      "title": "Change My Mind",
+      "artist": "One Direction",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:48.024Z"
+    },
     {
       "id": "youtube:2Zl8fpG-0QA",
       "title": "שלומי ורצברגר | מנדי גולדברג | ארי קאהן בביצוע לייב ומקפיץ לשיר 'על הניסים' בחתונה בב\"ב. צפו•",
