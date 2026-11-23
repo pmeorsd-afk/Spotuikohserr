@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6208,
-  "last_updated": "2026-11-23T19:36:13.513Z",
+  "version": 6210,
+  "last_updated": "2026-11-23T19:36:17.896Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4gMgiXfqyzZLMhsksGmbQV",
+      "title": "Another Brick in the Wall, Pt. 2",
+      "artist": "Pink Floyd",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:17.896Z"
+    },
+    {
+      "id": "5TVsEc4aNbqrnPQ6tTvsbB",
+      "title": "תן לי מנוחה",
+      "artist": "Eden Meiri",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:17.896Z"
+    },
     {
       "id": "6I1t9q7p2DIFyRepbMuRIg",
       "title": "לביבה חמה",
