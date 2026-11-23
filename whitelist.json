@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6261,
-  "last_updated": "2026-11-23T19:39:28.166Z",
+  "version": 6263,
+  "last_updated": "2026-11-23T19:39:32.395Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2pFEbA6GdNxBOMn9Egvowm",
+      "title": "Why Don't We Go There",
+      "artist": "One Direction",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:32.395Z"
+    },
+    {
+      "id": "2BgYiIXNPSs53W4AjfMFDt",
+      "title": "רחוק מכל העדר",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:32.395Z"
+    },
     {
       "id": "6zduUXbIzIwVx6LWWRvhS2",
       "title": "70 פנים ללב",
