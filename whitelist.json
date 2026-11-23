@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6272,
-  "last_updated": "2026-11-23T19:40:05.386Z",
+  "version": 6274,
+  "last_updated": "2026-11-23T19:40:09.611Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6kVmhOoBlMEH3WdxrLhjFB",
+      "title": "הפשע המושלם",
+      "artist": "Static, Eden Ben Zaken",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:40:09.611Z"
+    },
+    {
+      "id": "29zWOMKNFI4dSA4SqPhSre",
+      "title": "אהבה שלי שורפת",
+      "artist": "מאור אדרי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:40:09.611Z"
+    },
     {
       "id": "1aOPE9WyRMb9zzawMnoIRp",
       "title": "בימים שיעברו עלינו",
