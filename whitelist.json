@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6374,
-  "last_updated": "2026-11-23T19:50:23.489Z",
+  "version": 6375,
+  "last_updated": "2026-11-23T20:12:31.284Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7CuW3hhdC7mqLrh6Tn0S9Y",
+      "title": "Neshama on Fire",
+      "artist": "Thank You Hashem, DJ Farbreng, Chaim Ghoori",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T20:12:31.284Z"
+    },
     {
       "id": "youtube:7IJdptIi6CY",
       "title": "MIAMI BOYS CHOIR - GALEH",
