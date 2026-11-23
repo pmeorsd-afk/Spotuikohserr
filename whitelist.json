@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6373,
-  "last_updated": "2026-11-23T19:50:17.950Z",
+  "version": 6374,
+  "last_updated": "2026-11-23T19:50:23.489Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:7IJdptIi6CY",
+      "title": "MIAMI BOYS CHOIR - GALEH",
+      "artist": "Yerachmiel Begun & The Miami Boys Choir",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:50:23.489Z"
+    },
     {
       "id": "6ZrnPmBBCMQefd68M36wnJ",
       "title": "DIDN'T WE?",
