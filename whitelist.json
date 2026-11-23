@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6326,
-  "last_updated": "2026-11-23T19:43:07.530Z",
+  "version": 6328,
+  "last_updated": "2026-11-23T19:43:11.211Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4EOHSm6Vhjc2cz8IIDjdWD",
+      "title": "Hopeless Romantics",
+      "artist": "James TW",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:11.211Z"
+    },
+    {
+      "id": "6HQXoQ0ZascrhJLtY4uPkR",
+      "title": "Counting My Blessings - Collab Version",
+      "artist": "Seph Schlueter, Matt Maher",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:11.211Z"
+    },
     {
       "id": "1QQATmlwiefAJWurUVER7T",
       "title": "Counting My Blessings - Acoustic",
