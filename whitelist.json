@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6204,
-  "last_updated": "2026-11-23T19:35:59.110Z",
+  "version": 6206,
+  "last_updated": "2026-11-23T19:36:03.172Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4gbVRS8gloEluzf0GzDOFc",
+      "title": "Maps",
+      "artist": "Maroon 5",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:03.172Z"
+    },
+    {
+      "id": "7AB86XCKpvjVaSVfH8Od59",
+      "title": "אני אהיה לך בית",
+      "artist": "Rotem Cohen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:03.172Z"
+    },
     {
       "id": "1v2rGTdrdO7rvYelyJp1SS",
       "title": "בשבילה אתה מלך העולם",
