@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6241,
-  "last_updated": "2026-11-23T19:38:26.659Z",
+  "version": 6243,
+  "last_updated": "2026-11-23T19:38:30.384Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7G5bTmi3ep4zyMcYEzXRH8",
+      "title": "גומות",
+      "artist": "בניה ברבי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:38:30.384Z"
+    },
+    {
+      "id": "0lG6QM1jjbbX5UUn3DPmrZ",
+      "title": "Lost Control",
+      "artist": "Alan Walker, Sorana",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:38:30.384Z"
+    },
     {
       "id": "1ApUYfDejOBvrTnar2Wyf3",
       "title": "Shotta's.",
