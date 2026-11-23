@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6390,
-  "last_updated": "2026-11-23T21:04:05.347Z",
+  "version": 6392,
+  "last_updated": "2026-11-23T21:04:09.725Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6RhN1559gRXXV9KwNvwx2l",
+      "title": "C’est pas joli",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T21:04:09.725Z"
+    },
+    {
+      "id": "5nLY3hwxj7CJSjpLSSDsU6",
+      "title": "מנורה ופסנתר",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T21:04:09.725Z"
+    },
     {
       "id": "2NMzwQLriILyh6OwVeXwph",
       "title": "Can You Carry Me",
