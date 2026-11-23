@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6345,
-  "last_updated": "2026-11-23T19:43:50.107Z",
+  "version": 6346,
+  "last_updated": "2026-11-23T19:43:54.251Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:dHLMqtkYe-s",
+      "title": "אברהם פריד  -תניא  - avraham fried - tanya",
+      "artist": "גל פז - gal paz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:54.251Z"
+    },
     {
       "id": "3oJ9A10ayd0a7iMu0bhLUo",
       "title": "Tell Me",
