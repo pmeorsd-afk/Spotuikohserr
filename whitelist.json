@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6200,
-  "last_updated": "2026-11-23T19:35:42.572Z",
+  "version": 6201,
+  "last_updated": "2026-11-23T19:35:46.708Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0pUrx3AMrKPM2IRJGnCe57",
+      "title": "שיר לטל",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:35:46.708Z"
+    },
     {
       "id": "6OUM6rBpwsaTC1LIIjcVPz",
       "title": "הליכות לילה",
