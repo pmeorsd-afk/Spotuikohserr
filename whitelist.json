@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6380,
-  "last_updated": "2026-11-23T20:12:48.271Z",
+  "version": 6381,
+  "last_updated": "2026-11-23T20:12:51.979Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4FwroZwpBJqwRICfuG3aRr",
+      "title": "Something on My Mind",
+      "artist": "deep dispatch",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T20:12:51.979Z"
+    },
     {
       "id": "youtube:uQDEZp26cu4",
       "title": "Ein aroch lecha-Michael Shtrayher-אין ערוך לך-מיכאל שטרייכר",
