@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6275,
-  "last_updated": "2026-11-23T19:40:16.274Z",
+  "version": 6276,
+  "last_updated": "2026-11-23T19:40:21.092Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6KqG1NZioXGZatYsxJgP4u",
+      "title": "אהבה ממבט ראשון & הפרח בגני",
+      "artist": "Omri Sabach",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:40:21.092Z"
+    },
     {
       "id": "6kVmhOoBlMEH3WdxrLhjFB",
       "title": "הפשע המושלם",
