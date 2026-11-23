@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6349,
-  "last_updated": "2026-11-23T19:43:58.278Z",
+  "version": 6350,
+  "last_updated": "2026-11-23T19:44:01.924Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:VYptWPmRVa0",
+      "title": "אברהם פריד - כי המצווה avraham fried - ki amitzva",
+      "artist": "גל פז - gal paz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:44:01.924Z"
+    },
     {
       "id": "youtube:RjW_txSu-dg",
       "title": "אברהם פריד - שטר התנאים - avraham fried - shtar hatnaim",
