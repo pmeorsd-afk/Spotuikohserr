@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6371,
-  "last_updated": "2026-11-23T19:49:49.437Z",
+  "version": 6372,
+  "last_updated": "2026-11-23T19:49:53.323Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4z0NrtCWukaN2ByjHBvEyj",
+      "title": "only you",
+      "artist": "zone",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:49:53.323Z"
+    },
     {
       "id": "66YtIqT0kN4958EXnCnAmE",
       "title": "Legends Never Die - (Remix)",
