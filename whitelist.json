@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6292,
-  "last_updated": "2026-11-23T19:41:22.152Z",
+  "version": 6293,
+  "last_updated": "2026-11-23T19:41:26.528Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:_HRt_HnGsto",
+      "title": "מחרוזת חנוכה - מקהלת מלכות, הרשי סגל וגדולי הזמר | Malchus Choir",
+      "artist": "מקהלת מלכות - Malchut Choir",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:41:26.528Z"
+    },
     {
       "id": "youtube:2yewsN1cuEs",
       "title": "מיין לעכטלע",
