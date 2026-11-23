@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6304,
-  "last_updated": "2026-11-23T19:41:58.950Z",
+  "version": 6305,
+  "last_updated": "2026-11-23T19:42:02.539Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5S9Bk9ilbSyLwVTdQ0LupC",
+      "title": "מי אני",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:42:02.539Z"
+    },
     {
       "id": "0u0fvlXC3rk4uWnn9t7zru",
       "title": "אקדח",
