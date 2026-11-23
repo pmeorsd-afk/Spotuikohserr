@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6346,
-  "last_updated": "2026-11-23T19:43:54.251Z",
+  "version": 6349,
+  "last_updated": "2026-11-23T19:43:58.278Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,33 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:RjW_txSu-dg",
+      "title": "אברהם פריד - שטר התנאים - avraham fried - shtar hatnaim",
+      "artist": "גל פז - gal paz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:58.278Z"
+    },
+    {
+      "id": "youtube:k2ozr7tOe3o",
+      "title": "אברהם פריד - ברכה והצלחה - זכור - avraham fried - bracha & hatzlacha  - zachor",
+      "artist": "גל פז - gal paz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:58.278Z"
+    },
+    {
+      "id": "youtube:E5D9_ptWByM",
+      "title": "אברהם פריד - הלהיטים הגדולים - מה ידידות  - avraham fried - greatest hits-  ma yedidut",
+      "artist": "גל פז - gal paz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:58.278Z"
+    },
     {
       "id": "youtube:dHLMqtkYe-s",
       "title": "אברהם פריד  -תניא  - avraham fried - tanya",
