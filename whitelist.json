@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6370,
-  "last_updated": "2026-11-23T19:46:59.761Z",
+  "version": 6371,
+  "last_updated": "2026-11-23T19:49:49.437Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "66YtIqT0kN4958EXnCnAmE",
+      "title": "Legends Never Die - (Remix)",
+      "artist": "League of Legends, Alan Walker, Against The Current, Mako",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:49:49.437Z"
+    },
     {
       "id": "youtube:fG1CdqzKQhU",
       "title": "פרחי מיאמי - בסיעתא דשמיא - אנא בכח - miami boys - bsd - ana bekoach",
