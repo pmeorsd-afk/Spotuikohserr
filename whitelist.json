@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6251,
-  "last_updated": "2026-11-23T19:38:57.030Z",
+  "version": 6252,
+  "last_updated": "2026-11-23T19:39:00.418Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1ZWLWVqeEMWMKTlteS0yLH",
+      "title": "Love You Goodbye",
+      "artist": "One Direction",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:00.418Z"
+    },
     {
       "id": "1SZHFu9wOj0tmtzQ5DO4pA",
       "title": "תחזרי מהר",
