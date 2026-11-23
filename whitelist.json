@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6313,
-  "last_updated": "2026-11-23T19:42:32.338Z",
+  "version": 6314,
+  "last_updated": "2026-11-23T19:42:35.615Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "49LhntJQpkanCJvpBYXsbs",
+      "title": "Sha La La - Radio Edit",
+      "artist": "Ido Shoam, Roy Machluf",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:42:35.615Z"
+    },
     {
       "id": "6W25axd3WKlnjemDbPyYNm",
       "title": "אבן על אבן (רגע של אושר) - Dor Gold & Guy Hoss Official Remix",
