@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6188,
-  "last_updated": "2026-11-23T19:34:29.187Z",
+  "version": 6189,
+  "last_updated": "2026-11-23T19:34:42.759Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2G9RTMy9IpvmMbTJ8dEzOK",
+      "title": "אורי וישעי",
+      "artist": "שמואל גריינימן",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:34:42.759Z"
+    },
     {
       "id": "4UwIpBcx4wfMRzh2bPZKVo",
       "title": "צעדים",
