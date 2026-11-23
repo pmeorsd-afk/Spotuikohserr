@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6356,
-  "last_updated": "2026-11-23T19:44:17.523Z",
+  "version": 6358,
+  "last_updated": "2026-11-23T19:44:21.808Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:14uvjVEvJjE",
+      "title": "פרחי מיאמי - כלל ישראל - די גדולי הדור - Miami boys choir - di gdoley ador",
+      "artist": "גל פז - gal paz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:44:21.808Z"
+    },
+    {
+      "id": "7jdlYOFkXgIAjw3BAB6wzJ",
+      "title": "i don't want to fall in love",
+      "artist": "civilian",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:44:21.808Z"
+    },
     {
       "id": "1KR9TkyhxqqpOk45WAm7bM",
       "title": "Running Out Of Roses",
