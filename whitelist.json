@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6252,
-  "last_updated": "2026-11-23T19:39:00.418Z",
+  "version": 6253,
+  "last_updated": "2026-11-23T19:39:04.952Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6N5ruusDFjQPYvCka8ejwP",
+      "title": "Tell Me a Lie",
+      "artist": "One Direction",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:04.952Z"
+    },
     {
       "id": "1ZWLWVqeEMWMKTlteS0yLH",
       "title": "Love You Goodbye",
