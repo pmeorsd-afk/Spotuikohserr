@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6206,
-  "last_updated": "2026-11-23T19:36:03.172Z",
+  "version": 6207,
+  "last_updated": "2026-11-23T19:36:09.493Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "263N6ifgkdxJvIUHNLR1jm",
+      "title": "חנוכה חנוכה - חנוכה",
+      "artist": "Dalia Amihud, Kids Choir",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:09.493Z"
+    },
     {
       "id": "4gbVRS8gloEluzf0GzDOFc",
       "title": "Maps",
