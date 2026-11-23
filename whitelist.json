@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6224,
-  "last_updated": "2026-11-23T19:36:46.030Z",
+  "version": 6226,
+  "last_updated": "2026-11-23T19:36:49.820Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2W1PX1kNonqWkgbd1Aa9FP",
+      "title": "ה' הוא האלוקים",
+      "artist": "אהרלע סאמעט, Ari Hill, יואלי קליין, שייע גרוס",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:49.820Z"
+    },
+    {
+      "id": "5hJPgXyvZZFEuDKwyagEnP",
+      "title": "מחרוזת ימים יגידו - Live",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:49.820Z"
+    },
     {
       "id": "3EkSg7NXfQNQIbIUprHt1u",
       "title": "Tamshich",
