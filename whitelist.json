@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6234,
-  "last_updated": "2026-11-23T19:37:25.553Z",
+  "version": 6235,
+  "last_updated": "2026-11-23T19:37:31.246Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2KQ0Vhnxai5k2MxBxvWSCi",
+      "title": "Ill Dance, With My Hands - Remix",
+      "artist": "DJ Fronteo",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:37:31.246Z"
+    },
     {
       "id": "17vXZTcVsCJF1NBoaBQjm7",
       "title": "Barcelona Nights",
