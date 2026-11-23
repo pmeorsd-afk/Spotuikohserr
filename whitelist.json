@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6276,
-  "last_updated": "2026-11-23T19:40:21.092Z",
+  "version": 6278,
+  "last_updated": "2026-11-23T19:40:25.112Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1kPpge9JDLpcj15qgrPbYX",
+      "title": "Good Time",
+      "artist": "Owl City, Carly Rae Jepsen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:40:25.112Z"
+    },
+    {
+      "id": "0anWq8zX8Hz4jTKmdunfjq",
+      "title": "לאט לאט לאט",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:40:25.112Z"
+    },
     {
       "id": "6KqG1NZioXGZatYsxJgP4u",
       "title": "אהבה ממבט ראשון & הפרח בגני",
