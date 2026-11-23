@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6198,
-  "last_updated": "2026-11-23T19:35:31.752Z",
+  "version": 6199,
+  "last_updated": "2026-11-23T19:35:38.584Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6uH8QAkp18WHl3zAPMVNPn",
+      "title": "דרך",
+      "artist": "Vic Ohana Jan, Omri 69 Segal",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:35:38.584Z"
+    },
     {
       "id": "6UsScna9SKC3VEFJUCxYYL",
       "title": "I’ll Be Fine",
