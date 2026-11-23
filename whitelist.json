@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6338,
-  "last_updated": "2026-11-23T19:43:31.102Z",
+  "version": 6340,
+  "last_updated": "2026-11-23T19:43:34.904Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3pnAzKsKG4TYmdddhEF4si",
+      "title": "Hopeless Hero - Stripped",
+      "artist": "Noah Anthony",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:34.904Z"
+    },
+    {
+      "id": "0RzrTsfmgj1mwXWyjc0adO",
+      "title": "Won't Start Now",
+      "artist": "Seph Schlueter",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:34.904Z"
+    },
     {
       "id": "52hW86OGxT6nn0Aex2V6oM",
       "title": "The Knife In My Back",
