@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6295,
-  "last_updated": "2026-11-23T19:41:31.924Z",
+  "version": 6297,
+  "last_updated": "2026-11-23T19:41:36.220Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "29StUXr684PQwnLEmTkyMP",
+      "title": "BeBeit Hamikdash",
+      "artist": "Rebbe Alter",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:41:36.220Z"
+    },
+    {
+      "id": "youtube:d8RCFRW3Hw4",
+      "title": "הנרות הללו (Haneiros Haluli)",
+      "artist": "Yoely Weiss",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:41:36.220Z"
+    },
     {
       "id": "3TJYo6NY2BwIjq8mFoDFcr",
       "title": "Te Alabaré Medley",
