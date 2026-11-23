@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6342,
-  "last_updated": "2026-11-23T19:43:38.818Z",
+  "version": 6343,
+  "last_updated": "2026-11-23T19:43:42.560Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4hwNTB51Aey8LtZLD02r6Y",
+      "title": "Hurt Me Sooner",
+      "artist": "Jordan Anthony",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:42.560Z"
+    },
     {
       "id": "4rnXh25eOFoPAezAfQtNPk",
       "title": "Make This Up",
