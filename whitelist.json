@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6378,
-  "last_updated": "2026-11-23T20:12:44.250Z",
+  "version": 6380,
+  "last_updated": "2026-11-23T20:12:48.271Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:uQDEZp26cu4",
+      "title": "Ein aroch lecha-Michael Shtrayher-אין ערוך לך-מיכאל שטרייכר",
+      "artist": "ruth681eg2",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T20:12:48.271Z"
+    },
+    {
+      "id": "youtube:ioYasJZjDsE",
+      "title": "שמע בני - מרדכי בן דוד",
+      "artist": "Zvika Movshovich",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T20:12:48.271Z"
+    },
     {
       "id": "youtube:fHZAi2aGHFk",
       "title": "אברהם פריד - נישט גע'דאגה'ט יודן  - avraham fried - nisht gedaiget",
