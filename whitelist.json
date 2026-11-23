@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6367,
-  "last_updated": "2026-11-23T19:45:18.502Z",
+  "version": 6368,
+  "last_updated": "2026-11-23T19:46:46.896Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "35lFQYD7o0C2nhLtPAEa1y",
+      "title": "What’s the Avodah",
+      "artist": "Thank You Hashem, DJ Farbreng, The Early Shabbos Band",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:46:46.896Z"
+    },
     {
       "id": "youtube:1pbsgUBOXwg",
       "title": "פרחי מיאמי - ירושלים שמע קולנו  - לשנה הבאה - Miami boys choir - yerushalaim  -l'shana haba",
