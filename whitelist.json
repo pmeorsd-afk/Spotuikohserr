@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6263,
-  "last_updated": "2026-11-23T19:39:32.395Z",
+  "version": 6264,
+  "last_updated": "2026-11-23T19:39:36.509Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2NEaBeIgs4iicToilwgGDO",
+      "title": "שונא פרידות",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:36.509Z"
+    },
     {
       "id": "2pFEbA6GdNxBOMn9Egvowm",
       "title": "Why Don't We Go There",
