@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6298,
-  "last_updated": "2026-11-23T19:41:40.108Z",
+  "version": 6300,
+  "last_updated": "2026-11-23T19:41:43.743Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:0kRjWqjDaIc",
+      "title": "להודות ולהלל - שמוליק גפנר | Shmulik Gefner - Lehodot U'lehalel",
+      "artist": "שמוליק גפנר",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:41:43.743Z"
+    },
+    {
+      "id": "youtube:CpAArw9nR2E",
+      "title": "יונים נקבצו עלי - yevanim nikbatzu ali - Chanukah song",
+      "artist": "shmuel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:41:43.743Z"
+    },
     {
       "id": "youtube:HdBgCPfaU64",
       "title": "חנוכה עם מלודי",
