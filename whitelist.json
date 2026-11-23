@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6389,
-  "last_updated": "2026-11-23T20:19:41.416Z",
+  "version": 6390,
+  "last_updated": "2026-11-23T21:04:05.347Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2NMzwQLriILyh6OwVeXwph",
+      "title": "Can You Carry Me",
+      "artist": "Thank You Hashem, DJ Farbreng, Alex Clare",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T21:04:05.347Z"
+    },
     {
       "id": "6gcFCem6WwuzVoUbkY5LG0",
       "title": "והראנו",
