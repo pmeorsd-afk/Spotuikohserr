@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6322,
-  "last_updated": "2026-11-23T19:43:00.014Z",
+  "version": 6324,
+  "last_updated": "2026-11-23T19:43:04.058Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ADEmswV789RayQ5OKoWY1",
+      "title": "Stay",
+      "artist": "Seph Schlueter",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:04.058Z"
+    },
+    {
+      "id": "2iqyErkSp4WMehvFy7FDID",
+      "title": "Counting My Blessings",
+      "artist": "Seph Schlueter",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:04.058Z"
+    },
     {
       "id": "3R07e1YzlIJATTjA3aT0Et",
       "title": "לא להיות לבד",
