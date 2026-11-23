@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6243,
-  "last_updated": "2026-11-23T19:38:30.384Z",
+  "version": 6244,
+  "last_updated": "2026-11-23T19:38:34.463Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ySQAwFvKldxXphT7VdoQt",
+      "title": "Might Ruin Christmas",
+      "artist": "New Rules",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:38:34.463Z"
+    },
     {
       "id": "7G5bTmi3ep4zyMcYEzXRH8",
       "title": "גומות",
