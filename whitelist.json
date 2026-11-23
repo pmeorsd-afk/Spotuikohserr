@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6201,
-  "last_updated": "2026-11-23T19:35:46.708Z",
+  "version": 6203,
+  "last_updated": "2026-11-23T19:35:50.818Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7EWaWcYUdatuLQQ7NJjh1O",
+      "title": "Black and Yellow (feat. Juicy J, Snoop Dogg & T-Pain) - G-Mix",
+      "artist": "Wiz Khalifa, Juicy J, Snoop Dogg, T-Pain",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:35:50.818Z"
+    },
+    {
+      "id": "4qKXQEKuyhbYFmnzOCXvVH",
+      "title": "טן טן טן",
+      "artist": "נהוראי תורג'מן",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:35:50.818Z"
+    },
     {
       "id": "0pUrx3AMrKPM2IRJGnCe57",
       "title": "שיר לטל",
