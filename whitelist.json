@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6315,
-  "last_updated": "2026-11-23T19:42:39.392Z",
+  "version": 6317,
+  "last_updated": "2026-11-23T19:42:43.557Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "506VN6Szuk47lGyYxE9C7J",
+      "title": "שלום עליכם (מלאכי השרת)",
+      "artist": "David D'Or",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:42:43.557Z"
+    },
+    {
+      "id": "2xrjXApov9wTsJ4p0p1es6",
+      "title": "Dağlar İle Taşlar İle",
+      "artist": "Başar Dikici",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:42:43.557Z"
+    },
     {
       "id": "6NO3wkLjwmwjR6i1sdyLRH",
       "title": "Weeping Eyes - Remastered",
