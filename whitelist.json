@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6397,
-  "last_updated": "2026-11-23T21:24:46.719Z",
+  "version": 6398,
+  "last_updated": "2026-11-23T21:44:06.509Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "79CdEyqCcB0u777jIxKolw",
+      "title": "לצאת מדיכאון",
+      "artist": "Shaked Komemy",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T21:44:06.509Z"
+    },
     {
       "id": "0owcnr7eizzHVqxcnPYodF",
       "title": "היום - Live",
