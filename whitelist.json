@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6286,
-  "last_updated": "2026-11-23T19:41:02.107Z",
+  "version": 6287,
+  "last_updated": "2026-11-23T19:41:05.847Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4wynpm7WtwueimncaeNp6I",
+      "title": "לאבא שלי יש סולם",
+      "artist": "ותן חלקנו, Amir Benayoun, ששון איפרם שאולוב",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:41:05.847Z"
+    },
     {
       "id": "youtube:e_o6dijDmEo",
       "title": "יענקי ברוין, אהר'לע סאמט, יאפצ'יק- הנרות הללו | Yanki Braun, Arale Samet, Yaptzik - Haneiros Hallalu",
