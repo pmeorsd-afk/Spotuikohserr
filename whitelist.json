@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6219,
-  "last_updated": "2026-11-23T19:36:37.476Z",
+  "version": 6221,
+  "last_updated": "2026-11-23T19:36:41.853Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "33fEQzckG7GACdKjDigR5F",
+      "title": "הפחדים האבודים",
+      "artist": "Ofek Aberjil",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:41.853Z"
+    },
+    {
+      "id": "18m4LhxFMJUtJuJ8y1hiyz",
+      "title": "בלילות",
+      "artist": "Ofek Aberjil",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:41.853Z"
+    },
     {
       "id": "3ryHdRecXnFivfKx5MJZOz",
       "title": "26",
