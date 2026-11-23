@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6212,
-  "last_updated": "2026-11-23T19:36:22.128Z",
+  "version": 6214,
+  "last_updated": "2026-11-23T19:36:25.462Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "443dqMO5Gzusd9rIaT6TkH",
+      "title": "מכל הנפילות",
+      "artist": "מושיקו מור",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:25.462Z"
+    },
+    {
+      "id": "2ctvdKmETyOzPb2GiJJT53",
+      "title": "Breathe (In the Air)",
+      "artist": "Pink Floyd",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:36:25.462Z"
+    },
     {
       "id": "0kDIoKvSBne7yWN3mlmwRm",
       "title": "תמסרי לו",
