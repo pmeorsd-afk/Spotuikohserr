@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6321,
-  "last_updated": "2026-11-23T19:42:55.810Z",
+  "version": 6322,
+  "last_updated": "2026-11-23T19:43:00.014Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3R07e1YzlIJATTjA3aT0Et",
+      "title": "לא להיות לבד",
+      "artist": "Mergui",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:43:00.014Z"
+    },
     {
       "id": "6Kfd3XrgqJ0M50O3Z5KN9c",
       "title": "Running Back To You",
