@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6227,
-  "last_updated": "2026-11-23T19:36:56.706Z",
+  "version": 6228,
+  "last_updated": "2026-11-23T19:37:01.141Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3Y6B8qadz0SH8m2y6Th2Mg",
+      "title": "שכחתי מזמן - Live",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:37:01.141Z"
+    },
     {
       "id": "youtube:bGBmhMxDm0I",
       "title": "מבט כואב",
