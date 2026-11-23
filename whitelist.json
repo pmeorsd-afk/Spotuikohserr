@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6307,
-  "last_updated": "2026-11-23T19:42:12.733Z",
+  "version": 6308,
+  "last_updated": "2026-11-23T19:42:16.254Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7v8vF6fK4YO4xEbbtzZPDK",
+      "title": "אדם",
+      "artist": "Vic Ohana Jan, Ron Sky Nesher",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:42:16.254Z"
+    },
     {
       "id": "7zYR7lIPBbr3txwyQxuZAD",
       "title": "İstanbul İstanbul Olalı",
