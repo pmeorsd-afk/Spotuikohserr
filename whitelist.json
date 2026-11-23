@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6375,
-  "last_updated": "2026-11-23T20:12:31.284Z",
+  "version": 6376,
+  "last_updated": "2026-11-23T20:12:35.567Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4TDSFfzlCEWbvzuZ9PJ8Zf",
+      "title": "out of my head",
+      "artist": "James Marley",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T20:12:35.567Z"
+    },
     {
       "id": "7CuW3hhdC7mqLrh6Tn0S9Y",
       "title": "Neshama on Fire",
