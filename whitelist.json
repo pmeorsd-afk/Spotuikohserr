@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6360,
-  "last_updated": "2026-11-23T19:44:25.630Z",
+  "version": 6362,
+  "last_updated": "2026-11-23T19:44:30.143Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4nS2WQ3zh2RadSLh8Tp9yw",
+      "title": "Keil Hakavod",
+      "artist": "Yosef Kugler, Yaakov Rosenblum",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:44:30.143Z"
+    },
+    {
+      "id": "youtube:BdLmg-FblZ8",
+      "title": "פרחי מיאמי - ירושלים שמע קולנו  - נקדש את שמך - Miami boys choir - yerushalaim  -nekadesh",
+      "artist": "גל פז - gal paz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:44:30.143Z"
+    },
     {
       "id": "youtube:iIXd-ecQEuI",
       "title": "פרחי מיאמי - כלל ישראל - מהרה- Miami boys choir - klal israel -mehera",
