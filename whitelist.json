@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6232,
-  "last_updated": "2026-11-23T19:37:21.819Z",
+  "version": 6234,
+  "last_updated": "2026-11-23T19:37:25.553Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "17vXZTcVsCJF1NBoaBQjm7",
+      "title": "Barcelona Nights",
+      "artist": "Vicetone",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:37:25.553Z"
+    },
+    {
+      "id": "4AE6kfvQpjNEjk8pLTwFRx",
+      "title": "In My Blood",
+      "artist": "The Score",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:37:25.553Z"
+    },
     {
       "id": "3Qn8raXXqS9fq099D5aFLS",
       "title": "בין החלומות",
