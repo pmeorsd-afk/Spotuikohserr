@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6258,
-  "last_updated": "2026-11-23T19:39:20.353Z",
+  "version": 6260,
+  "last_updated": "2026-11-23T19:39:24.048Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2UFOh8iMQ2DON7sl3lqGJH",
+      "title": "Long Way Down",
+      "artist": "One Direction",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:24.048Z"
+    },
+    {
+      "id": "4qG3Um3jXlQnaQV1yVo3it",
+      "title": "Better Than Words",
+      "artist": "One Direction",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:39:24.048Z"
+    },
     {
       "id": "2hwU3ad5OixVJCgOgQdLMV",
       "title": "בן אדם",
