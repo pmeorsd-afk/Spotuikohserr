@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6284,
-  "last_updated": "2026-11-23T19:40:58.195Z",
+  "version": 6286,
+  "last_updated": "2026-11-23T19:41:02.107Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:e_o6dijDmEo",
+      "title": "יענקי ברוין, אהר'לע סאמט, יאפצ'יק- הנרות הללו | Yanki Braun, Arale Samet, Yaptzik - Haneiros Hallalu",
+      "artist": "בחזית",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:41:02.107Z"
+    },
+    {
+      "id": "0kaG4iOHTA77ORIkDh3ByC",
+      "title": "Tribalian Premonition",
+      "artist": "Tribalian",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-23T19:41:02.107Z"
+    },
     {
       "id": "youtube:J6x0NgzikhU",
       "title": "בנצי שטיין & מקהלת נשמה & מוטי כהן - הנרות הללו 🔥 שיר חנוכה \\\\ צבעים הפקות",
