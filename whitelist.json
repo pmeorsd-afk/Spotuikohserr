@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6460,
-  "last_updated": "2026-11-24T12:05:47.272Z",
+  "version": 6461,
+  "last_updated": "2026-11-24T12:05:51.226Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5NSBrcJWwqLsQPuX0XczOW",
+      "title": "A Little Night Music in G Major, K.525: I. Allegro - Excerpt, Arr. for piano by Daniel Paterok",
+      "artist": "Daniel Paterok, Wolfgang Amadeus Mozart",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:51.226Z"
+    },
     {
       "id": "3icDAkAImzq03VBb6j5wE5",
       "title": "Piano Concerto No. 21 in C Major, K. 467: II. Andante",
