@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6423,
-  "last_updated": "2026-11-24T12:04:10.697Z",
+  "version": 6424,
+  "last_updated": "2026-11-24T12:04:14.493Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2elA6JLRaQ6iB7hxiuTKN4",
+      "title": "I Tried",
+      "artist": "Bone Thugs-N-Harmony, Akon",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:04:14.493Z"
+    },
     {
       "id": "2NeHnSFnwNp1Z5WYgcjJ8L",
       "title": "X Gon' Give It To Ya",
