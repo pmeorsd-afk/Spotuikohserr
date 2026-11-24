@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6487,
-  "last_updated": "2026-11-24T12:06:44.525Z",
+  "version": 6488,
+  "last_updated": "2026-11-24T12:06:48.319Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1keNuUUzNNJ3A9Gfy7LPi0",
+      "title": "יפה לך להיות מאושרת",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:48.319Z"
+    },
     {
       "id": "7i2xVGqiF5FBPvLg6PLHX3",
       "title": "There She Go (feat. Lil Uzi Vert)",
