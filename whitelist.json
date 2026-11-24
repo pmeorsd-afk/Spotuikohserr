@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6530,
-  "last_updated": "2026-11-24T16:35:11.491Z",
+  "version": 6531,
+  "last_updated": "2026-11-24T16:35:17.873Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3hfCKjP17sODA1gKE7lqfS",
+      "title": "ילד פריפריה",
+      "artist": "Tuna",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:35:17.873Z"
+    },
     {
       "id": "40eCbLoXl1zctJeGNdBA9P",
       "title": "אין לזה סוף",
