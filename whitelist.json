@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6510,
-  "last_updated": "2026-11-24T12:07:41.404Z",
+  "version": 6511,
+  "last_updated": "2026-11-24T12:07:45.086Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7FVWwfjkjf2g2EQhovFd7H",
+      "title": "שערי שמים",
+      "artist": "אלי וקסלר, יעקב רוזנפלד",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:07:45.086Z"
+    },
     {
       "id": "3nEESJpMTdbcJhYkg4I3Ay",
       "title": "המלכה שלי",
