@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6454,
-  "last_updated": "2026-11-24T12:05:32.969Z",
+  "version": 6456,
+  "last_updated": "2026-11-24T12:05:36.748Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Fyqe4e5VjCaFjNSNYWa25",
+      "title": "SEYA",
+      "artist": "GIMS, SativaMusic, Morad",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:36.748Z"
+    },
+    {
+      "id": "4rQUMibKFlH18AoDf1fQWl",
+      "title": "כמו בספרים ההם",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:36.748Z"
+    },
     {
       "id": "3n348I4uE5GZ3tprVdqzPO",
       "title": "Casablanca (feat. Morad)",
