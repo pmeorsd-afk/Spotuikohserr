@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6591,
-  "last_updated": "2026-11-24T16:39:42.761Z",
+  "version": 6592,
+  "last_updated": "2026-11-24T16:39:48.375Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0RPjiZq8XttRvfA6zcJHiK",
+      "title": "All for Me",
+      "artist": "Swif7",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:39:48.375Z"
+    },
     {
       "id": "3GSQIW4o16xjpoqEQqTyzW",
       "title": "Falling",
