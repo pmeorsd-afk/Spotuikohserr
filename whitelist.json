@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6522,
-  "last_updated": "2026-11-24T13:08:12.238Z",
+  "version": 6523,
+  "last_updated": "2026-11-24T13:11:48.431Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5H0qzTE9s4wh9x1hbvMtmA",
+      "title": "Light Up",
+      "artist": "BANNERS",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T13:11:48.431Z"
+    },
     {
       "id": "2Ro9FLIVhPwIQopSr48oJT",
       "title": "Wildfire",
