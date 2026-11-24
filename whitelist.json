@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6504,
-  "last_updated": "2026-11-24T12:07:26.504Z",
+  "version": 6505,
+  "last_updated": "2026-11-24T12:07:30.600Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3FAJ6O0NOHQV8Mc5Ri6ENp",
+      "title": "Heartbreak Anniversary",
+      "artist": "GIVĒON",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:07:30.600Z"
+    },
     {
       "id": "0gTVH3azONMvIg6JDJdmoY",
       "title": "מישהו לעכשיו",
