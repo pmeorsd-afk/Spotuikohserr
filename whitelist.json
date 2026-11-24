@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6655,
-  "last_updated": "2026-11-24T19:28:50.446Z",
+  "version": 6657,
+  "last_updated": "2026-11-24T19:28:54.381Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6xbraxG0bSBOuAr5IUXmtM",
+      "title": "iSpy (feat. Lil Yachty)",
+      "artist": "KYLE, Lil Yachty",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:28:54.381Z"
+    },
+    {
+      "id": "64p6ua7zpf66s62StC2QLv",
+      "title": "Bad Boy (feat. Luana Kiara)",
+      "artist": "Raaban, Tungevaag, Luana Kiara",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:28:54.381Z"
+    },
     {
       "id": "6whv4cMPhgbBCVhhffQP4u",
       "title": "Outta My Head",
