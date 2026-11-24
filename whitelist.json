@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6593,
-  "last_updated": "2026-11-24T16:39:52.764Z",
+  "version": 6594,
+  "last_updated": "2026-11-24T16:39:56.615Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "06POVSGbIFuQsc721gLk6Q",
+      "title": "Close To The Sun",
+      "artist": "TheFatRat, Anjulie",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:39:56.615Z"
+    },
     {
       "id": "1tE9no1NyExKy7NCsg9ucW",
       "title": "Miracles (feat. Tina Stachowiak)",
