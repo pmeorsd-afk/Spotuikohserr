@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6412,
-  "last_updated": "2026-11-24T12:03:33.518Z",
+  "version": 6413,
+  "last_updated": "2026-11-24T12:03:37.395Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4uOfJbQ1hvnJeXpJKZg89V",
+      "title": "ירח נעלם",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:37.395Z"
+    },
     {
       "id": "3btJYUAG9QBoJlRxWLe6ry",
       "title": "המרחק ממך",
