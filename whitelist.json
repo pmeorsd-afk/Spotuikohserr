@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6417,
-  "last_updated": "2026-11-24T12:03:51.566Z",
+  "version": 6418,
+  "last_updated": "2026-11-24T12:03:55.803Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4GWMy4iaVQ9OoEcXon3vso",
+      "title": "אוקיינוס",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:55.803Z"
+    },
     {
       "id": "2Fli9cFirlCDBFvVtFHzBl",
       "title": "חזק ממני",
