@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6580,
-  "last_updated": "2026-11-24T16:38:56.786Z",
+  "version": 6582,
+  "last_updated": "2026-11-24T16:39:00.930Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Eqdkt6DfGNWElHpeujHGJ",
+      "title": "HIGHJACK (right back)",
+      "artist": "Alok, Łaszewo, A$AP Rocky",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:39:00.930Z"
+    },
+    {
+      "id": "3Xtf85oQUo8Fe8c9aG3cHr",
+      "title": "ניגון ברדיצ'ב/ התבודדות",
+      "artist": "Akiva",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:39:00.930Z"
+    },
     {
       "id": "7MIhUdNJtaOnDmC5nBC1fb",
       "title": "Deep Down (feat. Never Dull)",
