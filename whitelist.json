@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6485,
-  "last_updated": "2026-11-24T12:06:40.603Z",
+  "version": 6487,
+  "last_updated": "2026-11-24T12:06:44.525Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7i2xVGqiF5FBPvLg6PLHX3",
+      "title": "There She Go (feat. Lil Uzi Vert)",
+      "artist": "Justin Bieber, Lil Uzi Vert",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:44.525Z"
+    },
+    {
+      "id": "3buwFfY33H32wfZ6X9poV3",
+      "title": "Somebody",
+      "artist": "Justin Bieber",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:44.525Z"
+    },
     {
       "id": "2tB9OFgAHjAds3cqquLlvp",
       "title": "Loved By You (feat. Burna Boy)",
