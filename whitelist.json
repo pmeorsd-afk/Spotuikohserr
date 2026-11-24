@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6406,
-  "last_updated": "2026-11-24T12:03:18.259Z",
+  "version": 6408,
+  "last_updated": "2026-11-24T12:03:21.897Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3uarXYLXAPlF4ZU5qUjU7U",
+      "title": "היא לא את",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:21.897Z"
+    },
+    {
+      "id": "3l9UYGS3d8yLKgp6RpVZ3K",
+      "title": "אייל גולן קורא לך",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:21.897Z"
+    },
     {
       "id": "5vehqD4qjwyr7fBerR1hNA",
       "title": "אני שונא אותך",
