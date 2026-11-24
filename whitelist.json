@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6525,
-  "last_updated": "2026-11-24T16:34:39.879Z",
+  "version": 6527,
+  "last_updated": "2026-11-24T16:34:44.833Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5vjLSffimiIP26QG5WcN2K",
+      "title": "Hold On",
+      "artist": "Chord Overstreet",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:34:44.833Z"
+    },
+    {
+      "id": "641ioKV4sLGvNahKTICQmt",
+      "title": "פיראטים",
+      "artist": "Tuna",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:34:44.833Z"
+    },
     {
       "id": "44siIYlT1dMRQysOVjEvdF",
       "title": "broken",
