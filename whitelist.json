@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6583,
-  "last_updated": "2026-11-24T16:39:04.590Z",
+  "version": 6585,
+  "last_updated": "2026-11-24T16:39:08.586Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0sftzYE0YgPHXrvJyUyGjB",
+      "title": "Deep In Your Love",
+      "artist": "Alok, Bebe Rexha",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:39:08.586Z"
+    },
+    {
+      "id": "6NbBcllBCTYMUkB1akNY6m",
+      "title": "הפועל אחרייך - Fan Version",
+      "artist": "הצבא הכחול, 06 החזית הכחולה",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:39:08.586Z"
+    },
     {
       "id": "6iW38RGqdDGOofmz2HeXLW",
       "title": "Piece Of Your Heart - Alok Remix",
