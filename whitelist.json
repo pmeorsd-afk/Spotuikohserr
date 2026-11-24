@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6421,
-  "last_updated": "2026-11-24T12:04:03.307Z",
+  "version": 6422,
+  "last_updated": "2026-11-24T12:04:06.971Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6F6326v0FadbSkNKOEP9O2",
+      "title": "איזה געגוע",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:04:06.971Z"
+    },
     {
       "id": "2H9HRgO2ZaHjjhj2DF8Sqz",
       "title": "נדרתי נדר - גרסה ראשונה",
