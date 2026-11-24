@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6566,
-  "last_updated": "2026-11-24T16:38:07.592Z",
+  "version": 6567,
+  "last_updated": "2026-11-24T16:38:11.526Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1dVruOZHSj2BsJA7I5fHB0",
+      "title": "ניגוני ויז'ניץ באבוב",
+      "artist": "Daniel Ahaviel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:38:11.526Z"
+    },
     {
       "id": "7jkyt9jMY6uLjDmNYkpdG8",
       "title": "בחצר של אבו",
