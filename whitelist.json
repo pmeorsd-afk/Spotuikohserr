@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6461,
-  "last_updated": "2026-11-24T12:05:51.226Z",
+  "version": 6463,
+  "last_updated": "2026-11-24T12:05:54.943Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4IDUy6F75u4K4pxX0ruule",
+      "title": "מסיבות של מסכות",
+      "artist": "Ben El",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:54.943Z"
+    },
+    {
+      "id": "2PGVaAuKgmXQqM58UUCrfW",
+      "title": "Tumid",
+      "artist": "Yechiel Giniger, Mendy J, Chaim Green",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:54.943Z"
+    },
     {
       "id": "5NSBrcJWwqLsQPuX0XczOW",
       "title": "A Little Night Music in G Major, K.525: I. Allegro - Excerpt, Arr. for piano by Daniel Paterok",
