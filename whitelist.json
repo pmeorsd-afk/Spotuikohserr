@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6554,
-  "last_updated": "2026-11-24T16:37:13.431Z",
+  "version": 6555,
+  "last_updated": "2026-11-24T16:37:20.382Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0gZ9ap16DJE873Es7Pc7kT",
+      "title": "Life With You",
+      "artist": "Seph Schlueter",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:37:20.382Z"
+    },
     {
       "id": "0CCwRkRQOtlOsCMKXYw2ud",
       "title": "כד קטן",
