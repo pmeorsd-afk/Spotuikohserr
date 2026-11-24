@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6657,
-  "last_updated": "2026-11-24T19:28:54.381Z",
+  "version": 6658,
+  "last_updated": "2026-11-24T19:28:57.994Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2fovN88nMPZhATtCNeNaqM",
+      "title": "Adhana",
+      "artist": "Vini Vici, Astrix",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:28:57.994Z"
+    },
     {
       "id": "6xbraxG0bSBOuAr5IUXmtM",
       "title": "iSpy (feat. Lil Yachty)",
