@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6582,
-  "last_updated": "2026-11-24T16:39:00.930Z",
+  "version": 6583,
+  "last_updated": "2026-11-24T16:39:04.590Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6iW38RGqdDGOofmz2HeXLW",
+      "title": "Piece Of Your Heart - Alok Remix",
+      "artist": "MEDUZA, Alok, Goodboys",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:39:04.590Z"
+    },
     {
       "id": "1Eqdkt6DfGNWElHpeujHGJ",
       "title": "HIGHJACK (right back)",
