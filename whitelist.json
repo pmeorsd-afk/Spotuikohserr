@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6675,
-  "last_updated": "2026-11-24T19:30:16.331Z",
+  "version": 6677,
+  "last_updated": "2026-11-24T19:30:20.692Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4r5SpnvNJ0JylS4JgR1hhB",
+      "title": "יש לי גלידה הכי טובה",
+      "artist": "כפר השירים",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:30:20.692Z"
+    },
+    {
+      "id": "5WFQTIyl0Z9onzKapXcrXS",
+      "title": "Superstar",
+      "artist": "David Puentez, Albert Neve",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:30:20.692Z"
+    },
     {
       "id": "5rgrBsAFYMun6yhtnLKRPz",
       "title": "Right My Wrongs",
