@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6710,
-  "last_updated": "2026-11-24T21:22:26.215Z",
+  "version": 6711,
+  "last_updated": "2026-11-24T21:22:30.194Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6v3KW9xbzN5yKLt9YKDYA2",
+      "title": "Señorita",
+      "artist": "Shawn Mendes, Camila Cabello",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T21:22:30.194Z"
+    },
     {
       "id": "2KslE17cAJNHTsI2MI0jb2",
       "title": "Standing Next to You",
