@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6488,
-  "last_updated": "2026-11-24T12:06:48.319Z",
+  "version": 6491,
+  "last_updated": "2026-11-24T12:06:52.036Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,33 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Byxr0ooaeLayBBaVLup67",
+      "title": "Punjabi",
+      "artist": "Timmy Trumpet, Dimatik",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:52.036Z"
+    },
+    {
+      "id": "6SKwQghsR8AISlxhcwyA9R",
+      "title": "Marry You",
+      "artist": "Bruno Mars",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:52.036Z"
+    },
+    {
+      "id": "6iKFUkq6GmaW4UQGED1tSd",
+      "title": "Know No Better (feat. DaBaby)",
+      "artist": "Justin Bieber, DaBaby",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:52.036Z"
+    },
     {
       "id": "1keNuUUzNNJ3A9Gfy7LPi0",
       "title": "יפה לך להיות מאושרת",
