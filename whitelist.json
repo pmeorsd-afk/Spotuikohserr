@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6619,
-  "last_updated": "2026-11-24T19:24:15.947Z",
+  "version": 6621,
+  "last_updated": "2026-11-24T19:24:19.735Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5I97xVqU6oRY3ErMUVz4qB",
+      "title": "All Good Things (Come To An End)",
+      "artist": "Dynoro",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:24:19.735Z"
+    },
+    {
+      "id": "youtube:1bwlVu_d1Sk",
+      "title": "חתן דומה למלך",
+      "artist": "אלי הרצליך",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:24:19.735Z"
+    },
     {
       "id": "5etQuVGKh3ELbB32s88QgT",
       "title": "אביא לך",
