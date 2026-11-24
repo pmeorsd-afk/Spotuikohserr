@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6559,
-  "last_updated": "2026-11-24T16:37:38.004Z",
+  "version": 6560,
+  "last_updated": "2026-11-24T16:37:41.949Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4UMxefJY6cwNRVauf8lm0C",
+      "title": "Cry",
+      "artist": "Ashley Singh",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:37:41.949Z"
+    },
     {
       "id": "6jOImduPUIC4QEPIYELhZH",
       "title": "Sanctuary",
