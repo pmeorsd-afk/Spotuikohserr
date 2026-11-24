@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6492,
-  "last_updated": "2026-11-24T12:06:55.859Z",
+  "version": 6494,
+  "last_updated": "2026-11-24T12:06:59.625Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5dtDIxr6zPw3X1RzHj1kUd",
+      "title": "הכל מהכל",
+      "artist": "Idan Yaniv, E-Z",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:59.625Z"
+    },
+    {
+      "id": "0GiwV6v3AgJfdu59tj719Y",
+      "title": "Pump It Up",
+      "artist": "Endor",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:59.625Z"
+    },
     {
       "id": "5n7343Id7M74H12fDyqE3h",
       "title": "פרנסה",
