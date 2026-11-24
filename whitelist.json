@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6415,
-  "last_updated": "2026-11-24T12:03:47.892Z",
+  "version": 6417,
+  "last_updated": "2026-11-24T12:03:51.566Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Fli9cFirlCDBFvVtFHzBl",
+      "title": "חזק ממני",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:51.566Z"
+    },
+    {
+      "id": "3gt8bvgKd7QqLSu05CX78d",
+      "title": "נסתרות דרכי האל",
+      "artist": "Ofer Levi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:51.566Z"
+    },
     {
       "id": "3TkjTrHAPP2N8xN99ws9Oo",
       "title": "כשאת אינך",
