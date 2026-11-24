@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6575,
-  "last_updated": "2026-11-24T16:38:36.432Z",
+  "version": 6576,
+  "last_updated": "2026-11-24T16:38:40.213Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1BgMKhhaIRo5aMgnHfOsWc",
+      "title": "את לא פה",
+      "artist": "Koko from Eilat, התאומים",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:38:40.213Z"
+    },
     {
       "id": "7beFhOMJCD1oAEMlHVx7dW",
       "title": "בני היכלא",
