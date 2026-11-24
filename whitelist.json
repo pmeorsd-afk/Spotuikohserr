@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6660,
-  "last_updated": "2026-11-24T19:29:02.340Z",
+  "version": 6661,
+  "last_updated": "2026-11-24T19:29:06.542Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2UibtL86tqR5C0f9dozSt8",
+      "title": "מתחת לשמיים",
+      "artist": "David Broza",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:29:06.542Z"
+    },
     {
       "id": "0cqnirJciYMLa3nNacRFjF",
       "title": "Run It Up",
