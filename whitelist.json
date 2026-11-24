@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6713,
-  "last_updated": "2026-11-24T22:06:54.046Z",
+  "version": 6714,
+  "last_updated": "2026-11-24T22:06:58.448Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7gvTqXos6MaVSmuQvIEJQA",
+      "title": "אם אני בא",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T22:06:58.448Z"
+    },
     {
       "id": "7wqLl9iCbgcX1R0BdOXU8Q",
       "title": "מחרוזת שירי עצמונה ושירים חסידיים | מכינת עֹצֶם",
