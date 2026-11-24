@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6548,
-  "last_updated": "2026-11-24T16:36:46.508Z",
+  "version": 6549,
+  "last_updated": "2026-11-24T16:36:51.316Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4MHORmGs8oN7AASfGmApcM",
+      "title": "Something In The Heavens",
+      "artist": "Lewis Capaldi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:36:51.316Z"
+    },
     {
       "id": "7cHXCv6FKM9MTZrbZ74Ttu",
       "title": "מחרוזת \"עשית לי פרפרים\" בית\"ר ירושלים",
