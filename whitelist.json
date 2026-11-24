@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6647,
-  "last_updated": "2026-11-24T19:28:26.091Z",
+  "version": 6649,
+  "last_updated": "2026-11-24T19:28:29.997Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2SAqBLGA283SUiwJ3xOUVI",
+      "title": "Laugh Now Cry Later (feat. Lil Durk)",
+      "artist": "Drake, Lil Durk",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:28:29.997Z"
+    },
+    {
+      "id": "1gUSywSt85PXeD1f3eGhRT",
+      "title": "ללב נכנסת",
+      "artist": "דודו אהרון, NOROZ",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:28:29.997Z"
+    },
     {
       "id": "7sO5G9EABYOXQKNPNiE9NR",
       "title": "Ric Flair Drip (with Metro Boomin)",
