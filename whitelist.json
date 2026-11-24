@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6695,
-  "last_updated": "2026-11-24T19:31:42.697Z",
+  "version": 6697,
+  "last_updated": "2026-11-24T19:31:46.637Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4HCOHRCSQelz2GPX8iTamO",
+      "title": "Flower In A Hurricane (feat. Tame Impala, SZA, King Gizzard & the Lizard Wizard) From GTAVI: Original Score",
+      "artist": "Justice, Tame Impala, SZA, Grand Theft Auto VI, King Gizzard & The Lizard Wizard",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:31:46.637Z"
+    },
+    {
+      "id": "3qBmXTFEUxML2uiAHWUtDN",
+      "title": "שרוטים",
+      "artist": "Subliminal, Eden Gabay",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:31:46.637Z"
+    },
     {
       "id": "54mtqKoemow0GiZeGixazh",
       "title": "מה חשוב היום - LIVE",
