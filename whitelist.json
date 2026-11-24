@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6437,
-  "last_updated": "2026-11-24T12:04:53.050Z",
+  "version": 6438,
+  "last_updated": "2026-11-24T12:04:56.919Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ufOGj5WFEYCaRugyglrdY",
+      "title": "לשיר וכדורגל",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:04:56.919Z"
+    },
     {
       "id": "3mE7Xkub3yX9FKY0o3uCRi",
       "title": "אל תגידי לי לא",
