@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6542,
-  "last_updated": "2026-11-24T16:36:26.474Z",
+  "version": 6543,
+  "last_updated": "2026-11-24T16:36:30.416Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7jlQtQ87xurU5LnlnvEPvp",
+      "title": "Miss you",
+      "artist": "Marc Atlas",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:36:30.416Z"
+    },
     {
       "id": "4MrW3lMdMpKUZ2Cn2mMvBX",
       "title": "בחוף של טראפטוני",
