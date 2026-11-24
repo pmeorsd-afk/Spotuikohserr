@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6618,
-  "last_updated": "2026-11-24T19:24:09.982Z",
+  "version": 6619,
+  "last_updated": "2026-11-24T19:24:15.947Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5etQuVGKh3ELbB32s88QgT",
+      "title": "אביא לך",
+      "artist": "Ehud Banai",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:24:15.947Z"
+    },
     {
       "id": "7jrNJv7Nt7ewrXP1V8Dtoc",
       "title": "זהב",
