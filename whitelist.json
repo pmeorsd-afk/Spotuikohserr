@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6435,
-  "last_updated": "2026-11-24T12:04:43.523Z",
+  "version": 6436,
+  "last_updated": "2026-11-24T12:04:47.615Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ZkOfHnpsCrLEPHxu6wP5I",
+      "title": "בגדים ומתנות",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:04:47.615Z"
+    },
     {
       "id": "29T5WKRPdXrbytynFs2RSF",
       "title": "מאושרת בלעדיי",
