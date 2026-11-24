@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6431,
-  "last_updated": "2026-11-24T12:04:32.412Z",
+  "version": 6432,
+  "last_updated": "2026-11-24T12:04:35.982Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5hTAhPWWm73CMtHON02dbQ",
+      "title": "שישי בצהריים",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:04:35.982Z"
+    },
     {
       "id": "56Pj8fB5Fh7Hslo7h7fcNY",
       "title": "מזל",
