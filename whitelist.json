@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6623,
-  "last_updated": "2026-11-24T19:26:34.947Z",
+  "version": 6624,
+  "last_updated": "2026-11-24T19:26:40.571Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3q2gRjU2UdOYRDY1p4cNHr",
+      "title": "It Must Be Love",
+      "artist": "Madness",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:26:40.571Z"
+    },
     {
       "id": "52J8US4J3hdJaywscfIMxf",
       "title": "אח של סאלים",
