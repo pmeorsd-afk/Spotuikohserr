@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6626,
-  "last_updated": "2026-11-24T19:26:48.744Z",
+  "version": 6627,
+  "last_updated": "2026-11-24T19:27:18.508Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2OP7UAuQF1OJbjeYXa5fhm",
+      "title": "Silence - John Summit Remix",
+      "artist": "Delerium, Sarah McLachlan, John Summit",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:27:18.508Z"
+    },
     {
       "id": "5AF6gMx6LVG9ktYL3XnAKJ",
       "title": "מסע - Acoustic Version",
