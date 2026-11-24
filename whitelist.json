@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6482,
-  "last_updated": "2026-11-24T12:06:36.642Z",
+  "version": 6485,
+  "last_updated": "2026-11-24T12:06:40.603Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,33 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2tB9OFgAHjAds3cqquLlvp",
+      "title": "Loved By You (feat. Burna Boy)",
+      "artist": "Justin Bieber, Burna Boy",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:40.603Z"
+    },
+    {
+      "id": "5NU40QTlXrDUJzDBdv79bg",
+      "title": "Deserve You",
+      "artist": "Justin Bieber",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:40.603Z"
+    },
+    {
+      "id": "6Xgq7MvZiet0hVi3KaDSgJ",
+      "title": "Holy (feat. Chance The Rapper)",
+      "artist": "Justin Bieber, Chance the Rapper",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:40.603Z"
+    },
     {
       "id": "2WnAKZefdRHxtBEkRjFOHC",
       "title": "Anyone",
