@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6707,
-  "last_updated": "2026-11-24T20:59:39.725Z",
+  "version": 6708,
+  "last_updated": "2026-11-24T21:08:26.156Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "68lbSrXDORS51pmyjZv712",
+      "title": "SWIM",
+      "artist": "BTS",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T21:08:26.156Z"
+    },
     {
       "id": "1KfQnKQEZnljC6CrwwrZv0",
       "title": "Now Is the Time",
