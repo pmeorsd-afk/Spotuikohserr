@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6500,
-  "last_updated": "2026-11-24T12:07:11.098Z",
+  "version": 6502,
+  "last_updated": "2026-11-24T12:07:14.724Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2eauhZzDelRWx1f3PmdaxU",
+      "title": "חולה ירח",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:07:14.724Z"
+    },
+    {
+      "id": "0tvbmgO41hEqsZjqUjIALS",
+      "title": "משתבש לטובה",
+      "artist": "אברהם דהאן",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:07:14.724Z"
+    },
     {
       "id": "3pCSTUZAf9qvVwtJCsCZK7",
       "title": "סרט רע",
