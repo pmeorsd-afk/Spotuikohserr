@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6644,
-  "last_updated": "2026-11-24T19:28:18.263Z",
+  "version": 6646,
+  "last_updated": "2026-11-24T19:28:22.648Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4VXIryQMWpIdGgYR4TrjT1",
+      "title": "All Girls Are The Same",
+      "artist": "Juice WRLD",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:28:22.648Z"
+    },
+    {
+      "id": "2ZRo7axmMPeSVUvDbGkJah",
+      "title": "Hope",
+      "artist": "XXXTENTACION",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:28:22.648Z"
+    },
     {
       "id": "5BbdKBZO0TH0GhfxUfyhL9",
       "title": "Freestyle",
