@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6567,
-  "last_updated": "2026-11-24T16:38:11.526Z",
+  "version": 6569,
+  "last_updated": "2026-11-24T16:38:15.612Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Ie7hlbMBCbE39HTuseqvL",
+      "title": "ניגון גמלא",
+      "artist": "Daniel Ahaviel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:38:15.612Z"
+    },
+    {
+      "id": "00Dep8ZstQYsfmutPWbDTB",
+      "title": "פריילעך רומני",
+      "artist": "Daniel Ahaviel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:38:15.612Z"
+    },
     {
       "id": "1dVruOZHSj2BsJA7I5fHB0",
       "title": "ניגוני ויז'ניץ באבוב",
