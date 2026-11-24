@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6673,
-  "last_updated": "2026-11-24T19:29:47.670Z",
+  "version": 6674,
+  "last_updated": "2026-11-24T19:30:12.286Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3wfUX6BrG5z4WDJpowBztb",
+      "title": "רציתי שתדע",
+      "artist": "Uzi Hitman",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:30:12.286Z"
+    },
     {
       "id": "6lFHE3POUybg20bbWqrYJC",
       "title": "Kernkraft 400 (A Better Day) - MistaJam Remix",
