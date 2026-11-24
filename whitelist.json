@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6540,
-  "last_updated": "2026-11-24T16:36:22.305Z",
+  "version": 6542,
+  "last_updated": "2026-11-24T16:36:26.474Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4MrW3lMdMpKUZ2Cn2mMvBX",
+      "title": "בחוף של טראפטוני",
+      "artist": "Shlomi Shabat",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:36:26.474Z"
+    },
+    {
+      "id": "0nt9QNF9rY5mPTAV9Nn9yH",
+      "title": "You Were Mine",
+      "artist": "Forest Blakk",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:36:26.474Z"
+    },
     {
       "id": "0mLB2wh3dZfk0G627hk9A4",
       "title": "Safe With Me",
