@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6480,
-  "last_updated": "2026-11-24T12:06:32.779Z",
+  "version": 6482,
+  "last_updated": "2026-11-24T12:06:36.642Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2WnAKZefdRHxtBEkRjFOHC",
+      "title": "Anyone",
+      "artist": "Justin Bieber",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:36.642Z"
+    },
+    {
+      "id": "33UJPtynZ7oingCJMBWElF",
+      "title": "תזהר ממנה",
+      "artist": "Lior Farhi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:36.642Z"
+    },
     {
       "id": "2hlfwQP3FNfbBfSos3DsBt",
       "title": "יש נ נח",
