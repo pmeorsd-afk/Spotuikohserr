@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6564,
-  "last_updated": "2026-11-24T16:38:03.408Z",
+  "version": 6566,
+  "last_updated": "2026-11-24T16:38:07.592Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7jkyt9jMY6uLjDmNYkpdG8",
+      "title": "בחצר של אבו",
+      "artist": "Daniel Ahaviel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:38:07.592Z"
+    },
+    {
+      "id": "7zgPLCSwxCmOJ5yH1kmmZ5",
+      "title": "מחרוזת חנוכה אש",
+      "artist": "שמוליק סופר, שמואל חיל",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:38:07.592Z"
+    },
     {
       "id": "3hcuzRNrWsdP5iVDyTkt0e",
       "title": "צור משלו",
