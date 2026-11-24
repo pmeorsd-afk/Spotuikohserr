@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6683,
-  "last_updated": "2026-11-24T19:30:45.264Z",
+  "version": 6684,
+  "last_updated": "2026-11-24T19:30:48.922Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0iBhasiigghH47TefmFSY6",
+      "title": "Dance Monkey",
+      "artist": "Peter Bence",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:30:48.922Z"
+    },
     {
       "id": "0ByMEtOAATIdWkuYMIYnTv",
       "title": "Girlfriend",
