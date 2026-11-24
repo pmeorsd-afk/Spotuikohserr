@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6649,
-  "last_updated": "2026-11-24T19:28:29.997Z",
+  "version": 6650,
+  "last_updated": "2026-11-24T19:28:33.727Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7t3Xdbufg7q2onVsR8RBdY",
+      "title": "Fire On Fire",
+      "artist": "Sam Smith",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:28:33.727Z"
+    },
     {
       "id": "2SAqBLGA283SUiwJ3xOUVI",
       "title": "Laugh Now Cry Later (feat. Lil Durk)",
