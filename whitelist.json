@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6556,
-  "last_updated": "2026-11-24T16:37:25.530Z",
+  "version": 6557,
+  "last_updated": "2026-11-24T16:37:29.901Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0Q2mZN9IwaYqdUoJtIoZZZ",
+      "title": "סביבון סוב סוב סוב",
+      "artist": "Dalia Amihud, Kids Choir",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:37:29.901Z"
+    },
     {
       "id": "3W2ivfrQP1kG0Uh5IBJn7P",
       "title": "כד קטן",
