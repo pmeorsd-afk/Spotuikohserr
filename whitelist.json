@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6640,
-  "last_updated": "2026-11-24T19:28:02.082Z",
+  "version": 6641,
+  "last_updated": "2026-11-24T19:28:06.415Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,15 +4280,6 @@
     }
   ],
   "tracks": [
-    {
-      "id": "5kqIPrATaCc2LqxVWzQGbk",
-      "title": "7 Years",
-      "artist": "Lukas Graham",
-      "status": "approved",
-      "prev_status": "none",
-      "notes": "approved via telegram",
-      "updated_at": "2026-11-24T19:28:02.082Z"
-    },
     {
       "id": "0VB3YI0Dl6TT3C7mIbHTs4",
       "title": "Shotta Flow",
