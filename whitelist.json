@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6446,
-  "last_updated": "2026-11-24T12:05:13.187Z",
+  "version": 6447,
+  "last_updated": "2026-11-24T12:05:21.161Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7LsNoulNG0o6FDtXI5sozv",
+      "title": "אהבה ראשונה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:21.161Z"
+    },
     {
       "id": "566iUB4u9OBXE4csPpDYVp",
       "title": "טירוף מתוק",
