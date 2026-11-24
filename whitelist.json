@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6574,
-  "last_updated": "2026-11-24T16:38:32.421Z",
+  "version": 6575,
+  "last_updated": "2026-11-24T16:38:36.432Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7beFhOMJCD1oAEMlHVx7dW",
+      "title": "בני היכלא",
+      "artist": "Daniel Ahaviel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:38:36.432Z"
+    },
     {
       "id": "0KNLfFGD2tZUUiplRypUBE",
       "title": "ניגון המגיד",
