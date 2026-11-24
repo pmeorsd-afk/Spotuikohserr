@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6624,
-  "last_updated": "2026-11-24T19:26:40.571Z",
+  "version": 6625,
+  "last_updated": "2026-11-24T19:26:44.445Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4uhvMW7ly7tJil31YYscAN",
+      "title": "Erase Your Social",
+      "artist": "Lil Uzi Vert",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:26:44.445Z"
+    },
     {
       "id": "3q2gRjU2UdOYRDY1p4cNHr",
       "title": "It Must Be Love",
