@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6671,
-  "last_updated": "2026-11-24T19:29:43.832Z",
+  "version": 6673,
+  "last_updated": "2026-11-24T19:29:47.670Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6lFHE3POUybg20bbWqrYJC",
+      "title": "Kernkraft 400 (A Better Day) - MistaJam Remix",
+      "artist": "Topic, A7S, MistaJam",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:29:47.670Z"
+    },
+    {
+      "id": "7t2bFihaDvhIrd2gn2CWJO",
+      "title": "Or Nah (feat. The Weeknd, Wiz Khalifa & DJ Mustard) - Remix",
+      "artist": "Ty Dolla $ign, The Weeknd, Wiz Khalifa, Mustard",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:29:47.670Z"
+    },
     {
       "id": "1xm3eHSDlUph4jF1clFdAR",
       "title": "אמא יקרה לי",
