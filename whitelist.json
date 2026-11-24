@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6402,
-  "last_updated": "2026-11-24T12:03:06.076Z",
+  "version": 6403,
+  "last_updated": "2026-11-24T12:03:10.137Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Qx89IehmklwQab5EIoetp",
+      "title": "תדר",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:10.137Z"
+    },
     {
       "id": "5QyksKaghf3f6mH7V1yhUk",
       "title": "ככה באמת",
