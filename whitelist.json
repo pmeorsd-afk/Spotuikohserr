@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6408,
-  "last_updated": "2026-11-24T12:03:21.897Z",
+  "version": 6409,
+  "last_updated": "2026-11-24T12:03:25.823Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2EYf14B1VATNqDOCFE0p1x",
+      "title": "הוזה אותך מולי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:25.823Z"
+    },
     {
       "id": "3uarXYLXAPlF4ZU5qUjU7U",
       "title": "היא לא את",
