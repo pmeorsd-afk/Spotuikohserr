@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6543,
-  "last_updated": "2026-11-24T16:36:30.416Z",
+  "version": 6544,
+  "last_updated": "2026-11-24T16:36:34.425Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "69AC7cGZsxkhjmY0spltqi",
+      "title": "easier said than done",
+      "artist": "Alexander Stewart",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:36:34.425Z"
+    },
     {
       "id": "7jlQtQ87xurU5LnlnvEPvp",
       "title": "Miss you",
