@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6698,
-  "last_updated": "2026-11-24T19:31:51.427Z",
+  "version": 6699,
+  "last_updated": "2026-11-24T19:31:56.879Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "66eOqEOcBdSxuxeIRvp3jQ",
+      "title": "הביתה",
+      "artist": "אברימי רוט, אודי אולמן והפורום, דוד סלומון, יוסי ברגר, Yitzchak Meir, ישי לפידות ומועצת השירה היהודית, ישי ריבו, Meir Green, צבי וייס",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:31:56.879Z"
+    },
     {
       "id": "2ZMOimNy7eAdEuBbbExzYx",
       "title": "יותר מזה אנחנו לא צריכים",
