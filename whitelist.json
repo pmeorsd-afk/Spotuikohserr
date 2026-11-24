@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6507,
-  "last_updated": "2026-11-24T12:07:33.672Z",
+  "version": 6509,
+  "last_updated": "2026-11-24T12:07:37.323Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "152lZdxL1OR0ZMW6KquMif",
+      "title": "Location",
+      "artist": "Khalid",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:07:37.323Z"
+    },
+    {
+      "id": "2uP6t2J5MEwhr9rDkAAzwh",
+      "title": "Get You (feat. Kali Uchis)",
+      "artist": "Daniel Caesar, Kali Uchis",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:07:37.323Z"
+    },
     {
       "id": "3LBM25IgxI9y549SiYxtSi",
       "title": "Stuck On You",
