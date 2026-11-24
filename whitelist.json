@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6456,
-  "last_updated": "2026-11-24T12:05:36.748Z",
+  "version": 6457,
+  "last_updated": "2026-11-24T12:05:40.545Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6bgI3JZPDLm6gDE75utatQ",
+      "title": "Mentalité",
+      "artist": "Baby Gang",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:40.545Z"
+    },
     {
       "id": "0Fyqe4e5VjCaFjNSNYWa25",
       "title": "SEYA",
