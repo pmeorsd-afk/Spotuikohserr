@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6550,
-  "last_updated": "2026-11-24T16:36:56.462Z",
+  "version": 6551,
+  "last_updated": "2026-11-24T16:37:00.767Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0XgofE2Z42koEcDr3usGUZ",
+      "title": "ירושלים של ביתר",
+      "artist": "אדיר ניזרי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:37:00.767Z"
+    },
     {
       "id": "44OdptIkh6HU7XIfTFMQQZ",
       "title": "Deserve",
