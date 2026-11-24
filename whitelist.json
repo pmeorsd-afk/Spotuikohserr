@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6519,
-  "last_updated": "2026-11-24T13:07:42.796Z",
+  "version": 6521,
+  "last_updated": "2026-11-24T13:07:46.608Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5agR1z70SsxJ6e5BwIOWrs",
+      "title": "וויו וויו",
+      "artist": "Tuna",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T13:07:46.608Z"
+    },
+    {
+      "id": "4bXoVtbp6fN8FaSQvGQB41",
+      "title": "Tortured Soul",
+      "artist": "Chord Overstreet",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T13:07:46.608Z"
+    },
     {
       "id": "7eryoo7Obzh5KJI9jcYAFy",
       "title": "תחת אש",
