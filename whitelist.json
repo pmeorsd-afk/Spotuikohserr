@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6705,
-  "last_updated": "2026-11-24T20:30:42.673Z",
+  "version": 6706,
+  "last_updated": "2026-11-24T20:30:51.354Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:nRL-y23guCM",
+      "title": "לורו פיאנה",
+      "artist": "Roei Adam",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T20:30:51.354Z"
+    },
     {
       "id": "youtube:yrlyruDX5vI",
       "title": "אבי הטחול",
