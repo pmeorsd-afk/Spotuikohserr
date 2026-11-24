@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6401,
-  "last_updated": "2026-11-23T22:36:17.489Z",
+  "version": 6402,
+  "last_updated": "2026-11-24T12:03:06.076Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5QyksKaghf3f6mH7V1yhUk",
+      "title": "ככה באמת",
+      "artist": "Bar Tzabary",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:06.076Z"
+    },
     {
       "id": "4Y2WmA7LNVfIRDSIQvA4hi",
       "title": "תן לי את המילים",
