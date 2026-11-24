@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6668,
-  "last_updated": "2026-11-24T19:29:34.446Z",
+  "version": 6671,
+  "last_updated": "2026-11-24T19:29:43.832Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,33 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1xm3eHSDlUph4jF1clFdAR",
+      "title": "אמא יקרה לי",
+      "artist": "Hop! Channel, Sharonit Children Choir",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:29:43.832Z"
+    },
+    {
+      "id": "4beKzTMCCMDizozv4Y3Shj",
+      "title": "Never Be Lonely",
+      "artist": "Jax Jones, Zoe Wees",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:29:43.832Z"
+    },
+    {
+      "id": "3WD9p2gr6banKwswAJrIkB",
+      "title": "Satisfya",
+      "artist": "Imran Khan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:29:43.832Z"
+    },
     {
       "id": "youtube:tk6SmfkKEnw",
       "title": "Yehuda Green - Hashiveinu H\"",
