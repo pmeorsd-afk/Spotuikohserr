@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6665,
-  "last_updated": "2026-11-24T19:29:21.069Z",
+  "version": 6666,
+  "last_updated": "2026-11-24T19:29:24.689Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4q05KbxYZ5JdkmrletgPjF",
+      "title": "Whistle (feat. Calum Scott)",
+      "artist": "Jax Jones, Calum Scott",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:29:24.689Z"
+    },
     {
       "id": "07KXEDMj78x68D884wgVEm",
       "title": "High Fashion (feat. Mustard)",
