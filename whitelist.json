@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6612,
-  "last_updated": "2026-11-24T16:41:20.920Z",
+  "version": 6614,
+  "last_updated": "2026-11-24T16:41:25.274Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2A1aS3mwuGuX2yk1bgxOvA",
+      "title": "Kisses (feat. bbyclose)",
+      "artist": "BL3SS, CamrinWatsin, bbyclose",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:41:25.274Z"
+    },
+    {
+      "id": "6vWEAOUSxohKxhp0K1BsxL",
+      "title": "Mixed Personalities (feat. Kanye West)",
+      "artist": "YNW Melly, Kanye West",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:41:25.274Z"
+    },
     {
       "id": "2U4ScJrfHSksCbbN6VdbVp",
       "title": "Dying for You",
