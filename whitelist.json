@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6473,
-  "last_updated": "2026-11-24T12:06:17.612Z",
+  "version": 6475,
+  "last_updated": "2026-11-24T12:06:21.254Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7BNeFchpHDCWYSUV4hfU89",
+      "title": "L'été indien",
+      "artist": "Joe Dassin",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:21.254Z"
+    },
+    {
+      "id": "1cZYk288azEl6C5TiyvnBM",
+      "title": "כנף הרוח",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:21.254Z"
+    },
     {
       "id": "4Qzdktws811tv59fMf7CBz",
       "title": "Je suis malade",
