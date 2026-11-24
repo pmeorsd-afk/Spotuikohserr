@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6658,
-  "last_updated": "2026-11-24T19:28:57.994Z",
+  "version": 6660,
+  "last_updated": "2026-11-24T19:29:02.340Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0cqnirJciYMLa3nNacRFjF",
+      "title": "Run It Up",
+      "artist": "YK Osiris",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:29:02.340Z"
+    },
+    {
+      "id": "6ezKE7zgRyfUsqRfGDJEMz",
+      "title": "Need Me",
+      "artist": "J.I the Prince of N.Y",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:29:02.340Z"
+    },
     {
       "id": "2fovN88nMPZhATtCNeNaqM",
       "title": "Adhana",
