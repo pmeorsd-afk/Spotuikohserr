@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6573,
-  "last_updated": "2026-11-24T16:38:28.360Z",
+  "version": 6574,
+  "last_updated": "2026-11-24T16:38:32.421Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0KNLfFGD2tZUUiplRypUBE",
+      "title": "ניגון המגיד",
+      "artist": "Daniel Ahaviel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:38:32.421Z"
+    },
     {
       "id": "1gsNj3jGCdls8t6HO4zhFQ",
       "title": "ניגון חב\"ד",
