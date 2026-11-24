@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6502,
-  "last_updated": "2026-11-24T12:07:14.724Z",
+  "version": 6503,
+  "last_updated": "2026-11-24T12:07:22.431Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,15 +4280,6 @@
     }
   ],
   "tracks": [
-    {
-      "id": "2eauhZzDelRWx1f3PmdaxU",
-      "title": "חולה ירח",
-      "artist": "Itay Levi",
-      "status": "approved",
-      "prev_status": "none",
-      "notes": "approved via telegram",
-      "updated_at": "2026-11-24T12:07:14.724Z"
-    },
     {
       "id": "0tvbmgO41hEqsZjqUjIALS",
       "title": "משתבש לטובה",
