@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6589,
-  "last_updated": "2026-11-24T16:39:30.365Z",
+  "version": 6590,
+  "last_updated": "2026-11-24T16:39:36.126Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1U9fCIjViZNHm1HoxUpK8H",
+      "title": "Turn The Lights Off",
+      "artist": "Braaheim, Robbe",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:39:36.126Z"
+    },
     {
       "id": "2gRKq9rIC5i1zuxp06zJWH",
       "title": "What's Left of You",
