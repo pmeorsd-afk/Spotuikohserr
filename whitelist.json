@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6547,
-  "last_updated": "2026-11-24T16:36:43.912Z",
+  "version": 6548,
+  "last_updated": "2026-11-24T16:36:46.508Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7cHXCv6FKM9MTZrbZ74Ttu",
+      "title": "מחרוזת \"עשית לי פרפרים\" בית\"ר ירושלים",
+      "artist": "Aviad Sahar",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:36:46.508Z"
+    },
     {
       "id": "0KCwFsHGuFvg9jZ6OteGav",
       "title": "Control",
