@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6533,
-  "last_updated": "2026-11-24T16:35:28.020Z",
+  "version": 6534,
+  "last_updated": "2026-11-24T16:35:41.725Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6UMvD1w1z68hBDy4FXE4x0",
+      "title": "מכר את כל הכרטיסים",
+      "artist": "יאיר אלייצור",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:35:41.725Z"
+    },
     {
       "id": "3PCoQZCoceCnSvV6pTTSt3",
       "title": "ויפאסנה",
