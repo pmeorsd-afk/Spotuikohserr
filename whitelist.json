@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6608,
-  "last_updated": "2026-11-24T16:41:01.586Z",
+  "version": 6609,
+  "last_updated": "2026-11-24T16:41:06.447Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1SEFRCe0y7bIJKXrCz4g90",
+      "title": "ימי החנוכה",
+      "artist": "Makhelat Yeladim",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:41:06.447Z"
+    },
     {
       "id": "1iSqfoUFnQwV0QW1EfUit8",
       "title": "Suicidal",
