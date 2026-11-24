@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6703,
-  "last_updated": "2026-11-24T20:20:25.928Z",
+  "version": 6704,
+  "last_updated": "2026-11-24T20:30:36.467Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5SCFz26113UQSdDrUuoU0q",
+      "title": "התקווה (מתוך מופע האיחוד במנורה) - Live",
+      "artist": "Subliminal, The Shadow",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T20:30:36.467Z"
+    },
     {
       "id": "2BOZaITgFVIcnfSD524zo4",
       "title": "יוני",
