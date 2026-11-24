@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6712,
-  "last_updated": "2026-11-24T21:22:33.501Z",
+  "version": 6713,
+  "last_updated": "2026-11-24T22:06:54.046Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7wqLl9iCbgcX1R0BdOXU8Q",
+      "title": "מחרוזת שירי עצמונה ושירים חסידיים | מכינת עֹצֶם",
+      "artist": "עֹצֶם",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T22:06:54.046Z"
+    },
     {
       "id": "1oFAF1hdPOickyHgbuRjyX",
       "title": "Save Your Tears (Remix) (with Ariana Grande) - Bonus Track",
