@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6413,
-  "last_updated": "2026-11-24T12:03:37.395Z",
+  "version": 6414,
+  "last_updated": "2026-11-24T12:03:43.887Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0NYutQbdLqdH4Ttw1iiVWE",
+      "title": "געגועים",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:43.887Z"
+    },
     {
       "id": "4uOfJbQ1hvnJeXpJKZg89V",
       "title": "ירח נעלם",
