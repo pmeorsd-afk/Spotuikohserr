@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6592,
-  "last_updated": "2026-11-24T16:39:48.375Z",
+  "version": 6593,
+  "last_updated": "2026-11-24T16:39:52.764Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1tE9no1NyExKy7NCsg9ucW",
+      "title": "Miracles (feat. Tina Stachowiak)",
+      "artist": "Axel Johansson, Tina Stachowiak",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:39:52.764Z"
+    },
     {
       "id": "0RPjiZq8XttRvfA6zcJHiK",
       "title": "All for Me",
