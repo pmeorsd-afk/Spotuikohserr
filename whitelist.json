@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6444,
-  "last_updated": "2026-11-24T12:05:08.601Z",
+  "version": 6446,
+  "last_updated": "2026-11-24T12:05:13.187Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "566iUB4u9OBXE4csPpDYVp",
+      "title": "טירוף מתוק",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:13.187Z"
+    },
+    {
+      "id": "08DwM4774AsNjQn6X8rvQb",
+      "title": "Goda Boba (feat. VIVO)",
+      "artist": "Eyal Golan, Vivo",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:13.187Z"
+    },
     {
       "id": "4qutpYHwUp8iIse56fk30u",
       "title": "Kaş",
