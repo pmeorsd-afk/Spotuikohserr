@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6632,
-  "last_updated": "2026-11-24T19:27:30.809Z",
+  "version": 6634,
+  "last_updated": "2026-11-24T19:27:34.979Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "208SVXxGgwTCVMz7WUUZna",
+      "title": "Can You Feel the Love Tonight - From \"The Lion King\"",
+      "artist": "Royal Philharmonic Orchestra, Matteo Bocelli",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:27:34.979Z"
+    },
+    {
+      "id": "0kN8xEmgMW9mh7UmDYHlJP",
+      "title": "Versace on the Floor",
+      "artist": "Bruno Mars",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:27:34.979Z"
+    },
     {
       "id": "7FHAYNCYnXWuUvgbQszdQK",
       "title": "שיר המונדיאל 2022",
