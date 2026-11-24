@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6471,
-  "last_updated": "2026-11-24T12:06:13.349Z",
+  "version": 6473,
+  "last_updated": "2026-11-24T12:06:17.612Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Qzdktws811tv59fMf7CBz",
+      "title": "Je suis malade",
+      "artist": "Serge Lama",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:17.612Z"
+    },
+    {
+      "id": "46NBoIAHrmR7qcUGCIFEjR",
+      "title": "This One's for You (feat. Zara Larsson) (Official Song UEFA EURO 2016)",
+      "artist": "David Guetta, Zara Larsson",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:17.612Z"
+    },
     {
       "id": "5aspFJNTT2prR3NMm2IVUH",
       "title": "Salut",
