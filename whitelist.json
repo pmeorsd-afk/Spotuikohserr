@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6555,
-  "last_updated": "2026-11-24T16:37:20.382Z",
+  "version": 6556,
+  "last_updated": "2026-11-24T16:37:25.530Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3W2ivfrQP1kG0Uh5IBJn7P",
+      "title": "כד קטן",
+      "artist": "Yorik Ben David",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:37:25.530Z"
+    },
     {
       "id": "0gZ9ap16DJE873Es7Pc7kT",
       "title": "Life With You",
