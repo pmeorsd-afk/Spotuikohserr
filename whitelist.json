@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6469,
-  "last_updated": "2026-11-24T12:06:09.663Z",
+  "version": 6471,
+  "last_updated": "2026-11-24T12:06:13.349Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5aspFJNTT2prR3NMm2IVUH",
+      "title": "Salut",
+      "artist": "Joe Dassin",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:13.349Z"
+    },
+    {
+      "id": "51FZnO9sWc2dazJneozkHp",
+      "title": "Ring Ring (with Mabel feat. Rich The Kid)",
+      "artist": "Jax Jones, Mabel, Rich The Kid",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:13.349Z"
+    },
     {
       "id": "0lQ2obtzmAsJu9xk3D6FqH",
       "title": "Friendships (Lost My Love)",
