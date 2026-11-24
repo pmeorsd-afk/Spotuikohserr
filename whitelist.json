@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6468,
-  "last_updated": "2026-11-24T12:06:05.818Z",
+  "version": 6469,
+  "last_updated": "2026-11-24T12:06:09.663Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0lQ2obtzmAsJu9xk3D6FqH",
+      "title": "Friendships (Lost My Love)",
+      "artist": "Pascal Letoublon, Leony",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:09.663Z"
+    },
     {
       "id": "1nahzW3kfMuwReTka28tH5",
       "title": "Hold On",
