@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6438,
-  "last_updated": "2026-11-24T12:04:56.919Z",
+  "version": 6440,
+  "last_updated": "2026-11-24T12:05:00.931Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3WNyQXQSifyGGFfc1fQhIl",
+      "title": "חונקת מאהבה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:00.931Z"
+    },
+    {
+      "id": "1hBYnDBXMpNr1GybhSxJpo",
+      "title": "נסחפת כמו ילדה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:00.931Z"
+    },
     {
       "id": "3ufOGj5WFEYCaRugyglrdY",
       "title": "לשיר וכדורגל",
