@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6687,
-  "last_updated": "2026-11-24T19:31:00.454Z",
+  "version": 6689,
+  "last_updated": "2026-11-24T19:31:04.580Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4cxMGhkinTocPSVVKWIw0d",
+      "title": "Losin Control",
+      "artist": "Russ",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:31:04.580Z"
+    },
+    {
+      "id": "55wG1OcxI31o7JGI0Znnhb",
+      "title": "שגעת/טרפת (גרסת מועדונים)",
+      "artist": "ליאור נרקיס",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:31:04.580Z"
+    },
     {
       "id": "7fAoPMnIEg7IcRVQasrj6V",
       "title": "Inspiration",
