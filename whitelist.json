@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6537,
-  "last_updated": "2026-11-24T16:36:09.891Z",
+  "version": 6538,
+  "last_updated": "2026-11-24T16:36:13.950Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1GvBmkZDbniKIbTOR16nHr",
+      "title": "'רצית ה",
+      "artist": "Menachem Levy, Avraham Fried",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:36:13.950Z"
+    },
     {
       "id": "3CVQG2E6CL91pTeggbJOSj",
       "title": "FOREVER AGAIN",
