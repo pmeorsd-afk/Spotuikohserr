@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6409,
-  "last_updated": "2026-11-24T12:03:25.823Z",
+  "version": 6411,
+  "last_updated": "2026-11-24T12:03:29.749Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "503CWUIAlQszjGQegBbAsY",
+      "title": "צאי אל החלון",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:29.749Z"
+    },
+    {
+      "id": "20Fj4u4L2vl0vPn7lAHWKZ",
+      "title": "הבת של המלך",
+      "artist": "בן צור, יאיר אלייצור",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:29.749Z"
+    },
     {
       "id": "2EYf14B1VATNqDOCFE0p1x",
       "title": "הוזה אותך מולי",
