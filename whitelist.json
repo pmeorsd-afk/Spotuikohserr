@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6549,
-  "last_updated": "2026-11-24T16:36:51.316Z",
+  "version": 6550,
+  "last_updated": "2026-11-24T16:36:56.462Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44OdptIkh6HU7XIfTFMQQZ",
+      "title": "Deserve",
+      "artist": "Austin Giorgio",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:36:56.462Z"
+    },
     {
       "id": "4MHORmGs8oN7AASfGmApcM",
       "title": "Something In The Heavens",
