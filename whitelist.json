@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6532,
-  "last_updated": "2026-11-24T16:35:22.197Z",
+  "version": 6533,
+  "last_updated": "2026-11-24T16:35:28.020Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3PCoQZCoceCnSvV6pTTSt3",
+      "title": "ויפאסנה",
+      "artist": "Tuna",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:35:28.020Z"
+    },
     {
       "id": "5elwuqTmgDXHOo6XzCiayX",
       "title": "אני מסתובב - Live",
