@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6709,
-  "last_updated": "2026-11-24T21:22:22.204Z",
+  "version": 6710,
+  "last_updated": "2026-11-24T21:22:26.215Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2KslE17cAJNHTsI2MI0jb2",
+      "title": "Standing Next to You",
+      "artist": "Jung Kook",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T21:22:26.215Z"
+    },
     {
       "id": "0eFMbKCRw8KByXyWBw8WO7",
       "title": "Still With You",
