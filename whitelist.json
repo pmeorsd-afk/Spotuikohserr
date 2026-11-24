@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6634,
-  "last_updated": "2026-11-24T19:27:34.979Z",
+  "version": 6636,
+  "last_updated": "2026-11-24T19:27:39.320Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6VQzR5gKW6siCM5N52INHP",
+      "title": "עכשיו התור לאהבה",
+      "artist": "Arik Einstein, Shem-Tov Levy Ensemble",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:27:39.320Z"
+    },
+    {
+      "id": "1vux5TJpXtc7tbjA1YODpp",
+      "title": "Capo",
+      "artist": "NLE Choppa",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:27:39.320Z"
+    },
     {
       "id": "208SVXxGgwTCVMz7WUUZna",
       "title": "Can You Feel the Love Tonight - From \"The Lion King\"",
