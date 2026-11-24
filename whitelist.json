@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6495,
-  "last_updated": "2026-11-24T12:07:03.651Z",
+  "version": 6497,
+  "last_updated": "2026-11-24T12:07:07.071Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7x1ZhEOKIqBdDSkzqoKz4G",
+      "title": "זה עוד יקרה",
+      "artist": "Adir Getz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:07:07.071Z"
+    },
+    {
+      "id": "6eX3QN9PTXnPrTCersV0xX",
+      "title": "Left of You",
+      "artist": "Carter Ryan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:07:07.071Z"
+    },
     {
       "id": "6b8Be6ljOzmkOmFslEb23P",
       "title": "24K Magic",
