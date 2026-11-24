@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6627,
-  "last_updated": "2026-11-24T19:27:18.508Z",
+  "version": 6629,
+  "last_updated": "2026-11-24T19:27:22.552Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ntrdR24dLkKrzSGRv1FlH",
+      "title": "Stand By Me - Remastered 2010",
+      "artist": "John Lennon",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:27:22.552Z"
+    },
+    {
+      "id": "0LDiaSudHOYJ8e473mv5uY",
+      "title": "Leave The Door Open",
+      "artist": "Bruno Mars, Anderson .Paak, Silk Sonic",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:27:22.552Z"
+    },
     {
       "id": "2OP7UAuQF1OJbjeYXa5fhm",
       "title": "Silence - John Summit Remix",
