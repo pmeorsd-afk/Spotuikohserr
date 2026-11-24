@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6609,
-  "last_updated": "2026-11-24T16:41:06.447Z",
+  "version": 6610,
+  "last_updated": "2026-11-24T16:41:11.793Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5X6D5SG8H16XcpkGat6xCm",
+      "title": "דדי דדון - זכית בי",
+      "artist": "ארץ נהדרת",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:41:11.793Z"
+    },
     {
       "id": "1SEFRCe0y7bIJKXrCz4g90",
       "title": "ימי החנוכה",
