@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6641,
-  "last_updated": "2026-11-24T19:28:06.415Z",
+  "version": 6642,
+  "last_updated": "2026-11-24T19:28:10.125Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3HVkjUGKt2xe2ysjv8Clpi",
+      "title": "כינורי",
+      "artist": "Rubi Levi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:28:10.125Z"
+    },
     {
       "id": "0VB3YI0Dl6TT3C7mIbHTs4",
       "title": "Shotta Flow",
