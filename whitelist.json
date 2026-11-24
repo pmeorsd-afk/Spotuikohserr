@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6539,
-  "last_updated": "2026-11-24T16:36:18.734Z",
+  "version": 6540,
+  "last_updated": "2026-11-24T16:36:22.305Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0mLB2wh3dZfk0G627hk9A4",
+      "title": "Safe With Me",
+      "artist": "Ike Dweck",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:36:22.305Z"
+    },
     {
       "id": "4ZPvdgo6arz7NioIA5A0Rd",
       "title": "I WANT YOU",
