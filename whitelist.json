@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6576,
-  "last_updated": "2026-11-24T16:38:40.213Z",
+  "version": 6577,
+  "last_updated": "2026-11-24T16:38:44.101Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "38EeD3TDSsgC45LjW2UAnS",
+      "title": "ניגון מודזיץ'",
+      "artist": "Daniel Ahaviel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:38:44.101Z"
+    },
     {
       "id": "1BgMKhhaIRo5aMgnHfOsWc",
       "title": "את לא פה",
