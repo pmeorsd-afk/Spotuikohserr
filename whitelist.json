@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6404,
-  "last_updated": "2026-11-24T12:03:13.838Z",
+  "version": 6406,
+  "last_updated": "2026-11-24T12:03:18.259Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5vehqD4qjwyr7fBerR1hNA",
+      "title": "אני שונא אותך",
+      "artist": "Osher Cohen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:18.259Z"
+    },
+    {
+      "id": "1zSOTuM4Zpl6BYSTQ8yM6W",
+      "title": "לונדון",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:18.259Z"
+    },
     {
       "id": "5WY05FYdCksmTmZWLFPeZS",
       "title": "Freg - פרעג - Live at Newark Symphony Hall",
