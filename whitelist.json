@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6702,
-  "last_updated": "2026-11-24T20:20:22.351Z",
+  "version": 6703,
+  "last_updated": "2026-11-24T20:20:25.928Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2BOZaITgFVIcnfSD524zo4",
+      "title": "יוני",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T20:20:25.928Z"
+    },
     {
       "id": "4wsc8OzliQP9P2ZiuevaBn",
       "title": "הזוג הזה",
