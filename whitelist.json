@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6579,
-  "last_updated": "2026-11-24T16:38:48.516Z",
+  "version": 6580,
+  "last_updated": "2026-11-24T16:38:56.786Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7MIhUdNJtaOnDmC5nBC1fb",
+      "title": "Deep Down (feat. Never Dull)",
+      "artist": "Alok, Ella Eyre, Kenny Dope, Never Dull",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:38:56.786Z"
+    },
     {
       "id": "39cmB3ZoTOLwOTq7tMNqKa",
       "title": "Hear Me Now",
