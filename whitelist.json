@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6666,
-  "last_updated": "2026-11-24T19:29:24.689Z",
+  "version": 6667,
+  "last_updated": "2026-11-24T19:29:28.316Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1EBLlnAaJvXD1ZyGrFAUT0",
+      "title": "Go Gyal",
+      "artist": "Ahzee",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:29:28.316Z"
+    },
     {
       "id": "4q05KbxYZ5JdkmrletgPjF",
       "title": "Whistle (feat. Calum Scott)",
