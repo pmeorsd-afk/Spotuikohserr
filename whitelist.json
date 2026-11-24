@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6700,
-  "last_updated": "2026-11-24T19:32:04.331Z",
+  "version": 6701,
+  "last_updated": "2026-11-24T19:59:46.916Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3W0wCpIAMV6NZeoYlCd4JY",
+      "title": "Survey Selva - D-Stroyer Remix",
+      "artist": "Vermont (BR), D-Stroyer",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:59:46.916Z"
+    },
     {
       "id": "77x1tqNYweec8AIuUkxriE",
       "title": "טאטע תטהר",
