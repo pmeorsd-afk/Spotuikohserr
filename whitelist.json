@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6544,
-  "last_updated": "2026-11-24T16:36:34.425Z",
+  "version": 6546,
+  "last_updated": "2026-11-24T16:36:39.462Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "12KDVvhJ7cAFy6qS1ZPL0q",
+      "title": "שיר שחקן ירדן שועה",
+      "artist": "אדיר ניזרי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:36:39.462Z"
+    },
+    {
+      "id": "0HmfJ60okq2gNnDseuiZb6",
+      "title": "את לי כחלום - REMIX",
+      "artist": "אדיר ניזרי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:36:39.462Z"
+    },
     {
       "id": "69AC7cGZsxkhjmY0spltqi",
       "title": "easier said than done",
