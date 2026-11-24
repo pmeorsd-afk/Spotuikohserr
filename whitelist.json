@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6524,
-  "last_updated": "2026-11-24T13:11:52.680Z",
+  "version": 6525,
+  "last_updated": "2026-11-24T16:34:39.879Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44siIYlT1dMRQysOVjEvdF",
+      "title": "broken",
+      "artist": "Jonah Kagen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:34:39.879Z"
+    },
     {
       "id": "0RtgSV3RWOXxqFvlM6MBwE",
       "title": "אוזניות",
