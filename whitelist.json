@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6699,
-  "last_updated": "2026-11-24T19:31:56.879Z",
+  "version": 6700,
+  "last_updated": "2026-11-24T19:32:04.331Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "77x1tqNYweec8AIuUkxriE",
+      "title": "טאטע תטהר",
+      "artist": "יאיר אלייצור",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:32:04.331Z"
+    },
     {
       "id": "66eOqEOcBdSxuxeIRvp3jQ",
       "title": "הביתה",
