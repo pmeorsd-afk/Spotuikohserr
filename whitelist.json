@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6690,
-  "last_updated": "2026-11-24T19:31:08.739Z",
+  "version": 6691,
+  "last_updated": "2026-11-24T19:31:15.834Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6JWskL5HRcGnIHXFPBxY1N",
+      "title": "Carretera",
+      "artist": "Morad",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:31:15.834Z"
+    },
     {
       "id": "4jTiyLlOJVJj3mCr7yfPQD",
       "title": "This Could Be Us",
