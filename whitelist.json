@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6691,
-  "last_updated": "2026-11-24T19:31:15.834Z",
+  "version": 6692,
+  "last_updated": "2026-11-24T19:31:19.626Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5XTEvroTHb6N4aBAmXG4m1",
+      "title": "תגידי לי שטוב לך",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:31:19.626Z"
+    },
     {
       "id": "6JWskL5HRcGnIHXFPBxY1N",
       "title": "Carretera",
