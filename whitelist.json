@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6464,
-  "last_updated": "2026-11-24T12:05:59.091Z",
+  "version": 6467,
+  "last_updated": "2026-11-24T12:06:02.601Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,33 @@
     }
   ],
   "tracks": [
+    {
+      "id": "15ulquBl1bWAhjKG9eWcNP",
+      "title": "הדרך אליך",
+      "artist": "מוטי עויזר",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:02.601Z"
+    },
+    {
+      "id": "3UiaqevmmmjzMBKkT0KUYp",
+      "title": "קרובה אליי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:02.601Z"
+    },
+    {
+      "id": "1un1wrfOhx0CFoEEP6y6I6",
+      "title": "אוטוטו",
+      "artist": "Ben El Tavori",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:02.601Z"
+    },
     {
       "id": "1VnToUmdNhH8KUwXTziyiz",
       "title": "אורזת",
