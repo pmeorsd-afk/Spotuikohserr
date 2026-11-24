@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6475,
-  "last_updated": "2026-11-24T12:06:21.254Z",
+  "version": 6477,
+  "last_updated": "2026-11-24T12:06:24.961Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Oi77ugfhs33uoVKNw7vqB",
+      "title": "Sonia",
+      "artist": "Patrick Juvet",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:24.961Z"
+    },
+    {
+      "id": "0hRixTMFytFePEMEjCTtjv",
+      "title": "שקט מסביב",
+      "artist": "Shaked Komemy",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:24.961Z"
+    },
     {
       "id": "7BNeFchpHDCWYSUV4hfU89",
       "title": "L'été indien",
