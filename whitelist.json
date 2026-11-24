@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6677,
-  "last_updated": "2026-11-24T19:30:20.692Z",
+  "version": 6678,
+  "last_updated": "2026-11-24T19:30:24.458Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3oJYe7NI7juu1HIGyyvwec",
+      "title": "La Isla Bonita",
+      "artist": "Hr. Troels",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:30:24.458Z"
+    },
     {
       "id": "4r5SpnvNJ0JylS4JgR1hhB",
       "title": "יש לי גלידה הכי טובה",
