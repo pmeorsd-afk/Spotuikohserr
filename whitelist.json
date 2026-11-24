@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6403,
-  "last_updated": "2026-11-24T12:03:10.137Z",
+  "version": 6404,
+  "last_updated": "2026-11-24T12:03:13.838Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5WY05FYdCksmTmZWLFPeZS",
+      "title": "Freg - פרעג - Live at Newark Symphony Hall",
+      "artist": "Hershy Weinberger, Interen Chavraya",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:03:13.838Z"
+    },
     {
       "id": "6Qx89IehmklwQab5EIoetp",
       "title": "תדר",
