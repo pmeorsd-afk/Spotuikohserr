@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6643,
-  "last_updated": "2026-11-24T19:28:14.384Z",
+  "version": 6644,
+  "last_updated": "2026-11-24T19:28:18.263Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5BbdKBZO0TH0GhfxUfyhL9",
+      "title": "Freestyle",
+      "artist": "Lil Baby",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:28:18.263Z"
+    },
     {
       "id": "7iHHxY2NLlJRAmlAmC4ahQ",
       "title": "Stuck In A Dream (feat. Gunna)",
