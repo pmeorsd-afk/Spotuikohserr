@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6432,
-  "last_updated": "2026-11-24T12:04:35.982Z",
+  "version": 6434,
+  "last_updated": "2026-11-24T12:04:39.925Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1sewBAAhgIwQyK2xQ3DRo9",
+      "title": "איתך",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:04:39.925Z"
+    },
+    {
+      "id": "2q9vxWNuM226L48Id9NQ2O",
+      "title": "לא פשוט להיות פשוט",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:04:39.925Z"
+    },
     {
       "id": "5hTAhPWWm73CMtHON02dbQ",
       "title": "שישי בצהריים",
