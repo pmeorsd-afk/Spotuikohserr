@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6595,
-  "last_updated": "2026-11-24T16:40:01.288Z",
+  "version": 6596,
+  "last_updated": "2026-11-24T16:40:05.650Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5sAcIjfZmNEgbseZ1Bpmom",
+      "title": "The River",
+      "artist": "Axel Johansson",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:40:05.650Z"
+    },
     {
       "id": "1BxSKXuvfJhPGBsrf4eKnB",
       "title": "Nothing Stopping Me",
