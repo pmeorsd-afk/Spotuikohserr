@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6426,
-  "last_updated": "2026-11-24T12:04:22.020Z",
+  "version": 6428,
+  "last_updated": "2026-11-24T12:04:25.046Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6T0Wok5RrX5FZRKoQ9frzk",
+      "title": "אם יש גן עדן",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:04:25.046Z"
+    },
+    {
+      "id": "3QeQ9XuAoJefIPvto4Xzvh",
+      "title": "מאמי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:04:25.046Z"
+    },
     {
       "id": "5d9Bd7bQmWs28sCTTA1TAu",
       "title": "תחזיר לי אותה",
