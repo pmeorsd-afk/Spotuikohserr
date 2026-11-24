@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6599,
-  "last_updated": "2026-11-24T16:40:14.025Z",
+  "version": 6601,
+  "last_updated": "2026-11-24T16:40:17.804Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2uAQOX4OAUjdNtDa3EIye7",
+      "title": "Revolution",
+      "artist": "Ahxello",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:40:17.804Z"
+    },
+    {
+      "id": "1C1vNiMjm6HNIZSIaBeyrE",
+      "title": "You",
+      "artist": "Alex Skrindo, Axol",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:40:17.804Z"
+    },
     {
       "id": "7ETQ9aweSpR4iOISFUt2SP",
       "title": "Guide You Home",
