@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6514,
-  "last_updated": "2026-11-24T13:01:59.423Z",
+  "version": 6515,
+  "last_updated": "2026-11-24T13:02:03.794Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2sqfLwGKXDw1nGjFhH3GGX",
+      "title": "Got It In You",
+      "artist": "BANNERS",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T13:02:03.794Z"
+    },
     {
       "id": "7guhFOyenW4kSJoCmtzbU2",
       "title": "יפה מבראשית",
