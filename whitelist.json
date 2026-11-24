@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6450,
-  "last_updated": "2026-11-24T12:05:25.130Z",
+  "version": 6452,
+  "last_updated": "2026-11-24T12:05:29.080Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1OjTIZBCvRLGpH0RRGbqxI",
+      "title": "Vendetta",
+      "artist": "Amanati",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:29.080Z"
+    },
+    {
+      "id": "26j4mnkzJlSsTA81dpAgWT",
+      "title": "המילים החסרות",
+      "artist": "Eyal Golan, Moshe Perez",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:29.080Z"
+    },
     {
       "id": "1zl3mp6Qe37UScQ6x6c6Pp",
       "title": "הפוך מהיקום",
