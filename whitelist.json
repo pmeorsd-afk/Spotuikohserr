@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6616,
-  "last_updated": "2026-11-24T19:24:05.742Z",
+  "version": 6618,
+  "last_updated": "2026-11-24T19:24:09.982Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7jrNJv7Nt7ewrXP1V8Dtoc",
+      "title": "זהב",
+      "artist": "Static & Ben El, Static, Ben El Tavori",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:24:09.982Z"
+    },
+    {
+      "id": "4Q3N4Ct4zCuIHuZ65E3BD4",
+      "title": "Tunnel Vision",
+      "artist": "Kodak Black",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:24:09.982Z"
+    },
     {
       "id": "6GOOcBV0wLoHrH5D9AWA32",
       "title": "Say My Name - Remix",
