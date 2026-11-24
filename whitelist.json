@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6477,
-  "last_updated": "2026-11-24T12:06:24.961Z",
+  "version": 6479,
+  "last_updated": "2026-11-24T12:06:28.899Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "36SsbZhVllqBZhwlecKf3g",
+      "title": "היית לי שקט",
+      "artist": "Maor Titon",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:28.899Z"
+    },
+    {
+      "id": "783RZTcszQ3PBma0t4o9v4",
+      "title": "דירה קטנה בחיפה",
+      "artist": "Adir Getz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:28.899Z"
+    },
     {
       "id": "5Oi77ugfhs33uoVKNw7vqB",
       "title": "Sonia",
