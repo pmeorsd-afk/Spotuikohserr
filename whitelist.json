@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6642,
-  "last_updated": "2026-11-24T19:28:10.125Z",
+  "version": 6643,
+  "last_updated": "2026-11-24T19:28:14.384Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7iHHxY2NLlJRAmlAmC4ahQ",
+      "title": "Stuck In A Dream (feat. Gunna)",
+      "artist": "Lil Mosey, Gunna",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:28:14.384Z"
+    },
     {
       "id": "3HVkjUGKt2xe2ysjv8Clpi",
       "title": "כינורי",
