@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6680,
-  "last_updated": "2026-11-24T19:30:32.312Z",
+  "version": 6681,
+  "last_updated": "2026-11-24T19:30:36.374Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5UA6rAsMTn0okgp95isGrl",
+      "title": "All The Time",
+      "artist": "Marc Benjamin",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:30:36.374Z"
+    },
     {
       "id": "3rbvcVuA57igcXBCAIsyq4",
       "title": "Il pleut bergère",
