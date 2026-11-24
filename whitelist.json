@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6585,
-  "last_updated": "2026-11-24T16:39:08.586Z",
+  "version": 6586,
+  "last_updated": "2026-11-24T16:39:12.938Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4wed94R3bsquxLFLWSEtMU",
+      "title": "דבר אחד רוצה לומר",
+      "artist": "החזית הכחולה 06",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:39:12.938Z"
+    },
     {
       "id": "0sftzYE0YgPHXrvJyUyGjB",
       "title": "Deep In Your Love",
