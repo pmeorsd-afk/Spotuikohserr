@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6636,
-  "last_updated": "2026-11-24T19:27:39.320Z",
+  "version": 6638,
+  "last_updated": "2026-11-24T19:27:43.346Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3BKSZRlYdfQejXa5VNsgtO",
+      "title": "Disturbia",
+      "artist": "Blair Muir",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:27:43.346Z"
+    },
+    {
+      "id": "0JP9xo3adEtGSdUEISiszL",
+      "title": "Moonlight",
+      "artist": "XXXTENTACION",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:27:43.346Z"
+    },
     {
       "id": "6VQzR5gKW6siCM5N52INHP",
       "title": "עכשיו התור לאהבה",
