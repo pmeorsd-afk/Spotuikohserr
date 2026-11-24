@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6447,
-  "last_updated": "2026-11-24T12:05:21.161Z",
+  "version": 6450,
+  "last_updated": "2026-11-24T12:05:25.130Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,33 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1zl3mp6Qe37UScQ6x6c6Pp",
+      "title": "הפוך מהיקום",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:25.130Z"
+    },
+    {
+      "id": "2854ab8DslrxCUKHn0TWFP",
+      "title": "Гори-Гори",
+      "artist": "TRUEten, Gio Pika",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:25.130Z"
+    },
+    {
+      "id": "17scK6IjNNePOdTT3hoXgh",
+      "title": "בוחרת להמשיך",
+      "artist": "Eve And Lear",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:25.130Z"
+    },
     {
       "id": "7LsNoulNG0o6FDtXI5sozv",
       "title": "אהבה ראשונה",
