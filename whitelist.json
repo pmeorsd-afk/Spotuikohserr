@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6552,
-  "last_updated": "2026-11-24T16:37:04.786Z",
+  "version": 6553,
+  "last_updated": "2026-11-24T16:37:09.055Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4sKU0ZYWJhKee03glZjAcd",
+      "title": "Drunk Driving",
+      "artist": "We Three",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:37:09.055Z"
+    },
     {
       "id": "3zH8oMPV8GQnfsSuuP4Yvr",
       "title": "Leave it all behind",
