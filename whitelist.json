@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6697,
-  "last_updated": "2026-11-24T19:31:46.637Z",
+  "version": 6698,
+  "last_updated": "2026-11-24T19:31:51.427Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2ZMOimNy7eAdEuBbbExzYx",
+      "title": "יותר מזה אנחנו לא צריכים",
+      "artist": "Subliminal, Itzik Shamli",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:31:51.427Z"
+    },
     {
       "id": "4HCOHRCSQelz2GPX8iTamO",
       "title": "Flower In A Hurricane (feat. Tame Impala, SZA, King Gizzard & the Lizard Wizard) From GTAVI: Original Score",
