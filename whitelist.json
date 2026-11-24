@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6629,
-  "last_updated": "2026-11-24T19:27:22.552Z",
+  "version": 6631,
+  "last_updated": "2026-11-24T19:27:26.952Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3wLtYwtqvKK2ewelSVPeDK",
+      "title": "Die Young",
+      "artist": "Roddy Ricch",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:27:26.952Z"
+    },
+    {
+      "id": "55nlbqqFVnSsArIeYSQlqx",
+      "title": "You & I (Nobody in the World)",
+      "artist": "John Legend",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:27:26.952Z"
+    },
     {
       "id": "3ntrdR24dLkKrzSGRv1FlH",
       "title": "Stand By Me - Remastered 2010",
