@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6452,
-  "last_updated": "2026-11-24T12:05:29.080Z",
+  "version": 6454,
+  "last_updated": "2026-11-24T12:05:32.969Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3n348I4uE5GZ3tprVdqzPO",
+      "title": "Casablanca (feat. Morad)",
+      "artist": "Baby Gang, Bobo, Morad",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:32.969Z"
+    },
+    {
+      "id": "0r8Pe1yr2aw04IXFP00sC5",
+      "title": "Mocro Mafia (feat. Maes)",
+      "artist": "Baby Gang, Maes",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:32.969Z"
+    },
     {
       "id": "1OjTIZBCvRLGpH0RRGbqxI",
       "title": "Vendetta",
