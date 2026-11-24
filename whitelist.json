@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6646,
-  "last_updated": "2026-11-24T19:28:22.648Z",
+  "version": 6647,
+  "last_updated": "2026-11-24T19:28:26.091Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7sO5G9EABYOXQKNPNiE9NR",
+      "title": "Ric Flair Drip (with Metro Boomin)",
+      "artist": "Offset, Metro Boomin",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:28:26.091Z"
+    },
     {
       "id": "4VXIryQMWpIdGgYR4TrjT1",
       "title": "All Girls Are The Same",
