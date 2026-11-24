@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6434,
-  "last_updated": "2026-11-24T12:04:39.925Z",
+  "version": 6435,
+  "last_updated": "2026-11-24T12:04:43.523Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "29T5WKRPdXrbytynFs2RSF",
+      "title": "מאושרת בלעדיי",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:04:43.523Z"
+    },
     {
       "id": "1sewBAAhgIwQyK2xQ3DRo9",
       "title": "איתך",
