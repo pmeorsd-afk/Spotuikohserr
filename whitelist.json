@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6517,
-  "last_updated": "2026-11-24T13:07:38.801Z",
+  "version": 6519,
+  "last_updated": "2026-11-24T13:07:42.796Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7eryoo7Obzh5KJI9jcYAFy",
+      "title": "תחת אש",
+      "artist": "Tuna",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T13:07:42.796Z"
+    },
+    {
+      "id": "00f9VGHfQhAHMCQ2bSjg3D",
+      "title": "Soldier",
+      "artist": "James TW",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T13:07:42.796Z"
+    },
     {
       "id": "2LEF1A8DOZ9wRYikWgVlZ8",
       "title": "Good Feeling",
