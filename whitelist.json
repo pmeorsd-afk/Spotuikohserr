@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6606,
-  "last_updated": "2026-11-24T16:40:56.551Z",
+  "version": 6608,
+  "last_updated": "2026-11-24T16:41:01.586Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1iSqfoUFnQwV0QW1EfUit8",
+      "title": "Suicidal",
+      "artist": "YNW Melly",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:41:01.586Z"
+    },
+    {
+      "id": "5YAHKkd2CbzTskxvR5J1bZ",
+      "title": "מדוע לובשת הזברה פיג'מה",
+      "artist": "Hop! Channel, Ariel Levin, Yali Watson, Yuval Levin",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:41:01.586Z"
+    },
     {
       "id": "6rmtT7Y8cH7NpvovoPiV6k",
       "title": "Rude - Zedd Remix",
