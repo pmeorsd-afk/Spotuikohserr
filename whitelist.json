@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6577,
-  "last_updated": "2026-11-24T16:38:44.101Z",
+  "version": 6579,
+  "last_updated": "2026-11-24T16:38:48.516Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "39cmB3ZoTOLwOTq7tMNqKa",
+      "title": "Hear Me Now",
+      "artist": "Alok, Zeeba, Bruno Martini",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:38:48.516Z"
+    },
+    {
+      "id": "3p6yTLYv3jpjYNGrVSoyjC",
+      "title": "השער החמישי",
+      "artist": "Daniel Ahaviel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:38:48.516Z"
+    },
     {
       "id": "38EeD3TDSsgC45LjW2UAnS",
       "title": "ניגון מודזיץ'",
