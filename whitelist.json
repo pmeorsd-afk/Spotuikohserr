@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6661,
-  "last_updated": "2026-11-24T19:29:06.542Z",
+  "version": 6663,
+  "last_updated": "2026-11-24T19:29:10.130Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2g1dysXkJb2dMPfQmbeM0n",
+      "title": "Polar Energy - Euphoria - Vandeta - Remix",
+      "artist": "Vandeta",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:29:10.130Z"
+    },
+    {
+      "id": "35t8pOqxELRbWS7ODsyc7p",
+      "title": "Run (feat. Ragdoll)",
+      "artist": "Henri PFR, Ragdoll",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T19:29:10.130Z"
+    },
     {
       "id": "2UibtL86tqR5C0f9dozSt8",
       "title": "מתחת לשמיים",
