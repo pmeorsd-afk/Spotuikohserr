@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6441,
-  "last_updated": "2026-11-24T12:05:04.683Z",
+  "version": 6444,
+  "last_updated": "2026-11-24T12:05:08.601Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,33 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4qutpYHwUp8iIse56fk30u",
+      "title": "Kaş",
+      "artist": "TEMMİ",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:08.601Z"
+    },
+    {
+      "id": "5yZNQ0LEBiK6zTgvXK62Wy",
+      "title": "تقطيع دمار",
+      "artist": "ابو اللبيب, وديع نمارنه",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:08.601Z"
+    },
+    {
+      "id": "1kdEWuV9DYKMC5MbAIce16",
+      "title": "יש לי רק אותך",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:05:08.601Z"
+    },
     {
       "id": "169GgABsJABJTTAtDZUxMt",
       "title": "אל תטעי בדרך",
