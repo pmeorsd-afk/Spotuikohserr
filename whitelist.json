@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6467,
-  "last_updated": "2026-11-24T12:06:02.601Z",
+  "version": 6468,
+  "last_updated": "2026-11-24T12:06:05.818Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1nahzW3kfMuwReTka28tH5",
+      "title": "Hold On",
+      "artist": "Justin Bieber",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:06:05.818Z"
+    },
     {
       "id": "15ulquBl1bWAhjKG9eWcNP",
       "title": "הדרך אליך",
