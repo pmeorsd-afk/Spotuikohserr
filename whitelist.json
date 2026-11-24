@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6605,
-  "last_updated": "2026-11-24T16:40:52.372Z",
+  "version": 6606,
+  "last_updated": "2026-11-24T16:40:56.551Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6rmtT7Y8cH7NpvovoPiV6k",
+      "title": "Rude - Zedd Remix",
+      "artist": "MAGIC!, Zedd",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:40:56.551Z"
+    },
     {
       "id": "youtube:k9zVp2ijLyA",
       "title": "אשרינו",
