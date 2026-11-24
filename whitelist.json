@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6419,
-  "last_updated": "2026-11-24T12:03:59.447Z",
+  "version": 6421,
+  "last_updated": "2026-11-24T12:04:03.307Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2H9HRgO2ZaHjjhj2DF8Sqz",
+      "title": "נדרתי נדר - גרסה ראשונה",
+      "artist": "Kobi Peretz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T12:04:03.307Z"
+    },
     {
       "id": "4xNo1LgWSCyjgK4OsUnLWg",
       "title": "יוצאת מזה",
@@ -45483,6 +45492,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-11-23T19:46:53.284Z"
+    },
+    {
+      "id": "09a926878b54e334acbaf593f5b80b156818e5520886d2c6",
+      "url": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45282585/45282585-1770024534887-145d8bbbc234c.jpg",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-11-24T12:04:03.307Z"
     }
   ],
   "search_images": [
