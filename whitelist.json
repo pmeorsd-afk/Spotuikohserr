@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6557,
-  "last_updated": "2026-11-24T16:37:29.901Z",
+  "version": 6558,
+  "last_updated": "2026-11-24T16:37:34.007Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Qw476O85xM6cPSrQFozOa",
+      "title": "Miss Every Party",
+      "artist": "Chanin",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:37:34.007Z"
+    },
     {
       "id": "0Q2mZN9IwaYqdUoJtIoZZZ",
       "title": "סביבון סוב סוב סוב",
