@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6614,
-  "last_updated": "2026-11-24T16:41:25.274Z",
+  "version": 6615,
+  "last_updated": "2026-11-24T16:41:29.316Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0uxSUdBrJy9Un0EYoBowng",
+      "title": "20 Min",
+      "artist": "Lil Uzi Vert",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-24T16:41:29.316Z"
+    },
     {
       "id": "2A1aS3mwuGuX2yk1bgxOvA",
       "title": "Kisses (feat. bbyclose)",
