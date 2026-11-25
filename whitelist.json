@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6979,
-  "last_updated": "2026-11-25T22:43:31.462Z",
+  "version": 6980,
+  "last_updated": "2026-11-25T22:46:04.811Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0r1Az9a4ReL7dpBvtHjq5A",
+      "title": "MISS MY DAWG (feat. Drake)",
+      "artist": "Yeat, Drake",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T22:46:04.811Z"
+    },
     {
       "id": "0jZVcptTJu7KZWcf9aH7re",
       "title": "IN2THAT",
