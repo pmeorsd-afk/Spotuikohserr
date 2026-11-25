@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6947,
-  "last_updated": "2026-11-25T20:37:19.624Z",
+  "version": 6949,
+  "last_updated": "2026-11-25T20:37:23.813Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "26BNI9Gk8t9NnFip7mn4CV",
+      "title": "Stairway to Heaven - Remaster",
+      "artist": "Led Zeppelin",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:37:23.813Z"
+    },
+    {
+      "id": "4CNL4GBNTdVIU5Nk6hB4LC",
+      "title": "Brown Eyed Girl",
+      "artist": "Van Morrison",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:37:23.813Z"
+    },
     {
       "id": "4jAuq1vIYU2fFS8r5ZNhgr",
       "title": "In My Life (2026 Mix)",
