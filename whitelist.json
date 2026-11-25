@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6836,
-  "last_updated": "2026-11-25T20:30:25.695Z",
+  "version": 6837,
+  "last_updated": "2026-11-25T20:30:29.591Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5sVK357IC0iPrqhM56MjsS",
+      "title": "פרח השכונות",
+      "artist": "Teapacks, Alma Zack",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:30:29.591Z"
+    },
     {
       "id": "1n7VNB1nO2C8UVpVDinYvh",
       "title": "פאנן",
