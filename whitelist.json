@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6944,
-  "last_updated": "2026-11-25T20:37:12.002Z",
+  "version": 6946,
+  "last_updated": "2026-11-25T20:37:16.451Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6wFLOXRHLXWlrdlgfqSY9w",
+      "title": "אושר",
+      "artist": "Idan Amedi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:37:16.451Z"
+    },
+    {
+      "id": "6NcUCr0Xd61b2MNfw5YMQu",
+      "title": "Search For A Meaning",
+      "artist": "Tony Newmark, Gelf",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:37:16.451Z"
+    },
     {
       "id": "2X8mBXrZ6HJPCgKAzC87k5",
       "title": "כאב של לוחמים",
