@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6938,
-  "last_updated": "2026-11-25T20:36:46.931Z",
+  "version": 6939,
+  "last_updated": "2026-11-25T20:36:50.821Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0ps7qEnHId57xIZs3fSbHp",
+      "title": "אחד אלוהים",
+      "artist": "Eifo HaYeled",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:36:50.821Z"
+    },
     {
       "id": "4yvKrxYS0O3OVkW8Q64k1e",
       "title": "בסוף כל יום",
