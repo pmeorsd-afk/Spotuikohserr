@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6858,
-  "last_updated": "2026-11-25T20:31:38.105Z",
+  "version": 6859,
+  "last_updated": "2026-11-25T20:31:41.967Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6svDmByjuCnV5tgx2tAppk",
+      "title": "Foolish",
+      "artist": "Peter Burton",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:41.967Z"
+    },
     {
       "id": "0Z5sAboGfP3hksUOH1R3oV",
       "title": "Hero",
