@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6776,
-  "last_updated": "2026-11-25T20:21:04.317Z",
+  "version": 6777,
+  "last_updated": "2026-11-25T20:21:07.901Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6PhRhocBXP4y7NpciGmzra",
+      "title": "Después De La 1",
+      "artist": "Cris MJ, FloyyMenor, LOUKI",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:21:07.901Z"
+    },
     {
       "id": "0GJwUAlBMJTbY4VE7iE761",
       "title": "UNA NOCHE EN MEDELLÍN - REMIX",
