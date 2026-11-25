@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6779,
-  "last_updated": "2026-11-25T20:21:23.848Z",
+  "version": 6780,
+  "last_updated": "2026-11-25T20:21:27.932Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2esZG2XFtuoWWA9AfDvSxy",
+      "title": "Gata Only",
+      "artist": "FloyyMenor, Cris MJ",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:21:27.932Z"
+    },
     {
       "id": "0lMafSfME2iJEE972bsQaK",
       "title": "Ba Ba Bad Remix",
