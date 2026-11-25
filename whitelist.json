@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6864,
-  "last_updated": "2026-11-25T20:31:58.329Z",
+  "version": 6866,
+  "last_updated": "2026-11-25T20:32:02.146Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3yDHWBM0zZob0l6bwoto3J",
+      "title": "We'll never know",
+      "artist": "Alexander Osberg",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:32:02.146Z"
+    },
+    {
+      "id": "08KKsq63Ds6tVGopmhYqJh",
+      "title": "The Victory",
+      "artist": "Yauri Music",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:32:02.146Z"
+    },
     {
       "id": "1qFmSPALGSoqjbwM3br4Rl",
       "title": "Hummell Gets The Rockets - Alan Walker Remix",
