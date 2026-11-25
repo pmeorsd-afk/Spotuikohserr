@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6794,
-  "last_updated": "2026-11-25T20:22:17.750Z",
+  "version": 6796,
+  "last_updated": "2026-11-25T20:22:22.015Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "614NVFo5csQqRnryl4jXs2",
+      "title": "El Teléfono",
+      "artist": "Héctor \"El Father\", Wisin & Yandel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:22:22.015Z"
+    },
+    {
+      "id": "2q22H2EX2Bwrf1FilOx4C6",
+      "title": "שתיים עשרה שנים של בדידות",
+      "artist": "Ravid Plotnik",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:22:22.015Z"
+    },
     {
       "id": "39FKtFw4GagJDW62hhHVuM",
       "title": "Frikitona",
