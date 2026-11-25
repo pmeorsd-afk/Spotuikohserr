@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6914,
-  "last_updated": "2026-11-25T20:35:09.711Z",
+  "version": 6916,
+  "last_updated": "2026-11-25T20:35:13.307Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4K8Rm3Jn98rC1ThcD7k7Jo",
+      "title": "אני מושלם",
+      "artist": "Ballagan Sessions בלאגן סשנז, אסקר",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:35:13.307Z"
+    },
+    {
+      "id": "3I8j5QqItPJmY7xpI03BGt",
+      "title": "כפרה עליי",
+      "artist": "Tal Tirangel, Ori Shochat, Michael Swissa",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:35:13.307Z"
+    },
     {
       "id": "1bjZa4Htr66ynUS3o7wYXt",
       "title": "חולת שליטה",
