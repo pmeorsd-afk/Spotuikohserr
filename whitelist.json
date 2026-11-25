@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6727,
-  "last_updated": "2026-11-25T20:11:16.982Z",
+  "version": 6728,
+  "last_updated": "2026-11-25T20:11:22.009Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "05hDkglypopI5ADkhOKQNC",
+      "title": "תתגדל ותתקדש ניגון חבד",
+      "artist": "Gad Elbaz, מוטי סימון",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:11:22.009Z"
+    },
     {
       "id": "4bEHLVz3g47ezc76D0ZHHI",
       "title": "מחרוזת קצבית – סלחתי לך בהופעה",
