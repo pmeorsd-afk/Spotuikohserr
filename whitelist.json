@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6898,
-  "last_updated": "2026-11-25T20:33:54.926Z",
+  "version": 6899,
+  "last_updated": "2026-11-25T20:33:58.364Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3IB8UOcIA5PijKgUx5YIoK",
+      "title": "שחרר אותי",
+      "artist": "Doli & Penn, Noa Kirel, Peled",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:33:58.364Z"
+    },
     {
       "id": "5xgoeVLzewZHbvnQBhQLhP",
       "title": "ראיתי שחור",
