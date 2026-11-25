@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6893,
-  "last_updated": "2026-11-25T20:33:38.962Z",
+  "version": 6894,
+  "last_updated": "2026-11-25T20:33:42.743Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4z0HqKOXJGaFGha9JPjD06",
+      "title": "עכשיו קרוב",
+      "artist": "Idan Raichel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:33:42.743Z"
+    },
     {
       "id": "3wNGx5fvPgVku8yzcK5h2m",
       "title": "עד סוף העולם",
