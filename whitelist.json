@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6920,
-  "last_updated": "2026-11-25T20:35:34.485Z",
+  "version": 6921,
+  "last_updated": "2026-11-25T20:35:38.443Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7KE0wRDyGIk30qF0CZNDoV",
+      "title": "טכנו",
+      "artist": "Itay Levi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:35:38.443Z"
+    },
     {
       "id": "6db8vtmyjTYEtqXVQRncCG",
       "title": "ממותה",
