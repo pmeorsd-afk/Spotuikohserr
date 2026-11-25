@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6814,
-  "last_updated": "2026-11-25T20:25:17.182Z",
+  "version": 6815,
+  "last_updated": "2026-11-25T20:28:49.866Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1kQqiC1rS1FiuVpeBKN0QN",
+      "title": "Rakata",
+      "artist": "Wisin & Yandel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:28:49.866Z"
+    },
     {
       "id": "3n6kfT0sbKCbHSCmnzTD6w",
       "title": "עת הלבנה",
