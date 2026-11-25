@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6763,
-  "last_updated": "2026-11-25T20:15:34.859Z",
+  "version": 6765,
+  "last_updated": "2026-11-25T20:15:39.466Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3wu97JWr5wLV3PuaW6ovew",
+      "title": "יאנגינז",
+      "artist": "Balishag, LIL KK",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:15:39.466Z"
+    },
+    {
+      "id": "63lXon3Zs9DgmGHCPoDkEv",
+      "title": "Calming (1111 Hz)",
+      "artist": "Malte Marten",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:15:39.466Z"
+    },
     {
       "id": "2lDdKTrXKkGmNuq1DgPHif",
       "title": "A Theory of Love",
