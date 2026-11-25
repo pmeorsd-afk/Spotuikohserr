@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6954,
-  "last_updated": "2026-11-25T20:37:39.403Z",
+  "version": 6955,
+  "last_updated": "2026-11-25T20:37:43.399Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5hLzthlv5hxaRAh6yw8mUN",
+      "title": "מחרוזת אל תירא ישראל",
+      "artist": "Gal Sinvani",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:37:43.399Z"
+    },
     {
       "id": "2K2M0TcglCRLLpFOzKeFZA",
       "title": "Sunshine Of Your Love",
