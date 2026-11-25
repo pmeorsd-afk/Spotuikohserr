@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6973,
-  "last_updated": "2026-11-25T22:34:00.750Z",
+  "version": 6975,
+  "last_updated": "2026-11-25T22:34:05.022Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7m6DgV7Il2SIFiF5gdL12J",
+      "title": "התחדשות מוזיקה מרגיעה לניקוי הנפש",
+      "artist": "kfir kaikov",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T22:34:05.022Z"
+    },
+    {
+      "id": "5CV1vG5oTg8II3Jp5vzl4q",
+      "title": "מוזיקה לטיפול גוף נפש",
+      "artist": "kfir kaikov",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T22:34:05.022Z"
+    },
     {
       "id": "1OCpZUqOzrrD5791tGytKX",
       "title": "יש בלאגן גדול",
