@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6891,
-  "last_updated": "2026-11-25T20:33:34.625Z",
+  "version": 6893,
+  "last_updated": "2026-11-25T20:33:38.962Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3wNGx5fvPgVku8yzcK5h2m",
+      "title": "עד סוף העולם",
+      "artist": "Haim Moshe",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:33:38.962Z"
+    },
+    {
+      "id": "7n98R1DJk73ZMnNcpuMTAp",
+      "title": "אצלך בעולם - Acoustic Version",
+      "artist": "Meir Banai",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:33:38.962Z"
+    },
     {
       "id": "72cDqMXzRL2rVPiucpNatr",
       "title": "קחי את הפחדים",
