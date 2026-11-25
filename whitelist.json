@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6742,
-  "last_updated": "2026-11-25T20:12:49.722Z",
+  "version": 6744,
+  "last_updated": "2026-11-25T20:12:54.645Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1yqagVoTcE3zoGenQTbWI2",
+      "title": "Doblexxó",
+      "artist": "J Balvin, Feid",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:12:54.645Z"
+    },
+    {
+      "id": "6Y0XhHNilzIgrZMthzG1xT",
+      "title": "ארץ חדשה",
+      "artist": "Shlomo Artzi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:12:54.645Z"
+    },
     {
       "id": "0bSlaaneF4lLymoMouvxfH",
       "title": "לילות וקללות",
