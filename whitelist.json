@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6934,
-  "last_updated": "2026-11-25T20:36:30.323Z",
+  "version": 6936,
+  "last_updated": "2026-11-25T20:36:34.394Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0rWEVHFHGhzn56LJNhGzam",
+      "title": "מיליון או דולר",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:36:34.394Z"
+    },
+    {
+      "id": "6XbVadLNJYigI1ERcaZvZC",
+      "title": "מתגעגע",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:36:34.394Z"
+    },
     {
       "id": "4YIWoKqB8t3dmCwX5usNkM",
       "title": "You Need To Know",
