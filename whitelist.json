@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6851,
-  "last_updated": "2026-11-25T20:31:22.509Z",
+  "version": 6853,
+  "last_updated": "2026-11-25T20:31:25.984Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0gePxzCHAFLu9TCc9PQlkn",
+      "title": "Heart over Mind",
+      "artist": "Alan Walker, Daya",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:25.984Z"
+    },
+    {
+      "id": "1qA19MGPhY4VXJw4RywdWM",
+      "title": "Rescue (feat. Tiffany Hudson)",
+      "artist": "Jordan St. Cyr, Tiffany Hudson",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:25.984Z"
+    },
     {
       "id": "6NmSmXmPs4YZJZYFHM3rwR",
       "title": "Nothing Too Broken",
