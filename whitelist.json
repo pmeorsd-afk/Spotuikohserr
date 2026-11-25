@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6924,
-  "last_updated": "2026-11-25T20:35:51.665Z",
+  "version": 6925,
+  "last_updated": "2026-11-25T20:35:55.617Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5a2m6EUvesG5iblWp5ESzw",
+      "title": "בין הטוב והרע 2026",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:35:55.617Z"
+    },
     {
       "id": "1jIupbSkQxkCWLsYBkRMN1",
       "title": "חיה פצועה",
