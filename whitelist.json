@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6970,
-  "last_updated": "2026-11-25T22:24:40.335Z",
+  "version": 6972,
+  "last_updated": "2026-11-25T22:24:44.963Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1eqIMDUVgMsu06Rfoj0o7L",
+      "title": "מוזיקה מרגיעה נשימה עמוקה",
+      "artist": "kfir kaikov",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T22:24:44.963Z"
+    },
+    {
+      "id": "3pTn6a3KoTioVeIQ8Bo3sg",
+      "title": "מוזיקת ספא וריפוי חושים",
+      "artist": "kfir kaikov",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T22:24:44.963Z"
+    },
     {
       "id": "3DtRjXk8qGX6iVPifXoZx7",
       "title": "מוזיקת ספא מנגינות מרגיעות",
