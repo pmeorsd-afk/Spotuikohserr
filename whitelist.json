@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6715,
-  "last_updated": "2026-11-24T22:37:04.668Z",
+  "version": 6716,
+  "last_updated": "2026-11-25T20:04:00.757Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7LmxmM0bQJukHYX3JnSYdr",
+      "title": "אגרסיות",
+      "artist": "אל סיי איי, Balishag",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:04:00.757Z"
+    },
     {
       "id": "5R5osBkE5UzMZ10h33sIXQ",
       "title": "יתגבר",
