@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6773,
-  "last_updated": "2026-11-25T20:16:29.123Z",
+  "version": 6774,
+  "last_updated": "2026-11-25T20:18:25.794Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7iQXYTyuG13aoeHxGG28Nh",
+      "title": "PERRO NEGRO",
+      "artist": "Bad Bunny, Feid",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:18:25.794Z"
+    },
     {
       "id": "2JirWWF70EkAuDMeJzNK9J",
       "title": "באנדו",
