@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6733,
-  "last_updated": "2026-11-25T20:11:48.741Z",
+  "version": 6734,
+  "last_updated": "2026-11-25T20:11:53.117Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5TFD2bmFKGhoCRbX61nXY5",
+      "title": "NUEVAYoL",
+      "artist": "Bad Bunny",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:11:53.117Z"
+    },
     {
       "id": "0mzeEr7kHYzVPWF6iTIuwE",
       "title": "Headlights",
