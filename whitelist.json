@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6926,
-  "last_updated": "2026-11-25T20:35:59.813Z",
+  "version": 6928,
+  "last_updated": "2026-11-25T20:36:03.804Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5zFpgUrPUXqrcO7yxOsV3E",
+      "title": "נגעת לי בלב",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:36:03.804Z"
+    },
+    {
+      "id": "49J983pK9GRpmKaJGh9ARP",
+      "title": "Killing Me Slowly (LaLaLa)",
+      "artist": "Lonely Club",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:36:03.804Z"
+    },
     {
       "id": "4EIuniJpyiz7lZ4xN48ZgI",
       "title": "מזל מאזניים",
