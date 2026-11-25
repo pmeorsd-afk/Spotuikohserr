@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6740,
-  "last_updated": "2026-11-25T20:12:44.523Z",
+  "version": 6742,
+  "last_updated": "2026-11-25T20:12:49.722Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0bSlaaneF4lLymoMouvxfH",
+      "title": "לילות וקללות",
+      "artist": "הכוכב הבא, Noam Bettan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:12:49.722Z"
+    },
+    {
+      "id": "6J5kc12BW5HuP3d7C3vvx8",
+      "title": "EoO",
+      "artist": "Bad Bunny",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:12:49.722Z"
+    },
     {
       "id": "1xQvWUSXUiv1OyuaB8KwHN",
       "title": "הגולה",
