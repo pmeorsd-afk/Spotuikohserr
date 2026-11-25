@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6724,
-  "last_updated": "2026-11-25T20:11:08.823Z",
+  "version": 6726,
+  "last_updated": "2026-11-25T20:11:12.977Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5JdxyT7q2l25y0NgzicM2Z",
+      "title": "מחרוזת: היא מערבבת",
+      "artist": "Aviad Sahar",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:11:12.977Z"
+    },
+    {
+      "id": "5yeEqV03RwszJyheZ03B6o",
+      "title": "Nothin' On You",
+      "artist": "B.o.B, Bruno Mars",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:11:12.977Z"
+    },
     {
       "id": "0VsPGERCzao6a6Oo0QsD5Z",
       "title": "MANSORY",
