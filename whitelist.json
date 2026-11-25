@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6931,
-  "last_updated": "2026-11-25T20:36:12.615Z",
+  "version": 6932,
+  "last_updated": "2026-11-25T20:36:25.671Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2HOesEM3tUXTyEPCy1D0c3",
+      "title": "You Are The Light",
+      "artist": "Karkaz, okafuwa",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:36:25.671Z"
+    },
     {
       "id": "7yfFQgDGrmjJs8xP8coLXy",
       "title": "צאי אל החלון",
