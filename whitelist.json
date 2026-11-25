@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6888,
-  "last_updated": "2026-11-25T20:33:18.838Z",
+  "version": 6889,
+  "last_updated": "2026-11-25T20:33:25.547Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7yrC2QCLF2SVPQoMC7yGDH",
+      "title": "Crazy About You",
+      "artist": "Tauren Wells",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:33:25.547Z"
+    },
     {
       "id": "59c2xv2kMzYM6HR9oY6BIa",
       "title": "Sweet Boy",
