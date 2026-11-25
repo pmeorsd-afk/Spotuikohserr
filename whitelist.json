@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6818,
-  "last_updated": "2026-11-25T20:28:58.125Z",
+  "version": 6819,
+  "last_updated": "2026-11-25T20:29:02.007Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "39Dt7PjM4E7vdQ1OHRQeys",
+      "title": "Me Niegas",
+      "artist": "Baby Rasta y Gringo",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:29:02.007Z"
+    },
     {
       "id": "4ixHARdcFp2pbKQ9VSKdgA",
       "title": "אתה לא לבד",
