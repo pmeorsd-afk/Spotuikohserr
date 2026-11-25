@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6859,
-  "last_updated": "2026-11-25T20:31:41.967Z",
+  "version": 6860,
+  "last_updated": "2026-11-25T20:31:46.829Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "14pYPHidluhy8rKXyCUjE8",
+      "title": "Darkride",
+      "artist": "Alan Walker",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:46.829Z"
+    },
     {
       "id": "6svDmByjuCnV5tgx2tAppk",
       "title": "Foolish",
