@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6868,
-  "last_updated": "2026-11-25T20:32:06.009Z",
+  "version": 6870,
+  "last_updated": "2026-11-25T20:32:10.178Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3PECgZoKgbhUH1JXV82pn5",
+      "title": "I Will Go",
+      "artist": "Travis Clark",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:32:10.178Z"
+    },
+    {
+      "id": "3hxIUxnT27p5WcmjGUXNwx",
+      "title": "Shut up My Moms Calling",
+      "artist": "Hotel Ugly",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:32:10.178Z"
+    },
     {
       "id": "6G9YlbU3ByPJQvOFDRdwyM",
       "title": "her",
