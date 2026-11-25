@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6939,
-  "last_updated": "2026-11-25T20:36:50.821Z",
+  "version": 6940,
+  "last_updated": "2026-11-25T20:36:55.201Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5W8FripY28nqThH37zmSHn",
+      "title": "לא שבת ולא שלום",
+      "artist": "Mor",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:36:55.201Z"
+    },
     {
       "id": "0ps7qEnHId57xIZs3fSbHp",
       "title": "אחד אלוהים",
