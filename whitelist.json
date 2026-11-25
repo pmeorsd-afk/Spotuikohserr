@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6905,
-  "last_updated": "2026-11-25T20:34:33.179Z",
+  "version": 6906,
+  "last_updated": "2026-11-25T20:34:37.004Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Gpwk0XHvVCrjuQjBWrfMW",
+      "title": "כותב שירי פרידה",
+      "artist": "Rotem Shafran",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:34:37.004Z"
+    },
     {
       "id": "2Lz7Nvho3hwMI67fuEbLrw",
       "title": "ואני שר",
