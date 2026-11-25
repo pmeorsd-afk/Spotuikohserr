@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6785,
-  "last_updated": "2026-11-25T20:21:44.383Z",
+  "version": 6786,
+  "last_updated": "2026-11-25T20:21:48.421Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1zsPaEkglFvxjAhrM8yhpr",
+      "title": "Hey Mor",
+      "artist": "Ozuna, Feid",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:21:48.421Z"
+    },
     {
       "id": "5RqSsdzTNPX1uzkmlHCFvK",
       "title": "QLONA",
