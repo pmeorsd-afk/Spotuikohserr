@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6941,
-  "last_updated": "2026-11-25T20:36:59.774Z",
+  "version": 6943,
+  "last_updated": "2026-11-25T20:37:03.885Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "59kcUaOLIHwwz3Mfgr4Cuw",
+      "title": "איתך & תחזרי מהר - מנורה לייב",
+      "artist": "Eden Hason, Osher Cohen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:37:03.885Z"
+    },
+    {
+      "id": "6M7EFs68RhR5NlTgDO6kQP",
+      "title": "חייל של אהבה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:37:03.885Z"
+    },
     {
       "id": "64SRoSXA03cv3mTvs4f15T",
       "title": "מנגנת את חיי",
