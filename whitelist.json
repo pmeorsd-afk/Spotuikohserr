@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6883,
-  "last_updated": "2026-11-25T20:32:59.237Z",
+  "version": 6885,
+  "last_updated": "2026-11-25T20:33:03.025Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0X8Ey370X9ojUM7BKPXbfn",
+      "title": "לאבד עניין בזמן",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:33:03.025Z"
+    },
+    {
+      "id": "6k1WnlA9NygoiJuAxYVQqO",
+      "title": "Hold On",
+      "artist": "Gabe Bauman, SHMN",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:33:03.025Z"
+    },
     {
       "id": "242wcmbEPMr9SbZuUYVk9K",
       "title": "ערב קיצוני",
