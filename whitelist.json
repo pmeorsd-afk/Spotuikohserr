@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6969,
-  "last_updated": "2026-11-25T21:48:36.430Z",
+  "version": 6970,
+  "last_updated": "2026-11-25T22:24:40.335Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3DtRjXk8qGX6iVPifXoZx7",
+      "title": "מוזיקת ספא מנגינות מרגיעות",
+      "artist": "kfir kaikov",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T22:24:40.335Z"
+    },
     {
       "id": "2dHHgzDwk4BJdRwy9uXhTO",
       "title": "Creepin' (with The Weeknd & 21 Savage)",
