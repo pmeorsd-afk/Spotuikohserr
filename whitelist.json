@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6811,
-  "last_updated": "2026-11-25T20:23:13.168Z",
+  "version": 6812,
+  "last_updated": "2026-11-25T20:25:07.446Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0CweoXuavxBRvUrbdnkMdW",
+      "title": "משהו מתוק",
+      "artist": "פאר טסי, Pablo Rosenberg",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:25:07.446Z"
+    },
     {
       "id": "1Hu8EMKCGD25srDybGOtBC",
       "title": "Soy una Gargola",
