@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6907,
-  "last_updated": "2026-11-25T20:34:45.991Z",
+  "version": 6908,
+  "last_updated": "2026-11-25T20:34:49.780Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "54WbiFSE71t4GwNln4Z2fe",
+      "title": "שיר לנטע",
+      "artist": "ניר כנען",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:34:49.780Z"
+    },
     {
       "id": "5nhcURrsgUcsZQLiRY7dCM",
       "title": "התקווה - HOPE",
