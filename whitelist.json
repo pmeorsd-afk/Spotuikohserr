@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6903,
-  "last_updated": "2026-11-25T20:34:17.629Z",
+  "version": 6904,
+  "last_updated": "2026-11-25T20:34:21.331Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "59WN2psjkt1tyaxjspN8fp",
+      "title": "Killing In The Name",
+      "artist": "Rage Against The Machine",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:34:21.331Z"
+    },
     {
       "id": "1Q8IFHccEm36HRoZGIkHqg",
       "title": "מדוע לא באת",
