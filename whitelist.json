@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6839,
-  "last_updated": "2026-11-25T20:30:37.462Z",
+  "version": 6840,
+  "last_updated": "2026-11-25T20:30:41.215Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7bxlXnh1YMHQZHQm04oNrk",
+      "title": "נשבע",
+      "artist": "Haim Moshe",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:30:41.215Z"
+    },
     {
       "id": "3bC1ahPIYt1btJzSSEyyrF",
       "title": "Whistle",
