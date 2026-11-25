@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6854,
-  "last_updated": "2026-11-25T20:31:29.985Z",
+  "version": 6856,
+  "last_updated": "2026-11-25T20:31:34.270Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2OfwiPfl7D5jNBjhinLeCm",
+      "title": "Missing Jesus",
+      "artist": "Caleb & John",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:34.270Z"
+    },
+    {
+      "id": "0BFYrL6UGqLnQuNdnTb9at",
+      "title": "I FEEL HOME",
+      "artist": "Joseph O'Brien",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:34.270Z"
+    },
     {
       "id": "0mjx6YBhH4WwoyF7wvWGKY",
       "title": "Spectre 2.0",
