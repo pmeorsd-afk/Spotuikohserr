@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6747,
-  "last_updated": "2026-11-25T20:13:02.912Z",
+  "version": 6749,
+  "last_updated": "2026-11-25T20:13:06.685Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7d6yK8v8J484SWH5prIQiE",
+      "title": "VeLDÁ",
+      "artist": "Bad Bunny, Omar Courtz, Dei V",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:13:06.685Z"
+    },
+    {
+      "id": "0Lahr7sUDdtYnX3n3KobR6",
+      "title": "PONTE LOKITA",
+      "artist": "Katteyes, Kidd Voodoo, Swift 047",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:13:06.685Z"
+    },
     {
       "id": "44xDy4h27s4ENaC8fKnCoC",
       "title": "Cuando No Era Cantante",
