@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6801,
-  "last_updated": "2026-11-25T20:22:42.741Z",
+  "version": 6802,
+  "last_updated": "2026-11-25T20:22:47.469Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0RyIyQiFk4lbcMpyzzNpLu",
+      "title": "Words We'll Sing Forever",
+      "artist": "Seph Schlueter",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:22:47.469Z"
+    },
     {
       "id": "12nxXb0ABx0anVAQJQWnqU",
       "title": "Siente El Boom (feat. Randy)",
