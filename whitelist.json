@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6720,
-  "last_updated": "2026-11-25T20:04:12.194Z",
+  "version": 6721,
+  "last_updated": "2026-11-25T20:04:16.461Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1hxaEYCil4k89fG73MzWF4",
+      "title": "אחלה קומבינה (קלמנטינה בגינה)",
+      "artist": "Axum",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:04:16.461Z"
+    },
     {
       "id": "32JUsRfQ0Eeh7jO70Ae9CE",
       "title": "הכל כלול",
