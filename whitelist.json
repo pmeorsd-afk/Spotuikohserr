@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6825,
-  "last_updated": "2026-11-25T20:29:31.472Z",
+  "version": 6826,
+  "last_updated": "2026-11-25T20:29:46.628Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0iyWLMbQaQXV8e6bjNw1HV",
+      "title": "כתבתי מילים",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:29:46.628Z"
+    },
     {
       "id": "3H3gBY8G8SoNHihPWMfnyF",
       "title": "ימים חדשים",
