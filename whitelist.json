@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6940,
-  "last_updated": "2026-11-25T20:36:55.201Z",
+  "version": 6941,
+  "last_updated": "2026-11-25T20:36:59.774Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "64SRoSXA03cv3mTvs4f15T",
+      "title": "מנגנת את חיי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:36:59.774Z"
+    },
     {
       "id": "5W8FripY28nqThH37zmSHn",
       "title": "לא שבת ולא שלום",
