@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6754,
-  "last_updated": "2026-11-25T20:13:22.853Z",
+  "version": 6755,
+  "last_updated": "2026-11-25T20:13:26.834Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0FDMH2ahuIVzCybwHJK9zh",
+      "title": "Quiere Beber",
+      "artist": "Anuel AA",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:13:26.834Z"
+    },
     {
       "id": "2MiKb9mexv6mxRWpb8QjNG",
       "title": "בגלל הרוח",
