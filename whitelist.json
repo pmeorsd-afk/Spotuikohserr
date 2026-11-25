@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6731,
-  "last_updated": "2026-11-25T20:11:44.870Z",
+  "version": 6733,
+  "last_updated": "2026-11-25T20:11:48.741Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0mzeEr7kHYzVPWF6iTIuwE",
+      "title": "Headlights",
+      "artist": "Alex Warren",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:11:48.741Z"
+    },
+    {
+      "id": "6aLOYVFW1UnDYsNnFe30pj",
+      "title": "תקליט שבור",
+      "artist": "Avi Aburomi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:11:48.741Z"
+    },
     {
       "id": "5l9c6bJmzvftumhz4TMPgk",
       "title": "Harvest Moon",
