@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6880,
-  "last_updated": "2026-11-25T20:32:48.506Z",
+  "version": 6881,
+  "last_updated": "2026-11-25T20:32:52.180Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4SLu8oXC6QJqkAbEjNTy8w",
+      "title": "Shadow Glow",
+      "artist": "Janji",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:32:52.180Z"
+    },
     {
       "id": "4SqWKzw0CbA05TGszDgMlc",
       "title": "I Love You So",
