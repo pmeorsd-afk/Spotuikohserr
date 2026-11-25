@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6902,
-  "last_updated": "2026-11-25T20:34:12.732Z",
+  "version": 6903,
+  "last_updated": "2026-11-25T20:34:17.629Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Q8IFHccEm36HRoZGIkHqg",
+      "title": "מדוע לא באת",
+      "artist": "Yermi Kaplan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:34:17.629Z"
+    },
     {
       "id": "1ZEsqzNBQqyC7VLRTUDopj",
       "title": "חצי שלי",
