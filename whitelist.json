@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6828,
-  "last_updated": "2026-11-25T20:29:54.505Z",
+  "version": 6830,
+  "last_updated": "2026-11-25T20:29:58.238Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2bX9Gb5QO1c7I6OIiAIVXE",
+      "title": "האיפור שלך",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:29:58.238Z"
+    },
     {
       "id": "3HBURqp8BKwKwRa62vuyh3",
       "title": "הולך ומתרחק",
@@ -49112,6 +49121,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-11-25T20:22:34.843Z"
+    },
+    {
+      "id": "af2048b8268e40411bafc7b73d56cff75fc3f7483e738a76",
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/4R0JVewCEeL3D4KZ71sZsH/he",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-11-25T20:29:58.238Z"
     }
   ],
   "search_images": [
