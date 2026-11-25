@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6802,
-  "last_updated": "2026-11-25T20:22:47.469Z",
+  "version": 6803,
+  "last_updated": "2026-11-25T20:22:51.753Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "511CrN7Kog2whsYmQfuUVz",
+      "title": "Come On Home",
+      "artist": "Seph Schlueter",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:22:51.753Z"
+    },
     {
       "id": "0RyIyQiFk4lbcMpyzzNpLu",
       "title": "Words We'll Sing Forever",
