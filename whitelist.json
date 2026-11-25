@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6885,
-  "last_updated": "2026-11-25T20:33:03.025Z",
+  "version": 6886,
+  "last_updated": "2026-11-25T20:33:07.245Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3z8a4tilyTBoX0xHizR6Sj",
+      "title": "מחרוזת חנוכה",
+      "artist": "משאלות",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:33:07.245Z"
+    },
     {
       "id": "0X8Ey370X9ojUM7BKPXbfn",
       "title": "לאבד עניין בזמן",
