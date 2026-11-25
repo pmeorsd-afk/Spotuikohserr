@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6843,
-  "last_updated": "2026-11-25T20:30:53.604Z",
+  "version": 6844,
+  "last_updated": "2026-11-25T20:31:01.968Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "38L9rUZBPpV31Fz5tsG2Dq",
+      "title": "משפחת צנעני",
+      "artist": "Avi Sinvani",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:01.968Z"
+    },
     {
       "id": "6QKTmIXsD36fD3BaKJt4a4",
       "title": "היא לא דומה",
