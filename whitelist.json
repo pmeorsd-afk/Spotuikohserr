@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6960,
-  "last_updated": "2026-11-25T20:59:24.363Z",
+  "version": 6961,
+  "last_updated": "2026-11-25T20:59:28.629Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7tMQyjrvlSHxOlWqjTXwkl",
+      "title": "אור אדום",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:59:28.629Z"
+    },
     {
       "id": "3eRTVZlo1DQFnNi03tH2EE",
       "title": "כל עכבה לטובה - Remix",
