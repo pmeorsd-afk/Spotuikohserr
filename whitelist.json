@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6823,
-  "last_updated": "2026-11-25T20:29:27.760Z",
+  "version": 6825,
+  "last_updated": "2026-11-25T20:29:31.472Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3H3gBY8G8SoNHihPWMfnyF",
+      "title": "ימים חדשים",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:29:31.472Z"
+    },
+    {
+      "id": "5wUpfQswYNtOSMAQZBQ5op",
+      "title": "פרש בודד",
+      "artist": "Cohen, Ravid Plotnik",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:29:31.472Z"
+    },
     {
       "id": "1UNEuG9DYOWiikf00ayr52",
       "title": "Love Me Not",
