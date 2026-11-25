@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6968,
-  "last_updated": "2026-11-25T21:42:15.969Z",
+  "version": 6969,
+  "last_updated": "2026-11-25T21:48:36.430Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2dHHgzDwk4BJdRwy9uXhTO",
+      "title": "Creepin' (with The Weeknd & 21 Savage)",
+      "artist": "Metro Boomin, The Weeknd, 21 Savage",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T21:48:36.430Z"
+    },
     {
       "id": "2p8IUWQDrpjuFltbdgLOag",
       "title": "After Hours",
