@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6916,
-  "last_updated": "2026-11-25T20:35:13.307Z",
+  "version": 6917,
+  "last_updated": "2026-11-25T20:35:21.016Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:tjnR0fy1gKg",
+      "title": "גד בני ובנימין אלבז - אבן מאסו הבונים - Gad, Benny & Benyamin Elbaz - Even",
+      "artist": "גד אלבז",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:35:21.016Z"
+    },
     {
       "id": "4K8Rm3Jn98rC1ThcD7k7Jo",
       "title": "אני מושלם",
