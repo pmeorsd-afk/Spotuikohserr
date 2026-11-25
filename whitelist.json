@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6849,
-  "last_updated": "2026-11-25T20:31:14.518Z",
+  "version": 6850,
+  "last_updated": "2026-11-25T20:31:18.697Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "41P6Tnd8KIHqON0QIydx6a",
+      "title": "the perfect pair",
+      "artist": "beabadoobee",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:18.697Z"
+    },
     {
       "id": "1I3pR0lbHQBGpG8eplkEHG",
       "title": "Nothing",
