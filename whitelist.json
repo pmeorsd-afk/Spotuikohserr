@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6875,
-  "last_updated": "2026-11-25T20:32:32.924Z",
+  "version": 6876,
+  "last_updated": "2026-11-25T20:32:36.808Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6QgqDkjDYszx96NbynkyeH",
+      "title": "Deception",
+      "artist": "AlexDy",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:32:36.808Z"
+    },
     {
       "id": "7fwLaJDgkuxaJbaE5rT7Cr",
       "title": "Infinite",
