@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6751,
-  "last_updated": "2026-11-25T20:13:14.597Z",
+  "version": 6752,
+  "last_updated": "2026-11-25T20:13:18.650Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1w2R0MGeCi8qPS8tc5t1Tf",
+      "title": "לכה דודי",
+      "artist": "אורי סבאן",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:13:18.650Z"
+    },
     {
       "id": "6DoL1yYIwEW7VZMRaJhoJI",
       "title": "La Llevo Al Cielo (Ft. Ñengo Flow)",
