@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6861,
-  "last_updated": "2026-11-25T20:31:50.799Z",
+  "version": 6863,
+  "last_updated": "2026-11-25T20:31:54.756Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4QwNKEWMM7dyLB7Ew9DHHg",
+      "title": "Lonely Together - (feat. Rita Ora) Alan Walker Remix",
+      "artist": "Avicii, Rita Ora, Alan Walker",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:54.756Z"
+    },
+    {
+      "id": "55Hyy6Koemd0ZpbVhZgG9l",
+      "title": "Walk With Jesus",
+      "artist": "Consumed By Fire",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:54.756Z"
+    },
     {
       "id": "2pFr3D2vKxULFhO2j8vq3U",
       "title": "Creator Circle",
