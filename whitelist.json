@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6866,
-  "last_updated": "2026-11-25T20:32:02.146Z",
+  "version": 6868,
+  "last_updated": "2026-11-25T20:32:06.009Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6G9YlbU3ByPJQvOFDRdwyM",
+      "title": "her",
+      "artist": "JVKE",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:32:06.009Z"
+    },
+    {
+      "id": "2zZHgHVQjbcSttFs0LFsm8",
+      "title": "IT'S A GOOD TIME TO PRAISE",
+      "artist": "Peter Burton",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:32:06.009Z"
+    },
     {
       "id": "3yDHWBM0zZob0l6bwoto3J",
       "title": "We'll never know",
