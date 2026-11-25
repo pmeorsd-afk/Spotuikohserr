@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6815,
-  "last_updated": "2026-11-25T20:28:49.866Z",
+  "version": 6817,
+  "last_updated": "2026-11-25T20:28:54.625Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0t0WIrjRcvgBAwLlby2gsZ",
+      "title": "Down",
+      "artist": "R.K.M & Ken-Y",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:28:54.625Z"
+    },
+    {
+      "id": "7D2uSJ5TxewEuSneCqc5v5",
+      "title": "כל העיר שלנו",
+      "artist": "פאר טסי, Eden Ben Zaken",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:28:54.625Z"
+    },
     {
       "id": "1kQqiC1rS1FiuVpeBKN0QN",
       "title": "Rakata",
