@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6928,
-  "last_updated": "2026-11-25T20:36:03.804Z",
+  "version": 6930,
+  "last_updated": "2026-11-25T20:36:08.074Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4zwNmSqY5y2UXk4JHjdUtr",
+      "title": "אלוהיי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:36:08.074Z"
+    },
+    {
+      "id": "7htTCMPwA9KK0UFGLBjuOH",
+      "title": "Jakarta (feat. AYA MAI)",
+      "artist": "Axel Johansson, AYA MAI",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:36:08.074Z"
+    },
     {
       "id": "5zFpgUrPUXqrcO7yxOsV3E",
       "title": "נגעת לי בלב",
