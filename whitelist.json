@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6959,
-  "last_updated": "2026-11-25T20:37:59.871Z",
+  "version": 6960,
+  "last_updated": "2026-11-25T20:59:24.363Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3eRTVZlo1DQFnNi03tH2EE",
+      "title": "כל עכבה לטובה - Remix",
+      "artist": "BPMor, Ori Zamir",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:59:24.363Z"
+    },
     {
       "id": "youtube:vj9kBN6Gkck",
       "title": "Aderaba",
