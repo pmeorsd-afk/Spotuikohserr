@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6781,
-  "last_updated": "2026-11-25T20:21:32.933Z",
+  "version": 6782,
+  "last_updated": "2026-11-25T20:21:37.227Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ppbP8uBOpIWU1mq9zXu3i",
+      "title": "Malory",
+      "artist": "Ryan Castro",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:21:37.227Z"
+    },
     {
       "id": "0lREs0EdgrMQQKw00yx0Ct",
       "title": "Una Noche en Medellín",
