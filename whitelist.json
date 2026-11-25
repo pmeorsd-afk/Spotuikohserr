@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6757,
-  "last_updated": "2026-11-25T20:13:34.597Z",
+  "version": 6759,
+  "last_updated": "2026-11-25T20:13:38.599Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Hxgat5RmLkRvctiIFDr0G",
+      "title": "C# Pygmy",
+      "artist": "Yatao, Malte Marten",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:13:38.599Z"
+    },
+    {
+      "id": "6mib3N4E8PZHAGQ3xy7bho",
+      "title": "Moonage Daydream - 2012 Remaster",
+      "artist": "David Bowie",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:13:38.599Z"
+    },
     {
       "id": "30tVNKjqTxvgU9yTw349JM",
       "title": "Ask You Tonight",
