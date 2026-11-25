@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6842,
-  "last_updated": "2026-11-25T20:30:48.529Z",
+  "version": 6843,
+  "last_updated": "2026-11-25T20:30:53.604Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6QKTmIXsD36fD3BaKJt4a4",
+      "title": "היא לא דומה",
+      "artist": "Lior Farhi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:30:53.604Z"
+    },
     {
       "id": "7odYL54tcTVr1Luw1b4rCP",
       "title": "עלה קטן שלי",
