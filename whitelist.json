@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6805,
-  "last_updated": "2026-11-25T20:22:55.975Z",
+  "version": 6807,
+  "last_updated": "2026-11-25T20:23:00.528Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3taCy6SW79HbVJotZc03gB",
+      "title": "Welcome To My Crib",
+      "artist": "Randy Nota Loca",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:23:00.528Z"
+    },
+    {
+      "id": "5ZYPDf2eRPWwPD4wdAVb4V",
+      "title": "הכל זה בגללה",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:23:00.528Z"
+    },
     {
       "id": "4f49sFQko7jHLEFd3tCf5p",
       "title": "Ojitos Chiquitos",
