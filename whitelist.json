@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6975,
-  "last_updated": "2026-11-25T22:34:05.022Z",
+  "version": 6976,
+  "last_updated": "2026-11-25T22:41:20.601Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1uAAF1u0yZJ9aDIx9FyHji",
+      "title": "FREEZER",
+      "artist": "Summrs, Yeat",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T22:41:20.601Z"
+    },
     {
       "id": "7m6DgV7Il2SIFiF5gdL12J",
       "title": "התחדשות מוזיקה מרגיעה לניקוי הנפש",
