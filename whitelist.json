@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6721,
-  "last_updated": "2026-11-25T20:04:16.461Z",
+  "version": 6723,
+  "last_updated": "2026-11-25T20:04:20.804Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2GCR5b8UkMN2QtBMtfMvZQ",
+      "title": "מצילה אותי",
+      "artist": "Avihu Pinhasov Rhythm Club",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:04:20.804Z"
+    },
+    {
+      "id": "53NRjjReS0sxCbLKWHqrlA",
+      "title": "עכשיו את מאושרת",
+      "artist": "Ben El",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:04:20.804Z"
+    },
     {
       "id": "1hxaEYCil4k89fG73MzWF4",
       "title": "אחלה קומבינה (קלמנטינה בגינה)",
