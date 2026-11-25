@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6728,
-  "last_updated": "2026-11-25T20:11:22.009Z",
+  "version": 6729,
+  "last_updated": "2026-11-25T20:11:28.229Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "473RQuUrozWbzYYHL08o7E",
+      "title": "תן לנו מלך",
+      "artist": "שאול - מחזמר רוק ישראלי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:11:28.229Z"
+    },
     {
       "id": "05hDkglypopI5ADkhOKQNC",
       "title": "תתגדל ותתקדש ניגון חבד",
