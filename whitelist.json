@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6780,
-  "last_updated": "2026-11-25T20:21:27.932Z",
+  "version": 6781,
+  "last_updated": "2026-11-25T20:21:32.933Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0lREs0EdgrMQQKw00yx0Ct",
+      "title": "Una Noche en Medellín",
+      "artist": "Cris MJ",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:21:32.933Z"
+    },
     {
       "id": "2esZG2XFtuoWWA9AfDvSxy",
       "title": "Gata Only",
