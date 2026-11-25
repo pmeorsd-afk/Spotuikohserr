@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6738,
-  "last_updated": "2026-11-25T20:12:07.560Z",
+  "version": 6739,
+  "last_updated": "2026-11-25T20:12:11.750Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1xQvWUSXUiv1OyuaB8KwHN",
+      "title": "הגולה",
+      "artist": "נופיה, הכוכב הבא",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:12:11.750Z"
+    },
     {
       "id": "1LiN0Z98FkR1t0m8KmLcAH",
       "title": "Amanece",
