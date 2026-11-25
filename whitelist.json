@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6977,
-  "last_updated": "2026-11-25T22:41:24.520Z",
+  "version": 6978,
+  "last_updated": "2026-11-25T22:43:26.044Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0jZVcptTJu7KZWcf9aH7re",
+      "title": "IN2THAT",
+      "artist": "Yeat",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T22:43:26.044Z"
+    },
     {
       "id": "3KDtE1GhjSQivcvuNGfSvi",
       "title": "מה עכשיו",
