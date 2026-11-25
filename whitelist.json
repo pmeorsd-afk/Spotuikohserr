@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6890,
-  "last_updated": "2026-11-25T20:33:30.527Z",
+  "version": 6891,
+  "last_updated": "2026-11-25T20:33:34.625Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "72cDqMXzRL2rVPiucpNatr",
+      "title": "קחי את הפחדים",
+      "artist": "בניה ברבי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:33:34.625Z"
+    },
     {
       "id": "09yDsl7d8xXZPntarkiVes",
       "title": "סיגפו",
