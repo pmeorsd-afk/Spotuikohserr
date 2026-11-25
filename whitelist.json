@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6835,
-  "last_updated": "2026-11-25T20:30:22.135Z",
+  "version": 6836,
+  "last_updated": "2026-11-25T20:30:25.695Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1n7VNB1nO2C8UVpVDinYvh",
+      "title": "פאנן",
+      "artist": "Shotei Hanevuah",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:30:25.695Z"
+    },
     {
       "id": "4356Typ82hUiFAynbLYbPn",
       "title": "DJ Got Us Fallin' In Love (feat. Pitbull)",
