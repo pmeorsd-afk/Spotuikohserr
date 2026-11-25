@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6723,
-  "last_updated": "2026-11-25T20:04:20.804Z",
+  "version": 6724,
+  "last_updated": "2026-11-25T20:11:08.823Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0VsPGERCzao6a6Oo0QsD5Z",
+      "title": "MANSORY",
+      "artist": "DYSTINCT, Morad",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:11:08.823Z"
+    },
     {
       "id": "2GCR5b8UkMN2QtBMtfMvZQ",
       "title": "מצילה אותי",
