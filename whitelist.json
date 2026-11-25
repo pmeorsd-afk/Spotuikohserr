@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6899,
-  "last_updated": "2026-11-25T20:33:58.364Z",
+  "version": 6900,
+  "last_updated": "2026-11-25T20:34:02.442Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1ZEsqzNBQqyC7VLRTUDopj",
+      "title": "חצי שלי",
+      "artist": "Mor, Avi Aburomi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:34:02.442Z"
+    },
     {
       "id": "3IB8UOcIA5PijKgUx5YIoK",
       "title": "שחרר אותי",
