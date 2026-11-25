@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6873,
-  "last_updated": "2026-11-25T20:32:28.927Z",
+  "version": 6875,
+  "last_updated": "2026-11-25T20:32:32.924Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7fwLaJDgkuxaJbaE5rT7Cr",
+      "title": "Infinite",
+      "artist": "Lensko",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:32:32.924Z"
+    },
+    {
+      "id": "7rSqBHmI1I6f8GPj9axe9o",
+      "title": "Lover Of My Soul",
+      "artist": "Dan Bremnes",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:32:32.924Z"
+    },
     {
       "id": "7aXKjISIugIEdS1PVeiqKW",
       "title": "Life Is Calling",
