@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6952,
-  "last_updated": "2026-11-25T20:37:31.612Z",
+  "version": 6953,
+  "last_updated": "2026-11-25T20:37:35.271Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4Lc7q36WsOR6jjzkBEysVB",
+      "title": "סדרות טורקיות",
+      "artist": "Kobi Maman",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:37:35.271Z"
+    },
     {
       "id": "7CZiDzGVjUssMSOXrDNYHL",
       "title": "Ticket To Ride - Remastered 2009",
