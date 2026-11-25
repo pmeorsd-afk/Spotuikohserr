@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6817,
-  "last_updated": "2026-11-25T20:28:54.625Z",
+  "version": 6818,
+  "last_updated": "2026-11-25T20:28:58.125Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4ixHARdcFp2pbKQ9VSKdgA",
+      "title": "אתה לא לבד",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:28:58.125Z"
+    },
     {
       "id": "0t0WIrjRcvgBAwLlby2gsZ",
       "title": "Down",
