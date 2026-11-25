@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6889,
-  "last_updated": "2026-11-25T20:33:25.547Z",
+  "version": 6890,
+  "last_updated": "2026-11-25T20:33:30.527Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "09yDsl7d8xXZPntarkiVes",
+      "title": "סיגפו",
+      "artist": "Beit Habubot",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:33:30.527Z"
+    },
     {
       "id": "7yrC2QCLF2SVPQoMC7yGDH",
       "title": "Crazy About You",
