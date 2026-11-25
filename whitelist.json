@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6807,
-  "last_updated": "2026-11-25T20:23:00.528Z",
+  "version": 6808,
+  "last_updated": "2026-11-25T20:23:04.758Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1nFIaL6qejVD8X0IeDwJS4",
+      "title": "עם כל הבלאגן",
+      "artist": "פאר טסי, Niv Mantzur",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:23:04.758Z"
+    },
     {
       "id": "3taCy6SW79HbVJotZc03gB",
       "title": "Welcome To My Crib",
