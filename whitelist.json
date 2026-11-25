@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6827,
-  "last_updated": "2026-11-25T20:29:50.427Z",
+  "version": 6828,
+  "last_updated": "2026-11-25T20:29:54.505Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3HBURqp8BKwKwRa62vuyh3",
+      "title": "הולך ומתרחק",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:29:54.505Z"
+    },
     {
       "id": "2QtdVQ6W0dsOUXD082ZCwI",
       "title": "את עוד תראי",
