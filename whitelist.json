@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6912,
-  "last_updated": "2026-11-25T20:35:05.792Z",
+  "version": 6914,
+  "last_updated": "2026-11-25T20:35:09.711Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1bjZa4Htr66ynUS3o7wYXt",
+      "title": "חולת שליטה",
+      "artist": "ליאור פינטו",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:35:09.711Z"
+    },
+    {
+      "id": "6JngJpR0OLBQcrGHICRM1L",
+      "title": "בין השפיות לשיגעון",
+      "artist": "Ben Chen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:35:09.711Z"
+    },
     {
       "id": "636eqTAEu6z6nuyAfscpah",
       "title": "יש לי ציפור קטנה בלב",
