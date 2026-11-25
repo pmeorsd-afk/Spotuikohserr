@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6799,
-  "last_updated": "2026-11-25T20:22:38.587Z",
+  "version": 6801,
+  "last_updated": "2026-11-25T20:22:42.741Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "12nxXb0ABx0anVAQJQWnqU",
+      "title": "Siente El Boom (feat. Randy)",
+      "artist": "Boy Wonder CF, Tito \"El Bambino\", Randy",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:22:42.741Z"
+    },
+    {
+      "id": "1Kgyx7NLtzsa3gWV1efGHu",
+      "title": "Sexy Movimiento",
+      "artist": "Wisin & Yandel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:22:42.741Z"
+    },
     {
       "id": "0D8ixCy7PxqQHNdqYNEBlR",
       "title": "No Fear",
