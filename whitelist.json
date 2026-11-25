@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6853,
-  "last_updated": "2026-11-25T20:31:25.984Z",
+  "version": 6854,
+  "last_updated": "2026-11-25T20:31:29.985Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0mjx6YBhH4WwoyF7wvWGKY",
+      "title": "Spectre 2.0",
+      "artist": "Alan Walker, Steve Aoki, Lonely Club",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:29.985Z"
+    },
     {
       "id": "0gePxzCHAFLu9TCc9PQlkn",
       "title": "Heart over Mind",
