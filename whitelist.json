@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6830,
-  "last_updated": "2026-11-25T20:29:58.238Z",
+  "version": 6832,
+  "last_updated": "2026-11-25T20:30:01.834Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Rj6b6fb7bZamwGJgJRJxZ",
+      "title": "הלב שמח",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:30:01.834Z"
+    },
+    {
+      "id": "1gu53D3o5iXxJa7Ynigc6I",
+      "title": "מברוק",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:30:01.834Z"
+    },
     {
       "id": "2bX9Gb5QO1c7I6OIiAIVXE",
       "title": "האיפור שלך",
