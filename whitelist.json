@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6911,
-  "last_updated": "2026-11-25T20:35:02.020Z",
+  "version": 6912,
+  "last_updated": "2026-11-25T20:35:05.792Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "636eqTAEu6z6nuyAfscpah",
+      "title": "יש לי ציפור קטנה בלב",
+      "artist": "Noa Kirel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:35:05.792Z"
+    },
     {
       "id": "7AGQ46Tx4LIAc635Eg8BiO",
       "title": "ליקוטי סליחות",
