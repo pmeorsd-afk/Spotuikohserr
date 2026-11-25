@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6882,
-  "last_updated": "2026-11-25T20:32:55.632Z",
+  "version": 6883,
+  "last_updated": "2026-11-25T20:32:59.237Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "242wcmbEPMr9SbZuUYVk9K",
+      "title": "ערב קיצוני",
+      "artist": "יהונתן שתיוי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:32:59.237Z"
+    },
     {
       "id": "0y60itmpH0aPKsFiGxmtnh",
       "title": "Wait a Minute!",
