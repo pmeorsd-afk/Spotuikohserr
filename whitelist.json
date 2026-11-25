@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6832,
-  "last_updated": "2026-11-25T20:30:01.834Z",
+  "version": 6833,
+  "last_updated": "2026-11-25T20:30:06.973Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4uonUrROQcs9qPO0AC37sZ",
+      "title": "תאמיני לי",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:30:06.973Z"
+    },
     {
       "id": "6Rj6b6fb7bZamwGJgJRJxZ",
       "title": "הלב שמח",
