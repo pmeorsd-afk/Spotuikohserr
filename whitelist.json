@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6963,
-  "last_updated": "2026-11-25T21:20:47.592Z",
+  "version": 6964,
+  "last_updated": "2026-11-25T21:23:18.501Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5u5TpCsjREa4KZ1jJqprh7",
+      "title": "נחת",
+      "artist": "Avraham Fried, Ari Stern",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T21:23:18.501Z"
+    },
     {
       "id": "6FaYEREphoGlrKR3AmHdZJ",
       "title": "‏עלה קטן",
