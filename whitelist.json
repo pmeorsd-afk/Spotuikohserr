@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6833,
-  "last_updated": "2026-11-25T20:30:06.973Z",
+  "version": 6834,
+  "last_updated": "2026-11-25T20:30:11.304Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6gtG3ZKoYn4tn9VSvMGjWD",
+      "title": "רוח באה הימה",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:30:11.304Z"
+    },
     {
       "id": "4uonUrROQcs9qPO0AC37sZ",
       "title": "תאמיני לי",
