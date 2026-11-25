@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6965,
-  "last_updated": "2026-11-25T21:42:08.013Z",
+  "version": 6966,
+  "last_updated": "2026-11-25T21:42:12.275Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "58eHAJYtV0y04NfU1l5fIX",
+      "title": "נמלטים",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T21:42:12.275Z"
+    },
     {
       "id": "0w6X9iRKrMyDpRRtbu4tE0",
       "title": "Hymn for the Weekend - Live in Buenos Aires",
