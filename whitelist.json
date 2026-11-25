@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6760,
-  "last_updated": "2026-11-25T20:13:42.940Z",
+  "version": 6761,
+  "last_updated": "2026-11-25T20:13:47.204Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2aoo2jlRnM3A0NyLQqMN2f",
+      "title": "All Along the Watchtower",
+      "artist": "Jimi Hendrix",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:13:47.204Z"
+    },
     {
       "id": "57oieDnImp8UyezEamOZjb",
       "title": "Another One Bites the Dust (feat. Tom Ellis, Aimee Garcia & Kevin Alejandro)",
