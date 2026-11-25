@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6746,
-  "last_updated": "2026-11-25T20:12:58.909Z",
+  "version": 6747,
+  "last_updated": "2026-11-25T20:13:02.912Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44xDy4h27s4ENaC8fKnCoC",
+      "title": "Cuando No Era Cantante",
+      "artist": "El Bogueto, Yung Beef",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:13:02.912Z"
+    },
     {
       "id": "2tTmW7RDtMQtBk7m2rYeSw",
       "title": "Quevedo: Bzrp Music Sessions, Vol. 52/66",
