@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6894,
-  "last_updated": "2026-11-25T20:33:42.743Z",
+  "version": 6896,
+  "last_updated": "2026-11-25T20:33:46.379Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6W8IRII9cX1NlVDkCvPcUk",
+      "title": "יפה ותמה",
+      "artist": "Lior Elmaleh, מיכאל פרץ, Haim Ulliel, שמעון סיבוני",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:33:46.379Z"
+    },
+    {
+      "id": "3rXvWoGURMx2yoSJNrinQI",
+      "title": "Zirey Kaitz (Seeds of Summer)",
+      "artist": "Meir Ariel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:33:46.379Z"
+    },
     {
       "id": "4z0HqKOXJGaFGha9JPjD06",
       "title": "עכשיו קרוב",
