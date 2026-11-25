@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6719,
-  "last_updated": "2026-11-25T20:04:08.699Z",
+  "version": 6720,
+  "last_updated": "2026-11-25T20:04:12.194Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "32JUsRfQ0Eeh7jO70Ae9CE",
+      "title": "הכל כלול",
+      "artist": "The Backyard, יענקל'ה רוטבליט, Tomer Yosef, Itamar Ziegler, Gedy Ronen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:04:12.194Z"
+    },
     {
       "id": "6SGsyboxl9I9i5hsUBsGIk",
       "title": "Sun Will Rise",
