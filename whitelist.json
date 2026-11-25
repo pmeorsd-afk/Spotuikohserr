@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6752,
-  "last_updated": "2026-11-25T20:13:18.650Z",
+  "version": 6754,
+  "last_updated": "2026-11-25T20:13:22.853Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2MiKb9mexv6mxRWpb8QjNG",
+      "title": "בגלל הרוח",
+      "artist": "Shlomi Shabat",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:13:22.853Z"
+    },
+    {
+      "id": "7mWFF4gPADjTQjC97CgFVt",
+      "title": "Baila Baila Baila - Remix",
+      "artist": "Ozuna, Daddy Yankee, J Balvin, Farruko, Anuel AA",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:13:22.853Z"
+    },
     {
       "id": "1w2R0MGeCi8qPS8tc5t1Tf",
       "title": "לכה דודי",
