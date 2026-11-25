@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6792,
-  "last_updated": "2026-11-25T20:22:13.557Z",
+  "version": 6794,
+  "last_updated": "2026-11-25T20:22:17.750Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "39FKtFw4GagJDW62hhHVuM",
+      "title": "Frikitona",
+      "artist": "Boy Wonder CF, Plan B",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:22:17.750Z"
+    },
+    {
+      "id": "3CbiuLMBPM6uV4a7HvkOib",
+      "title": "Solos",
+      "artist": "Tony Dize, Plan B",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:22:17.750Z"
+    },
     {
       "id": "4phvdPGXE8MGXsTBhqB5ht",
       "title": "Suave (Remix)",
