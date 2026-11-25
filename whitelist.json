@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6744,
-  "last_updated": "2026-11-25T20:12:54.645Z",
+  "version": 6746,
+  "last_updated": "2026-11-25T20:12:58.909Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2tTmW7RDtMQtBk7m2rYeSw",
+      "title": "Quevedo: Bzrp Music Sessions, Vol. 52/66",
+      "artist": "Bizarrap, Quevedo",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:12:58.909Z"
+    },
     {
       "id": "1yqagVoTcE3zoGenQTbWI2",
       "title": "Doblexxó",
@@ -48362,6 +48371,13 @@
       "scope": "home",
       "status": "approved",
       "updated_at": "2026-11-25T20:12:44.523Z"
+    },
+    {
+      "id": "5aa119e911d728c63080cdd3c4dee543d2e6015c30e24a47",
+      "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/6IDzwVsZdjzXYLF7IDENaq/he",
+      "scope": "home",
+      "status": "approved",
+      "updated_at": "2026-11-25T20:12:58.909Z"
     }
   ],
   "search_images": [
