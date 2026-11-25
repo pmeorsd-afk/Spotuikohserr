@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6808,
-  "last_updated": "2026-11-25T20:23:04.758Z",
+  "version": 6809,
+  "last_updated": "2026-11-25T20:23:08.492Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7GkCHS8R0nqfiisYldMsfJ",
+      "title": "רבי שלמה",
+      "artist": "ATAR MAYNER",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:23:08.492Z"
+    },
     {
       "id": "1nFIaL6qejVD8X0IeDwJS4",
       "title": "עם כל הבלאגן",
