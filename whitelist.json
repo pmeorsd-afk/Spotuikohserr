@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6918,
-  "last_updated": "2026-11-25T20:35:25.816Z",
+  "version": 6919,
+  "last_updated": "2026-11-25T20:35:30.283Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "youtube:TpDtAOyfzGU",
+      "title": "מרדכי בן דוד - כל הנשמה | MBD - Kol Hneshama",
+      "artist": "ערוץ המוזיקה היהודית The jewish music Channel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:35:30.283Z"
+    },
     {
       "id": "6bBXKBdSZ4bbglwSwppjjW",
       "title": "אהלן וסהלן",
