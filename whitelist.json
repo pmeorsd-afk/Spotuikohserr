@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6910,
-  "last_updated": "2026-11-25T20:34:57.460Z",
+  "version": 6911,
+  "last_updated": "2026-11-25T20:35:02.020Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7AGQ46Tx4LIAc635Eg8BiO",
+      "title": "ליקוטי סליחות",
+      "artist": "Daniel Saadon",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:35:02.020Z"
+    },
     {
       "id": "2hmKpvdywJSBEqHjIilPrE",
       "title": "ללמוד לעוף",
