@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6750,
-  "last_updated": "2026-11-25T20:13:10.426Z",
+  "version": 6751,
+  "last_updated": "2026-11-25T20:13:14.597Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6DoL1yYIwEW7VZMRaJhoJI",
+      "title": "La Llevo Al Cielo (Ft. Ñengo Flow)",
+      "artist": "Chris Jedi, Anuel AA, Chencho Corleone, Ñengo Flow",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:13:14.597Z"
+    },
     {
       "id": "65KZbzkia4D1g6U1yTKREM",
       "title": "שלח לי מלאך",
