@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6847,
-  "last_updated": "2026-11-25T20:31:10.411Z",
+  "version": 6849,
+  "last_updated": "2026-11-25T20:31:14.518Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1I3pR0lbHQBGpG8eplkEHG",
+      "title": "Nothing",
+      "artist": "Jeremy Rosado, Seph Schlueter",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:14.518Z"
+    },
+    {
+      "id": "6K4t31amVTZDgR3sKmwUJJ",
+      "title": "The Less I Know The Better",
+      "artist": "Tame Impala",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:14.518Z"
+    },
     {
       "id": "4o12NNRxG7j9sqZGN5Sn68",
       "title": "אחותי הקטנה",
