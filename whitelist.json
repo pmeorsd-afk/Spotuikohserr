@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6803,
-  "last_updated": "2026-11-25T20:22:51.753Z",
+  "version": 6805,
+  "last_updated": "2026-11-25T20:22:55.975Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4f49sFQko7jHLEFd3tCf5p",
+      "title": "Ojitos Chiquitos",
+      "artist": "Don Omar",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:22:55.975Z"
+    },
+    {
+      "id": "6G4U9avyBNEfP0fAIduev3",
+      "title": "Ella Y Yo - Featuring Don Omar",
+      "artist": "Aventura, Don Omar",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:22:55.975Z"
+    },
     {
       "id": "511CrN7Kog2whsYmQfuUVz",
       "title": "Come On Home",
