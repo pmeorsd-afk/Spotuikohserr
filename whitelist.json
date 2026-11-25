@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6788,
-  "last_updated": "2026-11-25T20:21:56.221Z",
+  "version": 6790,
+  "last_updated": "2026-11-25T20:22:00.705Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "69Ej1xrGjOcHvIMtMKxK0G",
+      "title": "Dile",
+      "artist": "Don Omar",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:22:00.705Z"
+    },
+    {
+      "id": "5YJ4BVvTFmVCxUyhKejHfR",
+      "title": "Pa' Que Retozen",
+      "artist": "Tego Calderón",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:22:00.705Z"
+    },
     {
       "id": "4gJfPoMIcSDGY0tMGxm6Fu",
       "title": "OKI DOKI",
