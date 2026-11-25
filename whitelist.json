@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6771,
-  "last_updated": "2026-11-25T20:16:05.720Z",
+  "version": 6772,
+  "last_updated": "2026-11-25T20:16:24.378Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3r2ZoCWlf9RewWlxxozfQ8",
+      "title": "De Lejitos",
+      "artist": "Jay Wheeler",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:16:24.378Z"
+    },
     {
       "id": "4VGFK69hVzkQ4K5qR4ypdF",
       "title": "Balenciaga",
