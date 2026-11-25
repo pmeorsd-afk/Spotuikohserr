@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6736,
-  "last_updated": "2026-11-25T20:12:03.403Z",
+  "version": 6738,
+  "last_updated": "2026-11-25T20:12:07.560Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1LiN0Z98FkR1t0m8KmLcAH",
+      "title": "Amanece",
+      "artist": "Anuel AA, Haze",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:12:07.560Z"
+    },
+    {
+      "id": "6uiQ0DqbXTBc8tl0AUKZkR",
+      "title": "TU VAS SIN (fav)",
+      "artist": "Rels B",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:12:07.560Z"
+    },
     {
       "id": "5ixdmTpCmH5diBA1j154wN",
       "title": "UN PREVIEW",
