@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6734,
-  "last_updated": "2026-11-25T20:11:53.117Z",
+  "version": 6735,
+  "last_updated": "2026-11-25T20:11:59.326Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2uPMsTEKx79gJ8rB3AcT0v",
+      "title": "Daddy Yankee: Bzrp Music Sessions, Vol. 0/66",
+      "artist": "Bizarrap, Daddy Yankee",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:11:59.326Z"
+    },
     {
       "id": "5TFD2bmFKGhoCRbX61nXY5",
       "title": "NUEVAYoL",
