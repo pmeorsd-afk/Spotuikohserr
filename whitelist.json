@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6786,
-  "last_updated": "2026-11-25T20:21:48.421Z",
+  "version": 6787,
+  "last_updated": "2026-11-25T20:21:52.183Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3tt9i3Hhzq84dPS8H7iSiJ",
+      "title": "La Bachata",
+      "artist": "Manuel Turizo",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:21:52.183Z"
+    },
     {
       "id": "1zsPaEkglFvxjAhrM8yhpr",
       "title": "Hey Mor",
