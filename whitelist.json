@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6783,
-  "last_updated": "2026-11-25T20:21:40.755Z",
+  "version": 6785,
+  "last_updated": "2026-11-25T20:21:44.383Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5RqSsdzTNPX1uzkmlHCFvK",
+      "title": "QLONA",
+      "artist": "KAROL G, Peso Pluma",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:21:44.383Z"
+    },
+    {
+      "id": "0CYTGMBYkwUxrj1MWDLrC5",
+      "title": "CHORRITO PA LAS ANIMAS",
+      "artist": "Feid",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:21:44.383Z"
+    },
     {
       "id": "2WrqTrNIHqfcMCgmEo0A7E",
       "title": "FRIKI",
