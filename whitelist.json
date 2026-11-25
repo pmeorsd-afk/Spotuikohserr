@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6791,
-  "last_updated": "2026-11-25T20:22:04.982Z",
+  "version": 6792,
+  "last_updated": "2026-11-25T20:22:13.557Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4phvdPGXE8MGXsTBhqB5ht",
+      "title": "Suave (Remix)",
+      "artist": "El Alfa, Bryant Myers, Jon Z, Miky Woodz, Noriel, Plan B",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:22:13.557Z"
+    },
     {
       "id": "1PZrHbJjt5t7dP9OGRxcD0",
       "title": "Dale Don Dale",
