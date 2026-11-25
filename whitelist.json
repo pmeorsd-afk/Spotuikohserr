@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6976,
-  "last_updated": "2026-11-25T22:41:20.601Z",
+  "version": 6977,
+  "last_updated": "2026-11-25T22:41:24.520Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3KDtE1GhjSQivcvuNGfSvi",
+      "title": "מה עכשיו",
+      "artist": "Dudi Bar David",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T22:41:24.520Z"
+    },
     {
       "id": "1uAAF1u0yZJ9aDIx9FyHji",
       "title": "FREEZER",
