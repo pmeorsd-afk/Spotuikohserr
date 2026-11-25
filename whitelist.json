@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6964,
-  "last_updated": "2026-11-25T21:23:18.501Z",
+  "version": 6965,
+  "last_updated": "2026-11-25T21:42:08.013Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0w6X9iRKrMyDpRRtbu4tE0",
+      "title": "Hymn for the Weekend - Live in Buenos Aires",
+      "artist": "Coldplay",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T21:42:08.013Z"
+    },
     {
       "id": "5u5TpCsjREa4KZ1jJqprh7",
       "title": "נחת",
