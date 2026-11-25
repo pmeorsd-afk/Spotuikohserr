@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6922,
-  "last_updated": "2026-11-25T20:35:42.385Z",
+  "version": 6923,
+  "last_updated": "2026-11-25T20:35:47.535Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7syw2REFv2cKfsGhxvsRZv",
+      "title": "חלל",
+      "artist": "Amir Dadon",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:35:47.535Z"
+    },
     {
       "id": "26QDf6fuUcNZHuIJPTdxVd",
       "title": "Fall",
