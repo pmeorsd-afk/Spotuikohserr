@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6919,
-  "last_updated": "2026-11-25T20:35:30.283Z",
+  "version": 6920,
+  "last_updated": "2026-11-25T20:35:34.485Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6db8vtmyjTYEtqXVQRncCG",
+      "title": "ממותה",
+      "artist": "Full Trunk",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:35:34.485Z"
+    },
     {
       "id": "youtube:TpDtAOyfzGU",
       "title": "מרדכי בן דוד - כל הנשמה | MBD - Kol Hneshama",
