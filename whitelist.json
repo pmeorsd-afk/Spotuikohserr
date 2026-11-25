@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6717,
-  "last_updated": "2026-11-25T20:04:04.934Z",
+  "version": 6719,
+  "last_updated": "2026-11-25T20:04:08.699Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6SGsyboxl9I9i5hsUBsGIk",
+      "title": "Sun Will Rise",
+      "artist": "Altar Projects, Seph Schlueter",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:04:08.699Z"
+    },
+    {
+      "id": "0IarqqVYpNLJOo5rVvVoZT",
+      "title": "Not A Single Time",
+      "artist": "Seph Schlueter",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:04:08.699Z"
+    },
     {
       "id": "37vfEansP5CKwJwon4oZHU",
       "title": "מדימונה עד נתניה",
