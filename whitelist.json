@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6886,
-  "last_updated": "2026-11-25T20:33:07.245Z",
+  "version": 6887,
+  "last_updated": "2026-11-25T20:33:13.778Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7AKELUfcUs9AXwDp76JIVb",
+      "title": "Best Be Honest",
+      "artist": "Jeryko",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:33:13.778Z"
+    },
     {
       "id": "3z8a4tilyTBoX0xHizR6Sj",
       "title": "מחרוזת חנוכה",
