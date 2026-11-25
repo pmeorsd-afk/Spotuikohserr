@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6730,
-  "last_updated": "2026-11-25T20:11:40.972Z",
+  "version": 6731,
+  "last_updated": "2026-11-25T20:11:44.870Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5l9c6bJmzvftumhz4TMPgk",
+      "title": "Harvest Moon",
+      "artist": "Neil Young",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:11:44.870Z"
+    },
     {
       "id": "473RQuUrozWbzYYHL08o7E",
       "title": "תן לנו מלך",
