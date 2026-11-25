@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6821,
-  "last_updated": "2026-11-25T20:29:20.293Z",
+  "version": 6822,
+  "last_updated": "2026-11-25T20:29:23.994Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6T8xpyLitKOyi3dyp3tTpb",
+      "title": "מוזיקה טובה",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:29:23.994Z"
+    },
     {
       "id": "3H7UaBpIlxh6gCC9LBDzsM",
       "title": "A Que No Te Atreves",
