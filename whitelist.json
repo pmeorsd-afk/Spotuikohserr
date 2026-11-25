@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6925,
-  "last_updated": "2026-11-25T20:35:55.617Z",
+  "version": 6926,
+  "last_updated": "2026-11-25T20:35:59.813Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4EIuniJpyiz7lZ4xN48ZgI",
+      "title": "מזל מאזניים",
+      "artist": "דודו אהרון",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:35:59.813Z"
+    },
     {
       "id": "5a2m6EUvesG5iblWp5ESzw",
       "title": "בין הטוב והרע 2026",
