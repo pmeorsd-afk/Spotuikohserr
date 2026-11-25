@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6845,
-  "last_updated": "2026-11-25T20:31:05.812Z",
+  "version": 6847,
+  "last_updated": "2026-11-25T20:31:10.411Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4o12NNRxG7j9sqZGN5Sn68",
+      "title": "אחותי הקטנה",
+      "artist": "Matti Caspi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:10.411Z"
+    },
+    {
+      "id": "2I4RrBGsjGh2V1BKtIlibh",
+      "title": "ילדה של אב",
+      "artist": "Netanel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:31:10.411Z"
+    },
     {
       "id": "4gNMsKOhzCesVXLquACrR6",
       "title": "ghost town",
