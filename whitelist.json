@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6787,
-  "last_updated": "2026-11-25T20:21:52.183Z",
+  "version": 6788,
+  "last_updated": "2026-11-25T20:21:56.221Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4gJfPoMIcSDGY0tMGxm6Fu",
+      "title": "OKI DOKI",
+      "artist": "KAROL G",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:21:56.221Z"
+    },
     {
       "id": "3tt9i3Hhzq84dPS8H7iSiJ",
       "title": "La Bachata",
