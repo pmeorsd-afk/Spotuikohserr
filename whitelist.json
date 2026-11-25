@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6765,
-  "last_updated": "2026-11-25T20:15:39.466Z",
+  "version": 6767,
+  "last_updated": "2026-11-25T20:15:43.816Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Xom58OOXk2SoU711L2IXO",
+      "title": "Moscow Mule",
+      "artist": "Bad Bunny",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:15:43.816Z"
+    },
+    {
+      "id": "1Qfls9HI9vhxa7miKAdyZZ",
+      "title": "Warmth of the Sun's Rays",
+      "artist": "Hang Massive",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:15:43.816Z"
+    },
     {
       "id": "3wu97JWr5wLV3PuaW6ovew",
       "title": "יאנגינז",
