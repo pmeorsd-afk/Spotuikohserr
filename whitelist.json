@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6841,
-  "last_updated": "2026-11-25T20:30:44.908Z",
+  "version": 6842,
+  "last_updated": "2026-11-25T20:30:48.529Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7odYL54tcTVr1Luw1b4rCP",
+      "title": "עלה קטן שלי",
+      "artist": "דודו אהרון",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:30:48.529Z"
+    },
     {
       "id": "0wbDgMuAoy7O7pL3a69uZx",
       "title": "Give It To Me",
