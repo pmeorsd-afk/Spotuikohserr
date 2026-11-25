@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6876,
-  "last_updated": "2026-11-25T20:32:36.808Z",
+  "version": 6878,
+  "last_updated": "2026-11-25T20:32:40.736Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5quSH4tv9eaexMTthcwUJi",
+      "title": "Find My Way Home",
+      "artist": "NONAH",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:32:40.736Z"
+    },
+    {
+      "id": "2hlYlTZ0T4gBwKHP4b9hMi",
+      "title": "Find Myself",
+      "artist": "EZZI, Ary",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:32:40.736Z"
+    },
     {
       "id": "6QgqDkjDYszx96NbynkyeH",
       "title": "Deception",
