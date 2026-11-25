@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6936,
-  "last_updated": "2026-11-25T20:36:34.394Z",
+  "version": 6937,
+  "last_updated": "2026-11-25T20:36:38.991Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1b45Ihz36q5sbgqMIg1YFw",
+      "title": "יושבים בבית קפה",
+      "artist": "Teapacks",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:36:38.991Z"
+    },
     {
       "id": "0rWEVHFHGhzn56LJNhGzam",
       "title": "מיליון או דולר",
