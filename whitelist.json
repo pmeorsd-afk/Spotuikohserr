@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6778,
-  "last_updated": "2026-11-25T20:21:20.419Z",
+  "version": 6779,
+  "last_updated": "2026-11-25T20:21:23.848Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0lMafSfME2iJEE972bsQaK",
+      "title": "Ba Ba Bad Remix",
+      "artist": "Kybba, Sean Paul, Ryan Castro, Busy Signal",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T20:21:23.848Z"
+    },
     {
       "id": "0P3K3oluS2pxWGp9TRtjTt",
       "title": "Parte & Choke (with Ryan Castro) - Remix",
