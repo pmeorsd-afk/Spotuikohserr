@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6962,
-  "last_updated": "2026-11-25T21:20:04.993Z",
+  "version": 6963,
+  "last_updated": "2026-11-25T21:20:47.592Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6FaYEREphoGlrKR3AmHdZJ",
+      "title": "‏עלה קטן",
+      "artist": "Freilach Band, Avraham Fried, Shloime Daskal, Benny Friedman, Itzik Dadya",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-25T21:20:47.592Z"
+    },
     {
       "id": "4LutIwQfcpXjVs7mIySYCD",
       "title": "Centuries - Remix",
