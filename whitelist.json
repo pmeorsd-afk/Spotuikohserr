@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7025,
-  "last_updated": "2026-11-26T11:20:48.031Z",
+  "version": 7026,
+  "last_updated": "2026-11-26T11:20:53.417Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6YZR8aUaFSAFEScpT1Z4jd",
+      "title": "שעות שהלכתי",
+      "artist": "אליה והב",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:20:53.417Z"
+    },
     {
       "id": "1iHkCCnoVw4I1oN68RLFJi",
       "title": "שיבולים",
