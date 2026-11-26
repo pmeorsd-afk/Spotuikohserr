@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7008,
-  "last_updated": "2026-11-26T11:19:28.683Z",
+  "version": 7009,
+  "last_updated": "2026-11-26T11:19:45.159Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3QvnDVQXwdcHJbjMaYomQY",
+      "title": "דלה דלה",
+      "artist": "Ron Sky Nesher, Ido Vana",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:19:45.159Z"
+    },
     {
       "id": "1SgYb5JgTFrfyWOR8l8aSB",
       "title": "Mi Shebeirach L'tzahal",
