@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7001,
-  "last_updated": "2026-11-26T11:18:55.904Z",
+  "version": 7003,
+  "last_updated": "2026-11-26T11:18:59.604Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "52GoocavvJMI61klbzgrSU",
+      "title": "Oscar Winning Tears",
+      "artist": "הכוכב הבא, אמבר רוטשילד",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:18:59.604Z"
+    },
+    {
+      "id": "3vxH4A9F4FNUJPKJIv9oPi",
+      "title": "מה עשית בחיים",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:18:59.604Z"
+    },
     {
       "id": "5CY8z02wp78zJM12UizhjS",
       "title": "Calming and Relaxing Music for Children",
