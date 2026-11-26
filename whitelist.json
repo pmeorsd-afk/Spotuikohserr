@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7138,
-  "last_updated": "2026-11-26T21:31:25.889Z",
+  "version": 7139,
+  "last_updated": "2026-11-26T21:31:33.314Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6C6cxD3OeuMLupUBttO2nS",
+      "title": "פתאום קם אדם",
+      "artist": "Sassi Keshet",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:31:33.314Z"
+    },
     {
       "id": "3nI28bh0qzzkjd5xWjjLUg",
       "title": "כפרה",
