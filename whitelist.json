@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7053,
-  "last_updated": "2026-11-26T11:47:59.561Z",
+  "version": 7054,
+  "last_updated": "2026-11-26T12:36:33.881Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Ravsw8TmHN5wBiYPPYUFw",
+      "title": "Right Now (Na Na Na)",
+      "artist": "Akon",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T12:36:33.881Z"
+    },
     {
       "id": "01aTsQoKoeXofSTvKuunzv",
       "title": "Lean On",
