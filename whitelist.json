@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7129,
-  "last_updated": "2026-11-26T20:54:38.901Z",
+  "version": 7130,
+  "last_updated": "2026-11-26T20:57:35.320Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0iM0ptqsuJzYux74dKZlNN",
+      "title": "לפנות ערב",
+      "artist": "Edna Goren, Kobi Recht",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T20:57:35.320Z"
+    },
     {
       "id": "1QyAGcqTkdlxhC00pElgzQ",
       "title": "עוד לא תמו כל פלאייך",
