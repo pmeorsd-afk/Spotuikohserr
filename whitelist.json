@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7051,
-  "last_updated": "2026-11-26T11:28:18.664Z",
+  "version": 7052,
+  "last_updated": "2026-11-26T11:47:55.506Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1J14CdDAvBTE1AJYUOwl6C",
+      "title": "Arcade",
+      "artist": "Duncan Laurence",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:47:55.506Z"
+    },
     {
       "id": "6UBjSnyP1O5W5ndJoO9vUk",
       "title": "Night Moves",
