@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7107,
-  "last_updated": "2026-11-26T18:37:41.152Z",
+  "version": 7108,
+  "last_updated": "2026-11-26T19:20:32.650Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "31wJUw1NqHaWI8M032E3pE",
+      "title": "You'll See - Spanish Version",
+      "artist": "Madonna",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T19:20:32.650Z"
+    },
     {
       "id": "0nrWZWkJM62ftQJSI8fDc0",
       "title": "Diamond Heart",
