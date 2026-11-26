@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7057,
-  "last_updated": "2026-11-26T12:36:42.069Z",
+  "version": 7059,
+  "last_updated": "2026-11-26T12:36:46.686Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "494ZfDEUkMIN6qhrqsNi75",
+      "title": "שיכורים",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T12:36:46.686Z"
+    },
+    {
+      "id": "48EQasc6XD0pOQtkIOWqOC",
+      "title": "Locked Up",
+      "artist": "Akon",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T12:36:46.686Z"
+    },
     {
       "id": "1GLx5tpDdwEFiA7KaikvX2",
       "title": "Beautiful",
