@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7133,
-  "last_updated": "2026-11-26T21:30:52.345Z",
+  "version": 7135,
+  "last_updated": "2026-11-26T21:30:56.561Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7L434RMCHPfJYGcieVtTfG",
+      "title": "שיר אהבה ישן",
+      "artist": "Darom Duo",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:30:56.561Z"
+    },
+    {
+      "id": "2GYHyAoLWpkxLVa4oYTVko",
+      "title": "Alors on danse - Radio Edit",
+      "artist": "Stromae",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:30:56.561Z"
+    },
     {
       "id": "5cG021CvqPtknPJYCLqIk8",
       "title": "אותך",
