@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6993,
-  "last_updated": "2026-11-26T11:17:46.567Z",
+  "version": 6994,
+  "last_updated": "2026-11-26T11:17:50.975Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6vZZtivPrtpggT5SSXsYTy",
+      "title": "Solsbury Hill",
+      "artist": "Peter Gabriel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:17:50.975Z"
+    },
     {
       "id": "6fvC42z79HygIe946t5nHl",
       "title": "בשלושים לעשירי",
