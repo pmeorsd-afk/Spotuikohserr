@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7047,
-  "last_updated": "2026-11-26T11:22:43.575Z",
+  "version": 7048,
+  "last_updated": "2026-11-26T11:22:52.662Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5vdp5UmvTsnMEMESIF2Ym7",
+      "title": "Another One Bites The Dust - Remastered 2011",
+      "artist": "Queen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:22:52.662Z"
+    },
     {
       "id": "6I9HXaU8zbTgASGe7evWnu",
       "title": "The Final Countdown",
