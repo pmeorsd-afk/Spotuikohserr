@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7035,
-  "last_updated": "2026-11-26T11:21:53.520Z",
+  "version": 7036,
+  "last_updated": "2026-11-26T11:21:57.357Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5HgRdb5gEoay3CPD86k9a2",
+      "title": "Dejo Dance",
+      "artist": "Dr. Nelle Karajlic, Dejan Sparavalo, Vojislav Aralica",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:21:57.357Z"
+    },
     {
       "id": "47YDYBImWxOZ0Wb2jYZI9i",
       "title": "תן לי את המילים - Live",
