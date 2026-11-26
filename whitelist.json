@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7130,
-  "last_updated": "2026-11-26T20:57:35.320Z",
+  "version": 7131,
+  "last_updated": "2026-11-26T21:30:48.824Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "430YmZeWNN4950zEyFMBYK",
+      "title": "פרח הלילך",
+      "artist": "Chava Alberstein",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:30:48.824Z"
+    },
     {
       "id": "0iM0ptqsuJzYux74dKZlNN",
       "title": "לפנות ערב",
