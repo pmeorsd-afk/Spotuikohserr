@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7064,
-  "last_updated": "2026-11-26T12:40:13.144Z",
+  "version": 7065,
+  "last_updated": "2026-11-26T12:45:10.559Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2FIGowzgXPaIuZhcFNdT2P",
+      "title": "Boom Body",
+      "artist": "Shaggy, Akon, Aidonia",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T12:45:10.559Z"
+    },
     {
       "id": "7FOXrArO9CU6xVZotChlD8",
       "title": "Troublemaker",
