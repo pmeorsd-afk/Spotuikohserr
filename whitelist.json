@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6983,
-  "last_updated": "2026-11-26T11:16:54.307Z",
+  "version": 6984,
+  "last_updated": "2026-11-26T11:16:59.442Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2tZaDLcnw9KaV4mouzLJY4",
+      "title": "הקרח והאש",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:16:59.442Z"
+    },
     {
       "id": "youtube:XDIpIQ_xYxs",
       "title": "Sleep Piano Music ~ Cosmic Relaxation | Gentle Melodies for Restorative Deep Sleep",
