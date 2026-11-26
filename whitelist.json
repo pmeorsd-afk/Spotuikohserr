@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6997,
-  "last_updated": "2026-11-26T11:18:02.631Z",
+  "version": 6998,
+  "last_updated": "2026-11-26T11:18:42.424Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "30w2lPY7hxFRRzWLu5E1fR",
+      "title": "מאמי שלי",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:18:42.424Z"
+    },
     {
       "id": "7jBxnV0i1IPGeSqNDHxjKi",
       "title": "חלום ישן",
