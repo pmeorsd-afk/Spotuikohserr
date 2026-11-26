@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6998,
-  "last_updated": "2026-11-26T11:18:42.424Z",
+  "version": 6999,
+  "last_updated": "2026-11-26T11:18:47.689Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "77K5TB5KZmDZCoJCdd1NvE",
+      "title": "Famous Blue Raincoat",
+      "artist": "Leonard Cohen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:18:47.689Z"
+    },
     {
       "id": "30w2lPY7hxFRRzWLu5E1fR",
       "title": "מאמי שלי",
