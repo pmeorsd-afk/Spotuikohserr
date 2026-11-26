@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7034,
-  "last_updated": "2026-11-26T11:21:46.832Z",
+  "version": 7035,
+  "last_updated": "2026-11-26T11:21:53.520Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "47YDYBImWxOZ0Wb2jYZI9i",
+      "title": "תן לי את המילים - Live",
+      "artist": "Noam Bettan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:21:53.520Z"
+    },
     {
       "id": "4RvWPyQ5RL0ao9LPZeSouE",
       "title": "Everybody Wants To Rule The World",
