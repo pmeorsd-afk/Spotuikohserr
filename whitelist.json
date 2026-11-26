@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7093,
-  "last_updated": "2026-11-26T17:38:26.450Z",
+  "version": 7094,
+  "last_updated": "2026-11-26T17:38:58.467Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "43uLQmPhgGdAcunXWzgznJ",
+      "title": "Blood Of Eden",
+      "artist": "Peter Gabriel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:38:58.467Z"
+    },
     {
       "id": "1Xpkt4qUkVttom9lonr4Hn",
       "title": "Il segreto di Susanna: Overture",
