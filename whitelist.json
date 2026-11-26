@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7046,
-  "last_updated": "2026-11-26T11:22:37.976Z",
+  "version": 7047,
+  "last_updated": "2026-11-26T11:22:43.575Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6I9HXaU8zbTgASGe7evWnu",
+      "title": "The Final Countdown",
+      "artist": "Europe",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:22:43.575Z"
+    },
     {
       "id": "1ZMSUhhvWiQo8hGw4JFJJc",
       "title": "אחת ולתמיד",
