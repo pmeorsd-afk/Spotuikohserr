@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7153,
-  "last_updated": "2026-11-26T21:41:13.477Z",
+  "version": 7154,
+  "last_updated": "2026-11-26T21:49:10.338Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7JKoq3Kq76nRl5USdfxZDN",
+      "title": "בעדן ילדים",
+      "artist": "Yehoram Gaon",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:49:10.338Z"
+    },
     {
       "id": "7yuKbXXGetNxWwjzTjCFSf",
       "title": "תחת עץ האהבה",
