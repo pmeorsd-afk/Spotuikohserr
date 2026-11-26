@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7123,
-  "last_updated": "2026-11-26T20:30:27.144Z",
+  "version": 7124,
+  "last_updated": "2026-11-26T20:30:32.061Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6spg65zInL6IzZfUhM3CAN",
+      "title": "בית הערבה",
+      "artist": "Arik Einstein",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T20:30:32.061Z"
+    },
     {
       "id": "5gJhWfbQDIWpLAlz6ZRGkQ",
       "title": "עין גדי",
