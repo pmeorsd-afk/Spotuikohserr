@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7063,
-  "last_updated": "2026-11-26T12:36:54.914Z",
+  "version": 7064,
+  "last_updated": "2026-11-26T12:40:13.144Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7FOXrArO9CU6xVZotChlD8",
+      "title": "Troublemaker",
+      "artist": "Akon, Sweet Rush",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T12:40:13.144Z"
+    },
     {
       "id": "3ZdJffjzJWFimSQyxgGIxN",
       "title": "Just A Dream",
