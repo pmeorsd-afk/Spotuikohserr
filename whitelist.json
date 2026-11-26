@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7005,
-  "last_updated": "2026-11-26T11:19:06.666Z",
+  "version": 7006,
+  "last_updated": "2026-11-26T11:19:10.339Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7ctw4ThmMRDGocSuN7TrLD",
+      "title": "זה לא משנה",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:19:10.339Z"
+    },
     {
       "id": "7HLYOuyl4Imlt6FoaBQIiK",
       "title": "גדולה מהחיים Hey-Yo",
