@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7019,
-  "last_updated": "2026-11-26T11:20:27.178Z",
+  "version": 7021,
+  "last_updated": "2026-11-26T11:20:31.502Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3S4KLIOy7NouWHsUfHMBRx",
+      "title": "Legendary Children (All Of Them Queer) - Luv Foundation UK Extended Remix",
+      "artist": "Holly Johnson, Luv Foundation (UK)",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:20:31.502Z"
+    },
+    {
+      "id": "76vf9siTlV23mcwJXVCb0S",
+      "title": "Legendary Children (All Of Them Queer) - Luv Foundation UK Remix",
+      "artist": "Holly Johnson, Luv Foundation (UK)",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:20:31.502Z"
+    },
     {
       "id": "5gHU0nkuvMCn4e4rpOQD94",
       "title": "My Future Is Off-World",
