@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7067,
-  "last_updated": "2026-11-26T13:26:22.221Z",
+  "version": 7068,
+  "last_updated": "2026-11-26T13:26:25.926Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7n1RdxEkWjkCosyZdAEwG2",
+      "title": "יום אחרי יום",
+      "artist": "Apocalipsa",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T13:26:25.926Z"
+    },
     {
       "id": "5DHZfHVLb2rDNJ5kOhLH3s",
       "title": "Shalva",
