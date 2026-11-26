@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7114,
-  "last_updated": "2026-11-26T20:11:50.975Z",
+  "version": 7115,
+  "last_updated": "2026-11-26T20:11:54.035Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "22LfXMZOcehovuq9XvhTMp",
+      "title": "גן השיקמים",
+      "artist": "Arik Sinai",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T20:11:54.035Z"
+    },
     {
       "id": "7FMn5bDsbYkcusw3mVog4A",
       "title": "A Million Miles For This",
