@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7079,
-  "last_updated": "2026-11-26T16:03:02.901Z",
+  "version": 7080,
+  "last_updated": "2026-11-26T16:04:28.763Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6y0b6CVLI9wW8Kq6XGyjZd",
+      "title": "תן לי תפילה - Give Me One Prayer (Remix)",
+      "artist": "David Zeitouni",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T16:04:28.763Z"
+    },
     {
       "id": "1bXXncvQipWmG8kOpQqaYM",
       "title": "Better Me",
