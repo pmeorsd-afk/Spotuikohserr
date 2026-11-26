@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7092,
-  "last_updated": "2026-11-26T17:38:22.880Z",
+  "version": 7093,
+  "last_updated": "2026-11-26T17:38:26.450Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Xpkt4qUkVttom9lonr4Hn",
+      "title": "Il segreto di Susanna: Overture",
+      "artist": "Ermanno Wolf-Ferrari, Sir Neville Marriner, Academy of St. Martin in the Fields",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:38:26.450Z"
+    },
     {
       "id": "5YMYCMEcxxTEGqVwEGBlwP",
       "title": "מה הוא יודע",
