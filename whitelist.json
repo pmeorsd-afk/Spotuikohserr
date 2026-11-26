@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7117,
-  "last_updated": "2026-11-26T20:12:02.224Z",
+  "version": 7118,
+  "last_updated": "2026-11-26T20:12:05.732Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0HCGNChooHdZRfDE3R3wny",
+      "title": "בפרדס ליד השוקת",
+      "artist": "Yehoram Gaon",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T20:12:05.732Z"
+    },
     {
       "id": "7ehqGEI5kORAHLfu1Ir33K",
       "title": "צל ומי באר",
