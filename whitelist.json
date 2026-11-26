@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7148,
-  "last_updated": "2026-11-26T21:32:36.422Z",
+  "version": 7149,
+  "last_updated": "2026-11-26T21:37:45.165Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0F7FA14euOIX8KcbEturGH",
+      "title": "Old Town Road",
+      "artist": "Lil Nas X",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:37:45.165Z"
+    },
     {
       "id": "0EAoygT04KtgKKKKYSazFa",
       "title": "אבינועם בחור כארז",
