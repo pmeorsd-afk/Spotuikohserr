@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7083,
-  "last_updated": "2026-11-26T17:24:47.747Z",
+  "version": 7084,
+  "last_updated": "2026-11-26T17:34:43.287Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "58u27MnCiFj2ypShrtPqyJ",
+      "title": "תפתחי חלון",
+      "artist": "אליאב זוהר",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:34:43.287Z"
+    },
     {
       "id": "1Rz3Xw2qOsRncTVajZR3cY",
       "title": "Electricity",
