@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7146,
-  "last_updated": "2026-11-26T21:32:13.673Z",
+  "version": 7147,
+  "last_updated": "2026-11-26T21:32:32.730Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7jIQI2hhTqgBB7xga5jTWA",
+      "title": "מלכת הקרח",
+      "artist": "נתנאל דהאן",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:32:32.730Z"
+    },
     {
       "id": "6KhabRTujQbCbhglukfbEU",
       "title": "ציפורים נודדות",
