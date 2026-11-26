@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7112,
-  "last_updated": "2026-11-26T19:56:40.573Z",
+  "version": 7113,
+  "last_updated": "2026-11-26T19:57:23.346Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5OgeAozI88uDry6j70edfL",
+      "title": "שי",
+      "artist": "The Dudaim, Haparvarim",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T19:57:23.346Z"
+    },
     {
       "id": "4cpbgwp6byobe998BGwLVs",
       "title": "Subtle Changes - Radio Mix",
