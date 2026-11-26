@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7143,
-  "last_updated": "2026-11-26T21:32:02.447Z",
+  "version": 7144,
+  "last_updated": "2026-11-26T21:32:05.583Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2Ozw7k5CLtM5W9SomrOyjw",
+      "title": "Hurricane",
+      "artist": "Eden Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:32:05.583Z"
+    },
     {
       "id": "1EiGztRhTXCIaNZn8CF5TV",
       "title": "כמו בלדה",
