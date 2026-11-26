@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7151,
-  "last_updated": "2026-11-26T21:38:14.157Z",
+  "version": 7152,
+  "last_updated": "2026-11-26T21:41:09.997Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "06KyNuuMOX1ROXRhj787tj",
+      "title": "We Don't Talk Anymore (feat. Selena Gomez)",
+      "artist": "Charlie Puth, Selena Gomez",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:41:09.997Z"
+    },
     {
       "id": "36VQt93d8REnXyPsKNt8zt",
       "title": "עושה לי צרות",
