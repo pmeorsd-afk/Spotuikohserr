@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7109,
-  "last_updated": "2026-11-26T19:38:55.476Z",
+  "version": 7110,
+  "last_updated": "2026-11-26T19:50:11.274Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2xEk5JBmxQVakmMlv0ZowQ",
+      "title": "משירי ארץ אהבתי",
+      "artist": "Chava Alberstein",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T19:50:11.274Z"
+    },
     {
       "id": "5uivK5TNnVf2WMYGwmwqKo",
       "title": "גשר",
