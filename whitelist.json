@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7141,
-  "last_updated": "2026-11-26T21:31:43.754Z",
+  "version": 7142,
+  "last_updated": "2026-11-26T21:31:47.535Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3apnsn5UwfZdnZDyovfxaj",
+      "title": "פליי בוי",
+      "artist": "Balishag",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:31:47.535Z"
+    },
     {
       "id": "1Q4dOTcrox7uxKNzVhXc0B",
       "title": "Turn Up The Love",
