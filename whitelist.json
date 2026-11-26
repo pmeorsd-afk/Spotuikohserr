@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7038,
-  "last_updated": "2026-11-26T11:22:05.331Z",
+  "version": 7040,
+  "last_updated": "2026-11-26T11:22:09.392Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "01LHRsK7lpB6zBTIQxh8TP",
+      "title": "Djindji Rindji Bubamara",
+      "artist": "Emir Kusturica & The No Smoking Orchestra",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:22:09.392Z"
+    },
+    {
+      "id": "3PcFAH8VzMDeuFMQCYbCyC",
+      "title": "לפחות בחלומות",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:22:09.392Z"
+    },
     {
       "id": "7inJ0vWCztebKj1efonCGJ",
       "title": "Duj Sandale",
