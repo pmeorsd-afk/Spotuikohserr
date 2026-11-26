@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7073,
-  "last_updated": "2026-11-26T15:17:46.310Z",
+  "version": 7074,
+  "last_updated": "2026-11-26T15:17:51.329Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "63ELoRw8nePiruDf593yvF",
+      "title": "אלוהים יקר",
+      "artist": "Apocalipsa",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T15:17:51.329Z"
+    },
     {
       "id": "5X3ErrAmzBD45y3eQvVzBz",
       "title": "כך נולד הצבע",
