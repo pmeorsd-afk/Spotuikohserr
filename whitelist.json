@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7043,
-  "last_updated": "2026-11-26T11:22:20.129Z",
+  "version": 7044,
+  "last_updated": "2026-11-26T11:22:25.800Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6Knv6wdA0luoMUuuoYi2i1",
+      "title": "My House",
+      "artist": "Flo Rida",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:22:25.800Z"
+    },
     {
       "id": "4OoucxJCpKBSY9I8bXqFVP",
       "title": "לשתות ולחיות",
