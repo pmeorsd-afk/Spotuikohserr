@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7104,
-  "last_updated": "2026-11-26T18:31:31.025Z",
+  "version": 7105,
+  "last_updated": "2026-11-26T18:31:35.938Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7vDvtRSQ1WsGy87TrpBQGM",
+      "title": "Desperate but Not Serious",
+      "artist": "Adam Ant",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T18:31:35.938Z"
+    },
     {
       "id": "4PtbWDGvg0Sj8ixrd0fqO6",
       "title": "Red Skies - Rerecorded",
