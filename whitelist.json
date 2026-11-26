@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7152,
-  "last_updated": "2026-11-26T21:41:09.997Z",
+  "version": 7153,
+  "last_updated": "2026-11-26T21:41:13.477Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7yuKbXXGetNxWwjzTjCFSf",
+      "title": "תחת עץ האהבה",
+      "artist": "Yossi Banai, Nurit Galron",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:41:13.477Z"
+    },
     {
       "id": "06KyNuuMOX1ROXRhj787tj",
       "title": "We Don't Talk Anymore (feat. Selena Gomez)",
