@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6990,
-  "last_updated": "2026-11-26T11:17:23.972Z",
+  "version": 6991,
+  "last_updated": "2026-11-26T11:17:34.008Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4bQvOnT6ltTEiJju0zhzNT",
+      "title": "ניגון לרבי יחיאל",
+      "artist": "Oren Tsor, Nadav Bachar",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:17:34.008Z"
+    },
     {
       "id": "6xSikx9V3IxE8z6SV08w9K",
       "title": "החיים אחרייך",
