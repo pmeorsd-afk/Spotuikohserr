@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7061,
-  "last_updated": "2026-11-26T12:36:50.877Z",
+  "version": 7063,
+  "last_updated": "2026-11-26T12:36:54.914Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ZdJffjzJWFimSQyxgGIxN",
+      "title": "Just A Dream",
+      "artist": "Nelly",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T12:36:54.914Z"
+    },
+    {
+      "id": "0aWiuTly8LPZ2k6LheHcAn",
+      "title": "דבש בשפתיים",
+      "artist": "Eyal Golan, מה קשור",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T12:36:54.914Z"
+    },
     {
       "id": "5D7TXG2pmQbFeLVNBrUADb",
       "title": "We Don't Care",
