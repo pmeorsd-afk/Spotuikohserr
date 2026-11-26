@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7059,
-  "last_updated": "2026-11-26T12:36:46.686Z",
+  "version": 7061,
+  "last_updated": "2026-11-26T12:36:50.877Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5D7TXG2pmQbFeLVNBrUADb",
+      "title": "We Don't Care",
+      "artist": "Akon",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T12:36:50.877Z"
+    },
+    {
+      "id": "13GSHMYzVNAZhvfzdnTANF",
+      "title": "Ghetto",
+      "artist": "Akon, Ali B, Yes-R",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T12:36:50.877Z"
+    },
     {
       "id": "494ZfDEUkMIN6qhrqsNi75",
       "title": "שיכורים",
