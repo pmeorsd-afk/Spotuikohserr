@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7023,
-  "last_updated": "2026-11-26T11:20:39.174Z",
+  "version": 7024,
+  "last_updated": "2026-11-26T11:20:43.849Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "09nOdxWdoTaZ0Qhbou6AiN",
+      "title": "למה אני חי",
+      "artist": "מיכאל חן",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:20:43.849Z"
+    },
     {
       "id": "3tocV3HcOEA9g1QBTfw6Ny",
       "title": "אהובה שלי",
