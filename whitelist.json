@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7033,
-  "last_updated": "2026-11-26T11:21:43.220Z",
+  "version": 7034,
+  "last_updated": "2026-11-26T11:21:46.832Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4RvWPyQ5RL0ao9LPZeSouE",
+      "title": "Everybody Wants To Rule The World",
+      "artist": "Tears For Fears",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:21:46.832Z"
+    },
     {
       "id": "5rZprG0MAdLJj9xnPyP98B",
       "title": "Rotze Lehitorer | רוצה להתעורר - MixerJr Remix",
