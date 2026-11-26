@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6992,
-  "last_updated": "2026-11-26T11:17:39.673Z",
+  "version": 6993,
+  "last_updated": "2026-11-26T11:17:46.567Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6fvC42z79HygIe946t5nHl",
+      "title": "בשלושים לעשירי",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:17:46.567Z"
+    },
     {
       "id": "7uKCqT7A14KZoP4J0fbgYP",
       "title": "שחור או לבן",
