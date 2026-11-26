@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7075,
-  "last_updated": "2026-11-26T15:17:54.932Z",
+  "version": 7076,
+  "last_updated": "2026-11-26T15:17:58.552Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1SWmFiFSIBoDbQJjNKC7SR",
+      "title": "Against The Wind",
+      "artist": "Bob Seger",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T15:17:58.552Z"
+    },
     {
       "id": "2ACmA5RJeNqGpNvBThFvbq",
       "title": "שעת פרידה",
