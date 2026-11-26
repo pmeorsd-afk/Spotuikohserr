@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7119,
-  "last_updated": "2026-11-26T20:30:15.123Z",
+  "version": 7120,
+  "last_updated": "2026-11-26T20:30:18.796Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1R1OwEjYY5FDLNN1xgdbJ9",
+      "title": "החיטה צומחת שוב",
+      "artist": "Chava Alberstein",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T20:30:18.796Z"
+    },
     {
       "id": "4MNzYh6fjN6sB94cUyzYUo",
       "title": "אסיף",
