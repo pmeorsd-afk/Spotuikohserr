@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6985,
-  "last_updated": "2026-11-26T11:17:07.304Z",
+  "version": 6986,
+  "last_updated": "2026-11-26T11:17:12.294Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2YjvZl8BFXTploRZ4zE2zg",
+      "title": "ספר תהילים",
+      "artist": "Moshe Perez",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:17:12.294Z"
+    },
     {
       "id": "327ZN8Mf2GYOv7VMJtQOtz",
       "title": "מבקשים חיים",
