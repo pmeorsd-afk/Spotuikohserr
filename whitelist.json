@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7009,
-  "last_updated": "2026-11-26T11:19:45.159Z",
+  "version": 7010,
+  "last_updated": "2026-11-26T11:19:49.429Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4o48uLGQ2N3DbfmkSfE5M4",
+      "title": "Sweet Like Candy",
+      "artist": "Camila Cabello",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:19:49.429Z"
+    },
     {
       "id": "3QvnDVQXwdcHJbjMaYomQY",
       "title": "דלה דלה",
