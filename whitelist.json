@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6981,
-  "last_updated": "2026-11-25T22:46:09.614Z",
+  "version": 6982,
+  "last_updated": "2026-11-26T11:16:38.190Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6olOvFhOYHkhjTCkECrJSc",
+      "title": "FATË (BONUS)",
+      "artist": "Yeat",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:16:38.190Z"
+    },
     {
       "id": "0r1Az9a4ReL7dpBvtHjq5A",
       "title": "MISS MY DAWG (feat. Drake)",
