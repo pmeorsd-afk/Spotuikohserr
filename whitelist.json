@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7101,
-  "last_updated": "2026-11-26T18:04:29.463Z",
+  "version": 7102,
+  "last_updated": "2026-11-26T18:14:05.235Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4kp5B8JAHkCZ8e1OjNPLch",
+      "title": "Get It On (Bang A Gong) - 2026 Remaster",
+      "artist": "The Power Station",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T18:14:05.235Z"
+    },
     {
       "id": "2GBWPAsIXtC7NwULhUoHRf",
       "title": "What's on Your Mind (Pure Energy)",
