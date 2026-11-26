@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7122,
-  "last_updated": "2026-11-26T20:30:22.537Z",
+  "version": 7123,
+  "last_updated": "2026-11-26T20:30:27.144Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5gJhWfbQDIWpLAlz6ZRGkQ",
+      "title": "עין גדי",
+      "artist": "Yehudit Ravitz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T20:30:27.144Z"
+    },
     {
       "id": "57O2v6wZNEBsaBtxx9VIIh",
       "title": "אור וירושלים",
