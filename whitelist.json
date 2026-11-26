@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7096,
-  "last_updated": "2026-11-26T17:52:42.888Z",
+  "version": 7098,
+  "last_updated": "2026-11-26T17:52:46.395Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4jhsuQCUCJKA5f0bXb6XdJ",
+      "title": "It's My Life - 1997 Remaster",
+      "artist": "Talk Talk",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:52:46.395Z"
+    },
+    {
+      "id": "05oFyvdztPdpwSwpoclD4c",
+      "title": "If You Leave",
+      "artist": "Orchestral Manoeuvres In The Dark",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:52:46.395Z"
+    },
     {
       "id": "0WnVjkW8k8Zo37JAI7K8zF",
       "title": "Secret",
