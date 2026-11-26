@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7041,
-  "last_updated": "2026-11-26T11:22:13.081Z",
+  "version": 7042,
+  "last_updated": "2026-11-26T11:22:16.446Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2k3aHipPiYzqUKCFqWUx4n",
+      "title": "גפרורים",
+      "artist": "Adir Getz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:22:16.446Z"
+    },
     {
       "id": "37ZJ0p5Jm13JPevGcx4SkF",
       "title": "Livin' On A Prayer",
