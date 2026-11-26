@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7095,
-  "last_updated": "2026-11-26T17:52:39.091Z",
+  "version": 7096,
+  "last_updated": "2026-11-26T17:52:42.888Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0WnVjkW8k8Zo37JAI7K8zF",
+      "title": "Secret",
+      "artist": "Orchestral Manoeuvres In The Dark",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:52:42.888Z"
+    },
     {
       "id": "0AxZUYeQ9bZwSdt1LmZuok",
       "title": "Heaven or Las Vegas",
