@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7103,
-  "last_updated": "2026-11-26T18:14:08.908Z",
+  "version": 7104,
+  "last_updated": "2026-11-26T18:31:31.025Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4PtbWDGvg0Sj8ixrd0fqO6",
+      "title": "Red Skies - Rerecorded",
+      "artist": "The Fixx",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T18:31:31.025Z"
+    },
     {
       "id": "7pfP8Z9M9KRUtzTLcnjem5",
       "title": "So Alive",
