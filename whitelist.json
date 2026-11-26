@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7087,
-  "last_updated": "2026-11-26T17:34:50.841Z",
+  "version": 7089,
+  "last_updated": "2026-11-26T17:34:54.176Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7Mar4ZfSKo0OWR8WSMW9dU",
+      "title": "אין לך מה לדאוג",
+      "artist": "Uzi Fux",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:34:54.176Z"
+    },
+    {
+      "id": "0nA1DRCRmEvSGBtLYu2bXu",
+      "title": "Head Over Heels",
+      "artist": "Japanese Breakfast",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:34:54.176Z"
+    },
     {
       "id": "0TsrUxbiH8Rc325fmesFHj",
       "title": "השעות הקטנות",
