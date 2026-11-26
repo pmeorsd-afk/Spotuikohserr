@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7028,
-  "last_updated": "2026-11-26T11:21:04.380Z",
+  "version": 7029,
+  "last_updated": "2026-11-26T11:21:08.289Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4IrzFUPsPaehaodkJfWn1y",
+      "title": "MELODY",
+      "artist": "עומרי גורן, Mendy Twerski, Oryahh",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:21:08.289Z"
+    },
     {
       "id": "2g7ElhPBFmVNYZJrMZC2Zm",
       "title": "מילים גדולות",
