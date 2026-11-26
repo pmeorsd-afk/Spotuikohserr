@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7094,
-  "last_updated": "2026-11-26T17:38:58.467Z",
+  "version": 7095,
+  "last_updated": "2026-11-26T17:52:39.091Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0AxZUYeQ9bZwSdt1LmZuok",
+      "title": "Heaven or Las Vegas",
+      "artist": "Cocteau Twins",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:52:39.091Z"
+    },
     {
       "id": "43uLQmPhgGdAcunXWzgznJ",
       "title": "Blood Of Eden",
