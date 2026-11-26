@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7135,
-  "last_updated": "2026-11-26T21:30:56.561Z",
+  "version": 7136,
+  "last_updated": "2026-11-26T21:31:00.988Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "30Q9wUzzB70DLvz80fyoxr",
+      "title": "טאף טאף",
+      "artist": "Balishag",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:31:00.988Z"
+    },
     {
       "id": "7L434RMCHPfJYGcieVtTfG",
       "title": "שיר אהבה ישן",
