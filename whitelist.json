@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7007,
-  "last_updated": "2026-11-26T11:19:22.723Z",
+  "version": 7008,
+  "last_updated": "2026-11-26T11:19:28.683Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1SgYb5JgTFrfyWOR8l8aSB",
+      "title": "Mi Shebeirach L'tzahal",
+      "artist": "Eli Levin",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:19:28.683Z"
+    },
     {
       "id": "4ZGK6g2MMIQHSNhfB8jn49",
       "title": "#Gini",
