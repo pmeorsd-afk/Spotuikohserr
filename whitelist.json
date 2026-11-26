@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7068,
-  "last_updated": "2026-11-26T13:26:25.926Z",
+  "version": 7069,
+  "last_updated": "2026-11-26T13:26:30.580Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4mYvuqbaWcIP3RNn1mkOYP",
+      "title": "Break It Off (feat. Rihanna)",
+      "artist": "Sean Paul, Rihanna",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T13:26:30.580Z"
+    },
     {
       "id": "7n1RdxEkWjkCosyZdAEwG2",
       "title": "יום אחרי יום",
