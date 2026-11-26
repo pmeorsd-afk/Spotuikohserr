@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7099,
-  "last_updated": "2026-11-26T17:52:53.218Z",
+  "version": 7100,
+  "last_updated": "2026-11-26T17:58:02.984Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2IqPRjJAcLvPqAEbnB2VJz",
+      "title": "The Safety Dance - Extended Dance Version",
+      "artist": "Men Without Hats",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:58:02.984Z"
+    },
     {
       "id": "1kDWbI0qgA2a11idtF2xNx",
       "title": "I Ran",
