@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6995,
-  "last_updated": "2026-11-26T11:17:55.160Z",
+  "version": 6996,
+  "last_updated": "2026-11-26T11:17:58.873Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6ld0y138RlWBmA8tY055X0",
+      "title": "רק עוד פעם",
+      "artist": "פאר טסי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:17:58.873Z"
+    },
     {
       "id": "029NqmIySn1kOY305AAhxT",
       "title": "Sledgehammer",
