@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7125,
-  "last_updated": "2026-11-26T20:35:30.778Z",
+  "version": 7126,
+  "last_updated": "2026-11-26T20:38:10.197Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1fcIJ9pcTEy1InNJSKPL4J",
+      "title": "ערב בא",
+      "artist": "Meadows End",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T20:38:10.197Z"
+    },
     {
       "id": "4TooNjBRwbv7IwAiSjSkkb",
       "title": "שיר ההד",
