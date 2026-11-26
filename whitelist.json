@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7139,
-  "last_updated": "2026-11-26T21:31:33.314Z",
+  "version": 7140,
+  "last_updated": "2026-11-26T21:31:36.807Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "44aKpEXsdxxSh6lHSD0kNr",
+      "title": "סליחות",
+      "artist": "Yehudit Ravitz",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:31:36.807Z"
+    },
     {
       "id": "6C6cxD3OeuMLupUBttO2nS",
       "title": "פתאום קם אדם",
