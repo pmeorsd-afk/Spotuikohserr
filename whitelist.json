@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7085,
-  "last_updated": "2026-11-26T17:34:47.031Z",
+  "version": 7087,
+  "last_updated": "2026-11-26T17:34:50.841Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0TsrUxbiH8Rc325fmesFHj",
+      "title": "השעות הקטנות",
+      "artist": "ניב דמירל, הכוכב הבא",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:34:50.841Z"
+    },
+    {
+      "id": "0tb0RHrF4IpwPJOKYxnxxe",
+      "title": "Feel Alive",
+      "artist": "KAMRAD",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:34:50.841Z"
+    },
     {
       "id": "5AHPvuKbqvJimAkL8n63uz",
       "title": "עטלף עיוור",
