@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7081,
-  "last_updated": "2026-11-26T16:27:39.914Z",
+  "version": 7082,
+  "last_updated": "2026-11-26T17:24:43.502Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7lwBfnN8IVlP6WW702pGH0",
+      "title": "סחרחורת & בדד",
+      "artist": "Omer Adam, Tuna",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:24:43.502Z"
+    },
     {
       "id": "1ko6vRAgtbgEvSHHj7znbp",
       "title": "Vezakeinu",
