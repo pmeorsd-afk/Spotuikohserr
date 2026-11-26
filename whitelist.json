@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7131,
-  "last_updated": "2026-11-26T21:30:48.824Z",
+  "version": 7133,
+  "last_updated": "2026-11-26T21:30:52.345Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5cG021CvqPtknPJYCLqIk8",
+      "title": "אותך",
+      "artist": "Yarkon Bridge Trio",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:30:52.345Z"
+    },
+    {
+      "id": "4VvitPB3m6rTqdEGctWEc6",
+      "title": "תני לו פרח",
+      "artist": "Gali Atari",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:30:52.345Z"
+    },
     {
       "id": "430YmZeWNN4950zEyFMBYK",
       "title": "פרח הלילך",
