@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7147,
-  "last_updated": "2026-11-26T21:32:32.730Z",
+  "version": 7148,
+  "last_updated": "2026-11-26T21:32:36.422Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0EAoygT04KtgKKKKYSazFa",
+      "title": "אבינועם בחור כארז",
+      "artist": "The Dudaim",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:32:36.422Z"
+    },
     {
       "id": "7jIQI2hhTqgBB7xga5jTWA",
       "title": "מלכת הקרח",
