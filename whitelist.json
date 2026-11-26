@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7015,
-  "last_updated": "2026-11-26T11:20:11.569Z",
+  "version": 7016,
+  "last_updated": "2026-11-26T11:20:15.223Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "00pXS7kaAHW8cuPJEo49zz",
+      "title": "Behind the Wheel - Vince Clarke Remix",
+      "artist": "Depeche Mode",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:20:15.223Z"
+    },
     {
       "id": "3nMb7ToWIxYvmaIG20z6ux",
       "title": "Tonight (I'm Fuckin' You)",
