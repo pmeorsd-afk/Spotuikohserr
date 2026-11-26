@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 6987,
-  "last_updated": "2026-11-26T11:17:16.198Z",
+  "version": 6989,
+  "last_updated": "2026-11-26T11:17:20.349Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1psylv1XriaO9StDFMVBzC",
+      "title": "הלב שלי",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:17:20.349Z"
+    },
+    {
+      "id": "4eReYotCOmm75OM97w31HP",
+      "title": "מלך העולם",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:17:20.349Z"
+    },
     {
       "id": "7gB5icBBPZpRwvJh5kQawB",
       "title": "בשבילך נוצרתי",
