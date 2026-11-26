@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7127,
-  "last_updated": "2026-11-26T20:44:03.862Z",
+  "version": 7128,
+  "last_updated": "2026-11-26T20:49:59.850Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7KoOUh63HnPNN3apCKY0Gg",
+      "title": "לא פעם בקיץ",
+      "artist": "Arik Sinai",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T20:49:59.850Z"
+    },
     {
       "id": "5AhVx4BOvY7bhZtZqF1fF3",
       "title": "לילה",
