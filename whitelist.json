@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7054,
-  "last_updated": "2026-11-26T12:36:33.881Z",
+  "version": 7056,
+  "last_updated": "2026-11-26T12:36:38.283Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7I6DceMT3utDOHjcYCbrr4",
+      "title": "Don't Matter",
+      "artist": "Akon",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T12:36:38.283Z"
+    },
+    {
+      "id": "66oaPp2Zyap5j4Z7B1rDfx",
+      "title": "אדון הסליחות",
+      "artist": "E-Z, חנן בן ארי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T12:36:38.283Z"
+    },
     {
       "id": "5Ravsw8TmHN5wBiYPPYUFw",
       "title": "Right Now (Na Na Na)",
