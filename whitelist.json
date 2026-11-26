@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7069,
-  "last_updated": "2026-11-26T13:26:30.580Z",
+  "version": 7070,
+  "last_updated": "2026-11-26T15:17:34.601Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5t6Zs6KpCQNPar68TFOgmd",
+      "title": "טאטע תטהר - לייב קיסריה 2025",
+      "artist": "בן צור, יאיר אלייצור",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T15:17:34.601Z"
+    },
     {
       "id": "4mYvuqbaWcIP3RNn1mkOYP",
       "title": "Break It Off (feat. Rihanna)",
