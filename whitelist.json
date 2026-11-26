@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7102,
-  "last_updated": "2026-11-26T18:14:05.235Z",
+  "version": 7103,
+  "last_updated": "2026-11-26T18:14:08.908Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7pfP8Z9M9KRUtzTLcnjem5",
+      "title": "So Alive",
+      "artist": "Love and Rockets",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T18:14:08.908Z"
+    },
     {
       "id": "4kp5B8JAHkCZ8e1OjNPLch",
       "title": "Get It On (Bang A Gong) - 2026 Remaster",
