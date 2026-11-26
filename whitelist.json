@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7027,
-  "last_updated": "2026-11-26T11:21:00.213Z",
+  "version": 7028,
+  "last_updated": "2026-11-26T11:21:04.380Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2g7ElhPBFmVNYZJrMZC2Zm",
+      "title": "מילים גדולות",
+      "artist": "יוסף חיים בוסקילה",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:21:04.380Z"
+    },
     {
       "id": "0IYrhwzI6lXNitnHhDTM0G",
       "title": "אבינו הגדול",
