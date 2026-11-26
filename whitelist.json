@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7142,
-  "last_updated": "2026-11-26T21:31:47.535Z",
+  "version": 7143,
+  "last_updated": "2026-11-26T21:32:02.447Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1EiGztRhTXCIaNZn8CF5TV",
+      "title": "כמו בלדה",
+      "artist": "The Brothers & The Sisters",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T21:32:02.447Z"
+    },
     {
       "id": "3apnsn5UwfZdnZDyovfxaj",
       "title": "פליי בוי",
