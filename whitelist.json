@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7118,
-  "last_updated": "2026-11-26T20:12:05.732Z",
+  "version": 7119,
+  "last_updated": "2026-11-26T20:30:15.123Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4MNzYh6fjN6sB94cUyzYUo",
+      "title": "אסיף",
+      "artist": "Green Onion 80",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T20:30:15.123Z"
+    },
     {
       "id": "0HCGNChooHdZRfDE3R3wny",
       "title": "בפרדס ליד השוקת",
