@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7000,
-  "last_updated": "2026-11-26T11:18:51.366Z",
+  "version": 7001,
+  "last_updated": "2026-11-26T11:18:55.904Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5CY8z02wp78zJM12UizhjS",
+      "title": "Calming and Relaxing Music for Children",
+      "artist": "Tali Rhyming",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T11:18:55.904Z"
+    },
     {
       "id": "278qCd9JyzrAsQsskKiXv9",
       "title": "מה נשאר לך",
