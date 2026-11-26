@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7111,
-  "last_updated": "2026-11-26T19:54:02.296Z",
+  "version": 7112,
+  "last_updated": "2026-11-26T19:56:40.573Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4cpbgwp6byobe998BGwLVs",
+      "title": "Subtle Changes - Radio Mix",
+      "artist": "Derek Avari",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T19:56:40.573Z"
+    },
     {
       "id": "318VzsmPB28lclgAJt6f4u",
       "title": "בארץ אהבתי השקד פורח",
