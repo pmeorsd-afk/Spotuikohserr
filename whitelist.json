@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7091,
-  "last_updated": "2026-11-26T17:38:18.922Z",
+  "version": 7092,
+  "last_updated": "2026-11-26T17:38:22.880Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5YMYCMEcxxTEGqVwEGBlwP",
+      "title": "מה הוא יודע",
+      "artist": "The Ultras, Osher Cohen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-26T17:38:22.880Z"
+    },
     {
       "id": "6Vz7vzOpCwKeSQlfViibuY",
       "title": "Crazy",
