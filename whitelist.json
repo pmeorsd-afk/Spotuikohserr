@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7204,
-  "last_updated": "2026-11-27T09:26:18.206Z",
+  "version": 7206,
+  "last_updated": "2026-11-27T09:26:21.843Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4OIQ7mixPtf8gEs2p6wFRV",
+      "title": "נעצר העולם",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:26:21.843Z"
+    },
+    {
+      "id": "5R7C485I8AXe9yG30Ll9wD",
+      "title": "I'm Not Going to Help You",
+      "artist": "Roar",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:26:21.843Z"
+    },
     {
       "id": "2xCYs9Vc0GtnCj1w6asmhk",
       "title": "עיניים רווקות",
