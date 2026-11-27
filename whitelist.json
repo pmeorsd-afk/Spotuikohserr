@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7238,
-  "last_updated": "2026-11-27T11:15:53.628Z",
+  "version": 7239,
+  "last_updated": "2026-11-27T11:15:59.303Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0g8d2xlkThfrYiZXpqy6M2",
+      "title": "צלילים נעים ברוח",
+      "artist": "Eti Granot Weizer",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:15:59.303Z"
+    },
     {
       "id": "3MADIrqFLdQvOxWKNY39JU",
       "title": "בוקרשט",
