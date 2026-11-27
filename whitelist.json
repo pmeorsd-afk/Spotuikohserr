@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7286,
-  "last_updated": "2026-11-27T12:47:04.115Z",
+  "version": 7288,
+  "last_updated": "2026-11-27T12:47:07.999Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5T8l6s7z115LHeMcvv1Tt0",
+      "title": "יונתן הקטן",
+      "artist": "Hanan Yovel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:47:07.999Z"
+    },
+    {
+      "id": "6Sw6u76YQJq8zdHONSFvtB",
+      "title": "עוגה עוגה",
+      "artist": "Hana Laszlo",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:47:07.999Z"
+    },
     {
       "id": "5rWG379574wCaTa9a19p4w",
       "title": "נדנדה",
