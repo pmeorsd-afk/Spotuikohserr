@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7177,
-  "last_updated": "2026-11-27T05:03:34.901Z",
+  "version": 7179,
+  "last_updated": "2026-11-27T05:03:38.807Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1ieFjmDRqUkecT5AqU2nLo",
+      "title": "מוזיקה מרגיעה - נעימות פסנתר שקטות ומרגיעות",
+      "artist": "Teramid Music.",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:03:38.807Z"
+    },
+    {
+      "id": "7mvzqgsXeQvtPjFYTpJjUw",
+      "title": "Journey to the Center",
+      "artist": "Parijat",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:03:38.807Z"
+    },
     {
       "id": "54DC9pPERJHkTJGZr1E2aT",
       "title": "מקודשת",
