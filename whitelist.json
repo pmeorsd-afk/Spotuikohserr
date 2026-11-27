@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7249,
-  "last_updated": "2026-11-27T11:16:57.516Z",
+  "version": 7250,
+  "last_updated": "2026-11-27T11:17:06.322Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7fasSAu98ymD8KR6VZrFsb",
+      "title": "Parking Lot",
+      "artist": "Cochren & Co.",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:17:06.322Z"
+    },
     {
       "id": "3WNhtfaQy46EIThXj3UAub",
       "title": "הגברים בוכים בלילה",
