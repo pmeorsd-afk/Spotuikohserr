@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7274,
-  "last_updated": "2026-11-27T12:28:55.763Z",
+  "version": 7275,
+  "last_updated": "2026-11-27T12:28:59.559Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4d52PprhJBK8LmdXqJoKKE",
+      "title": "לא פוחד למות - The Raichel Session",
+      "artist": "Mooki",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:28:59.559Z"
+    },
     {
       "id": "1SOClUWhOi8vHZYMz3GluK",
       "title": "Infinity",
