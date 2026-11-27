@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7243,
-  "last_updated": "2026-11-27T11:16:22.604Z",
+  "version": 7244,
+  "last_updated": "2026-11-27T11:16:28.139Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "35aShLiI09gGtreARPVPGf",
+      "title": "Yehudi",
+      "artist": "Shea Kaller Band, Shmaya Fischer",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:16:28.139Z"
+    },
     {
       "id": "2rXow4Qt6T4nOHF3RTp6Bb",
       "title": "Shulem Aleichem",
