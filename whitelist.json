@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7170,
-  "last_updated": "2026-11-27T05:03:06.879Z",
+  "version": 7171,
+  "last_updated": "2026-11-27T05:03:10.656Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3styitnfUaADfiMRIiwkTP",
+      "title": "שיר נחמה",
+      "artist": "Hadag Nahash",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:03:10.656Z"
+    },
     {
       "id": "5UTASY1feroQggKyga3HvI",
       "title": "בור ועם הארץ",
