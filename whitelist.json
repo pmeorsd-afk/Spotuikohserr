@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7248,
-  "last_updated": "2026-11-27T11:16:50.758Z",
+  "version": 7249,
+  "last_updated": "2026-11-27T11:16:57.516Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3WNhtfaQy46EIThXj3UAub",
+      "title": "הגברים בוכים בלילה",
+      "artist": "Avner Gadasi",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:16:57.516Z"
+    },
     {
       "id": "2qySvppFPQlYU3hoAtvmTg",
       "title": "ילדה רעה עם נתי לוי",
