@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7299,
-  "last_updated": "2026-11-27T12:52:16.617Z",
+  "version": 7300,
+  "last_updated": "2026-11-27T12:52:20.515Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6mIjBZ8FGRJHVYd8tTtmVZ",
+      "title": "קשת קטנה מוזיקה מרגיעה לתינוקות",
+      "artist": "kfir kaikov",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:52:20.515Z"
+    },
     {
       "id": "3dtzkpMdAFDu8Od5WO0Txa",
       "title": "כוכבים בלילה ישנים",
