@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7222,
-  "last_updated": "2026-11-27T09:28:06.576Z",
+  "version": 7223,
+  "last_updated": "2026-11-27T09:28:10.656Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0kOrzSs7ujYUqU2VzuhOsS",
+      "title": "I Will Wait",
+      "artist": "Damascus Worship, Seph Schlueter",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:28:10.656Z"
+    },
     {
       "id": "5nDSJO4909uNzMcZH3CggS",
       "title": "Hard to Say I'm Sorry - 2009 Remaster",
