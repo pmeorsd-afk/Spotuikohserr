@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7270,
-  "last_updated": "2026-11-27T12:28:07.411Z",
+  "version": 7272,
+  "last_updated": "2026-11-27T12:28:11.463Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1bxsKK9zfylHb3lrXF1KKt",
+      "title": "לה בוהם",
+      "artist": "Idan Rafael Haviv",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:28:11.463Z"
+    },
+    {
+      "id": "3oevkC3HQ2sxTwJ394MROY",
+      "title": "My Love",
+      "artist": "Paul McCartney, Wings",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:28:11.463Z"
+    },
     {
       "id": "73lokU62wz5yHcV9nPs8ja",
       "title": "אלי",
