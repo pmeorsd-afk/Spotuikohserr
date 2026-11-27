@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7212,
-  "last_updated": "2026-11-27T09:26:47.481Z",
+  "version": 7213,
+  "last_updated": "2026-11-27T09:27:08.522Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6r4mKD3NZPix1aXt4go8vX",
+      "title": "תזרוק לים",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:27:08.522Z"
+    },
     {
       "id": "3lT5iBOEOw3cSUKJd48cIU",
       "title": "BMW שחורה - Live",
