@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7220,
-  "last_updated": "2026-11-27T09:27:54.399Z",
+  "version": 7221,
+  "last_updated": "2026-11-27T09:27:59.105Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0yNvCWhV6EyDpYAAczCm1E",
+      "title": "Every Time You Go Away - Single Version",
+      "artist": "Paul Young",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:27:59.105Z"
+    },
     {
       "id": "1aqYxRl9PczQkj5CVGheOI",
       "title": "ממכרת",
