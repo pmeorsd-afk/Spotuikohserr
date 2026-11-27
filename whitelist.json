@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7266,
-  "last_updated": "2026-11-27T12:27:47.172Z",
+  "version": 7267,
+  "last_updated": "2026-11-27T12:27:52.804Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "49ou9vBZLTCi4TYoYzR3F9",
+      "title": "Calabria 2007 - Radio Edit",
+      "artist": "Enur, Natasja",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:27:52.804Z"
+    },
     {
       "id": "5By7Pzgl6TMuVJG168VWzS",
       "title": "Michelle - Remastered 2009",
