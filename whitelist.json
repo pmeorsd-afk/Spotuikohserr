@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7239,
-  "last_updated": "2026-11-27T11:15:59.303Z",
+  "version": 7240,
+  "last_updated": "2026-11-27T11:16:03.188Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6fZDFMk1D6wHtpWw536AhY",
+      "title": "מטפחות חגיגיות",
+      "artist": "Eti Granot Weizer",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:16:03.188Z"
+    },
     {
       "id": "0g8d2xlkThfrYiZXpqy6M2",
       "title": "צלילים נעים ברוח",
