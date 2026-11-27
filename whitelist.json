@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7218,
-  "last_updated": "2026-11-27T09:27:43.679Z",
+  "version": 7219,
+  "last_updated": "2026-11-27T09:27:48.397Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "62cy10RvnKDBfjQHGADoKf",
+      "title": "ואולי ביום יפה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:27:48.397Z"
+    },
     {
       "id": "6IkdT8CTuJB4jXkgekxBFt",
       "title": "החיוך שלך",
