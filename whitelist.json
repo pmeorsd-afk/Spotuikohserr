@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7295,
-  "last_updated": "2026-11-27T12:48:14.328Z",
+  "version": 7297,
+  "last_updated": "2026-11-27T12:48:18.663Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4g4eNKgAf3hYdzqbqkQB8v",
+      "title": "כינורי",
+      "artist": "הכוכב הבא, נווה לוי",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:48:18.663Z"
+    },
+    {
+      "id": "0uWi0EYxUBSML8Bl436P89",
+      "title": "ניגון הבעש\"ט",
+      "artist": "Daniel Ahaviel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:48:18.663Z"
+    },
     {
       "id": "7lig9N5aPCKXMOeUEXdF5B",
       "title": "אשה בונה אשה הורסת",
