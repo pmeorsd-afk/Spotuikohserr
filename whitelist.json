@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7258,
-  "last_updated": "2026-11-27T11:30:53.129Z",
+  "version": 7259,
+  "last_updated": "2026-11-27T11:35:03.126Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4jmM3DfZKnNmdk9E1hu9lg",
+      "title": "Set Me Free",
+      "artist": "Relentless Flood",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:35:03.126Z"
+    },
     {
       "id": "14eZ0CoHr2l55Irex8czxD",
       "title": "נשמה",
