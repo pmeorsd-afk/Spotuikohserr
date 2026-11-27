@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7160,
-  "last_updated": "2026-11-27T05:02:29.088Z",
+  "version": 7161,
+  "last_updated": "2026-11-27T05:02:32.697Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4JONVyhjYcnBUCQA7hbqSz",
+      "title": "שלווה",
+      "artist": "Participants of 'The Troup'",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:02:32.697Z"
+    },
     {
       "id": "0jPy1Rm9G4UjNHLg9WXNDj",
       "title": "זורק תעניבה",
