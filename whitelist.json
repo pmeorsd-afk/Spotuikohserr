@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7284,
-  "last_updated": "2026-11-27T12:46:56.656Z",
+  "version": 7285,
+  "last_updated": "2026-11-27T12:47:00.553Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7qkbGhtZLKBHPqsNUVIiRQ",
+      "title": "Hakol Mishamayim",
+      "artist": "Mordechai Shapiro",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:47:00.553Z"
+    },
     {
       "id": "3uqTn2W8K3PPxiBusYoyOb",
       "title": "Chaneinu",
