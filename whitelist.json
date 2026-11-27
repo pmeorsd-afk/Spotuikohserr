@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7202,
-  "last_updated": "2026-11-27T07:52:14.462Z",
+  "version": 7203,
+  "last_updated": "2026-11-27T09:26:14.006Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4yRcgXauJv1YhVph7uwozY",
+      "title": "מיליון שירים",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:26:14.006Z"
+    },
     {
       "id": "0h5PgPawm6dC0Jump0oR68",
       "title": "זמר של שיר אחד",
