@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7242,
-  "last_updated": "2026-11-27T11:16:10.490Z",
+  "version": 7243,
+  "last_updated": "2026-11-27T11:16:22.604Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2rXow4Qt6T4nOHF3RTp6Bb",
+      "title": "Shulem Aleichem",
+      "artist": "Shea Kaller Band, Shmueli Ungar",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:16:22.604Z"
+    },
     {
       "id": "6DHeNyuk0o01DCt6X9xU2m",
       "title": "Barchu",
