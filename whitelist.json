@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7291,
-  "last_updated": "2026-11-27T12:47:54.274Z",
+  "version": 7292,
+  "last_updated": "2026-11-27T12:47:57.932Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1vTREyN4uJYWSUUzkySxdb",
+      "title": "מצוה טאנץ",
+      "artist": "Daniel Ahaviel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:47:57.932Z"
+    },
     {
       "id": "1xqvKYQCLASKZAALZTXwUR",
       "title": "Schar Mitzvah",
