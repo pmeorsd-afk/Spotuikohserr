@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7192,
-  "last_updated": "2026-11-27T07:25:40.047Z",
+  "version": 7194,
+  "last_updated": "2026-11-27T07:25:43.795Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1C414CTDbNtupUnpiiUnQG",
+      "title": "כאן בשבילה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T07:25:43.795Z"
+    },
+    {
+      "id": "0SJSSLEEGc0Ych1aA2iN1P",
+      "title": "חתונה ממבט ראשון",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T07:25:43.795Z"
+    },
     {
       "id": "2cbb0sbOyxwLUabLt8ScI5",
       "title": "אכאב אותך בשקט",
