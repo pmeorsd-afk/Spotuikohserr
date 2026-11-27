@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7203,
-  "last_updated": "2026-11-27T09:26:14.006Z",
+  "version": 7204,
+  "last_updated": "2026-11-27T09:26:18.206Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2xCYs9Vc0GtnCj1w6asmhk",
+      "title": "עיניים רווקות",
+      "artist": "ניב אבוטבול",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:26:18.206Z"
+    },
     {
       "id": "4yRcgXauJv1YhVph7uwozY",
       "title": "מיליון שירים",
