@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7233,
-  "last_updated": "2026-11-27T11:15:31.473Z",
+  "version": 7234,
+  "last_updated": "2026-11-27T11:15:35.716Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "7td3robG0XWlTgTQKQrtcP",
+      "title": "ציפור מדבר",
+      "artist": "Eden Hason",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:15:35.716Z"
+    },
     {
       "id": "7e4mkEcNTiKt0w4Ya3hHpB",
       "title": "Stumblin' In",
