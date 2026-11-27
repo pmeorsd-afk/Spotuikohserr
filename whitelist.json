@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7209,
-  "last_updated": "2026-11-27T09:26:29.744Z",
+  "version": 7210,
+  "last_updated": "2026-11-27T09:26:34.165Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5cVLQIS6EcN48qNdvEoD4b",
+      "title": "מילה טובה",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:26:34.165Z"
+    },
     {
       "id": "6VsUSutvl34R8n9PiHlOw5",
       "title": "הכל על הלבד",
