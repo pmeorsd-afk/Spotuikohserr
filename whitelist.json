@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7182,
-  "last_updated": "2026-11-27T06:07:26.786Z",
+  "version": 7183,
+  "last_updated": "2026-11-27T06:07:31.103Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,15 +4280,6 @@
     }
   ],
   "tracks": [
-    {
-      "id": "0ugZnGsmsYuvGKLTv7lBCA",
-      "title": "Drive - 2016 Remaster",
-      "artist": "The Cars",
-      "status": "approved",
-      "prev_status": "none",
-      "notes": "approved via telegram",
-      "updated_at": "2026-11-27T06:07:26.786Z"
-    },
     {
       "id": "4O4Z8VFczL8MxIOmqVWc1b",
       "title": "Footloose",
