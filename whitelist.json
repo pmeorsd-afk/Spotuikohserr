@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7261,
-  "last_updated": "2026-11-27T12:27:24.175Z",
+  "version": 7262,
+  "last_updated": "2026-11-27T12:27:27.786Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5WTEEft8Gx5LVqt1O65Nye",
+      "title": "Make War",
+      "artist": "Disciple",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:27:27.786Z"
+    },
     {
       "id": "7LBieaBbNdbkcGBnTnltgM",
       "title": "שתדעי",
