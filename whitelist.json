@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7290,
-  "last_updated": "2026-11-27T12:47:18.629Z",
+  "version": 7291,
+  "last_updated": "2026-11-27T12:47:54.274Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1xqvKYQCLASKZAALZTXwUR",
+      "title": "Schar Mitzvah",
+      "artist": "Mordechai Shapiro",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:47:54.274Z"
+    },
     {
       "id": "6UYBJyeD2A0lfqgXivcgG9",
       "title": "בום פם",
