@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7252,
-  "last_updated": "2026-11-27T11:17:30.807Z",
+  "version": 7253,
+  "last_updated": "2026-11-27T11:17:37.518Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6I5vZSpiSLoGgkrGRhVSM1",
+      "title": "בינו נא מורדים",
+      "artist": "תזמורת אנדלוסאלם, שמעון סיבוני",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:17:37.518Z"
+    },
     {
       "id": "06VsoIC668pU516T6qrgkJ",
       "title": "Instruction (feat. Demi Lovato & Stefflon Don)",
