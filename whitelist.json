@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7161,
-  "last_updated": "2026-11-27T05:02:32.697Z",
+  "version": 7163,
+  "last_updated": "2026-11-27T05:02:36.576Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5Q6nBQIXjc2iONfiFAw3Cm",
+      "title": "אתם זוכרים את השירים",
+      "artist": "Hanan Yovel",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:02:36.576Z"
+    },
+    {
+      "id": "7CSMob7E7BgplCVtOweE7R",
+      "title": "תלבשי לבן",
+      "artist": "The Dudaim, Haparvarim",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:02:36.576Z"
+    },
     {
       "id": "4JONVyhjYcnBUCQA7hbqSz",
       "title": "שלווה",
