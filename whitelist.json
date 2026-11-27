@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7256,
-  "last_updated": "2026-11-27T11:30:40.075Z",
+  "version": 7257,
+  "last_updated": "2026-11-27T11:30:49.618Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4WURtgq9D23y9pMyP0oeOp",
+      "title": "פעם בחיים - Live",
+      "artist": "Yaniv Ben Masiah",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:30:49.618Z"
+    },
     {
       "id": "0fzruYBrvi8v5KYX0A7dBB",
       "title": "Turn The Lights Off",
