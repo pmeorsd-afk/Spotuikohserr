@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7217,
-  "last_updated": "2026-11-27T09:27:26.190Z",
+  "version": 7218,
+  "last_updated": "2026-11-27T09:27:43.679Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6IkdT8CTuJB4jXkgekxBFt",
+      "title": "החיוך שלך",
+      "artist": "טוקסיקו, young buta",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:27:43.679Z"
+    },
     {
       "id": "3YsVwASnfEaPyEb5K2ISQo",
       "title": "השמיים הם הגבול",
