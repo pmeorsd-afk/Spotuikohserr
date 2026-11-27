@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7279,
-  "last_updated": "2026-11-27T12:46:31.604Z",
+  "version": 7280,
+  "last_updated": "2026-11-27T12:46:35.393Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1qFSPn37zEeCyRiVpkW9dt",
+      "title": "Light It Up - Remix",
+      "artist": "Major Lazer, Diplo, Nyla, Fuse ODG",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:46:35.393Z"
+    },
     {
       "id": "2ELMJSVesyaAv4arYD0rF1",
       "title": "עפר אני - The Raichel Session",
