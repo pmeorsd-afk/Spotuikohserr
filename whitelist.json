@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7164,
-  "last_updated": "2026-11-27T05:02:42.298Z",
+  "version": 7165,
+  "last_updated": "2026-11-27T05:02:45.924Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3JgUc02fVzBWqbKrOqaRmm",
+      "title": "קרנבל בנח\"ל",
+      "artist": "Lehakat HaNachal",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:02:45.924Z"
+    },
     {
       "id": "5Q6nBQIXjc2iONfiFAw3Cm",
       "title": "אתם זוכרים את השירים",
