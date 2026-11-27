@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7169,
-  "last_updated": "2026-11-27T05:03:02.577Z",
+  "version": 7170,
+  "last_updated": "2026-11-27T05:03:06.879Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5UTASY1feroQggKyga3HvI",
+      "title": "בור ועם הארץ",
+      "artist": "Ravid Plotnik, Tuna",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:03:06.879Z"
+    },
     {
       "id": "3DFQUtP1iXeednothAcHGk",
       "title": "הכל עוד לפניי",
