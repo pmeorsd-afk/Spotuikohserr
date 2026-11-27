@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7298,
-  "last_updated": "2026-11-27T12:48:22.452Z",
+  "version": 7299,
+  "last_updated": "2026-11-27T12:52:16.617Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3dtzkpMdAFDu8Od5WO0Txa",
+      "title": "כוכבים בלילה ישנים",
+      "artist": "kfir kaikov",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:52:16.617Z"
+    },
     {
       "id": "6INO9q7eTTCmN9uFszBSi2",
       "title": "סאחי סיטי",
