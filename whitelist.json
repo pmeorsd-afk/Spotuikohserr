@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7158,
-  "last_updated": "2026-11-27T05:02:24.543Z",
+  "version": 7160,
+  "last_updated": "2026-11-27T05:02:29.088Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0jPy1Rm9G4UjNHLg9WXNDj",
+      "title": "זורק תעניבה",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:02:29.088Z"
+    },
+    {
+      "id": "3GElePcOLgk4YJvYS22Jip",
+      "title": "עוד חוזר הניגון",
+      "artist": "Chava Alberstein",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:02:29.088Z"
+    },
     {
       "id": "65hrvG1qmkiSYv8oP36CbZ",
       "title": "עוף גוזל",
