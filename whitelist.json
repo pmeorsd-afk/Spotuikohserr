@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7255,
-  "last_updated": "2026-11-27T11:30:36.184Z",
+  "version": 7256,
+  "last_updated": "2026-11-27T11:30:40.075Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0fzruYBrvi8v5KYX0A7dBB",
+      "title": "Turn The Lights Off",
+      "artist": "PHURS, HALUNA, Harddope, Deep Mage",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:30:40.075Z"
+    },
     {
       "id": "6I5vZSpiSLoGgkrGRhVSM1",
       "title": "בינו נא מורדים",
