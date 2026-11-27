@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7219,
-  "last_updated": "2026-11-27T09:27:48.397Z",
+  "version": 7220,
+  "last_updated": "2026-11-27T09:27:54.399Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1aqYxRl9PczQkj5CVGheOI",
+      "title": "ממכרת",
+      "artist": "דודו אהרון, Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:27:54.399Z"
+    },
     {
       "id": "62cy10RvnKDBfjQHGADoKf",
       "title": "ואולי ביום יפה",
