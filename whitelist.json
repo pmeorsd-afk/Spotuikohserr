@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7277,
-  "last_updated": "2026-11-27T12:29:07.160Z",
+  "version": 7278,
+  "last_updated": "2026-11-27T12:46:27.465Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "5bWGa3OnXYuCPsBWTk2vVO",
+      "title": "היום הכי טוב - The Raichel Session",
+      "artist": "Mooki",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:46:27.465Z"
+    },
     {
       "id": "1SUUUKSSpalSYAjriz58LD",
       "title": "התחנה הישנה",
