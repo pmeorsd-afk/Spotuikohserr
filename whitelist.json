@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7180,
-  "last_updated": "2026-11-27T05:15:00.386Z",
+  "version": 7181,
+  "last_updated": "2026-11-27T05:40:30.149Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4O4Z8VFczL8MxIOmqVWc1b",
+      "title": "Footloose",
+      "artist": "Kenny Loggins",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:40:30.149Z"
+    },
     {
       "id": "1e5cCeKYkbP21ut2sEiLQ8",
       "title": "מחרוזת סמרה",
