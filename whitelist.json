@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7216,
-  "last_updated": "2026-11-27T09:27:21.845Z",
+  "version": 7217,
+  "last_updated": "2026-11-27T09:27:26.190Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3YsVwASnfEaPyEb5K2ISQo",
+      "title": "השמיים הם הגבול",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:27:26.190Z"
+    },
     {
       "id": "3DamFFqW32WihKkTVlwTYQ",
       "title": "Fireflies",
