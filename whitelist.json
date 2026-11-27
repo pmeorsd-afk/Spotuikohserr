@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7293,
-  "last_updated": "2026-11-27T12:48:05.913Z",
+  "version": 7294,
+  "last_updated": "2026-11-27T12:48:10.252Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1Czs8xf6W1fR0OteMaza68",
+      "title": "Trying My Best",
+      "artist": "Mordechai Shapiro",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:48:10.252Z"
+    },
     {
       "id": "1umavBvScJCiP3RCRW9Szr",
       "title": "ANA AVDA - אנא עבדא",
