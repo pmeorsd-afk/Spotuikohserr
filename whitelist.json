@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7226,
-  "last_updated": "2026-11-27T09:28:18.239Z",
+  "version": 7227,
+  "last_updated": "2026-11-27T09:28:26.951Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6zJaPTYWLKbqaUytDV9LD2",
+      "title": "שבת קודש",
+      "artist": "יואלי דיקמן, מקהלת נגינה, מקהלת שיר ושבח",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:28:26.951Z"
+    },
     {
       "id": "6RNDeRnWsRMjPdNVgupZCs",
       "title": "I Just Called To Say I Love You",
