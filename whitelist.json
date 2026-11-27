@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7272,
-  "last_updated": "2026-11-27T12:28:11.463Z",
+  "version": 7273,
+  "last_updated": "2026-11-27T12:28:50.922Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3w1vrDYHvsRZK1LjB9zIvw",
+      "title": "אחותך (לילה טוב)",
+      "artist": "Dudu Faruk, NOROZ",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:28:50.922Z"
+    },
     {
       "id": "1bxsKK9zfylHb3lrXF1KKt",
       "title": "לה בוהם",
