@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7257,
-  "last_updated": "2026-11-27T11:30:49.618Z",
+  "version": 7258,
+  "last_updated": "2026-11-27T11:30:53.129Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "14eZ0CoHr2l55Irex8czxD",
+      "title": "נשמה",
+      "artist": "ליאור נרקיס",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:30:53.129Z"
+    },
     {
       "id": "4WURtgq9D23y9pMyP0oeOp",
       "title": "פעם בחיים - Live",
