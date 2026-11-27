@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7167,
-  "last_updated": "2026-11-27T05:02:58.876Z",
+  "version": 7169,
+  "last_updated": "2026-11-27T05:03:02.577Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3DFQUtP1iXeednothAcHGk",
+      "title": "הכל עוד לפניי",
+      "artist": "Hatikva 6",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:03:02.577Z"
+    },
+    {
+      "id": "6npeCOqRWWILXlXVS2vHvH",
+      "title": "אם אשכחך",
+      "artist": "שי אברמסון",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:03:02.577Z"
+    },
     {
       "id": "4VhY7gLJXW4Gj4ZIPNEPzR",
       "title": "שירו של צנחן",
