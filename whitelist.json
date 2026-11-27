@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7246,
-  "last_updated": "2026-11-27T11:16:37.759Z",
+  "version": 7247,
+  "last_updated": "2026-11-27T11:16:42.444Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "2qySvppFPQlYU3hoAtvmTg",
+      "title": "ילדה רעה עם נתי לוי",
+      "artist": "Pini Hadad",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:16:42.444Z"
+    },
     {
       "id": "3ddGqpb4SbgnokNw59fElB",
       "title": "הקדוש ברוך הוא",
