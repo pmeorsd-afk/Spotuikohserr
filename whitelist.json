@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7263,
-  "last_updated": "2026-11-27T12:27:36.037Z",
+  "version": 7264,
+  "last_updated": "2026-11-27T12:27:39.557Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "03C0lOgIOKlsJpaF5KtWDE",
+      "title": "Santa Monica",
+      "artist": "Theory of a Deadman",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:27:39.557Z"
+    },
     {
       "id": "5WTEEft8Gx5LVqt1O65Nye",
       "title": "Make War",
