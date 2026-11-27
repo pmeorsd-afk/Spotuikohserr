@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7245,
-  "last_updated": "2026-11-27T11:16:33.226Z",
+  "version": 7246,
+  "last_updated": "2026-11-27T11:16:37.759Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3ddGqpb4SbgnokNw59fElB",
+      "title": "הקדוש ברוך הוא",
+      "artist": "Stalos & Oren Chen",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:16:37.759Z"
+    },
     {
       "id": "12b9vkKmQgDjKTcCj5J7jh",
       "title": "יש אין סוף",
