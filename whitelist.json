@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7235,
-  "last_updated": "2026-11-27T11:15:41.488Z",
+  "version": 7236,
+  "last_updated": "2026-11-27T11:15:46.149Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "0P7yeGtcBXoVeXvnLHzd6L",
+      "title": "סוף שבוע",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:15:46.149Z"
+    },
     {
       "id": "5YRiqMgQWzkBBeDiP9q4BW",
       "title": "רחוק מכאן",
