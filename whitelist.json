@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7237,
-  "last_updated": "2026-11-27T11:15:50.080Z",
+  "version": 7238,
+  "last_updated": "2026-11-27T11:15:53.628Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "3MADIrqFLdQvOxWKNY39JU",
+      "title": "בוקרשט",
+      "artist": "Omer Adam",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:15:53.628Z"
+    },
     {
       "id": "6fShCBKpLaPuMkrxtgFfJR",
       "title": "כמה טוב לי שבאת",
