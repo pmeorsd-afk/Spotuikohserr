@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7227,
-  "last_updated": "2026-11-27T09:28:26.951Z",
+  "version": 7228,
+  "last_updated": "2026-11-27T09:28:31.228Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4lz3g0iNT0MXI8PznyAuRd",
+      "title": "טוב להודות",
+      "artist": "Asaph Neve Shalom",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T09:28:31.228Z"
+    },
     {
       "id": "6zJaPTYWLKbqaUytDV9LD2",
       "title": "שבת קודש",
