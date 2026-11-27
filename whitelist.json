@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7157,
-  "last_updated": "2026-11-27T05:02:20.949Z",
+  "version": 7158,
+  "last_updated": "2026-11-27T05:02:24.543Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "65hrvG1qmkiSYv8oP36CbZ",
+      "title": "עוף גוזל",
+      "artist": "Arik Einstein",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T05:02:24.543Z"
+    },
     {
       "id": "04FZlACDLceGBDHT8scnU0",
       "title": "תן לי יד",
