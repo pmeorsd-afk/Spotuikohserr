@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7268,
-  "last_updated": "2026-11-27T12:28:00.158Z",
+  "version": 7269,
+  "last_updated": "2026-11-27T12:28:03.734Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "1roNiRl3vf5mMtN38P770r",
+      "title": "Aba",
+      "artist": "Shlomi Shabat",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:28:03.734Z"
+    },
     {
       "id": "29U7stRjqHU6rMiS8BfaI9",
       "title": "What A Wonderful World",
