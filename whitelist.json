@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7240,
-  "last_updated": "2026-11-27T11:16:03.188Z",
+  "version": 7242,
+  "last_updated": "2026-11-27T11:16:10.490Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,24 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6DHeNyuk0o01DCt6X9xU2m",
+      "title": "Barchu",
+      "artist": "Shea Kaller Band, Lipa Schmeltzer",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:16:10.490Z"
+    },
+    {
+      "id": "5Klo65Y9uouLjNVDV3pqh7",
+      "title": "Go West - 2003 Remaster",
+      "artist": "Pet Shop Boys",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:16:10.490Z"
+    },
     {
       "id": "6fZDFMk1D6wHtpWw536AhY",
       "title": "מטפחות חגיגיות",
