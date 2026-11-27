@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7288,
-  "last_updated": "2026-11-27T12:47:07.999Z",
+  "version": 7289,
+  "last_updated": "2026-11-27T12:47:14.100Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "4wzeCmGAkpoaYo11DW7dEn",
+      "title": "Just The Way You Are",
+      "artist": "Mordechai Shapiro",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T12:47:14.100Z"
+    },
     {
       "id": "5T8l6s7z115LHeMcvv1Tt0",
       "title": "יונתן הקטן",
