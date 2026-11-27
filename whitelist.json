@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 7230,
-  "last_updated": "2026-11-27T11:15:23.362Z",
+  "version": 7231,
+  "last_updated": "2026-11-27T11:15:27.201Z",
   "artists": [
     {
       "id": "5UBWBDPChLTiMw4knTCaGi",
@@ -4280,6 +4280,15 @@
     }
   ],
   "tracks": [
+    {
+      "id": "6sbFagOoazOm1zaF9i4X8u",
+      "title": "קחי לך את היום",
+      "artist": "Eyal Golan",
+      "status": "approved",
+      "prev_status": "none",
+      "notes": "approved via telegram",
+      "updated_at": "2026-11-27T11:15:27.201Z"
+    },
     {
       "id": "1UqC2HmWrNk84ywbWD8DoC",
       "title": "מי להשם אלי",
